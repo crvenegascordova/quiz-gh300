@@ -1,0 +1,1233 @@
+{
+  "communities": {
+    "0": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_aac",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_apng",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_astro_assets",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_astro_components",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_astro_config_client",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_astro_config_server",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_astro_container",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_astro_i18n",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_astro_middleware",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_astro_prefetch",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_astro_schema",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_astro_static_paths",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_avif",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_clientconfigserialized",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_css",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_cssmoduleclasses",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_eot",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_exportedmarkdownmoduleentities",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_flac",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_gif",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_html",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_ico",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_imagemetadata",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_imgattributes",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_importmeta",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_importmetaenv",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_inline",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_jfif",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_jpeg",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_jpg",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_less",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_localimageprops",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_markdown",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_md",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_mdown",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_mdwn",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_mdx",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_mkd",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_mkdn",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_module_css",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_module_less",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_module_pcss",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_module_sass",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_module_scss",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_module_sss",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_module_styl",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_module_stylus",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_mp3",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_mp4",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_no_inline",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_ogg",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_opus",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_otf",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_pcss",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_pdf",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_pjp",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_pjpeg",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_png",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_rationale_10",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_raw",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_remoteimageprops",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_sass",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_scss",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_serverconfigserialized",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_sharedworker",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_sharedworker_inline",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_sharedworker_url",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_sss",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_styl",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_stylus",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_svg",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_tiff",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_ttf",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_txt",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_url",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_url_inline",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_url_no_inline",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_virtual_astro_image_styles_css",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_wasm_init",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_wav",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_webm",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_webmanifest",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_webp",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_woff",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_woff2",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_worker",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_worker_inline",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_client_d_worker_url"
+    ],
+    "1": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_exports",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_exports_actions_runtime_entrypoints",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_exports_app",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_exports_app_entrypoint",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_exports_app_entrypoint_dev",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_exports_app_entrypoint_prod",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_exports_app_fetch_default_handler",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_exports_app_manifest",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_exports_app_node",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_exports_assets",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_exports_assets_endpoint",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_exports_assets_fonts_runtime_js",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_exports_assets_runtime",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_exports_assets_services_noop",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_exports_assets_services_sharp",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_exports_assets_utils",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_exports_assets_utils_inferremotesize_js",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_exports_assets_utils_node",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_exports_astro_jsx",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_exports_cache_memory",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_exports_cache_provider_utils",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_exports_client",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_exports_compiler_runtime",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_exports_components",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_exports_config",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_exports_container",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_exports_content_config",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_exports_content_runtime",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_exports_content_runtime_assets",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_exports_debug",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_exports_entrypoints_legacy",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_exports_entrypoints_prerender",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_exports_env",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_exports_env_runtime",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_exports_env_setup",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_exports_errors",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_exports_fetch",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_exports_hono",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_exports_loaders",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_exports_logger",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_exports_logger_compose",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_exports_logger_console",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_exports_logger_json",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_exports_logger_node",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_exports_markdown",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_exports_middleware",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_exports_package_json",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_exports_runtime",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_exports_toolbar",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_exports_tsconfigs",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_exports_tsconfigs_json",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_exports_types",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_exports_virtual_modules",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_exports_zod"
+    ],
+    "2": [
+      "axet_code_tmp_f8df7ff573d7dfff_00000016_internal_helpers_package",
+      "axet_code_tmp_f8df7ff573d7dfff_00000016_internal_helpers_package_author",
+      "axet_code_tmp_f8df7ff573d7dfff_00000016_internal_helpers_package_bugs",
+      "axet_code_tmp_f8df7ff573d7dfff_00000016_internal_helpers_package_description",
+      "axet_code_tmp_f8df7ff573d7dfff_00000016_internal_helpers_package_exports",
+      "axet_code_tmp_f8df7ff573d7dfff_00000016_internal_helpers_package_exports_cli",
+      "axet_code_tmp_f8df7ff573d7dfff_00000016_internal_helpers_package_exports_create_filter",
+      "axet_code_tmp_f8df7ff573d7dfff_00000016_internal_helpers_package_exports_frontmatter",
+      "axet_code_tmp_f8df7ff573d7dfff_00000016_internal_helpers_package_exports_fs",
+      "axet_code_tmp_f8df7ff573d7dfff_00000016_internal_helpers_package_exports_markdown",
+      "axet_code_tmp_f8df7ff573d7dfff_00000016_internal_helpers_package_exports_mdx",
+      "axet_code_tmp_f8df7ff573d7dfff_00000016_internal_helpers_package_exports_object",
+      "axet_code_tmp_f8df7ff573d7dfff_00000016_internal_helpers_package_exports_path",
+      "axet_code_tmp_f8df7ff573d7dfff_00000016_internal_helpers_package_exports_remote",
+      "axet_code_tmp_f8df7ff573d7dfff_00000016_internal_helpers_package_exports_request",
+      "axet_code_tmp_f8df7ff573d7dfff_00000016_internal_helpers_package_exports_shiki",
+      "axet_code_tmp_f8df7ff573d7dfff_00000016_internal_helpers_package_files",
+      "axet_code_tmp_f8df7ff573d7dfff_00000016_internal_helpers_package_imports",
+      "axet_code_tmp_f8df7ff573d7dfff_00000016_internal_helpers_package_imports_shiki_engine",
+      "axet_code_tmp_f8df7ff573d7dfff_00000016_internal_helpers_package_json_ref_dist",
+      "axet_code_tmp_f8df7ff573d7dfff_00000016_internal_helpers_package_keywords",
+      "axet_code_tmp_f8df7ff573d7dfff_00000016_internal_helpers_package_license",
+      "axet_code_tmp_f8df7ff573d7dfff_00000016_internal_helpers_package_name",
+      "axet_code_tmp_f8df7ff573d7dfff_00000016_internal_helpers_package_publishconfig",
+      "axet_code_tmp_f8df7ff573d7dfff_00000016_internal_helpers_package_publishconfig_provenance",
+      "axet_code_tmp_f8df7ff573d7dfff_00000016_internal_helpers_package_repository",
+      "axet_code_tmp_f8df7ff573d7dfff_00000016_internal_helpers_package_repository_directory",
+      "axet_code_tmp_f8df7ff573d7dfff_00000016_internal_helpers_package_repository_type",
+      "axet_code_tmp_f8df7ff573d7dfff_00000016_internal_helpers_package_repository_url",
+      "axet_code_tmp_f8df7ff573d7dfff_00000016_internal_helpers_package_scripts",
+      "axet_code_tmp_f8df7ff573d7dfff_00000016_internal_helpers_package_scripts_build",
+      "axet_code_tmp_f8df7ff573d7dfff_00000016_internal_helpers_package_scripts_build_ci",
+      "axet_code_tmp_f8df7ff573d7dfff_00000016_internal_helpers_package_scripts_dev",
+      "axet_code_tmp_f8df7ff573d7dfff_00000016_internal_helpers_package_scripts_prepublish",
+      "axet_code_tmp_f8df7ff573d7dfff_00000016_internal_helpers_package_scripts_test",
+      "axet_code_tmp_f8df7ff573d7dfff_00000016_internal_helpers_package_shiki_engine_default",
+      "axet_code_tmp_f8df7ff573d7dfff_00000016_internal_helpers_package_shiki_engine_workerd",
+      "axet_code_tmp_f8df7ff573d7dfff_00000016_internal_helpers_package_type",
+      "axet_code_tmp_f8df7ff573d7dfff_00000016_internal_helpers_package_version",
+      "ref_astro",
+      "ref_astro_component",
+      "src_pages_api_attempts",
+      "src_pages_api_attempts_databasepath",
+      "src_pages_api_attempts_get",
+      "src_pages_api_attempts_getdatabase",
+      "src_pages_api_attempts_post"
+    ],
+    "3": [
+      "axet_code_tmp_bcd5fff3f62d3e8f_00000007_shiki_package",
+      "axet_code_tmp_bcd5fff3f62d3e8f_00000007_shiki_package_author",
+      "axet_code_tmp_bcd5fff3f62d3e8f_00000007_shiki_package_bugs",
+      "axet_code_tmp_bcd5fff3f62d3e8f_00000007_shiki_package_description",
+      "axet_code_tmp_bcd5fff3f62d3e8f_00000007_shiki_package_devdependencies",
+      "axet_code_tmp_bcd5fff3f62d3e8f_00000007_shiki_package_devdependencies_rollup_plugin_copy",
+      "axet_code_tmp_bcd5fff3f62d3e8f_00000007_shiki_package_devdependencies_tm_grammars",
+      "axet_code_tmp_bcd5fff3f62d3e8f_00000007_shiki_package_devdependencies_tm_themes",
+      "axet_code_tmp_bcd5fff3f62d3e8f_00000007_shiki_package_devdependencies_vscode_oniguruma",
+      "axet_code_tmp_bcd5fff3f62d3e8f_00000007_shiki_package_engines",
+      "axet_code_tmp_bcd5fff3f62d3e8f_00000007_shiki_package_engines_node",
+      "axet_code_tmp_bcd5fff3f62d3e8f_00000007_shiki_package_files",
+      "axet_code_tmp_bcd5fff3f62d3e8f_00000007_shiki_package_homepage",
+      "axet_code_tmp_bcd5fff3f62d3e8f_00000007_shiki_package_json_ref_dist",
+      "axet_code_tmp_bcd5fff3f62d3e8f_00000007_shiki_package_keywords",
+      "axet_code_tmp_bcd5fff3f62d3e8f_00000007_shiki_package_license",
+      "axet_code_tmp_bcd5fff3f62d3e8f_00000007_shiki_package_main",
+      "axet_code_tmp_bcd5fff3f62d3e8f_00000007_shiki_package_module",
+      "axet_code_tmp_bcd5fff3f62d3e8f_00000007_shiki_package_name",
+      "axet_code_tmp_bcd5fff3f62d3e8f_00000007_shiki_package_repository",
+      "axet_code_tmp_bcd5fff3f62d3e8f_00000007_shiki_package_repository_directory",
+      "axet_code_tmp_bcd5fff3f62d3e8f_00000007_shiki_package_repository_type",
+      "axet_code_tmp_bcd5fff3f62d3e8f_00000007_shiki_package_repository_url",
+      "axet_code_tmp_bcd5fff3f62d3e8f_00000007_shiki_package_scripts",
+      "axet_code_tmp_bcd5fff3f62d3e8f_00000007_shiki_package_scripts_build",
+      "axet_code_tmp_bcd5fff3f62d3e8f_00000007_shiki_package_scripts_dev",
+      "axet_code_tmp_bcd5fff3f62d3e8f_00000007_shiki_package_scripts_test",
+      "axet_code_tmp_bcd5fff3f62d3e8f_00000007_shiki_package_scripts_test_cf",
+      "axet_code_tmp_bcd5fff3f62d3e8f_00000007_shiki_package_sideeffects",
+      "axet_code_tmp_bcd5fff3f62d3e8f_00000007_shiki_package_type",
+      "axet_code_tmp_bcd5fff3f62d3e8f_00000007_shiki_package_types",
+      "axet_code_tmp_bcd5fff3f62d3e8f_00000007_shiki_package_version",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_components_code",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_components_code_if",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_components_debug",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_components_index",
+      "langs",
+      "ref_shiki",
+      "rollup_plugin_copy",
+      "tm_grammars",
+      "tm_themes",
+      "vscode_oniguruma"
+    ],
+    "4": [
+      "axet_code_tmp_bcd5fff3f62d3e8f_00000007_shiki_package_dependencies",
+      "axet_code_tmp_bcd5fff3f62d3e8f_00000007_shiki_package_dependencies_shikijs_core",
+      "axet_code_tmp_bcd5fff3f62d3e8f_00000007_shiki_package_dependencies_shikijs_engine_javascript",
+      "axet_code_tmp_bcd5fff3f62d3e8f_00000007_shiki_package_dependencies_shikijs_engine_oniguruma",
+      "axet_code_tmp_bcd5fff3f62d3e8f_00000007_shiki_package_dependencies_shikijs_langs",
+      "axet_code_tmp_bcd5fff3f62d3e8f_00000007_shiki_package_dependencies_shikijs_themes",
+      "axet_code_tmp_bcd5fff3f62d3e8f_00000007_shiki_package_dependencies_shikijs_types",
+      "axet_code_tmp_bcd5fff3f62d3e8f_00000007_shiki_package_dependencies_shikijs_vscode_textmate",
+      "axet_code_tmp_bcd5fff3f62d3e8f_00000007_shiki_package_dependencies_types_hast",
+      "axet_code_tmp_bcd5fff3f62d3e8f_00000007_shiki_package_json_types_hast",
+      "axet_code_tmp_f8df7ff573d7dfff_00000016_internal_helpers_package_dependencies",
+      "axet_code_tmp_f8df7ff573d7dfff_00000016_internal_helpers_package_dependencies_js_yaml",
+      "axet_code_tmp_f8df7ff573d7dfff_00000016_internal_helpers_package_dependencies_picomatch",
+      "axet_code_tmp_f8df7ff573d7dfff_00000016_internal_helpers_package_dependencies_retext_smartypants",
+      "axet_code_tmp_f8df7ff573d7dfff_00000016_internal_helpers_package_dependencies_shiki",
+      "axet_code_tmp_f8df7ff573d7dfff_00000016_internal_helpers_package_dependencies_smol_toml",
+      "axet_code_tmp_f8df7ff573d7dfff_00000016_internal_helpers_package_dependencies_types_hast",
+      "axet_code_tmp_f8df7ff573d7dfff_00000016_internal_helpers_package_dependencies_types_mdast",
+      "axet_code_tmp_f8df7ff573d7dfff_00000016_internal_helpers_package_dependencies_unified",
+      "axet_code_tmp_f8df7ff573d7dfff_00000016_internal_helpers_package_json_shiki",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_dependencies_js_yaml",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_dependencies_picomatch",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_dependencies_smol_toml",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_json_js_yaml",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_json_picomatch",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_json_smol_toml",
+      "retext_smartypants",
+      "shikijs_core",
+      "shikijs_engine_javascript",
+      "shikijs_engine_oniguruma",
+      "shikijs_langs",
+      "shikijs_themes",
+      "shikijs_types",
+      "shikijs_vscode_textmate",
+      "types_mdast",
+      "unified"
+    ],
+    "5": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_astro_jsx_d",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_astro_jsx_d_allcssproperties",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_astro_jsx_d_anchorhtmlattributes",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_astro_jsx_d_ariarole",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_astro_jsx_d_astrodefinevarsattribute",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_astro_jsx_d_astrohtml_jsx",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_astro_jsx_d_astroscriptattributes",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_astro_jsx_d_astroslotattributes",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_astro_jsx_d_astrostyleattributes",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_astro_jsx_d_basehtmlattributes",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_astro_jsx_d_child",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_astro_jsx_d_children",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_astro_jsx_d_colhtmlattributes",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_astro_jsx_d_cssproperties",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_astro_jsx_d_cssproperty",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_astro_jsx_d_definedintrinsicelements",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_astro_jsx_d_delhtmlattributes",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_astro_jsx_d_dialoghtmlattributes",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_astro_jsx_d_domcssproperties",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_astro_jsx_d_element",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_astro_jsx_d_elementchildrenattribute",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_astro_jsx_d_htmlattributeanchortarget",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_astro_jsx_d_htmlattributereferrerpolicy",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_astro_jsx_d_htmlinputtypeattribute",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_astro_jsx_d_inshtmlattributes",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_astro_jsx_d_intrinsicelements",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_astro_jsx_d_kebabcssdomproperties",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_astro_jsx_d_olhtmlattributes",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_astro_jsx_d_outputhtmlattributes",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_astro_jsx_d_slothtmlattributes",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_astro_jsx_d_stylehtmlattributes",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_astro_jsx_d_styleobject",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_astro_jsx_d_tablehtmlattributes",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_astro_jsx_d_tdhtmlattributes",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_astro_jsx_d_trackhtmlattributes"
+    ],
+    "6": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_astro_jsx_d_areahtmlattributes",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_astro_jsx_d_blockquotehtmlattributes",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_astro_jsx_d_buttonhtmlattributes",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_astro_jsx_d_canvashtmlattributes",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_astro_jsx_d_colgrouphtmlattributes",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_astro_jsx_d_datahtmlattributes",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_astro_jsx_d_detailshtmlattributes",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_astro_jsx_d_embedhtmlattributes",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_astro_jsx_d_fieldsethtmlattributes",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_astro_jsx_d_formhtmlattributes",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_astro_jsx_d_htmlattributes",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_astro_jsx_d_htmlhtmlattributes",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_astro_jsx_d_iframehtmlattributes",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_astro_jsx_d_imghtmlattributes",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_astro_jsx_d_inputhtmlattributes",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_astro_jsx_d_keygenhtmlattributes",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_astro_jsx_d_labelhtmlattributes",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_astro_jsx_d_lihtmlattributes",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_astro_jsx_d_linkhtmlattributes",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_astro_jsx_d_maphtmlattributes",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_astro_jsx_d_menuhtmlattributes",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_astro_jsx_d_metahtmlattributes",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_astro_jsx_d_meterhtmlattributes",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_astro_jsx_d_objecthtmlattributes",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_astro_jsx_d_optgrouphtmlattributes",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_astro_jsx_d_optionhtmlattributes",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_astro_jsx_d_paramhtmlattributes",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_astro_jsx_d_progresshtmlattributes",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_astro_jsx_d_quotehtmlattributes",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_astro_jsx_d_scripthtmlattributes",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_astro_jsx_d_selecthtmlattributes",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_astro_jsx_d_sourcehtmlattributes",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_astro_jsx_d_textareahtmlattributes",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_astro_jsx_d_thhtmlattributes",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_astro_jsx_d_timehtmlattributes"
+    ],
+    "7": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_bin_astro",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_bin_astro_ci_instructions",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_bin_astro_errornodeunsupported",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_bin_astro_main",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_templates_content_types_d",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_templates_content_types_d_allvaluesof",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_templates_content_types_d_astro_content",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_templates_content_types_d_collectionentry",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_templates_content_types_d_collectionkey",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_templates_content_types_d_contentconfig",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_templates_content_types_d_dataentrymap",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_templates_content_types_d_extractcollectionfiltertype",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_templates_content_types_d_extractdatatype",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_templates_content_types_d_extractentryfiltertype",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_templates_content_types_d_extracterrortype",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_templates_content_types_d_extractloaderconfig",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_templates_content_types_d_extractloadertypes",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_templates_content_types_d_flatten",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_templates_content_types_d_inferentryschema",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_templates_content_types_d_inferloaderschema",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_templates_content_types_d_livecontentconfig",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_templates_content_types_d_liveloadercollectionfiltertype",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_templates_content_types_d_liveloaderdatatype",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_templates_content_types_d_liveloaderentryfiltertype",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_templates_content_types_d_liveloadererrortype",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_templates_content_types_d_referencedataentry",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_templates_content_types_d_referenceliveentry",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_templates_content_types_d_render",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_templates_content_types_d_renderedcontent",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_templates_content_types_d_renderresult",
+      "index_js",
+      "loaders"
+    ],
+    "8": [
+      "astrojs_node",
+      "package",
+      "package_allowscripts",
+      "package_allowscripts_esbuild",
+      "package_dependencies",
+      "package_dependencies_astro",
+      "package_dependencies_astrojs_node",
+      "package_devdependencies",
+      "package_devdependencies_tailwindcss_vite",
+      "package_engines",
+      "package_engines_node",
+      "package_json_astro",
+      "package_name",
+      "package_scripts",
+      "package_scripts_astro",
+      "package_scripts_build",
+      "package_scripts_dev",
+      "package_scripts_preview",
+      "package_type",
+      "package_version",
+      "tailwindcss_vite"
+    ],
+    "9": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_tsconfigs_base",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_tsconfigs_base_compileroptions",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_tsconfigs_base_compileroptions_allowimportingtsextensions",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_tsconfigs_base_compileroptions_allowjs",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_tsconfigs_base_compileroptions_esmoduleinterop",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_tsconfigs_base_compileroptions_forceconsistentcasinginfilenames",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_tsconfigs_base_compileroptions_isolatedmodules",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_tsconfigs_base_compileroptions_jsx",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_tsconfigs_base_compileroptions_module",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_tsconfigs_base_compileroptions_moduleresolution",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_tsconfigs_base_compileroptions_noemit",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_tsconfigs_base_compileroptions_resolvejsonmodule",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_tsconfigs_base_compileroptions_skiplibcheck",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_tsconfigs_base_compileroptions_target",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_tsconfigs_base_compileroptions_verbatimmodulesyntax",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_tsconfigs_base_exclude",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_tsconfigs_base_include",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_tsconfigs_base_schema",
+      "ref_configdir",
+      "ref_configdir_astro_types_d_ts",
+      "ref_configdir_dist"
+    ],
+    "10": [
+      "src_pages_index",
+      "src_pages_index_continuequiz",
+      "src_pages_index_exitquiz",
+      "src_pages_index_goback",
+      "src_pages_index_historypanel",
+      "src_pages_index_loadhistory",
+      "src_pages_index_quizpanel",
+      "src_pages_index_renderquestion",
+      "src_pages_index_restart",
+      "src_pages_index_resultspanel",
+      "src_pages_index_reviewanswer",
+      "src_pages_index_reviewbox",
+      "src_pages_index_saveattempt",
+      "src_pages_index_selectoption",
+      "src_pages_index_serializedquestions",
+      "src_pages_index_setuppanel",
+      "src_pages_index_showresults",
+      "src_pages_index_shuffle",
+      "src_pages_index_startquiz",
+      "src_pages_index_state",
+      "src_pages_index_togglehistory"
+    ],
+    "11": [
+      "axet_code_tmp_bcd5fff3f62d3e8f_00000007_shiki_package_core_default",
+      "axet_code_tmp_bcd5fff3f62d3e8f_00000007_shiki_package_core_unwasm",
+      "axet_code_tmp_bcd5fff3f62d3e8f_00000007_shiki_package_exports",
+      "axet_code_tmp_bcd5fff3f62d3e8f_00000007_shiki_package_exports_bundle_full",
+      "axet_code_tmp_bcd5fff3f62d3e8f_00000007_shiki_package_exports_bundle_web",
+      "axet_code_tmp_bcd5fff3f62d3e8f_00000007_shiki_package_exports_core",
+      "axet_code_tmp_bcd5fff3f62d3e8f_00000007_shiki_package_exports_dist",
+      "axet_code_tmp_bcd5fff3f62d3e8f_00000007_shiki_package_exports_engine_javascript",
+      "axet_code_tmp_bcd5fff3f62d3e8f_00000007_shiki_package_exports_engine_oniguruma",
+      "axet_code_tmp_bcd5fff3f62d3e8f_00000007_shiki_package_exports_langs",
+      "axet_code_tmp_bcd5fff3f62d3e8f_00000007_shiki_package_exports_onig_wasm",
+      "axet_code_tmp_bcd5fff3f62d3e8f_00000007_shiki_package_exports_package_json",
+      "axet_code_tmp_bcd5fff3f62d3e8f_00000007_shiki_package_exports_textmate",
+      "axet_code_tmp_bcd5fff3f62d3e8f_00000007_shiki_package_exports_themes",
+      "axet_code_tmp_bcd5fff3f62d3e8f_00000007_shiki_package_exports_types",
+      "axet_code_tmp_bcd5fff3f62d3e8f_00000007_shiki_package_exports_wasm",
+      "axet_code_tmp_bcd5fff3f62d3e8f_00000007_shiki_package_wasm_default",
+      "axet_code_tmp_bcd5fff3f62d3e8f_00000007_shiki_package_wasm_unwasm"
+    ],
+    "12": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_scripts",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_scripts_build",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_scripts_build_ci",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_scripts_dev",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_scripts_prebuild",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_scripts_test",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_scripts_test_cli",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_scripts_test_e2e",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_scripts_test_e2e_chrome",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_scripts_test_e2e_firefox",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_scripts_test_e2e_match",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_scripts_test_integration",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_scripts_test_match",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_scripts_test_types",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_scripts_test_unit"
+    ],
+    "13": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_files",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_json_ref_dist",
+      "ref_astro_jsx_d_ts",
+      "ref_bin",
+      "ref_client_d_ts",
+      "ref_components_astro_css_ts",
+      "ref_env_d_ts",
+      "ref_jsx_runtime_d_ts",
+      "ref_readme_md",
+      "ref_src_core_manifest_ambient_source_ts",
+      "ref_templates",
+      "ref_tsconfigs",
+      "ref_types",
+      "ref_types_d_ts"
+    ],
+    "14": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_tsconfigs_strictest",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_tsconfigs_strictest_compileroptions",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_tsconfigs_strictest_compileroptions_allowunreachablecode",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_tsconfigs_strictest_compileroptions_allowunusedlabels",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_tsconfigs_strictest_compileroptions_exactoptionalpropertytypes",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_tsconfigs_strictest_compileroptions_nofallthroughcasesinswitch",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_tsconfigs_strictest_compileroptions_noimplicitoverride",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_tsconfigs_strictest_compileroptions_noimplicitreturns",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_tsconfigs_strictest_compileroptions_nouncheckedindexedaccess",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_tsconfigs_strictest_compileroptions_nounusedlocals",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_tsconfigs_strictest_compileroptions_nounusedparameters",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_tsconfigs_strictest_extends",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_tsconfigs_strictest_schema",
+      "ref_strict_json"
+    ],
+    "15": [
+      "astrojs_markdown_satteri",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_dependencies",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_dependencies_astrojs_markdown_satteri",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_dependencies_cookie",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_dependencies_flattie",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_dependencies_http_cache_semantics",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_dependencies_mrmime",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_dependencies_tinyglobby",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_json_mrmime",
+      "cookie",
+      "flattie",
+      "http_cache_semantics",
+      "tinyglobby"
+    ],
+    "16": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_author",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_bin",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_bin_astro",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_bugs",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_description",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_homepage",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_license",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_name",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_publishconfig",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_publishconfig_provenance",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_type",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_version"
+    ],
+    "17": [
+      "astro_assets",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_components_font",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_components_font_data",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_components_font_filteredpreloaddata",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_components_image",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_components_image_class_classname_attributes",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_components_picture",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_components_picture_class_classname_attributes",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_components_responsiveimage",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_components_responsivepicture",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_types",
+      "internal"
+    ],
+    "18": [
+      "astrojs_check",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_devdependencies",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_devdependencies_astrojs_check",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_devdependencies_cheerio",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_devdependencies_types_parse_srcset",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_devdependencies_types_yargs_parser",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_devdependencies_undici",
+      "cheerio",
+      "types_parse_srcset",
+      "types_yargs_parser",
+      "undici"
+    ],
+    "19": [
+      "axet_code_tmp_f8df7ff573d7dfff_00000016_internal_helpers_package_devdependencies",
+      "axet_code_tmp_f8df7ff573d7dfff_00000016_internal_helpers_package_devdependencies_astro_scripts",
+      "axet_code_tmp_f8df7ff573d7dfff_00000016_internal_helpers_package_devdependencies_types_js_yaml",
+      "axet_code_tmp_f8df7ff573d7dfff_00000016_internal_helpers_package_devdependencies_types_picomatch",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_devdependencies_astro_scripts",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_devdependencies_types_js_yaml",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_devdependencies_types_picomatch",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_json_astro_scripts",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_json_types_js_yaml",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_json_types_picomatch"
+    ],
+    "20": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_templates_content_module",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_templates_content_module_getcollection",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_templates_content_module_getdataentrybyid",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_templates_content_module_getentries",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_templates_content_module_getentry",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_templates_content_module_getentrybyslug",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_templates_content_module_getlivecollection",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_templates_content_module_getliveentry",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_templates_content_module_rationale_16",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_templates_content_module_reference"
+    ],
+    "21": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_types_content_d",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_types_content_d_astro_content",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_types_content_d_collectionentry",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_types_content_d_collectionkey",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_types_content_d_contentcollectionkey",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_types_content_d_contentconfig",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_types_content_d_datacollectionkey",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_types_content_d_rationale_13"
+    ],
+    "22": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_types_d",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_types_d_componentprops",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_types_d_cssproperty",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_types_d_htmlattributes",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_types_d_htmltag",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_types_d_polymorphic",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_types_d_polymorphicattributes",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_types_d_svgcomponent"
+    ],
+    "23": [
+      "ref",
+      "ref_astro_tsconfigs_strict",
+      "ref_astro_types_d_ts",
+      "tsconfig",
+      "tsconfig_exclude",
+      "tsconfig_extends",
+      "tsconfig_include",
+      "tsconfig_json_ref_dist"
+    ],
+    "24": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_astro_jsx_d_ariaattributes",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_astro_jsx_d_astrobuiltinattributes",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_astro_jsx_d_astrocomponentdirectives",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_astro_jsx_d_domattributes",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_astro_jsx_d_intrinsicattributes",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_astro_jsx_d_svgattributes"
+    ],
+    "25": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_tsconfigs_strict",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_tsconfigs_strict_compileroptions",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_tsconfigs_strict_compileroptions_strict",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_tsconfigs_strict_extends",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_tsconfigs_strict_schema",
+      "ref_base_json"
+    ],
+    "26": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_types_fonts_d",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_types_fonts_d_astro_assets",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_types_fonts_d_cssvariable",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_types_fonts_d_fontdata",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_types_fonts_d_fontpreloadfilter"
+    ],
+    "27": [
+      "astrojs_markdown_remark",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_devdependencies_astrojs_markdown_remark",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_peerdependencies",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_peerdependencies_astrojs_markdown_remark"
+    ],
+    "28": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_components_clientrouter",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_components_clientrouter_getfallback",
+      "client",
+      "prefetch_js"
+    ],
+    "29": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_astro_internal_ambient_manifest_default",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_astro_internal_ambient_manifest_types",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_imports",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_imports_astro_internal_ambient_manifest"
+    ],
+    "30": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_engines",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_engines_node",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_engines_npm",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_engines_pnpm"
+    ],
+    "31": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_repository",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_repository_directory",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_repository_type",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_repository_url"
+    ],
+    "32": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_templates_env",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_templates_env_getenv",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_templates_env_getsecret",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_templates_env_internalgetsecret"
+    ],
+    "33": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_astro_jsx_d_audiohtmlattributes",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_astro_jsx_d_mediahtmlattributes",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_astro_jsx_d_videohtmlattributes"
+    ],
+    "34": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_astrojs_markdown_remark_optional",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_peerdependenciesmeta",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_peerdependenciesmeta_astrojs_markdown_remark"
+    ],
+    "35": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_exports_jsx_dev_runtime",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_jsx_dev_runtime_default",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_jsx_dev_runtime_types"
+    ],
+    "36": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_exports_jsx_runtime",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_jsx_runtime_default",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_jsx_runtime_types"
+    ],
+    "37": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_funding",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_funding_type",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_funding_url"
+    ],
+    "38": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_optionaldependencies",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_optionaldependencies_sharp",
+      "sharp"
+    ],
+    "39": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_types_env_d",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_types_env_d_astro_env_client",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_types_env_d_astro_env_server"
+    ],
+    "40": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_types_transitions_d",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_types_transitions_d_astro_transitions",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_types_transitions_d_astro_transitions_client"
+    ],
+    "41": [
+      "am_i_vibing",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_dependencies_am_i_vibing"
+    ],
+    "42": [
+      "aria_query",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_dependencies_aria_query"
+    ],
+    "43": [
+      "astrojs_compiler_rs",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_dependencies_astrojs_compiler_rs"
+    ],
+    "44": [
+      "astrojs_internal_helpers",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_dependencies_astrojs_internal_helpers"
+    ],
+    "45": [
+      "astrojs_telemetry",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_dependencies_astrojs_telemetry"
+    ],
+    "46": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_env_d",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_env_d_astro"
+    ],
+    "47": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_dependencies_axobject_query",
+      "axobject_query"
+    ],
+    "48": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_dependencies_capsizecss_unpack",
+      "capsizecss_unpack"
+    ],
+    "49": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_dependencies_ci_info",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_json_ci_info"
+    ],
+    "50": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_dependencies_clack_prompts",
+      "clack_prompts"
+    ],
+    "51": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_dependencies_clsx",
+      "clsx"
+    ],
+    "52": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_dependencies_common_ancestor_path",
+      "common_ancestor_path"
+    ],
+    "53": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_dependencies_devalue",
+      "devalue"
+    ],
+    "54": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_dependencies_diff",
+      "diff"
+    ],
+    "55": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_dependencies_dset",
+      "dset"
+    ],
+    "56": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_dependencies_es_module_lexer",
+      "es_module_lexer"
+    ],
+    "57": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_dependencies_esbuild",
+      "esbuild"
+    ],
+    "58": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_dependencies_find_proc",
+      "find_proc"
+    ],
+    "59": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_dependencies_fontace",
+      "fontace"
+    ],
+    "60": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_dependencies_get_tsconfig",
+      "get_tsconfig"
+    ],
+    "61": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_dependencies_github_slugger",
+      "github_slugger"
+    ],
+    "62": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_dependencies_html_escaper",
+      "html_escaper"
+    ],
+    "63": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_dependencies_jsonc_parser",
+      "jsonc_parser"
+    ],
+    "64": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_dependencies_magic_string",
+      "magic_string"
+    ],
+    "65": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_dependencies_magicast",
+      "magicast"
+    ],
+    "66": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_dependencies_neotraverse",
+      "neotraverse"
+    ],
+    "67": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_dependencies_obug",
+      "obug"
+    ],
+    "68": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_dependencies_oslojs_encoding",
+      "oslojs_encoding"
+    ],
+    "69": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_dependencies_p_limit",
+      "p_limit"
+    ],
+    "70": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_dependencies_p_queue",
+      "p_queue"
+    ],
+    "71": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_dependencies_package_manager_detector",
+      "package_manager_detector"
+    ],
+    "72": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_dependencies_piccolore",
+      "piccolore"
+    ],
+    "73": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_dependencies_semver",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_json_semver"
+    ],
+    "74": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_dependencies_shiki",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_json_shiki"
+    ],
+    "75": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_dependencies_svgo",
+      "svgo"
+    ],
+    "76": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_dependencies_tinyclip",
+      "tinyclip"
+    ],
+    "77": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_dependencies_tinyexec",
+      "tinyexec"
+    ],
+    "78": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_dependencies_ultrahtml",
+      "ultrahtml"
+    ],
+    "79": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_dependencies_unifont",
+      "unifont"
+    ],
+    "80": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_dependencies_unstorage",
+      "unstorage"
+    ],
+    "81": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_dependencies_vite",
+      "vite"
+    ],
+    "82": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_dependencies_vitefu",
+      "vitefu"
+    ],
+    "83": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_dependencies_xxhash_wasm",
+      "xxhash_wasm"
+    ],
+    "84": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_dependencies_yargs_parser",
+      "yargs_parser"
+    ],
+    "85": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_dependencies_zod",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_json_zod"
+    ],
+    "86": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_devdependencies_eol",
+      "eol"
+    ],
+    "87": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_devdependencies_expect_type",
+      "expect_type"
+    ],
+    "88": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_devdependencies_fs_fixture",
+      "fs_fixture"
+    ],
+    "89": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_devdependencies_hono",
+      "hono"
+    ],
+    "90": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_devdependencies_node_mocks_http",
+      "node_mocks_http"
+    ],
+    "91": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_devdependencies_parse_srcset",
+      "parse_srcset"
+    ],
+    "92": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_devdependencies_playwright_test",
+      "playwright_test"
+    ],
+    "93": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_devdependencies_rehype_autolink_headings",
+      "rehype_autolink_headings"
+    ],
+    "94": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_devdependencies_rehype_slug",
+      "rehype_slug"
+    ],
+    "95": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_devdependencies_rehype_toc",
+      "rehype_toc"
+    ],
+    "96": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_devdependencies_remark_code_titles",
+      "remark_code_titles"
+    ],
+    "97": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_devdependencies_sass",
+      "sass"
+    ],
+    "98": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_devdependencies_types_aria_query",
+      "types_aria_query"
+    ],
+    "99": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_devdependencies_types_html_escaper",
+      "types_html_escaper"
+    ],
+    "100": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_devdependencies_types_http_cache_semantics",
+      "types_http_cache_semantics"
+    ],
+    "101": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_devdependencies_types_semver",
+      "types_semver"
+    ],
+    "102": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_devdependencies_typescript",
+      "typescript"
+    ],
+    "103": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_devdependencies_vitest",
+      "vitest"
+    ],
+    "104": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_src_core_manifest_ambient_source",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_src_core_manifest_ambient_source_manifest"
+    ],
+    "105": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_types_actions_d",
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_types_actions_d_astro_actions"
+    ],
+    "106": [
+      "scripts_prepare_questions",
+      "scripts_prepare_questions_category_for"
+    ],
+    "107": [
+      "astro_astro"
+    ],
+    "108": [
+      "astro_config"
+    ],
+    "109": [
+      "astro_zod_zod"
+    ],
+    "110": [
+      "astrojs_internal_helpers_shiki_shiki"
+    ],
+    "111": [
+      "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_jsx_runtime_d"
+    ],
+    "112": [
+      "ci_info_ci_info"
+    ],
+    "113": [
+      "mrmime_mrmime"
+    ],
+    "114": [
+      "semver_semver"
+    ]
+  },
+  "cohesion": {
+    "0": 0.02247191011235955,
+    "1": 0.037037037037037035,
+    "2": 0.04541062801932367,
+    "3": 0.04878048780487805,
+    "4": 0.05555555555555555,
+    "5": 0.06050420168067227,
+    "6": 0.05714285714285714,
+    "7": 0.06451612903225806,
+    "8": 0.09523809523809523,
+    "9": 0.09523809523809523,
+    "10": 0.1380952380952381,
+    "11": 0.1111111111111111,
+    "12": 0.13333333333333333,
+    "13": 0.14285714285714285,
+    "14": 0.14285714285714285,
+    "15": 0.15384615384615385,
+    "16": 0.15384615384615385,
+    "17": 0.19696969696969696,
+    "18": 0.18181818181818182,
+    "19": 0.2,
+    "20": 0.2,
+    "21": 0.25,
+    "22": 0.25,
+    "23": 0.25,
+    "24": 0.3333333333333333,
+    "25": 0.3333333333333333,
+    "26": 0.4,
+    "27": 0.5,
+    "28": 0.5,
+    "29": 0.5,
+    "30": 0.5,
+    "31": 0.5,
+    "32": 0.8333333333333334,
+    "33": 0.6666666666666666,
+    "34": 0.6666666666666666,
+    "35": 0.6666666666666666,
+    "36": 0.6666666666666666,
+    "37": 0.6666666666666666,
+    "38": 0.6666666666666666,
+    "39": 0.6666666666666666,
+    "40": 0.6666666666666666,
+    "41": 1.0,
+    "42": 1.0,
+    "43": 1.0,
+    "44": 1.0,
+    "45": 1.0,
+    "46": 1.0,
+    "47": 1.0,
+    "48": 1.0,
+    "49": 1.0,
+    "50": 1.0,
+    "51": 1.0,
+    "52": 1.0,
+    "53": 1.0,
+    "54": 1.0,
+    "55": 1.0,
+    "56": 1.0,
+    "57": 1.0,
+    "58": 1.0,
+    "59": 1.0,
+    "60": 1.0,
+    "61": 1.0,
+    "62": 1.0,
+    "63": 1.0,
+    "64": 1.0,
+    "65": 1.0,
+    "66": 1.0,
+    "67": 1.0,
+    "68": 1.0,
+    "69": 1.0,
+    "70": 1.0,
+    "71": 1.0,
+    "72": 1.0,
+    "73": 1.0,
+    "74": 1.0,
+    "75": 1.0,
+    "76": 1.0,
+    "77": 1.0,
+    "78": 1.0,
+    "79": 1.0,
+    "80": 1.0,
+    "81": 1.0,
+    "82": 1.0,
+    "83": 1.0,
+    "84": 1.0,
+    "85": 1.0,
+    "86": 1.0,
+    "87": 1.0,
+    "88": 1.0,
+    "89": 1.0,
+    "90": 1.0,
+    "91": 1.0,
+    "92": 1.0,
+    "93": 1.0,
+    "94": 1.0,
+    "95": 1.0,
+    "96": 1.0,
+    "97": 1.0,
+    "98": 1.0,
+    "99": 1.0,
+    "100": 1.0,
+    "101": 1.0,
+    "102": 1.0,
+    "103": 1.0,
+    "104": 1.0,
+    "105": 1.0,
+    "106": 1.0,
+    "107": 1.0,
+    "108": 1.0,
+    "109": 1.0,
+    "110": 1.0,
+    "111": 1.0,
+    "112": 1.0,
+    "113": 1.0,
+    "114": 1.0
+  },
+  "gods": [
+    {
+      "id": "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_exports",
+      "label": "exports",
+      "degree": 56
+    },
+    {
+      "id": "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_astro_jsx_d_htmlattributes",
+      "label": "HTMLAttributes",
+      "degree": 52
+    },
+    {
+      "id": "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_scripts",
+      "label": "scripts",
+      "degree": 15
+    },
+    {
+      "id": "axet_code_tmp_bcd5fff3f62d3e8f_00000007_shiki_package_exports",
+      "label": "exports",
+      "degree": 14
+    },
+    {
+      "id": "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_package_files",
+      "label": "files",
+      "degree": 14
+    },
+    {
+      "id": "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_tsconfigs_base_compileroptions",
+      "label": "compilerOptions",
+      "degree": 14
+    },
+    {
+      "id": "axet_code_tmp_f8df7ff573d7dfff_00000016_internal_helpers_package_exports",
+      "label": "exports",
+      "degree": 12
+    },
+    {
+      "id": "axet_code_tmp_fbdfdfb3f9bf7d7c_0000002e_astro_tsconfigs_strictest_compileroptions",
+      "label": "compilerOptions",
+      "degree": 10
+    },
+    {
+      "id": "axet_code_tmp_f8df7ff573d7dfff_00000016_internal_helpers_package_scripts",
+      "label": "scripts",
+      "degree": 6
+    },
+    {
+      "id": "axet_code_tmp_bcd5fff3f62d3e8f_00000007_shiki_package_scripts",
+      "label": "scripts",
+      "degree": 5
+    }
+  ],
+  "surprises": [
+    {
+      "source": "HTMLAttributes",
+      "target": "AstroBuiltinAttributes",
+      "source_files": [
+        ".axet-code/tmp/.fbdfdfb3f9bf7d7c-0000002E.astro/astro-jsx.d.ts",
+        ".axet-code/tmp/.fbdfdfb3f9bf7d7c-0000002E.astro/astro-jsx.d.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "inherits",
+      "note": "Bridges community 24 \u2192 community 6"
+    },
+    {
+      "source": "AnchorHTMLAttributes",
+      "target": "HTMLAttributes",
+      "source_files": [
+        ".axet-code/tmp/.fbdfdfb3f9bf7d7c-0000002E.astro/astro-jsx.d.ts",
+        ".axet-code/tmp/.fbdfdfb3f9bf7d7c-0000002E.astro/astro-jsx.d.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "inherits",
+      "note": "Bridges community 6 \u2192 community 5"
+    },
+    {
+      "source": "MediaHTMLAttributes",
+      "target": "HTMLAttributes",
+      "source_files": [
+        ".axet-code/tmp/.fbdfdfb3f9bf7d7c-0000002E.astro/astro-jsx.d.ts",
+        ".axet-code/tmp/.fbdfdfb3f9bf7d7c-0000002E.astro/astro-jsx.d.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "inherits",
+      "note": "Bridges community 6 \u2192 community 33"
+    }
+  ],
+  "tokens": {
+    "input": 0,
+    "output": 0
+  }
+}

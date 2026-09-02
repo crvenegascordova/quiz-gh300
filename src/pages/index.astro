@@ -1,0 +1,340 @@
+---
+import questions from '../data/questions.json';
+
+const serializedQuestions = JSON.stringify(questions);
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="description" content="Cuestionario de práctica para la certificación GitHub Copilot GH-300" />
+		<title>Practica Microsoft Copilot GH 300</title>
+	</head>
+	<body>
+		<main class="app-shell">
+			<section class="hero" aria-labelledby="page-title">
+				<div class="eyebrow">CERTIFICACIÓN GH-300</div>
+				<h1 id="page-title">Practica Microsoft Copilot GH 300</h1>
+				<p class="hero-copy">Un examen enfocado para medir tu dominio de GitHub Copilot, con explicaciones y resultados por competencia.</p>
+				<button id="history-button" class="button button-secondary" type="button">Ver mis exámenes <span>↓</span></button>
+			</section>
+
+			<section id="history-panel" class="panel history-panel hidden" aria-labelledby="history-title">
+				<div class="section-heading">
+					<div><span class="step-label">HISTORIAL LOCAL</span><h2 id="history-title">Tus exámenes realizados</h2></div>
+					<button id="history-refresh" class="button button-secondary" type="button">Actualizar</button>
+				</div>
+				<p class="history-intro">Tus resultados se guardan localmente en SQLite para que puedas consultar tu progreso.</p>
+				<div id="history-list" class="history-list"><p class="empty-history">Cargando historial...</p></div>
+			</section>
+
+			<section id="setup-panel" class="panel setup-panel" aria-labelledby="setup-title">
+				<div class="section-heading">
+					<div>
+						<span class="step-label">01 / CONFIGURACIÓN</span>
+						<h2 id="setup-title">Diseña tu sesión</h2>
+					</div>
+					<span class="question-count">420 preguntas disponibles</span>
+				</div>
+				<div class="setup-grid">
+					<label class="field">
+						<span>Número de preguntas</span>
+						<input id="question-limit" type="number" min="1" max="420" value="30" inputmode="numeric" />
+						<small>Entre 1 y 420 preguntas</small>
+					</label>
+					<label class="field">
+						<span>Origen</span>
+						<select id="balotario-select">
+							<option value="all">Todos los balotarios</option>
+							<option value="Balotario 1">Balotario 1</option>
+							<option value="Balotario 2">Balotario 2</option>
+							<option value="Balotario 3">Balotario 3</option>
+							<option value="Balotario 4">Balotario 4</option>
+							<option value="Balotario 5">Balotario 5</option>
+							<option value="Balotario 6">Balotario 6</option>
+						</select>
+						<small>Las preguntas se seleccionan aleatoriamente</small>
+					</label>
+				</div>
+				<button id="start-button" class="button button-primary" type="button">Comenzar examen <span>→</span></button>
+			</section>
+
+			<section id="quiz-panel" class="panel quiz-panel hidden" aria-live="polite">
+				<div class="quiz-topline">
+					<div><span class="step-label">EXAMEN EN CURSO</span><strong id="progress-label">Pregunta 1 de 30</strong></div>
+					<span id="category-label" class="category-pill">Categoría</span>
+				</div>
+				<div class="progress-track"><span id="progress-bar"></span></div>
+				<div class="question-meta"><span id="balotario-label">Balotario 1</span><span id="question-number">01</span></div>
+				<h2 id="question-text" class="question-text"></h2>
+				<div id="options" class="options" role="group" aria-label="Opciones de respuesta"></div>
+				<div id="review-box" class="review-box hidden"></div>
+				<div class="quiz-actions">
+					<button id="back-button" class="button button-secondary" type="button"><span>←</span> <span id="back-label">Salir y configurar</span></button>
+					<button id="review-button" class="button button-secondary" type="button" disabled>Revisar respuesta</button>
+					<button id="continue-button" class="button button-primary" type="button" disabled>Continuar <span>→</span></button>
+				</div>
+			</section>
+
+			<section id="results-panel" class="panel results-panel hidden" aria-labelledby="results-title">
+				<div class="step-label">RESULTADO FINAL</div>
+				<h2 id="results-title">Tu sesión, en perspectiva.</h2>
+				<div class="score-card"><span id="score-percent">0%</span><p id="score-summary">0 de 0 respuestas acertadas</p></div>
+				<div class="results-grid"><div><span class="result-number correct" id="correct-count">0</span><small>Acertadas</small></div><div><span class="result-number incorrect" id="incorrect-count">0</span><small>Incorrectas</small></div></div>
+				<div class="category-results"><h3>Desempeño por competencia</h3><div id="category-results-list"></div></div>
+				<button id="restart-button" class="button button-primary" type="button">Volver a practicar <span>↗</span></button>
+			</section>
+		</main>
+
+		<script define:vars={{ serializedQuestions }}>
+			const allQuestions = JSON.parse(serializedQuestions);
+			const state = { questions: [], current: 0, selected: [], reviewed: false, answers: [], selections: [] };
+			const $ = (id) => document.getElementById(id);
+			const setupPanel = $('setup-panel');
+			const quizPanel = $('quiz-panel');
+			const resultsPanel = $('results-panel');
+			const historyPanel = $('history-panel');
+			const reviewBox = $('review-box');
+
+			async function loadHistory() {
+				const response = await fetch('/api/attempts');
+				const attempts = await response.json();
+				$('history-list').innerHTML = attempts.length ? `<div class="history-table-wrap"><table class="history-table"><thead><tr><th>Fecha</th><th>Balotario</th><th>Resultado</th><th>Preguntas</th><th>Acertadas</th><th>Incorrectas</th></tr></thead><tbody>${attempts.map((attempt) => {
+					const date = new Date(attempt.created_at).toLocaleString('es-ES', { dateStyle: 'medium', timeStyle: 'short' });
+					return `<tr><td>${date}</td><td>${attempt.balotario}</td><td class="history-score">${attempt.score_percent}%</td><td>${attempt.total_questions}</td><td class="correct">${attempt.correct_answers}</td><td class="incorrect">${attempt.incorrect_answers}</td></tr>`;
+				}).join('')}</tbody></table></div>` : '<p class="empty-history">Todavía no has completado ningún examen.</p>';
+			}
+
+			function toggleHistory() {
+				const isHidden = historyPanel.classList.toggle('hidden');
+				if (!isHidden) loadHistory().catch(() => { $('history-list').innerHTML = '<p class="empty-history">No se pudo cargar el historial.</p>'; });
+			}
+
+			function shuffle(items) {
+				return [...items].sort(() => Math.random() - 0.5);
+			}
+
+			function startQuiz() {
+				const selectedBalotario = $('balotario-select').value;
+				const requestedLimit = Number($('question-limit').value);
+				const pool = selectedBalotario === 'all' ? allQuestions : allQuestions.filter((item) => item.balotario === selectedBalotario);
+				const limit = Math.min(Math.max(requestedLimit || 30, 1), pool.length);
+				state.questions = shuffle(pool).slice(0, limit);
+				state.current = 0;
+				state.selected = [];
+				state.reviewed = false;
+				state.answers = [];
+				state.selections = [];
+				setupPanel.classList.add('hidden');
+				resultsPanel.classList.add('hidden');
+				quizPanel.classList.remove('hidden');
+				renderQuestion();
+			}
+
+			function renderQuestion() {
+				const item = state.questions[state.current];
+				state.selected = state.selections[state.current] || [];
+				state.reviewed = false;
+				$('back-button').disabled = false;
+				$('progress-label').textContent = `Pregunta ${state.current + 1} de ${state.questions.length}`;
+				$('progress-bar').style.width = `${((state.current + 1) / state.questions.length) * 100}%`;
+				$('category-label').textContent = item.category.name;
+				$('balotario-label').textContent = item.balotario;
+				$('question-number').textContent = String(item.number).padStart(2, '0');
+				$('question-text').textContent = item.question;
+				$('review-button').disabled = true;
+				$('continue-button').disabled = true;
+				reviewBox.className = 'review-box hidden';
+				$('options').innerHTML = item.options.map((option) => `<label class="option${state.selected.includes(option.id) ? ' selected' : ''}" data-option="${option.id}"><input type="checkbox" value="${option.id}" aria-label="Seleccionar opción ${option.id}"${state.selected.includes(option.id) ? ' checked' : ''} /><span class="option-key">${option.id})</span><span>${option.text}</span></label>`).join('');
+				document.querySelectorAll('.option input').forEach((checkbox) => checkbox.addEventListener('change', () => selectOption(checkbox.value, checkbox.checked)));
+			}
+
+			function selectOption(option, checked) {
+				if (state.reviewed) return;
+				state.selected = checked ? [...state.selected, option] : state.selected.filter((selected) => selected !== option);
+				state.selections[state.current] = state.selected;
+				document.querySelector(`.option[data-option="${option}"]`).classList.toggle('selected', checked);
+				$('review-button').disabled = state.selected.length === 0;
+			}
+
+			function reviewAnswer() {
+				if (state.selected.length === 0 || state.reviewed) return;
+				const item = state.questions[state.current];
+				state.reviewed = true;
+				const correctAnswers = item.correctAnswer.split(/\\s*(?:y|,)\\s*/);
+				const correct = state.selected.length === correctAnswers.length && state.selected.every((option) => correctAnswers.includes(option));
+				state.answers[state.current] = { correct, category: item.category.id };
+				document.querySelectorAll('.option').forEach((option) => { const isCorrect = correctAnswers.includes(option.dataset.option); option.classList.toggle('correct', isCorrect); option.classList.toggle('incorrect', state.selected.includes(option.dataset.option) && !isCorrect); option.querySelector('input').disabled = true; });
+				reviewBox.className = `review-box ${correct ? 'review-correct' : 'review-incorrect'}`;
+				reviewBox.innerHTML = `<strong>${correct ? 'Respuesta correcta' : 'Respuesta incorrecta'}</strong><p>${item.explanation}</p><a href="${item.source.url}" target="_blank" rel="noreferrer">Consultar fuente oficial: ${item.source.title} ↗</a>`;
+				$('continue-button').disabled = false;
+			}
+
+			function continueQuiz() {
+				if (!state.reviewed) return;
+				if (state.current < state.questions.length - 1) { state.current += 1; renderQuestion(); } else showResults();
+			}
+
+			function exitQuiz() {
+				state.questions = [];
+				state.current = 0;
+				state.selected = [];
+				state.reviewed = false;
+				state.answers = [];
+				state.selections = [];
+				quizPanel.classList.add('hidden');
+				resultsPanel.classList.add('hidden');
+				setupPanel.classList.remove('hidden');
+			}
+
+			function goBack() {
+				if (state.current === 0) {
+					if (state.selected.length === 0 && !state.reviewed) exitQuiz();
+					return;
+				}
+				state.current -= 1;
+				renderQuestion();
+			}
+
+			async function saveAttempt(correct, total, categories) {
+				const categorySummary = categories.map((id) => { const categoryQuestions = state.questions.filter((item) => item.category.id === id); const categoryCorrect = categoryQuestions.filter((item) => state.answers[state.questions.indexOf(item)]?.correct).length; return { name: categoryQuestions[0].category.name, correct: categoryCorrect, total: categoryQuestions.length }; });
+				await fetch('/api/attempts', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ balotario: $('balotario-select').value === 'all' ? 'Todos los balotarios' : $('balotario-select').value, totalQuestions: total, correctAnswers: correct, incorrectAnswers: total - correct, scorePercent: Math.round((correct / total) * 100), categorySummary }) });
+			}
+
+			function showResults() {
+				const correct = state.answers.filter((answer) => answer?.correct).length;
+				const total = state.questions.length;
+				const categories = [...new Set(state.questions.map((item) => item.category.id))];
+				$('score-percent').textContent = `${Math.round((correct / total) * 100)}%`;
+				$('score-summary').textContent = `${correct} de ${total} respuestas acertadas`;
+				$('correct-count').textContent = correct;
+				$('incorrect-count').textContent = total - correct;
+				$('category-results-list').innerHTML = categories.map((id) => { const categoryQuestions = state.questions.filter((item) => item.category.id === id); const categoryCorrect = categoryQuestions.filter((item, index) => state.answers[state.questions.indexOf(item)]?.correct).length; const category = categoryQuestions[0].category; return `<div class="category-result"><div><strong>${category.name}</strong><span>${categoryCorrect}/${categoryQuestions.length} acertadas</span></div><div class="category-track"><span style="width:${(categoryCorrect / categoryQuestions.length) * 100}%"></span></div><b>${Math.round((categoryCorrect / categoryQuestions.length) * 100)}%</b></div>`; }).join('');
+				saveAttempt(correct, total, categories).catch(() => {});
+				quizPanel.classList.add('hidden');
+				resultsPanel.classList.remove('hidden');
+			}
+
+			function restart() { resultsPanel.classList.add('hidden'); setupPanel.classList.remove('hidden'); }
+			$('history-button').addEventListener('click', toggleHistory);
+			$('history-refresh').addEventListener('click', () => loadHistory());
+			$('start-button').addEventListener('click', startQuiz);
+			$('back-button').addEventListener('click', goBack);
+			$('review-button').addEventListener('click', reviewAnswer);
+			$('continue-button').addEventListener('click', continueQuiz);
+			$('restart-button').addEventListener('click', restart);
+		</script>
+	</body>
+</html>
+
+<style is:global>
+	@import "tailwindcss";
+
+	@theme {
+		--color-gh-bg: #070e27;
+		--color-gh-panel: #0d1735;
+		--color-gh-card: #111d42;
+		--color-gh-border: #273554;
+		--color-gh-muted: #8b949e;
+		--color-gh-text-muted: #a9b2bf;
+		--color-gh-blue: #79c0ff;
+		--color-gh-green: #238636;
+		--color-gh-orange: #f0883e;
+	}
+
+	@layer base {
+		* { @apply box-border; }
+		body { @apply m-0 min-w-[320px] bg-gh-bg font-sans text-white; }
+		button, input, select { font: inherit; }
+		h1, h2, h3, p { @apply mt-0; }
+	}
+
+	@layer components {
+		.app-shell { @apply mx-auto w-[calc(100%-32px)] max-w-[960px] py-16 pb-20; }
+		.hero { @apply mb-10 max-w-[700px]; }
+		.eyebrow, .step-label { @apply text-xs font-extrabold tracking-[.16em] text-gh-muted; }
+		h1 { @apply my-3.5 max-w-none whitespace-nowrap text-5xl font-black leading-tight tracking-[-.05em]; }
+		.hero-copy { @apply max-w-[540px] text-[1.08rem] leading-relaxed text-gh-text-muted; }
+		.panel { @apply rounded-[28px] border border-gh-border bg-gh-panel shadow-[0_24px_80px_rgba(0,0,0,.33)]; }
+		.setup-panel, .quiz-panel, .results-panel { @apply p-6 sm:p-12; }
+		.section-heading, .quiz-topline, .question-meta, .quiz-actions, .category-result > div:first-child { @apply flex items-center justify-between gap-4; }
+		h2 { @apply mt-2 text-3xl font-bold tracking-[-.04em]; }
+		.question-count, .question-meta, small { @apply text-xs text-[#7d8997]; }
+		.setup-grid { @apply my-9 grid grid-cols-1 gap-[18px] sm:grid-cols-2; }
+		.field { @apply grid gap-2 text-[.95rem] font-bold text-[#dce3eb]; }
+		.field input, .field select { @apply w-full rounded-[10px] border border-[#33404e] bg-[#0d1117] p-3.5 text-[#f5f7fb] outline-none focus:border-[#58a6ff]; }
+		.field small { @apply font-normal; }
+		.button { @apply cursor-pointer rounded-[9px] border-0 px-5 py-3.5 font-extrabold text-white transition duration-200 hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-40; }
+		.button-primary { @apply bg-gh-green; }
+		.button-secondary { @apply border border-[#465362] bg-transparent; }
+		.button span { @apply ml-3 text-[1.2em]; }
+		.hidden { @apply !hidden; }
+		.quiz-topline strong { @apply mt-2 block; }
+		.category-pill { @apply rounded-full border border-[#3d536b] px-3 py-1.5 text-xs text-gh-blue; }
+		.progress-track, .category-track { @apply h-[5px] overflow-hidden rounded-full bg-[#27313d]; }
+		.progress-track { @apply my-[26px] mb-[30px]; }
+		.progress-track span, .category-track span { @apply block h-full rounded-full bg-[#58a6ff] transition-[width] duration-300; }
+		.question-meta { @apply mb-[17px] text-gh-muted; }
+		.question-text { @apply mb-7 max-w-[800px] text-2xl leading-tight; }
+		.options { @apply grid gap-[11px]; }
+		.option { @apply flex w-full cursor-pointer items-start gap-3.5 rounded-[18px] border border-[#303b48] bg-gh-card p-4 text-left leading-normal text-white hover:border-[#58a6ff] hover:bg-[#1c2a3a]; }
+		.option.selected { @apply border-[#58a6ff] bg-[#1c2a3a]; }
+		.option input { @apply mt-0.5 h-[19px] w-[19px] shrink-0 accent-[#58a6ff]; }
+		.option-key { @apply w-[25px] shrink-0 font-black text-gh-blue; }
+		.option.correct { @apply border-[#3fb950] bg-[#173222]; }
+		.option.incorrect { @apply border-[#f85149] bg-[#3a1d20]; }
+		.review-box { @apply mt-6 rounded-r-[10px] border-l-[3px] bg-[#18212b] px-5 py-[18px] leading-relaxed; }
+		.review-box p { @apply my-2 text-[#b8c3cf]; }
+		.review-box a { @apply text-sm text-gh-blue; }
+		.review-correct { @apply border-[#3fb950]; }
+		.review-incorrect { @apply border-gh-orange bg-[#3b2615]; }
+		.quiz-actions { @apply mt-[30px] flex-wrap justify-end; }
+		.score-card { @apply my-9 mb-6 rounded-[14px] border border-[#30465c] bg-[#142235] p-7 text-center; }
+		.score-card span { @apply text-7xl font-black tracking-[-.08em] text-gh-blue; }
+		.score-card p { @apply mt-2 text-[#b8c3cf]; }
+		.results-grid { @apply mb-10 grid grid-cols-2 gap-3; }
+		.results-grid > div { @apply rounded-xl border border-[#303b48] p-[18px]; }
+		.result-number { @apply block text-3xl font-black; }
+		.correct { @apply text-[#3fb950]; }
+		.incorrect { @apply text-[#f85149]; }
+		.category-results { @apply mb-9; }
+		.category-results h3 { @apply mb-5; }
+		.category-result { @apply my-[18px] grid grid-cols-[1fr_50px] gap-x-[18px] gap-y-2.5; }
+		.category-result > div:first-child { @apply col-span-full; }
+		.category-result span { @apply text-sm text-[#8996a5]; }
+		.category-result b { @apply col-start-2 row-start-2 text-right; }
+		.category-track { @apply col-start-1 self-center; }
+		.history-panel { @apply mb-7 p-6 sm:p-10; }
+		.history-intro, .empty-history { @apply leading-relaxed text-gh-text-muted; }
+		.history-list { @apply overflow-x-auto rounded-[14px] border border-[#303b48]; }
+		.history-table { @apply w-full table-fixed border-separate border-spacing-0 bg-gh-card text-left; }
+		.history-table th, .history-table td { @apply border-b border-gh-border p-4 align-middle [overflow-wrap:anywhere]; }
+		.history-table th { @apply text-xs uppercase tracking-wider text-[#8996a5]; }
+		.history-table th:nth-child(1) { @apply w-[23%]; }
+		.history-table th:nth-child(2) { @apply w-[23%]; }
+		.history-table th:nth-child(3) { @apply w-[14%]; }
+		.history-table th:nth-child(n+4) { @apply w-[13.33%]; }
+		.history-table th:nth-child(n+3), .history-table td:nth-child(n+3) { @apply text-center; }
+		.history-table tbody tr:last-child td { @apply border-b-0; }
+		.history-table tbody tr:hover { @apply bg-[#18294c]; }
+		.history-table tbody tr + tr td { @apply pt-5; }
+		.history-table tbody td:first-child, .history-table thead th:first-child { @apply pl-5; }
+		.history-table tbody td:last-child, .history-table thead th:last-child { @apply pr-5; }
+		.history-score { @apply font-black text-gh-blue; }
+	}
+
+	@media (max-width: 620px) {
+		.app-shell { @apply w-[calc(100%-22px)] pt-9; }
+		.section-heading, .quiz-topline { @apply items-start flex-col; }
+		.question-count, .category-pill { @apply self-start; }
+		.quiz-actions { @apply flex-col-reverse items-stretch; }
+		.quiz-actions .button { @apply w-full; }
+		.history-table { @apply min-w-[680px] table-auto; }
+		.history-table th, .history-table td { @apply p-3; }
+		.history-table tbody tr + tr td { @apply pt-[17px]; }
+	}
+
+	@media (max-width: 500px) { h1 { @apply text-[1.45rem]; } }
+</style>
