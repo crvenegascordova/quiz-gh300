@@ -55,10 +55,24 @@ bun run dev
 npm run build
 ```
 
-El proyecto se compila como servidor (`output: 'server'`) usando `@astrojs/node`. Para probar la compilación:
-
 ```bash
 npm run preview
+```
+
+## Pruebas unitarias automatizadas
+
+El proyecto incluye una suite de pruebas unitarias automatizadas en [`tests/evaluation.test.ts`](file:///Users/cristianvenegas/projects/quiz-gh300/tests/evaluation.test.ts) que valida:
+- La verificación y registro de finalización de preguntas (`isQuestionCompleted`, `recordQuestionAnswer`).
+- La correcta evaluación de opciones simples, dobles y múltiples (`"A y B"`, `"A, D"`, etc.), resolviendo problemas de desorden o sobreselección.
+- La generación de motivos pedagógicos de descarte para respuestas incorrectas fundamentados en fuentes oficiales de Microsoft y GitHub Copilot (`buildIncorrectRationale`).
+- El desglose estructurado completo del diagnóstico de revisión (`buildReviewBreakdown`).
+
+Para ejecutar las pruebas:
+
+```bash
+bun test
+# o:
+npm test
 ```
 
 ## Fuente de las preguntas
@@ -256,26 +270,25 @@ gcloud billing budgets create --billing-account=<TU_BILLING_ACCOUNT_ID> \
   --threshold-rule=percent=1.00,basis=forecasted-spend
 ```
 
-## Reglas para implementar cambios
+## Reglas para implementar cambios (Spec-Driven Development)
 
-Antes de implementar cualquier requerimiento:
+De aquí en adelante, **todo requerimiento debe procesarse bajo la metodología Spec-Driven Development (SDD)**:
 
-1. Consultar `graphify-out/graph.json` para entender la estructura del código y sus relaciones.
-2. Revisar los archivos y dependencias involucrados en el cambio.
-3. Implementar el cambio siguiendo los patrones existentes.
-4. Ejecutar las pruebas o `npm run build` para validar el resultado.
-5. Regenerar el grafo con `graphify . --code-only` después de terminar el cambio.
-
-El grafo debe mantenerse actualizado para que los futuros desarrolladores puedan comprender el proyecto antes de modificarlo. Si se necesita analizar también la documentación, se requiere configurar una API key de un proveedor LLM; para el análisis estructural del código no es necesaria.
+1. **Especificar primero (SDD)**: Antes de codificar, consultar `specs/quiz-gh300.md`, `docs/context-map.md` y `graphify-out/graph.json` para documentar la solución y los criterios de aceptación.
+2. **Pruebas unitarias obligatorias**: Cada requerimiento implica **crear o actualizar pruebas unitarias** en `tests/` para validar tanto los flujos exitosos como los casos límite y de error.
+3. **Fuentes oficiales exclusivas**: Toda justificación, explicación de descarte o respuesta debe fundamentarse **únicamente en documentación oficial de Microsoft Learn y GitHub Copilot**.
+4. **Implementación modular**: Mantener la lógica pura de evaluación y reglas desacoplada en `src/utils/` y preservar las convenciones de interfaz en español.
+5. **Verificación integral**: Ejecutar obligatoriamente `bun test` (o `npm test`) y `npm run build` para asegurar 100% de pruebas en verde y compilación sin errores.
+6. **Grafo actualizado**: Regenerar el grafo de Graphify (`graphify . --code-only`) ante cambios estructurales significativos.
 
 ## Recomendaciones para futuros cambios
 
 - Modificar las preguntas en `balotarios.md`, no directamente en `src/data/questions.json`.
-- Regenerar `questions.json` después de cambiar la fuente Markdown.
-- Mantener `source.url` y `source.title` para que las explicaciones conserven sus referencias oficiales.
-- Revisar `specs/quiz-gh300.md` antes de cambiar el comportamiento del cuestionario.
-- Ejecutar `npm run build` después de cada cambio importante.
-- No borrar `data/quiz-history.sqlite` si se quieren conservar los intentos locales.
+- Regenerar `questions.json` (`python scripts_prepare_questions.py`) después de cambiar la fuente Markdown.
+- Mantener `source.url` y `source.title` enlazando exclusivamente a fuentes oficiales de Microsoft y GitHub.
+- Actualizar `tests/evaluation.test.ts` cada vez que se ajuste la lógica de evaluación, completitud o cálculo de puntajes.
+- Ejecutar `bun test && npm run build` antes de realizar commits o despliegues.
+- No borrar `data/quiz-history.sqlite` si se desean conservar los intentos locales.
 
 ## Documentación relacionada
 

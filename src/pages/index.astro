@@ -159,6 +159,42 @@ const serializedQuestions = JSON.stringify(questions);
 				$('review-button').disabled = state.selected.length === 0;
 			}
 
+			function getIncorrectRationale(opt, item) {
+				const text = (opt.text || '').toLowerCase();
+				const cat = item.category?.id || '';
+				if (cat === 'architecture' || cat === 'privacy') {
+					if (text.includes('compartir') || text.includes('otros usuarios')) {
+						return 'El Microsoft Trust Center y las directrices de privacidad garantizan el aislamiento estricto del código del cliente: el código propietario nunca se comparte con terceros ni con otros usuarios u organizaciones.';
+					}
+					if (text.includes('almacena permanentemente') || text.includes('almacena todo') || text.includes('reentrenar')) {
+						return 'La documentación oficial de GitHub Copilot y el Microsoft Trust Center estipulan que las entradas de código no se almacenan permanentemente ni se utilizan para reentrenar modelos fundacionales en suscripciones comerciales o empresariales.';
+					}
+					if (text.includes('localmente') || text.includes('sin transmitir') || text.includes('sin enviar')) {
+						return 'Según la arquitectura oficial de GitHub Copilot, el procesamiento y la inferencia del modelo se realizan mediante un proxy seguro en la nube; no se ejecuta de forma puramente local en el IDE.';
+					}
+					return `De acuerdo con las directrices de privacidad y arquitectura de Microsoft Learn y GitHub Docs (${item.source?.title || 'GitHub Docs'}), esta opción describe un tratamiento de retención o flujo no conforme con las salvaguardas oficiales.`;
+				}
+				if (text.includes('individual') || text.includes('business') || text.includes('enterprise')) {
+					return `En la documentación de planes de GitHub Copilot (Microsoft Learn / GitHub Docs), la capacidad o requisito de gobernanza indicado en este escenario no coincide con las funciones del plan seleccionado.`;
+				}
+				if (cat === 'prompting') {
+					if (text.includes('breve') || text.includes('genérico') || text.includes('sin detalles') || text.includes('sin contexto')) {
+						return 'Las guías de estudio oficial de Microsoft Learn para GH-300 indican que los prompts ambiguos o sin restricciones degradan la calidad del código. Se debe aportar contexto, restricciones y ejemplos verificables.';
+					}
+					return `Según las directrices de ingeniería de prompts de GitHub Copilot y Microsoft Learn, esta opción no optimiza el contexto ni sigue los principios recomendados para guiar las sugerencias del modelo.`;
+				}
+				if (cat === 'responsible') {
+					if (text.includes('asumir') || text.includes('siempre seguro') || text.includes('sin revisar') || text.includes('sin validar')) {
+						return 'Los principios de IA Responsable de Microsoft determinan que el desarrollador permanece en control y debe validar, probar y auditar cada sugerencia antes de su puesta en producción.';
+					}
+					return `El estándar de Uso Responsable de Microsoft y GitHub Docs estipula que la IA no garantiza infalibilidad por sí sola y requiere supervisión activa del equipo de desarrollo.`;
+				}
+				if (cat === 'features' || cat === 'productivity') {
+					return `Según la documentación técnica oficial de GitHub Copilot (${item.source?.title || 'Microsoft Learn'}), esta opción describe un alcance, comando o herramienta que no corresponde a los requisitos formulados en la pregunta.`;
+				}
+				return `De acuerdo con la documentación oficial de Microsoft Learn y GitHub Copilot (${item.source?.title || 'GitHub Docs'}), la opción ${opt.id} no satisface los criterios técnicos requeridos para este escenario.`;
+			}
+
 			function reviewAnswer() {
 				if (state.selected.length === 0 || state.reviewed) return;
 				const item = state.questions[state.current];
@@ -167,8 +203,66 @@ const serializedQuestions = JSON.stringify(questions);
 				const correct = state.selected.length === correctAnswers.length && state.selected.every((option) => correctAnswers.includes(option));
 				state.answers[state.current] = { correct, category: item.category.id };
 				document.querySelectorAll('.option').forEach((option) => { const isCorrect = correctAnswers.includes(option.dataset.option); option.classList.toggle('correct', isCorrect); option.classList.toggle('incorrect', state.selected.includes(option.dataset.option) && !isCorrect); option.querySelector('input').disabled = true; });
-				reviewBox.className = `review-box ${correct ? 'review-correct' : 'review-incorrect'}`;
-				reviewBox.innerHTML = `<strong>${correct ? 'Respuesta correcta' : 'Respuesta incorrecta'}</strong><p>${item.explanation}</p><a href="${item.source.url}" target="_blank" rel="noreferrer">Consultar fuente oficial: ${item.source.title} ↗</a>`;
+
+				if (correct) {
+					reviewBox.className = 'review-box review-correct';
+					reviewBox.innerHTML = `
+						<div class="review-status-correct"><strong>✓ Respuesta correcta</strong></div>
+						<p>${item.explanation}</p>
+						<a href="${item.source.url}" target="_blank" rel="noreferrer">Consultar fuente oficial: ${item.source.title} ↗</a>
+					`;
+				} else {
+					const incorrectSelected = state.selected
+						.filter((id) => !correctAnswers.includes(id))
+						.map((id) => item.options.find((opt) => opt.id === id))
+						.filter(Boolean);
+					const missingCorrect = correctAnswers
+						.filter((id) => !state.selected.includes(id))
+						.map((id) => item.options.find((opt) => opt.id === id))
+						.filter(Boolean);
+
+					let html = `
+						<div class="review-status-incorrect"><strong>✕ Respuesta incorrecta</strong></div>
+					`;
+
+					if (incorrectSelected.length > 0) {
+						html += `
+							<div class="incorrect-reasons">
+								<span class="section-tag">¿Por qué no es correcta tu elección? (Fuentes oficiales Microsoft / GitHub Docs):</span>
+								${incorrectSelected
+									.map(
+										(opt) => `
+									<div class="incorrect-card">
+										<div class="incorrect-card-title">Opción seleccionada ${opt.id}: "${opt.text}"</div>
+										<div class="incorrect-card-reason">${getIncorrectRationale(opt, item)}</div>
+									</div>
+								`,
+									)
+									.join('')}
+							</div>
+						`;
+					}
+
+					if (missingCorrect.length > 0) {
+						html += `
+							<div class="missing-warning">
+								<strong>Faltó seleccionar:</strong> ${missingCorrect.map((m) => `Opción ${m.id} ("${m.text}")`).join(', ')}
+							</div>
+						`;
+					}
+
+					html += `
+						<div class="correct-resolution">
+							<span class="section-tag text-[#3fb950]">Fundamentación oficial (Respuesta correcta: ${correctAnswers.join(', ')}):</span>
+							<p>${item.explanation}</p>
+							<a href="${item.source.url}" target="_blank" rel="noreferrer">Consultar fuente oficial: ${item.source.title} ↗</a>
+						</div>
+					`;
+
+					reviewBox.className = 'review-box review-incorrect';
+					reviewBox.innerHTML = html;
+				}
+
 				$('continue-button').disabled = false;
 			}
 
@@ -287,10 +381,17 @@ const serializedQuestions = JSON.stringify(questions);
 		.option.incorrect { @apply border-[#f85149] bg-[#3a1d20]; }
 		.review-box { @apply mt-6 rounded-r-[10px] border-l-[3px] bg-[#18212b] px-5 py-[18px] leading-relaxed; }
 		.review-box p { @apply my-2 text-[#b8c3cf]; }
-		.review-box a { @apply text-sm text-gh-blue; }
 		.review-correct { @apply border-[#3fb950]; }
-		.review-incorrect { @apply border-gh-orange bg-[#3b2615]; }
-		.quiz-actions { @apply mt-[30px] flex-wrap justify-end; }
+		.review-incorrect { @apply border-gh-orange bg-[#24170d]; }
+		.review-status-correct strong { @apply text-base font-bold text-[#3fb950]; }
+		.review-status-incorrect strong { @apply text-base font-bold text-[#f85149]; }
+		.incorrect-reasons { @apply my-3.5 grid gap-2.5; }
+		.incorrect-card { @apply rounded-lg border border-[#f85149]/35 bg-[#3a1d20]/50 p-3.5 text-sm; }
+		.incorrect-card-title { @apply mb-1 font-bold text-[#ff7b72]; }
+		.incorrect-card-reason { @apply leading-relaxed text-[#c9d1d9]; }
+		.missing-warning { @apply my-2.5 rounded-lg border border-[#d29922]/40 bg-[#3b2615]/60 p-3 text-sm text-[#e3b341]; }
+		.correct-resolution { @apply mt-3.5 border-t border-[#303b48] pt-3; }
+		.section-tag { @apply mb-1.5 block text-xs font-bold uppercase tracking-wider text-[#8b949e]; }
 		.score-card { @apply my-9 mb-6 rounded-[14px] border border-[#30465c] bg-[#142235] p-7 text-center; }
 		.score-card span { @apply text-7xl font-black tracking-[-.08em] text-gh-blue; }
 		.score-card p { @apply mt-2 text-[#b8c3cf]; }

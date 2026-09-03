@@ -14,6 +14,7 @@ From repo root (`C:/Users/cvenegco/projects/quiz-gh300`):
 ```bash
 npm install
 npm run dev
+npm test          # o: bun test (ejecuta suite unitaria en tests/)
 npm run build
 npm run preview
 ```
@@ -85,24 +86,32 @@ Observed validation expectation from docs: after regenerating questions, run `np
 
 ## Testing and verification approach
 
-- No dedicated test suite or lint scripts were found in `package.json`.
-- Primary verification command observed in project docs/rules is:
+- Automated unit testing suite is located in `tests/evaluation.test.ts`.
+- Runs via Bun or Node test runner:
 
 ```bash
-npm run build
+bun test
+# or:
+npm test
 ```
 
-- For data changes: regenerate with Python script, then run `npm run build`.
-- For API/UI behavior checks: run dev server and exercise quiz flow + history panel manually.
+- Primary verification commands:
+
+```bash
+bun test          # All unit tests must pass 100%
+npm run build     # Production build must succeed with zero errors
+```
+
+- For data changes: regenerate with `python scripts_prepare_questions.py`, then run `bun test && npm run build`.
 
 ## Gotchas and non-obvious constraints
 
-- **Node version is critical**: API depends on built-in `node:sqlite`; older Node versions will fail.
+- **Dual runtime support**: SQLite access in `src/pages/api/attempts.ts` dynamically supports both **Bun** (`bun:sqlite`) and **Node.js >= 22.12** (`node:sqlite`).
+- **Sources constraint**: Explanations, rationales, and rubric answers MUST be grounded exclusively in official documentation from **Microsoft Learn** and **GitHub Copilot**.
 - `index.astro` is monolithic (markup + logic + style in one file). Keep edits surgical to avoid regressions across UI state transitions.
-- `category_summary` is stored as JSON string in SQLite (`TEXT`), so consumers must parse if structured access is needed.
-- Question correctness logic currently derives correct options from `item.correctAnswer.split(/\s*(?:y|,)\s*/)`; data format changes in `questions.json` can break scoring.
+- Evaluator logic is decoupled into pure functions in `src/utils/evaluation.ts` to allow 100% automated test coverage.
+- Question correctness logic derives correct options from `item.correctAnswer.split(/\s*(?:y|,)\s*/)`.
 - Question pool limit is clamped to available items in selected balotario (`Math.min(Math.max(requestedLimit || 30, 1), pool.length)`).
-- Existing docs mention maintaining a code graph under `graphify-out/`; if workflow depends on it, regenerate after significant structural changes.
 
 ## Existing rule-file guidance to retain
 
@@ -117,10 +126,13 @@ From `CLAUDE.md` and prior `AGENTS.md`:
   - https://docs.astro.build/en/guides/styling/
   - https://docs.astro.build/en/guides/internationalization/
 
-## Recommended change workflow for agents
+## Mandatory change workflow: Spec-Driven Development (SDD)
 
-1. Read `specs/quiz-gh300.md` and `docs/context-map.md` before behavior changes.
-2. If changing question content, edit `balotarios.md` first, then regenerate `src/data/questions.json` via `scripts_prepare_questions.py`.
-3. Implement code changes in `src/pages/index.astro` and/or `src/pages/api/attempts.ts`, preserving existing state flow and Spanish UI copy conventions.
-4. Run `npm run build` to validate.
-5. If using graph workflow, refresh `graphify-out` artifacts after structural changes.
+From now on, **every requirement must strictly follow Spec-Driven Development (SDD)**:
+
+1. **Spec & Context First**: Read `specs/quiz-gh300.md` and `docs/context-map.md`. Update or create the functional specifications and acceptance criteria before implementing code.
+2. **Mandatory Unit Tests**: Every requirement implies creating or updating automated unit tests in `tests/` covering positive flows, negative flows, and edge cases.
+3. **Official Sources Only**: All explanations, distractors, or educational rationales must be sourced solely from **Microsoft Learn** (`learn.microsoft.com`) and **GitHub Copilot** (`docs.github.com`).
+4. **Modular Implementation**: Keep business logic decoupled in `src/utils/` and maintain surgical updates in `src/pages/index.astro`. Preserve Spanish UI copy conventions.
+5. **Double Verification**: Run `bun test` (or `npm test`) AND `npm run build`. No change is accepted unless all tests pass and the build succeeds.
+6. **Graph Maintenance**: If using Graphify, refresh `graphify-out` artifacts after structural changes.
