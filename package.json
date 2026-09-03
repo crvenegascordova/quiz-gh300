@@ -9,6 +9,7 @@
     "dev": "astro dev",
     "build": "node node_modules/astro/bin/astro.mjs build",
     "preview": "astro preview",
+    "test": "bun test",
     "astro": "astro"
   },
   "dependencies": {

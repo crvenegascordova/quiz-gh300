@@ -153,7 +153,7 @@ const serializedQuestions = JSON.stringify(questions);
 
 			function selectOption(option, checked) {
 				if (state.reviewed) return;
-				state.selected = checked ? [...state.selected, option] : state.selected.filter((selected) => selected !== option);
+				state.selected = checked ? Array.from(new Set([...state.selected, option])) : state.selected.filter((selected) => selected !== option);
 				state.selections[state.current] = state.selected;
 				document.querySelector(`.option[data-option="${option}"]`).classList.toggle('selected', checked);
 				$('review-button').disabled = state.selected.length === 0;
@@ -163,7 +163,7 @@ const serializedQuestions = JSON.stringify(questions);
 				if (state.selected.length === 0 || state.reviewed) return;
 				const item = state.questions[state.current];
 				state.reviewed = true;
-				const correctAnswers = item.correctAnswer.split(/\\s*(?:y|,)\\s*/);
+				const correctAnswers = item.correctAnswer.split(/\s*(?:y|,)\s*/).map((opt) => opt.trim()).filter(Boolean);
 				const correct = state.selected.length === correctAnswers.length && state.selected.every((option) => correctAnswers.includes(option));
 				state.answers[state.current] = { correct, category: item.category.id };
 				document.querySelectorAll('.option').forEach((option) => { const isCorrect = correctAnswers.includes(option.dataset.option); option.classList.toggle('correct', isCorrect); option.classList.toggle('incorrect', state.selected.includes(option.dataset.option) && !isCorrect); option.querySelector('input').disabled = true; });
