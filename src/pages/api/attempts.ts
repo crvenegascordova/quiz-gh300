@@ -1,15 +1,30 @@
 import type { APIRoute } from 'astro';
 import { mkdirSync } from 'node:fs';
 import { dirname, join } from 'node:path';
-import { DatabaseSync } from 'node:sqlite';
-
 const databasePath = join(process.cwd(), 'data', 'quiz-history.sqlite');
-let database: DatabaseSync | undefined;
 
-function getDatabase() {
+interface DatabaseClient {
+	exec(sql: string): void;
+	prepare(sql: string): {
+		all(...params: unknown[]): unknown[];
+		run(...params: unknown[]): unknown;
+	};
+}
+
+let database: DatabaseClient | undefined;
+
+async function getDatabase(): Promise<DatabaseClient> {
 	if (!database) {
 		mkdirSync(dirname(databasePath), { recursive: true });
-		database = new DatabaseSync(databasePath);
+		if (typeof process !== 'undefined' && process.versions?.bun) {
+			const mod = ['bun', 'sqlite'].join(':');
+			const { Database } = await import(mod);
+			database = new Database(databasePath) as unknown as DatabaseClient;
+		} else {
+			const mod = ['node', 'sqlite'].join(':');
+			const { DatabaseSync } = await import(mod);
+			database = new DatabaseSync(databasePath) as unknown as DatabaseClient;
+		}
 		database.exec(`CREATE TABLE IF NOT EXISTS attempts (
 			id INTEGER PRIMARY KEY AUTOINCREMENT,
 			created_at TEXT NOT NULL,
@@ -24,8 +39,9 @@ function getDatabase() {
 	return database;
 }
 
-export const GET: APIRoute = () => {
-	const rows = getDatabase().prepare('SELECT * FROM attempts ORDER BY created_at DESC').all();
+export const GET: APIRoute = async () => {
+	const db = await getDatabase();
+	const rows = db.prepare('SELECT * FROM attempts ORDER BY created_at DESC').all();
 	return new Response(JSON.stringify(rows), { headers: { 'Content-Type': 'application/json' } });
 };
 
@@ -36,7 +52,8 @@ export const POST: APIRoute = async ({ request }) => {
 		if (required.some((field) => attempt[field] === undefined)) {
 			return new Response(JSON.stringify({ error: 'Datos incompletos' }), { status: 400 });
 		}
-		getDatabase().prepare(`INSERT INTO attempts
+		const db = await getDatabase();
+		db.prepare(`INSERT INTO attempts
 			(created_at, balotario, total_questions, correct_answers, incorrect_answers, score_percent, category_summary)
 			VALUES (?, ?, ?, ?, ?, ?, ?)`).run(
 			new Date().toISOString(), attempt.balotario, Number(attempt.totalQuestions), Number(attempt.correctAnswers),
