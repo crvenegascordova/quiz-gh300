@@ -371,7 +371,7 @@ const serializedQuestions = JSON.stringify(questions);
 		.progress-track { @apply my-[26px] mb-[30px]; }
 		.progress-track span, .category-track span { @apply block h-full rounded-full bg-[#58a6ff] transition-[width] duration-300; }
 		.question-meta { @apply mb-[17px] text-gh-muted; }
-		.question-text { @apply mb-7 max-w-[800px] text-2xl leading-tight; }
+		.question-text { @apply mb-7 max-w-[800px] text-xl sm:text-[1.38rem] !font-normal leading-relaxed text-[#f0f6fc] tracking-normal; }
 		.options { @apply grid gap-[11px]; }
 		.option { @apply flex w-full cursor-pointer items-start gap-3.5 rounded-[18px] border border-[#303b48] bg-gh-card p-4 text-left leading-normal text-white hover:border-[#58a6ff] hover:bg-[#1c2a3a]; }
 		.option.selected { @apply border-[#58a6ff] bg-[#1c2a3a]; }
@@ -381,6 +381,7 @@ const serializedQuestions = JSON.stringify(questions);
 		.option.incorrect { @apply border-[#f85149] bg-[#3a1d20]; }
 		.review-box { @apply mt-6 rounded-r-[10px] border-l-[3px] bg-[#18212b] px-5 py-[18px] leading-relaxed; }
 		.review-box p { @apply my-2 text-[#b8c3cf]; }
+		.review-box a { @apply text-sm text-gh-blue hover:underline; }
 		.review-correct { @apply border-[#3fb950]; }
 		.review-incorrect { @apply border-gh-orange bg-[#24170d]; }
 		.review-status-correct strong { @apply text-base font-bold text-[#3fb950]; }
@@ -392,6 +393,7 @@ const serializedQuestions = JSON.stringify(questions);
 		.missing-warning { @apply my-2.5 rounded-lg border border-[#d29922]/40 bg-[#3b2615]/60 p-3 text-sm text-[#e3b341]; }
 		.correct-resolution { @apply mt-3.5 border-t border-[#303b48] pt-3; }
 		.section-tag { @apply mb-1.5 block text-xs font-bold uppercase tracking-wider text-[#8b949e]; }
+		.quiz-actions { @apply mt-8 flex-wrap justify-end gap-3.5; }
 		.score-card { @apply my-9 mb-6 rounded-[14px] border border-[#30465c] bg-[#142235] p-7 text-center; }
 		.score-card span { @apply text-7xl font-black tracking-[-.08em] text-gh-blue; }
 		.score-card p { @apply mt-2 text-[#b8c3cf]; }
