@@ -19,7 +19,7 @@ const serializedQuestions = JSON.stringify(questions);
 		<main class="app-shell">
 			<section class="hero" aria-labelledby="page-title">
 				<div class="eyebrow">CERTIFICACIÓN GH-300</div>
-				<h1 id="page-title">Práctica de Microsoft Copilot GH 300</h1>
+				<h1 id="page-title">Práctica Microsoft Copilot GH 300</h1>
 				<p class="hero-copy">
 					Mide tu dominio en GitHub Copilot, con explicaciones y
 					resultados por competencia.
@@ -30,7 +30,9 @@ const serializedQuestions = JSON.stringify(questions);
 				<button
 					id="history-button"
 					class="button button-secondary"
-					type="button">Ver mis exámenes <span>↓</span></button
+					type="button"
+					aria-expanded="false"
+					>Ver mis exámenes <span id="history-arrow">↓</span></button
 				>
 			</div>
 
@@ -210,27 +212,32 @@ const serializedQuestions = JSON.stringify(questions);
 				>
 			</section>
 
-			<dialog id="abandon-dialog" class="modal-dialog" aria-labelledby="modal-title">
+			<dialog
+				id="abandon-dialog"
+				class="modal-dialog"
+				aria-labelledby="modal-title"
+			>
 				<div class="modal-content">
 					<div class="modal-icon-wrapper">
 						<span class="modal-icon">⚠️</span>
 					</div>
-					<h3 id="modal-title" class="modal-title">¿Abandonar examen en curso?</h3>
+					<h3 id="modal-title" class="modal-title">
+						¿Abandonar examen en curso?
+					</h3>
 					<p class="modal-description">
-						Si sales ahora, se descartará el progreso de esta sesión y regresarás a la pantalla de configuración inicial.
+						Si sales ahora, se descartará el progreso de esta sesión
+						y regresarás a la pantalla de configuración inicial.
 					</p>
 					<div class="modal-actions">
 						<button
 							id="modal-cancel-btn"
 							class="button button-secondary"
-							type="button"
-							>Continuar examen</button
+							type="button">Continuar examen</button
 						>
 						<button
 							id="modal-confirm-btn"
 							class="button button-danger"
-							type="button"
-							>Sí, abandonar</button
+							type="button">Sí, abandonar</button
 						>
 					</div>
 				</div>
@@ -274,6 +281,14 @@ const serializedQuestions = JSON.stringify(questions);
 
 			function toggleHistory() {
 				const isHidden = historyPanel.classList.toggle("hidden");
+				const historyArrow = $("history-arrow");
+				if (historyArrow) {
+					historyArrow.textContent = isHidden ? "↓" : "↑";
+				}
+				$("history-button")?.setAttribute(
+					"aria-expanded",
+					String(!isHidden),
+				);
 				if (!isHidden)
 					loadHistory().catch(() => {
 						$("history-list").innerHTML =
@@ -286,6 +301,12 @@ const serializedQuestions = JSON.stringify(questions);
 			}
 
 			function startQuiz() {
+				if (!historyPanel.classList.contains("hidden")) {
+					historyPanel.classList.add("hidden");
+					const historyArrow = $("history-arrow");
+					if (historyArrow) historyArrow.textContent = "↓";
+					$("history-button")?.setAttribute("aria-expanded", "false");
+				}
 				const selectedBalotario = $("balotario-select").value;
 				const requestedLimit = Number($("question-limit").value);
 				const pool =
@@ -313,9 +334,12 @@ const serializedQuestions = JSON.stringify(questions);
 			function updateBackButton() {
 				const isFirst = state.current === 0;
 				const disabled = state.selected.length > 0 || state.reviewed;
-				const label = isFirst ? "Salir y configurar" : "Pregunta anterior";
+				const label = isFirst
+					? "Salir y configurar"
+					: "Pregunta anterior";
 				$("back-button").disabled = disabled;
-				$("back-button").innerHTML = `<span class="button-icon-left">←</span> ${label}`;
+				$("back-button").innerHTML =
+					`<span class="button-icon-left">←</span> ${label}`;
 			}
 
 			function renderQuestion() {
@@ -549,7 +573,10 @@ const serializedQuestions = JSON.stringify(questions);
 				const panel = $("quiz-panel");
 				if (!panel) return;
 				try {
-					panel.scrollIntoView({ behavior: "smooth", block: "start" });
+					panel.scrollIntoView({
+						behavior: "smooth",
+						block: "start",
+					});
 				} catch {
 					window.scrollTo({
 						top: panel.offsetTop - 16,
@@ -720,6 +747,14 @@ const serializedQuestions = JSON.stringify(questions);
 		select {
 			font: inherit;
 		}
+		input,
+		select {
+			@apply cursor-pointer;
+		}
+		input:disabled,
+		select:disabled {
+			@apply cursor-not-allowed;
+		}
 		h1,
 		h2,
 		h3,
@@ -782,7 +817,7 @@ const serializedQuestions = JSON.stringify(questions);
 		}
 		.field input,
 		.field select {
-			@apply w-full rounded-[10px] border border-[#33404e] bg-[#0d1117] p-3.5 text-[#f5f7fb] outline-none focus:border-[#58a6ff];
+			@apply w-full cursor-pointer rounded-[10px] border border-[#33404e] bg-[#0d1117] p-3.5 text-[#f5f7fb] outline-none focus:border-[#58a6ff] disabled:cursor-not-allowed;
 		}
 		.field small {
 			@apply font-normal;
@@ -878,7 +913,7 @@ const serializedQuestions = JSON.stringify(questions);
 			@apply border-[#58a6ff] bg-[#1c2a3a];
 		}
 		.option input {
-			@apply mt-0.5 h-[19px] w-[19px] shrink-0 accent-[#58a6ff];
+			@apply mt-0.5 h-[19px] w-[19px] shrink-0 cursor-pointer accent-[#58a6ff] disabled:cursor-not-allowed;
 		}
 		.option-key {
 			@apply w-[25px] shrink-0 font-black text-gh-blue;

@@ -9,6 +9,7 @@ import {
 	computeQuizActions,
 	computeBackButtonState,
 	isQuestionReadOnly,
+	computeHistoryToggleState,
 } from '../src/utils/evaluation';
 
 describe('Flujo de Evaluación y Corrección de Respuestas (SDD Quiz GH-300)', () => {
@@ -406,6 +407,38 @@ describe('Flujo de Evaluación y Corrección de Respuestas (SDD Quiz GH-300)', (
 				const answers = [{ correct: true, category: 'privacy' }];
 				expect(isQuestionReadOnly(answers, 1)).toBe(false);
 			});
+		});
+	});
+
+	describe('7. Estado Visual y Accesibilidad del Botón de Historial (computeHistoryToggleState)', () => {
+		it('cuando el panel está ABIERTO: la flecha debe apuntar hacia arriba (↑) y ariaExpanded debe ser true', () => {
+			const state = computeHistoryToggleState(true);
+			expect(state.isOpen).toBe(true);
+			expect(state.arrow).toBe('↑');
+			expect(state.ariaExpanded).toBe(true);
+		});
+
+		it('cuando el panel está CERRADO: la flecha debe apuntar hacia abajo (↓) y ariaExpanded debe ser false', () => {
+			const state = computeHistoryToggleState(false);
+			expect(state.isOpen).toBe(false);
+			expect(state.arrow).toBe('↓');
+			expect(state.ariaExpanded).toBe(false);
+		});
+
+		it('transición de alternancia: de cerrado a abierto cambia flecha de ↓ a ↑', () => {
+			let isPanelOpen = false;
+			let state = computeHistoryToggleState(isPanelOpen);
+			expect(state.arrow).toBe('↓');
+
+			isPanelOpen = !isPanelOpen;
+			state = computeHistoryToggleState(isPanelOpen);
+			expect(state.arrow).toBe('↑');
+			expect(state.ariaExpanded).toBe(true);
+
+			isPanelOpen = !isPanelOpen;
+			state = computeHistoryToggleState(isPanelOpen);
+			expect(state.arrow).toBe('↓');
+			expect(state.ariaExpanded).toBe(false);
 		});
 	});
 });

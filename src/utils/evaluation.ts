@@ -140,6 +140,25 @@ export function isQuestionReadOnly(
 	return Boolean(answers && answers[index] !== undefined);
 }
 
+export interface HistoryToggleState {
+	isOpen: boolean;
+	arrow: '↑' | '↓';
+	ariaExpanded: boolean;
+}
+
+/**
+ * Calcula el estado visual y de accesibilidad del botón del historial de exámenes.
+ * - Si el panel está abierto (isOpen === true): flecha hacia arriba ('↑') y ariaExpanded = true.
+ * - Si el panel está cerrado (isOpen === false): flecha hacia abajo ('↓') y ariaExpanded = false.
+ */
+export function computeHistoryToggleState(isOpen: boolean): HistoryToggleState {
+	return {
+		isOpen,
+		arrow: isOpen ? '↑' : '↓',
+		ariaExpanded: isOpen,
+	};
+}
+
 
 
 /**
