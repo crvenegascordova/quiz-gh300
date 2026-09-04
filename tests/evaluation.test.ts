@@ -6,6 +6,9 @@ import {
 	recordQuestionAnswer,
 	buildIncorrectRationale,
 	buildReviewBreakdown,
+	computeQuizActions,
+	computeBackButtonState,
+	isQuestionReadOnly,
 } from '../src/utils/evaluation';
 
 describe('Flujo de Evaluación y Corrección de Respuestas (SDD Quiz GH-300)', () => {
@@ -308,6 +311,101 @@ describe('Flujo de Evaluación y Corrección de Respuestas (SDD Quiz GH-300)', (
 			expect(breakdown.incorrectSelected.length).toBe(0);
 			expect(breakdown.missingCorrect.length).toBe(0);
 			expect(breakdown.explanation).toBe(sampleQuestion.explanation);
+		});
+	});
+
+	describe('5. Gestión Dinámica de Botones de Acción (Revisar, Continuar, Salir)', () => {
+		it('al iniciar una pregunta sin opciones seleccionadas: Revisar está visible pero deshabilitado, Continuar está oculto', () => {
+			const actions = computeQuizActions(false, 0);
+
+			expect(actions.reviewVisible).toBe(true);
+			expect(actions.reviewDisabled).toBe(true);
+			expect(actions.continueVisible).toBe(false);
+			expect(actions.exitVisible).toBe(true);
+		});
+
+		it('al seleccionar al menos una opción sin revisar: Revisar se habilita y Continuar sigue oculto', () => {
+			const actions = computeQuizActions(false, 1);
+
+			expect(actions.reviewVisible).toBe(true);
+			expect(actions.reviewDisabled).toBe(false);
+			expect(actions.continueVisible).toBe(false);
+			expect(actions.exitVisible).toBe(true);
+		});
+
+		it('[REQUISITO CRÍTICO] tras revisar la respuesta: el botón Revisar se oculta y Continuar queda visible y habilitado', () => {
+			const actions = computeQuizActions(true, 1);
+
+			// El botón "Revisar respuesta" se oculta
+			expect(actions.reviewVisible).toBe(false);
+			// El botón "Continuar" pasa a ser el protagonista
+			expect(actions.continueVisible).toBe(true);
+			expect(actions.continueDisabled).toBe(false);
+			// "Salir y configurar" sigue disponible
+			expect(actions.exitVisible).toBe(true);
+		});
+	});
+
+	describe('6. Comportamiento y Estado del Botón Inferior y Navegación Solo Lectura', () => {
+		describe('6.1 Primera Pregunta (current === 0)', () => {
+			it('sin opción seleccionada y sin revisar: muestra "Salir y configurar" y está habilitado', () => {
+				const state = computeBackButtonState(0, 0, false);
+				expect(state.label).toBe('Salir y configurar');
+				expect(state.disabled).toBe(false);
+				expect(state.action).toBe('exit');
+			});
+
+			it('con opción seleccionada (sin revisar): debe deshabilitarse y quedar en gris', () => {
+				const state = computeBackButtonState(0, 1, false);
+				expect(state.label).toBe('Salir y configurar');
+				expect(state.disabled).toBe(true);
+			});
+
+			it('en estado de revisión: debe deshabilitarse y quedar en gris', () => {
+				const state = computeBackButtonState(0, 1, true);
+				expect(state.label).toBe('Salir y configurar');
+				expect(state.disabled).toBe(true);
+			});
+		});
+
+		describe('6.2 Preguntas Posteriores (current > 0)', () => {
+			it('sin opción seleccionada y sin revisar: cambia a "Pregunta anterior" y está habilitado para retroceder', () => {
+				const state = computeBackButtonState(1, 0, false);
+				expect(state.label).toBe('Pregunta anterior');
+				expect(state.disabled).toBe(false);
+				expect(state.action).toBe('previous');
+			});
+
+			it('en pregunta 5 sin selección: muestra "Pregunta anterior" y está habilitado', () => {
+				const state = computeBackButtonState(4, 0, false);
+				expect(state.label).toBe('Pregunta anterior');
+				expect(state.disabled).toBe(false);
+				expect(state.action).toBe('previous');
+			});
+
+			it('con opción seleccionada en pregunta posterior: debe deshabilitarse y quedar en gris', () => {
+				const state = computeBackButtonState(2, 1, false);
+				expect(state.label).toBe('Pregunta anterior');
+				expect(state.disabled).toBe(true);
+			});
+
+			it('en estado de revisión en pregunta posterior: debe deshabilitarse y quedar en gris', () => {
+				const state = computeBackButtonState(2, 1, true);
+				expect(state.label).toBe('Pregunta anterior');
+				expect(state.disabled).toBe(true);
+			});
+		});
+
+		describe('6.3 Detección de Modo Solo Lectura para Preguntas Previas', () => {
+			it('detecta como solo lectura una pregunta que ya tiene respuesta registrada en answers', () => {
+				const answers = [{ correct: true, category: 'privacy' }];
+				expect(isQuestionReadOnly(answers, 0)).toBe(true);
+			});
+
+			it('detecta como interactiva/no leída una pregunta sin respuesta previa registrada', () => {
+				const answers = [{ correct: true, category: 'privacy' }];
+				expect(isQuestionReadOnly(answers, 1)).toBe(false);
+			});
 		});
 	});
 });

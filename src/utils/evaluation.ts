@@ -71,6 +71,77 @@ export function recordQuestionAnswer(
 	return updated;
 }
 
+export interface QuizActionState {
+	reviewVisible: boolean;
+	reviewDisabled: boolean;
+	continueVisible: boolean;
+	continueDisabled: boolean;
+	exitVisible: boolean;
+}
+
+/**
+ * Determina el estado de visibilidad y habilitación de los botones de acción del quiz.
+ * Cuando la pregunta ya ha sido revisada, oculta 'Revisar respuesta' y destaca 'Continuar' y 'Salir y configurar'.
+ */
+export function computeQuizActions(reviewed: boolean, selectedCount: number): QuizActionState {
+	if (reviewed) {
+		return {
+			reviewVisible: false,
+			reviewDisabled: true,
+			continueVisible: true,
+			continueDisabled: false,
+			exitVisible: true,
+		};
+	}
+	return {
+		reviewVisible: true,
+		reviewDisabled: selectedCount === 0,
+		continueVisible: false,
+		continueDisabled: true,
+		exitVisible: true,
+	};
+}
+
+export interface BackButtonState {
+	label: string;
+	disabled: boolean;
+	action: 'exit' | 'previous';
+}
+
+/**
+ * Determina el estado del botón inferior (texto, estado disabled y acción a ejecutar).
+ * - En la pregunta 0: 'Salir y configurar', habilitado solo si selectedCount === 0 y no está revisada.
+ * - En preguntas > 0: 'Pregunta anterior', habilitado solo si selectedCount === 0 y no está revisada.
+ * - Si hay opciones seleccionadas o la pregunta está en revisión: disabled = true.
+ */
+export function computeBackButtonState(
+	current: number,
+	selectedCount: number,
+	reviewed: boolean,
+): BackButtonState {
+	const isFirst = current === 0;
+	const disabled = selectedCount > 0 || reviewed;
+
+	return {
+		label: isFirst ? 'Salir y configurar' : 'Pregunta anterior',
+		disabled,
+		action: isFirst ? 'exit' : 'previous',
+	};
+}
+
+/**
+ * Determina si una pregunta debe renderizarse en modo solo lectura de revisión.
+ * Ocurre cuando la pregunta ya tiene un resultado previo registrado en answers.
+ */
+export function isQuestionReadOnly(
+	answers: Array<{ correct: boolean; category: string }>,
+	index: number,
+): boolean {
+	return Boolean(answers && answers[index] !== undefined);
+}
+
+
+
 /**
  * Genera el motivo pedagógico por el cual una opción seleccionada es incorrecta,
  * fundamentado exclusivamente en la documentación oficial de Microsoft Learn y GitHub Copilot.
