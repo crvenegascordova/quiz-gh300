@@ -18,11 +18,11 @@ async function getDatabase(): Promise<DatabaseClient> {
 		mkdirSync(dirname(databasePath), { recursive: true });
 		if (typeof process !== 'undefined' && process.versions?.bun) {
 			const mod = ['bun', 'sqlite'].join(':');
-			const { Database } = await import(mod);
+			const { Database } = await import(/* @vite-ignore */ mod);
 			database = new Database(databasePath) as unknown as DatabaseClient;
 		} else {
 			const mod = ['node', 'sqlite'].join(':');
-			const { DatabaseSync } = await import(mod);
+			const { DatabaseSync } = await import(/* @vite-ignore */ mod);
 			database = new DatabaseSync(databasePath) as unknown as DatabaseClient;
 		}
 		database.exec(`CREATE TABLE IF NOT EXISTS attempts (

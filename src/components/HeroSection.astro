@@ -1,0 +1,27 @@
+---
+interface Props {
+	title?: string;
+	description?: string;
+}
+
+const {
+	title = "Práctica Microsoft Copilot GH 300",
+	description = "Mide tu dominio en GitHub Copilot, con explicaciones y resultados por competencia.",
+} = Astro.props;
+---
+
+<section class="hero" aria-labelledby="page-title">
+	<div class="eyebrow">CERTIFICACIÓN GH-300</div>
+	<h1 id="page-title">{title}</h1>
+	<p class="hero-copy">{description}</p>
+</section>
+
+<div class="hero-actions">
+	<button
+		id="history-button"
+		class="button button-secondary"
+		type="button"
+		aria-expanded="false"
+		>Ver mis exámenes <span id="history-arrow">↓</span></button
+	>
+</div>

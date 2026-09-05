@@ -1,0 +1,48 @@
+<section id="quiz-panel" class="panel quiz-panel hidden" aria-live="polite">
+	<div class="quiz-topline">
+		<div>
+			<span class="step-label">EXAMEN EN CURSO</span><strong
+				id="progress-label">Pregunta 1 de 30</strong
+			>
+		</div>
+		<div class="flex items-center gap-2.5 flex-wrap">
+			<span id="category-label" class="category-pill">Categoría</span>
+			<button
+				id="abandon-button"
+				class="abandon-button"
+				type="button"
+				title="Abandonar examen y volver a la configuración"
+				>✕ Abandonar</button
+			>
+		</div>
+	</div>
+	<div class="progress-track">
+		<span id="progress-bar"></span>
+	</div>
+	<div class="question-meta">
+		<span id="balotario-label">Balotario 1</span><span id="question-number"
+			>01</span
+		>
+	</div>
+	<h2 id="question-text" class="question-text"></h2>
+	<div id="options" class="options" role="group" aria-label="Opciones de respuesta">
+	</div>
+	<div id="review-box" class="review-box hidden"></div>
+	<div class="quiz-actions">
+		<button id="back-button" class="button button-secondary" type="button"
+			><span class="button-icon-left">←</span> Salir y configurar</button
+		>
+		<button
+			id="review-button"
+			class="button button-secondary"
+			type="button"
+			disabled>Revisar respuesta</button
+		>
+		<button
+			id="continue-button"
+			class="button button-primary hidden"
+			type="button"
+			disabled>Continuar <span>→</span></button
+		>
+	</div>
+</section>

@@ -1,138 +1,145 @@
 # AGENTS.md
 
-## Project snapshot
+## Project overview
 
-- Stack: **Astro 7** (`type: module`) with **Node adapter** (`@astrojs/node`) and **Tailwind CSS 4** via `@tailwindcss/vite`.
-- Runtime requirement: **Node.js >= 22.12.0** (`package.json`) because the API uses `node:sqlite` (`DatabaseSync`).
-- Main app is a single-page Astro view in `src/pages/index.astro` plus one API route in `src/pages/api/attempts.ts`.
-- Source-of-truth content for questions is `balotarios.md`; generated dataset is `src/data/questions.json`.
+- `quiz-gh300` is an Astro 7 server-rendered practice application for the GitHub Copilot GH-300 certification.
+- The project uses Astro with the Node adapter in standalone mode, Tailwind CSS 4 through `@tailwindcss/vite`, and TypeScript strict configuration.
+- The application UI and educational content are in Spanish. Preserve Spanish UI text, test descriptions, and documentation when adding user-facing content.
+- The repository contains 420 questions. The source of truth is `balotarios.md`; the generated dataset is `src/data/questions.json`.
+- The working persistence implementation is local SQLite at `data/quiz-history.sqlite`.
 
-## Essential commands
+## Requirements and essential commands
 
-From repo root (`C:/Users/cvenegco/projects/quiz-gh300`):
+Use Node.js `>=22.12.0` for the application because the API uses the native `node:sqlite` module. Bun is also supported and is required by the test script.
+
+Run commands from the repository root:
 
 ```bash
 npm install
 npm run dev
-npm test          # o: bun test (ejecuta suite unitaria en tests/)
+npm test
+npm run lint
 npm run build
 npm run preview
 ```
 
-Also available from memory/rule files:
+- `npm run dev` starts Astro's development server. When using the project workflow for a persistent background server, use `astro dev --background`; manage it with `astro dev status`, `astro dev logs`, and `astro dev stop`.
+- `npm test` runs `bun test`; running `bun test` directly is equivalent. Bun must be installed even when dependencies were installed with npm.
+- `npm run lint` runs `eslint .`.
+- `npm run build` runs the production Astro build through `node node_modules/astro/bin/astro.mjs build`.
+- `npm run preview` serves the production build locally.
+- `bun install` is also documented as an alternative dependency installation command.
+
+After changing code, run the most targeted test first, then at minimum:
 
 ```bash
-astro dev --background
-astro dev stop
-astro dev status
-astro dev logs
+bun test && npm run lint && npm run build
 ```
 
-Data regeneration flow (after editing `balotarios.md`):
+After changing `balotarios.md`, regenerate the dataset before testing:
 
 ```bash
 python scripts_prepare_questions.py
-# or on Windows:
+# Windows alternative:
 py -3 scripts_prepare_questions.py
+bun test && npm run lint && npm run build
 ```
 
-Observed validation expectation from docs: after regenerating questions, run `npm run build`.
+The generator validates that exactly 420 questions were parsed and writes `src/data/questions.json` with UTF-8 JSON. Do not hand-edit the generated JSON unless there is no alternative.
 
-## Code organization
+## Repository structure
 
-- `src/pages/index.astro`
-  - Renders entire quiz UI (setup, quiz, results, local history panel).
-  - Imports `src/data/questions.json` at build time.
-  - Contains client-side state machine and all interaction logic inside `<script define:vars={{ serializedQuestions }}>`.
-  - Contains global Tailwind styling in `<style is:global>` with `@theme`, `@layer base`, and `@layer components`.
-- `src/pages/api/attempts.ts`
-  - `GET`: returns all attempts (`created_at DESC`) as JSON.
-  - `POST`: validates required payload fields and inserts attempt row.
-  - Initializes SQLite DB lazily and creates table if missing.
-- `src/data/questions.json`
-  - Generated data consumed by UI. Do not hand-edit unless absolutely necessary.
-- `scripts_prepare_questions.py`
-  - Converts `balotarios.md` into JSON dataset.
-- `docs/context-map.md`
-  - Maintains conceptual flow and extension points.
-- `specs/quiz-gh300.md`
-  - Functional requirements and acceptance criteria for quiz behavior.
-
-## Runtime and persistence behavior
-
-- SQLite file path is built from `process.cwd()`:
-  - `data/quiz-history.sqlite`
-- Directory is created automatically (`mkdirSync(..., { recursive: true })`) when API is first used.
-- Table schema (`attempts`) includes:
-  - `created_at`, `balotario`, `total_questions`, `correct_answers`, `incorrect_answers`, `score_percent`, `category_summary`.
-- Frontend persists history by calling:
-  - `GET /api/attempts` for listing
-  - `POST /api/attempts` on quiz completion
-
-## Observed coding/style patterns
-
-- TypeScript strict config extends `astro/tsconfigs/strict` (`tsconfig.json`).
-- Astro config uses tabs/standard formatting with trailing commas in objects (`astro.config.mjs`).
-- In `index.astro`:
-  - Uses concise helper (`const $ = (id) => document.getElementById(id)`).
-  - State is a plain object (`questions/current/selected/reviewed/answers/selections`).
-  - Heavy use of array transforms (`map/filter/every`) and inline template literals to render HTML snippets.
-  - Event handlers are attached at bottom of script section.
-  - UI copy is Spanish.
-- Tailwind strategy:
-  - `@import "tailwindcss"` directly in page-level global style.
-  - Custom design tokens declared in `@theme` block.
-  - Utility composition via `@apply` in component classes.
-
-## Testing and verification approach
-
-- Automated unit testing suite is located in `tests/evaluation.test.ts`.
-- Runs via Bun or Node test runner:
-
-```bash
-bun test
-# or:
-npm test
+```text
+balotarios.md                  # Source Markdown for questions, explanations, and sources
+scripts_prepare_questions.py   # Generates src/data/questions.json
+package.json                   # Scripts, runtime requirement, and dependencies
+astro.config.mjs               # SSR output, Node adapter, and Tailwind Vite plugin
+specs/quiz-gh300.md            # Functional requirements and acceptance criteria
+docs/context-map.md            # Data flow, session state, and extension points
+tests/evaluation.test.ts       # Bun unit tests for pure evaluation logic
+data/                          # Runtime local SQLite data; quiz history is stored here
+src/
+  components/                  # Astro presentation components
+  data/questions.json           # Generated question dataset consumed by the page
+  pages/index.astro            # Page composition and dataset loading
+  pages/api/attempts.ts        # GET/POST attempts API backed by local SQLite
+  scripts/quiz-client.ts       # Browser-side quiz state machine and event handling
+  styles/global.css            # Global Tailwind import, tokens, and component styles
+  types/question.ts            # Shared question and attempt interfaces
+  utils/evaluation.ts           # Pure, DOM-free quiz evaluation utilities
 ```
 
-- Primary verification commands:
+The page is composed from `Layout.astro`, `HeroSection.astro`, `HistoryPanel.astro`, `SetupPanel.astro`, `QuizPanel.astro`, `ResultsPanel.astro`, and `AbandonDialog.astro`. `src/pages/index.astro` imports the generated questions, derives the available balotarios, and passes them into the layout and setup components.
 
-```bash
-bun test          # All unit tests must pass 100%
-npm run build     # Production build must succeed with zero errors
+The browser script serializes the questions into a JSON script element in `Layout.astro`, parses them on startup, and initializes `initQuiz`. It owns session state (`questions`, `current`, `selected`, `reviewed`, `answers`, and `selections`) and calls `/api/attempts` to load and save history.
+
+## Application behavior and data flow
+
+The content pipeline is:
+
+```text
+balotarios.md -> scripts_prepare_questions.py -> src/data/questions.json -> src/pages/index.astro -> Layout.astro -> quiz-client.ts
 ```
 
-- For data changes: regenerate with `python scripts_prepare_questions.py`, then run `bun test && npm run build`.
+The generator:
 
-## Gotchas and non-obvious constraints
+- Splits Markdown into `# Balotario N` sections and `Pregunta N` blocks.
+- Parses options `A` through `E`, the correct answer, explanation, and official source link.
+- Assigns one of six categories using keyword scoring: `responsible`, `features`, `architecture`, `prompting`, `productivity`, and `privacy`.
+- Requires every question to have a correct answer, explanation, and source, and aborts unless there are exactly 420 items.
 
-- **Dual runtime support**: SQLite access in `src/pages/api/attempts.ts` dynamically supports both **Bun** (`bun:sqlite`) and **Node.js >= 22.12** (`node:sqlite`).
-- **Sources constraint**: Explanations, rationales, and rubric answers MUST be grounded exclusively in official documentation from **Microsoft Learn** and **GitHub Copilot**.
-- `index.astro` is monolithic (markup + logic + style in one file). Keep edits surgical to avoid regressions across UI state transitions.
-- Evaluator logic is decoupled into pure functions in `src/utils/evaluation.ts` to allow 100% automated test coverage.
-- Question correctness logic derives correct options from `item.correctAnswer.split(/\s*(?:y|,)\s*/)`.
-- Question pool limit is clamped to available items in selected balotario (`Math.min(Math.max(requestedLimit || 30, 1), pool.length)`).
+The quiz defaults to 30 questions, filters by balotario or uses all questions, shuffles the selected pool, and clamps the requested count to the range `1..pool.length`. A question cannot advance until its answer is reviewed. Previously reviewed questions render as read-only, and results show total score plus per-category performance.
 
-## Existing rule-file guidance to retain
+`src/pages/api/attempts.ts` lazily creates `data/quiz-history.sqlite` and the `attempts` table. It dynamically loads `bun:sqlite` under Bun or `node:sqlite` under Node while exposing the same minimal database interface. `GET /api/attempts` returns rows ordered by `created_at DESC`; `POST /api/attempts` validates required fields and stores category summaries as JSON.
 
-From `CLAUDE.md` and prior `AGENTS.md`:
+## Code conventions and implementation patterns
 
-- Prefer running dev server in background mode (`astro dev --background`) and manage with `astro dev stop/status/logs`.
-- Astro docs reference set for routing/components/framework integrations/content/styling/i18n:
-  - https://docs.astro.build/en/guides/routing/
-  - https://docs.astro.build/en/basics/astro-components/
-  - https://docs.astro.build/en/guides/framework-components/
-  - https://docs.astro.build/en/guides/content-collections/
-  - https://docs.astro.build/en/guides/styling/
-  - https://docs.astro.build/en/guides/internationalization/
+- TypeScript is strict via `astro/tsconfigs/strict`.
+- Existing source files use tabs for indentation. Match the indentation and surrounding quote/style conventions of the file being edited.
+- Keep business rules in `src/utils/evaluation.ts` when they need unit tests. Those functions are pure, DOM-free, and should not mutate input arrays; for example, `recordQuestionAnswer` copies the answers array before updating it.
+- `src/scripts/quiz-client.ts` contains DOM integration, rendering, state transitions, fetch calls, and event registration. Keep DOM-specific behavior there rather than adding it to pure utilities.
+- `src/pages/index.astro` should remain a thin composition layer. Add or adjust visual sections in the appropriate component under `src/components/`.
+- Shared data shapes belong in `src/types/question.ts`. The `Question` shape includes `id`, `balotario`, `number`, `question`, `options`, `correctAnswer`, `explanation`, `source`, and `category`.
+- Global styling is in `src/styles/global.css`. Tailwind is imported with `@import "tailwindcss"`; custom colors are declared in `@theme`, and reusable styles are composed in `@layer base` and `@layer components`.
+- The UI uses Tailwind utility classes, responsive breakpoints, and a `.hidden` class for state-driven panels and buttons. Preserve the existing mobile layout and keyboard-accessible native controls.
+- Keep user-facing copy in Spanish and preserve the existing terminology: `Revisar respuesta`, `Continuar`, `Salir y configurar`, `Pregunta anterior`, and `Abandonar examen`.
+- Existing tests and many source JSDoc descriptions are Spanish and use intent-revealing names such as `debe marcar...`. Follow that convention for new tests and public utility documentation.
 
-## Mandatory change workflow: Spec-Driven Development (SDD)
+## Evaluation rules
 
-From now on, **every requirement must strictly follow Spec-Driven Development (SDD)**:
+`parseCorrectAnswers` accepts a single option or Spanish/comma-separated combinations such as `A`, `A y B`, `A, D`, and `A, B y C`. `evaluateAnswer` trims values, removes duplicate selections, and requires an exact set match independent of selection order. Partial answers and extra distractors are incorrect.
 
-1. **Spec & Context First**: Read `specs/quiz-gh300.md` and `docs/context-map.md`. Update or create the functional specifications and acceptance criteria before implementing code.
-2. **Mandatory Unit Tests**: Every requirement implies creating or updating automated unit tests in `tests/` covering positive flows, negative flows, and edge cases.
-3. **Official Sources Only**: All explanations, distractors, or educational rationales must be sourced solely from **Microsoft Learn** (`learn.microsoft.com`) and **GitHub Copilot** (`docs.github.com`).
-4. **Modular Implementation**: Keep business logic decoupled in `src/utils/` and maintain surgical updates in `src/pages/index.astro`. Preserve Spanish UI copy conventions.
-5. **Double Verification**: Run `bun test` (or `npm test`) AND `npm run build`. No change is accepted unless all tests pass and the build succeeds.
-6. **Graph Maintenance**: If using Graphify, refresh `graphify-out` artifacts after structural changes.
+The utility module also owns:
+
+- Completion checks (`isQuestionCompleted`).
+- Answer recording (`recordQuestionAnswer`).
+- Visibility and enabled state for `Revisar respuesta` and `Continuar` (`computeQuizActions`).
+- Bottom navigation state (`computeBackButtonState`).
+- Detection of read-only reviewed questions (`isQuestionReadOnly`).
+- History arrow and `aria-expanded` state (`computeHistoryToggleState`).
+- Incorrect-option rationales and structured review breakdowns (`buildIncorrectRationale`, `buildReviewBreakdown`).
+
+## Testing approach
+
+`tests/evaluation.test.ts` uses `bun:test` and covers every export from `src/utils/evaluation.ts`. Tests are grouped by behavior, including completion, single/multiple-answer parsing and evaluation, incorrect rationales, review breakdowns, action buttons, previous-question read-only behavior, and history accessibility state.
+
+When changing evaluation or navigation behavior, add tests for positive, negative, and edge cases. In particular, retain coverage for exact multiple-answer matching, reversed selection order, partial selection, over-selection, empty input, reviewed/unreviewed button states, and read-only history navigation.
+
+## Specifications and change workflow
+
+Before changing quiz behavior, read and update both `specs/quiz-gh300.md` and `docs/context-map.md`. The specification defines acceptance criteria for question selection, review-before-advance behavior, navigation, abandonment, history toggling, accessibility, scoring, and official-source links.
+
+Educational explanations, distractor rationales, and new question content must be grounded only in official Microsoft Learn (`learn.microsoft.com`) and GitHub Copilot/GitHub Docs (`docs.github.com`) sources. Preserve each dataset item's `source.title` and `source.url`.
+
+After structural changes, refresh `graphify-out` artifacts if Graphify is being used; existing generated analysis is stored there and is ignored by ESLint.
+
+## Persistence and deployment gotchas
+
+- The API uses local SQLite. The database directory is created on first API use, and `data/` is runtime data rather than source content.
+- `README.md` documents deployment using a locally built `dist`, `deploy.tar.gz`, Bun, `systemd`, and local SQLite. Verify the deployment environment before changing deployment code or documentation.
+- Do not commit local database files, `.env` files, or deployment archives. Check the current ignore/status configuration before staging generated output.
+- Avoid injecting unescaped arbitrary content into the client-generated HTML templates in `quiz-client.ts`; question content and API history are inserted into `innerHTML` in the current implementation, so preserve trusted-data assumptions or address escaping as a focused security change.
+
+## Existing project guidance
+
+`CLAUDE.md` confirms that the development server should be started with `astro dev --background` and lists the Astro documentation guides used for routing, components, framework integrations, content collections, styling, and internationalization. No `.cursor` rules, `.cursorrules`, or `.github/copilot-instructions.md` file was found.

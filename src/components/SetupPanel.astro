@@ -1,0 +1,46 @@
+---
+interface Props {
+	totalQuestions: number;
+	balotarios: string[];
+	defaultLimit?: number;
+}
+
+const { totalQuestions, balotarios, defaultLimit = 30 } = Astro.props;
+---
+
+<section id="setup-panel" class="panel setup-panel" aria-labelledby="setup-title">
+	<div class="section-heading">
+		<div>
+			<span class="step-label">01 / CONFIGURACIÓN</span>
+			<h2 id="setup-title">Diseña tu sesión</h2>
+		</div>
+		<span class="question-count">{totalQuestions} preguntas disponibles</span>
+	</div>
+	<div class="setup-grid">
+		<label class="field">
+			<span>Número de preguntas</span>
+			<input
+				id="question-limit"
+				type="number"
+				min="1"
+				max={totalQuestions}
+				value={defaultLimit}
+				inputmode="numeric"
+			/>
+			<small>Entre 1 y {totalQuestions} preguntas</small>
+		</label>
+		<label class="field">
+			<span>Origen</span>
+			<select id="balotario-select">
+				<option value="all">Todos los balotarios</option>
+				{balotarios.map((balotario) => (
+					<option value={balotario}>{balotario}</option>
+				))}
+			</select>
+			<small>Las preguntas se seleccionan aleatoriamente</small>
+		</label>
+	</div>
+	<button id="start-button" class="button button-primary" type="button"
+		>Comenzar examen <span>→</span></button
+	>
+</section>

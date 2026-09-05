@@ -1,0 +1,46 @@
+---
+import "../styles/global.css";
+import type { Question } from "../types/question";
+
+interface Props {
+	title?: string;
+	description?: string;
+	questions: Question[];
+}
+
+const {
+	title = "Práctica Microsoft Copilot GH 300",
+	description = "Cuestionario de práctica para la certificación GitHub Copilot GH-300",
+	questions,
+} = Astro.props;
+
+const serializedQuestions = JSON.stringify(questions);
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="description" content={description} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<main class="app-shell">
+			<slot />
+		</main>
+		<script
+			type="application/json"
+			id="quiz-questions-data"
+			set:html={serializedQuestions}
+		/>
+		<script>
+			import { initQuiz } from "../scripts/quiz-client";
+			import type { Question } from "../types/question";
+
+			const dataElement = document.getElementById("quiz-questions-data");
+			const questions: Question[] = JSON.parse(dataElement?.textContent ?? "[]");
+			initQuiz(questions);
+		</script>
+	</body>
+</html>
