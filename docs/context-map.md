@@ -24,6 +24,7 @@
 - Sustituir el selector aleatorio por modos de práctica, examen y preguntas falladas.
 - Persistir sesiones e historial sin modificar el formato de presentación.
 - Control visual del historial local (indicador direccional de flecha y accesibilidad ARIA).
+- Presentación responsive del historial: tabla en escritorio y tarjetas por examen en móvil.
 - Estándares de microinteracción y usabilidad en controles de formulario (`cursor: pointer` en inputs y selects).
 - Añadir filtros por competencia GH-300.
 - Añadir importación de nuevas fuentes conservando `source.url` y `source.title`.

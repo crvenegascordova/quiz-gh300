@@ -64,7 +64,7 @@ export function initQuiz(allQuestions: Question[]): void {
 							dateStyle: "medium",
 							timeStyle: "short",
 						});
-						return `<tr><td>${date}</td><td>${attempt.balotario}</td><td class="history-score">${attempt.score_percent}%</td><td>${attempt.total_questions}</td><td class="correct">${attempt.correct_answers}</td><td class="incorrect">${attempt.incorrect_answers}</td></tr>`;
+						return `<tr><td data-label="Fecha">${date}</td><td data-label="Balotario">${attempt.balotario}</td><td data-label="Resultado" class="history-score">${attempt.score_percent}%</td><td data-label="Preguntas">${attempt.total_questions}</td><td data-label="Acertadas" class="correct">${attempt.correct_answers}</td><td data-label="Incorrectas" class="incorrect">${attempt.incorrect_answers}</td></tr>`;
 					})
 					.join("")}</tbody></table></div>`
 			: '<p class="empty-history">Todavía no has completado ningún examen.</p>';

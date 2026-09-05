@@ -368,7 +368,10 @@
 		@apply absolute top-4 right-4;
 	}
 	.section-heading {
-		@apply items-start flex-col;
+		@apply items-start;
+	}
+	.history-panel .section-heading {
+		@apply flex-row items-center;
 	}
 	.quiz-topline {
 		@apply items-start flex-col pr-24;
@@ -386,15 +389,47 @@
 	.quiz-actions .button {
 		@apply w-full;
 	}
+	.history-list {
+		@apply overflow-visible border-0;
+	}
+	.history-table,
+	.history-table tbody,
+	.history-table tr,
+	.history-table td {
+		@apply block w-full;
+	}
 	.history-table {
-		@apply min-w-[680px] table-auto;
+		@apply bg-transparent;
+	}
+	.history-table thead {
+		@apply sr-only;
+	}
+	.history-table tbody {
+		@apply grid gap-3;
+	}
+	.history-table tr {
+		@apply rounded-[14px] border border-gh-border bg-gh-card p-4;
+	}
+	.history-table td {
+		@apply flex items-start justify-between gap-4 border-0 p-1.5 text-right;
+	}
+	.history-table td::before {
+		content: attr(data-label);
+		@apply text-left text-xs font-bold uppercase tracking-wider text-[#8996a5];
+	}
+	.history-table tbody td:first-child,
+	.history-table tbody td:last-child {
+		@apply px-1.5;
+	}
+	.history-table tbody tr + tr td {
+		@apply pt-1.5;
 	}
 	.history-table th,
 	.history-table td {
 		@apply p-3;
 	}
 	.history-table tbody tr + tr td {
-		@apply pt-[17px];
+		@apply pt-1.5;
 	}
 }
 

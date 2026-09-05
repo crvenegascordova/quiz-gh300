@@ -19,6 +19,7 @@ Permitir que una persona practique preguntas de GitHub Copilot GH-300 y reciba r
 - Accesibilidad y cursores de formulario: todos los elementos interactivos `input` (número de preguntas, checkboxes de opciones) y `select` (origen de balotarios) deben desplegar el cursor de manito interactiva (`cursor: pointer`) al posicionar el cursor sobre ellos, y cursor restringido (`cursor: not-allowed`) en estado deshabilitado.
 - El resultado muestra porcentaje, aciertos, errores y desempeño por competencia GH-300.
 - La interfaz funciona en pantallas móviles y de escritorio y permite navegación mediante teclado.
+- El historial de exámenes adapta su presentación en pantallas móviles: cada intento se muestra como una tarjeta legible, sin desplazamiento horizontal obligatorio, conservando fecha, balotario, resultado, preguntas, aciertos e incorrectas.
 
 ## Categorías GH-300
 
@@ -41,6 +42,7 @@ Permitir que una persona practique preguntas de GitHub Copilot GH-300 y reciba r
 - La cabecera del examen incluye `✕ Abandonar examen` con confirmación antes de resetear la sesión.
 - Al hacer clic en 'Ver mis exámenes', el panel de historial se abre y el icono del botón cambia a flecha arriba `↑` con `aria-expanded="true"`; al pulsar de nuevo se cierra y vuelve a flecha abajo `↓`.
 - Al pasar el cursor sobre cualquier `input` o `select`, el puntero del ratón muestra la manito interactiva (`cursor: pointer`), con `cursor: not-allowed` en caso de inputs deshabilitados.
+- En móvil, cada examen del historial se presenta en una tarjeta con sus seis datos identificados y sin requerir una tabla más ancha que la pantalla.
 - Al finalizar, la suma de aciertos e incorrectas coincide con el total de preguntas.
 - Las preguntas de respuesta múltiple (ej. "A y B", "A, D") se evalúan como correctas si y solo si se seleccionan exactamente todas las opciones requeridas, con total independencia del orden de selección.
 - Ante una respuesta incorrecta, el sistema presenta un desglose estructurado indicando cada opción errónea seleccionada y su motivo de descarte fundamentado en fuentes oficiales de Microsoft Learn / GitHub Copilot.
