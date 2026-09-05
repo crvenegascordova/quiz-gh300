@@ -1,0 +1,54 @@
+name: CI/CD Quiz GH-300 Deploy
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  test-and-deploy:
+    name: 🧪 Test, Build & Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Clonar repositorio
+        uses: actions/checkout@v4
+
+      - name: ⚡ Configurar Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: 📦 Instalar dependencias
+        run: bun install
+
+      - name: 🧪 Ejecutar pruebas unitarias (SDD)
+        run: bun test
+
+      - name: 🏗️ Compilar aplicación para producción
+        run: bun run build
+
+      - name: 📦 Empaquetar artefacto ligero (dist + package.json)
+        run: tar -czf deploy.tar.gz dist/ package.json
+
+      - name: 🚚 Subir deploy.tar.gz a Google Cloud VM
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.GCP_HOST }}
+          username: ${{ secrets.GCP_USERNAME }}
+          key: ${{ secrets.GCP_SSH_KEY }}
+          source: "deploy.tar.gz"
+          target: "~/"
+
+      - name: 🔄 Descomprimir y reiniciar quiz.service en producción
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.GCP_HOST }}
+          username: ${{ secrets.GCP_USERNAME }}
+          key: ${{ secrets.GCP_SSH_KEY }}
+          script: |
+            sudo tar -xzf ~/deploy.tar.gz -C /home/c_venegascordova/quiz
+            sudo chown -R c_venegascordova:c_venegascordova /home/c_venegascordova/quiz
+            sudo systemctl restart quiz
+            sudo systemctl is-active quiz
