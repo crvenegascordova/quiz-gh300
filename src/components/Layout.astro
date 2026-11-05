@@ -1,20 +1,26 @@
 ---
 import "../styles/global.css";
 import type { Question } from "../types/question";
+import type { CertificationMeta } from "../types/certification";
 
 interface Props {
 	title?: string;
 	description?: string;
-	questions: Question[];
+	certifications: CertificationMeta[];
+	questionsByCert: Record<string, Question[]>;
 }
 
 const {
-	title = "Práctica Microsoft Copilot GH 300",
-	description = "Cuestionario de práctica para la certificación GitHub Copilot GH-300",
-	questions,
+	title = "Práctica de Certificaciones Técnicas",
+	description = "Simulacros de práctica interactivos con justificación oficial y métricas de cobertura.",
+	certifications,
+	questionsByCert,
 } = Astro.props;
 
-const serializedQuestions = JSON.stringify(questions);
+const serializedPayload = JSON.stringify({
+	certifications,
+	questionsByCert,
+});
 ---
 
 <!doctype html>
@@ -31,16 +37,15 @@ const serializedQuestions = JSON.stringify(questions);
 		</main>
 		<script
 			type="application/json"
-			id="quiz-questions-data"
-			set:html={serializedQuestions}
+			id="quiz-platform-data"
+			set:html={serializedPayload}
 		/>
 		<script>
-			import { initQuiz } from "../scripts/quiz-client";
-			import type { Question } from "../types/question";
+			import { initQuizPlatform } from "../scripts/quiz-client";
 
-			const dataElement = document.getElementById("quiz-questions-data");
-			const questions: Question[] = JSON.parse(dataElement?.textContent ?? "[]");
-			initQuiz(questions);
+			const dataElement = document.getElementById("quiz-platform-data");
+			const payload = JSON.parse(dataElement?.textContent ?? "{}");
+			initQuizPlatform(payload.certifications ?? [], payload.questionsByCert ?? {});
 		</script>
 	</body>
 </html>

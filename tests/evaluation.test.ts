@@ -10,6 +10,9 @@ import {
 	computeBackButtonState,
 	isQuestionReadOnly,
 	computeHistoryToggleState,
+	computeCoverageMetrics,
+	extractFailedQuestions,
+	extractAllHistoricalFailedQuestions,
 } from '../src/utils/evaluation';
 
 describe('Flujo de Evaluación y Corrección de Respuestas (SDD Quiz GH-300)', () => {
@@ -64,6 +67,7 @@ describe('Flujo de Evaluación y Corrección de Respuestas (SDD Quiz GH-300)', (
 			it('debe parsear doble opción con conector "y" ("A y B", "C y D")', () => {
 				expect(parseCorrectAnswers('A y B')).toEqual(['A', 'B']);
 				expect(parseCorrectAnswers('C y D')).toEqual(['C', 'D']);
+				expect(parseCorrectAnswers('A and B')).toEqual(['A', 'B']);
 			});
 
 			it('debe parsear doble opción con separador de coma ("A, D", "B, C")', () => {
@@ -439,6 +443,116 @@ describe('Flujo de Evaluación y Corrección de Respuestas (SDD Quiz GH-300)', (
 			state = computeHistoryToggleState(isPanelOpen);
 			expect(state.arrow).toBe('↓');
 			expect(state.ariaExpanded).toBe(false);
+		});
+	});
+
+	describe('8. Control de Inventario y Métricas de Cobertura (computeCoverageMetrics)', () => {
+		const totalPool = ['q1', 'q2', 'q3', 'q4', 'q5', 'q6', 'q7', 'q8', 'q9', 'q10'];
+
+		it('debe calcular métricas con 0 intentos previos (0% cobertura)', () => {
+			const metrics = computeCoverageMetrics(totalPool, []);
+			expect(metrics.totalAvailable).toBe(10);
+			expect(metrics.practicedCount).toBe(0);
+			expect(metrics.coveragePercent).toBe(0);
+			expect(metrics.unseenCount).toBe(10);
+			expect(metrics.unseenQuestionIds).toEqual(totalPool);
+		});
+
+		it('debe calcular métricas deduplicando preguntas repetidas en varios exámenes', () => {
+			const attempt1 = ['q1', 'q2', 'q3'];
+			const attempt2 = ['q2', 'q3', 'q4', 'q5']; // q2 y q3 repetidas
+			const metrics = computeCoverageMetrics(totalPool, [attempt1, attempt2]);
+
+			expect(metrics.totalAvailable).toBe(10);
+			expect(metrics.practicedCount).toBe(5); // q1, q2, q3, q4, q5
+			expect(metrics.coveragePercent).toBe(50);
+			expect(metrics.unseenCount).toBe(5);
+			expect(metrics.unseenQuestionIds).toEqual(['q6', 'q7', 'q8', 'q9', 'q10']);
+		});
+
+		it('debe calcular 100% de cobertura cuando todas las preguntas han salido', () => {
+			const attempt = [...totalPool];
+			const metrics = computeCoverageMetrics(totalPool, [attempt]);
+
+			expect(metrics.totalAvailable).toBe(10);
+			expect(metrics.practicedCount).toBe(10);
+			expect(metrics.coveragePercent).toBe(100);
+			expect(metrics.unseenCount).toBe(0);
+			expect(metrics.unseenQuestionIds).toEqual([]);
+		});
+	});
+
+	describe('9. Extracción y Filtrado de Preguntas Falladas (extractFailedQuestions)', () => {
+		const sampleQuestions = [
+			{ id: 'q1', balotario: 'Balotario 1', number: 1, question: '¿Pregunta 1?' },
+			{ id: 'q2', balotario: 'Balotario 1', number: 2, question: '¿Pregunta 2?' },
+			{ id: 'q3', balotario: 'Balotario 1', number: 3, question: '¿Pregunta 3?' },
+		];
+
+		it('debe retornar únicamente las preguntas donde correct === false', () => {
+			const answers = [
+				{ correct: true },
+				{ correct: false },
+				{ correct: true },
+			];
+			const failed = extractFailedQuestions(sampleQuestions, answers);
+			expect(failed.length).toBe(1);
+			expect(failed[0].id).toBe('q2');
+		});
+
+		it('debe retornar un arreglo vacío si el usuario acertó todas las preguntas', () => {
+			const answers = [
+				{ correct: true },
+				{ correct: true },
+				{ correct: true },
+			];
+			const failed = extractFailedQuestions(sampleQuestions, answers);
+			expect(failed.length).toBe(0);
+		});
+
+		it('debe retornar todas las preguntas si el usuario falló todas', () => {
+			const answers = [
+				{ correct: false },
+				{ correct: false },
+				{ correct: false },
+			];
+			const failed = extractFailedQuestions(sampleQuestions, answers);
+			expect(failed.length).toBe(3);
+		});
+	});
+
+	describe('10. Consolidación de Preguntas Falladas en Todos los Exámenes (extractAllHistoricalFailedQuestions)', () => {
+		const allPool = [
+			{ id: 'q1', text: 'P1' },
+			{ id: 'q2', text: 'P2' },
+			{ id: 'q3', text: 'P3' },
+			{ id: 'q4', text: 'P4' },
+		];
+
+		it('debe consolidar y deduplicar preguntas falladas de múltiples exámenes', () => {
+			const attempts = [
+				{ failed_questions: JSON.stringify([{ id: 'q1' }, { id: 'q2' }]) },
+				{ failed_questions: JSON.stringify([{ id: 'q2' }, { id: 'q3' }]) }, // q2 repetida
+			];
+			const result = extractAllHistoricalFailedQuestions(allPool, attempts);
+			expect(result.map((q) => q.id)).toEqual(['q1', 'q2', 'q3']);
+		});
+
+		it('debe retornar vacío si no hay intentos o si no hay preguntas falladas', () => {
+			expect(extractAllHistoricalFailedQuestions(allPool, [])).toEqual([]);
+			expect(
+				extractAllHistoricalFailedQuestions(allPool, [{ failed_questions: '[]' }]),
+			).toEqual([]);
+		});
+
+		it('debe manejar entradas con JSON corrupto o nulo de manera segura', () => {
+			const attempts = [
+				{ failed_questions: 'invalid json' },
+				{ failed_questions: undefined },
+				{ failed_questions: JSON.stringify([{ id: 'q4' }]) },
+			];
+			const result = extractAllHistoricalFailedQuestions(allPool, attempts);
+			expect(result.map((q) => q.id)).toEqual(['q4']);
 		});
 	});
 });

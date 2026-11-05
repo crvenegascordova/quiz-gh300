@@ -2,26 +2,45 @@
 interface Props {
 	title?: string;
 	description?: string;
+	badge?: string;
 }
 
 const {
-	title = "Práctica Microsoft Copilot GH 300",
-	description = "Mide tu dominio en GitHub Copilot, con explicaciones y resultados por competencia.",
+	title = "Práctica de Certificaciones Técnicas",
+	description = "Evalúa tu nivel profesional mediante exámenes de práctica, retroalimentación y criterios de evaluación oficiales.",
+	badge = "PLATAFORMA DE CERTIFICACIONES",
 } = Astro.props;
 ---
 
 <section class="hero" aria-labelledby="page-title">
-	<div class="eyebrow">CERTIFICACIÓN GH-300</div>
+	<div id="hero-eyebrow" class="eyebrow">{badge}</div>
 	<h1 id="page-title">{title}</h1>
-	<p class="hero-copy">{description}</p>
+	<p id="hero-description" class="hero-copy">{description}</p>
 </section>
 
-<div class="hero-actions">
+<div class="hero-actions flex items-center gap-3 flex-wrap mt-4">
+	<button
+		id="change-cert-btn"
+		class="button button-secondary hidden"
+		type="button"
+		title="Volver a la selección de certificaciones"
+	>
+		← Cambiar certificación
+	</button>
 	<button
 		id="history-button"
-		class="button button-secondary"
+		class="button button-secondary hidden"
 		type="button"
 		aria-expanded="false"
-		>Ver mis exámenes <span id="history-arrow">↓</span></button
 	>
+		Ver mis exámenes <span id="history-arrow">↓</span>
+	</button>
+	<button
+		id="study-guide-btn"
+		class="button button-secondary hidden"
+		type="button"
+		aria-haspopup="dialog"
+	>
+		📘 Guía oficial de estudio
+	</button>
 </div>

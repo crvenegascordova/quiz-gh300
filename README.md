@@ -1,8 +1,11 @@
-# 🚀 Quiz de Práctica: Certificación GitHub Copilot GH-300
+# 🚀 Plataforma de Práctica: Simulador de Certificaciones Técnicas (GH-300 y Claude Certified Developer)
 
-¡Bienvenido/a! 👋 Este proyecto es una plataforma web interactiva de estudio diseñada especialmente para desarrolladores y estudiantes que se están preparando para rendir la certificación oficial **Microsoft / GitHub Copilot (GH-300)**.
+¡Bienvenido/a! 👋 Este proyecto es una plataforma web interactiva de simulación y evaluación diseñada para desarrolladores, arquitectos de software e ingenieros que se preparan para certificaciones técnicas de IA líderes en la industria:
 
-Cuenta con **420 preguntas prácticas**, explicaciones pedagógicas detalladas y motivos de descarte fundamentados exclusivamente en la documentación oficial de **Microsoft Learn** y **GitHub Docs**.
+1. **GitHub Copilot (GH-300)**: 458 preguntas prácticas en 7 tests, alineadas con las competencias oficiales de Microsoft Learn y GitHub Docs.
+2. **Anthropic Claude Certified Developer**: 308 preguntas prácticas en 6 tests, estructuradas según los 5 módulos oficiales de Anthropic Partners (MSO Foundations, Production-Grade Prompting, Claude Code & MCP, Evals & Security y Accelerators).
+
+Cuenta con un banco de **766 preguntas técnicas**, traducción instantánea (inglés/español) para certificaciones internacionales, explicaciones pedagógicas detalladas, guías de estudio oficiales y desgloses estructurados de descarte de distractores fundamentados exclusivamente en documentación oficial.
 
 ---
 
@@ -27,6 +30,8 @@ Antes de empezar, asegúrate de tener instalado en tu computadora:
    - Abre una terminal y comprueba si lo tienes con:
      ```bash
      node -v
+     # o bien
+     bun -v
      ```
    - Si no lo tienes o tu versión es inferior a `v22.12.0`, descárgalo gratis desde [nodejs.org](https://nodejs.org/) (versión LTS o Current recomendada). *(Requerido porque el proyecto utiliza la base de datos SQLite nativa integrada).*
    - *(Alternativa recomendada)*: También puedes instalar **Bun** (`curl -fsSL https://bun.sh/install | bash`), que es ultra rápido y compatible al 100%.
@@ -46,12 +51,12 @@ git clone https://github.com/crvenegascordova/quiz-gh300.git
 cd quiz-gh300
 
 # 3. Instalar las dependencias
-npm install
-# (o si prefieres Bun: bun install)
+bun install
+# (o si prefieres npm: npm install)
 
 # 4. Iniciar el servidor de práctica local
-npm run dev
-# (o si prefieres Bun: bun run dev)
+bun run dev
+# (o si prefieres npm: npm run dev)
 ```
 
 ¡Listo! La terminal te mostrará un enlace local:
@@ -66,11 +71,11 @@ Abre ese enlace en tu navegador web (Chrome, Edge, Firefox, Safari) y ya podrás
 El proyecto cuenta con una suite completa de **pruebas unitarias automatizadas** que validan la lógica de corrección, descarte de distractores y navegación:
 
 ```bash
-npm test
-# (o con Bun: bun test)
+bun test
+# (o con npm: npm test)
 ```
 
-Verás las **38 pruebas aprobadas en verde**, asegurando que el motor de evaluación funciona correctamente en tu máquina.
+Verás las **50 pruebas aprobadas en verde**, asegurando que el motor de evaluación funciona correctamente en tu máquina.
 
 ---
 
@@ -127,8 +132,8 @@ En tu terminal local (dentro de la carpeta del proyecto en tu PC):
 
 ```bash
 # 1. Compilar la aplicación para producción
-npm run build
-# (o con Bun: bun run build)
+bun run build
+# (o con npm: npm run build)
 
 # 2. Empaquetar el build generado y package.json (pesa apenas ~200 KB)
 tar -czf deploy.tar.gz dist/ package.json
@@ -177,7 +182,7 @@ Para que tu aplicación se ejecute en el puerto web estándar (**puerto 80**), c
 # Crear el archivo de servicio
 sudo tee /etc/systemd/system/quiz.service > /dev/null <<EOF
 [Unit]
-Description=Quiz GH300 Web App
+Description=Quiz Multi-Certification Web App
 After=network.target
 
 [Service]
@@ -223,19 +228,26 @@ Para asegurarte de que nunca tengas cargos accidentales:
 
 ## 📚 Cómo funciona el Examen
 
-1. **Configura tu práctica**:
-   - Selecciona cuántas preguntas deseas resolver (entre 1 y 420).
-   - Puedes elegir practicar un **Balotario específico** o elegir **Todos los balotarios** para un examen global.
-2. **Responde y recibe retroalimentación inmediata**:
+1. **Selecciona tu Certificación**:
+   - Al ingresar, elige entre **GitHub Copilot GH-300** o **Claude Certified Developer**.
+   - Cada certificación cuenta con su propio banco de preguntas, historial aislado y guía oficial de estudio.
+   - En cualquier momento puedes pulsar **← Cambiar certificación** para alternar de examen.
+2. **Configura tu sesión de práctica**:
+   - Selecciona cuántas preguntas deseas resolver (entre 1 y el total disponible).
+   - Puedes elegir practicar un **Test específico** o **Todos los tests** para un examen global aleatorio.
+   - Opciones avanzadas: **Solo preguntas aún no vistas** (cobertura total de inventario) o **Repasar preguntas falladas históricas** (refuerzo de errores).
+3. **Traducción Instantánea**:
+   - Para certificaciones en inglés (como Claude Certified Developer), pulsa el botón **ES / EN - Traducir cuestionario** en la barra superior para alternar en vivo entre inglés original y español.
+4. **Responde y recibe retroalimentación inmediata**:
    - Marca una o más casillas según lo solicite la pregunta.
-   - Presiona **Revisar respuesta**. Si fallas, el sistema te mostrará un **desglose estructurado** explicando exactamente por qué la opción elegida no es la adecuada, contrastándola con la documentación técnica oficial de Microsoft y GitHub.
-3. **Navegación pensada para el estudiante**:
+   - Presiona **Revisar respuesta**. Si fallas, el sistema te mostrará un **desglose estructurado** explicando exactamente por qué la opción elegida no es la adecuada, contrastándola con la documentación técnica oficial (Microsoft Learn, GitHub Docs o Anthropic).
+5. **Navegación pensada para el estudiante**:
    - Pulsa **Continuar →** para avanzar a la siguiente pregunta (en móvil la pantalla se desplazará suavemente hacia arriba de forma automática).
-   - Si deseas repasar una pregunta anterior, pulsa **← Pregunta anterior** para consultarla en **modo solo lectura** con su explicación visible.
-   - En cualquier momento puedes usar el botón **✕ Abandonar** en la esquina superior para cancelar el examen mediante un modal elegante de confirmación.
-4. **Historial de intentos**:
-   - Al finalizar, tus resultados se guardan en la base de datos local SQLite (`data/quiz-history.sqlite`).
-   - Puedes hacer clic en **Ver mis exámenes** en la pantalla de inicio para revisar tu progreso histórico y puntajes por competencia.
+   - Si deseas repasar una pregunta anterior, pulsa **← Pregunta anterior** para consultarla en **modo solo lectura** con su explicación y tus respuestas visibles.
+   - En cualquier momento puedes usar el botón **✕ Abandonar** en la esquina superior para cancelar el examen mediante un modal de confirmación.
+6. **Historial de intentos y métricas de inventario**:
+   - Al finalizar, tus resultados se guardan en la base de datos local SQLite (`data/quiz-history.sqlite`) aislados por certificación.
+   - Puedes hacer clic en **Ver mis exámenes** en la pantalla de inicio para revisar tu progreso histórico, puntajes por competencia y tabla de cobertura de preguntas vistas y pendientes.
 
 ---
 
@@ -245,23 +257,24 @@ Si deseas colaborar, agregar nuevas preguntas o mejorar el diseño, este proyect
 
 1. **Especificación primero**: Toda modificación de requerimientos debe definirse previamente en [`specs/quiz-gh300.md`](specs/quiz-gh300.md) y [`docs/context-map.md`](docs/context-map.md).
 2. **Pruebas unitarias obligatorias**: Toda nueva regla o ajuste debe contar con pruebas en [`tests/evaluation.test.ts`](tests/evaluation.test.ts).
-3. **Fuentes oficiales exclusivas**: Toda explicación, distractor o justificación debe basarse **únicamente en Microsoft Learn (`learn.microsoft.com`) y GitHub Docs (`docs.github.com`)**.
+3. **Fuentes oficiales exclusivas**: Toda explicación, distractor o justificación debe basarse **únicamente en documentación oficial** (Microsoft Learn, GitHub Docs o Anthropic Docs/Skilljar).
 4. **Verificación doble antes de enviar cambios**:
    ```bash
    bun test          # Todas las pruebas deben pasar (100%)
-   npm run build     # El build de producción debe compilar con cero errores
+   bun run lint      # El linter no debe arrojar advertencias ni errores
+   bun run build     # El build de producción debe compilar con cero errores
    ```
 
 ### ¿Cómo actualizar o editar preguntas?
-La fuente de verdad de las preguntas es el archivo Markdown:
+La fuente de verdad de las preguntas son los archivos Markdown por certificación:
 ```text
-balotarios.md
+content/certifications/gh-300/balotarios.md
+content/certifications/claude-certified-developer/balotarios.md
 ```
-Si corriges o agregas preguntas en ese archivo, regenera el archivo JSON compilado con:
+Si corriges o agregas preguntas en esos archivos, regenera los datasets JSON compilados con:
 ```bash
-python scripts_prepare_questions.py
-# (En Windows: py -3 scripts_prepare_questions.py)
-bun test && npm run build
+python3 scripts_prepare_questions.py
+bun test && bun run lint && bun run build
 ```
 
 ---
@@ -270,30 +283,43 @@ bun test && npm run build
 
 ```text
 quiz-gh300/
-├── balotarios.md                  # Fuente original de las 420 preguntas
-├── scripts_prepare_questions.py   # Script que convierte balotarios.md en questions.json
-├── package.json                   # Scripts y dependencias
-├── astro.config.mjs               # Configuración de Astro con adaptador Node
+├── content/
+│   └── certifications/
+│       ├── gh-300/
+│       │   ├── balotarios.md              # Fuente Markdown de las 458 preguntas GH-300
+│       │   └── study-guide.md             # Guía de estudio oficial Microsoft GH-300
+│       └── claude-certified-developer/
+│           ├── balotarios.md              # Fuente Markdown de las 308 preguntas Claude Developer
+│           └── study-guide.md             # Guía de estudio oficial Anthropic Partners
+├── scripts_prepare_questions.py           # Compilador de balotarios Markdown a datasets JSON
+├── package.json                           # Scripts y dependencias
+├── astro.config.mjs                       # Configuración de Astro con adaptador Node y Tailwind Vite
 ├── specs/
-│   └── quiz-gh300.md              # Especificaciones funcionales y criterios de aceptación
+│   └── quiz-gh300.md                      # Especificaciones funcionales y criterios de aceptación
 ├── docs/
-│   └── context-map.md             # Flujo de datos y arquitectura del proyecto
+│   └── context-map.md                     # Flujo de datos y mapa de contexto del proyecto
 ├── tests/
-│   └── evaluation.test.ts         # Suite de pruebas unitarias automatizadas
-├── data/                          # Base de datos SQLite local (excluida de git)
+│   └── evaluation.test.ts                 # 50 pruebas unitarias automatizadas (Bun test)
+├── data/                                  # Base de datos SQLite local (excluida de git)
 └── src/
+    ├── components/                        # Componentes UI de Astro (CertificationSelector, Hero, Setup, etc.)
     ├── data/
-    │   └── questions.json         # Dataset compilado consumido por la app
-    ├── utils/
-    │   └── evaluation.ts          # Lógica pura desacoplada (evaluación, navegación, rationales)
-    └── pages/
-        ├── index.astro            # Interfaz SPA completa, componentes y estilos Tailwind
-        └── api/
-            └── attempts.ts        # Endpoint REST para consultar y guardar intentos en SQLite
+    │   └── certifications/                # Datasets compilados (gh-300.json, claude-certified-developer.json)
+    ├── pages/
+    │   ├── index.astro                    # Página principal con Islands y selector multi-certificación
+    │   └── api/
+    │       └── attempts.ts                # Endpoint REST para consultar e insertar intentos en SQLite
+    ├── scripts/
+    │   └── quiz-client.ts                 # Máquina de estados del examen, traducción y eventos en navegador
+    ├── styles/
+    │   └── global.css                     # Estilos globales y tokens Tailwind 4
+    ├── types/                             # Definiciones de TypeScript (Question, Certification, Attempt)
+    └── utils/
+        └── evaluation.ts                  # Lógica pura desacoplada (evaluación, scoring, navegación)
 ```
 
 ---
 
 ## 📄 Licencia y Créditos
 
-Este proyecto fue creado con fines educativos para apoyar a la comunidad de desarrolladores en su preparación para la certificación oficial **GitHub Copilot GH-300**. ¡Mucho éxito en tu certificación! 🚀
+Este proyecto fue creado con fines educativos y de preparación profesional para certificaciones oficiales de Inteligencia Artificial (Microsoft / GitHub Copilot GH-300 y Anthropic Claude Certified Developer). ¡Mucho éxito en tus certificaciones! 🚀

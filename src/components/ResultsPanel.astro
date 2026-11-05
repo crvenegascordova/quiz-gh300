@@ -19,7 +19,88 @@
 		<h3>Desempeño por competencia</h3><div id="category-results-list">
 		</div>
 	</div>
-	<button id="restart-button" class="button button-primary" type="button"
-		>Volver a practicar <span>↗</span></button
-	>
+
+	<!-- 2. SISTEMA DE REGISTRO Y REPASO DE ERRORES -->
+	<div id="failed-summary-container" class="failed-summary-container hidden">
+		<div class="failed-summary-header">
+			<span class="step-label text-[#ff7b72]">SISTEMA DE REPASO</span>
+			<h3>Resumen de preguntas para repasar</h3>
+		</div>
+		<p class="failed-summary-intro">
+			A continuación se listan las preguntas en las que cometiste un error en esta sesión:
+		</p>
+		<div id="failed-questions-list" class="failed-questions-list"></div>
+		<div class="retry-failed-box">
+			<p class="retry-failed-question">
+				<strong>¿Deseas generar un nuevo cuestionario únicamente con las preguntas que fallaste?</strong>
+			</p>
+			<div class="unseen-config-row">
+				<button id="retry-failed-btn" class="button button-warning" type="button">
+					Solo las falladas en esta sesión (<span id="failed-count-btn">0</span>) <span>→</span>
+				</button>
+				<button id="retry-all-historical-failed-btn" class="button button-secondary hidden" type="button">
+					Todas las falladas en tus exámenes (<span id="historical-failed-btn-count">0</span>) <span>→</span>
+				</button>
+			</div>
+		</div>
+	</div>
+
+	<!-- 3. CONTROL DE INVENTARIO Y MÉTRICAS DE COBERTURA -->
+	<div id="coverage-container" class="coverage-container">
+		<div class="coverage-header">
+			<span class="step-label text-gh-blue">INVENTARIO Y PROGRESO</span>
+			<h3>Control de Inventario y Métricas de Cobertura</h3>
+		</div>
+		<div class="coverage-table-wrap">
+			<table class="coverage-table">
+				<thead>
+					<tr>
+						<th>Métrica</th>
+						<th>Valor</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Total de preguntas existentes en los tests</td>
+						<td id="coverage-total" class="coverage-val">458</td>
+					</tr>
+					<tr>
+						<td>Preguntas que ya han salido en exámenes practicados</td>
+						<td id="coverage-practiced" class="coverage-val">0 (0% de cobertura)</td>
+					</tr>
+					<tr>
+						<td>Preguntas que aún no me han salido</td>
+						<td id="coverage-unseen" class="coverage-val">458</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div id="unseen-quiz-prompt" class="unseen-quiz-prompt">
+			<p class="unseen-prompt-text">
+				<strong>¿Deseas realizar un cuestionario compuesto exclusivamente por preguntas que aún no has respondido?</strong>
+			</p>
+			<div class="unseen-config-row">
+				<label class="unseen-config-label">
+					<span>Cantidad:</span>
+					<input
+						type="number"
+						id="results-unseen-limit-input"
+						class="unseen-input-number"
+						min="1"
+						max="458"
+						value="30"
+					/>
+				</label>
+				<button id="start-unseen-btn" class="button button-secondary" type="button">
+					Practicar preguntas no vistas (<span id="unseen-count-btn">0</span>) <span>→</span>
+				</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="results-actions">
+		<button id="restart-button" class="button button-primary" type="button"
+			>Volver a la configuración <span>↗</span></button
+		>
+	</div>
 </section>

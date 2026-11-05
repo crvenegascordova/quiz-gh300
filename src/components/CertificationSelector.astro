@@ -1,0 +1,123 @@
+---
+import { CERTIFICATIONS } from "../data/certifications";
+import type { Question } from "../types/question";
+
+interface Props {
+	questionsByCert: Record<string, Question[]>;
+}
+
+const { questionsByCert } = Astro.props;
+---
+
+<section
+	id="certification-panel"
+	class="panel certification-panel"
+	aria-labelledby="cert-selection-title"
+>
+	<div class="section-heading mb-6">
+		<div>
+			<span class="step-label text-gh-blue">00 / SELECCIÓN DE CERTIFICACIÓN</span>
+			<h2 id="cert-selection-title" class="text-3xl font-extrabold tracking-tight mt-1 text-white">
+				¿Qué certificación deseas preparar hoy?
+			</h2>
+		</div>
+	</div>
+
+	<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
+		{
+			CERTIFICATIONS.map((cert) => {
+				const qCount = questionsByCert[cert.id]?.length ?? 0;
+				const isClaude = cert.id === "claude-certified-developer";
+
+				return (
+					<article
+						class={`cert-card relative rounded-2xl border p-6 flex flex-col justify-between transition-all duration-200 hover:border-gh-blue/50 hover:shadow-xl hover:shadow-black/40 ${
+							isClaude
+								? "bg-gradient-to-b from-[#1c1815] to-[#11162b] border-[#cc785c]/30"
+								: "bg-gradient-to-b from-[#0f1d38] to-[#0c142b] border-[#273554]"
+						}`}
+						data-cert-id={cert.id}
+					>
+						<div>
+							<div class="flex items-center justify-between gap-2 mb-3">
+								<span
+									class={`text-[0.7rem] font-black tracking-wider uppercase px-2.5 py-1 rounded-md border ${
+										isClaude
+											? "bg-[#cc785c]/15 text-[#f5a882] border-[#cc785c]/30"
+											: "bg-[#238636]/15 text-[#7ee787] border-[#238636]/30"
+									}`}
+								>
+									{cert.badge}
+								</span>
+								<span class="text-xs text-gh-muted font-medium">{cert.provider}</span>
+							</div>
+
+							<h3 class="text-2xl font-bold text-white mb-1 tracking-tight">
+								{cert.title}
+							</h3>
+
+							<div
+								class={`flex items-center justify-center p-3 my-4 rounded-xl border h-36 ${
+									isClaude
+										? "bg-[#140f0c]/70 border-[#cc785c]/20"
+										: "bg-[#081226]/70 border-[#238636]/20"
+								}`}
+							>
+								<img
+									src={cert.badgeImageUrl}
+									alt={`Insignia oficial ${cert.title}`}
+									class="max-h-24 max-w-[200px] w-auto h-auto object-contain drop-shadow"
+									loading="lazy"
+								/>
+							</div>
+
+							<div class="flex items-center gap-2 mb-4">
+								<span
+									class={`inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold border ${
+										isClaude
+											? "bg-[#251710] text-[#f5a882] border-[#cc785c]/30"
+											: "bg-[#0d1d36] text-[#7ee787] border-[#238636]/30"
+									}`}
+								>
+									<span
+										class={`w-1.5 h-1.5 rounded-full ${
+											isClaude ? "bg-[#f5a882]" : "bg-[#7ee787]"
+										}`}
+									></span>
+									{qCount} preguntas disponibles
+								</span>
+							</div>
+
+							<div class="mb-5">
+								<span class="text-[0.7rem] font-bold tracking-wider text-gh-muted uppercase block mb-2">
+									Módulos oficiales:
+								</span>
+								<ul class="flex flex-wrap gap-1.5 list-none p-0 m-0">
+									{cert.topics.map((topic) => (
+										<li class="text-[0.75rem] px-2.5 py-1 rounded-md bg-[#0a1124] text-[#c9d1d9] border border-[#232f48]">
+											{topic}
+										</li>
+									))}
+								</ul>
+							</div>
+						</div>
+
+						<div class="pt-4 border-t border-[#1e2c4a]">
+							<button
+								type="button"
+								class={`button w-full justify-center !py-3.5 text-base font-bold shadow-md cursor-pointer ${
+									isClaude
+										? "button-primary !bg-[#d97706] hover:!bg-[#b45309] !border-[#f59e0b]/40"
+										: "button-primary"
+								}`}
+								data-select-cert={cert.id}
+							>
+								Practicar {cert.code} <span>→</span>
+							</button>
+						</div>
+					</article>
+				);
+			})
+		}
+	</div>
+</section>

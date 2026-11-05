@@ -23,7 +23,7 @@ export interface QuestionState {
 export function parseCorrectAnswers(correctAnswer: string): string[] {
 	if (!correctAnswer || typeof correctAnswer !== 'string') return [];
 	return correctAnswer
-		.split(/\s*(?:y|,)\s*/)
+		.split(/\s*(?:y|and|,)\s*/i)
 		.map((opt) => opt.trim())
 		.filter(Boolean);
 }
@@ -58,12 +58,12 @@ export function isQuestionCompleted(state: Pick<QuestionState, 'selected' | 'rev
  * Registra el resultado de la pregunta evaluada en el estado del examen.
  */
 export function recordQuestionAnswer(
-	answers: Array<{ correct: boolean; category: string }>,
+	answers: Array<{ correct: boolean; category: string } | undefined>,
 	index: number,
 	evaluation: QuestionEvaluation,
 	categoryId: string,
 ): Array<{ correct: boolean; category: string }> {
-	const updated = [...answers];
+	const updated = [...answers] as Array<{ correct: boolean; category: string }>;
 	updated[index] = {
 		correct: evaluation.isCorrect,
 		category: categoryId,
@@ -134,7 +134,7 @@ export function computeBackButtonState(
  * Ocurre cuando la pregunta ya tiene un resultado previo registrado en answers.
  */
 export function isQuestionReadOnly(
-	answers: Array<{ correct: boolean; category: string }>,
+	answers: Array<{ correct: boolean; category: string } | undefined>,
 	index: number,
 ): boolean {
 	return Boolean(answers && answers[index] !== undefined);
@@ -215,11 +215,11 @@ export function buildIncorrectRationale(
 
 	// 5. Productividad y funciones
 	if (categoryId === 'features' || categoryId === 'productivity') {
-		return `Según la documentación técnica oficial de GitHub Copilot (${item.source?.title || 'Microsoft Learn'}), esta opción describe un alcance, comando o herramienta que no corresponde a los requisitos formulados en la pregunta.`;
+		return `Según la documentación técnica oficial de GitHub Copilot (${item.source?.title || 'Microsoft Learn'}), esta opción describe un comando, participante de chat o integración que no corresponde al objetivo técnico planteado en este problema.`;
 	}
 
-	// 6. Fallback fundamentado
-	return `De acuerdo con la documentación oficial de Microsoft Learn y GitHub Copilot (${item.source?.title || 'GitHub Docs'}), la opción ${selectedOption.id} no satisface los criterios técnicos válidos para este escenario.`;
+	// 6. Fallback fundamentado detallado (sin respuestas vagas)
+	return `De acuerdo con la documentación oficial (${item.source?.title || 'GitHub Docs'}), la opción ${selectedOption.id} describe una configuración o suposición técnicamente errónea para este escenario, ya que infringe los requisitos de gobernanza, seguridad o precisión técnica definidos para la certificación GH-300.`;
 }
 
 export interface ReviewBreakdown {
@@ -271,6 +271,87 @@ export function buildReviewBreakdown(
 		explanation: item.explanation,
 		source: item.source,
 	};
+}
+
+export interface CoverageMetrics {
+	totalAvailable: number;
+	practicedCount: number;
+	coveragePercent: number;
+	unseenCount: number;
+	unseenQuestionIds: string[];
+}
+
+/**
+ * Calcula las métricas de inventario y cobertura acumulada a partir de la lista total de preguntas
+ * y los IDs de preguntas presentadas en los intentos previos.
+ */
+export function computeCoverageMetrics(
+	allQuestionIds: string[],
+	attemptQuestionIdsList: string[][],
+): CoverageMetrics {
+	const validIds = new Set(allQuestionIds);
+	const practicedSet = new Set<string>();
+
+	for (const attemptIds of attemptQuestionIdsList) {
+		if (Array.isArray(attemptIds)) {
+			for (const id of attemptIds) {
+				if (validIds.has(id)) {
+					practicedSet.add(id);
+				}
+			}
+		}
+	}
+
+	const totalAvailable = allQuestionIds.length;
+	const practicedCount = practicedSet.size;
+	const coveragePercent =
+		totalAvailable > 0 ? Math.round((practicedCount / totalAvailable) * 100) : 0;
+	const unseenQuestionIds = allQuestionIds.filter((id) => !practicedSet.has(id));
+	const unseenCount = unseenQuestionIds.length;
+
+	return {
+		totalAvailable,
+		practicedCount,
+		coveragePercent,
+		unseenCount,
+		unseenQuestionIds,
+	};
+}
+
+/**
+ * Extrae las preguntas en las que el usuario cometió un error en una sesión de examen.
+ */
+export function extractFailedQuestions<
+	T extends { id: string; balotario: string; number: number; question: string },
+>(questions: T[], answers: Array<{ correct: boolean } | undefined>): T[] {
+	return questions.filter((_, index) => answers[index] && answers[index]?.correct === false);
+}
+
+/**
+ * Extrae y deduplica todas las preguntas que han sido falladas a lo largo de los intentos históricos.
+ */
+export function extractAllHistoricalFailedQuestions<T extends { id: string }>(
+	allQuestions: T[],
+	attempts: Array<{ failed_questions?: string }>,
+): T[] {
+	const failedIds = new Set<string>();
+	for (const attempt of attempts) {
+		if (attempt.failed_questions) {
+			try {
+				const list: Array<{ id: string }> = JSON.parse(attempt.failed_questions);
+				if (Array.isArray(list)) {
+					for (const item of list) {
+						if (item && item.id) {
+							failedIds.add(item.id);
+						}
+					}
+				}
+			} catch {
+				/* ignore invalid JSON in attempts */
+			}
+		}
+	}
+	return allQuestions.filter((q) => failedIds.has(q.id));
 }
 
 

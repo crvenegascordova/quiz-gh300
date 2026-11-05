@@ -1,0 +1,132 @@
+<dialog
+	id="claude-study-guide-dialog"
+	class="modal-dialog !max-w-[760px] !max-h-[85vh] overflow-y-auto"
+	aria-labelledby="claude-study-guide-title"
+>
+	<div class="modal-content relative pr-2">
+		<div class="flex items-start justify-between gap-4 pb-4 border-b border-[#303b48]">
+			<div>
+				<span class="step-label text-[#f5a882]">ANTHROPIC · CLAUDE CERTIFIED DEVELOPER</span>
+				<h2 id="claude-study-guide-title" class="text-2xl font-bold mt-1 text-white">
+					Guía de estudio oficial: Claude Certified Developer
+				</h2>
+			</div>
+			<button
+				id="claude-study-guide-close-btn"
+				class="abandon-button !static text-sm"
+				type="button"
+				aria-label="Cerrar guía de estudio"
+			>✕ Cerrar</button>
+		</div>
+
+		<div class="my-4 p-4 rounded-xl border border-[#4a2e22] bg-[#1a1412] text-sm text-[#e6edf3]">
+			<p class="m-0 mb-3">
+				Esta guía resume las áreas técnicas evaluadas para ingenieros que desarrollan soluciones con <strong>Anthropic Claude 3.5</strong>, <strong>Model Context Protocol (MCP)</strong> y arquitecturas de agentes autónomos.
+			</p>
+			<div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5 pt-2 border-t border-[#4a2e22]/60 text-xs">
+				<a
+					href="https://docs.anthropic.com/"
+					target="_blank"
+					rel="noreferrer"
+					class="font-bold text-[#f5a882] hover:underline flex items-center gap-1"
+				>
+					📖 Documentación Anthropic ↗
+				</a>
+				<a
+					href="https://modelcontextprotocol.io/"
+					target="_blank"
+					rel="noreferrer"
+					class="font-bold text-[#f5a882] hover:underline flex items-center gap-1"
+				>
+					🔌 Especificación MCP ↗
+				</a>
+				<a
+					href="https://www.anthropic.com/research/building-effective-agents"
+					target="_blank"
+					rel="noreferrer"
+					class="font-bold text-[#f5a882] hover:underline flex items-center gap-1"
+				>
+					🤖 Guía de Agentes Anthropic ↗
+				</a>
+			</div>
+		</div>
+
+		<div class="space-y-4 text-sm text-[#c9d1d9]">
+			<section class="border border-[#26354d] bg-[#0c1427] p-4 rounded-lg">
+				<h3 class="text-base font-bold text-white mb-2 flex items-center justify-between">
+					<span>1. MSO Foundations</span>
+					<span class="text-xs bg-[#f5a882]/15 text-[#f5a882] px-2 py-0.5 rounded font-mono">57 min</span>
+				</h3>
+				<ul class="list-disc pl-5 space-y-1 text-xs text-[#a9b2bf]">
+					<li>Fundamentos de modelos de la familia Claude: Haiku (velocidad/coste), Sonnet (balance óptimo) y Opus (razonamiento profundo).</li>
+					<li>Parámetros de inferencia: <code>temperature</code>, <code>top_p</code>, <code>top_k</code>, <code>max_tokens</code> y <code>stop_sequences</code>.</li>
+					<li>Ventana de contexto (200k tokens), cálculo de costes de tokens de entrada vs. salida y trade-offs de latencia.</li>
+					<li>Capacidades multimodales (procesamiento de imágenes, documentos y diagramas) y versionado de encabezados de API.</li>
+				</ul>
+			</section>
+
+			<section class="border border-[#26354d] bg-[#0c1427] p-4 rounded-lg">
+				<h3 class="text-base font-bold text-white mb-2 flex items-center justify-between">
+					<span>2. Production-Grade Prompting, Agents & Tool Use</span>
+					<span class="text-xs bg-[#f5a882]/15 text-[#f5a882] px-2 py-0.5 rounded font-mono">209 min</span>
+				</h3>
+				<ul class="list-disc pl-5 space-y-1 text-xs text-[#a9b2bf]">
+					<li>Ingeniería de prompts estructurados mediante etiquetas XML (<code>&lt;context&gt;</code>, <code>&lt;instructions&gt;</code>, <code>&lt;examples&gt;</code>) y delimitación de roles.</li>
+					<li>Prefill del mensaje del asistente para estructurar respuestas JSON estrictas y guiar el comportamiento.</li>
+					<li><strong>Tool Use (Function Calling)</strong>: esquemas JSON Schema, ciclo <code>tool_use</code> / <code>tool_result</code>, <code>tool_choice</code> y manejo de errores con <code>is_error: true</code>.</li>
+					<li><strong>Prompt Caching</strong> con <code>{'cache_control: {"type": "ephemeral"}'}</code> para optimizar latencia y hasta 90% en coste de tokens repetidos.</li>
+					<li>Patrones y flujos agenticos: Prompt Chaining, Routing, Parallelization, Orchestrator-Workers y Evaluator-Optimizer.</li>
+				</ul>
+			</section>
+
+			<section class="border border-[#26354d] bg-[#0c1427] p-4 rounded-lg">
+				<h3 class="text-base font-bold text-white mb-2 flex items-center justify-between">
+					<span>3. Claude Code, MCP & Integration</span>
+					<span class="text-xs bg-[#f5a882]/15 text-[#f5a882] px-2 py-0.5 rounded font-mono">142 min</span>
+				</h3>
+				<ul class="list-disc pl-5 space-y-1 text-xs text-[#a9b2bf]">
+					<li><strong>Claude Code</strong>: configuración con <code>CLAUDE.md</code>, sub-agentes, control de permisos y hooks de seguridad.</li>
+					<li><strong>Model Context Protocol (MCP)</strong>: arquitectura cliente-servidor abierta y estandarizada.</li>
+					<li>Primitivas MCP: Tools (herramientas ejecutables), Resources (fuentes de datos) y Prompts (plantillas predefinidas).</li>
+					<li>Mecanismos de transporte estándar: <code>stdio</code> para herramientas locales y <code>SSE</code> (Server-Sent Events) para servidores remotos.</li>
+					<li>Integración con SDKs oficiales (TypeScript/Python), streaming con <code>client.messages.stream()</code> y manejo de eventos.</li>
+				</ul>
+			</section>
+
+			<section class="border border-[#26354d] bg-[#0c1427] p-4 rounded-lg">
+				<h3 class="text-base font-bold text-white mb-2 flex items-center justify-between">
+					<span>4. Production Engineering, Evals & Security</span>
+					<span class="text-xs bg-[#f5a882]/15 text-[#f5a882] px-2 py-0.5 rounded font-mono">211 min</span>
+				</h3>
+				<ul class="list-disc pl-5 space-y-1 text-xs text-[#a9b2bf]">
+					<li>Suites de evaluación (evals): diseño de datasets de prueba con ground truth, evaluación basada en código vs. modelo como juez.</li>
+					<li>Resiliencia ante límites de tráfico: manejo de códigos HTTP 429 (rate limit) y 529 (overloaded) con retroceso exponencial (jittered backoff).</li>
+					<li>Seguridad contra inyección de prompts directa e indirecta, sandboxing de herramientas y principio de privilegios mínimos.</li>
+					<li>Protección de privacidad: redacción y tokenización de PII, guardrails deterministas y límites de cuota multi-inquilino.</li>
+				</ul>
+			</section>
+
+			<section class="border border-[#26354d] bg-[#0c1427] p-4 rounded-lg">
+				<h3 class="text-base font-bold text-white mb-2 flex items-center justify-between">
+					<span>5. Accelerators & IP Contribution</span>
+					<span class="text-xs bg-[#f5a882]/15 text-[#f5a882] px-2 py-0.5 rounded font-mono">155 min</span>
+				</h3>
+				<ul class="list-disc pl-5 space-y-1 text-xs text-[#a9b2bf]">
+					<li>Empaquetado de soluciones reutilizables: diseño de aceleradores, plantillas modulares y desacoplamiento de lógica determinista vs. LLM.</li>
+					<li>Criterios arquitectónicos: cuándo utilizar un workflow lineal/enrutado frente a un agente autónomo de bucle abierto.</li>
+					<li>Integración en el SDLC empresarial: pipelines de CI/CD para validar prompts en pull requests y pruebas de regresión.</li>
+					<li>Estrategias de despliegue seguro: feature flags, pruebas A/B de variantes de prompts y observabilidad distribuida (correlación de IDs).</li>
+					<li>Uso de la Batch API de Anthropic para cargas de trabajo desacopladas y reducción del 50% en costes de procesamiento.</li>
+				</ul>
+			</section>
+		</div>
+
+		<div class="mt-6 pt-4 border-t border-[#303b48] flex justify-end">
+			<button
+				id="claude-study-guide-ok-btn"
+				class="button button-primary !py-2 text-sm !bg-[#d97706] hover:!bg-[#b45309]"
+				type="button"
+			>Entendido, volver al simulador</button>
+		</div>
+	</div>
+</dialog>

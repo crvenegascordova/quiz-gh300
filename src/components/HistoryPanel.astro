@@ -18,4 +18,90 @@
 	<div id="history-list" class="history-list">
 		<p class="empty-history">Cargando historial...</p>
 	</div>
+
+	<!-- Banco global de preguntas falladas acumuladas -->
+	<div id="history-all-failed-container" class="failed-summary-container mt-6 hidden">
+		<div class="failed-summary-header">
+			<span class="step-label text-[#ff7b72]">BANCO DE ERRORES ACUMULADOS</span>
+			<h3>Todas las preguntas falladas en tus exámenes</h3>
+		</div>
+		<p id="history-all-failed-intro" class="failed-summary-intro">
+			Tienes <strong id="history-total-failed-count">0</strong> preguntas registradas con error en tus exámenes previos.
+		</p>
+		<div id="history-all-failed-list" class="failed-questions-list"></div>
+		<div id="history-all-failed-prompt" class="retry-failed-box">
+			<p class="retry-failed-question">
+				<strong>¿Deseas realizar un test con todas las preguntas fallidas en tus exámenes?</strong>
+			</p>
+			<div class="unseen-config-row">
+				<label class="unseen-config-label">
+					<span>Cantidad:</span>
+					<input
+						type="number"
+						id="history-all-failed-limit-input"
+						class="unseen-input-number"
+						min="1"
+						max="458"
+						value="10"
+					/>
+				</label>
+				<button id="history-start-all-failed-btn" class="button button-warning" type="button">
+					Practicar todas las falladas (<span id="history-all-failed-btn-count">0</span>) <span>→</span>
+				</button>
+			</div>
+		</div>
+	</div>
+
+	<!-- Control de inventario y métricas de cobertura en el historial -->
+	<div id="history-coverage-container" class="coverage-container mt-6">
+		<div class="coverage-header">
+			<span class="step-label text-gh-blue">INVENTARIO Y PROGRESO GLOBAL</span>
+			<h3>Control de Inventario y Métricas de Cobertura</h3>
+		</div>
+		<div class="coverage-table-wrap">
+			<table class="coverage-table">
+				<thead>
+					<tr>
+						<th>Métrica</th>
+						<th>Valor</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Total de preguntas existentes en los tests</td>
+						<td id="history-coverage-total" class="coverage-val">458</td>
+					</tr>
+					<tr>
+						<td>Preguntas que ya han salido en exámenes practicados</td>
+						<td id="history-coverage-practiced" class="coverage-val">0 (0% de cobertura)</td>
+					</tr>
+					<tr>
+						<td>Preguntas que aún no me han salido</td>
+						<td id="history-coverage-unseen" class="coverage-val">458</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div id="history-unseen-prompt" class="unseen-quiz-prompt">
+			<p class="unseen-prompt-text">
+				<strong>¿Deseas realizar un cuestionario compuesto exclusivamente por preguntas que aún no has respondido?</strong>
+			</p>
+			<div class="unseen-config-row">
+				<label class="unseen-config-label">
+					<span>Cantidad:</span>
+					<input
+						type="number"
+						id="history-unseen-limit-input"
+						class="unseen-input-number"
+						min="1"
+						max="458"
+						value="30"
+					/>
+				</label>
+				<button id="history-start-unseen-btn" class="button button-secondary" type="button">
+					Practicar preguntas no vistas (<span id="history-unseen-count-btn">0</span>) <span>→</span>
+				</button>
+			</div>
+		</div>
+	</div>
 </section>

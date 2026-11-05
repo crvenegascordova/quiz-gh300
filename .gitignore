@@ -28,3 +28,7 @@ pnpm-debug.log*
 # deployment archive
 deploy.tar.gz
 *.tar.gz
+
+# python cache
+__pycache__/
+*.pyc

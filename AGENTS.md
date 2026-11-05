@@ -2,11 +2,11 @@
 
 ## Project overview
 
-- `quiz-gh300` is an Astro 7 server-rendered practice application for the GitHub Copilot GH-300 certification.
+- `quiz-gh300` is an Astro 7 server-rendered practice application for technical AI certifications (GitHub Copilot GH-300 and Claude Certified Developer).
 - The project uses Astro with the Node adapter in standalone mode, Tailwind CSS 4 through `@tailwindcss/vite`, and TypeScript strict configuration.
 - The application UI and educational content are in Spanish. Preserve Spanish UI text, test descriptions, and documentation when adding user-facing content.
-- The repository contains 420 questions. The source of truth is `balotarios.md`; the generated dataset is `src/data/questions.json`.
-- The working persistence implementation is local SQLite at `data/quiz-history.sqlite`.
+- The questions are organized per certification under `content/certifications/<id>/balotarios.md`. The generated datasets are under `src/data/certifications/<id>.json`.
+- The working persistence implementation is local SQLite at `data/quiz-history.sqlite`, with certification isolation via the `certification` column.
 
 ## Requirements and essential commands
 
@@ -36,7 +36,7 @@ After changing code, run the most targeted test first, then at minimum:
 bun test && npm run lint && npm run build
 ```
 
-After changing `balotarios.md`, regenerate the dataset before testing:
+After changing any `balotarios.md`, regenerate the datasets before testing:
 
 ```bash
 python scripts_prepare_questions.py
@@ -45,13 +45,20 @@ py -3 scripts_prepare_questions.py
 bun test && npm run lint && npm run build
 ```
 
-The generator validates that exactly 420 questions were parsed and writes `src/data/questions.json` with UTF-8 JSON. Do not hand-edit the generated JSON unless there is no alternative.
+The generator parses all certifications configured in `content/certifications/` and writes `src/data/certifications/<id>.json`. Do not hand-edit the generated JSON unless there is no alternative.
 
 ## Repository structure
 
 ```text
-balotarios.md                  # Source Markdown for questions, explanations, and sources
-scripts_prepare_questions.py   # Generates src/data/questions.json
+content/
+  certifications/
+    gh-300/
+      balotarios.md            # Source Markdown for GH-300 questions (Balotarios 1-7)
+      study-guide.md           # Microsoft GH-300 study guide
+    claude-certified-developer/
+      balotarios.md            # Source Markdown for Claude Developer questions
+      study-guide.md           # Anthropic Claude Developer study guide
+scripts_prepare_questions.py   # Generates src/data/certifications/<id>.json
 package.json                   # Scripts, runtime requirement, and dependencies
 astro.config.mjs               # SSR output, Node adapter, and Tailwind Vite plugin
 specs/quiz-gh300.md            # Functional requirements and acceptance criteria
@@ -59,14 +66,15 @@ docs/context-map.md            # Data flow, session state, and extension points
 tests/evaluation.test.ts       # Bun unit tests for pure evaluation logic
 data/                          # Runtime local SQLite data; quiz history is stored here
 src/
-  components/                  # Astro presentation components
-  data/questions.json           # Generated question dataset consumed by the page
-  pages/index.astro            # Page composition and dataset loading
-  pages/api/attempts.ts        # GET/POST attempts API backed by local SQLite
-  scripts/quiz-client.ts       # Browser-side quiz state machine and event handling
+  components/                  # Astro presentation components (CertificationSelector, HeroSection, SetupPanel, etc.)
+  data/certifications/         # Generated question datasets per certification and metadata registry
+  pages/index.astro            # Page composition and certification datasets loading
+  pages/api/attempts.ts        # GET/POST attempts API backed by local SQLite with certification filtering
+  scripts/quiz-client.ts       # Browser-side quiz state machine and certification selector event handling
   styles/global.css            # Global Tailwind import, tokens, and component styles
   types/question.ts            # Shared question and attempt interfaces
-  utils/evaluation.ts           # Pure, DOM-free quiz evaluation utilities
+  types/certification.ts       # Certification metadata interface
+  utils/evaluation.ts          # Pure, DOM-free quiz evaluation utilities
 ```
 
 The page is composed from `Layout.astro`, `HeroSection.astro`, `HistoryPanel.astro`, `SetupPanel.astro`, `QuizPanel.astro`, `ResultsPanel.astro`, and `AbandonDialog.astro`. `src/pages/index.astro` imports the generated questions, derives the available balotarios, and passes them into the layout and setup components.
@@ -84,9 +92,9 @@ balotarios.md -> scripts_prepare_questions.py -> src/data/questions.json -> src/
 The generator:
 
 - Splits Markdown into `# Balotario N` sections and `Pregunta N` blocks.
-- Parses options `A` through `E`, the correct answer, explanation, and official source link.
+- Parses options `A` through `Z`, the correct answer, explanation, and official source link.
 - Assigns one of six categories using keyword scoring: `responsible`, `features`, `architecture`, `prompting`, `productivity`, and `privacy`.
-- Requires every question to have a correct answer, explanation, and source, and aborts unless there are exactly 420 items.
+- Requires every question to have a correct answer, explanation, and source, and aborts unless there are exactly 458 items.
 
 The quiz defaults to 30 questions, filters by balotario or uses all questions, shuffles the selected pool, and clamps the requested count to the range `1..pool.length`. A question cannot advance until its answer is reviewed. Previously reviewed questions render as read-only, and results show total score plus per-category performance.
 

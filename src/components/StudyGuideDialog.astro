@@ -1,0 +1,150 @@
+<dialog
+	id="study-guide-dialog"
+	class="modal-dialog !max-w-[760px] !max-h-[85vh] overflow-y-auto"
+	aria-labelledby="study-guide-title"
+>
+	<div class="modal-content relative pr-2">
+		<div class="flex items-start justify-between gap-4 pb-4 border-b border-[#303b48]">
+			<div>
+				<span class="step-label text-gh-blue">MICROSOFT LEARN · GH-300</span>
+				<h2 id="study-guide-title" class="text-2xl font-bold mt-1 text-white">
+					Guía de estudio oficial: GitHub Copilot
+				</h2>
+			</div>
+			<button
+				id="study-guide-close-btn"
+				class="abandon-button !static text-sm"
+				type="button"
+				aria-label="Cerrar guía de estudio"
+			>✕ Cerrar</button>
+		</div>
+
+		<div class="my-4 p-4 rounded-xl border border-[#30465c] bg-[#112038] text-sm text-[#c9d1d9]">
+			<p class="m-0 mb-3">
+				Esta guía resume los temas, habilidades evaluadas y ponderaciones porcentuales oficiales del examen de certificación <strong>GitHub Copilot GH-300</strong> de Microsoft.
+			</p>
+			<div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5 pt-2 border-t border-[#30465c]/60 text-xs">
+				<a
+					href="https://aka.ms/examdemo"
+					target="_blank"
+					rel="noreferrer"
+					class="font-bold text-gh-blue hover:underline flex items-center gap-1"
+				>
+					🖥️ Sandbox del examen (demo) ↗
+				</a>
+				<a
+					href="https://learn.microsoft.com/es-es/credentials/certifications/exam-scoring-reports"
+					target="_blank"
+					rel="noreferrer"
+					class="font-bold text-gh-blue hover:underline flex items-center gap-1"
+				>
+					🎯 Aprobación: 700+ pts ↗
+				</a>
+				<a
+					href="https://learn.microsoft.com/es-es/credentials/certifications/renew-your-microsoft-certification"
+					target="_blank"
+					rel="noreferrer"
+					class="font-bold text-gh-blue hover:underline flex items-center gap-1"
+				>
+					🔄 Renovación anual gratuita ↗
+				</a>
+			</div>
+		</div>
+
+		<div class="space-y-4 text-sm text-[#c9d1d9]">
+			<!-- Competencia 1 -->
+			<div class="rounded-xl border border-gh-border bg-gh-card p-4">
+				<div class="flex items-center justify-between gap-2 mb-2">
+					<h3 class="font-bold text-base text-white m-0">1. Uso de las características de Copilot de GitHub</h3>
+					<span class="rounded-full bg-gh-blue/20 text-gh-blue px-2.5 py-0.5 text-xs font-black">25–30%</span>
+				</div>
+				<ul class="m-0 pl-4 space-y-1.5 text-xs text-[#a9b2bf]">
+					<li><strong>IDE & CLI:</strong> Activación en línea (ghost text), atajos de teclado, Copilot Chat y comandos de terminal con <code>gh copilot suggest</code> y <code>explain</code>.</li>
+					<li><strong>Agent Mode & Copilot Edits:</strong> Flujos de edición multiactivo entre múltiples archivos y administración de sesiones de agentes.</li>
+					<li><strong>MCP & Sub-Agents:</strong> Integración de herramientas externas vía Model Context Protocol (MCP) y delegación a subagentes para preservar ventana de contexto.</li>
+					<li><strong>Instrucciones y PRs:</strong> Archivos de instrucciones personalizadas (<code>.github/copilot-instructions.md</code>), resúmenes automáticos de Pull Requests, Spaces y Spark.</li>
+					<li><strong>Gobernanza corporativa:</strong> Directivas a nivel de organización/empresa, registros de auditoría (Audit Logs) y gestión de suscripciones mediante API REST.</li>
+				</ul>
+			</div>
+
+			<!-- Competencia 2 -->
+			<div class="rounded-xl border border-gh-border bg-gh-card p-4">
+				<div class="flex items-center justify-between gap-2 mb-2">
+					<h3 class="font-bold text-base text-white m-0">2. Uso responsable de GitHub Copilot</h3>
+					<span class="rounded-full bg-gh-blue/20 text-gh-blue px-2.5 py-0.5 text-xs font-black">15–20%</span>
+				</div>
+				<ul class="m-0 pl-4 space-y-1.5 text-xs text-[#a9b2bf]">
+					<li><strong>Principios de IA responsable:</strong> Imparcialidad, confiabilidad, seguridad, privacidad, inclusión y transparencia según Microsoft y GitHub.</li>
+					<li><strong>Riesgos y mitigación:</strong> Identificación de sesgos, alucinaciones y código vulnerable en modelos generativos.</li>
+					<li><strong>Human in the Loop:</strong> El desarrollador es el responsable final del código. Validación estricta, pruebas y auditoría antes de desplegar.</li>
+				</ul>
+			</div>
+
+			<!-- Competencia 3 -->
+			<div class="rounded-xl border border-gh-border bg-gh-card p-4">
+				<div class="flex items-center justify-between gap-2 mb-2">
+					<h3 class="font-bold text-base text-white m-0">3. Datos y arquitectura de GitHub Copilot</h3>
+					<span class="rounded-full bg-gh-blue/20 text-gh-blue px-2.5 py-0.5 text-xs font-black">10–15%</span>
+				</div>
+				<ul class="m-0 pl-4 space-y-1.5 text-xs text-[#a9b2bf]">
+					<li><strong>Pipeline de datos:</strong> Recolección de contexto en el IDE, envío cifrado al proxy backend de GitHub e inferencia en endpoint seguro.</li>
+					<li><strong>Filtros y postprocesamiento:</strong> Detección de toxicidad, bloqueo de contenido y postprocesamiento de respuestas antes de volver al IDE.</li>
+					<li><strong>Políticas de retención:</strong> Aislamiento de código en Microsoft Trust Center y garantía de no reentrenamiento en planes comerciales.</li>
+				</ul>
+			</div>
+
+			<!-- Competencia 4 -->
+			<div class="rounded-xl border border-gh-border bg-gh-card p-4">
+				<div class="flex items-center justify-between gap-2 mb-2">
+					<h3 class="font-bold text-base text-white m-0">4. Ingeniería de prompts y contexto</h3>
+					<span class="rounded-full bg-gh-blue/20 text-gh-blue px-2.5 py-0.5 text-xs font-black">10–15%</span>
+				</div>
+				<ul class="m-0 pl-4 space-y-1.5 text-xs text-[#a9b2bf]">
+					<li><strong>Estructura efectiva:</strong> Instrucción explícita, contexto, restricciones técnicas y formato de respuesta.</li>
+					<li><strong>Principios 4S:</strong> Single (tarea única), Specific (específico), Short (conciso) y Surround (rodeado de contexto relevante).</li>
+					<li><strong>Técnicas de prompting:</strong> Zero-shot y Few-shot (ejemplos concretos), gestión del historial y limpieza con <code>/clear</code>.</li>
+				</ul>
+			</div>
+
+			<!-- Competencia 5 -->
+			<div class="rounded-xl border border-gh-border bg-gh-card p-4">
+				<div class="flex items-center justify-between gap-2 mb-2">
+					<h3 class="font-bold text-base text-white m-0">5. Productividad del desarrollador</h3>
+					<span class="rounded-full bg-gh-blue/20 text-gh-blue px-2.5 py-0.5 text-xs font-black">10–15%</span>
+				</div>
+				<ul class="m-0 pl-4 space-y-1.5 text-xs text-[#a9b2bf]">
+					<li><strong>Calidad y modernización:</strong> Generación de código idiomático, refactorización de código heredado y documentación técnica.</li>
+					<li><strong>Pruebas unitarias:</strong> Creación de casos de prueba, aserciones rigurosas y detección de casos perimetrales (edge cases).</li>
+					<li><strong>Optimización y seguridad:</strong> Sugerencias de rendimiento y remediación de vulnerabilidades conocidas.</li>
+				</ul>
+			</div>
+
+			<!-- Competencia 6 -->
+			<div class="rounded-xl border border-gh-border bg-gh-card p-4">
+				<div class="flex items-center justify-between gap-2 mb-2">
+					<h3 class="font-bold text-base text-white m-0">6. Privacidad, exclusiones y salvaguardas</h3>
+					<span class="rounded-full bg-gh-blue/20 text-gh-blue px-2.5 py-0.5 text-xs font-black">10–15%</span>
+				</div>
+				<ul class="m-0 pl-4 space-y-1.5 text-xs text-[#a9b2bf]">
+					<li><strong>Exclusiones de contenido:</strong> Configuración a nivel de repositorio y organización con <code>.github/copilot-content-exclusion</code>.</li>
+					<li><strong>Filtro de código público:</strong> Detección y bloqueo de sugerencias que coincidan con código público de GitHub (+150 caracteres).</li>
+					<li><strong>Solución de problemas:</strong> Diagnóstico de firewalls corporativos, proxies empresariales y certificados SSL.</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="modal-actions mt-6 pt-4 border-t border-[#303b48] flex justify-between items-center flex-wrap gap-3">
+			<a
+				href="https://learn.microsoft.com/es-es/credentials/certifications/github-copilot/"
+				target="_blank"
+				rel="noreferrer"
+				class="text-xs text-gh-blue hover:underline"
+			>
+				Página oficial del examen en Microsoft Learn ↗
+			</a>
+			<button id="study-guide-dismiss-btn" class="button button-primary text-sm py-2 px-5" type="button">
+				Entendido, volver a practicar
+			</button>
+		</div>
+	</div>
+</dialog>

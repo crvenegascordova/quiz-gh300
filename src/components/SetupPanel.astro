@@ -1,20 +1,20 @@
 ---
 interface Props {
-	totalQuestions: number;
-	balotarios: string[];
+	totalQuestions?: number;
+	balotarios?: string[];
 	defaultLimit?: number;
 }
 
-const { totalQuestions, balotarios, defaultLimit = 30 } = Astro.props;
+const { totalQuestions = 0, balotarios = [], defaultLimit = 30 } = Astro.props;
 ---
 
-<section id="setup-panel" class="panel setup-panel" aria-labelledby="setup-title">
+<section id="setup-panel" class="panel setup-panel hidden" aria-labelledby="setup-title">
 	<div class="section-heading">
 		<div>
 			<span class="step-label">01 / CONFIGURACIÓN</span>
 			<h2 id="setup-title">Diseña tu sesión</h2>
 		</div>
-		<span class="question-count">{totalQuestions} preguntas disponibles</span>
+		<span id="setup-question-count" class="question-count">{totalQuestions} preguntas disponibles</span>
 	</div>
 	<div class="setup-grid">
 		<label class="field">
@@ -23,18 +23,20 @@ const { totalQuestions, balotarios, defaultLimit = 30 } = Astro.props;
 				id="question-limit"
 				type="number"
 				min="1"
-				max={totalQuestions}
+				max={totalQuestions || 100}
 				value={defaultLimit}
 				inputmode="numeric"
 			/>
-			<small>Entre 1 y {totalQuestions} preguntas</small>
+			<small id="question-limit-help">Entre 1 y {totalQuestions} preguntas</small>
 		</label>
 		<label class="field">
 			<span>Origen</span>
 			<select id="balotario-select">
-				<option value="all">Todos los balotarios</option>
+				<option value="all">Todos los tests</option>
+				<option value="unseen">Solo preguntas aún no vistas</option>
+				<option value="failed">Repasar preguntas falladas históricas</option>
 				{balotarios.map((balotario) => (
-					<option value={balotario}>{balotario}</option>
+					<option value={balotario}>{balotario.replace(/Balotario/i, "Test")}</option>
 				))}
 			</select>
 			<small>Las preguntas se seleccionan aleatoriamente</small>

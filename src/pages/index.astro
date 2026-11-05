@@ -1,23 +1,30 @@
 ---
 import Layout from "../components/Layout.astro";
 import HeroSection from "../components/HeroSection.astro";
+import CertificationSelector from "../components/CertificationSelector.astro";
 import HistoryPanel from "../components/HistoryPanel.astro";
 import SetupPanel from "../components/SetupPanel.astro";
 import QuizPanel from "../components/QuizPanel.astro";
 import ResultsPanel from "../components/ResultsPanel.astro";
 import AbandonDialog from "../components/AbandonDialog.astro";
-import questions from "../data/questions.json";
-import type { Question } from "../types/question";
-
-const typedQuestions = questions as Question[];
-const balotarios = [...new Set(typedQuestions.map((item) => item.balotario))].sort();
+import StudyGuideDialog from "../components/StudyGuideDialog.astro";
+import ClaudeStudyGuideDialog from "../components/ClaudeStudyGuideDialog.astro";
+import { CERTIFICATIONS, CERTIFICATION_DATA } from "../data/certifications";
 ---
 
-<Layout questions={typedQuestions}>
+<Layout
+	title="Simulador de Certificaciones Técnicas · IA & Desarrollo"
+	description="Practica exámenes y simulacros para GitHub Copilot GH-300 y Claude Certified Developer con explicaciones detalladas y fuentes oficiales."
+	certifications={CERTIFICATIONS}
+	questionsByCert={CERTIFICATION_DATA}
+>
 	<HeroSection />
+	<CertificationSelector questionsByCert={CERTIFICATION_DATA} />
 	<HistoryPanel />
-	<SetupPanel totalQuestions={typedQuestions.length} balotarios={balotarios} />
+	<SetupPanel />
 	<QuizPanel />
 	<ResultsPanel />
 	<AbandonDialog />
+	<StudyGuideDialog />
+	<ClaudeStudyGuideDialog />
 </Layout>
