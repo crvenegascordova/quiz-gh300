@@ -58,7 +58,23 @@
 		@apply mb-0 max-w-[540px] text-[1.08rem] leading-relaxed text-gh-text-muted;
 	}
 	.hero-actions {
-		@apply my-7 flex items-center justify-start;
+		@apply my-6 flex items-center gap-3 flex-wrap;
+	}
+	.hero-btn {
+		@apply text-sm px-4 py-2.5 flex items-center justify-center;
+	}
+	.hero-btn span:not(#history-arrow) {
+		@apply ml-0 text-inherit;
+	}
+	.hero-btn #history-arrow,
+	.hero-btn .history-arrow {
+		@apply ml-1.5 text-inherit inline-block;
+	}
+	.btn-text-full {
+		display: inline;
+	}
+	.btn-text-short {
+		display: none;
 	}
 	.panel {
 		@apply rounded-[28px] border border-gh-border bg-gh-panel shadow-[0_24px_80px_rgba(0,0,0,.33)];
@@ -454,6 +470,18 @@
 }
 
 @media (max-width: 620px) {
+	.hero-actions {
+		@apply my-3.5 grid grid-cols-3 gap-1.5 w-full items-stretch;
+	}
+	.hero-actions .hero-btn {
+		@apply w-full px-1.5 py-2 text-[0.74rem] font-bold flex items-center justify-center text-center leading-tight rounded-xl min-h-[40px] whitespace-normal;
+	}
+	.btn-text-full {
+		display: none !important;
+	}
+	.btn-text-short {
+		display: inline !important;
+	}
 	.app-shell {
 		@apply w-[calc(100%-18px)] pt-6;
 	}

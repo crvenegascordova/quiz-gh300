@@ -17,7 +17,7 @@ export const CERTIFICATIONS: CertificationMeta[] = [
 		accentColor: "#238636",
 		badgeBg: "bg-[#238636]/15",
 		badgeBorder: "border-[#238636]/40",
-		studyGuideTitle: "📘 Guía oficial de estudio GH-300",
+		studyGuideTitle: "Guía oficial de estudio GH-300",
 		studyGuideModalId: "study-guide-dialog",
 		language: "es",
 		topics: [
@@ -42,7 +42,7 @@ export const CERTIFICATIONS: CertificationMeta[] = [
 		accentColor: "#d97706",
 		badgeBg: "bg-[#d97706]/15",
 		badgeBorder: "border-[#d97706]/40",
-		studyGuideTitle: "📙 Guía de estudio Claude Developer",
+		studyGuideTitle: "Guía de estudio Claude Developer",
 		studyGuideModalId: "claude-study-guide-dialog",
 		language: "en",
 		topics: [

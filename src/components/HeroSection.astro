@@ -18,29 +18,33 @@ const {
 	<p id="hero-description" class="hero-copy">{description}</p>
 </section>
 
-<div class="hero-actions flex items-center gap-3 flex-wrap mt-4">
+<div class="hero-actions">
 	<button
 		id="change-cert-btn"
-		class="button button-secondary hidden"
+		class="button button-secondary hidden hero-btn"
 		type="button"
 		title="Volver a la selección de certificaciones"
 	>
-		← Cambiar certificación
+		<span class="btn-text-full">← Cambiar certificación</span>
+		<span class="btn-text-short">← Cambiar</span>
 	</button>
 	<button
 		id="history-button"
-		class="button button-secondary hidden"
+		class="button button-secondary hidden hero-btn"
 		type="button"
 		aria-expanded="false"
 	>
-		Ver mis exámenes <span id="history-arrow">↓</span>
+		<span class="btn-text-full">Ver mis exámenes</span>
+		<span class="btn-text-short">Historial</span>
+		<span id="history-arrow" class="history-arrow">↓</span>
 	</button>
 	<button
 		id="study-guide-btn"
-		class="button button-secondary hidden"
+		class="button button-secondary hidden hero-btn"
 		type="button"
 		aria-haspopup="dialog"
 	>
-		📘 Guía oficial de estudio
+		<span class="btn-text-full" id="study-guide-btn-full">Guía oficial de estudio</span>
+		<span class="btn-text-short" id="study-guide-btn-short">Guía oficial</span>
 	</button>
 </div>

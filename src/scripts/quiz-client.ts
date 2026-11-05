@@ -865,7 +865,15 @@ export function initQuizPlatform(
 		changeCertBtn.classList.remove("hidden");
 		historyBtn.classList.remove("hidden");
 		studyGuideBtn.classList.remove("hidden");
-		studyGuideBtn.textContent = cert.studyGuideTitle;
+
+		const fullGuideSpan = $("study-guide-btn-full");
+		const shortGuideSpan = $("study-guide-btn-short");
+		if (fullGuideSpan && shortGuideSpan) {
+			fullGuideSpan.textContent = cert.studyGuideTitle;
+			shortGuideSpan.textContent = cert.id === "claude-certified-developer" ? "Guía Claude" : "Guía GH-300";
+		} else {
+			studyGuideBtn.textContent = cert.studyGuideTitle;
+		}
 
 		if (cert.language === "en" || cert.id === "claude-certified-developer") {
 			translateBtn.classList.remove("hidden");
