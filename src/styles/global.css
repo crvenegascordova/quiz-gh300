@@ -470,6 +470,15 @@
 }
 
 @media (max-width: 620px) {
+	h2 {
+		@apply text-xl;
+	}
+	#history-title {
+		@apply text-[1.28rem] font-bold leading-snug tracking-normal;
+	}
+	#history-refresh {
+		@apply px-3 py-1.5 text-xs shrink-0;
+	}
 	.hero-actions {
 		@apply my-3.5 grid grid-cols-3 gap-1.5 w-full items-stretch;
 	}
