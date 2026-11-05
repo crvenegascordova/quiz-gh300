@@ -61,7 +61,7 @@ content/
 scripts_prepare_questions.py   # Generates src/data/certifications/<id>.json
 package.json                   # Scripts, runtime requirement, and dependencies
 astro.config.mjs               # SSR output, Node adapter, and Tailwind Vite plugin
-specs/quiz-gh300.md            # Functional requirements and acceptance criteria
+specs/quiz-test-certification.md # Functional requirements and acceptance criteria
 docs/context-map.md            # Data flow, session state, and extension points
 tests/evaluation.test.ts       # Bun unit tests for pure evaluation logic
 data/                          # Runtime local SQLite data; quiz history is stored here
@@ -135,7 +135,7 @@ When changing evaluation or navigation behavior, add tests for positive, negativ
 
 ## Specifications and change workflow
 
-Before changing quiz behavior, read and update both `specs/quiz-gh300.md` and `docs/context-map.md`. The specification defines acceptance criteria for question selection, review-before-advance behavior, navigation, abandonment, history toggling, accessibility, scoring, and official-source links.
+Before changing quiz behavior, read and update both `specs/quiz-test-certification.md` and `docs/context-map.md`. The specification defines acceptance criteria for question selection, review-before-advance behavior, navigation, abandonment, history toggling, accessibility, scoring, and official-source links.
 
 Educational explanations, distractor rationales, and new question content must be grounded only in official Microsoft Learn (`learn.microsoft.com`) and GitHub Copilot/GitHub Docs (`docs.github.com`) sources. Preserve each dataset item's `source.title` and `source.url`.
 
