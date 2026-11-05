@@ -255,7 +255,7 @@ Para asegurarte de que nunca tengas cargos accidentales:
 
 Si deseas colaborar, agregar nuevas preguntas o mejorar el diseño, este proyecto sigue estrictamente la metodología **Spec-Driven Development (SDD)**:
 
-1. **Especificación primero**: Toda modificación de requerimientos debe definirse previamente en [`specs/quiz-test-certification.md`](specs/quiz-test-certification.md) y [`docs/context-map.md`](docs/context-map.md).
+1. **Especificación primero**: Toda modificación de requerimientos debe definirse previamente en [`specs/quiz-certification.md`](specs/quiz-certification.md) y [`docs/context-map.md`](docs/context-map.md).
 2. **Pruebas unitarias obligatorias**: Toda nueva regla o ajuste debe contar con pruebas en [`tests/evaluation.test.ts`](tests/evaluation.test.ts).
 3. **Fuentes oficiales exclusivas**: Toda explicación, distractor o justificación debe basarse **únicamente en documentación oficial** (Microsoft Learn, GitHub Docs o Anthropic Docs/Skilljar).
 4. **Verificación doble antes de enviar cambios**:
@@ -295,7 +295,7 @@ quiz-gh300/
 ├── package.json                           # Scripts y dependencias
 ├── astro.config.mjs                       # Configuración de Astro con adaptador Node y Tailwind Vite
 ├── specs/
-│   └── quiz-test-certification.md         # Especificaciones funcionales y criterios de aceptación
+│   └── quiz-certification.md              # Especificaciones funcionales y criterios de aceptación
 ├── docs/
 │   └── context-map.md                     # Flujo de datos y mapa de contexto del proyecto
 ├── tests/

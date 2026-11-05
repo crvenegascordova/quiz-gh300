@@ -2,7 +2,7 @@
 
 ## Project overview
 
-- `quiz-gh300` is an Astro 7 server-rendered practice application for technical AI certifications (GitHub Copilot GH-300 and Claude Certified Developer).
+- `quiz-certification` is an Astro 7 server-rendered practice application for technical AI certifications (GitHub Copilot GH-300 and Claude Certified Developer).
 - The project uses Astro with the Node adapter in standalone mode, Tailwind CSS 4 through `@tailwindcss/vite`, and TypeScript strict configuration.
 - The application UI and educational content are in Spanish. Preserve Spanish UI text, test descriptions, and documentation when adding user-facing content.
 - The questions are organized per certification under `content/certifications/<id>/balotarios.md`. The generated datasets are under `src/data/certifications/<id>.json`.
@@ -61,7 +61,7 @@ content/
 scripts_prepare_questions.py   # Generates src/data/certifications/<id>.json
 package.json                   # Scripts, runtime requirement, and dependencies
 astro.config.mjs               # SSR output, Node adapter, and Tailwind Vite plugin
-specs/quiz-test-certification.md # Functional requirements and acceptance criteria
+specs/quiz-certification.md     # Functional requirements and acceptance criteria
 docs/context-map.md            # Data flow, session state, and extension points
 tests/evaluation.test.ts       # Bun unit tests for pure evaluation logic
 data/                          # Runtime local SQLite data; quiz history is stored here
@@ -135,7 +135,7 @@ When changing evaluation or navigation behavior, add tests for positive, negativ
 
 ## Specifications and change workflow
 
-Before changing quiz behavior, read and update both `specs/quiz-test-certification.md` and `docs/context-map.md`. The specification defines acceptance criteria for question selection, review-before-advance behavior, navigation, abandonment, history toggling, accessibility, scoring, and official-source links.
+Before changing quiz behavior, read and update both `specs/quiz-certification.md` and `docs/context-map.md`. The specification defines acceptance criteria for question selection, review-before-advance behavior, navigation, abandonment, history toggling, accessibility, scoring, and official-source links.
 
 Educational explanations, distractor rationales, and new question content must be grounded only in official Microsoft Learn (`learn.microsoft.com`) and GitHub Copilot/GitHub Docs (`docs.github.com`) sources. Preserve each dataset item's `source.title` and `source.url`.
 

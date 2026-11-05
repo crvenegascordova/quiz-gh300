@@ -29,7 +29,7 @@ El contenido pedagógico y las especificaciones del sistema se organizan en las 
   - `src/data/certifications/index.ts`: Registro maestro de metadatos de las certificaciones (`CERTIFICATIONS`), que expone títulos, insignias SVG/PNG, módulos, paleta temática y estado de soporte lingüístico.
 
 ### 1.3 Especificaciones y Reglas de Negocio
-- `specs/quiz-test-certification.md`: Requisitos funcionales, criterios de aceptación, diseño de navegación y heurísticas de corrección estricta.
+- `specs/quiz-certification.md`: Requisitos funcionales, criterios de aceptación, diseño de navegación y heurísticas de corrección estricta.
 - `AGENTS.md`: Directrices del repositorio, comandos esenciales y convenciones de código.
 
 ---
