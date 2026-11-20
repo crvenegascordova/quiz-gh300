@@ -2272,7 +2272,7 @@ D. anthropic-version and content-type only
 Respuesta correcta: A
 
 Explicación
-The Messages API requires x-api-key (authentication), anthropic-version (e.g. 2023-06-01, pinning API behavior) and content-type: application/json. Authorization/Accept/User-Agent (B) is a generic HTTP set and Anthropic does not use Bearer auth for this endpoint. x-api-key alone (C) omits the mandatory version header, and the request is rejected. Version and content-type without a key (D) fails authentication. Official SDKs set these headers for you, but this is the minimal raw HTTP set.
+The Messages API requires x-api-key (authentication), anthropic-version (e.g. 2023-06-01, pinning API behavior) and content-type: application/json. Authorization/Accept/User-Agent (B) is a generic HTTP set that omits the mandatory anthropic-version and content-type headers (Authorization: Bearer is also accepted as a credential, but x-api-key is the classic form for this minimal set). x-api-key alone (C) omits the mandatory version header, and the request is rejected. Version and content-type without a key (D) fails authentication. Official SDKs set these headers for you, but this is the minimal raw HTTP set.
 
 Fuente oficial: [Anthropic Docs: Claude developer guide & API reference](https://docs.anthropic.com/en/docs/welcome)
 
