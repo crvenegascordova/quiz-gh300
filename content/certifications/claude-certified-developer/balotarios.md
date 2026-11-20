@@ -1838,7 +1838,7 @@ D. Lower the temperature
 Respuesta correcta: A
 
 Explicación
-With the same 12,000-token prefix on every request, prompt caching gives the largest saving: cached reads cost about 10% of the base input price (after a one-time write premium) and also reduce latency. Option B does not touch the dominant input cost, as max_tokens limits output only. Option C changes delivery, not token cost. Option D, temperature, has no effect on billing. Caching combined with trimming the prompt (for example to 6,000 tokens) compounds the savings, but caching is the single highest-leverage change.
+With the same 12,000-token prefix on every request, prompt caching gives the largest saving: cached reads cost about 10% of the base input price (5% on Opus 5.5 and Sonnet 5.5), after a one-time write premium and also reduce latency. Option B does not touch the dominant input cost, as max_tokens limits output only. Option C changes delivery, not token cost. Option D, temperature, has no effect on billing. Caching combined with trimming the prompt (for example to 6,000 tokens) compounds the savings, but caching is the single highest-leverage change.
 
 Fuente oficial: [Anthropic Docs: Prompt engineering best practices](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview)
 
@@ -1924,7 +1924,7 @@ D. It forces the model to fill the space
 Respuesta correcta: B
 
 Explicación
-A very large max_tokens removes the safety bound on runaway or looping generations, which can inflate cost and latency, and because input tokens plus max_tokens must fit the context window (and some limits are checked against max_tokens), an oversized value can cause requests with large inputs to be rejected. Option A is wrong because price per token is fixed. Option C is wrong because it does not disable streaming (though SDKs may require streaming for very large values). Option D is wrong because the model stops when done and does not pad. Size it to the realistic maximum plus headroom and treat stop_reason max_tokens as a signal.
+A very large max_tokens removes the safety bound on runaway or looping generations, which can inflate cost and latency, and because input tokens plus output share the context window, a huge max_tokens with a large input can end generation early with stop_reason model_context_window_exceeded (models before Claude 4.5 reject such a request with a validation error). Note that max_tokens does not count toward OTPM rate limits. Option A is wrong because price per token is fixed. Option C is wrong because it does not disable streaming (though SDKs may require streaming for very large values). Option D is wrong because the model stops when done and does not pad. Size it to the realistic maximum plus headroom and treat stop_reason max_tokens as a signal.
 
 Fuente oficial: [Anthropic Docs: Claude developer guide & API reference](https://docs.anthropic.com/en/docs/welcome)
 
@@ -2095,7 +2095,7 @@ D. The model's temperature setting only
 Respuesta correcta: A
 
 Explicación
-The model decides whether to call a tool by reading tool names and descriptions against the conversation, and your tool_choice setting can override that (auto, any, a specific tool or none) (A). Option B is wrong because array order is not what drives the decision. Option C is wrong because schema complexity affects argument quality, not whether the tool is chosen. Option D is wrong because temperature influences sampling but is not the determining factor. Forcing a tool via tool_choice works only on models that allow it; Claude Opus 5.5, Sonnet 5.5, Fable 5.x and Mythos 5.x return a 400, so use auto with strict tool use or structured outputs there.
+The model decides whether to call a tool by reading tool names and descriptions against the conversation, and your tool_choice setting can override that (auto, any, a specific tool or none) (A). Option B is wrong because array order is not what drives the decision. Option C is wrong because schema complexity affects argument quality, not whether the tool is chosen. Option D is wrong because temperature influences sampling but is not the determining factor. Forcing a tool via tool_choice works only on models that allow it; Claude Opus 5.5, Sonnet 5.5, Fable 5.2/5.1 and Mythos 5.2/5.1 return a 400, so use auto with strict tool use or structured outputs there.
 
 Fuente oficial: [Anthropic Docs: Define tools](https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools)
 
