@@ -1,0 +1,177 @@
+{
+  "https://code.claude.com/docs/en/hooks": {
+    "fetched_at": "2026-11-20T14:17:56+00:00",
+    "hash": "ac072022fd7937970e029df4aa818b4d69c093dc32f421c3f3cfbede5043bfa5",
+    "length": 1318135
+  },
+  "https://code.claude.com/docs/en/hooks-guide": {
+    "fetched_at": "2026-11-20T14:17:56+00:00",
+    "hash": "3c652b770d164e14090345859558da08eefb48049e92ad655cf7489bff17483a",
+    "length": 357184
+  },
+  "https://code.claude.com/docs/en/mcp": {
+    "fetched_at": "2026-11-20T14:17:56+00:00",
+    "hash": "190a19f0c1aa6d12db51a5cf756608566864a82a0e3bdec509387cdefd1bf00e",
+    "length": 580291
+  },
+  "https://code.claude.com/docs/en/memory": {
+    "fetched_at": "2026-11-20T14:17:56+00:00",
+    "hash": "79b06e74de6b0a8c4349fa7a831c83b05bef5c94bc3451efcffde3441a8ecb32",
+    "length": 237402
+  },
+  "https://code.claude.com/docs/en/settings": {
+    "fetched_at": "2026-11-20T14:17:57+00:00",
+    "hash": "0257405cd8ed59387c1d26ce789e060a4f5e30b519dd871ff31d57f3d8e7db4f",
+    "length": 200369
+  },
+  "https://code.claude.com/docs/en/sub-agents": {
+    "fetched_at": "2026-11-20T14:17:57+00:00",
+    "hash": "5d31c9e892109d89e1bd666dda35ee43630d773da0a3ad858af174f4ff7f6bec",
+    "length": 454068
+  },
+  "https://docs.anthropic.com/en/docs/agents-and-tools/mcp": {
+    "fetched_at": "2026-11-20T14:17:58+00:00",
+    "hash": "af3dd7ebcc81c9ff222c7e9598b967df81b39c3d7383edbfddbe1427878788cf",
+    "length": 44408
+  },
+  "https://docs.anthropic.com/en/docs/build-with-claude/prompt-caching": {
+    "fetched_at": "2026-11-20T14:17:59+00:00",
+    "hash": "16aa18036967d906371a5c6572094f0166aa3995fee2e89f94b3d92474c1d263",
+    "length": 63702
+  },
+  "https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview": {
+    "fetched_at": "2026-11-20T14:18:00+00:00",
+    "hash": "91ca8cefd5da7024284c160c89ee4a3a830ddbf35c1c0ab5831d3e5412622b2e",
+    "length": 3696
+  },
+  "https://docs.anthropic.com/en/docs/build-with-claude/tool-use": {
+    "fetched_at": "2026-11-20T14:18:01+00:00",
+    "hash": "c6d91f7d3391fd3bb2b9c2d2a1e92160e9ca0c6a0a8e84b41e9ca9d159abe888",
+    "length": 14230
+  },
+  "https://docs.anthropic.com/en/docs/build-with-claude/vision": {
+    "fetched_at": "2026-11-20T14:18:01+00:00",
+    "hash": "bc37e293aa8e8ab8d34906a6bcd2cda49255fcb477b4bba66a5dcaf4da4f421e",
+    "length": 19336
+  },
+  "https://docs.anthropic.com/en/docs/test-and-evaluate/develop-tests": {
+    "fetched_at": "2026-11-20T14:18:02+00:00",
+    "hash": "73e6c4d69381e444b8f5b9cb115301e6b7055d70f20d6aa8975457494f86e9b1",
+    "length": 25719
+  },
+  "https://docs.anthropic.com/en/docs/welcome": {
+    "fetched_at": "2026-11-20T14:18:03+00:00",
+    "hash": "7351da8158df3b05fa2afc31e7be41fe6bed5782392ffde815fefd041562b33b",
+    "length": 6025
+  },
+  "https://modelcontextprotocol.io/docs/learn/server-concepts": {
+    "fetched_at": "2026-11-20T14:18:03+00:00",
+    "hash": "bdfade80e29d27bd4d16ad33867fa56bfe5b1bb57152436b42bc44ae8f5841f0",
+    "length": 179382
+  },
+  "https://modelcontextprotocol.io/specification/2025-06-18/basic/transports": {
+    "fetched_at": "2026-11-20T14:18:04+00:00",
+    "hash": "118ad8450525633801149d0ec6769ecf70b7640b25e0c0f62e3ec651ec19338d",
+    "length": 69248
+  },
+  "https://platform.claude.com/docs/en/about-claude/pricing": {
+    "fetched_at": "2026-11-20T14:18:04+00:00",
+    "hash": "65fc2d127bfdec7a9aaf058a0318461c5bd7b18b0de274f93519e12d48ee2b66",
+    "length": 30686
+  },
+  "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools": {
+    "fetched_at": "2026-11-20T14:18:05+00:00",
+    "hash": "bdedd7d122a3a282e93dcb55dae0aa89569cb3b2c0d7119ae93243b370a3d16f",
+    "length": 18431
+  },
+  "https://platform.claude.com/docs/en/agents-and-tools/tool-use/handle-tool-calls": {
+    "fetched_at": "2026-11-20T14:18:05+00:00",
+    "hash": "1a6a3e5292e3254398a6c87c20acad61ab6c00b280c3f89b6df86a0aee4eacca",
+    "length": 12528
+  },
+  "https://platform.claude.com/docs/en/api/errors": {
+    "fetched_at": "2026-11-20T14:18:06+00:00",
+    "hash": "f9f30075c7254b54df7898f1b643e66986dadf1934a5170daf07aa8bc8609668",
+    "length": 22274
+  },
+  "https://platform.claude.com/docs/en/api/messages": {
+    "fetched_at": "2026-11-20T14:18:07+00:00",
+    "hash": "b257ca6a978f9045c818de33c15d8aeab45be06bf9e66bbc7b95f878377dd3fd",
+    "length": 113654
+  },
+  "https://platform.claude.com/docs/en/api/overview": {
+    "fetched_at": "2026-11-20T14:18:07+00:00",
+    "hash": "d6ecc285527be28214595bbd2ccb65f7d255df71c7ac4b66c6da0fc82d0352b0",
+    "length": 14961
+  },
+  "https://platform.claude.com/docs/en/api/rate-limits": {
+    "fetched_at": "2026-11-20T14:18:07+00:00",
+    "hash": "374bdf814e5bab2c79cf29abf06071fcd12d8c7a6104a82f10916d85f56012bd",
+    "length": 25520
+  },
+  "https://platform.claude.com/docs/en/api/versioning": {
+    "fetched_at": "2026-11-20T14:18:08+00:00",
+    "hash": "ba33ba5cdc7bf8a5338321351a1da60f5277e08d8e5ddc37f580a0d39b3ea0a7",
+    "length": 6418
+  },
+  "https://platform.claude.com/docs/en/build-with-claude/batch-processing": {
+    "fetched_at": "2026-11-20T14:18:08+00:00",
+    "hash": "3943e2e54e9da1680d038e219590fb4f01e9ce5866f071045b81700ef70b9a42",
+    "length": 32341
+  },
+  "https://platform.claude.com/docs/en/build-with-claude/context-windows": {
+    "fetched_at": "2026-11-20T14:18:09+00:00",
+    "hash": "90134a404a9718e53aad52e60f12e2ae1ef31d5ba5234f131d56114942cff88c",
+    "length": 15861
+  },
+  "https://platform.claude.com/docs/en/build-with-claude/handling-stop-reasons": {
+    "fetched_at": "2026-11-20T14:18:10+00:00",
+    "hash": "998f05da1582874dc0ef2a54e5d5642809b1990aa32e9842c2653c70a82a7615",
+    "length": 28117
+  },
+  "https://platform.claude.com/docs/en/build-with-claude/prompt-caching": {
+    "fetched_at": "2026-11-20T14:18:10+00:00",
+    "hash": "16aa18036967d906371a5c6572094f0166aa3995fee2e89f94b3d92474c1d263",
+    "length": 63702
+  },
+  "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices": {
+    "fetched_at": "2026-11-20T14:18:11+00:00",
+    "hash": "db5048d45880496639b290578914256ca9dfb9dda160beecb96fcd53ac161edd",
+    "length": 64128
+  },
+  "https://platform.claude.com/docs/en/build-with-claude/streaming": {
+    "fetched_at": "2026-11-20T14:18:11+00:00",
+    "hash": "6d3ca62043be57cf8be0e3cae29e6921423bfac039868346f728c4fb0e7b45c6",
+    "length": 26704
+  },
+  "https://platform.claude.com/docs/en/build-with-claude/thinking": {
+    "fetched_at": "2026-11-20T14:18:12+00:00",
+    "hash": "01ce49e47d650a470e904b34f756e766d226d7ee254baa105b3046b12c2a7b00",
+    "length": 58202
+  },
+  "https://platform.claude.com/docs/en/build-with-claude/token-counting": {
+    "fetched_at": "2026-11-20T14:18:13+00:00",
+    "hash": "33597613f5dd8dbbb0f410b8d89de520f856a41b125e26121e7a8b1e5f4c6772",
+    "length": 27128
+  },
+  "https://platform.claude.com/docs/en/test-and-evaluate/strengthen-guardrails/mitigate-jailbreaks": {
+    "fetched_at": "2026-11-20T14:18:13+00:00",
+    "hash": "decfb8e21a2955398d03df4ea29ab436b6cdb0cb4d8d83f158c8482a4e951868",
+    "length": 12626
+  },
+  "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents": {
+    "fetched_at": "2026-11-20T14:18:14+00:00",
+    "hash": "710c1930870a82c09d0d1303ad9dfef907a94d5a909bab4957e72d08bf1f4e06",
+    "length": 21813
+  },
+  "https://www.anthropic.com/engineering/multi-agent-research-system": {
+    "fetched_at": "2026-11-20T14:18:14+00:00",
+    "hash": "2840ffd060ca54fe7ab52fd9fab50a5e7c723b1f627279e6ed231f1f70a3c239",
+    "length": 26725
+  },
+  "https://www.anthropic.com/research/building-effective-agents": {
+    "fetched_at": "2026-11-20T14:18:15+00:00",
+    "hash": "bed2789431aa555703ffc59b10e3bbdd08e412ea244a4749c5f9cd8b74e897d1",
+    "length": 19020
+  }
+}
