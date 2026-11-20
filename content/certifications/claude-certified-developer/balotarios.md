@@ -2124,7 +2124,7 @@ E. It executes the tool server-side
 Respuesta correcta: A, B y C
 
 Explicación
-tool_choice controls how the model uses tools: tool forces a specific named tool (A), any requires that some tool be used (B), and none prevents tool use for the request (C), with auto as the default. Option D is wrong because parameters are defined by the tool's input_schema in the tool definition. Option E is wrong because client tools are executed by your code, and the API only returns a tool_use block. Forcing a tool (any or tool) is rejected with a 400 on Claude Opus 5.5, Sonnet 5.5, Fable 5.x and Mythos 5.x, so use auto with strict tool use or structured outputs there. Forced use is also not allowed with manual extended thinking. Guaranteed schema conformance requires strict mode.
+tool_choice controls how the model uses tools: tool forces a specific named tool (A), any requires that some tool be used (B), and none prevents tool use for the request (C), with auto as the default. Option D is wrong because parameters are defined by the tool's input_schema in the tool definition. Option E is wrong because client tools are executed by your code, and the API only returns a tool_use block. Forcing a tool (any or tool) is rejected with a 400 on Claude Opus 5.5, Sonnet 5.5, Fable 5.2/5.1 and Mythos 5.2/5.1, so use auto with strict tool use or structured outputs there. Forced use is also not allowed with manual extended thinking. Guaranteed schema conformance requires strict mode.
 
 Fuente oficial: [Anthropic Docs: Define tools](https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools)
 
