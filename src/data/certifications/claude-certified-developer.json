@@ -83,11 +83,11 @@
       },
       {
         "id": "E",
-        "text": "The agent maintains state across turns to inform later decisions "
+        "text": "The agent gains ground truth from the environment (tool results) at each step "
       }
     ],
     "correctAnswer": "A, B y E",
-    "explanation": "Anthropic defines workflows as systems where LLMs and tools are orchestrated through predefined code paths, whereas agents are systems where the LLM dynamically directs its own process and tool usage. Hence A is right, and B and E describe how this works in practice: the agent loops (act, observe environment feedback, decide) until it finishes or hits a stopping condition, carrying state across turns. C is wrong because model size is independent of the pattern; workflows and agents can use any model, and agents often use smaller models for sub-steps. D describes a workflow, not an agent, since a fixed code path decided at design time is precisely what defines a workflow.",
+    "explanation": "Anthropic defines workflows as systems where LLMs and tools are orchestrated through predefined code paths, whereas agents are systems where the LLM dynamically directs its own process and tool usage. Hence A is right, and B and E describe how this works in practice: the agent loops (act, observe environment feedback, decide) until it finishes or hits a stopping condition, using tool results as feedback at each step. C is wrong because model size is independent of the pattern; workflows and agents can use any model, and agents often use smaller models for sub-steps. D describes a workflow, not an agent, since a fixed code path decided at design time is precisely what defines a workflow.",
     "source": {
       "title": "Anthropic Research: Building effective agents",
       "url": "https://www.anthropic.com/research/building-effective-agents"
@@ -118,10 +118,10 @@
           },
           {
             "id": "E",
-            "text": "El agente mantiene el estado durante los turnos para informar decisiones posteriores."
+            "text": "El agente obtiene la verdad fundamental del entorno (resultados de la herramienta) en cada paso."
           }
         ],
-        "explanation": "Los agentes dirigen dinámicamente sus propios procesos y uso de herramientas, operan en bucles hasta que se cumple una condición de parada y mantienen el estado en todos los turnos para informar decisiones posteriores."
+        "explanation": "Anthropic define los flujos de trabajo como sistemas donde los LLM y las herramientas se organizan a través de rutas de código predefinidas, mientras que los agentes son sistemas donde el LLM dirige dinámicamente su propio proceso y uso de herramientas. Por lo tanto, A tiene razón, y B y E describen cómo funciona esto en la práctica: el agente realiza un ciclo (actúa, observa la retroalimentación del entorno, decide) hasta que finaliza o alcanza una condición de detención, utilizando los resultados de la herramienta como retroalimentación en cada paso. C es incorrecto porque el tamaño del modelo es independiente del patrón; Los flujos de trabajo y los agentes pueden utilizar cualquier modelo, y los agentes suelen utilizar modelos más pequeños para los subpasos. D describe un flujo de trabajo, no un agente, ya que una ruta de código fija decidida en el momento del diseño es precisamente lo que define un flujo de trabajo."
       }
     }
   },
@@ -396,8 +396,8 @@
     "correctAnswer": "B",
     "explanation": "Sub-agents with fully isolated histories only see what the orchestrator passes them. A finding in one sub-agent's context is invisible to the others, so they can repeat the same searches or reach conflicting conclusions unless the orchestrator shares or reconciles results. Isolation also has benefits (cleaner contexts, parallelism), so the fix is explicit hand-off of findings, not removing it. A is false because sub-agents can use tools. C is false because the orchestrator controls its own system prompt and each sub-agent's. D is wrong because the issue is not a cost rule: it is a coordination failure, and the 'necessarily' claim is not what defines the risk.",
     "source": {
-      "title": "Anthropic Research: Building effective agents",
-      "url": "https://www.anthropic.com/research/building-effective-agents"
+      "title": "Claude Code docs: Subagents",
+      "url": "https://code.claude.com/docs/en/sub-agents"
     },
     "category": {
       "id": "prompting_agents_tool_use",
@@ -433,7 +433,7 @@
     "certification": "claude-certified-developer",
     "balotario": "Balotario 1",
     "number": 8,
-    "question": "A developer wants an agent to break a large refactor into subtasks, run them concurrently, and then combine the results. Which pattern is this?",
+    "question": "A developer wants an agent to break a large refactor into subtasks that the LLM determines at runtime from the task, delegate them to workers, and combine the results. Which pattern is this?",
     "options": [
       {
         "id": "A",
@@ -464,7 +464,7 @@
     },
     "translations": {
       "es": {
-        "question": "Un desarrollador quiere que un agente divida una refactorización grande en subtareas, las ejecute simultáneamente y luego combine los resultados. ¿Qué patrón es este?",
+        "question": "Un desarrollador quiere que un agente divida una refactorización grande en subtareas que el LLM determina en tiempo de ejecución a partir de la tarea, las delega a los trabajadores y combina los resultados. ¿Qué patrón es este?",
         "options": [
           {
             "id": "A",
@@ -483,7 +483,7 @@
             "text": "Encadenamiento rápido"
           }
         ],
-        "explanation": "En el patrón orquestador-trabajadores, el orquestador determina las subtareas dinámicamente basándose en entradas específicas en lugar de tenerlas predefinidas."
+        "explanation": "Aquí, la refactorización se descompone en subtareas que no se conocen de antemano: un LLM (orquestador) central analiza la tarea, crea subtareas dinámicamente, las delega a los trabajadores LLM y sintetiza los resultados. Esa descomposición dinámica es lo que la separa de la simple paralelización. La sección (B) divide el trabajo en subtareas independientes que están predefinidas por el desarrollador, no derivadas de la entrada. El enrutamiento (C) elige una ruta especializada para una entrada en lugar de dividirla y recombinarla. El encadenamiento rápido (D) ejecuta los pasos secuencialmente, cada uno de los cuales depende del último, en lugar de hacerlo simultáneamente."
       }
     }
   },
@@ -492,11 +492,11 @@
     "certification": "claude-certified-developer",
     "balotario": "Balotario 1",
     "number": 9,
-    "question": "Which HTTP header carries the API key when calling the Claude Messages API directly over REST?",
+    "question": "Which HTTP headers can carry the API key when calling the Claude Messages API directly over REST? (Select all that apply)",
     "options": [
       {
         "id": "A",
-        "text": "Authorization: Bearer"
+        "text": "Authorization: Bearer <key>"
       },
       {
         "id": "B",
@@ -511,11 +511,11 @@
         "text": "api-key: "
       }
     ],
-    "correctAnswer": "B",
-    "explanation": "The Messages API authenticates with the x-api-key header, and also requires anthropic-version (for example 2023-06-01) and content-type: application/json. The SDKs set these automatically. Authorization: Bearer (A) is the convention of other providers and of OAuth, not the Claude API key header. x-claude-token (C) and api-key (D) are not headers the Claude API recognizes, so such requests would fail with an authentication error (401).",
+    "correctAnswer": "A y B",
+    "explanation": "The Claude API accepts the credential in Authorization: Bearer <token> (the primary form, also used for short-lived Workload Identity Federation tokens) and in x-api-key (legacy fallback, still supported) (A and B). Direct REST calls also require anthropic-version and content-type: application/json; the SDKs set these automatically. x-claude-token (C) and api-key (D) are not headers the Claude API recognizes, so such requests would fail with an authentication error (401).",
     "source": {
-      "title": "Anthropic Docs: Claude developer guide & API reference",
-      "url": "https://docs.anthropic.com/en/docs/welcome"
+      "title": "Anthropic Docs: API overview",
+      "url": "https://platform.claude.com/docs/en/api/overview"
     },
     "category": {
       "id": "claude_code_mcp_integration",
@@ -523,11 +523,11 @@
     },
     "translations": {
       "es": {
-        "question": "¿Qué encabezado HTTP lleva la clave API al llamar a la API de Claude Messages directamente a través de REST?",
+        "question": "¿Qué encabezados HTTP pueden llevar la clave API al llamar a la API de Claude Messages directamente a través de REST? (Seleccione todo lo que corresponda)",
         "options": [
           {
             "id": "A",
-            "text": "Autorización: Portador"
+            "text": "Autorización: Portador <clave>"
           },
           {
             "id": "B",
@@ -542,7 +542,7 @@
             "text": "clave de API:"
           }
         ],
-        "explanation": "La API de mensajes requiere tres encabezados específicos: x-api-key, anthropic-version y content-type: application/json."
+        "explanation": "La API de Claude acepta la credencial en Autorización: Portador <token> (el formulario principal, también utilizado para tokens de Workload Identity Federation de corta duración) y en x-api-key (reserva heredada, aún compatible) (A y B). Las llamadas REST directas también requieren una versión antrópica y un tipo de contenido: aplicación/json; los SDK los configuran automáticamente. x-claude-token (C) y api-key (D) no son encabezados que reconoce la API de Claude, por lo que dichas solicitudes fallarían con un error de autenticación (401)."
       }
     }
   },
@@ -575,10 +575,10 @@
       }
     ],
     "correctAnswer": "A, B y C",
-    "explanation": "The Messages API requires model (which model to run), max_tokens (hard cap on generated tokens) and messages (the conversation turns). Everything else is optional with defaults. system (D) is optional: it only supplies instructions or persona when needed. temperature (E) is optional and defaults to 1.0. Omitting a required field returns a 400 invalid_request_error.",
+    "explanation": "The Messages API requires model (which model to run), max_tokens (hard cap on generated tokens) and messages (the conversation turns). Everything else is optional with defaults. system (D) is optional: it only supplies instructions or persona when needed. temperature (E) is optional; note that on Claude 4.7+ and on API version 2026-10-21 and later, sending temperature, top_p or top_k can return a 400. Omitting a required field returns a 400 invalid_request_error.",
     "source": {
-      "title": "Anthropic Docs: Claude developer guide & API reference",
-      "url": "https://docs.anthropic.com/en/docs/welcome"
+      "title": "Anthropic Docs: API versioning",
+      "url": "https://platform.claude.com/docs/en/api/versioning"
     },
     "category": {
       "id": "mso_foundations",
@@ -609,7 +609,7 @@
             "text": "temperatura"
           }
         ],
-        "explanation": "Los tres campos de cuerpo obligatorios para una llamada a la API de mensajes son modelo, max_tokens y mensajes."
+        "explanation": "La API de mensajes requiere modelo (qué modelo ejecutar), max_tokens (límite máximo de tokens generados) y mensajes (la conversación gira). Todo lo demás es opcional con los valores predeterminados. El sistema (D) es opcional: sólo proporciona instrucciones o persona cuando es necesario. la temperatura (E) es opcional; tenga en cuenta que en Claude 4.7+ y en la versión API 2026-10-21 y posteriores, el envío de temperatura, top_p o top_k puede devolver un 400. Omitir un campo obligatorio devuelve un invalid_request_error 400."
       }
     }
   },
@@ -819,10 +819,10 @@
       }
     ],
     "correctAnswer": "A, B y C",
-    "explanation": "Retry transient errors: 429 (rate limit, honoring retry-after), 500 (internal error) and 529 (overloaded), using exponential backoff with jitter because they may succeed later. 401 (authentication) and 400 (invalid request) are deterministic client errors: the same request will fail again until you fix the key or payload, so retrying only wastes calls. Backoff also avoids amplifying load on an already stressed service. The official SDKs retry the transient ones automatically by default.",
+    "explanation": "Retry transient errors: 429 (rate limit, honoring retry-after), 500 (internal error) and 529 (overloaded), using exponential backoff with jitter because they may succeed later. 401 (authentication) and 400 (invalid request) are deterministic client errors: the same request will fail again until you fix the key or payload, so retrying only wastes calls. Backoff also avoids amplifying load on an already stressed service. The official SDKs retry the transient ones automatically by default. A 429 caused by a tier spend cap has no retry-after header and keeps failing, so do not retry it blindly.",
     "source": {
-      "title": "Anthropic Docs: Claude developer guide & API reference",
-      "url": "https://docs.anthropic.com/en/docs/welcome"
+      "title": "Anthropic Docs: Errors",
+      "url": "https://platform.claude.com/docs/en/api/errors"
     },
     "category": {
       "id": "production_evals_security",
@@ -853,7 +853,7 @@
             "text": "400: Error de solicitud no válida"
           }
         ],
-        "explanation": "Los errores transitorios como 429 (límites de velocidad), 529 (sobrecarga del servidor) y 500 (error del servidor) se deben volver a intentar, mientras que los errores del lado del cliente (serie 400) no."
+        "explanation": "Reintentar errores transitorios: 429 (límite de velocidad, respetar el reintento posterior), 500 (error interno) y 529 (sobrecarga), utilizando retroceso exponencial con fluctuación porque pueden tener éxito más adelante. 401 (autenticación) y 400 (solicitud no válida) son errores deterministas del cliente: la misma solicitud fallará nuevamente hasta que corrija la clave o la carga útil, por lo que volver a intentarlo solo desperdicia llamadas. El retroceso también evita amplificar la carga en un servicio que ya está estresado. Los SDK oficiales reintentan los transitorios automáticamente de forma predeterminada. Un error 429 causado por un límite de gasto de nivel no tiene un encabezado de reintento posterior y sigue fallando, así que no lo reintentes a ciegas."
       }
     }
   },
@@ -1004,10 +1004,10 @@
       }
     ],
     "correctAnswer": "A, B y C",
-    "explanation": "Good configuration management keeps secrets out of source (A: environment variables or a secret manager), pins the exact model identifier in one config place so upgrades are deliberate and testable (B), and versions prompts with code so each release maps to known behavior and can be rolled back (C). Committing a .env with production keys (D) leaks secrets into history and to everyone with repo access. Setting anthropic-version to today's date (E) is wrong because it is an API version string such as 2023-06-01, not a date, and unknown values are rejected; pin it deliberately.",
+    "explanation": "Good configuration management keeps secrets out of source (A: environment variables or a secret manager), pins the exact model identifier in one config place so upgrades are deliberate and testable (B), and versions prompts with code so each release maps to known behavior and can be rolled back (C). Committing a .env with production keys (D) leaks secrets into history and to everyone with repo access. Setting anthropic-version to today's date (E) is wrong because anthropic-version is a pinned API version (for example 2023-06-01 or the latest 2026-10-21), not a value to regenerate per request; pin it deliberately.",
     "source": {
-      "title": "Anthropic Docs: Claude developer guide & API reference",
-      "url": "https://docs.anthropic.com/en/docs/welcome"
+      "title": "Anthropic Docs: API versioning",
+      "url": "https://platform.claude.com/docs/en/api/versioning"
     },
     "category": {
       "id": "prompting_agents_tool_use",
@@ -1038,7 +1038,7 @@
             "text": "Establezca la versión antrópica dinámicamente en la fecha actual en cada solicitud"
           }
         ],
-        "explanation": "La gestión de secretos, la fijación de modelos y las indicaciones de control de versiones junto con el código garantizan coherencia, reproducibilidad y seguridad."
+        "explanation": "Una buena gestión de la configuración mantiene los secretos fuera del código fuente (A: variables de entorno o un administrador secreto), fija el identificador exacto del modelo en un lugar de configuración para que las actualizaciones sean deliberadas y comprobables (B), y las versiones aparecen con código para que cada versión se asigne a un comportamiento conocido y se pueda revertir (C). La confirmación de un .env con claves de producción (D) filtra secretos al historial y a todos los que tienen acceso al repositorio. Establecer anthropic-version en la fecha de hoy (E) es incorrecto porque anthropic-version es una versión de API fijada (por ejemplo, 2023-06-01 o la última 2026-10-21), no un valor para regenerar por solicitud; fijarlo deliberadamente."
       }
     }
   },
@@ -1169,7 +1169,7 @@
     "options": [
       {
         "id": "A",
-        "text": "Define a tool whose input_schema is the target schema and force tool use"
+        "text": "Use structured outputs, or a tool whose input_schema is the target schema with strict tool use (forced tool_choice only where supported)"
       },
       {
         "id": "B",
@@ -1189,7 +1189,7 @@
       }
     ],
     "correctAnswer": "A y C",
-    "explanation": "Forcing tool use with an input_schema (A) makes the model emit arguments that conform to the schema, which is the most reliable way to get structured JSON. Including the exact schema and a worked example in the system prompt (C) removes ambiguity about field names and formats. Option B was reworded: the original 'prefill with an opening brace' is not supported on newer Claude models (it returns an error), so the key was changed to A and C. Asking the model to merely 'try' to return JSON with no schema or example (B) gives no guidance or enforcement. Raising temperature (D) increases variance and hurts format adherence. Relying on temperature alone (E) does not constrain structure at all.",
+    "explanation": "Structured outputs, or a tool whose input_schema is the target schema used with strict tool use (A), make the model emit arguments that conform to the schema, which is the most reliable way to get structured JSON. Forced tool_choice is rejected on some newer models (for example Opus 5.5 and Sonnet 5.5) and under manual extended thinking, so use auto plus strict tool use or structured outputs there. Including the exact schema and a worked example in the system prompt (C) removes ambiguity about field names and formats. Prefilling an opening brace is not supported on Claude 4.6 and later (it returns a 400), so it is not a reliable option. Asking the model to merely 'try' to return JSON with no schema or example (B) gives no guidance or enforcement. Raising temperature (D) increases variance and hurts format adherence. Relying on temperature alone (E) does not constrain structure at all.",
     "source": {
       "title": "Anthropic Docs: Tool use (function calling)",
       "url": "https://docs.anthropic.com/en/docs/build-with-claude/tool-use"
@@ -1204,11 +1204,11 @@
         "options": [
           {
             "id": "A",
-            "text": "Definir una herramienta cuyo input_schema sea el esquema de destino y forzar el uso de la herramienta"
+            "text": "Utilice salidas estructuradas o una herramienta cuyo esquema de entrada sea el esquema de destino con un uso estricto de la herramienta (elección de herramienta forzada solo cuando sea compatible)"
           },
           {
             "id": "B",
-            "text": "Rellene previamente el giro del asistente con una llave de apertura para limitar el inicio de la salida."
+            "text": "Pídale al modelo que \"intente\" devolver JSON, sin proporcionar ningún esquema o ejemplo."
           },
           {
             "id": "C",
@@ -1220,10 +1220,10 @@
           },
           {
             "id": "E",
-            "text": "Pídale al modelo que intente usar JSON si es posible."
+            "text": "Confíe únicamente en la temperatura para hacer cumplir la estructura JSON"
           }
         ],
-        "explanation": "Forzar el uso de herramientas con un esquema definido, usar precompletar para iniciar el JSON y proporcionar ejemplos en el indicador del sistema son los métodos más confiables para una salida estructurada."
+        "explanation": "Las salidas estructuradas, o una herramienta cuyo input_schema es el esquema de destino utilizado con un uso estricto de la herramienta (A), hacen que el modelo emita argumentos que se ajusten al esquema, que es la forma más confiable de obtener JSON estructurado. La opción de herramienta forzada se rechaza en algunos modelos más nuevos (por ejemplo, Opus 5.5 y Sonnet 5.5) y en el pensamiento extendido manual, por lo tanto, use el uso automático más estricto de herramientas o salidas estructuradas allí. Incluir el esquema exacto y un ejemplo resuelto en el indicador del sistema (C) elimina la ambigüedad sobre los nombres y formatos de los campos. El llenado previo de una llave de apertura no es compatible con Claude 4.6 y posteriores (devuelve un 400), por lo que no es una opción confiable. Pedirle al modelo que simplemente \"intente\" devolver JSON sin esquema ni ejemplo (B) no proporciona orientación ni cumplimiento. El aumento de la temperatura (D) aumenta la variación y perjudica la adherencia al formato. Depender únicamente de la temperatura (E) no limita la estructura en absoluto."
       }
     }
   },
@@ -1252,10 +1252,10 @@
       }
     ],
     "correctAnswer": "A",
-    "explanation": "Anthropic rate limits are measured per organization (and per model class) in requests per minute (RPM), input tokens per minute (ITPM) and output tokens per minute (OTPM), with limits that rise by usage tier. Exceeding any of them returns 429 with retry-after. Concurrent websocket connections (B), conversations per day (C) and number of API keys (D) are not metered dimensions. Knowing the three measures lets you design client-side throttling and backoff, and note that cached input tokens may not count toward ITPM on many models.",
+    "explanation": "Anthropic rate limits are measured per organization (and per model class) in requests per minute (RPM), input tokens per minute (ITPM) and output tokens per minute (OTPM), with limits that rise by usage tier. Exceeding any of them returns 429 with retry-after. Concurrent websocket connections (B), conversations per day (C) and number of API keys (D) are not metered dimensions. Knowing the three measures lets you design client-side throttling and backoff, and note that cache_read_input_tokens do not count toward ITPM (only input_tokens and cache_creation_input_tokens do).",
     "source": {
-      "title": "Anthropic Docs: Claude developer guide & API reference",
-      "url": "https://docs.anthropic.com/en/docs/welcome"
+      "title": "Anthropic Docs: Rate limits",
+      "url": "https://platform.claude.com/docs/en/api/rate-limits"
     },
     "category": {
       "id": "mso_foundations",
@@ -1282,7 +1282,7 @@
             "text": "Número de claves API distintas en uso"
           }
         ],
-        "explanation": "Se aplican límites de velocidad (RPM, ITPM, OTPM) para gestionar la carga de la plataforma y garantizar un acceso justo."
+        "explanation": "Los límites de velocidad antrópica se miden por organización (y por clase de modelo) en solicitudes por minuto (RPM), tokens de entrada por minuto (ITPM) y tokens de salida por minuto (OTPM), con límites que aumentan según el nivel de uso. Superar cualquiera de ellos devuelve 429 con reintento posterior. Las conexiones simultáneas de websocket (B), las conversaciones por día (C) y la cantidad de claves API (D) no son dimensiones medidas. Conocer las tres medidas le permite diseñar limitaciones y retrocesos del lado del cliente, y tenga en cuenta que cache_read_input_tokens no cuentan para ITPM ​​(solo input_tokens y cache_creation_input_tokens lo hacen)."
       }
     }
   },
@@ -1311,10 +1311,10 @@
       }
     ],
     "correctAnswer": "B",
-    "explanation": "metadata.user_id is an opaque identifier for the end user (for example a hashed or UUID value) that lets Anthropic detect and mitigate abuse tied to a specific user rather than blocking your whole organization. It should not contain PII such as email, name or phone (A is wrong for that reason, and it is not for contacting users). It does not select tiers or entitlements (C), which are enforced by your own app. It does not store history (D); the API is stateless.",
+    "explanation": "metadata.user_id is an opaque identifier for the end user (for example a hashed or UUID value) that lets Anthropic detect and mitigate abuse tied to a specific user rather than blocking your whole organization. The docs say it should be a uuid, hash or other opaque identifier and must not contain identifying information such as name, email address or phone number (A is wrong for that reason, and it is not for contacting users). It does not select tiers or entitlements (C), which are enforced by your own app. It does not store history (D); the API is stateless.",
     "source": {
-      "title": "Anthropic Docs: Claude developer guide & API reference",
-      "url": "https://docs.anthropic.com/en/docs/welcome"
+      "title": "Anthropic Docs: Messages API reference",
+      "url": "https://platform.claude.com/docs/en/api/messages"
     },
     "category": {
       "id": "production_evals_security",
@@ -1341,7 +1341,7 @@
             "text": "Almacenamiento del historial de conversaciones en el lado del servidor para su posterior recuperación"
           }
         ],
-        "explanation": "El campo user_id está diseñado para ayudar a Anthropic a identificar patrones abusivos sin manejar ni almacenar PII real, como direcciones de correo electrónico o nombres."
+        "explanation": "metadata.user_id es un identificador opaco para el usuario final (por ejemplo, un valor hash o UUID) que permite a Anthropic detectar y mitigar el abuso vinculado a un usuario específico en lugar de bloquear toda su organización. Los documentos dicen que debe ser un uuid, hash u otro identificador opaco y no debe contener información de identificación como nombre, dirección de correo electrónico o número de teléfono (A es incorrecta por ese motivo y no es para contactar a los usuarios). No selecciona niveles ni derechos (C), que su propia aplicación aplica. No almacena historial (D); la API no tiene estado."
       }
     }
   },
@@ -1543,7 +1543,7 @@
       },
       {
         "id": "B",
-        "text": "The system prompt must be the first entry in the messages array with role system"
+        "text": "The system prompt must always be the first entry in the messages array with role system"
       },
       {
         "id": "C",
@@ -1555,10 +1555,10 @@
       }
     ],
     "correctAnswer": "A",
-    "explanation": "system is a top-level request parameter holding role, rules and context, separate from the messages array, which holds only user and assistant turns (and tool blocks). There is no system role inside messages (B). It is not appended after the user turn (C); it conditions the whole conversation. You can send a different system prompt on each request (D is wrong), since the API is stateless; changing it can however invalidate a prompt cache prefix.",
+    "explanation": "system is a top-level request parameter holding role, rules and context, separate from the messages array, which holds only user and assistant turns (and tool blocks). The system prompt is not required to be a messages entry (B): the documented way to provide it is the top-level system parameter. It is not appended after the user turn (C); it conditions the whole conversation. You can send a different system prompt on each request (D is wrong), since the API is stateless; changing it can however invalidate a prompt cache prefix.",
     "source": {
-      "title": "Anthropic Docs: Claude developer guide & API reference",
-      "url": "https://docs.anthropic.com/en/docs/welcome"
+      "title": "Anthropic Docs: Messages API reference",
+      "url": "https://platform.claude.com/docs/en/api/messages"
     },
     "category": {
       "id": "prompting_agents_tool_use",
@@ -1574,7 +1574,7 @@
           },
           {
             "id": "B",
-            "text": "El mensaje del sistema debe ser la primera entrada en la matriz de mensajes con el rol del sistema."
+            "text": "El mensaje del sistema siempre debe ser la primera entrada en la matriz de mensajes con el rol del sistema."
           },
           {
             "id": "C",
@@ -1585,7 +1585,7 @@
             "text": "Solo se permite un mensaje del sistema por conversación y no se puede cambiar entre solicitudes."
           }
         ],
-        "explanation": "El parámetro del sistema está separado del historial de mensajes alternos, lo que proporciona un espacio dedicado para instrucciones y restricciones."
+        "explanation": "El sistema es un parámetro de solicitud de nivel superior que contiene funciones, reglas y contexto, separado de la matriz de mensajes, que contiene solo turnos de usuario y asistente (y bloques de herramientas). No es necesario que el mensaje del sistema sea una entrada de mensaje (B): la forma documentada de proporcionarlo es el parámetro del sistema de nivel superior. No se añade después del turno del usuario (C); condiciona toda la conversación. Puede enviar un mensaje del sistema diferente en cada solicitud (D es incorrecto), ya que la API no tiene estado; Sin embargo, cambiarlo puede invalidar un prefijo de caché de aviso."
       }
     }
   },
@@ -1616,8 +1616,8 @@
     "correctAnswer": "B",
     "explanation": "CLAUDE.md is a memory file that Claude Code automatically loads into context at session start (from the project, user and parent directories). It holds persistent project knowledge: build and test commands, code style, architecture notes and workflow rules. It must not store secrets (A). CI pipelines live in files like workflow YAML (C). Denying file access is configured through permissions in settings, not CLAUDE.md (D), and CLAUDE.md is guidance rather than an enforcement mechanism.",
     "source": {
-      "title": "Anthropic Research: Building effective agents",
-      "url": "https://www.anthropic.com/research/building-effective-agents"
+      "title": "Claude Code docs: Memory",
+      "url": "https://code.claude.com/docs/en/memory"
     },
     "category": {
       "id": "claude_code_mcp_integration",
@@ -1677,10 +1677,10 @@
       }
     ],
     "correctAnswer": "A, B, C y E",
-    "explanation": "Claude Code is extended through supported mechanisms: custom slash commands as markdown files (A), hooks that run shell commands at lifecycle events such as PreToolUse and PostToolUse (B), MCP servers that add external tools and data (C), and subagents with their own prompt, tool restrictions and separate context window (E). Editing model weights (D) is impossible: the model runs on Anthropic's servers and weights are not shipped with the CLI. Only the other four are documented extension points.",
+    "explanation": "Claude Code is extended through supported mechanisms: custom slash commands as markdown files in .claude/commands/ (A; this older format still works, and commands have been merged into skills, which are preferred for new work), hooks that run shell commands at lifecycle events such as PreToolUse and PostToolUse (B), MCP servers that add external tools and data (C), and subagents with their own prompt, tool restrictions and separate context window (E). Editing model weights (D) is impossible: the model runs on Anthropic's servers and weights are not shipped with the CLI. Only the other four are documented extension points.",
     "source": {
-      "title": "Anthropic Docs: Model Context Protocol (MCP)",
-      "url": "https://docs.anthropic.com/en/docs/agents-and-tools/mcp"
+      "title": "Claude Code docs: Subagents",
+      "url": "https://code.claude.com/docs/en/sub-agents"
     },
     "category": {
       "id": "prompting_agents_tool_use",
@@ -1711,7 +1711,7 @@
             "text": "Subagentes definidos con sus propios mensajes, herramientas y contexto aislado"
           }
         ],
-        "explanation": "Claude Code proporciona una superficie de extensión sólida a través de comandos de barra diagonal, enlaces de ciclo de vida, servidores MCP y subagentes para personalizar el comportamiento."
+        "explanation": "Claude Code se extiende a través de mecanismos compatibles: comandos de barra diagonal personalizados como archivos de rebajas en .claude/commands/ (A; este formato antiguo todavía funciona y los comandos se han fusionado en habilidades, que se prefieren para trabajos nuevos), ganchos que ejecutan comandos de shell en eventos del ciclo de vida como PreToolUse y PostToolUse (B), servidores MCP que agregan herramientas y datos externos (C) y subagentes con su propio mensaje, restricciones de herramientas y ventana de contexto separada (E). Editar los pesos del modelo (D) es imposible: el modelo se ejecuta en los servidores de Anthropic y los pesos no se envían con la CLI. Sólo los otros cuatro son puntos de extensión documentados."
       }
     }
   },
@@ -1862,10 +1862,10 @@
       }
     ],
     "correctAnswer": "A, B, C y E",
-    "explanation": "Real cost levers: prompt caching of large stable prefixes (reads are billed at a fraction of base input price) (A), routing easy requests to a smaller, cheaper model (B), summarizing or truncating old turns so you do not resend all history (C), and the Message Batches API for non-urgent work at a discount (E). Setting max_tokens to the maximum (D) does not itself bill unused tokens, but it removes protection against runaway outputs and can affect rate limit estimation, so it is not a cost reduction strategy.",
+    "explanation": "Real cost levers: prompt caching of large stable prefixes (reads are billed at a fraction of base input price) (A), routing easy requests to a smaller, cheaper model (B), summarizing or truncating old turns so you do not resend all history (C), and the Message Batches API for non-urgent work at a discount (E). Setting max_tokens to the maximum (D) does not itself bill unused tokens (and, per the rate-limit docs, max_tokens does not factor into OTPM calculations), but it removes protection against runaway outputs, so it is not a cost reduction strategy.",
     "source": {
-      "title": "Anthropic Research: Building effective agents",
-      "url": "https://www.anthropic.com/research/building-effective-agents"
+      "title": "Anthropic Docs: Pricing",
+      "url": "https://platform.claude.com/docs/en/about-claude/pricing"
     },
     "category": {
       "id": "mso_foundations",
@@ -1896,7 +1896,7 @@
             "text": "Cargas de trabajo por lotes no urgentes a través del punto final por lotes asincrónico"
           }
         ],
-        "explanation": "La optimización de costos implica una combinación de almacenamiento en caché de prefijos estáticos, enrutamiento de modelos eficiente, mantenimiento de pequeñas ventanas de contexto mediante resumen y utilización de procesamiento por lotes para tareas que no son sensibles a la latencia."
+        "explanation": "Palancas de costos reales: almacenamiento en caché rápido de prefijos grandes y estables (las lecturas se facturan a una fracción del precio de entrada base) (A), enrutar solicitudes fáciles a un modelo más pequeño y económico (B), resumir o truncar giros antiguos para no reenviar todo el historial (C) y la API Message Batches para trabajos no urgentes con descuento (E). Establecer max_tokens al máximo (D) no factura los tokens no utilizados (y, según los documentos de límite de tasa, max_tokens no tiene en cuenta los cálculos de OTPM), pero elimina la protección contra salidas descontroladas, por lo que no es una estrategia de reducción de costos."
       }
     }
   },
@@ -1984,10 +1984,10 @@
       }
     ],
     "correctAnswer": "B",
-    "explanation": "Temperature controls sampling randomness. At 0 the model strongly favors the highest-probability token, which makes output more consistent and is good for analytical tasks, but it does not guarantee byte-identical output (A) because of floating-point and infrastructure non-determinism. It does not disable tools (C) and does not change price per token (D), since billing depends on token counts. Always evaluate behavior empirically rather than assuming determinism.",
+    "explanation": "Temperature controls sampling randomness. At 0 the model strongly favors the highest-probability token (this applies to older models and API versions: temperature, top_p and top_k are rejected with a 400 on Claude 4.7+ and on API version 2026-10-21), which makes output more consistent and is good for analytical tasks, but it does not guarantee byte-identical output (A) because of floating-point and infrastructure non-determinism. It does not disable tools (C) and does not change price per token (D), since billing depends on token counts. Always evaluate behavior empirically rather than assuming determinism.",
     "source": {
-      "title": "Anthropic Docs: Claude developer guide & API reference",
-      "url": "https://docs.anthropic.com/en/docs/welcome"
+      "title": "Anthropic Docs: API versioning",
+      "url": "https://platform.claude.com/docs/en/api/versioning"
     },
     "category": {
       "id": "mso_foundations",
@@ -2014,7 +2014,7 @@
             "text": "Reduce el costo por token"
           }
         ],
-        "explanation": "La temperatura 0 minimiza la aleatoriedad al favorecer los tokens de alta probabilidad, lo que hace que el modelo sea más predecible pero no estrictamente determinista en todas las condiciones."
+        "explanation": "La temperatura controla la aleatoriedad del muestreo. En 0, el modelo favorece fuertemente el token de mayor probabilidad (esto se aplica a modelos más antiguos y versiones de API: la temperatura, top_p y top_k se rechazan con un 400 en Claude 4.7+ y en la versión de API 2026-10-21), lo que hace que la salida sea más consistente y es buena para tareas analíticas, pero no garantiza una salida de bytes idénticos (A) debido al no determinismo de punto flotante y de infraestructura. No desactiva las herramientas (C) y no cambia el precio por token (D), ya que la facturación depende del recuento de tokens. Evalúe siempre el comportamiento empíricamente en lugar de asumir el determinismo."
       }
     }
   },
@@ -2047,10 +2047,10 @@
       }
     ],
     "correctAnswer": "A, B y C",
-    "explanation": "Input and output tokens are billed separately, usually with output priced higher (A). Tokens are subword units, not words or characters (B). Images and PDFs are converted to tokens roughly proportional to size or page count (C). The context window covers input plus output, and output is capped by max_tokens and the model's limit (D is wrong). Tokenizers differ between model families, so counts are not identical (E is wrong); use the token counting endpoint for the target model.",
+    "explanation": "Input and output tokens are billed separately, usually with output priced higher (A). Tokens are subword units, not words or characters (B). Images and PDFs are converted to tokens roughly proportional to size or page count (C). The context window covers input plus output, and output is capped by max_tokens and the model's limit (D is wrong). Tokenizers differ between models, so counts are not identical (E is wrong): Claude 4.7 and later models use a newer tokenizer that produces roughly 30 percent more tokens for the same text; use the token counting endpoint for the target model.",
     "source": {
-      "title": "Anthropic Docs: Claude developer guide & API reference",
-      "url": "https://docs.anthropic.com/en/docs/welcome"
+      "title": "Anthropic Docs: Token counting",
+      "url": "https://platform.claude.com/docs/en/build-with-claude/token-counting"
     },
     "category": {
       "id": "mso_foundations",
@@ -2081,7 +2081,7 @@
             "text": "Los recuentos de tokens son idénticos en todas las familias de modelos."
           }
         ],
-        "explanation": "Los tokens representan unidades de subpalabras y escalas de precios basadas en el volumen de entrada y salida. Las diferentes modalidades consumen distintas cantidades de tokens según la complejidad/tamaño."
+        "explanation": "Los tokens de entrada y salida se facturan por separado, generalmente con el precio de salida más alto (A). Los tokens son unidades de subpalabras, no palabras ni caracteres (B). Las imágenes y los archivos PDF se convierten en tokens aproximadamente proporcionales al tamaño o al número de páginas (C). La ventana de contexto cubre la entrada más la salida, y la salida está limitada por max_tokens y el límite del modelo (D es incorrecto). Los tokenizadores difieren entre los modelos, por lo que los recuentos no son idénticos (E es incorrecto): Claude 4.7 y modelos posteriores utilizan un tokenizador más nuevo que produce aproximadamente un 30 por ciento más de tokens para el mismo texto; utilice el punto final de recuento de tokens para el modelo de destino."
       }
     }
   },
@@ -2169,7 +2169,7 @@
       }
     ],
     "correctAnswer": "B",
-    "explanation": "Extended thinking produces reasoning tokens that are billed as output tokens at the output rate and count toward max_tokens, and budget_tokens must be smaller than max_tokens, so max_tokens must leave room for both thinking and the final answer. They are not free (A), do not replace a system prompt (C) and are not input tokens (D), although prior thinking blocks may need to be passed back in tool-use turns.",
+    "explanation": "Extended thinking produces reasoning tokens that are billed as output tokens at the output rate and count toward max_tokens, and in manual extended thinking (deprecated on Claude 4.6 and rejected on 4.7+) budget_tokens must be smaller than max_tokens; with adaptive thinking there is no budget, but thinking tokens still count toward max_tokens. Either way max_tokens must leave room for both thinking and the final answer. They are not free (A), do not replace a system prompt (C) and are not input tokens (D), although prior thinking blocks may need to be passed back in tool-use turns.",
     "source": {
       "title": "Anthropic Docs: Claude developer guide & API reference",
       "url": "https://docs.anthropic.com/en/docs/welcome"
@@ -2199,7 +2199,7 @@
             "text": "Los tokens de pensamiento cuentan como tokens de entrada"
           }
         ],
-        "explanation": "Los tokens de pensamiento consumen parte de su presupuesto de tokens de salida configurado y se facturan, lo que requiere que aumente los límites de max_tokens para tareas de razonamiento complejas."
+        "explanation": "El pensamiento extendido produce tokens de razonamiento que se facturan como tokens de salida a la tasa de salida y cuentan para max_tokens, y en el pensamiento extendido manual (obsoleto en Claude 4.6 y rechazado en 4.7+) los presupuestos_tokens deben ser más pequeños que max_tokens; con el pensamiento adaptativo no hay presupuesto, pero los tokens de pensamiento aún cuentan para max_tokens. De cualquier manera, max_tokens debe dejar espacio tanto para el pensamiento como para la respuesta final. No son gratuitos (A), no reemplazan un mensaje del sistema (C) y no son tokens de entrada (D), aunque es posible que sea necesario devolver los bloques de pensamiento previo en los turnos de uso de herramientas."
       }
     }
   },
@@ -2289,8 +2289,8 @@
     "correctAnswer": "A",
     "explanation": "Resending the entire history makes input cost grow with every turn. Replacing older turns with a compact running summary keeps the context small, directly cutting input tokens, at the cost of some detail loss. Lowering max_tokens (B) limits output only. A stop sequence (C) just ends generation at a string and does not shrink the history. Rotating API keys (D) has no effect on token counts and could violate usage policies.",
     "source": {
-      "title": "Anthropic Docs: Claude developer guide & API reference",
-      "url": "https://docs.anthropic.com/en/docs/welcome"
+      "title": "Anthropic Engineering: Effective context engineering for AI agents",
+      "url": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents"
     },
     "category": {
       "id": "mso_foundations",
@@ -2352,8 +2352,8 @@
     "correctAnswer": "A, B, C y E",
     "explanation": "Anthropic's prompting guidance recommends few-shot examples (A), XML tags to separate instructions, context and data (B), letting the model think step by step before answering (C), and giving a clear role and explicit success criteria (E). Vague instructions (D) produce inconsistent output; Claude does best with clear, direct, specific instructions, and creativity is better directed explicitly when wanted.",
     "source": {
-      "title": "Anthropic Docs: Prompt engineering best practices",
-      "url": "https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview"
+      "title": "Anthropic Docs: Prompting best practices",
+      "url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices"
     },
     "category": {
       "id": "prompting_agents_tool_use",
@@ -2415,8 +2415,8 @@
     "correctAnswer": "B",
     "explanation": "Prompt engineering is about wording instructions well. Context engineering is broader: deciding what goes into the limited context window at each step (system prompt, tools, retrieved documents, history, memory, tool results) and how to curate, compact and retrieve it. This matters especially for agents running many turns. They are not synonyms (C), it is not only for models without tools (A), and it is not about raising max_tokens (D), which just caps output.",
     "source": {
-      "title": "Anthropic Docs: Claude developer guide & API reference",
-      "url": "https://docs.anthropic.com/en/docs/welcome"
+      "title": "Anthropic Engineering: Effective context engineering for AI agents",
+      "url": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents"
     },
     "category": {
       "id": "prompting_agents_tool_use",
@@ -2474,8 +2474,8 @@
     "correctAnswer": "B",
     "explanation": "Anthropic recommends putting long documents near the top of the prompt, above the query and instructions, wrapped in XML tags; placing the question at the end can improve response quality noticeably on long inputs. A stable document at the start also forms a cacheable prefix, where a cache breakpoint after it lets later requests reuse it. Placing it after the question (A) loses both benefits. Splitting it into sentences interleaved with instructions (C) destroys structure and caching. The assistant prefill (D) is for starting the response, not for supplying context.",
     "source": {
-      "title": "Anthropic Docs: Prompt caching",
-      "url": "https://docs.anthropic.com/en/docs/build-with-claude/prompt-caching"
+      "title": "Anthropic Docs: Prompting best practices",
+      "url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices"
     },
     "category": {
       "id": "prompting_agents_tool_use",
@@ -2511,7 +2511,7 @@
     "certification": "claude-certified-developer",
     "balotario": "Balotario 1",
     "number": 42,
-    "question": "Which is the correct use of response prefilling?",
+    "question": "Which describes response prefilling (unsupported on Claude 4.6 and later)?",
     "options": [
       {
         "id": "A",
@@ -2531,7 +2531,7 @@
       }
     ],
     "correctAnswer": "A",
-    "explanation": "Prefilling means ending the messages array with a partial assistant turn, so the model continues from that text, steering format (for example starting with an opening brace). A system message (B) is not a prefill, and the system prompt is a separate parameter. A stop sequence (C) ends output rather than starting it. Putting the answer in the user turn (D) is not prefill. Note that newer Claude models no longer support prefill, where structured outputs or tool use with forced schema are the preferred alternatives; the concept itself is still defined as in A.",
+    "explanation": "Prefilling means ending the messages array with a partial assistant turn, so the model continues from that text, steering format (for example starting with an opening brace). A system message (B) is not a prefill, and the system prompt is a separate parameter. A stop sequence (C) ends output rather than starting it. Putting the answer in the user turn (D) is not prefill. Note that Claude 4.6 and later reject prefill with a 400 error; use structured outputs or system-prompt instructions there. The concept itself is still defined as in A.",
     "source": {
       "title": "Anthropic Docs: Prompt engineering best practices",
       "url": "https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview"
@@ -2542,7 +2542,7 @@
     },
     "translations": {
       "es": {
-        "question": "¿Cuál es el uso correcto del prellenado de respuestas?",
+        "question": "¿Qué describe el llenado previo de respuestas (no compatible con Claude 4.6 y versiones posteriores)?",
         "options": [
           {
             "id": "A",
@@ -2550,7 +2550,7 @@
           },
           {
             "id": "B",
-            "text": "Agregar un mensaje del sistema que describe el formato de salida"
+            "text": "Agregar un mensaje del sistema que describa el formato de salida"
           },
           {
             "id": "C",
@@ -2561,7 +2561,7 @@
             "text": "Enviar la respuesta esperada en el turno del usuario y pedir confirmación."
           }
         ],
-        "explanation": "El llenado previo le permite guiar la salida del modelo directamente proporcionando el inicio de la respuesta del asistente, que luego el modelo debe seguir."
+        "explanation": "Rellenar previamente significa finalizar la matriz de mensajes con un giro parcial del asistente, de modo que el modelo continúe a partir de ese texto, formato de dirección (por ejemplo, comenzando con una llave de apertura). Un mensaje del sistema (B) no es un precompletado y el mensaje del sistema es un parámetro independiente. Una secuencia de parada (C) finaliza la salida en lugar de iniciarla. Poner la respuesta en el turno del usuario (D) no es precompletar. Tenga en cuenta que Claude 4.6 y posteriores rechazan el prellenado con un error 400; utilice resultados estructurados o instrucciones del sistema allí. El concepto en sí todavía está definido como en A."
       }
     }
   },
@@ -2592,8 +2592,8 @@
     "correctAnswer": "B",
     "explanation": "Long contexts degrade quality before they are full: as the window fills with stale, redundant or low-value content (old tool outputs, dead ends), relevant details compete with noise and the model's attention is diluted, sometimes called context rot. The remedy is context engineering: compaction, summarizing, clearing old tool results and keeping memory notes. The API does not silently drop messages (A). Per-token price does not rise with length in a way that affects accuracy (C). Temperature is a fixed request parameter and never drifts (D).",
     "source": {
-      "title": "Anthropic Research: Building effective agents",
-      "url": "https://www.anthropic.com/research/building-effective-agents"
+      "title": "Anthropic Engineering: Effective context engineering for AI agents",
+      "url": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents"
     },
     "category": {
       "id": "mso_foundations",
@@ -2655,8 +2655,8 @@
     "correctAnswer": "A, B y C",
     "explanation": "Tool outputs consume context on every subsequent turn, so keep them high-signal: return only needed fields (A), paginate and let the agent ask for more (B), and store large artifacts outside the context and return a reference or ID (C). Returning the full unmodified payload (D) floods the window with noise and cost. Base64 (E) does not reduce tokens; it typically inflates them and makes content less readable to the model.",
     "source": {
-      "title": "Anthropic Research: Building effective agents",
-      "url": "https://www.anthropic.com/research/building-effective-agents"
+      "title": "Anthropic Engineering: Effective context engineering for AI agents",
+      "url": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents"
     },
     "category": {
       "id": "prompting_agents_tool_use",
@@ -2781,8 +2781,8 @@
     "correctAnswer": "A, B, C y E",
     "explanation": "Prompt injection cannot be solved by the model alone, so use defense in depth: delimit untrusted content and tell the model it is data, not instructions (A); require human approval or policy checks before high-impact actions (B); apply least privilege to tools and credentials so a hijacked agent can do little harm (C); and validate or sanitize inputs and outputs in application code (E). Trusting the model to ignore all malicious instructions (D) fails because injections can be crafted to bypass it, and no single layer is reliable.",
     "source": {
-      "title": "Anthropic Docs: Claude developer guide & API reference",
-      "url": "https://docs.anthropic.com/en/docs/welcome"
+      "title": "Anthropic Docs: Mitigate jailbreaks and prompt injections",
+      "url": "https://platform.claude.com/docs/en/test-and-evaluate/strengthen-guardrails/mitigate-jailbreaks"
     },
     "category": {
       "id": "prompting_agents_tool_use",
@@ -2903,8 +2903,8 @@
     "correctAnswer": "B",
     "explanation": "Hooks are user-defined commands that Claude Code executes at lifecycle events such as PreToolUse, PostToolUse or UserPromptSubmit. Because they run as code outside the model, they enforce rules deterministically: a PreToolUse hook can block edits to protected files or dangerous commands regardless of what the model decides or is told. They are not a speed feature (A), not the transcript store (C) and do not enlarge the context window (D).",
     "source": {
-      "title": "Anthropic Docs: Claude developer guide & API reference",
-      "url": "https://docs.anthropic.com/en/docs/welcome"
+      "title": "Claude Code docs: Hooks guide",
+      "url": "https://code.claude.com/docs/en/hooks-guide"
     },
     "category": {
       "id": "claude_code_mcp_integration",
@@ -3092,8 +3092,8 @@
     "correctAnswer": "A, B y C",
     "explanation": "MCP servers expose three core primitives: tools (functions the model can invoke to act, model-controlled), resources (data the client can read to add context, application-controlled) and prompts (reusable templates, typically user-invoked). Model weights for local inference (D) and billing accounts (E) are not part of the protocol; MCP carries capabilities and context, not models or accounting.",
     "source": {
-      "title": "Anthropic Docs: Model Context Protocol (MCP)",
-      "url": "https://docs.anthropic.com/en/docs/agents-and-tools/mcp"
+      "title": "MCP Docs: Server concepts",
+      "url": "https://modelcontextprotocol.io/docs/learn/server-concepts"
     },
     "category": {
       "id": "claude_code_mcp_integration",
@@ -3155,8 +3155,8 @@
     "correctAnswer": "B",
     "explanation": "The model chooses tools mainly from their names and descriptions, so a vague description like 'gets data' invites misuse. A precise description should say what is returned, parameter meanings and formats, when to use the tool, when not to and any limitations. Renaming to get_data_v2 (A) does not add information. Reducing to one tool (C) removes capability and does not solve ambiguity. Temperature zero (D) makes behavior more consistent but not more correct about when to call the tool.",
     "source": {
-      "title": "Anthropic Research: Building effective agents",
-      "url": "https://www.anthropic.com/research/building-effective-agents"
+      "title": "Anthropic Docs: Define tools",
+      "url": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools"
     },
     "category": {
       "id": "prompting_agents_tool_use",
@@ -3334,7 +3334,7 @@
       }
     ],
     "correctAnswer": "A, B, C y E",
-    "explanation": "A production loop needs several independent exits so it can never run forever or burn money. A max-iteration cap bounds runaway loops, a budget limit (tokens, cost, time) bounds spend, a successful end_turn/stop_reason signals the task is done, and an unrecoverable tool error should abort rather than retry endlessly. The original list skipped letter D, so a distractor was added: making a tool call is not a stopping condition, since the whole point of the loop is to keep calling tools until one of the real exit criteria triggers. Key unchanged: A, B, C and E.",
+    "explanation": "A production loop needs several independent exits so it can never run forever or burn money. A max-iteration cap bounds runaway loops, a budget limit (tokens, cost, time) bounds spend, a successful end_turn/stop_reason signals the task is done, and an unrecoverable tool error should abort rather than retry endlessly. Making a tool call is not a stopping condition, since the whole point of the loop is to keep calling tools until one of the real exit criteria triggers.",
     "source": {
       "title": "Anthropic Research: Building effective agents",
       "url": "https://www.anthropic.com/research/building-effective-agents"
@@ -3360,11 +3360,15 @@
             "text": "El modelo devuelve stop_reason con éxito"
           },
           {
+            "id": "D",
+            "text": "El agente ha realizado al menos una llamada a la herramienta."
+          },
+          {
             "id": "E",
             "text": "Error de herramienta irrecuperable"
           }
         ],
-        "explanation": "Los bucles robustos terminan en caso de éxito, agotamiento del presupuesto o errores irrecuperables."
+        "explanation": "Un ciclo de producción necesita varias salidas independientes para que nunca pueda funcionar eternamente ni gastar dinero. Un límite máximo de iteración limita los bucles fuera de control, un límite de presupuesto (tokens, costo, tiempo) limita el gasto, un end_turn/stop_reason exitoso indica que la tarea está terminada y un error de herramienta irrecuperable debería cancelarse en lugar de volver a intentarlo sin cesar. Realizar una llamada a una herramienta no es una condición de parada, ya que el objetivo del ciclo es seguir llamando a las herramientas hasta que se active uno de los criterios de salida reales."
       }
     }
   },
@@ -3395,8 +3399,8 @@
     "correctAnswer": "B",
     "explanation": "Sub-agents each investigate a separate question in a fresh context window and return only a condensed result to the lead agent. This keeps the main context uncluttered and allows parallel exploration, which is why multi-agent research setups outperform a single agent on broad queries. They do not remove the need for tools (sub-agents use tools too), and they typically increase total token usage rather than lowering it. They also cannot guarantee factual accuracy; that still requires verification, citations and evals.",
     "source": {
-      "title": "Anthropic Research: Building effective agents",
-      "url": "https://www.anthropic.com/research/building-effective-agents"
+      "title": "Anthropic Engineering: How we built our multi-agent research system",
+      "url": "https://www.anthropic.com/engineering/multi-agent-research-system"
     },
     "category": {
       "id": "prompting_agents_tool_use",
@@ -3572,8 +3576,8 @@
     "correctAnswer": "A",
     "explanation": "Voting runs the same task multiple times independently and aggregates results, raising confidence where one pass could miss something. Vulnerability review is the classic fit: different passes flag different issues and a finding raised by several reviewers is more trustworthy. Translating to five languages is sectioning (independent subtasks in parallel), not voting, since each output is different. Routing tickets is a classification/routing problem and summarizing an article is a single-pass task, with no benefit from redundant votes.",
     "source": {
-      "title": "Anthropic Docs: Claude developer guide & API reference",
-      "url": "https://docs.anthropic.com/en/docs/welcome"
+      "title": "Anthropic Research: Building effective agents",
+      "url": "https://www.anthropic.com/research/building-effective-agents"
     },
     "category": {
       "id": "prompting_agents_tool_use",
@@ -3631,8 +3635,8 @@
     "correctAnswer": "B",
     "explanation": "As history grows over hundreds of turns, context fills with stale tool output and quality degrades. Compaction (summarizing older turns, clearing old tool results) plus external memory keeps the relevant state while freeing space. Disabling tools would cripple the agent. Raising max_tokens only enlarges the output cap and does not shrink or manage the input context. Raising temperature adds randomness and has no effect on context accumulation.",
     "source": {
-      "title": "Anthropic Research: Building effective agents",
-      "url": "https://www.anthropic.com/research/building-effective-agents"
+      "title": "Anthropic Docs: Context windows",
+      "url": "https://platform.claude.com/docs/en/build-with-claude/context-windows"
     },
     "category": {
       "id": "mso_foundations",
@@ -3749,8 +3753,8 @@
     "correctAnswer": "A",
     "explanation": "The anthropic-version header takes a date string such as 2023-06-01, which pins the API behavior version. It is not semantic versioning, not a model ID (the model is a separate body parameter), and not an integer. Date-based versions let Anthropic ship dated, backward-compatible API contracts that clients opt in to explicitly.",
     "source": {
-      "title": "Anthropic Docs: Claude developer guide & API reference",
-      "url": "https://docs.anthropic.com/en/docs/welcome"
+      "title": "Anthropic Docs: API versioning",
+      "url": "https://platform.claude.com/docs/en/api/versioning"
     },
     "category": {
       "id": "mso_foundations",
@@ -3971,7 +3975,7 @@
     "certification": "claude-certified-developer",
     "balotario": "Balotario 2",
     "number": 23,
-    "question": "Which describes an appropriate use of the assistant prefill in a production integration?",
+    "question": "Which describes an appropriate use of the assistant prefill on a model that still supports it (Claude 4.5 or earlier)?",
     "options": [
       {
         "id": "A",
@@ -3991,7 +3995,7 @@
       }
     ],
     "correctAnswer": "A",
-    "explanation": "Prefilling the start of the assistant turn forces the output to begin with a specific character or phrase (for example an opening brace for JSON) and so steers format cheaply. It is not memory for the previous answer (history is sent as normal turns), it is not how tool results are returned (those go in a user message as tool_result blocks), and the system prompt is a separate parameter. Note that newer models no longer support prefill on the last assistant turn; there, prefer structured outputs or explicit format instructions. Key unchanged as the best answer in this list.",
+    "explanation": "Prefilling the start of the assistant turn forces the output to begin with a specific character or phrase (for example an opening brace for JSON) and so steers format cheaply. It is not memory for the previous answer (history is sent as normal turns), it is not how tool results are returned (those go in a user message as tool_result blocks), and the system prompt is a separate parameter. Note that Claude 4.6 and later return a 400 for a final assistant turn; there, prefer structured outputs or explicit format instructions.",
     "source": {
       "title": "Anthropic Docs: Prompt engineering best practices",
       "url": "https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview"
@@ -4002,7 +4006,7 @@
     },
     "translations": {
       "es": {
-        "question": "¿Qué describe un uso apropiado del asistente prefill en una integración de producción?",
+        "question": "¿Qué describe un uso apropiado del precargado del asistente en un modelo que todavía lo admite (Claude 4.5 o anterior)?",
         "options": [
           {
             "id": "A",
@@ -4021,7 +4025,7 @@
             "text": "Configurar el aviso del sistema para el turno"
           }
         ],
-        "explanation": "Prefill es un control de formato de bajo costo para forzar al modelo a comenzar con un carácter específico o una secuencia de token."
+        "explanation": "Rellenar previamente el inicio del turno del asistente obliga a la salida a comenzar con un carácter o frase específica (por ejemplo, una llave de apertura para JSON) y, por lo tanto, controla el formato de forma económica. No es memoria para la respuesta anterior (el historial se envía como turnos normales), no es cómo se devuelven los resultados de la herramienta (esos van en un mensaje de usuario como bloques tool_result), y el indicador del sistema es un parámetro separado. Tenga en cuenta que Claude 4.6 y posteriores devuelven un 400 para un turno final de asistente; allí, prefiera resultados estructurados o instrucciones de formato explícitas."
       }
     }
   },
@@ -4400,7 +4404,7 @@
       },
       {
         "id": "B",
-        "text": "A small, fast model at low temperature validated against an eval set with escalation for low confidence cases"
+        "text": "A small, fast model validated against an eval set, with escalation for low-confidence cases"
       },
       {
         "id": "C",
@@ -4412,14 +4416,14 @@
       }
     ],
     "correctAnswer": "B",
-    "explanation": "For high-volume, latency-sensitive classification with few labels, a small fast model at low temperature is cheap and accurate enough, provided you validate it on an eval set and escalate low-confidence cases to a larger model. The largest model costs more and is slower for no measured gain. Long chain-of-thought adds tokens and latency to a task that does not need deep reasoning. Multiple large models voting multiplies cost and latency, violating the stated constraints.",
+    "explanation": "For high-volume, latency-sensitive classification with few labels, a small fast model is cheap and accurate enough, provided you validate it on an eval set and escalate low-confidence cases to a larger model. The largest model costs more and is slower for no measured gain. Long chain-of-thought adds tokens and latency to a task that does not need deep reasoning. Multiple large models voting multiplies cost and latency, violating the stated constraints.",
     "source": {
       "title": "Anthropic Docs: Claude developer guide & API reference",
       "url": "https://docs.anthropic.com/en/docs/welcome"
     },
     "category": {
-      "id": "mso_foundations",
-      "name": "MSO Foundations"
+      "id": "prompting_agents_tool_use",
+      "name": "Production-Grade Prompting, Agents & Tool Use"
     },
     "translations": {
       "es": {
@@ -4431,7 +4435,7 @@
           },
           {
             "id": "B",
-            "text": "Un modelo pequeño y rápido a baja temperatura validado frente a un conjunto de evaluación con escalamiento para casos de baja confianza"
+            "text": "Un modelo pequeño y rápido validado frente a un conjunto de evaluación, con escalamiento para casos de baja confianza"
           },
           {
             "id": "C",
@@ -4442,7 +4446,7 @@
             "text": "Votación de varios modelos grandes"
           }
         ],
-        "explanation": "Los modelos pequeños son ideales para clasificación y extracción si se validan con un conjunto de evaluación."
+        "explanation": "Para una clasificación de gran volumen sensible a la latencia con pocas etiquetas, un modelo pequeño y rápido es lo suficientemente económico y preciso, siempre que lo valide en un conjunto de evaluación y escale los casos de baja confianza a un modelo más grande. El modelo más grande cuesta más y es más lento sin una ganancia medida. Una larga cadena de pensamiento añade tokens y latencia a una tarea que no necesita un razonamiento profundo. La votación de varios modelos grandes multiplica el costo y la latencia, violando las restricciones establecidas."
       }
     }
   },
@@ -4526,7 +4530,7 @@
       },
       {
         "id": "B",
-        "text": "max_tokens caps the response and input tokens + max_tokens must fit inside the context window"
+        "text": "max_tokens caps the generated output, and input plus output share the context window"
       },
       {
         "id": "C",
@@ -4538,7 +4542,7 @@
       }
     ],
     "correctAnswer": "B",
-    "explanation": "max_tokens is a cap on generated output only, and the model must fit input tokens plus the output within the context window. It is therefore not the window size, does not count input, and is clearly related to the window. Setting it to the model maximum adds nothing useful and can cause truncation or rejected requests with long inputs; size it to realistic output length plus headroom.",
+    "explanation": "max_tokens is a cap on generated output only, and input tokens plus generated output share the context window (on Claude 4.5+ a request whose input plus max_tokens exceeds the window is accepted, but generation can stop with stop_reason model_context_window_exceeded; earlier models return a validation error). It is therefore not the window size, does not count input, and is clearly related to the window. Setting it to the model maximum adds nothing useful and can cause truncation with long inputs; size it to realistic output length plus headroom.",
     "source": {
       "title": "Anthropic Docs: Claude developer guide & API reference",
       "url": "https://docs.anthropic.com/en/docs/welcome"
@@ -4557,7 +4561,7 @@
           },
           {
             "id": "B",
-            "text": "max_tokens limita los tokens de respuesta y entrada + max_tokens debe caber dentro de la ventana de contexto"
+            "text": "max_tokens limita la salida generada y la entrada más la salida comparten la ventana de contexto"
           },
           {
             "id": "C",
@@ -4568,7 +4572,7 @@
             "text": "max_tokens no tiene relación con la ventana de contexto"
           }
         ],
-        "explanation": "Tamaño max_tokens a la longitud de salida realista más el espacio libre, no al máximo del modelo."
+        "explanation": "max_tokens es un límite solo para la salida generada, y los tokens de entrada más la salida generada comparten la ventana de contexto (en Claude 4.5+ se acepta una solicitud cuya entrada más max_tokens excede la ventana, pero la generación puede detenerse con stop_reason model_context_window_exceeded; los modelos anteriores devuelven un error de validación). Por lo tanto, no es el tamaño de la ventana, no cuenta la entrada y está claramente relacionado con la ventana. Establecerlo al máximo del modelo no agrega nada útil y puede causar truncamiento con entradas largas; dimensione a una longitud de salida realista más espacio libre."
       }
     }
   },
@@ -4577,7 +4581,7 @@
     "certification": "claude-certified-developer",
     "balotario": "Balotario 2",
     "number": 33,
-    "question": "Which is a legitimate reason to raise temperature above the default for a task?",
+    "question": "Which is a legitimate reason to raise temperature above the default on a model that accepts sampling parameters (Claude 4.6 or earlier)?",
     "options": [
       {
         "id": "A",
@@ -4597,7 +4601,7 @@
       }
     ],
     "correctAnswer": "A",
-    "explanation": "Higher temperature makes sampling more diverse, which helps creative writing and brainstorming. It does not improve factual accuracy (low temperature is better for extraction and analysis), does not reduce token cost, and cannot force valid JSON; structured outputs or tool schemas do that. Even temperature 0 is not fully deterministic, but it is the right direction for analytic tasks.",
+    "explanation": "Higher temperature makes sampling more diverse, which helps creative writing and brainstorming. It does not improve factual accuracy (low temperature is better for extraction and analysis), does not reduce token cost, and cannot force valid JSON; structured outputs or tool schemas do that. Even temperature 0 is not fully deterministic, but it is the right direction for analytic tasks. On Claude 4.7 and later any non-default temperature, top_p or top_k returns a 400, so steer style through prompting instead.",
     "source": {
       "title": "Anthropic Docs: Claude developer guide & API reference",
       "url": "https://docs.anthropic.com/en/docs/welcome"
@@ -4608,7 +4612,7 @@
     },
     "translations": {
       "es": {
-        "question": "¿Cuál es una razón legítima para elevar la temperatura por encima del valor predeterminado para una tarea?",
+        "question": "¿Cuál es una razón legítima para elevar la temperatura por encima del valor predeterminado en un modelo que acepta parámetros de muestreo (Claude 4.6 o anterior)?",
         "options": [
           {
             "id": "A",
@@ -4627,7 +4631,7 @@
             "text": "Para forzar una salida JSON válida"
           }
         ],
-        "explanation": "Utilice una temperatura baja para tareas analíticas, extractivas y estructuradas, y una temperatura más alta para variedad creativa."
+        "explanation": "Una temperatura más alta hace que el muestreo sea más diverso, lo que ayuda a la escritura creativa y la lluvia de ideas. No mejora la precisión de los hechos (la temperatura baja es mejor para la extracción y el análisis), no reduce el costo del token y no puede forzar JSON válido; los resultados estructurados o los esquemas de herramientas hacen eso. Incluso la temperatura 0 no es completamente determinista, pero es la dirección correcta para las tareas analíticas. En Claude 4.7 y posteriores, cualquier temperatura que no sea la predeterminada, top_p o top_k devuelve 400, así que dirija el estilo mediante las indicaciones."
       }
     }
   },
@@ -4660,7 +4664,7 @@
       }
     ],
     "correctAnswer": "A, B y C",
-    "explanation": "Perceived latency is dominated by time to first token and by generation speed. Streaming shows text as it is generated, a smaller faster model produces tokens sooner, and caching a large static prefix cuts processing time for the prompt. Asking for more verbose answers lengthens generation time, and enabling extended thinking on every request adds thinking tokens before the answer starts, both increasing latency. Key unchanged: A, B and C.",
+    "explanation": "Perceived latency is dominated by time to first token and by generation speed. Streaming shows text as it is generated, a smaller faster model produces tokens sooner, and caching a large static prefix cuts processing time for the prompt. Asking for more verbose answers lengthens generation time, and enabling extended thinking on every request adds thinking tokens before the answer starts, both increasing latency.",
     "source": {
       "title": "Anthropic Docs: Claude developer guide & API reference",
       "url": "https://docs.anthropic.com/en/docs/welcome"
@@ -4694,7 +4698,7 @@
             "text": "Permitir un pensamiento ampliado en cada solicitud"
           }
         ],
-        "explanation": "La latencia tiene dos componentes: tiempo hasta el primer token y tokens por segundo; ataque tanto mediante almacenamiento en caché como mediante resultados concisos."
+        "explanation": "La latencia percibida está dominada por el tiempo hasta el primer token y por la velocidad de generación. La transmisión muestra el texto a medida que se genera, un modelo más pequeño y más rápido produce tokens antes y el almacenamiento en caché de un prefijo estático grande reduce el tiempo de procesamiento del mensaje. Solicitar respuestas más detalladas alarga el tiempo de generación y permitir el pensamiento extendido en cada solicitud agrega tokens de pensamiento antes de que comience la respuesta, lo que aumenta la latencia."
       }
     }
   },
@@ -4841,10 +4845,10 @@
       }
     ],
     "correctAnswer": "B",
-    "explanation": "The Message Batches API processes large sets of requests asynchronously (results typically within 24 hours) at a substantial discount, around 50 percent off standard prices. It suits backfills, bulk classification, offline summarization and eval runs. It is not synchronous or lower latency, does not raise context limits, and is optional: nothing requires batch for requests over some token count.",
+    "explanation": "The Message Batches API processes large sets of requests asynchronously (most batches finish within 1 hour, and the maximum is 24 hours) at a substantial discount, around 50 percent off standard prices. It suits backfills, bulk classification, offline summarization and eval runs. It is not synchronous or lower latency, does not raise context limits, and is optional: nothing requires batch for requests over some token count.",
     "source": {
-      "title": "Anthropic Docs: Claude developer guide & API reference",
-      "url": "https://docs.anthropic.com/en/docs/welcome"
+      "title": "Anthropic Docs: Batch processing",
+      "url": "https://platform.claude.com/docs/en/build-with-claude/batch-processing"
     },
     "category": {
       "id": "mso_foundations",
@@ -4871,7 +4875,7 @@
             "text": "Es necesario para cualquier solicitud de más de 1000 tokens."
           }
         ],
-        "explanation": "Buenos candidatos por lotes son reabastecimientos, clasificación masiva, resúmenes fuera de línea y ejecuciones de evaluación."
+        "explanation": "La API Message Batches procesa grandes conjuntos de solicitudes de forma asincrónica (la mayoría de los lotes finalizan en 1 hora y el máximo es 24 horas) con un descuento sustancial, alrededor del 50 por ciento de los precios estándar. Se adapta a reabastecimientos, clasificación masiva, resúmenes fuera de línea y ejecuciones de evaluación. No es sincrónico ni tiene una latencia más baja, no aumenta los límites de contexto y es opcional: nada requiere lotes para solicitudes que superen un cierto número de tokens."
       }
     }
   },
@@ -5083,8 +5087,8 @@
     "correctAnswer": "A, B y C",
     "explanation": "When a task exceeds the context window, durable state must live outside it: writing decisions to an external file or memory, keeping a compact running summary, and maintaining a persistent plan or task document that the agent re-reads. Relying on the model to recall earlier turns fails once they are truncated or compacted away. Increasing max_tokens only affects output length and does nothing for memory of past turns.",
     "source": {
-      "title": "Anthropic Research: Building effective agents",
-      "url": "https://www.anthropic.com/research/building-effective-agents"
+      "title": "Anthropic Engineering: How we built our multi-agent research system",
+      "url": "https://www.anthropic.com/engineering/multi-agent-research-system"
     },
     "category": {
       "id": "mso_foundations",
@@ -5325,7 +5329,7 @@
       }
     ],
     "correctAnswer": "A, B y C",
-    "explanation": "No single defense stops injection, so layer them: delimiters (such as XML tags) mark user text as data, keeping secrets out of the system prompt means a successful leak exposes nothing sensitive, and output filtering catches leaks before they reach the user. Option D was reworded because 'I never obey injected instructions' is not a defense you can rely on; the model can be tricked, so a promise of refusal is not a control. Granting broader tool access increases the blast radius, the opposite of the goal. Key unchanged: A, B and C.",
+    "explanation": "No single defense stops injection, so layer them: delimiters (such as XML tags) mark user text as data, keeping secrets out of the system prompt means a successful leak exposes nothing sensitive, and output filtering catches leaks before they reach the user. Trusting the model to always refuse injected instructions (D) is not a defense you can rely on; the model can be tricked, so a promise of refusal is not a control. Granting broader tool access increases the blast radius, the opposite of the goal.",
     "source": {
       "title": "Anthropic Docs: Prompt engineering best practices",
       "url": "https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview"
@@ -5352,14 +5356,14 @@
           },
           {
             "id": "D",
-            "text": "Nunca obedezco instrucciones inyectadas"
+            "text": "Confiar en que el modelo siempre rechazará las instrucciones inyectadas."
           },
           {
             "id": "E",
             "text": "Otorgar al modelo un acceso más amplio a las herramientas"
           }
         ],
-        "explanation": "Supongamos que la inyección a veces tendrá éxito; Diseñar sistemas para que el fallo no sea catastrófico."
+        "explanation": "Ninguna defensa detiene la inyección, así que colóquelas en capas: los delimitadores (como las etiquetas XML) marcan el texto del usuario como datos, mantener los secretos fuera del mensaje del sistema significa que una filtración exitosa no expone nada sensible y el filtrado de salida detecta las fugas antes de que lleguen al usuario. Confiar en que el modelo siempre rechace las instrucciones inyectadas (D) no es una defensa en la que pueda confiar; el modelo puede ser engañado, por lo que una promesa de rechazo no es un control. Otorgar un acceso más amplio a las herramientas aumenta el radio de explosión, lo contrario del objetivo."
       }
     }
   },
@@ -5390,8 +5394,8 @@
     "correctAnswer": "B",
     "explanation": "Agent tools should run with least privilege: only the permissions needed for the task, ideally scoped, short-lived and per-agent, so a mistaken or hijacked call does limited damage. Administrator credentials or reused developer credentials give far too much power. Embedding secrets in a tool description puts them in the context window, where the model can reveal or leak them; credentials belong in the execution layer.",
     "source": {
-      "title": "Anthropic Research: Building effective agents",
-      "url": "https://www.anthropic.com/research/building-effective-agents"
+      "title": "Anthropic Docs: Mitigate jailbreaks and prompt injections",
+      "url": "https://platform.claude.com/docs/en/test-and-evaluate/strengthen-guardrails/mitigate-jailbreaks"
     },
     "category": {
       "id": "prompting_agents_tool_use",
@@ -5579,8 +5583,8 @@
     "correctAnswer": "A y B",
     "explanation": "MCP defines two standard transports: stdio, where the client launches a local server as a subprocess and talks over stdin/stdout, and HTTP-based remote transport (Streamable HTTP, which replaced the older HTTP+SSE). Direct database connections are what a server might do internally, not a protocol transport. Raw TCP sockets and SMTP email are not part of the MCP specification.",
     "source": {
-      "title": "Anthropic Docs: Model Context Protocol (MCP)",
-      "url": "https://docs.anthropic.com/en/docs/agents-and-tools/mcp"
+      "title": "MCP Specification: Transports",
+      "url": "https://modelcontextprotocol.io/specification/2025-06-18/basic/transports"
     },
     "category": {
       "id": "claude_code_mcp_integration",
@@ -5642,8 +5646,8 @@
     "correctAnswer": "B",
     "explanation": "The model chooses and uses tools based solely on their descriptions, so a good description states what the tool searches (corpus), the query syntax, limits, formats, and how it differs from similar tools. A one-line 'Search takes a query' leaves too much ambiguity. Pasting source code is noisy and not written for the model, and user-facing descriptions focus on the wrong audience. Treat tool design as interface design for the model.",
     "source": {
-      "title": "Anthropic Research: Building effective agents",
-      "url": "https://www.anthropic.com/research/building-effective-agents"
+      "title": "Anthropic Docs: Define tools",
+      "url": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools"
     },
     "category": {
       "id": "prompting_agents_tool_use",
@@ -5701,8 +5705,8 @@
     "correctAnswer": "A",
     "explanation": "In MCP, tools are functions the model decides to invoke and that can have side effects, while resources are data (files, records, schemas) exposed for the application to read and supply as context. Prompts are user-controlled templates. Resources are not just read-only tools renamed, because the control model differs (application versus model). Tools are not static files and resources do not execute code, and resources can be text or binary of many types, not only images.",
     "source": {
-      "title": "Anthropic Docs: Model Context Protocol (MCP)",
-      "url": "https://docs.anthropic.com/en/docs/agents-and-tools/mcp"
+      "title": "MCP Docs: Server concepts",
+      "url": "https://modelcontextprotocol.io/docs/learn/server-concepts"
     },
     "category": {
       "id": "claude_code_mcp_integration",
@@ -5945,8 +5949,8 @@
     "correctAnswer": "B",
     "explanation": "Every tool result is appended to the conversation, so 40 calls at 4000 tokens add roughly 160k tokens of mostly irrelevant JSON. That fills the context window, raises cost and latency, and degrades reasoning because the relevant signal is buried in noise. The fix is to design tool returns as carefully as prompts: project only the needed fields, paginate, truncate with a continuation handle, or store large output externally and return a small reference. Option A is wrong because the damage is not limited to latency, and fixes are needed. Option C is wrong because the API never summarizes tool output on its own. Option D is wrong because tool results are ordinary content blocks and count fully toward the context window and input token billing.",
     "source": {
-      "title": "Anthropic Research: Building effective agents",
-      "url": "https://www.anthropic.com/research/building-effective-agents"
+      "title": "Anthropic Docs: Define tools",
+      "url": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools"
     },
     "category": {
       "id": "prompting_agents_tool_use",
@@ -6356,7 +6360,7 @@
     "options": [
       {
         "id": "A",
-        "text": "Two consecutive messages with the same role or a first message that is not from the user"
+        "text": "A tool_result whose tool_use_id has no matching tool_use in the preceding assistant turn, or otherwise broken role/content structure"
       },
       {
         "id": "B",
@@ -6372,14 +6376,14 @@
       }
     ],
     "correctAnswer": "A",
-    "explanation": "A 400 invalid_request_error means the payload is malformed, not that authentication, quota or model availability failed. A message-ordering error typically points to a conversation that does not begin with a user turn or to broken role structure (note that the API may merge consecutive same-role messages, but a first assistant message or a tool_result that does not match a preceding tool_use still fails). Option B would produce a 401 authentication_error, option C a 429 rate_limit_error, and option D would produce a 404 not_found_error or a deprecation warning rather than an ordering complaint. Read the error type and message first, since it tells you which layer failed.",
+    "explanation": "A 400 invalid_request_error means the payload is malformed, not that authentication, quota or model availability failed. A message-structure error typically points to broken role or content structure, for example a tool_result that does not match a preceding tool_use. Consecutive same-role messages are not the cause, because the API combines them into a single turn. Option B would produce a 401 authentication_error, option C a 429 rate_limit_error, and option D would produce a 404 not_found_error or a deprecation warning rather than an ordering complaint. Read the error type and message first, since it tells you which layer failed.",
     "source": {
       "title": "Anthropic Docs: Tool use (function calling)",
       "url": "https://docs.anthropic.com/en/docs/build-with-claude/tool-use"
     },
     "category": {
-      "id": "production_evals_security",
-      "name": "Production Engineering, Evals & Security"
+      "id": "prompting_agents_tool_use",
+      "name": "Production-Grade Prompting, Agents & Tool Use"
     },
     "translations": {
       "es": {
@@ -6387,7 +6391,7 @@
         "options": [
           {
             "id": "A",
-            "text": "Dos mensajes consecutivos con el mismo rol o un primer mensaje que no sea del usuario"
+            "text": "Un resultado_herramienta cuyo ID_uso_herramienta no tiene uso_herramienta coincidente en el turno de asistente anterior, o de otro modo tiene una estructura de rol/contenido rota"
           },
           {
             "id": "B",
@@ -6402,7 +6406,7 @@
             "text": "La cadena del modelo está en desuso."
           }
         ],
-        "explanation": "Lea el tipo de error y el mensaje. Invalid_request_error apunta a la carga útil. Las causas comunes son roles no alternos, max_tokens faltantes y bloques tool_result sin coincidir con tool_use en el mismo turno."
+        "explanation": "Un error 400 invalid_request_error significa que la carga útil tiene un formato incorrecto, no que fallaron la autenticación, la cuota o la disponibilidad del modelo. Un error de estructura de mensaje normalmente apunta a una función o estructura de contenido rota, por ejemplo, un resultado_herramienta que no coincide con un uso_herramienta anterior. Los mensajes consecutivos del mismo rol no son la causa, porque la API los combina en un solo turno. La opción B produciría un error de autenticación 401, la opción C un error de límite de tasa 429 y la opción D produciría un error de notificación 404 o una advertencia de obsolescencia en lugar de una queja de pedido. Lea primero el tipo de error y el mensaje, ya que le indica qué capa falló."
       }
     }
   },
@@ -6559,8 +6563,8 @@
     "correctAnswer": "A",
     "explanation": "stop_reason end_turn means the model finished its response naturally: it was not truncated by max_tokens, did not emit a custom stop sequence, and did not pause to request a tool. In an agent loop this is the normal exit condition, whereas tool_use means run the tool and continue. Option B is wrong because nothing is closed, you can append another user message. Option C describes stop_reason max_tokens. Option D describes stop_reason stop_sequence. Branch explicitly on every stop_reason value (also pause_turn and refusal) rather than assuming success.",
     "source": {
-      "title": "Anthropic Research: Building effective agents",
-      "url": "https://www.anthropic.com/research/building-effective-agents"
+      "title": "Anthropic Docs: Handling stop reasons",
+      "url": "https://platform.claude.com/docs/en/build-with-claude/handling-stop-reasons"
     },
     "category": {
       "id": "mso_foundations",
@@ -7159,7 +7163,7 @@
     "certification": "claude-certified-developer",
     "balotario": "Balotario 3",
     "number": 22,
-    "question": "What is the effect of including an assistant message as the final entry in the messages array?",
+    "question": "What is the effect of including an assistant message as the final entry in the messages array on a model that supports prefill (before Claude 4.6)?",
     "options": [
       {
         "id": "A",
@@ -7179,7 +7183,7 @@
       }
     ],
     "correctAnswer": "A",
-    "explanation": "If the last entry in messages has the assistant role, Claude continues from that text instead of starting a new turn, a technique called prefilling that forces format (for example starting with an opening brace) and skips preambles. The prefill is not echoed in the response, so the client must prepend it. Option B is wrong because a trailing assistant message is valid. Option C is wrong because the content directly shapes the output. Option D is wrong because system instructions go in the system parameter. Note that prefilling is not supported on some newer models, which return an error, so prefer structured outputs or instructions there.",
+    "explanation": "If the last entry in messages has the assistant role, Claude continues from that text instead of starting a new turn, a technique called prefilling that forces format (for example starting with an opening brace) and skips preambles. The prefill is not echoed in the response, so the client must prepend it. Option B is wrong because a trailing assistant message is valid. Option C is wrong because the content directly shapes the output. Option D is wrong because system instructions go in the system parameter. Note that Claude 4.6 and later and Mythos Preview return a 400 for a trailing assistant message, so prefer structured outputs or instructions there.",
     "source": {
       "title": "Anthropic Docs: Prompt engineering best practices",
       "url": "https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview"
@@ -7190,7 +7194,7 @@
     },
     "translations": {
       "es": {
-        "question": "¿Cuál es el efecto de incluir un mensaje de asistente como entrada final en la matriz de mensajes?",
+        "question": "¿Cuál es el efecto de incluir un mensaje de asistente como entrada final en la matriz de mensajes en un modelo que admite precompletar (antes de Claude 4.6)?",
         "options": [
           {
             "id": "A",
@@ -7209,7 +7213,7 @@
             "text": "El modelo lo trata como una instrucción del sistema."
           }
         ],
-        "explanation": "El prellenado fuerza el formato y omite el preámbulo. Tenga en cuenta que el texto precargado no se repite en el contenido de la respuesta. Por lo tanto, su cliente debe anteponerlo al reconstruir el resultado completo."
+        "explanation": "Si la última entrada de los mensajes tiene la función de asistente, Claude continúa desde ese texto en lugar de comenzar un nuevo turno, una técnica llamada prellenado que fuerza el formato (por ejemplo, comenzando con una llave de apertura) y se salta los preámbulos. El precompletado no se repite en la respuesta, por lo que el cliente debe anteponerlo. La opción B es incorrecta porque un mensaje final del asistente es válido. La opción C es incorrecta porque el contenido da forma directamente al resultado. La opción D es incorrecta porque las instrucciones del sistema van en el parámetro del sistema. Tenga en cuenta que Claude 4.6 y versiones posteriores y Mythos Preview devuelven un 400 para un mensaje final del asistente, así que prefiera resultados estructurados o instrucciones allí."
       }
     }
   },
@@ -7419,7 +7423,7 @@
       }
     ],
     "correctAnswer": "A, B y C",
-    "explanation": "cache_read_input_tokens stays at zero when no cache entry was matched. The prefix may be shorter than the minimum cacheable length (for example 1024 tokens on many models, 2048 or 4096 on others) (A). Variable content such as a timestamp before the breakpoint changes the prefix every time (B). The entry may have expired because requests are further apart than the TTL, 5 minutes by default (C). Option D is wrong because temperature does not affect caching. Option E is wrong because streaming works with caching. Diff the exact serialized prefix between consecutive requests, looking for timestamps, request IDs and reordered tools.",
+    "explanation": "cache_read_input_tokens stays at zero when no cache entry was matched. The prefix may be shorter than the minimum cacheable length (it varies by model: 512 on Opus 5.5, Sonnet 5.5 and Haiku 5.5; 1024 on Sonnet 5/4.6/4.5; 2048 on Opus 4.7; 4096 on Opus 4.6/4.5 and Haiku 4.5) (A). Variable content such as a timestamp before the breakpoint changes the prefix every time (B). The entry may have expired because requests are further apart than the TTL, 5 minutes by default (C). Option D is wrong because temperature does not affect caching. Option E is wrong because streaming works with caching. Diff the exact serialized prefix between consecutive requests, looking for timestamps, request IDs and reordered tools.",
     "source": {
       "title": "Anthropic Docs: Prompt caching",
       "url": "https://docs.anthropic.com/en/docs/build-with-claude/prompt-caching"
@@ -7453,7 +7457,7 @@
             "text": "La respuesta se está transmitiendo."
           }
         ],
-        "explanation": "Depure el almacenamiento en caché diferenciando el prefijo serializado exacto en cuatro solicitudes consecutivas. Las marcas de tiempo inyectadas, los ID de solicitudes y las definiciones de herramientas reordenadas son los culpables habituales."
+        "explanation": "cache_read_input_tokens permanece en cero cuando no coincide ninguna entrada de caché. El prefijo puede ser más corto que la longitud mínima almacenable en caché (varía según el modelo: 512 en Opus 5.5, Sonnet 5.5 y Haiku 5.5; 1024 en Sonnet 5/4.6/4.5; 2048 en Opus 4.7; 4096 en Opus 4.6/4.5 y Haiku 4.5) (A). El contenido variable, como una marca de tiempo antes del punto de interrupción, cambia el prefijo cada vez (B). Es posible que la entrada haya caducado porque las solicitudes están más separadas que el TTL, 5 minutos por defecto (C). La opción D es incorrecta porque la temperatura no afecta el almacenamiento en caché. La opción E es incorrecta porque la transmisión funciona con almacenamiento en caché. Diferenciar el prefijo serializado exacto entre solicitudes consecutivas, buscando marcas de tiempo, ID de solicitud y herramientas reordenadas."
       }
     }
   },
@@ -7484,8 +7488,8 @@
     "correctAnswer": "B",
     "explanation": "A sub-agent in Claude Code runs in its own context window with its own system prompt, tool restrictions and optionally model, and returns only a result to the main session. This keeps verbose intermediate work such as test generation attempts and file reads out of the main conversation. Option A is wrong because a model is not cheaper automatically, you must configure it. Option C is wrong because permissions still apply. Option D is wrong because each agent still has a context limit; sub-agents only help by isolating context.",
     "source": {
-      "title": "Anthropic Research: Building effective agents",
-      "url": "https://www.anthropic.com/research/building-effective-agents"
+      "title": "Claude Code Docs: Subagents",
+      "url": "https://code.claude.com/docs/en/sub-agents"
     },
     "category": {
       "id": "claude_code_mcp_integration",
@@ -7525,7 +7529,7 @@
     "options": [
       {
         "id": "A",
-        "text": ".claudedotmd at the project root"
+        "text": "CLAUDE.md at the project root"
       },
       {
         "id": "B",
@@ -7543,12 +7547,12 @@
     "correctAnswer": "A",
     "explanation": "CLAUDE.md in the project root is loaded automatically at the start of every Claude Code session, so it is the right place for persistent project knowledge such as build and test commands, directory layout, code style and non-obvious constraints. A source comment (B) is not reliably read, shell history (C) is not part of Claude's context, and API key configuration (D) holds credentials, not project instructions. Because CLAUDE.md consumes context every session, keep it concise and relevant.",
     "source": {
-      "title": "Anthropic Docs: Claude developer guide & API reference",
-      "url": "https://docs.anthropic.com/en/docs/welcome"
+      "title": "Claude Code Docs: Memory",
+      "url": "https://code.claude.com/docs/en/memory"
     },
     "category": {
-      "id": "claude_code_mcp_integration",
-      "name": "Claude Code, MCP & Integration"
+      "id": "accelerators_ip_contribution",
+      "name": "Accelerators & IP Contribution"
     },
     "translations": {
       "es": {
@@ -7556,7 +7560,7 @@
         "options": [
           {
             "id": "A",
-            "text": ".claudedotmd en la raíz del proyecto"
+            "text": "CLAUDE.md en la raíz del proyecto"
           },
           {
             "id": "B",
@@ -7571,7 +7575,7 @@
             "text": "En la configuración de la clave API"
           }
         ],
-        "explanation": "Mantenga los comandos de prueba integrados, el diseño del directorio, el estilo del código y las restricciones no obvias de .claudedotmd. Se carga en cada sesión, así que sea consciente del contexto."
+        "explanation": "CLAUDE.md en la raíz del proyecto se carga automáticamente al inicio de cada sesión de Claude Code, por lo que es el lugar adecuado para el conocimiento persistente del proyecto, como comandos de compilación y prueba, diseño de directorio, estilo de código y restricciones no obvias. Un comentario de fuente (B) no se lee de manera confiable, el historial de shell (C) no es parte del contexto de Claude y la configuración de la clave API (D) contiene credenciales, no instrucciones del proyecto. Debido a que CLAUDE.md consume contexto en cada sesión, manténgalo conciso y relevante."
       }
     }
   },
@@ -7726,7 +7730,7 @@
       }
     ],
     "correctAnswer": "B",
-    "explanation": "Extended thinking spends additional tokens and latency on reasoning before answering, which pays off on complex multistep reasoning, math, coding and planning tasks, provided evals show an accuracy gain (B). Option A is wrong because more reasoning is not always better: it adds cost and latency for little gain on simple tasks. Option C is wrong because simple classification rarely benefits and the cost is wasteful. Option D is wrong because thinking is compatible with streaming, and in fact streaming is recommended for long outputs. Treat it as a per-task setting and size max_tokens to cover the thinking budget plus the answer.",
+    "explanation": "Extended thinking spends additional tokens and latency on reasoning before answering, which pays off on complex multistep reasoning, math, coding and planning tasks, provided evals show an accuracy gain (B). Option A is wrong because more reasoning is not always better: it adds cost and latency for little gain on simple tasks. Option C is wrong because simple classification rarely benefits and the cost is wasteful. Option D is wrong because thinking is compatible with streaming, and in fact streaming is recommended for long outputs. Treat it as a per-task setting and size max_tokens to cover thinking plus the answer. On Claude 4.7+ manual extended thinking (budget_tokens) is rejected with a 400; use adaptive thinking with output_config.effort.",
     "source": {
       "title": "Anthropic Docs: Claude developer guide & API reference",
       "url": "https://docs.anthropic.com/en/docs/welcome"
@@ -7756,7 +7760,7 @@
             "text": "Solo cuando la transmisión está deshabilitada"
           }
         ],
-        "explanation": "Trate el pensamiento extendido como una decisión de configuración por tarea. Valide con evaluaciones y dimensione max_tokens para acomodar el presupuesto de pensamiento más la respuesta."
+        "explanation": "El pensamiento extendido gasta tokens y latencia adicionales en el razonamiento antes de responder, lo que vale la pena en tareas complejas de razonamiento, matemáticas, codificación y planificación de varios pasos, siempre que las evaluaciones muestren una ganancia de precisión (B). La opción A es incorrecta porque más razonamiento no siempre es mejor: agrega costo y latencia con poca ganancia en tareas simples. La opción C es incorrecta porque la clasificación simple rara vez resulta beneficiosa y el costo es un desperdicio. La opción D es errónea porque se piensa que es compatible con el streaming, y de hecho se recomienda el streaming para salidas largas. Trátelo como una configuración por tarea y dimensione max_tokens para cubrir el pensamiento más la respuesta. En Claude 4.7+ el pensamiento extendido manual (budget_tokens) se rechaza con un 400; Utilice el pensamiento adaptativo con output_config.effort."
       }
     }
   },
@@ -7765,7 +7769,7 @@
     "certification": "claude-certified-developer",
     "balotario": "Balotario 3",
     "number": 32,
-    "question": "An application's cost is dominated by a 12,000 token system prompt sent on everyone of 2 lakh daily requests. What is the highest leverage optimization?",
+    "question": "An application's cost is dominated by a 12,000 token system prompt sent on everyone of 200,000 daily requests. What is the highest leverage optimization?",
     "options": [
       {
         "id": "A",
@@ -7785,7 +7789,7 @@
       }
     ],
     "correctAnswer": "A",
-    "explanation": "With the same 12,000-token prefix on every request, prompt caching gives the largest saving: cached reads cost about 10% of the base input price (after a one-time write premium) and also reduce latency. Option B does not touch the dominant input cost, as max_tokens limits output only. Option C changes delivery, not token cost. Option D, temperature, has no effect on billing. Caching combined with trimming the prompt (for example to 6,000 tokens) compounds the savings, but caching is the single highest-leverage change.",
+    "explanation": "With the same 12,000-token prefix on every request, prompt caching gives the largest saving: cached reads cost about 10% of the base input price (5% on Opus 5.5 and Sonnet 5.5), after a one-time write premium and also reduce latency. Option B does not touch the dominant input cost, as max_tokens limits output only. Option C changes delivery, not token cost. Option D, temperature, has no effect on billing. Caching combined with trimming the prompt (for example to 6,000 tokens) compounds the savings, but caching is the single highest-leverage change.",
     "source": {
       "title": "Anthropic Docs: Prompt engineering best practices",
       "url": "https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview"
@@ -7796,7 +7800,7 @@
     },
     "translations": {
       "es": {
-        "question": "El costo de una aplicación está dominado por un mensaje del sistema de 12,000 tokens enviado a cada una de las solicitudes diarias de 2 lakh. ¿Cuál es la optimización de mayor apalancamiento?",
+        "question": "El costo de una aplicación está dominado por un mensaje del sistema de 12.000 tokens enviado a cada 200.000 solicitudes diarias. ¿Cuál es la optimización de mayor apalancamiento?",
         "options": [
           {
             "id": "A",
@@ -7815,7 +7819,7 @@
             "text": "bajar la temperatura"
           }
         ],
-        "explanation": "También audite si el indicador del sistema debe tener 12 000 tokens. El almacenamiento en caché más la poda/recorte a 6000 tokens y el almacenamiento en caché superan a cualquiera de los cambios por sí solos."
+        "explanation": "Con el mismo prefijo de 12.000 tokens en cada solicitud, el almacenamiento en caché rápido ofrece el mayor ahorro: las lecturas en caché cuestan alrededor del 10% del precio de entrada base (5% en Opus 5.5 y Sonnet 5.5), después de una prima de escritura única y también reducen la latencia. La opción B no afecta el costo de los insumos dominantes, ya que max_tokens limita solo la producción. La opción C cambia la entrega, no el costo simbólico. La opción D, temperatura, no tiene efecto en la facturación. El almacenamiento en caché combinado con la reducción del mensaje (por ejemplo, a 6000 tokens) aumenta el ahorro, pero el almacenamiento en caché es el cambio de mayor apalancamiento."
       }
     }
   },
@@ -8155,7 +8159,7 @@
       }
     ],
     "correctAnswer": "B",
-    "explanation": "A very large max_tokens removes the safety bound on runaway or looping generations, which can inflate cost and latency, and because input tokens plus max_tokens must fit the context window (and some limits are checked against max_tokens), an oversized value can cause requests with large inputs to be rejected. Option A is wrong because price per token is fixed. Option C is wrong because it does not disable streaming (though SDKs may require streaming for very large values). Option D is wrong because the model stops when done and does not pad. Size it to the realistic maximum plus headroom and treat stop_reason max_tokens as a signal.",
+    "explanation": "A very large max_tokens removes the safety bound on runaway or looping generations, which can inflate cost and latency, and because input tokens plus output share the context window, a huge max_tokens with a large input can end generation early with stop_reason model_context_window_exceeded (models before Claude 4.5 reject such a request with a validation error). Note that max_tokens does not count toward OTPM rate limits. Option A is wrong because price per token is fixed. Option C is wrong because it does not disable streaming (though SDKs may require streaming for very large values). Option D is wrong because the model stops when done and does not pad. Size it to the realistic maximum plus headroom and treat stop_reason max_tokens as a signal.",
     "source": {
       "title": "Anthropic Docs: Claude developer guide & API reference",
       "url": "https://docs.anthropic.com/en/docs/welcome"
@@ -8185,7 +8189,7 @@
             "text": "Obliga al modelo a llenar el espacio."
           }
         ],
-        "explanation": "Dimensione max_tokens a la salida máxima realista más un modesto margen de maniobra. Luego trate stop_reason: max_tokens como una señal de que es necesario revisar el presupuesto o la descomposición de la tarea."
+        "explanation": "Un max_tokens muy grande elimina el límite de seguridad en generaciones descontroladas o en bucle, lo que puede inflar el costo y la latencia, y debido a que los tokens de entrada más la salida comparten la ventana de contexto, un max_tokens enorme con una entrada grande puede finalizar la generación antes con stop_reason model_context_window_exceeded (los modelos anteriores a Claude 4.5 rechazan dicha solicitud con un error de validación). Tenga en cuenta que max_tokens no cuenta para los límites de tasa de OTPM. La opción A es incorrecta porque el precio por token es fijo. La opción C es incorrecta porque no deshabilita la transmisión (aunque los SDK pueden requerir transmisión para valores muy grandes). La opción D es incorrecta porque el modelo se detiene cuando termina y no se rellena. Ajústelo al máximo realista más espacio libre y trate stop_reason max_tokens como una señal."
       }
     }
   },
@@ -8342,8 +8346,8 @@
     "correctAnswer": "B",
     "explanation": "Caching works on a prefix in the order tools, system, then messages. Placing the breakpoint after the tool definitions (and system prompt and fixed reference material) and before user content makes the largest static prefix cacheable, while variable user content comes after and does not invalidate it (B). Option A is wrong because breakpoints do not affect execution speed, only prefill cost and latency for input. Option C is wrong because tools remain available. Option D is wrong because all tools are still sent and counted, just cheaply read from cache.",
     "source": {
-      "title": "Anthropic Docs: Prompt engineering best practices",
-      "url": "https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview"
+      "title": "Anthropic Docs: Prompt caching",
+      "url": "https://platform.claude.com/docs/en/build-with-claude/prompt-caching"
     },
     "category": {
       "id": "prompting_agents_tool_use",
@@ -8887,10 +8891,10 @@
       }
     ],
     "correctAnswer": "A",
-    "explanation": "The model decides whether to call a tool by reading tool names and descriptions against the conversation, and your tool_choice setting can override that (auto, any, a specific tool or none) (A). Option B is wrong because array order is not what drives the decision. Option C is wrong because schema complexity affects argument quality, not whether the tool is chosen. Option D is wrong because temperature influences sampling but is not the determining factor. Forcing a tool via tool_choice is a standard way to get structured output.",
+    "explanation": "The model decides whether to call a tool by reading tool names and descriptions against the conversation, and your tool_choice setting can override that (auto, any, a specific tool or none) (A). Option B is wrong because array order is not what drives the decision. Option C is wrong because schema complexity affects argument quality, not whether the tool is chosen. Option D is wrong because temperature influences sampling but is not the determining factor. Forcing a tool via tool_choice works only on models that allow it; Claude Opus 5.5, Sonnet 5.5, Fable 5.2/5.1 and Mythos 5.2/5.1 return a 400, so use auto with strict tool use or structured outputs there.",
     "source": {
-      "title": "Anthropic Docs: Tool use (function calling)",
-      "url": "https://docs.anthropic.com/en/docs/build-with-claude/tool-use"
+      "title": "Anthropic Docs: Define tools",
+      "url": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools"
     },
     "category": {
       "id": "prompting_agents_tool_use",
@@ -8917,7 +8921,7 @@
             "text": "Sólo el ajuste de temperatura del modelo."
           }
         ],
-        "explanation": "tool_choice le permite forzar una herramienta específica, requerir alguna herramienta o desactivar herramientas. Forzar una herramienta es la técnica estándar para garantizar una salida estructurada."
+        "explanation": "El modelo decide si llamar a una herramienta leyendo los nombres y descripciones de las herramientas en la conversación, y su configuración de elección de herramienta puede anular eso (automático, cualquiera, una herramienta específica o ninguna) (A). La opción B es incorrecta porque el orden de la matriz no es lo que impulsa la decisión. La opción C es incorrecta porque la complejidad del esquema afecta la calidad del argumento, no si se elige la herramienta. La opción D es incorrecta porque la temperatura influye en el muestreo pero no es el factor determinante. Forzar una herramienta a través de tool_choice solo funciona en modelos que lo permiten; Claude Opus 5.5, Sonnet 5.5, Fable 5.2/5.1 y Mythos 5.2/5.1 devuelven un 400, así que use auto con uso estricto de herramientas o salidas estructuradas allí."
       }
     }
   },
@@ -9009,10 +9013,10 @@
       }
     ],
     "correctAnswer": "A, B y C",
-    "explanation": "tool_choice controls how the model uses tools: tool forces a specific named tool (A), any requires that some tool be used (B), and none prevents tool use for the request (C), with auto as the default. Option D is wrong because parameters are defined by the tool's input_schema in the tool definition. Option E is wrong because client tools are executed by your code, and the API only returns a tool_use block. Forcing a tool is the most reliable way to get schema-shaped JSON, though guaranteed conformance requires strict mode; the model otherwise follows the schema very reliably but not as a hard guarantee, and forced tool use is not allowed with extended thinking.",
+    "explanation": "tool_choice controls how the model uses tools: tool forces a specific named tool (A), any requires that some tool be used (B), and none prevents tool use for the request (C), with auto as the default. Option D is wrong because parameters are defined by the tool's input_schema in the tool definition. Option E is wrong because client tools are executed by your code, and the API only returns a tool_use block. Forcing a tool (any or tool) is rejected with a 400 on Claude Opus 5.5, Sonnet 5.5, Fable 5.2/5.1 and Mythos 5.2/5.1, so use auto with strict tool use or structured outputs there. Forced use is also not allowed with manual extended thinking. Guaranteed schema conformance requires strict mode.",
     "source": {
-      "title": "Anthropic Docs: Tool use (function calling)",
-      "url": "https://docs.anthropic.com/en/docs/build-with-claude/tool-use"
+      "title": "Anthropic Docs: Define tools",
+      "url": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools"
     },
     "category": {
       "id": "prompting_agents_tool_use",
@@ -9043,7 +9047,7 @@
             "text": "Ejecuta la herramienta del lado del servidor."
           }
         ],
-        "explanation": "Forzar la herramienta es la forma más confiable de obtener JSON compatible con el esquema porque la API valida los argumentos contra input_schema antes de devolverlos."
+        "explanation": "tool_choice controla cómo el modelo usa las herramientas: la herramienta fuerza una herramienta con nombre específico (A), cualquiera requiere que se use alguna herramienta (B) y ninguna impide el uso de la herramienta para la solicitud (C), con auto como valor predeterminado. La opción D es incorrecta porque los parámetros están definidos por el esquema de entrada de la herramienta en la definición de la herramienta. La opción E es incorrecta porque su código ejecuta las herramientas del cliente y la API solo devuelve un bloque tool_use. Forzar una herramienta (cualquiera o herramienta) se rechaza con un 400 en Claude Opus 5.5, Sonnet 5.5, Fable 5.2/5.1 y Mythos 5.2/5.1, así que use auto con uso estricto de herramientas o salidas estructuradas allí. Tampoco se permite el uso forzado con pensamiento extendido manual. La conformidad del esquema garantizada requiere un modo estricto."
       }
     }
   },
@@ -9377,8 +9381,8 @@
     "correctAnswer": "B",
     "explanation": "Long-running agents outlast a single context window, and compaction or truncation can drop earlier goals and progress. Keeping an explicit plan or task list in external state (a file, a to-do tool, memory) externalizes goals and progress so the agent can re-read them after compaction and stay oriented. It does not replace tools (A); it is usually maintained via tools. It has no effect on API rate limits (C), which are server-side quotas. It cannot guarantee completion (D), only improve the odds by reducing drift.",
     "source": {
-      "title": "Anthropic Research: Building effective agents",
-      "url": "https://www.anthropic.com/research/building-effective-agents"
+      "title": "Anthropic Engineering: Effective context engineering for AI agents",
+      "url": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents"
     },
     "category": {
       "id": "prompting_agents_tool_use",
@@ -9503,8 +9507,8 @@
     "correctAnswer": "B",
     "explanation": "An agent that retries the same failing call identically is missing two things: error results the model can act on (a clear message saying what failed and what to change, returned with is_error so the model sees it) and a harness-level retry cap that forces a different strategy or escalates to a human or stops. A larger context window (A) does not change behavior, it only lets the loop run longer. Higher temperature (C) adds randomness but no information or limit. More tools (D) do not fix a loop on a failing one and can worsen tool selection.",
     "source": {
-      "title": "Anthropic Research: Building effective agents",
-      "url": "https://www.anthropic.com/research/building-effective-agents"
+      "title": "Anthropic Docs: Handle tool calls",
+      "url": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/handle-tool-calls"
     },
     "category": {
       "id": "prompting_agents_tool_use",
@@ -9619,7 +9623,7 @@
       }
     ],
     "correctAnswer": "A",
-    "explanation": "The Messages API requires x-api-key (authentication), anthropic-version (e.g. 2023-06-01, pinning API behavior) and content-type: application/json. Authorization/Accept/User-Agent (B) is a generic HTTP set and Anthropic does not use Bearer auth for this endpoint. x-api-key alone (C) omits the mandatory version header, and the request is rejected. Version and content-type without a key (D) fails authentication. Official SDKs set these headers for you, but this is the minimal raw HTTP set.",
+    "explanation": "The Messages API requires x-api-key (authentication), anthropic-version (e.g. 2023-06-01, pinning API behavior) and content-type: application/json. Authorization/Accept/User-Agent (B) is a generic HTTP set that omits the mandatory anthropic-version and content-type headers (Authorization: Bearer is also accepted as a credential, but x-api-key is the classic form for this minimal set). x-api-key alone (C) omits the mandatory version header, and the request is rejected. Version and content-type without a key (D) fails authentication. Official SDKs set these headers for you, but this is the minimal raw HTTP set.",
     "source": {
       "title": "Anthropic Docs: Claude developer guide & API reference",
       "url": "https://docs.anthropic.com/en/docs/welcome"
@@ -9649,7 +9653,7 @@
             "text": "versión antrópica y tipo de contenido solamente"
           }
         ],
-        "explanation": "Estos tres encabezados son necesarios para las solicitudes de API estándar."
+        "explanation": "La API de mensajes requiere x-api-key (autenticación), versión antrópica (por ejemplo, 2023-06-01, fijación del comportamiento de la API) y tipo de contenido: aplicación/json. Autorización/Aceptar/Agente de usuario (B) es un conjunto HTTP genérico que omite los encabezados obligatorios de versión antrópica y tipo de contenido (Autorización: Portador también se acepta como credencial, pero x-api-key es la forma clásica para este conjunto mínimo). x-api-key por sí sola (C) omite el encabezado de versión obligatorio y la solicitud se rechaza. La versión y el tipo de contenido sin una clave (D) fallan en la autenticación. Los SDK oficiales configuran estos encabezados por usted, pero este es el conjunto HTTP sin formato mínimo."
       }
     }
   },
@@ -9680,8 +9684,8 @@
     "correctAnswer": "A",
     "explanation": "The API requires that every tool_use block in an assistant turn be answered by a matching tool_result (same tool_use_id) in the very next user message, placed first in the content. This error appears when the client skipped one, for example when several parallel tool calls were made and only some results were returned, or other content was inserted in between. An invalid input_schema (B) is rejected at definition time with a different message. Missing tool permissions (C) would produce a permission/authentication error, not a message-structure error. A small max_tokens (D) causes stop_reason max_tokens, not this validation error.",
     "source": {
-      "title": "Anthropic Docs: Tool use (function calling)",
-      "url": "https://docs.anthropic.com/en/docs/build-with-claude/tool-use"
+      "title": "Anthropic Docs: Handle tool calls",
+      "url": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/handle-tool-calls"
     },
     "category": {
       "id": "prompting_agents_tool_use",
@@ -9806,8 +9810,8 @@
     "correctAnswer": "A",
     "explanation": "The anthropic-ratelimit-* response headers (requests/tokens limit, remaining, and reset time as an RFC 3339 timestamp) report your current rate-limit capacity so clients can throttle themselves before receiving 429s. They do not report monetary cost (B); that comes from the usage object and billing tools. They carry no model confidence (C), which the API does not expose. The context window (D) is a model property tracked via usage and token counting, not by rate-limit headers.",
     "source": {
-      "title": "Anthropic Docs: Claude developer guide & API reference",
-      "url": "https://docs.anthropic.com/en/docs/welcome"
+      "title": "Anthropic Docs: Rate limits",
+      "url": "https://platform.claude.com/docs/en/api/rate-limits"
     },
     "category": {
       "id": "mso_foundations",
@@ -9863,7 +9867,7 @@
       }
     ],
     "correctAnswer": "B",
-    "explanation": "A dropped stream leaves a truncated response: a message_stop event (and a stop_reason in message_delta) was never received, so the content is incomplete and may even be cut mid-JSON or mid-tool-call. The robust handling is to detect the missing completion event, discard or flag the partial result, and retry with exponential backoff (or resume with the partial content as an assistant prefix where supported). Treating it as complete (A) risks acting on corrupted output. Continuing in a new request without context (C) loses what was already produced and the model cannot know where it stopped. Ignoring the error (D) hides failures; streaming is not best-effort.",
+    "explanation": "A dropped stream leaves a truncated response: a message_stop event (and a stop_reason in message_delta) was never received, so the content is incomplete and may even be cut mid-JSON or mid-tool-call. The robust handling is to detect the missing completion event, discard or flag the partial result, and retry with exponential backoff (on Claude 4.6 and later, resuming through an assistant prefill returns a 400, so retry the whole request or pass the partial text in a user turn). Treating it as complete (A) risks acting on corrupted output. Continuing in a new request without context (C) loses what was already produced and the model cannot know where it stopped. Ignoring the error (D) hides failures; streaming is not best-effort.",
     "source": {
       "title": "Anthropic Docs: Claude developer guide & API reference",
       "url": "https://docs.anthropic.com/en/docs/welcome"
@@ -9893,7 +9897,7 @@
             "text": "Ignore el error ya que la transmisión es el mejor esfuerzo"
           }
         ],
-        "explanation": "Verifique siempre la finalización mediante el evento de detención; Manejar con gracia las respuestas incompletas."
+        "explanation": "Una secuencia eliminada deja una respuesta truncada: nunca se recibió un evento message_stop (y un stop_reason en message_delta), por lo que el contenido está incompleto e incluso puede cortarse a mitad de JSON o a mitad de la llamada a la herramienta. El manejo sólido consiste en detectar el evento de finalización faltante, descartar o marcar el resultado parcial y volver a intentarlo con un retroceso exponencial (en Claude 4.6 y versiones posteriores, la reanudación a través de un precompletado asistente devuelve un 400, así que reintente la solicitud completa o pase el texto parcial en un turno de usuario). Tratarlo como completo (A) corre el riesgo de actuar sobre resultados corruptos. Continuar en una nueva solicitud sin contexto (C) pierde lo que ya se produjo y el modelo no puede saber dónde se detuvo. Ignorar el error (D) oculta fallas; la transmisión por secuencias no es el mejor esfuerzo."
       }
     }
   },
@@ -10721,10 +10725,10 @@
       }
     ],
     "correctAnswer": "A",
-    "explanation": "Claude Code applies settings by precedence: enterprise managed policy settings are highest and cannot be overridden, followed by command-line arguments, then local project settings, then shared project settings, then user settings. This lets organizations enforce security policy while developers keep flexibility where not restricted. User settings do not always win (B); they are the lowest. File modification time (C) is irrelevant. CLAUDE.md (D) provides instructions and memory for the model, not configuration, and it cannot override settings files or permissions.",
+    "explanation": "Claude Code applies settings by precedence: enterprise managed policy settings are highest and cannot be overridden by ordinary settings, followed by command-line arguments, then local project settings, then shared project settings, then user settings. This lets organizations enforce security policy while developers keep flexibility where not restricted. User settings do not always win (B); they are the lowest. File modification time (C) is irrelevant. CLAUDE.md (D) provides instructions and memory for the model, not configuration, and it cannot override settings files or permissions.",
     "source": {
-      "title": "Anthropic Docs: Claude developer guide & API reference",
-      "url": "https://docs.anthropic.com/en/docs/welcome"
+      "title": "Claude Code docs: Settings",
+      "url": "https://code.claude.com/docs/en/settings"
     },
     "category": {
       "id": "accelerators_ip_contribution",
@@ -10751,7 +10755,7 @@
             "text": "El claude.md sobrescribe todos los archivos de configuración."
           }
         ],
-        "explanation": "La configuración jerárquica permite la seguridad en toda la empresa y al mismo tiempo permite la flexibilidad de los desarrolladores locales."
+        "explanation": "Claude Code aplica la configuración por prioridad: la configuración de políticas administradas por la empresa es la más alta y no puede ser anulada por la configuración ordinaria, seguida de los argumentos de la línea de comandos, luego la configuración del proyecto local, luego la configuración del proyecto compartido y luego la configuración del usuario. Esto permite a las organizaciones aplicar políticas de seguridad mientras los desarrolladores mantienen la flexibilidad donde no hay restricciones. La configuración del usuario no siempre gana (B); son los más bajos. La hora de modificación del archivo (C) es irrelevante. CLAUDE.md (D) proporciona instrucciones y memoria para el modelo, no configuración, y no puede anular archivos de configuración ni permisos."
       }
     }
   },
@@ -11437,7 +11441,7 @@
     "options": [
       {
         "id": "A",
-        "text": "Be clear and direct, add examples, allow reasoning, add structure with tags, assign a role. Then consider prefilling and chaining"
+        "text": "Be clear and direct, add examples, allow reasoning, add structure with tags, assign a role. Then consider structured outputs and chaining (prefill is unsupported on Claude 4.6+)"
       },
       {
         "id": "B",
@@ -11453,7 +11457,7 @@
       }
     ],
     "correctAnswer": "A",
-    "explanation": "Anthropic's prompt engineering guidance runs from the most broadly effective and cheapest techniques to more advanced ones: be clear and direct, use examples (multishot), let the model think (chain of thought), structure with XML tags, give a role, and only then consider prefilling and prompt chaining. Starting from chain-of-thought (B) skips the basics that often fix the problem. Starting with chaining (C) adds complexity, latency and cost before you know it is needed. Increasing model size (D) is a costly last resort compared with improving the prompt.",
+    "explanation": "Anthropic's prompt engineering guidance runs from the most broadly effective and cheapest techniques to more advanced ones: be clear and direct, use examples (multishot), let the model think (chain of thought), structure with XML tags, give a role, and only then consider structured outputs (or prefill on pre-4.6 models) and prompt chaining. Starting from chain-of-thought (B) skips the basics that often fix the problem. Starting with chaining (C) adds complexity, latency and cost before you know it is needed. Increasing model size (D) is a costly last resort compared with improving the prompt.",
     "source": {
       "title": "Anthropic Docs: Claude developer guide & API reference",
       "url": "https://docs.anthropic.com/en/docs/welcome"
@@ -11468,7 +11472,7 @@
         "options": [
           {
             "id": "A",
-            "text": "Sea claro y directo, agregue ejemplos, permita el razonamiento, agregue estructura con etiquetas, asigne un rol. Entonces considere precargar y encadenar"
+            "text": "Sea claro y directo, agregue ejemplos, permita el razonamiento, agregue estructura con etiquetas, asigne un rol. Luego considere las salidas estructuradas y el encadenamiento (el prerrelleno no es compatible con Claude 4.6+)"
           },
           {
             "id": "B",
@@ -11483,7 +11487,7 @@
             "text": "Comience aumentando el tamaño del modelo."
           }
         ],
-        "explanation": "Comience de manera simple y agregue complejidad solo cuando sea necesario."
+        "explanation": "La rápida guía de ingeniería de Anthropic abarca desde las técnicas más efectivas y económicas hasta las más avanzadas: sea claro y directo, use ejemplos (multidisparo), deje que el modelo piense (cadena de pensamiento), estructure con etiquetas XML, asigne un rol y solo entonces considere resultados estructurados (o precompletar en modelos anteriores a 4.6) y encadenamiento rápido. Al partir de la cadena de pensamiento (B), se omiten los conceptos básicos que a menudo solucionan el problema. Comenzar con el encadenamiento (C) agrega complejidad, latencia y costo antes de que se dé cuenta de que es necesario. Aumentar el tamaño del modelo (D) es un último recurso costoso en comparación con mejorar el mensaje."
       }
     }
   },
@@ -11518,8 +11522,8 @@
     "correctAnswer": "A, B y C",
     "explanation": "Context is a limited resource. Replacing full pages with goal-relevant extractive summaries (A) keeps the facts needed and drops bulk. Storing full pages externally and keeping identifiers plus summaries in context (B) lets the agent re-fetch details on demand (just-in-time retrieval). Dropping pages already judged irrelevant (C) removes pure noise. Keeping everything (D) is exactly the problem, since it saturates context and degrades focus. Merging pages into one unlabeled block (E) does not reduce tokens and removes the source structure the agent needs.",
     "source": {
-      "title": "Anthropic Research: Building effective agents",
-      "url": "https://www.anthropic.com/research/building-effective-agents"
+      "title": "Anthropic Engineering: Effective context engineering for AI agents",
+      "url": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents"
     },
     "category": {
       "id": "prompting_agents_tool_use",
@@ -11886,7 +11890,7 @@
       }
     ],
     "correctAnswer": "A, B, C y E",
-    "explanation": "Data leak risk is reduced in layers: redact or tokenize PII before sending (A), enforce access control in retrieval so the user only gets documents they may see (B), filter outputs for sensitive patterns such as keys or identifiers before display (C), and set retention limits and access controls on logs (E). Storing prompts and completions indefinitely (D) expands the exposure surface and is the opposite of data minimization. Note: option C originally read 'non-sensitive patterns', which was a typo and has been corrected to 'sensitive patterns'; the key remains A, B, C and E.",
+    "explanation": "Data leak risk is reduced in layers: redact or tokenize PII before sending (A), enforce access control in retrieval so the user only gets documents they may see (B), filter outputs for sensitive patterns such as keys or identifiers before display (C), and set retention limits and access controls on logs (E). Storing prompts and completions indefinitely (D) expands the exposure surface and is the opposite of data minimization.",
     "source": {
       "title": "Anthropic Docs: Claude developer guide & API reference",
       "url": "https://docs.anthropic.com/en/docs/welcome"
@@ -11909,7 +11913,7 @@
           },
           {
             "id": "C",
-            "text": "Filtrado de salidas para patrones no sensibles antes de mostrarlos"
+            "text": "Filtrado de salidas para patrones sensibles antes de mostrarlos"
           },
           {
             "id": "D",
@@ -11920,7 +11924,7 @@
             "text": "Establecer límites de retención y controles de acceso en registros de solicitudes"
           }
         ],
-        "explanation": "La defensa en profundidad, desde el filtrado de recuperación hasta la retención de registros, minimiza los riesgos de exposición de datos."
+        "explanation": "El riesgo de fuga de datos se reduce en capas: redacte o tokenice la PII antes de enviarla (A), aplique el control de acceso en la recuperación para que el usuario solo obtenga los documentos que pueda ver (B), filtre las salidas para patrones confidenciales como claves o identificadores antes de mostrarlos (C) y establezca límites de retención y controles de acceso en los registros (E). Almacenar indicaciones y finalizaciones indefinidamente (D) expande la superficie de exposición y es lo opuesto a la minimización de datos."
       }
     }
   },
@@ -12866,7 +12870,7 @@
       }
     ],
     "correctAnswer": "A",
-    "explanation": "A is correct: stop_reason 'end_turn' with only a text block means the model decided it could answer without calling a tool, since with the default tool_choice of auto, tool use is optional. A tool call would have shown stop_reason 'tool_use' with a tool_use block. B is wrong because malformed tool definitions produce a 400 validation error rather than being silently ignored. C is wrong because client tools are executed by your code, never server-side, and server tools produce their own result blocks in the response. D is wrong because a failed request returns an HTTP error, not a successful response with a stop_reason. If you need a tool call, set tool_choice to 'any' or a specific tool; if the model skips tools it should use, improve the tool descriptions and the prompt.",
+    "explanation": "A is correct: stop_reason 'end_turn' with only a text block means the model decided it could answer without calling a tool, since with the default tool_choice of auto, tool use is optional. A tool call would have shown stop_reason 'tool_use' with a tool_use block. B is wrong because malformed tool definitions produce a 400 validation error rather than being silently ignored. C is wrong because client tools are executed by your code, never server-side, and server tools produce their own result blocks in the response. D is wrong because a failed request returns an HTTP error, not a successful response with a stop_reason. If you need a tool call, set tool_choice to 'any' or a specific tool (rejected with a 400 on Opus 5.5, Sonnet 5.5, Fable 5.2/5.1 and Mythos 5.2/5.1; use auto with strict tool use or structured outputs there); if the model skips tools it should use, improve the tool descriptions and the prompt.",
     "source": {
       "title": "Anthropic Docs: Tool use (function calling)",
       "url": "https://docs.anthropic.com/en/docs/build-with-claude/tool-use"
@@ -12896,7 +12900,7 @@
             "text": "La solicitud falló"
           }
         ],
-        "explanation": "Si necesita una llamada de herramienta, garantice que configure 'tool_choice' para que requiera una. Si el modelo omite herramientas cuando debería usarlas, la causa habitual es una descripción vaga de la herramienta o un mensaje que no establece cuándo las herramientas son apropiadas."
+        "explanation": "A es correcta: stop_reason 'end_turn' con solo un bloque de texto significa que el modelo decidió que podía responder sin llamar a una herramienta, ya que con la opción predeterminada tool_choice de auto, el uso de la herramienta es opcional. Una llamada a una herramienta habría mostrado stop_reason 'tool_use' con un bloque tool_use. B es incorrecto porque las definiciones de herramientas con formato incorrecto producen un error de validación 400 en lugar de ignorarse silenciosamente. C es incorrecto porque las herramientas del cliente se ejecutan mediante su código, nunca en el lado del servidor, y las herramientas del servidor producen sus propios bloques de resultados en la respuesta. D es incorrecto porque una solicitud fallida devuelve un error HTTP, no una respuesta exitosa con un stop_reason. Si necesita una llamada de herramienta, configure tool_choice en 'cualquiera' o una herramienta específica (rechazada con un 400 en Opus 5.5, Sonnet 5.5, Fable 5.2/5.1 y Mythos 5.2/5.1; use auto con uso estricto de herramientas o salidas estructuradas allí); Si el modelo omite las herramientas que debería utilizar, mejore las descripciones de las herramientas y el mensaje."
       }
     }
   },
@@ -13110,7 +13114,7 @@
       }
     ],
     "correctAnswer": "A",
-    "explanation": "A is correct: the check is input_tokens + max_tokens <= context window, and 188,000 + 8,000 = 196,000, which is under 200,000, so the request is accepted. B is wrong because max_tokens is limited by the model's maximum output (much higher than 4,096 on current models), not by a fixed 4,096 cap. C is wrong because the API does not silently truncate input; if input plus max_tokens exceeded the window it would return a validation error. D is wrong because the output is bounded by max_tokens and the stop conditions, not by a formula like that. With large inputs, lower max_tokens in advance (and count tokens with the token counting endpoint) rather than discovering the limit through an error.",
+    "explanation": "A is correct: the check is input_tokens + max_tokens <= context window, and 188,000 + 8,000 = 196,000, which is under 200,000, so the request is accepted. B is wrong because max_tokens is limited by the model's maximum output (much higher than 4,096 on current models), not by a fixed 4,096 cap. C is wrong because the API never silently truncates input; a prompt that alone exceeds the window is rejected, and on Claude 4.5+ a request whose input plus max_tokens exceeds the window is accepted but generation can stop early with stop_reason model_context_window_exceeded (older models return a validation error). D is wrong because the output is bounded by max_tokens and the stop conditions, not by a formula like that. With large inputs, lower max_tokens in advance (and count tokens with the token counting endpoint) rather than discovering the limit through an error.",
     "source": {
       "title": "Anthropic Docs: Claude developer guide & API reference",
       "url": "https://docs.anthropic.com/en/docs/welcome"
@@ -13140,7 +13144,7 @@
             "text": "La producción tiene un límite de 200.000 - 188.000 / 2"
           }
         ],
-        "explanation": "La aritmética a verificar antes de enviar es input_tokens + max_tokens contra la ventana. Cuando las entradas son grandes, reduzca max_tokens en consecuencia en lugar de descubrir el límite mediante un error."
+        "explanation": "A es correcta: la verificación es input_tokens + max_tokens <= ventana de contexto, y 188 000 + 8 000 = 196 000, que es inferior a 200 000, por lo que se acepta la solicitud. B está equivocado porque max_tokens está limitado por la salida máxima del modelo (mucho más alta que 4096 en los modelos actuales), no por un límite fijo de 4096. C es incorrecto porque la API nunca trunca silenciosamente la entrada; se rechaza un mensaje que por sí solo excede la ventana, y en Claude 4.5+ se acepta una solicitud cuya entrada más max_tokens excede la ventana, pero la generación puede detenerse antes con stop_reason model_context_window_exceeded (los modelos más antiguos devuelven un error de validación). D es incorrecto porque la salida está limitada por max_tokens y las condiciones de parada, no por una fórmula como esa. Con entradas grandes, reduzca max_tokens por adelantado (y cuente los tokens con el punto final de conteo de tokens) en lugar de descubrir el límite a través de un error."
       }
     }
   },
@@ -13480,7 +13484,7 @@
       }
     ],
     "correctAnswer": "A",
-    "explanation": "A is correct: HTTP 529 overloaded_error means the API is temporarily under heavy load across users, not a problem with your request, so retry with exponential backoff and jitter, bounded attempts, and a degraded fallback, and alert if it is sustained. B is wrong because exceeding the context window yields a 400 invalid_request_error. C is wrong because spending or usage limits show up as 429 or billing-related errors, not 529. D is wrong because an unknown model returns 404 not_found_error. Treat 529 similarly to 429 and 5xx: they are transient and retryable, unlike 400, 401, 403 and 404, which retries cannot fix.",
+    "explanation": "A is correct: HTTP 529 overloaded_error means the API is temporarily under heavy load across users, not a problem with your request, so retry with exponential backoff and jitter, bounded attempts, and a degraded fallback, and alert if it is sustained. B is wrong because exceeding the context window yields a 400 invalid_request_error. C is wrong because an organization or workspace spend limit returns a 400, and a tier spend cap or rate limit returns a 429, not 529. D is wrong because an unknown model returns 404 not_found_error. Treat 529 similarly to 429 and 5xx: they are transient and retryable, unlike 400, 401, 403 and 404, which retries cannot fix.",
     "source": {
       "title": "Anthropic Docs: Claude developer guide & API reference",
       "url": "https://docs.anthropic.com/en/docs/welcome"
@@ -13510,7 +13514,7 @@
             "text": "El modelo no existe"
           }
         ],
-        "explanation": "Maneje 529 como 429 y 500: retroceso exponencial con inquietud, intentos limitados y un retroceso degradado si se agota el presupuesto. Alertar si la tasa es sostenida y no momentánea."
+        "explanation": "A es correcto: HTTP 529 sobrecargado_error significa que la API está temporalmente bajo una carga pesada entre los usuarios, no es un problema con su solicitud, así que vuelva a intentarlo con retroceso y fluctuación exponenciales, intentos limitados y un respaldo degradado, y avise si se mantiene. B es incorrecto porque exceder la ventana de contexto produce un error de solicitud_inválida 400. C es incorrecto porque el límite de gasto de una organización o espacio de trabajo devuelve 400, y un límite de gasto de nivel o límite de tasa devuelve 429, no 529. D es incorrecto porque un modelo desconocido devuelve 404 not_found_error. Trate a 529 de manera similar a 429 y 5xx: son transitorios y reintentables, a diferencia de 400, 401, 403 y 404, que los reintentos no pueden solucionar."
       }
     }
   },
@@ -13783,7 +13787,7 @@
       }
     ],
     "correctAnswer": "A",
-    "explanation": "A is correct: the Messages API is stateless, so every request carries the full conversation and any instance can serve any request as long as it can load the conversation from your data store; the state to scale is your own conversation store and rate limit coordination. B is wrong because the API has no sticky sessions or server-side conversation memory for the standard Messages API. C is wrong because responses are not cached across customers (prompt caching is a per-organization prefix cache for inputs and does not return stored answers). D is wrong because rate limits are applied per organization (and model/tier), not per instance, so you need shared coordination across instances.",
+    "explanation": "A is correct: the Messages API is stateless, so every request carries the full conversation and any instance can serve any request as long as it can load the conversation from your data store; the state to scale is your own conversation store and rate limit coordination. B is wrong because the API has no sticky sessions or server-side conversation memory for the standard Messages API. C is wrong because responses are not cached across customers (prompt caching is a prefix cache isolated per workspace (or per organization on some platforms) for inputs and does not return stored answers). D is wrong because rate limits are applied per organization (and model/tier), not per instance, so you need shared coordination across instances.",
     "source": {
       "title": "Anthropic Docs: Claude developer guide & API reference",
       "url": "https://docs.anthropic.com/en/docs/welcome"
@@ -13813,7 +13817,7 @@
             "text": "Los límites de tarifas son por instancia"
           }
         ],
-        "explanation": "El estado que debes escalar es tu propio almacén de conversaciones y cualquier coordinación que limite la velocidad. El modelo API en sí no impone requisitos de afinidad."
+        "explanation": "A es correcta: la API de Mensajes no tiene estado, por lo que cada solicitud transporta la conversación completa y cualquier instancia puede atender cualquier solicitud siempre que pueda cargar la conversación desde su almacén de datos; el estado a escala es su propio almacén de conversaciones y coordinación de límites de velocidad. B es incorrecto porque la API no tiene sesiones fijas ni memoria de conversación del lado del servidor para la API de mensajes estándar. C es incorrecto porque las respuestas no se almacenan en caché entre los clientes (el almacenamiento en caché rápido es un caché de prefijo aislado por espacio de trabajo (o por organización en algunas plataformas) para entradas y no devuelve respuestas almacenadas). D es incorrecto porque los límites de tasas se aplican por organización (y modelo/nivel), no por instancia, por lo que necesita coordinación compartida entre instancias."
       }
     }
   },
@@ -13970,8 +13974,8 @@
     "correctAnswer": "A",
     "explanation": "A is correct: CLAUDE.md is loaded into context at the start of every session, so a large file full of dependency documentation consumes a lot of context window and tokens on every task, crowding out relevant material and diluting the instructions that matter. Keep it to durable high-value facts (commands, layout, conventions) and put documentation in files the agent reads on demand, or reference it, or expose it through an MCP documentation server. B is wrong because Claude Code can read large files; the issue is cost and dilution, not a hard limit. C is wrong because file size has no bearing on authentication. D is wrong because CLAUDE.md content does not disable hooks, which are configured in settings.",
     "source": {
-      "title": "Anthropic Docs: Model Context Protocol (MCP)",
-      "url": "https://docs.anthropic.com/en/docs/agents-and-tools/mcp"
+      "title": "Claude Code Docs: Memory",
+      "url": "https://code.claude.com/docs/en/memory"
     },
     "category": {
       "id": "accelerators_ip_contribution",
@@ -14033,8 +14037,8 @@
     "correctAnswer": "A, B, C y E",
     "explanation": "Hooks are shell commands or handlers that Claude Code runs deterministically at lifecycle events (PreToolUse, PostToolUse, Stop, Notification and others), so they enforce behavior rather than merely suggest it. A is right: a PostToolUse hook can run a formatter or linter after edits. B is right: a PreToolUse hook can block edits to protected paths by exiting with a blocking status. C is right: Stop or Notification hooks can log or notify on completion. E is right: a PreToolUse hook can validate commands against policy before execution. D is wrong because hooks run outside the model and cannot rewrite its reasoning. Anything that must be guaranteed belongs in a hook (or permissions) rather than in CLAUDE.md, which is advisory.",
     "source": {
-      "title": "Anthropic Research: Building effective agents",
-      "url": "https://www.anthropic.com/research/building-effective-agents"
+      "title": "Claude Code Docs: Hooks",
+      "url": "https://code.claude.com/docs/en/hooks"
     },
     "category": {
       "id": "claude_code_mcp_integration",
@@ -14220,7 +14224,7 @@
       }
     ],
     "correctAnswer": "A",
-    "explanation": "A is correct: extended thinking trades latency and cost (thinking tokens are billed as output tokens) for accuracy on complex reasoning, and the benefit varies by task, so run your eval suite with and without it, weigh gains against added latency and cost, and enable it per task type. B is wrong because enabling it globally pays the cost on simple tasks where it adds nothing. C is wrong because a small max_tokens is the opposite of what thinking needs: the budget_tokens must be less than max_tokens and max_tokens must cover thinking plus the answer, otherwise output is truncated. D is wrong because using tools is not a criterion by itself; whether thinking helps depends on task difficulty (it can help tool-use planning, and has constraints with tool_choice).",
+    "explanation": "A is correct: extended thinking trades latency and cost (thinking tokens are billed as output tokens) for accuracy on complex reasoning, and the benefit varies by task, so run your eval suite with and without it, weigh gains against added latency and cost, and enable it per task type. B is wrong because enabling it globally pays the cost on simple tasks where it adds nothing. C is wrong because a small max_tokens is the opposite of what thinking needs: in manual mode budget_tokens must be less than max_tokens (adaptive thinking has no budget but still counts toward max_tokens), and max_tokens must cover thinking plus the answer, otherwise output is truncated. D is wrong because using tools is not a criterion by itself; whether thinking helps depends on task difficulty (it can help tool-use planning; manual thinking allows only tool_choice auto or none, and adaptive thinking allows forced tool use except on some newer models such as Opus 5.5 and Sonnet 5.5). Manual mode is deprecated on Claude 4.6 and rejected on 4.7+, so use adaptive thinking with effort.",
     "source": {
       "title": "Anthropic Docs: Claude developer guide & API reference",
       "url": "https://docs.anthropic.com/en/docs/welcome"
@@ -14250,7 +14254,7 @@
             "text": "Habilítelo siempre que haya herramientas en uso."
           }
         ],
-        "explanation": "Cuando lo habilites, dimensiona max_tokens para cubrir el presupuesto de pensamiento más la respuesta esperada o verás el truncamiento inmediatamente."
+        "explanation": "A es correcto: el pensamiento extendido intercambia latencia y costo (los tokens de pensamiento se facturan como tokens de salida) por precisión en razonamientos complejos, y el beneficio varía según la tarea, así que ejecute su suite de evaluación con y sin él, compare las ganancias con la latencia y el costo adicionales y habilítelo por tipo de tarea. B está equivocado porque habilitarlo globalmente paga el costo de tareas simples donde no agrega nada. C está mal porque un max_tokens pequeño es lo opuesto a lo que necesita el pensamiento: en modo manual, los presupuestos_tokens deben ser menores que los max_tokens (el pensamiento adaptativo no tiene presupuesto pero aún cuenta para los max_tokens), y los max_tokens deben cubrir el pensamiento más la respuesta; de lo contrario, la salida se trunca. D está equivocado porque el uso de herramientas no es un criterio en sí mismo; Que el pensamiento ayude depende de la dificultad de la tarea (puede ayudar a planificar el uso de herramientas; el pensamiento manual solo permite la opción de herramienta automática o ninguna, y el pensamiento adaptativo permite el uso forzado de herramientas, excepto en algunos modelos más nuevos como Opus 5.5 y Sonnet 5.5). El modo manual está obsoleto en Claude 4.6 y rechazado en 4.7+, así que utilice el pensamiento adaptativo con esfuerzo."
       }
     }
   },
@@ -14400,11 +14404,11 @@
         "text": "Increase the number of examples in the prompt "
       }
     ],
-    "correctAnswer": "A, B y C",
-    "explanation": "When output tokens dominate cost (which are priced several times higher than input), reduce output volume or its unit price. A is right: a smaller model has a lower per-output-token rate, and it should be validated with evals. B is right: removing preamble and closing summaries cuts generated tokens without losing content. C is right: tightening max_tokens bounds worst-case output and cost, as long as it stays above the realistic maximum to avoid truncation. D is wrong because prompt caching discounts repeated input, which is not where the cost is. E is wrong because more examples increase input tokens and do not shrink output. Check the input versus output split in the usage object before choosing an optimization.",
+    "correctAnswer": "A y B",
+    "explanation": "When output tokens dominate cost (which are priced several times higher than input), reduce output volume or its unit price. A is right: a smaller model has a lower per-output-token rate, and it should be validated with evals. B is right: removing preamble and closing summaries cuts generated tokens without losing content. C is wrong: with a typical answer of about 300 tokens, max_tokens only caps worst-case length; it does not shorten a normal response and, if set too tight, truncates it. D is wrong because prompt caching discounts repeated input, which is not where the cost is. E is wrong because more examples increase input tokens and do not shrink output. Check the input versus output split in the usage object before choosing an optimization.",
     "source": {
-      "title": "Anthropic Docs: Claude developer guide & API reference",
-      "url": "https://docs.anthropic.com/en/docs/welcome"
+      "title": "Anthropic Docs: Pricing",
+      "url": "https://platform.claude.com/docs/en/about-claude/pricing"
     },
     "category": {
       "id": "mso_foundations",
@@ -14435,7 +14439,7 @@
             "text": "Aumentar el número de ejemplos en el mensaje."
           }
         ],
-        "explanation": "Diagnostique la división de entrada versus salida del objeto de uso antes de elegir una optimización. La aplicación del almacenamiento en caché a una carga de trabajo dominada por los resultados produce resultados decepcionantes y un desperdicio de ingeniería."
+        "explanation": "Cuando los tokens de producción dominan el costo (que tienen un precio varias veces mayor que el de los insumos), reduzca el volumen de producción o su precio unitario. A tiene razón: un modelo más pequeño tiene una tasa por token de salida más baja y debe validarse con evaluaciones. B tiene razón: eliminar el preámbulo y los resúmenes de cierre corta los tokens generados sin perder contenido. C está mal: con una respuesta típica de aproximadamente 300 tokens, max_tokens solo limita la longitud del peor de los casos; no acorta una respuesta normal y, si se ajusta demasiado, la trunca. D es incorrecto porque el almacenamiento en caché rápido descuenta la entrada repetida, que no es donde está el costo. E está equivocado porque más ejemplos aumentan los tokens de entrada y no reducen la producción. Verifique la división de entrada versus salida en el objeto de uso antes de elegir una optimización."
       }
     }
   },
@@ -15302,7 +15306,7 @@
       },
       {
         "id": "B",
-        "text": "Merge them into one tool with a corpus parameter"
+        "text": "Merge them into one tool with a corpus parameter and keep the descriptions minimal"
       },
       {
         "id": "C",
@@ -15314,10 +15318,10 @@
       }
     ],
     "correctAnswer": "A",
-    "explanation": "A is correct: with near-identical descriptions the model cannot tell the tools apart, so selection is a coin flip. Rewrite each description to state what corpus it covers, what it does not, and when to prefer the other tool; explicit cross-references measurably improve selection, and detailed descriptions are the most important factor in tool performance. D is wrong because relying on the model to infer from names is the failure we are already seeing. C is wrong because deleting a tool removes a capability that the agent needs. B (merging with a corpus parameter) is a legitimate alternative design, but it is a bigger refactor and still requires a clear description of the parameter, so clarifying the descriptions is the most direct and effective remedy among the options.",
+    "explanation": "A is correct: with near-identical descriptions the model cannot tell the tools apart, so selection is a coin flip. Rewrite each description to state what corpus it covers, what it does not, and when to prefer the other tool; explicit cross-references measurably improve selection, and detailed descriptions are the most important factor in tool performance. D is wrong because relying on the model to infer from names is the failure we are already seeing. C is wrong because deleting a tool removes a capability that the agent needs. B (merging with a corpus parameter) is a legitimate consolidation, but with minimal descriptions the ambiguity just moves into the parameter, and it is a bigger refactor, so clarifying the descriptions is the most direct and effective remedy among the options.",
     "source": {
-      "title": "Anthropic Research: Building effective agents",
-      "url": "https://www.anthropic.com/research/building-effective-agents"
+      "title": "Anthropic Docs: Define tools",
+      "url": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools"
     },
     "category": {
       "id": "prompting_agents_tool_use",
@@ -15333,7 +15337,7 @@
           },
           {
             "id": "B",
-            "text": "Fusionarlos en una sola herramienta con un parámetro de corpus"
+            "text": "Combínelos en una herramienta con un parámetro de corpus y mantenga las descripciones al mínimo"
           },
           {
             "id": "C",
@@ -15344,7 +15348,7 @@
             "text": "Confíe en el modelo para inferir la diferencia a partir de los nombres."
           }
         ],
-        "explanation": "Incluya en cada descripción qué cubre, qué no y cuándo preferir la otra herramienta. Las referencias cruzadas explícitas entre herramientas similares mejoran considerablemente la precisión de la selección."
+        "explanation": "A es correcta: con descripciones casi idénticas, el modelo no puede distinguir las herramientas, por lo que la selección es un lanzamiento de moneda. Vuelva a escribir cada descripción para indicar qué corpus cubre, qué no cubre y cuándo preferir la otra herramienta; las referencias cruzadas explícitas mejoran considerablemente la selección y las descripciones detalladas son el factor más importante en el rendimiento de la herramienta. D está equivocado porque confiar en el modelo para inferir a partir de nombres es el error que ya estamos viendo. C está equivocado porque eliminar una herramienta elimina una capacidad que el agente necesita. B (fusionarse con un parámetro de corpus) es una consolidación legítima, pero con descripciones mínimas la ambigüedad simplemente se traslada al parámetro y es una refactorización mayor, por lo que aclarar las descripciones es el remedio más directo y eficaz entre las opciones."
       }
     }
   },
@@ -15812,8 +15816,8 @@
     "correctAnswer": "A",
     "explanation": "In the parallelization pattern, sectioning breaks a task into different independent subtasks that run concurrently (for example one call answers the query while another screens it for policy violations), and the results are combined. Voting runs the same task several times and aggregates the outputs to gain confidence, which suits high-stakes judgments where false negatives are costly. Both run in parallel, so B is wrong. Neither pattern constrains the number of models (C), since voting can use the same model with varied prompts or samples. Neither requires an orchestrator that decides subtasks dynamically (D); that is the orchestrator-workers pattern, where subtasks are not known in advance.",
     "source": {
-      "title": "Anthropic Docs: Claude developer guide & API reference",
-      "url": "https://docs.anthropic.com/en/docs/welcome"
+      "title": "Anthropic Research: Building effective agents",
+      "url": "https://www.anthropic.com/research/building-effective-agents"
     },
     "category": {
       "id": "prompting_agents_tool_use",
@@ -16168,22 +16172,22 @@
       },
       {
         "id": "D",
-        "text": "Setting temperature to zero"
+        "text": "Setting temperature to zero on a Claude 4.6 or earlier model"
       },
       {
         "id": "E",
-        "text": "Input plus max_tokens exceeding the context window "
+        "text": "The prompt alone exceeding the model context window "
       }
     ],
     "correctAnswer": "A, C y E",
-    "explanation": "Answer key corrected (was A, B, C y E). consecutive user messages no longer cause an error; the API combines consecutive same-role turns into one. The 400 invalid_request_error cases are: omitting the required max_tokens (A), a tool_result whose tool_use_id has no matching tool_use in the preceding assistant turn (C), and a prompt plus max_tokens that exceeds the model context window, which current models reject with a validation error (E). Temperature zero (D) is valid and just makes sampling more deterministic. Two consecutive user messages (B) are accepted and merged. Remember that invalid_request_error means fix the payload, whereas rate_limit_error or overloaded_error call for backoff and retry.",
+    "explanation": "Consecutive user messages no longer cause an error; the API combines consecutive same-role turns into one. The 400 invalid_request_error cases are: omitting the required max_tokens (A), a tool_result whose tool_use_id has no matching tool_use in the preceding assistant turn (C), and a prompt that by itself exceeds the context window ('prompt is too long') (E); on Claude 4.5+ input plus max_tokens over the window is accepted and stops with model_context_window_exceeded. Temperature zero (D) is valid on Claude 4.6 and earlier and just makes sampling more deterministic (on 4.7+ any non-default sampling value returns a 400). Two consecutive user messages (B) are accepted and merged. Remember that invalid_request_error means fix the payload, whereas rate_limit_error or overloaded_error call for backoff and retry.",
     "source": {
       "title": "Anthropic Docs: Claude developer guide & API reference",
       "url": "https://docs.anthropic.com/en/docs/welcome"
     },
     "category": {
-      "id": "mso_foundations",
-      "name": "MSO Foundations"
+      "id": "prompting_agents_tool_use",
+      "name": "Production-Grade Prompting, Agents & Tool Use"
     },
     "translations": {
       "es": {
@@ -16203,14 +16207,14 @@
           },
           {
             "id": "D",
-            "text": "Poner la temperatura a cero"
+            "text": "Poner la temperatura a cero en un modelo Claude 4.6 o anterior"
           },
           {
             "id": "E",
-            "text": "Entrada más max_tokens que exceden la ventana de contexto"
+            "text": "El mensaje por sí solo excede la ventana de contexto del modelo"
           }
         ],
-        "explanation": "Lea primero el tipo de error. invalid_request_error significa arreglar la carga útil; otros como rate_limit_error o sobrecargad_error significan retroceder y volver a intentarlo."
+        "explanation": "Los mensajes de usuario consecutivos ya no provocan un error; la API combina turnos consecutivos del mismo rol en uno. Los 400 casos de error_request_inválido son: omitir los max_tokens requeridos (A), un resultado_herramienta cuyo ID_uso_herramienta no tiene uso_herramienta coincidente en el turno anterior del asistente (C), y un mensaje que por sí solo excede la ventana de contexto (\"el mensaje es demasiado largo\") (E); en Claude 4.5+, se acepta la entrada más max_tokens sobre la ventana y se detiene con model_context_window_exceeded. La temperatura cero (D) es válida en Claude 4.6 y versiones anteriores y simplemente hace que el muestreo sea más determinista (en 4.7+ cualquier valor de muestreo no predeterminado devuelve 400). Se aceptan y fusionan dos mensajes de usuario consecutivos (B). Recuerde que invalid_request_error significa arreglar la carga útil, mientras que rate_limit_error o sobrecargad_error requieren retroceder y volver a intentarlo."
       }
     }
   },
@@ -16223,7 +16227,7 @@
     "options": [
       {
         "id": "A",
-        "text": "Use a token counting endpoint or SDK helper for an accurate count"
+        "text": "Use a token counting endpoint or SDK helper for a reliable count"
       },
       {
         "id": "B",
@@ -16239,7 +16243,7 @@
       }
     ],
     "correctAnswer": "A",
-    "explanation": "Anthropic provides a token counting endpoint (and SDK helpers) that returns the exact input token count for messages, system prompt, tools and images without running the model, so you can trim or chunk before sending (A). Dividing characters by four (B) and counting words (D) are rough heuristics that are especially wrong for code, other languages, tool definitions and images. Reading the usage object after sending (C) is accurate but happens after you have paid and after a too-large request may already have failed, so it is not a pre-flight check.",
+    "explanation": "Anthropic provides a token counting endpoint (and SDK helpers) that returns a close estimate of the input token count (free to use) for messages, system prompt, tools and images without running the model, so you can trim or chunk before sending (A). Dividing characters by four (B) and counting words (D) are rough heuristics that are especially wrong for code, other languages, tool definitions and images. Reading the usage object after sending (C) is accurate but happens after you have paid and after a too-large request may already have failed, so it is not a pre-flight check.",
     "source": {
       "title": "Anthropic Docs: Claude developer guide & API reference",
       "url": "https://docs.anthropic.com/en/docs/welcome"
@@ -16254,7 +16258,7 @@
         "options": [
           {
             "id": "A",
-            "text": "Utilice un punto final de recuento de tokens o un asistente de SDK para obtener un recuento preciso"
+            "text": "Utilice un punto final de conteo de tokens o un asistente de SDK para obtener un conteo confiable"
           },
           {
             "id": "B",
@@ -16269,7 +16273,7 @@
             "text": "cuenta las palabras"
           }
         ],
-        "explanation": "El recuento previo al vuelo es esencial cuando se reúne un contexto grande para poder recortarlo o fragmentarlo antes de alcanzar el límite de la ventana en lugar de manejar una solicitud fallida."
+        "explanation": "Anthropic proporciona un punto final de conteo de tokens (y ayudas de SDK) que devuelve una estimación cercana del recuento de tokens de entrada (de uso gratuito) para mensajes, mensajes del sistema, herramientas e imágenes sin ejecutar el modelo, para que pueda recortar o fragmentar antes de enviar (A). Dividir caracteres entre cuatro (B) y contar palabras (D) son heurísticas aproximadas que son especialmente incorrectas para el código, otros lenguajes, definiciones de herramientas e imágenes. La lectura del objeto de uso después del envío (C) es precisa, pero ocurre después de haber pagado y después de que una solicitud demasiado grande ya haya fallado, por lo que no es una verificación previa al vuelo."
       }
     }
   },
@@ -16668,7 +16672,7 @@
       }
     ],
     "correctAnswer": "A",
-    "explanation": "Caching writes cost a premium (about 1.25x base input price for the 5-minute TTL) and reads cost about 0.1x, so you only profit if later requests hit the cache. Writes every time with zero reads means the cached prefix is never identical between requests, so you pay extra and gain nothing (A). Typical causes are timestamps or request IDs near the start, non-deterministic tool or JSON serialization, or per-user content placed before the cache breakpoint. It is not normal (B). max_tokens (C) and streaming (D) have no effect on prefix matching.",
+    "explanation": "Caching writes cost a premium (about 1.25x base input price for the 5-minute TTL) and reads cost about 0.1x or less (0.05x on Opus/Sonnet 5.5), so you only profit if later requests hit the cache. Writes every time with zero reads means the cached prefix is never identical between requests, so you pay extra and gain nothing (A). Typical causes are timestamps or request IDs near the start, non-deterministic tool or JSON serialization, or per-user content placed before the cache breakpoint. It is not normal (B). max_tokens (C) and streaming (D) have no effect on prefix matching.",
     "source": {
       "title": "Anthropic Docs: Claude developer guide & API reference",
       "url": "https://docs.anthropic.com/en/docs/welcome"
@@ -16698,7 +16702,7 @@
             "text": "Deshabilitar la transmisión"
           }
         ],
-        "explanation": "Los culpables comunes son las marcas de tiempo/ID de solicitud en el prefijo, la serialización de herramientas no determinista o el contenido por usuario colocado antes del punto de interrupción."
+        "explanation": "Las escrituras de almacenamiento en caché cuestan una prima (aproximadamente 1,25 veces el precio de entrada base para el TTL de 5 minutos) y las lecturas cuestan alrededor de 0,1 veces o menos (0,05 veces en Opus/Sonnet 5.5), por lo que solo obtendrá ganancias si las solicitudes posteriores llegan al caché. Escribe cada vez con cero lecturas significa que el prefijo almacenado en caché nunca es idéntico entre solicitudes, por lo que paga más y no gana nada (A). Las causas típicas son marcas de tiempo o ID de solicitud cerca del inicio, herramienta no determinista o serialización JSON, o contenido por usuario colocado antes del punto de interrupción de la caché. No es normal (B). max_tokens (C) y streaming (D) no tienen ningún efecto en la coincidencia de prefijos."
       }
     }
   },
@@ -16774,7 +16778,7 @@
     "certification": "claude-certified-developer",
     "balotario": "Balotario 6",
     "number": 20,
-    "question": "A request specifies tool_use requiring a specific tool but the model has no relevant information to fill a required parameter. What is the likely outcome and correct fix?",
+    "question": "On a model that supports forced tool use, a request forces a specific tool via tool_choice but the model has no relevant information to fill a required parameter. What is the likely outcome and correct fix?",
     "options": [
       {
         "id": "A",
@@ -16794,10 +16798,10 @@
       }
     ],
     "correctAnswer": "A",
-    "explanation": "Forcing a tool with tool_choice guarantees the model emits a call to that tool, but it cannot guarantee that a value for each required parameter is derivable from context. If information is missing, the model may fabricate a plausible argument (A). Fix it by supplying the context, or by making the parameter optional with a defined absent or unknown value so the model can say so. The API does not reject the request (B), since the schema is valid. With forced tool use, the model does not fall back to a text block (C). The tool is only run by your code, with whatever arguments the model produced, not with automatic nulls (D).",
+    "explanation": "Forcing a tool with tool_choice guarantees the model emits a call to that tool, but it cannot guarantee that a value for each required parameter is derivable from context. If information is missing, the model may guess or fabricate a plausible argument (A). On Opus 5.5, Sonnet 5.5 and similar models, forced tool_choice is rejected with a 400, so use auto plus strict tool use there. Fix it by supplying the context, or by making the parameter optional with a defined absent or unknown value so the model can say so. The API does not reject the request (B), since the schema is valid. With forced tool use, the model does not fall back to a text block (C). The tool is only run by your code, with whatever arguments the model produced, not with automatic nulls (D).",
     "source": {
-      "title": "Anthropic Docs: Tool use (function calling)",
-      "url": "https://docs.anthropic.com/en/docs/build-with-claude/tool-use"
+      "title": "Anthropic Docs: Handle tool calls",
+      "url": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/handle-tool-calls"
     },
     "category": {
       "id": "prompting_agents_tool_use",
@@ -16805,7 +16809,7 @@
     },
     "translations": {
       "es": {
-        "question": "Una solicitud especifica tool_use que requiere una herramienta específica, pero el modelo no tiene información relevante para completar un parámetro requerido. ¿Cuál es el resultado probable y la solución correcta?",
+        "question": "En un modelo que admite el uso forzado de herramientas, una solicitud fuerza una herramienta específica a través de tool_choice pero el modelo no tiene información relevante para completar un parámetro requerido. ¿Cuál es el resultado probable y la solución correcta?",
         "options": [
           {
             "id": "A",
@@ -16824,7 +16828,7 @@
             "text": "La herramienta se ejecutará con argumentos nulos automáticamente."
           }
         ],
-        "explanation": "Forzar el uso de herramientas es poderoso, pero solo debe usarse cuando los argumentos requeridos sean realmente derivables del contexto. De lo contrario, permita que el modelo rechace o proporcione un valor desconocido explícito."
+        "explanation": "Forzar una herramienta con tool_choice garantiza que el modelo emita una llamada a esa herramienta, pero no puede garantizar que un valor para cada parámetro requerido pueda derivarse del contexto. Si falta información, el modelo puede adivinar o fabricar un argumento plausible (A). En Opus 5.5, Sonnet 5.5 y modelos similares, la opción de herramienta forzada se rechaza con un 400, así que use el uso automático más estricto de herramientas allí. Solucionelo proporcionando el contexto o haciendo que el parámetro sea opcional con un valor definido ausente o desconocido para que el modelo pueda indicarlo. La API no rechaza la solicitud (B), ya que el esquema es válido. Con el uso forzado de herramientas, el modelo no vuelve a un bloque de texto (C). La herramienta solo se ejecuta mediante su código, con cualquier argumento que produzca el modelo, no con nulos automáticos (D)."
       }
     }
   },
@@ -17215,7 +17219,7 @@
       }
     ],
     "correctAnswer": "A",
-    "explanation": "MCP (Model Context Protocol) servers expose additional tools, resources and prompts to Claude Code, connecting it to external systems like databases, issue trackers or APIs beyond its built-in file and shell tools (A). They do not replace the CLAUDE.md memory file (B), which carries project instructions and context. Permissions are configured in settings files (C), and the model is chosen by settings or the /model command (D). Note: the memory file is named CLAUDE.md, and the original text 'CLAUDE.md' has been corrected.",
+    "explanation": "MCP (Model Context Protocol) servers expose additional tools, resources and prompts to Claude Code, connecting it to external systems like databases, issue trackers or APIs beyond its built-in file and shell tools (A). They do not replace the CLAUDE.md memory file (B), which carries project instructions and context. Permissions are configured in settings files (C), and the model is chosen by settings or the /model command (D).",
     "source": {
       "title": "Anthropic Docs: Model Context Protocol (MCP)",
       "url": "https://docs.anthropic.com/en/docs/agents-and-tools/mcp"
@@ -17234,7 +17238,7 @@
           },
           {
             "id": "B",
-            "text": "Reemplazan el archivo de memoria .claudemd"
+            "text": "Reemplazan el archivo de memoria CLAUDE.md"
           },
           {
             "id": "C",
@@ -17245,7 +17249,7 @@
             "text": "Seleccionan qué modelo se utiliza"
           }
         ],
-        "explanation": "Una configuración típica combina herramientas integradas de archivos/comandos, algunos servidores MCP para sistemas externos y .claudemd para el contexto del proyecto."
+        "explanation": "Los servidores MCP (Protocolo de contexto modelo) exponen herramientas, recursos e indicaciones adicionales a Claude Code, conectándolo a sistemas externos como bases de datos, rastreadores de problemas o API más allá de su archivo integrado y herramientas de shell (A). No reemplazan el archivo de memoria CLAUDE.md (B), que contiene instrucciones y contexto del proyecto. Los permisos se configuran en los archivos de configuración (C) y el modelo se elige mediante la configuración o el comando /model (D)."
       }
     }
   },
@@ -18057,7 +18061,7 @@
     "options": [
       {
         "id": "A",
-        "text": "Define the schema as a tool input_schema and force tool use then validate the returned arguments"
+        "text": "Define the schema as a tool input_schema (forced tool_choice, or strict tool use / structured outputs on models that reject forcing) and validate the returned arguments"
       },
       {
         "id": "B",
@@ -18073,7 +18077,7 @@
       }
     ],
     "correctAnswer": "A",
-    "explanation": "When another program consumes the output, force the schema through a tool: define it as input_schema, set tool_choice to that tool (or use structured outputs where available), and still validate the returned arguments (A). This yields structured JSON far more reliably than prose requests. Asking for JSON in prose and parsing whatever returns (B) is fragile to stray text and formatting. Markdown conversion (C) is lossy and ambiguous. A second model call to restructure free text (D) adds latency, cost and another failure point. If tools are unavailable, fallbacks are explicit schema docs, examples and a stop sequence, always with validation.",
+    "explanation": "When another program consumes the output, force the schema through a tool: define it as input_schema, set tool_choice to that tool (or use structured outputs where available), and still validate the returned arguments (A). Some newer models, such as Opus 5.5 and Sonnet 5.5, reject forced tool_choice; there use auto with strict tool use or structured outputs. This yields structured JSON far more reliably than prose requests. Asking for JSON in prose and parsing whatever returns (B) is fragile to stray text and formatting. Markdown conversion (C) is lossy and ambiguous. A second model call to restructure free text (D) adds latency, cost and another failure point. If tools are unavailable, fallbacks are explicit schema docs, examples and a stop sequence, always with validation.",
     "source": {
       "title": "Anthropic Research: Building effective agents",
       "url": "https://www.anthropic.com/research/building-effective-agents"
@@ -18088,7 +18092,7 @@
         "options": [
           {
             "id": "A",
-            "text": "Defina el esquema como una herramienta input_schema y fuerce el uso de la herramienta, luego valide los argumentos devueltos."
+            "text": "Defina el esquema como una herramienta input_schema (tool_choice forzado, o uso estricto de herramientas/salidas estructuradas en modelos que rechazan el forzado) y valide los argumentos devueltos."
           },
           {
             "id": "B",
@@ -18103,7 +18107,7 @@
             "text": "Solicite un mensaje de texto gratuito y utilice una segunda llamada modelo para estructurarlo"
           }
         ],
-        "explanation": "Si no se pueden utilizar las herramientas, la alternativa es completar previamente con una llave de apertura más una secuencia de parada y documentación de esquema explícita. Valide el resultado analizado en cualquier caso."
+        "explanation": "Cuando otro programa consuma la salida, fuerce el esquema a través de una herramienta: defínalo como input_schema, establezca tool_choice en esa herramienta (o use salidas estructuradas cuando estén disponibles) y aún así valide los argumentos devueltos (A). Algunos modelos más nuevos, como Opus 5.5 y Sonnet 5.5, rechazan la elección forzada de herramientas; allí se usa auto con uso estricto de herramientas o salidas estructuradas. Esto produce JSON estructurado de manera mucho más confiable que las solicitudes en prosa. Solicitar JSON en prosa y analizar lo que devuelva (B) es frágil ante el texto y el formato extraviados. La conversión de Markdown (C) tiene pérdidas y es ambigua. Un segundo modelo de llamada para reestructurar el texto libre (D) agrega latencia, costo y otro punto de falla. Si las herramientas no están disponibles, las alternativas son documentos de esquema explícitos, ejemplos y una secuencia de parada, siempre con validación."
       }
     }
   },
@@ -18624,7 +18628,7 @@
       }
     ],
     "correctAnswer": "A y B",
-    "explanation": "Answer key corrected (was A, B y C). MCP is a separate open protocol while the Messages API has its own tool-use mechanism (A), and an MCP host or client typically translates server-provided tools into API tool definitions (B). Option C is no longer true: the Anthropic API offers an MCP connector, where the API itself connects to remote MCP servers. Using MCP does not require abandoning the tools parameter (D), since host translation uses it, and MCP is not limited to local servers (E), as it supports remote servers over streamable HTTP.",
+    "explanation": "MCP is a separate open protocol while the Messages API has its own tool-use mechanism (A), and an MCP host or client typically translates server-provided tools into API tool definitions (B). Option C is no longer true: the Anthropic API offers an MCP connector, where the API itself connects to remote MCP servers. Using MCP does not require abandoning the tools parameter (D), since host translation uses it, and MCP is not limited to local servers (E), as it supports remote servers over streamable HTTP.",
     "source": {
       "title": "Anthropic Docs: Model Context Protocol (MCP)",
       "url": "https://docs.anthropic.com/en/docs/agents-and-tools/mcp"
@@ -18647,7 +18651,7 @@
           },
           {
             "id": "C",
-            "text": "Los servidores MCP son ejecutados por el host o el cliente, nunca por la API Anthropic"
+            "text": "Los servidores MCP son ejecutados por el host o el cliente, nunca por la API de Anthropic"
           },
           {
             "id": "D",
@@ -18658,7 +18662,7 @@
             "text": "MCP está limitado a servidores locales"
           }
         ],
-        "explanation": "Piensa en capas. MCP estandariza cómo se descubren e invocan las capacidades entre el host/servidor. La API de mensajes estandariza cómo el modelo solicita una llamada a una herramienta."
+        "explanation": "MCP es un protocolo abierto independiente, mientras que la API de Mensajes tiene su propio mecanismo de uso de herramientas (A), y un host o cliente de MCP normalmente traduce las herramientas proporcionadas por el servidor en definiciones de herramientas API (B). La opción C ya no es cierta: la API Anthropic ofrece un conector MCP, donde la propia API se conecta a servidores MCP remotos. El uso de MCP no requiere abandonar el parámetro de herramientas (D), ya que la traducción del host lo usa, y MCP no se limita a servidores locales (E), ya que admite servidores remotos a través de HTTP que se puede transmitir."
       }
     }
   },
