@@ -20,13 +20,13 @@ Codex para análisis y generación de sugerencias.
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «GitHub Copilot procesa temporalmente las entradas de código en servidores externos, pero no almacena el código ni usa las entradas del usuario para reentrenar el modelo subyacente.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («GitHub Copilot almacena permanentemente todo el código del usuario y los datos del proyecto para mejorar continuamente su modelo de machine learning.») no satisface ese criterio; la opción C («GitHub Copilot almacena todo el código del usuario para mejorar futuras sugerencias y puede compartirlo con otros usuarios.») no satisface ese criterio; la opción D («GitHub Copilot no almacena código específico del usuario, pero envía snippets anonimizados al modelo Codex para análisis y generación de sugerencias.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: alojamiento de modelos](https://docs.github.com/en/copilot/reference/ai-models/model-hosting)
 
 Pregunta 2
 Una corporación multinacional con estrictos requisitos de seguridad y regulación necesita GitHub Copilot
-con SSO, logs de auditoría detallados y despliegue tanto en entornos cloud como self-hosted. ¿Qué plan
+con SSO y logs de auditoría detallados en entornos cloud. ¿Qué plan
 satisface mejor estas necesidades?
 A. Copilot Individual.
 B. Copilot Enterprise.
@@ -36,7 +36,7 @@ D. Copilot Business.
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La opción B es la correcta para una organización que necesita controles enterprise, SSO y auditoría en GitHub Enterprise Cloud. Copilot Enterprise ofrece las capacidades adicionales de administración y gobernanza frente a los planes individuales. GitHub Copilot no está disponible actualmente para GitHub Enterprise Server.
 
 Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
@@ -56,7 +56,7 @@ externos.
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «La solicitud se envía a los servidores de GitHub Copilot, pasa por un proxy que preprocesa la entrada, luego va al modelo, y la respuesta se postprocesa en el proxy antes de volver al IDE.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («La solicitud se envía desde el IDE directamente al modelo de GitHub Copilot, que procesa los datos, los envía a un proxy para postprocesamiento y devuelve la respuesta al IDE.») no satisface ese criterio; la opción B («La solicitud se envía desde el IDE a los servidores de GitHub, donde el proxy hace postprocesamiento antes de enviarla al modelo.») no satisface ese criterio; la opción D («La solicitud se procesa localmente en el IDE mediante un proxy sin transmitir datos a servidores externos.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -73,7 +73,7 @@ actual.
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «Usar las sugerencias inline de Copilot, que proporcionan código mientras escribes según el contexto actual.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Usar Copilot para refactorizar automáticamente todo el codebase y aplicar buenas prácticas.») no satisface ese criterio; la opción B («Usar una función de debugging por chat para identificar problemas y proponer soluciones.») no satisface ese criterio; la opción C («Habilitar Copilot para ejecutar pruebas unitarias y generar reportes de test.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
@@ -92,7 +92,7 @@ con repositorios públicos y otras fuentes, y devuelve sugerencias relevantes.
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «Envía tu código y contexto cercano a un modelo de lenguaje grande alojado remotamente, entrenado con repositorios públicos y otras fuentes, y devuelve sugerencias relevantes.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Recupera código desde una base de datos local preentrenada en tu equipo y lo compara con proyectos anteriores.») no satisface ese criterio; la opción B («Transmite tu código a un modelo de IA en la nube, analiza tu código y repositorios marcados como favoritos, y genera sugerencias personalizadas.») no satisface ese criterio; la opción C («Envía tu código a un servidor remoto, lo compara con repositorios open-source y copia código de proyectos populares.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -108,7 +108,7 @@ D. Permisos granulares para controlar acceso a Copilot por proyecto.
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Logs de auditoría organizacionales que rastrean acciones significativas relacionadas con Copilot.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Logs individuales de acceso de usuario para monitorear actividades específicas de desarrolladores.») no satisface ese criterio; la opción C («Alertas en tiempo real para acciones sensibles como acceso a código propietario.») no satisface ese criterio; la opción D («Permisos granulares para controlar acceso a Copilot por proyecto.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
@@ -126,7 +126,7 @@ y cumplimiento.
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «Usar Copilot para generar código Python a partir de funciones COBOL y validar manualmente corrección y cumplimiento.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Reemplazar toda la aplicación COBOL con código generado por IA sin conocer la lógica original.») no satisface ese criterio; la opción B («Permitir que Copilot reescriba toda la aplicación COBOL en Python sin verificación humana.») no satisface ese criterio; la opción C («Desplegar directamente en producción el código Python generado por Copilot, asumiendo que es correcto.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: auditoría de GitHub Copilot](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-enterprise/review-audit-logs)
 
@@ -144,7 +144,7 @@ D. Pedir pruebas con grandes conjuntos de números aleatorios para asegurar esca
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque usa Copilot como apoyo para proponer pruebas y casos límite, no como sustituto de la validación. Las pruebas generadas deben revisarse, ejecutarse y ampliarse para cubrir comportamiento esperado, entradas inválidas, errores y requisitos de seguridad o rendimiento.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Pedir a Copilot casos de prueba describiendo edge cases como lista vacía, lista de un solo elemento o lista con elementos idénticos.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Confiar en que Copilot genere una prueba básica con tres números y probar manualmente los demás casos.») no satisface ese criterio; la opción C («Pedir pruebas solo para listas con números positivos, asumiendo que los negativos no son relevantes.») no satisface ese criterio; la opción D («Pedir pruebas con grandes conjuntos de números aleatorios para asegurar escalabilidad.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: escribir pruebas con GitHub Copilot](https://docs.github.com/en/copilot/tutorials/write-tests)
 
@@ -161,7 +161,7 @@ D. Pedir directamente pruebas de integración en lugar de pruebas unitarias.
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque usa Copilot como apoyo para proponer pruebas y casos límite, no como sustituto de la validación. Las pruebas generadas deben revisarse, ejecutarse y ampliarse para cubrir comportamiento esperado, entradas inválidas, errores y requisitos de seguridad o rendimiento.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «Empezar a escribir la definición de prueba, por ejemplo def test_factorial(): , y dejar que Copilot sugiera casos basados en la función.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Confiar únicamente en las sugerencias de Copilot, asumiendo que cubrirán todos los casos borde.») no satisface ese criterio; la opción B («Pedir a Copilot una nueva implementación del factorial junto con sus pruebas.») no satisface ese criterio; la opción D («Pedir directamente pruebas de integración en lugar de pruebas unitarias.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: escribir pruebas con GitHub Copilot](https://docs.github.com/en/copilot/tutorials/write-tests)
 
@@ -169,17 +169,17 @@ Pregunta 10
 Eres administrador de una organización GitHub y debes automatizar la administración de suscripciones
 GitHub Copilot Business. ¿Qué endpoint REST API debes usar para ver los detalles actuales de la suscripción
 y cuál es el método correcto de autenticación?
-A. GET /orgs/{org}/copilot_subscription con personal access token.
-B. GET /orgs/{org}/copilot_subscription con token OAuth2.
+A. GET /orgs/{org}/copilot/billing con OAuth app token o classic personal access token con manage_billing:copilot o read:org.
+B. GET /orgs/{org}/copilot/billing con GitHub App installation token.
 C. GET /orgs/{org}/copilot_subscription con JWT.
-D. POST /orgs/{org}/copilot_subscription con token OAuth2.
+D. POST /orgs/{org}/copilot/billing con token OAuth2.
 
-Respuesta correcta: B
+Respuesta correcta: A
 
 Explicación
-La opción B es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La opción A es correcta: el endpoint vigente para consultar los detalles de la suscripción y los ajustes de una organización es `GET /orgs/{org}/copilot/billing`. Puede usarse un OAuth app token o un classic personal access token con el scope `manage_billing:copilot` o `read:org`. Un GitHub App installation token no es la forma documentada para este endpoint en el escenario descrito. Las rutas `/copilot_subscription` no existen para esta operación y el método POST no corresponde a una consulta.
 
-Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
+Fuente oficial: [GitHub Docs: REST API de administración de usuarios de Copilot](https://docs.github.com/en/rest/copilot/copilot-user-management)
 
 Pregunta 11
 Has usado GitHub Copilot en tu editor, pero ahora quieres explorar Copilot en la CLI. Buscas un comando
@@ -192,12 +192,12 @@ D. copilot list
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque corresponde al uso de Copilot desde la terminal para obtener orientación o proponer comandos. Los comandos generados deben revisarse antes de ejecutarse, especialmente si pueden modificar archivos, repositorios o infraestructura.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «copilot help» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («copilot commands») no satisface ese criterio; la opción B («copilot doc») no satisface ese criterio; la opción D («copilot list») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: GitHub Copilot CLI](https://docs.github.com/en/copilot/how-tos/copilot-cli)
 
 Pregunta 12
-Tu equipo desarrolla una aplicación financiera y configuró exclusiones de contenido en copilot.yaml
+Tu equipo desarrolla una aplicación financiera y configuró exclusiones de contenido mediante los ajustes de GitHub
 para evitar que GitHub Copilot acceda a algoritmos financieros sensibles. Algunos desarrolladores temen
 que excluir muchos archivos limite las sugerencias útiles. ¿Qué describe correctamente el impacto de
 excluir contenido?
@@ -210,7 +210,7 @@ resto del proyecto.
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque aplica una salvaguarda explícita para limitar el contexto que Copilot puede usar. La exclusión de contenido debe configurarse en los controles admitidos por la organización; revisar el resultado, proteger los secretos y aplicar las obligaciones de privacidad siguen siendo responsabilidad del equipo.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «Excluir ciertos archivos evita sugerencias basadas en ese contenido, pero Copilot puede seguir usando el resto del proyecto.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Excluir archivos deshabilita todas las sugerencias para todo el repositorio.») no satisface ese criterio; la opción B («Excluir archivos impide que Copilot genere sugerencias en todos los proyectos asociados a la cuenta.») no satisface ese criterio; la opción C («Las exclusiones solo afectan el archivo donde se definen, no otros archivos.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: exclusión de contenido](https://docs.github.com/en/copilot/concepts/content-exclusion)
 
@@ -226,7 +226,7 @@ D. Usar caché para resultados previamente procesados.
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «Usar caché para resultados previamente procesados.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Sanitizar entradas solo con expresiones regulares sin manejar casos borde.») no satisface ese criterio; la opción B («Eliminar validación de entradas para mejorar velocidad.») no satisface ese criterio; la opción C («Reemplazar la función por una solución recursiva para reducir bucles.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -244,12 +244,12 @@ D. Reemplazando completamente los pasos manuales de debugging.
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque coincide con el objetivo descrito y con el uso de Copilot como asistente de desarrollo. La salida generada es una propuesta probabilística: debe revisarse con el contexto real del proyecto, ejecutarse en pruebas y validarse contra los requisitos antes de producción.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Generando funciones para monitorear uso de memoria en intervalos específicos y ayudar a identificar dónde ocurre la fuga.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Reescribiendo automáticamente las partes de manejo de memoria, asumiendo que resolverá el problema.») no satisface ese criterio; la opción C («Sugiriendo optimizaciones aleatorias en todo el codebase.») no satisface ese criterio; la opción D («Reemplazando completamente los pasos manuales de debugging.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [Microsoft Learn: guía de estudio GH-300](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300)
 
 Pregunta 15
-Estás configurando una Knowledge Base interna para tu equipo de ingeniería que usa GitHub Copilot. Para
+Estás configurando una Copilot Space interna para tu equipo de ingeniería que usa GitHub Copilot. Para
 mejorar consistencia de código y buenas prácticas, ¿qué información debería incluirse para aportar mayor
 valor?
 A. Organigramas y estructura jerárquica del equipo.
@@ -260,7 +260,7 @@ D. Reportes detallados de bugs históricos con logs y patch notes.
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque coincide con el objetivo descrito y con el uso de Copilot como asistente de desarrollo. La salida generada es una propuesta probabilística: debe revisarse con el contexto real del proyecto, ejecutarse en pruebas y validarse contra los requisitos antes de producción.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Snippets y templates que sigan estándares de codificación y patrones de diseño de la empresa.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Organigramas y estructura jerárquica del equipo.») no satisface ese criterio; la opción C («Una lista completa de errores y bugs comunes del equipo.») no satisface ese criterio; la opción D («Reportes detallados de bugs históricos con logs y patch notes.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [Microsoft Learn: guía de estudio GH-300](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300)
 
@@ -279,7 +279,7 @@ edge cases like no pair found. Prioritize an efficient approach.”
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque aporta contexto, restricciones o ejemplos verificables al modelo. Microsoft Learn y GitHub Docs recomiendan dividir tareas complejas, evitar ambigüedad, incluir requisitos concretos e iterar sobre el resultado; un prompt breve y genérico deja demasiadas decisiones sin especificar.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «“Generate Python code for a function that finds two integers in a list that sum to a target, and handle edge cases like no pair found. Prioritize an efficient approach.”» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («“Write a Python function that returns two integers from a list that add up to a target sum.”») no satisface ese criterio; la opción B («“Create a Python function that accepts a list and a target sum and returns two numbers from the list that add up to the target sum. If no such pair exists, return None.”») no satisface ese criterio; la opción C («“Create Python code that implements an algorithm for finding a pair of numbers in a list that sum to a target value.”») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: ingeniería de prompts](https://docs.github.com/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot)
 
@@ -290,30 +290,29 @@ datos de Copilot? Selecciona dos.
 A. Las sugerencias generadas por Copilot siempre se conservan para entrenamiento futuro del modelo.
 B. Copilot tiene acceso a todo el codebase de tus repositorios privados en todo momento.
 C. Copilot solo procesa pequeños snippets de contexto de código, no todo el proyecto.
-D. Copilot usa técnicas de privacidad diferencial para evitar que el modelo recuerde datos específicos de
-sesiones individuales.
+D. El contexto enviado y las garantías de retención dependen de la superficie, el plan y el modelo utilizado.
 
 Respuesta correcta: C y D
 
 Explicación
-La opción C y D es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+Las opciones C y D son correctas. Copilot suele construir el contexto a partir de fragmentos relevantes del archivo y de otras fuentes autorizadas, no enviando automáticamente todo el repositorio en cada solicitud. Las garantías concretas de retención y uso dependen del plan, la superficie de Copilot y el modelo seleccionado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
 Pregunta 18
-Tu organización quiere crear una Knowledge Base para mejorar calidad y consistencia de código con GitHub
-Copilot Enterprise. ¿Cuál describe mejor cómo funciona la Knowledge Base?
+Tu organización quiere crear una Copilot Space para mejorar calidad y consistencia de código con GitHub
+Copilot. ¿Cuál describe mejor cómo funciona un Copilot Space?
 A. Convierte documentación y código existentes en nuevos datos de entrenamiento para el modelo de
 Copilot.
 B. Proporciona sugerencias de debugging en tiempo real basadas en incidentes pasados.
-C. Permite almacenar y compartir estándares de codificación, templates y snippets reutilizables que Copilot
-prioriza al sugerir código.
+C. Permite organizar y compartir contexto curado, como repositorios, archivos, issues y notas, para hacer
+preguntas de Copilot Chat más relevantes.
 D. Entrena el modelo de Copilot en tiempo real con snippets internos.
 
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La opción C es correcta: Copilot Spaces organiza contexto seleccionado y puede compartirse según su pertenencia personal u organizacional. No convierte ese contenido en datos de entrenamiento ni garantiza resultados de debugging o revisiones automáticas.
 
 Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
@@ -321,8 +320,8 @@ Pregunta 19
 Un equipo usa GitHub Copilot Enterprise para mejorar eficiencia. El líder de ingeniería quiere que los
 desarrolladores usen resúmenes de pull request generados por Copilot. ¿Qué afirmación describe
 correctamente cómo se generan y sus limitaciones?
-A. Los resúmenes se generan automáticamente según mensajes de commit, cambios de archivos y
-contexto general del proyecto.
+A. Los resúmenes se generan a demanda a partir de los cambios y el contexto disponible del pull request,
+y deben revisarse antes de usarse.
 B. Garantizan que todos los commits sigan Conventional Commits.
 C. Los desarrolladores pueden entrenar el modelo de PR summaries con el estilo de la organización.
 D. Detectan y explican automáticamente la intención completa de los cambios, garantizando cumplimiento.
@@ -330,7 +329,7 @@ D. Detectan y explican automáticamente la intención completa de los cambios, g
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La opción A es correcta: Copilot puede generar el texto de un pull request a solicitud del usuario a partir de los cambios y el contexto disponible. El resultado es probabilístico y no garantiza convenciones de commits, exactitud completa ni cumplimiento, por lo que debe revisarse antes de integrarlo en el flujo de trabajo.
 
 Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
@@ -346,7 +345,7 @@ D. Copilot considera todo el codebase y envía el proyecto completo.
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque aporta contexto, restricciones o ejemplos verificables al modelo. Microsoft Learn y GitHub Docs recomiendan dividir tareas complejas, evitar ambigüedad, incluir requisitos concretos e iterar sobre el resultado; un prompt breve y genérico deja demasiadas decisiones sin especificar.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Copilot extrae partes relevantes del archivo actual, incluyendo código cercano, comentarios, firmas de función y posición del cursor.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («El usuario define manualmente la porción exacta de código incluida en el prompt.») no satisface ese criterio; la opción C («Copilot considera solo las últimas líneas antes del cursor e ignora comentarios, funciones e imports.») no satisface ese criterio; la opción D («Copilot considera todo el codebase y envía el proyecto completo.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: ingeniería de prompts](https://docs.github.com/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot)
 
@@ -361,7 +360,7 @@ D. Si un usuario habilitó o deshabilitó Copilot en su configuración.
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «Si un usuario habilitó o deshabilitó Copilot en su configuración.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Los prompts detallados ingresados por los desarrolladores.») no satisface ese criterio; la opción B («Los repositorios exactos donde se usó Copilot.») no satisface ese criterio; la opción C («Las líneas específicas sugeridas por Copilot.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
@@ -377,7 +376,7 @@ D. Código de entrada → repositorio GitHub local → modelo preentrenado → s
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Código de entrada → modelo preentrenado en la nube → tokenización y análisis del input → sugerencia contextual.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Código de entrada → IDE genera sugerencias aleatorias → cloud verifica → sugerencia final.») no satisface ese criterio; la opción C («Código de entrada → modelo local → cloud processing → sugerencia.») no satisface ese criterio; la opción D («Código de entrada → repositorio GitHub local → modelo preentrenado → sugerencia desde IDE.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -393,7 +392,7 @@ D. Garantiza cumplimiento con todos los requisitos de licenciamiento.
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque coincide con el objetivo descrito y con el uso de Copilot como asistente de desarrollo. La salida generada es una propuesta probabilística: debe revisarse con el contexto real del proyecto, ejecutarse en pruebas y validarse contra los requisitos antes de producción.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Puede generar código sintácticamente correcto pero sin relevancia funcional para el contexto específico del usuario.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Genera código completamente optimizado y libre de vulnerabilidades para cualquier lenguaje.») no satisface ese criterio; la opción C («Garantiza código sin bugs si el usuario escribe comentarios claros.») no satisface ese criterio; la opción D («Garantiza cumplimiento con todos los requisitos de licenciamiento.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [Microsoft Learn: guía de estudio GH-300](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300)
 
@@ -409,7 +408,7 @@ D. No existe método oficial para enviar feedback.
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque refleja que Copilot Chat proporciona asistencia contextual mediante lenguaje natural. Sus respuestas pueden ser inexactas o incompletas; el desarrollador debe revisar, probar y confirmar cualquier cambio antes de incorporarlo.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Usar directamente los botones thumbs-up o thumbs-down en Copilot Chat.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Abrir un issue en el repositorio GitHub de Copilot.») no satisface ese criterio; la opción C («Enviar únicamente un correo al equipo de soporte.») no satisface ese criterio; la opción D («No existe método oficial para enviar feedback.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: uso responsable de Copilot Chat](https://docs.github.com/en/copilot/responsible-use/chat)
 
@@ -426,7 +425,7 @@ D. Agregar archivos sensibles a .gitignore .
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La opción B es la mejor respuesta entre las alternativas porque las exclusiones de contenido impiden que Copilot use los archivos afectados como contexto y permitan que sean revisados por la herramienta correspondiente. No hacen que el sistema sea automáticamente compatible con HIPAA ni reemplazan controles de acceso, cifrado, retención y revisión contractual. La selección debe combinarse con las políticas de privacidad del plan y los requisitos de seguridad de la organización.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -441,7 +440,7 @@ D. Mezclar varios lenguajes de programación en el mismo prompt.
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Usar lenguaje claro y estructurado, ejemplos de entrada/salida y restricciones o casos borde.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Dar una descripción general de una sola oración.») no satisface ese criterio; la opción C («Incluir la mayor cantidad posible de palabras clave relacionadas.») no satisface ese criterio; la opción D («Mezclar varios lenguajes de programación en el mismo prompt.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -458,7 +457,7 @@ D. Asignar licencias a nivel organización y configurar políticas por repositor
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «Habilitar políticas de Copilot Business a nivel enterprise y desactivar sugerencias provenientes de repositorios públicos.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Configurar políticas mediante security policies generales en Admin Console.») no satisface ese criterio; la opción B («Usar GitHub Actions para aplicar políticas de Copilot en todos los repositorios.») no satisface ese criterio; la opción D («Asignar licencias a nivel organización y configurar políticas por repositorio.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
@@ -467,14 +466,14 @@ Evalúas GitHub Copilot para un equipo grande en una organización mediana que t
 y privados. Necesitas gestionar costos, seguridad de código y funciones enterprise. ¿Qué planes se ajustan
 mejor? Selecciona dos.
 A. GitHub Copilot for Enterprise.
-B. GitHub Copilot for Individuals, plan pagado.
-C. GitHub Copilot for Individuals, gratis para repos públicos.
+B. GitHub Copilot Pro.
+C. GitHub Copilot Free.
 D. GitHub Copilot for Business.
 
 Respuesta correcta: A y D
 
 Explicación
-La opción A y D es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+Las respuestas correctas son las opciones A y D. Copilot Enterprise y Copilot Business están diseñados para organizaciones y ofrecen administración centralizada, políticas y facturación por puestos. Copilot Pro es un plan individual y Copilot Free ofrece acceso limitado, por lo que no cumplen las necesidades enterprise descritas.
 
 Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
@@ -491,7 +490,7 @@ D. Puede reemplazar pruebas manuales generando tests que cubren todos los edge c
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque coincide con el objetivo descrito y con el uso de Copilot como asistente de desarrollo. La salida generada es una propuesta probabilística: debe revisarse con el contexto real del proyecto, ejecutarse en pruebas y validarse contra los requisitos antes de producción.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Puede proporcionar snippets para operaciones básicas como total, impuestos y descuentos, ahorrando tiempo en tareas repetitivas.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Puede garantizar mejores prácticas y optimización para e-commerce a gran escala.») no satisface ese criterio; la opción C («Puede escribir toda la lógica, incluyendo leyes fiscales y reglas de descuento, sin input del desarrollador.») no satisface ese criterio; la opción D («Puede reemplazar pruebas manuales generando tests que cubren todos los edge cases.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [Microsoft Learn: guía de estudio GH-300](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300)
 
@@ -508,7 +507,7 @@ D. “Write a JavaScript function that copies properties of an object.”
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque aporta contexto, restricciones o ejemplos verificables al modelo. Microsoft Learn y GitHub Docs recomiendan dividir tareas complejas, evitar ambigüedad, incluir requisitos concretos e iterar sobre el resultado; un prompt breve y genérico deja demasiadas decisiones sin especificar.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «“Write a JavaScript function to perform a deep clone of a JavaScript object using recursion, ensuring it handles arrays and objects.”» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («“Write a JavaScript deep clone function without recursion and avoid arrays.”») no satisface ese criterio; la opción B («“Write a JavaScript function to clone an object.”») no satisface ese criterio; la opción D («“Write a JavaScript function that copies properties of an object.”») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: ingeniería de prompts](https://docs.github.com/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot)
 
@@ -525,7 +524,7 @@ D. Permitir Copilot en todas las áreas sin consultar legal o compliance.
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Usar Copilot para generar código y revisar todo código generado, especialmente secciones que manejan datos sensibles y cifrado, antes de producción.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Confiar completamente en Copilot para implementar cifrado porque está entrenado con mucho código.») no satisface ese criterio; la opción C («Usar código generado para datos sensibles sin revisión porque Copilot se asume confiable.») no satisface ese criterio; la opción D («Permitir Copilot en todas las áreas sin consultar legal o compliance.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -540,7 +539,7 @@ D. Permiten a administradores identificar acceso no autorizado a GitHub Copilot.
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «Permiten a administradores identificar acceso no autorizado a GitHub Copilot.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Proporcionan reportes detallados de errores en sugerencias de Copilot.») no satisface ese criterio; la opción B («Bloquean automáticamente intentos de inicio de sesión sospechosos.») no satisface ese criterio; la opción C («Capturan decisiones internas del modelo para explicar cada sugerencia.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
@@ -548,17 +547,17 @@ Pregunta 33
 Como administrador IT de GitHub Copilot Business, necesitas automatizar la administración de
 suscripciones con REST API. ¿Qué endpoint y método debes usar para listar suscripciones activas y qué
 permisos se requieren?
-A. POST /orgs/{org}/copilot/assign-license con scope write:org .
-B. GET /users/{username}/copilot/licenses con scope read:org .
-C. GET /orgs/{org}/copilot/subscriptions con scope admin:org .
-D. GET /orgs/{org}/copilot/licenses con scope admin:org .
+A. GET /orgs/{org}/copilot/billing/seats con OAuth app token o classic personal access token con manage_billing:copilot o read:org.
+B. POST /orgs/{org}/copilot/billing/selected_teams con scope admin:org.
+C. GET /users/{username}/copilot/licenses con scope read:org.
+D. GET /enterprises/{enterprise}/copilot/billing con scope admin:enterprise.
 
-Respuesta correcta: C
+Respuesta correcta: A
 
 Explicación
-La opción C es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La respuesta correcta es la opción A porque la API vigente lista las asignaciones de puestos de una organización mediante `GET /orgs/{org}/copilot/billing/seats`. Solo los owners o usuarios autorizados pueden consultar esa información. OAuth app tokens y classic personal access tokens deben tener el scope `manage_billing:copilot` o `read:org`. Las demás rutas y métodos no realizan esa consulta.
 
-Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
+Fuente oficial: [GitHub Docs: REST API de administración de usuarios de Copilot](https://docs.github.com/en/rest/copilot/copilot-user-management)
 
 Pregunta 34
 Tu equipo usa GitHub Copilot for Individuals, pero ahora trabaja en un repositorio privado con código
@@ -571,7 +570,7 @@ D. Mantener GitHub Copilot for Individuals.
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque aplica una salvaguarda explícita para limitar el contexto que Copilot puede usar. La exclusión de contenido debe configurarse en los controles admitidos por la organización; revisar el resultado, proteger los secretos y aplicar las obligaciones de privacidad siguen siendo responsabilidad del equipo.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «GitHub Copilot for Business.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («GitHub Copilot for Open-Source Projects.») no satisface ese criterio; la opción B («GitHub Copilot Free Plan.») no satisface ese criterio; la opción D («Mantener GitHub Copilot for Individuals.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: exclusión de contenido](https://docs.github.com/en/copilot/concepts/content-exclusion)
 
@@ -586,7 +585,7 @@ D. Evita duplicados solo si el código sugerido supera 100 líneas.
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Bloquea sugerencias que coinciden con más de 150 caracteres de repositorios open-source existentes.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Escanea automáticamente el repositorio y alerta sobre duplicados.») no satisface ese criterio; la opción C («Compara sugerencias contra licencias open-source y bloquea posibles infracciones.») no satisface ese criterio; la opción D («Evita duplicados solo si el código sugerido supera 100 líneas.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
@@ -602,7 +601,7 @@ D. Reducir el prompt a “Function to calculate order cost.”
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque aporta contexto, restricciones o ejemplos verificables al modelo. Microsoft Learn y GitHub Docs recomiendan dividir tareas complejas, evitar ambigüedad, incluir requisitos concretos e iterar sobre el resultado; un prompt breve y genérico deja demasiadas decisiones sin especificar.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «Agregar detalles específicos, como “Function to calculate total cost of order with 10% tax and 5% discount.”» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Agregar varios ejemplos de test cases dentro del prompt.») no satisface ese criterio; la opción B («Especificar solo la sintaxis del lenguaje.») no satisface ese criterio; la opción D («Reducir el prompt a “Function to calculate order cost.”») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: ingeniería de prompts](https://docs.github.com/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot)
 
@@ -618,7 +617,7 @@ D. Copilot aprende continuamente del código que escribes y adapta sugerencias f
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Copilot genera sugerencias con un LLM entrenado en repositorios públicos, pero no siempre entiende contexto o dependencias específicas del proyecto.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Copilot solo funciona con lenguajes populares y no soporta lenguajes de nicho.») no satisface ese criterio; la opción C («Copilot sugiere patrones del archivo actual, pero no usa datos externos.») no satisface ese criterio; la opción D («Copilot aprende continuamente del código que escribes y adapta sugerencias futuras.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -633,7 +632,7 @@ D. Licenciamiento por usuario sin adopción organizacional completa.
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque aplica una salvaguarda explícita para limitar el contexto que Copilot puede usar. La exclusión de contenido debe configurarse en los controles admitidos por la organización; revisar el resultado, proteger los secretos y aplicar las obligaciones de privacidad siguen siendo responsabilidad del equipo.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Restricción de sugerencias generadas por IA según políticas organizacionales.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Personalización de prompts a nivel organización.») no satisface ese criterio; la opción C («Soporte de Copilot Chat en repos privados sin costo adicional.») no satisface ese criterio; la opción D («Licenciamiento por usuario sin adopción organizacional completa.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: exclusión de contenido](https://docs.github.com/en/copilot/concepts/content-exclusion)
 
@@ -643,13 +642,13 @@ función completa con manejo de errores y parsing de respuesta. ¿Cómo generó 
 A. Accedió a repositorios privados para encontrar el snippet más relevante.
 B. Analizó las librerías instaladas localmente.
 C. Escaneó todo el repositorio del proyecto para entender su estructura.
-D. Usó el modelo Codex entrenado con un gran dataset de código público para generar la sugerencia según
-patrones similares.
+D. Usó el contexto disponible y un modelo de lenguaje seleccionado para predecir la continuación según
+patrones aprendidos.
 
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque coincide con el objetivo descrito y con el uso de Copilot como asistente de desarrollo. La salida generada es una propuesta probabilística: debe revisarse con el contexto real del proyecto, ejecutarse en pruebas y validarse contra los requisitos antes de producción.
+La opción D es correcta: Copilot construye una solicitud a partir del contexto disponible y utiliza un modelo seleccionado para predecir una sugerencia. Hoy hay varias familias y proveedores de modelos; Codex no debe considerarse el único modelo de Copilot ni una búsqueda directa de repositorios privados.
 
 Fuente oficial: [Microsoft Learn: guía de estudio GH-300](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300)
 
@@ -666,7 +665,7 @@ precisión.
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque aporta contexto, restricciones o ejemplos verificables al modelo. Microsoft Learn y GitHub Docs recomiendan dividir tareas complejas, evitar ambigüedad, incluir requisitos concretos e iterar sobre el resultado; un prompt breve y genérico deja demasiadas decisiones sin especificar.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «Usar Copilot para generar borradores iniciales de documentación y luego revisarlos y personalizarlos manualmente.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Ignorar sugerencias de Copilot y escribir todo manualmente.») no satisface ese criterio; la opción B («Confiar en que Copilot genere documentación detallada sin revisión.») no satisface ese criterio; la opción D («Usar Copilot solo para convertir código a lenguaje natural esperando que describa lógica compleja con precisión.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: ingeniería de prompts](https://docs.github.com/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot)
 
@@ -681,7 +680,7 @@ D. Usar Copilot Chat para generar aplicaciones completas sin intervención human
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque refleja que Copilot Chat proporciona asistencia contextual mediante lenguaje natural. Sus respuestas pueden ser inexactas o incompletas; el desarrollador debe revisar, probar y confirmar cualquier cambio antes de incorporarlo.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Validar y probar siempre el código generado por IA antes de integrarlo a producción.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Permitir que Copilot Chat haga commits directamente.») no satisface ese criterio; la opción C («Deshabilitar comentarios humanos porque Copilot puede generar explicaciones.») no satisface ese criterio; la opción D («Usar Copilot Chat para generar aplicaciones completas sin intervención humana.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: uso responsable de Copilot Chat](https://docs.github.com/en/copilot/responsible-use/chat)
 
@@ -697,7 +696,7 @@ estándar.
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque coincide con el objetivo descrito y con el uso de Copilot como asistente de desarrollo. La salida generada es una propuesta probabilística: debe revisarse con el contexto real del proyecto, ejecutarse en pruebas y validarse contra los requisitos antes de producción.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «Puede carecer de experiencia en dominios especializados, generando sugerencias imprecisas o no estándar.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Puede generar código especializado con precisión sin intervención del usuario.») no satisface ese criterio; la opción B («Está entrenado específicamente con datos propietarios de todos los dominios.») no satisface ese criterio; la opción C («Se adapta automáticamente a cualquier estándar o guía del repositorio.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [Microsoft Learn: guía de estudio GH-300](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300)
 
@@ -713,7 +712,7 @@ D. Mostrar el SSN solo si el usuario tiene rol debug .
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Imprimir solo user.name y user.email , excluyendo el SSN.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Hashear el SSN y luego imprimirlo.») no satisface ese criterio; la opción C («Mostrar el SSN como *** .») no satisface ese criterio; la opción D («Mostrar el SSN solo si el usuario tiene rol debug .») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -723,14 +722,15 @@ preocupada por compliance. ¿Qué describe mejor sus medidas de privacidad?
 A. Envía continuamente inputs a la nube, donde se almacenan para mejorar el modelo.
 B. Envía código privado directamente al modelo cloud usando datos públicos y privados.
 C. Procesa inputs localmente y no envía datos externos.
-D. Envía inputs a un proxy que anonimiza y filtra información sensible antes de enviarlos al modelo cloud.
+D. Envía al modelo solo el contexto necesario; los filtros y el tratamiento de datos dependen del plan,
+del modelo y de la configuración aplicable.
 
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción D. GitHub Copilot construye una solicitud con contexto relevante del editor y la procesa mediante infraestructura y filtros de GitHub antes de enviarla a un modelo alojado. No anonimiza automáticamente todo el contenido sensible ni procesa todo localmente. Las garantías de retención y de uso para entrenamiento varían según el plan, el modelo y la configuración; por eso las organizaciones deben revisar las políticas aplicables y usar exclusiones de contenido cuando corresponda.
 
-Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
+Fuente oficial: [GitHub Docs: alojamiento de modelos](https://docs.github.com/en/copilot/reference/ai-models/model-hosting)
 
 Pregunta 45
 ¿Cuál escenario describe mejor cuándo GitHub Copilot Chat es más útil para mejorar eficiencia del
@@ -743,7 +743,7 @@ D. Ejecutar pruebas end-to-end en múltiples entornos.
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque refleja que Copilot Chat proporciona asistencia contextual mediante lenguaje natural. Sus respuestas pueden ser inexactas o incompletas; el desarrollador debe revisar, probar y confirmar cualquier cambio antes de incorporarlo.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Aclarar el propósito de un segmento de código desconocido en una librería open-source.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Optimizar automáticamente queries SQL para mejorar rendimiento.») no satisface ese criterio; la opción C («Generar un reporte completo de auditoría de seguridad.») no satisface ese criterio; la opción D («Ejecutar pruebas end-to-end en múltiples entornos.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: uso responsable de Copilot Chat](https://docs.github.com/en/copilot/responsible-use/chat)
 
@@ -759,7 +759,7 @@ D. GitHub Copilot for Open Source.
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «GitHub Copilot Business.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («GitHub Copilot Individual.») no satisface ese criterio; la opción B («GitHub Copilot Free.») no satisface ese criterio; la opción D («GitHub Copilot for Open Source.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: alojamiento de modelos](https://docs.github.com/en/copilot/reference/ai-models/model-hosting)
 
@@ -768,14 +768,14 @@ Pregunta 47
 enterprise?
 A. Copilot Enterprise ofrece gestión centralizada, pero solo un número limitado de sugerencias diarias.
 B. Copilot Enterprise requiere cuentas individuales sin facturación centralizada.
-C. Copilot Enterprise ofrece sugerencias ilimitadas, insights de seguridad mejorados e integración con IDEs
-como Visual Studio y JetBrains.
+C. Copilot Enterprise ofrece gestión centralizada, modelos premium y créditos de IA compartidos,
+además de integración con IDEs como Visual Studio y JetBrains.
 D. Copilot Enterprise solo funciona en IDEs cloud y no en máquinas locales.
 
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La respuesta correcta es la opción C. Copilot Enterprise está diseñado para empresas de GitHub Enterprise Cloud y ofrece gestión centralizada de políticas y puestos, acceso a modelos premium y créditos de IA compartidos, además de integración con IDEs locales admitidos. No ofrece sugerencias literalmente ilimitadas ni obliga a usar solamente IDEs cloud.
 
 Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
@@ -792,7 +792,7 @@ D. “Write a function that hashes passwords for authentication.”
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque aporta contexto, restricciones o ejemplos verificables al modelo. Microsoft Learn y GitHub Docs recomiendan dividir tareas complejas, evitar ambigüedad, incluir requisitos concretos e iterar sobre el resultado; un prompt breve y genérico deja demasiadas decisiones sin especificar.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «“Generate an authentication function using bcrypt for hashing passwords and JWT for session management.”» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («“Create an authentication function for user login.”») no satisface ese criterio; la opción C («“Write a secure authentication function that uses SHA-1 to hash passwords.”») no satisface ese criterio; la opción D («“Write a function that hashes passwords for authentication.”») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: ingeniería de prompts](https://docs.github.com/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot)
 
@@ -806,7 +806,7 @@ D. Individual limita el número de repositorios privados accesibles.
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «Individual no ofrece funciones de gestión de equipo como control de acceso; Business sí.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Individual solo completa código en JavaScript y Python.») no satisface ese criterio; la opción B («Individual limita el número de sugerencias por sesión.») no satisface ese criterio; la opción D («Individual limita el número de repositorios privados accesibles.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
@@ -822,7 +822,7 @@ anonimización, antes de implementarlo.
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «Analizar el código generado para asegurar buenas prácticas de manejo de PII, como cifrado y anonimización, antes de implementarlo.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Probar con una herramienta automática sin revisión manual.») no satisface ese criterio; la opción B («Implementar inmediatamente el snippet sugerido porque la IA sigue buenas prácticas.») no satisface ese criterio; la opción C («Asumir que Copilot ya revisó cumplimiento regulatorio.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -840,7 +840,7 @@ D. Probar strings como "100" y "0.1" esperando resultados numéricos.
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque usa Copilot como apoyo para proponer pruebas y casos límite, no como sustituto de la validación. Las pruebas generadas deben revisarse, ejecutarse y ampliarse para cubrir comportamiento esperado, entradas inválidas, errores y requisitos de seguridad o rendimiento.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Probar calculate_discount(100, 0.1) == 90 , calculate_discount(200, 0.2) == 160 , calculate_discount(50, 0) == 50 , calculate_discount(0, 0.1) == 0 y calculate_discount(-100, 0.1) == -90 .» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Probar casos con descuento 2.0 y esperar precios negativos.») no satisface ese criterio; la opción C («Probar solo tres casos normales como 50%, 0 y 20%.») no satisface ese criterio; la opción D («Probar strings como "100" y "0.1" esperando resultados numéricos.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: escribir pruebas con GitHub Copilot](https://docs.github.com/en/copilot/tutorials/write-tests)
 
@@ -855,7 +855,7 @@ D. Usar comentarios claros y específicos o código parcialmente escrito para da
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque aporta contexto, restricciones o ejemplos verificables al modelo. Microsoft Learn y GitHub Docs recomiendan dividir tareas complejas, evitar ambigüedad, incluir requisitos concretos e iterar sobre el resultado; un prompt breve y genérico deja demasiadas decisiones sin especificar.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «Usar comentarios claros y específicos o código parcialmente escrito para dar mejor contexto.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Usar solo una palabra en el prompt para obtener sugerencias más específicas.») no satisface ese criterio; la opción B («Evitar ejemplos para que Copilot tenga libertad total.») no satisface ese criterio; la opción C («La longitud del prompt no importa porque el modelo genera igual.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: ingeniería de prompts](https://docs.github.com/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot)
 
@@ -871,7 +871,7 @@ mismo input.
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque coincide con el objetivo descrito y con el uso de Copilot como asistente de desarrollo. La salida generada es una propuesta probabilística: debe revisarse con el contexto real del proyecto, ejecutarse en pruebas y validarse contra los requisitos antes de producción.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «Las sugerencias de Copilot son probabilísticas, por lo que puede generar salidas diferentes para el mismo input.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Copilot detecta y elimina cualquier vulnerabilidad antes de presentar sugerencias.») no satisface ese criterio; la opción B («Copilot conoce en tiempo real librerías, APIs y vulnerabilidades recién publicadas.») no satisface ese criterio; la opción C («Copilot siempre produce código seguro, optimizado y siguiendo mejores prácticas.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [Microsoft Learn: guía de estudio GH-300](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300)
 
@@ -887,7 +887,7 @@ D. Los snippets se guardan continuamente para mejorar futuras versiones del mode
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «El código se procesa temporalmente en memoria para generar sugerencias, el modelo corre en servidores GitHub usando datos públicos y no se almacena ni registra el código.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Las sugerencias se generan localmente sin enviar datos a GitHub.») no satisface ese criterio; la opción C («Las sugerencias se generan con análisis local y datos crowdsourced de otros usuarios.») no satisface ese criterio; la opción D («Los snippets se guardan continuamente para mejorar futuras versiones del modelo.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: alojamiento de modelos](https://docs.github.com/en/copilot/reference/ai-models/model-hosting)
 
@@ -903,7 +903,7 @@ D. Evitando Copilot porque las features generadas por IA no sirven.
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Generando código para transformaciones básicas de features basadas en conocimiento de dominio, revisando sus sugerencias.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Identificando automáticamente el mejor set de features y usándolo directamente.») no satisface ese criterio; la opción C («Creando y seleccionando todas las features sin intervención manual.») no satisface ese criterio; la opción D («Evitando Copilot porque las features generadas por IA no sirven.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -918,7 +918,7 @@ D. GitHub Copilot Free for Individuals.
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «GitHub Copilot Enterprise con controles avanzados de privacidad e integración de políticas corporativas.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («GitHub Copilot for Education.») no satisface ese criterio; la opción C («GitHub Copilot for Teams.») no satisface ese criterio; la opción D («GitHub Copilot Free for Individuals.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -934,25 +934,24 @@ outputs.
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «Ofrece una cláusula de indemnización bajo términos específicos, sin garantía total para todos los outputs.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Elimina automáticamente cualquier código parecido a open-source.») no satisface ese criterio; la opción B («Incluye indemnización para todos los outputs sin condiciones.») no satisface ese criterio; la opción C («Proporciona indemnización solo si el código no se parece a repos públicos.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
 Pregunta 58
-Tu organización implementará GitHub Copilot Enterprise y quiere usar Knowledge Base para prácticas
-compartidas, librerías e APIs internas. ¿Qué paso es necesario para crear, administrar e indexar una
-Knowledge Base?
-A. Habilitar control de acceso para que solo usuarios autorizados contribuyan.
-B. Usar GitHub Actions para sincronizar la KB con el motor de sugerencias.
-C. Crear un repositorio dedicado para la Knowledge Base y habilitar la indexación del repositorio.
-D. Etiquetar manualmente cada archivo relevante.
+Tu organización implementará GitHub Copilot Enterprise y quiere usar Copilot Spaces para prácticas
+compartidas, librerías y APIs internas. ¿Qué paso es necesario para crear y configurar un Copilot Space?
+A. Crear un Space de cuenta personal y compartirlo sin configurar acceso.
+B. Usar GitHub Actions para sincronizar el contenido con el modelo.
+C. Crear un Copilot Space y añadir como contexto repositorios, archivos, issues, pull requests o notas.
+D. Etiquetar manualmente cada archivo para crear una base vectorial privada.
 
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La respuesta correcta es la opción C. Los Copilot Spaces permiten reunir y compartir repositorios, código, pull requests, issues y notas como contexto para las preguntas de Copilot Chat. Los archivos de GitHub añadidos al Space se mantienen sincronizados cuando cambian. El acceso se administra según si el Space pertenece a una cuenta personal o a una organización.
 
-Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
+Fuente oficial: [GitHub Docs: Copilot Spaces](https://docs.github.com/en/copilot/concepts/prompting-and-context/spaces)
 
 Pregunta 59
 GitHub Copilot Chat mejora la productividad mediante interacciones con IA. ¿Qué describe una
@@ -966,7 +965,7 @@ D. Analiza repositorios privados completos sin permisos explícitos.
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque refleja que Copilot Chat proporciona asistencia contextual mediante lenguaje natural. Sus respuestas pueden ser inexactas o incompletas; el desarrollador debe revisar, probar y confirmar cualquier cambio antes de incorporarlo.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Permite hacer preguntas de programación en lenguaje natural y recibir respuestas de IA adaptadas al contexto actual.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Ejecuta comandos shell directamente desde el chat sin confirmación.») no satisface ese criterio; la opción C («Genera arquitecturas completas de aplicaciones desde una descripción general.») no satisface ese criterio; la opción D («Analiza repositorios privados completos sin permisos explícitos.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: uso responsable de Copilot Chat](https://docs.github.com/en/copilot/responsible-use/chat)
 
@@ -982,7 +981,7 @@ D. Cambiar a VS Code porque JetBrains tiene menor soporte.
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque coincide con el objetivo descrito y con el uso de Copilot como asistente de desarrollo. La salida generada es una propuesta probabilística: debe revisarse con el contexto real del proyecto, ejecutarse en pruebas y validarse contra los requisitos antes de producción.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «Verificar que Copilot esté habilitado para archivos Java en la configuración .copilot y ajustar si hace falta.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Activar verbose logging y reportar a GitHub Support.») no satisface ese criterio; la opción B («Borrar manualmente la caché de Copilot y reiniciar IntelliJ.») no satisface ese criterio; la opción D («Cambiar a VS Code porque JetBrains tiene menor soporte.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [Microsoft Learn: guía de estudio GH-300](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300)
 
@@ -998,7 +997,7 @@ chat.
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque refleja que Copilot Chat proporciona asistencia contextual mediante lenguaje natural. Sus respuestas pueden ser inexactas o incompletas; el desarrollador debe revisar, probar y confirmar cualquier cambio antes de incorporarlo.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «Puede explicar código, sugerir fixes y generar documentación, pero no ejecuta código directamente en el chat.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Genera código con prompts conversacionales, pero no considera el contexto del archivo abierto.») no satisface ese criterio; la opción B («Requiere Copilot Individual y no está disponible para Business.») no satisface ese criterio; la opción C («Explica errores, pero no sugiere soluciones alternativas.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: uso responsable de Copilot Chat](https://docs.github.com/en/copilot/responsible-use/chat)
 
@@ -1013,7 +1012,7 @@ D. Obliga a aprobar manualmente cada sugerencia antes de insertarla.
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque refleja que Copilot Chat proporciona asistencia contextual mediante lenguaje natural. Sus respuestas pueden ser inexactas o incompletas; el desarrollador debe revisar, probar y confirmar cualquier cambio antes de incorporarlo.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Se integra con IDEs como VS Code y JetBrains, dando respuestas contextuales basadas en archivos abiertos y estructura del proyecto.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Permite ejecutar código directamente dentro del chat.») no satisface ese criterio; la opción C («Modifica código en tiempo real sin confirmación del usuario.») no satisface ese criterio; la opción D («Obliga a aprobar manualmente cada sugerencia antes de insertarla.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: uso responsable de Copilot Chat](https://docs.github.com/en/copilot/responsible-use/chat)
 
@@ -1029,7 +1028,7 @@ D. GitHub es dueño de las sugerencias y las licencia al usuario.
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «Los usuarios conservan la propiedad del código generado, pero son responsables de cumplir leyes de licencias y propiedad intelectual.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («El código generado es open-source y debe publicarse con licencia MIT.») no satisface ese criterio; la opción B («Si una sugerencia se parece a open-source, el usuario debe acreditar a GitHub.») no satisface ese criterio; la opción D («GitHub es dueño de las sugerencias y las licencia al usuario.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: alojamiento de modelos](https://docs.github.com/en/copilot/reference/ai-models/model-hosting)
 
@@ -1046,7 +1045,7 @@ D. Generación automática de estructuras completas de proyecto.
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Gestión de políticas enterprise-wide con controles centralizados de seguridad y cumplimiento, como SAML SSO y audit logs.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Excluir tipos de archivo o directorios a nivel individual.») no satisface ese criterio; la opción C («Respuesta más rápida por infraestructura dedicada.») no satisface ese criterio; la opción D («Generación automática de estructuras completas de proyecto.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
@@ -1062,7 +1061,7 @@ D. El training data se actualiza diariamente.
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «Las sugerencias se basan en un dataset fijo de código público y los datos de entrenamiento pueden tener meses o años.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Copilot aprende del estilo personal del usuario con el tiempo.») no satisface ese criterio; la opción B («Copilot obtiene datos en tiempo real de GitHub antes de sugerir.») no satisface ese criterio; la opción D («El training data se actualiza diariamente.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -1078,7 +1077,7 @@ esperados para guiar los casos.
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque usa Copilot como apoyo para proponer pruebas y casos límite, no como sustituto de la validación. Las pruebas generadas deben revisarse, ejecutarse y ampliarse para cubrir comportamiento esperado, entradas inválidas, errores y requisitos de seguridad o rendimiento.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «Crear un archivo de test, importar el módulo de base de datos y agregar comentarios con resultados esperados para guiar los casos.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Generar unit tests para cada función en lugar de integration tests.») no satisface ese criterio; la opción B («Crear tests contra la base de datos live sin mocks.») no satisface ese criterio; la opción C («Pedir un test completo sin dar contexto.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: escribir pruebas con GitHub Copilot](https://docs.github.com/en/copilot/tutorials/write-tests)
 
@@ -1086,18 +1085,17 @@ Pregunta 67
 Como lead engineer, evalúas políticas de manejo de datos de Copilot. Algunos se preocupan por seguridad
 de código propietario y si Copilot usa datos privados para training. ¿Qué afirmaciones son correctas?
 Selecciona dos.
-A. El modelo de Copilot se entrena principalmente con datos públicos y repositorios open-source, no con
-datos privados de usuarios.
-B. Copilot genera sugerencias en tiempo real sin almacenar los snippets reales proporcionados por
-usuarios.
+A. Los planes comerciales no usan datos de clientes para entrenar modelos de IA.
+B. Las solicitudes se procesan temporalmente para inferencia y las garantías concretas dependen del plan
+y del modelo utilizado.
 C. Copilot usa datos de repos públicos y privados para mejorar su modelo con el tiempo.
-D. Los snippets generados se almacenan hasta 30 días para entrenamiento.
+D. Todos los proveedores retienen siempre los prompts durante 30 días.
 E. Copilot envía telemetría detallada incluyendo sugerencias de código para auditoría.
 
 Respuesta correcta: A y B
 
 Explicación
-La opción A y B es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+Las opciones A y B son correctas. Copilot Business y Enterprise no usan datos de clientes para entrenar modelos de IA. Las entradas todavía se procesan con proveedores de modelos para generar respuestas, con compromisos de retención que varían según el plan, el proveedor y el modelo. No debe asumirse una retención única de 30 días ni que toda telemetría contenga prompts o sugerencias.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -1113,7 +1111,7 @@ D. “Fetch data from an API using JavaScript and process it.”
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «“Write a JavaScript function that fetches data from an API, parses the JSON, and logs fields 'id' and 'name' to the console.”» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («“Fetch data from an API using JavaScript.”») no satisface ese criterio; la opción C («“Can you help me write a JavaScript function to work with APIs?”») no satisface ese criterio; la opción D («“Fetch data from an API using JavaScript and process it.”») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -1130,7 +1128,7 @@ sugerencias, pero no transmite todo el codebase.
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «Copilot envía snippets de código a servidores GitHub para procesamiento en tiempo real y generación de sugerencias, pero no transmite todo el codebase.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Copilot procesa todo localmente sin enviar datos.») no satisface ese criterio; la opción B («Copilot envía todo el codebase a GitHub para analizarlo.») no satisface ese criterio; la opción C («Copilot cifra todo el proyecto y lo almacena en la nube.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -1147,7 +1145,7 @@ investigar si los datos provienen del código propietario o de un repositorio ex
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «Deshabilitar Copilot temporalmente, reportar el incidente al responsable interno de privacidad e investigar si los datos provienen del código propietario o de un repositorio externo.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Asumir que es benigno porque Copilot no almacena datos y continuar.») no satisface ese criterio; la opción B («Apagar Copilot para todos los proyectos futuros con información sensible.») no satisface ese criterio; la opción C («Reportar de inmediato una brecha de datos a GitHub y eliminar Copilot del proyecto.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -1172,7 +1170,7 @@ Individual tiene un límite diario.
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque aplica una salvaguarda explícita para limitar el contexto que Copilot puede usar. La exclusión de contenido debe configurarse en los controles admitidos por la organización; revisar el resultado, proteger los secretos y aplicar las obligaciones de privacidad siguen siendo responsabilidad del equipo.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «GitHub Copilot Business proporciona controles de políticas a nivel organizacional, incluyendo la capacidad de deshabilitar sugerencias que coinciden con código público.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («GitHub Copilot Business incluye un escáner de vulnerabilidades integrado que detecta automáticamente fallas de seguridad en el código generado.») no satisface ese criterio; la opción B («GitHub Copilot Business requiere que todos los usuarios tengan una cuenta GitHub Enterprise para acceder.») no satisface ese criterio; la opción D («GitHub Copilot Business permite completions ilimitadas en todos los IDEs, mientras que GitHub Copilot Individual tiene un límite diario.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: exclusión de contenido](https://docs.github.com/en/copilot/concepts/content-exclusion)
 
@@ -1192,7 +1190,7 @@ Individual no.
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «GitHub Copilot Business proporciona indemnización de propiedad intelectual, mientras que Copilot Individual no.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («GitHub Copilot Individual concede automáticamente acceso a toda la empresa, mientras que Copilot Business requiere licenciamiento por usuario.») no satisface ese criterio; la opción B («GitHub Copilot Business permite deshabilitar toda la telemetría y el intercambio de datos, mientras que Copilot Individual no.») no satisface ese criterio; la opción C («GitHub Copilot Individual bloquea sugerencias basadas en repositorios públicos, mientras que Copilot Business no.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
@@ -1212,7 +1210,7 @@ errores encontrados.
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Ayudando a mejorar la calidad del código durante la fase de codificación mediante generación de código alineado con estándares y prácticas comunes.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Gestionando tareas del proyecto, como asignar issues, rastrear progreso y administrar pipelines de despliegue.») no satisface ese criterio; la opción C («Generando automáticamente especificaciones funcionales e historias de usuario para los sprints.») no satisface ese criterio; la opción D («Escribiendo casos de prueba, garantizando cobertura completa y corrigiendo automáticamente los errores encontrados.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
@@ -1231,7 +1229,7 @@ configuración del usuario.
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Permiten a las organizaciones especificar qué repositorios deben excluirse de las sugerencias generadas por IA para cumplir políticas de seguridad.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Una vez excluido un archivo o repositorio, Copilot conserva conocimiento de sugerencias previas provenientes de ese repositorio.») no satisface ese criterio; la opción C («Impiden que GitHub Copilot acceda a cualquier código del repositorio local del usuario.») no satisface ese criterio; la opción D («Por defecto, Copilot aplica exclusiones a todos los repositorios que contienen información privada sin configuración del usuario.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -1252,7 +1250,7 @@ del training data.
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque aporta contexto, restricciones o ejemplos verificables al modelo. Microsoft Learn y GitHub Docs recomiendan dividir tareas complejas, evitar ambigüedad, incluir requisitos concretos e iterar sobre el resultado; un prompt breve y genérico deja demasiadas decisiones sin especificar.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «Agregar requisitos específicos de seguridad, como “Implement user authentication with login, logout, password reset, using hashed passwords and multi-factor authentication.”» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Quitar detalles de login, logout y password reset para enfocarse solo en hashing: “Implement user authentication with password hashing.”») no satisface ese criterio; la opción B («Usar múltiples prompts, uno por funcionalidad: “Implement login”, “Implement password reset” y “Implement logout”.») no satisface ese criterio; la opción D («Mantener el prompt vago y permitir que Copilot maneje la implementación según prácticas por defecto del training data.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: ingeniería de prompts](https://docs.github.com/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot)
 
@@ -1271,7 +1269,7 @@ vulnerabilidades en múltiples repositorios en tiempo real.
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque refleja que Copilot Chat proporciona asistencia contextual mediante lenguaje natural. Sus respuestas pueden ser inexactas o incompletas; el desarrollador debe revisar, probar y confirmar cualquier cambio antes de incorporarlo.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Un desarrollador junior necesita guía para implementar una función recursiva en Python, incluyendo explicación de buenas prácticas.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Un ingeniero DevOps quiere que Copilot Chat genere desde cero una configuración Terraform completa para infraestructura cloud.») no satisface ese criterio; la opción C («Un arquitecto necesita que Copilot Chat refactorice un monolito completo a microservicios sin intervención manual.») no satisface ese criterio; la opción D («Un analista de seguridad quiere que Copilot Chat detecte y parchee automáticamente todas las vulnerabilidades en múltiples repositorios en tiempo real.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: uso responsable de Copilot Chat](https://docs.github.com/en/copilot/responsible-use/chat)
 
@@ -1289,7 +1287,7 @@ D. Puede ejecutar código directamente dentro de la interfaz de chat.
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque refleja que Copilot Chat proporciona asistencia contextual mediante lenguaje natural. Sus respuestas pueden ser inexactas o incompletas; el desarrollador debe revisar, probar y confirmar cualquier cambio antes de incorporarlo.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Permite a los desarrolladores pedir explicaciones sobre líneas específicas de código en lenguaje natural y recibir respuestas contextuales.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Puede documentar automáticamente codebases completos generando README y documentación completa sin input del usuario.») no satisface ese criterio; la opción C («Se integra con GitHub Actions para activar despliegues automáticos desde conversaciones en el chat.») no satisface ese criterio; la opción D («Puede ejecutar código directamente dentro de la interfaz de chat.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: uso responsable de Copilot Chat](https://docs.github.com/en/copilot/responsible-use/chat)
 
@@ -1305,7 +1303,7 @@ D. Limpiar manualmente la caché del workspace y reiniciar el editor en cada uso
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque coincide con el objetivo descrito y con el uso de Copilot como asistente de desarrollo. La salida generada es una propuesta probabilística: debe revisarse con el contexto real del proyecto, ejecutarse en pruebas y validarse contra los requisitos antes de producción.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Verificar que GitHub Copilot esté habilitado en la configuración de extensiones de VS Code y que el usuario haya iniciado sesión en GitHub.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Reinstalar Visual Studio Code porque Copilot no funciona si el IDE lleva mucho tiempo abierto.») no satisface ese criterio; la opción C («Crear un nuevo Personal Access Token y agregarlo a la configuración de Copilot en VS Code.») no satisface ese criterio; la opción D («Limpiar manualmente la caché del workspace y reiniciar el editor en cada uso.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [Microsoft Learn: guía de estudio GH-300](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300)
 
@@ -1321,7 +1319,7 @@ D. No retiene ni comparte el código del usuario y no lo usa para entrenamiento 
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «No retiene ni comparte el código del usuario y no lo usa para entrenamiento del modelo de IA.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Comparte automáticamente snippets generados por el usuario con otros usuarios de Copilot.») no satisface ese criterio; la opción B («Recopila todos los prompts y respuestas para futuros fine-tunings del modelo.») no satisface ese criterio; la opción C («Cifra y almacena todo el código asistido por IA para revisión interna de GitHub.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: alojamiento de modelos](https://docs.github.com/en/copilot/reference/ai-models/model-hosting)
 
@@ -1340,7 +1338,7 @@ D. Una prueba que compara si una librería externa es más rápida que una funci
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque usa Copilot como apoyo para proponer pruebas y casos límite, no como sustituto de la validación. Las pruebas generadas deben revisarse, ejecutarse y ampliarse para cubrir comportamiento esperado, entradas inválidas, errores y requisitos de seguridad o rendimiento.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «Una prueba con fuzz testing generado por Copilot para evaluar variaciones de input, validando sanitización y rendimiento aceptable.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Una prueba que usa assert para verificar que el input sea sanitizado comparando el output con un valor SQL-safe predefinido.») no satisface ese criterio; la opción B («Una prueba que mide tiempo de ejecución con timeit , asegurando que complete en menos de un segundo para inputs típicos.») no satisface ese criterio; la opción D («Una prueba que compara si una librería externa es más rápida que una función custom.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: escribir pruebas con GitHub Copilot](https://docs.github.com/en/copilot/tutorials/write-tests)
 
@@ -1356,7 +1354,7 @@ D. Instalar GitHub Copilot como software standalone separado de VS Code.
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque coincide con el objetivo descrito y con el uso de Copilot como asistente de desarrollo. La salida generada es una propuesta probabilística: debe revisarse con el contexto real del proyecto, ejecutarse en pruebas y validarse contra los requisitos antes de producción.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Instalar la extensión GitHub Copilot para VS Code y configurarla para dar sugerencias en el editor, incluyendo atajos de teclado.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Pegar manualmente sugerencias desde la web app de GitHub Copilot en VS Code.») no satisface ese criterio; la opción C («Usar solo IntelliSense porque ofrece sugerencias AI equivalentes.») no satisface ese criterio; la opción D («Instalar GitHub Copilot como software standalone separado de VS Code.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [Microsoft Learn: guía de estudio GH-300](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300)
 
@@ -1372,7 +1370,7 @@ D. No almacena inputs ni sugerencias del usuario de una forma que comprometa la 
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «No almacena inputs ni sugerencias del usuario de una forma que comprometa la privacidad.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Registra temporalmente inputs y sugerencias para mejorar el modelo y luego los elimina.») no satisface ese criterio; la opción B («Cifra y almacena todos los inputs para personalizar sugerencias.») no satisface ese criterio; la opción C («Almacena permanentemente todas las sugerencias en servidores GitHub.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: alojamiento de modelos](https://docs.github.com/en/copilot/reference/ai-models/model-hosting)
 
@@ -1390,7 +1388,7 @@ D. Escaneo en tiempo real de todo código antes del commit para detectar vulnera
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Gestión centralizada del uso de GitHub Copilot y políticas de acceso entre equipos para aplicar estándares de seguridad consistentes.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Control de acceso personalizable para que cada desarrollador elija sus propios settings.») no satisface ese criterio; la opción C («Generación automática de documentación del proyecto desde comentarios de código.») no satisface ese criterio; la opción D («Escaneo en tiempo real de todo código antes del commit para detectar vulnerabilidades.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
@@ -1406,7 +1404,7 @@ de incorporarlo.
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque considera el posible parecido con código público y las obligaciones de licencia. Los filtros y referencias de Copilot son salvaguardas, no una garantía de ausencia total de coincidencias; el equipo debe revisar la licencia y la procedencia antes de reutilizar código.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «Comparar el código generado con licencias open-source existentes para asegurar compatibilidad antes de incorporarlo.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Modificar el código sugerido para que sea menos reconocible.») no satisface ese criterio; la opción B («Evitar cualquier código generado por IA en contribuciones open-source.») no satisface ese criterio; la opción C («Usar el código generado sin preocuparte porque todo lo sugerido por Copilot se considera open-source.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: referencias a código público](https://docs.github.com/en/copilot/concepts/completions/code-referencing)
 
@@ -1422,7 +1420,7 @@ E. Solo está disponible en Visual Studio Code.
 Respuesta correcta: A, B y C
 
 Explicación
-La opción A, B y C es la adecuada porque coincide con el objetivo descrito y con el uso de Copilot como asistente de desarrollo. La salida generada es una propuesta probabilística: debe revisarse con el contexto real del proyecto, ejecutarse en pruebas y validarse contra los requisitos antes de producción.
+Las respuestas correctas son las opciones A y B y C porque, en conjunto, «Puede sugerir líneas completas, funciones o incluso clases completas según el contexto.»; «Ofrece sugerencias basadas en código de repositorios públicos y proyectos open-source.»; «Genera código según comentarios y código existente en el archivo.» describen las acciones que cumplen el criterio de la pregunta. Las demás alternativas no son válidas: la opción D («Funciona offline y no necesita internet.») no satisface ese criterio; la opción E («Solo está disponible en Visual Studio Code.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [Microsoft Learn: guía de estudio GH-300](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300)
 
@@ -1442,7 +1440,7 @@ E. Entenderá automáticamente los detalles exactos de la API de terceros y gene
 Respuesta correcta: A y D
 
 Explicación
-La opción A y D es la adecuada porque corresponde al uso de Copilot desde la terminal para obtener orientación o proponer comandos. Los comandos generados deben revisarse antes de ejecutarse, especialmente si pueden modificar archivos, repositorios o infraestructura.
+Las respuestas correctas son las opciones A y D porque, en conjunto, «Puede ayudar a generar casos de prueba para la interacción con la API, incluyendo edge cases como timeouts o respuestas inválidas.»; «Puede generar completions basadas en el contexto del código, creando una posible implementación del llamado API según patrones previos.» describen las acciones que cumplen el criterio de la pregunta. Las demás alternativas no son válidas: la opción B («Puede reemplazar completamente la necesidad de entender la documentación de la API.») no satisface ese criterio; la opción C («Generará automáticamente todo el manejo de errores necesario para cualquier API, asegurando que la función nunca falle.») no satisface ese criterio; la opción E («Entenderá automáticamente los detalles exactos de la API de terceros y generará el código preciso.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: GitHub Copilot CLI](https://docs.github.com/en/copilot/how-tos/copilot-cli)
 
@@ -1458,7 +1456,7 @@ D. Generar automáticamente documentación completa del proyecto basada en comen
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Obtener sugerencias de snippets en tiempo real según el contexto activo del código.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Crear pull requests directamente desde el IDE sin usar GitHub.») no satisface ese criterio; la opción C («Agregar parches de seguridad basados en vulnerabilidades detectadas por Copilot Chat.») no satisface ese criterio; la opción D («Generar automáticamente documentación completa del proyecto basada en comentarios.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -1474,7 +1472,7 @@ D. Ver y buscar sugerencias individuales generadas por Copilot para cada desarro
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Monitorear cuándo un usuario habilita o deshabilita GitHub Copilot dentro del repositorio de la organización.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Registrar el training data específico usado durante una sugerencia.») no satisface ese criterio; la opción C («Registrar cada vez que Copilot autocompleta una función en el IDE.») no satisface ese criterio; la opción D («Ver y buscar sugerencias individuales generadas por Copilot para cada desarrollador.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
@@ -1493,7 +1491,7 @@ sesión.
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «Usa repositorios públicos para entrenar su modelo, pero puede usar datos de repos privados durante la sesión como contexto, sin almacenarlos para entrenamiento futuro.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Solo genera sugerencias basadas en el proyecto específico abierto en el IDE, sin fuentes externas.») no satisface ese criterio; la opción B («Recopila y almacena datos de repositorios privados para mejorar futuras sugerencias de todos los usuarios.») no satisface ese criterio; la opción D («Genera sugerencias exclusivamente desde repositorios públicos y no usa datos privados durante la sesión.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -1510,7 +1508,7 @@ D. “Write code for a PyTorch neural network. I’ll provide examples later.”
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque aporta contexto, restricciones o ejemplos verificables al modelo. Microsoft Learn y GitHub Docs recomiendan dividir tareas complejas, evitar ambigüedad, incluir requisitos concretos e iterar sobre el resultado; un prompt breve y genérico deja demasiadas decisiones sin especificar.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «“Write a PyTorch function to train a neural network. Here’s an example of how to load data and define the network architecture.”» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («“Train a neural network using PyTorch.”») no satisface ese criterio; la opción C («“I want a function that uses PyTorch to train a neural network.”») no satisface ese criterio; la opción D («“Write code for a PyTorch neural network. I’ll provide examples later.”») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: ingeniería de prompts](https://docs.github.com/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot)
 
@@ -1526,7 +1524,7 @@ D. Registrar cada sugerencia de Copilot y su resultado.
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque coincide con el objetivo descrito y con el uso de Copilot como asistente de desarrollo. La salida generada es una propuesta probabilística: debe revisarse con el contexto real del proyecto, ejecutarse en pruebas y validarse contra los requisitos antes de producción.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Marcar claramente el código generado por IA en el sistema de control de versiones y documentar cambios hechos durante code review.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Confiar solo en el control de versiones normal de GitHub sin documentación adicional.») no satisface ese criterio; la opción C («Documentar solo el código escrito manualmente, ya que el generado por IA se considera confiable.») no satisface ese criterio; la opción D («Registrar cada sugerencia de Copilot y su resultado.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [Microsoft Learn: guía de estudio GH-300](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300)
 
@@ -1545,7 +1543,7 @@ no autorizado.
 Respuesta correcta: A y B
 
 Explicación
-La opción A y B es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+Las respuestas correctas son las opciones A y B porque, en conjunto, «Las sugerencias de Copilot pueden contener snippets sintácticamente similares a código público, lo que podría exponer inadvertidamente lógica propietaria.»; «El modelo de Copilot se entrena con código público y no recibe actualizaciones basadas en código privado.» describen las acciones que cumplen el criterio de la pregunta. Las demás alternativas no son válidas: la opción C («Copilot recopila y transmite sugerencias específicas del usuario a GitHub para mejorar predicción.») no satisface ese criterio; la opción D («Copilot cifra automáticamente el código del usuario localmente y durante transmisión para evitar acceso no autorizado.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: alojamiento de modelos](https://docs.github.com/en/copilot/reference/ai-models/model-hosting)
 
@@ -1562,7 +1560,7 @@ D. Requiere commits escritos manualmente antes de poder generar un resumen.
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «Genera resúmenes a partir del análisis de cambios de código, historial de commits y comentarios en lenguaje natural del PR.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Aprueba automáticamente PRs si el resumen indica que no hay problemas.») no satisface ese criterio; la opción B («Puede generar un resumen incluso antes de que existan cambios de código.») no satisface ese criterio; la opción D («Requiere commits escritos manualmente antes de poder generar un resumen.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
@@ -1579,7 +1577,7 @@ D. Se envía todo el codebase para analizarlo y devolver sugerencias.
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Un snippet alrededor del cursor se envía a servidores GitHub, se procesa y la sugerencia vuelve al IDE sin almacenar datos en GitHub.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («El archivo completo se envía y se almacena en GitHub para referencia futura.») no satisface ese criterio; la opción C («Se envía telemetría de todo el proyecto y las sugerencias se basan en todos los archivos.») no satisface ese criterio; la opción D («Se envía todo el codebase para analizarlo y devolver sugerencias.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -1596,7 +1594,7 @@ D. Los LLMs pueden crear soluciones para cualquier problema sin importar complej
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Las sugerencias suelen basarse en patrones sintácticos más que en comprensión semántica profunda, lo que puede generar código incorrecto o inseguro.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Copilot tiene acceso a información actualizada de todas las librerías y frameworks.») no satisface ese criterio; la opción C («Copilot puede entender perfectamente requisitos de proyecto si los comentarios son detallados.») no satisface ese criterio; la opción D («Los LLMs pueden crear soluciones para cualquier problema sin importar complejidad o dominio.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -1613,7 +1611,7 @@ de varios años y ya no relevante.
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque coincide con el objetivo descrito y con el uso de Copilot como asistente de desarrollo. La salida generada es una propuesta probabilística: debe revisarse con el contexto real del proyecto, ejecutarse en pruebas y validarse contra los requisitos antes de producción.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «Sus sugerencias se basan en un modelo entrenado con repositorios públicos, que puede incluir código de varios años y ya no relevante.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Usa un modelo actualizado continuamente que garantiza sugerencias basadas en versiones recientes.») no satisface ese criterio; la opción B («Excluye automáticamente librerías obsoletas y funciones deprecadas.») no satisface ese criterio; la opción C («Solo sugiere código de los últimos 12 meses de commits.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [Microsoft Learn: guía de estudio GH-300](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300)
 
@@ -1630,7 +1628,7 @@ Copilot centralmente.
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «Aplicar la gestión de políticas mediante GitHub Enterprise settings, administrando permisos y uso de Copilot centralmente.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Permitir que cada desarrollador configure Copilot independientemente.») no satisface ese criterio; la opción B («Gestionar políticas usando settings locales de cada IDE.») no satisface ese criterio; la opción C («Deshabilitar Copilot en repositorios privados porque no puede aplicar políticas organizacionales allí.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
@@ -1647,7 +1645,7 @@ D. Copilot no requiere pruebas ni validación porque asegura outputs sin errores
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque aplica una salvaguarda explícita para limitar el contexto que Copilot puede usar. La exclusión de contenido debe configurarse en los controles admitidos por la organización; revisar el resultado, proteger los secretos y aplicar las obligaciones de privacidad siguen siendo responsabilidad del equipo.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Copilot puede sugerir buenas prácticas de seguridad, pero aún puede producir código con vulnerabilidades ocultas que requiere revisión manual.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Copilot siempre genera código optimizado para rendimiento en entornos de alta seguridad.») no satisface ese criterio; la opción C («Copilot detecta y corrige automáticamente todos los problemas de seguridad.») no satisface ese criterio; la opción D («Copilot no requiere pruebas ni validación porque asegura outputs sin errores.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: exclusión de contenido](https://docs.github.com/en/copilot/concepts/content-exclusion)
 
@@ -1663,7 +1661,7 @@ D. Deshabilitar Copilot en toda la organización.
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «Habilitar context exclusions para evitar que Copilot use ciertos archivos, rutas o tipos de datos.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Configurar .gitignore para excluir archivos sensibles.») no satisface ese criterio; la opción B («Revisar manualmente todas las sugerencias generadas.») no satisface ese criterio; la opción D («Deshabilitar Copilot en toda la organización.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -1678,7 +1676,7 @@ D. Deshabilitar GitHub Copilot para ciertos archivos que contienen información 
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «Deshabilitar GitHub Copilot para ciertos archivos que contienen información sensible.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Confiar en que las funciones de privacidad de Copilot excluyen automáticamente los datos sensibles.») no satisface ese criterio; la opción B («Ofuscar datos sensibles dentro del código.») no satisface ese criterio; la opción C («Usar comentarios inline indicando que Copilot no debe procesar datos sensibles.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -1695,7 +1693,7 @@ memory. Use an iterative approach.”
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «“Write a Python function that reads a large XML file and extracts data without loading the entire file into memory. Use an iterative approach.”» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («“Write a Python function that parses large XML files and extracts data based on user input.”») no satisface ese criterio; la opción B («“Generate Python code to parse an XML file and extract specific data efficiently.”») no satisface ese criterio; la opción C («“Generate Python code that parses XML files and uses minimal memory while extracting data.”») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -1712,7 +1710,7 @@ D. Rastrean todos los snippets generados por Copilot para revisión administrati
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Registran cuándo usuarios habilitan o deshabilitan Copilot en repositorios, dando visibilidad de uso y cumplimiento.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Permiten personalizar el training data de Copilot según repositorios.») no satisface ese criterio; la opción C («Analizan código generado por IA para detectar vulnerabilidades antes del commit.») no satisface ese criterio; la opción D («Rastrean todos los snippets generados por Copilot para revisión administrativa.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
@@ -1729,7 +1727,7 @@ D. Pedir unit tests separados para parseInput y processData .
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque usa Copilot como apoyo para proponer pruebas y casos límite, no como sustituto de la validación. Las pruebas generadas deben revisarse, ejecutarse y ampliarse para cubrir comportamiento esperado, entradas inválidas, errores y requisitos de seguridad o rendimiento.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Usar Copilot para generar casos que ejecuten parseInput y processData en secuencia y validen el flujo completo.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Usar mocks y stubs para aislar ambas funciones durante las pruebas.») no satisface ese criterio; la opción C («Dejar que Copilot genere solo validación de input y probar manualmente la integración.») no satisface ese criterio; la opción D («Pedir unit tests separados para parseInput y processData .») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: escribir pruebas con GitHub Copilot](https://docs.github.com/en/copilot/tutorials/write-tests)
 
@@ -1744,7 +1742,7 @@ D. Integración con Single Sign-On, SSO.
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque aplica una salvaguarda explícita para limitar el contexto que Copilot puede usar. La exclusión de contenido debe configurarse en los controles admitidos por la organización; revisar el resultado, proteger los secretos y aplicar las obligaciones de privacidad siguen siendo responsabilidad del equipo.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «Integración con Single Sign-On, SSO.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Integración con pull requests.») no satisface ese criterio; la opción B («Soporte para proyectos open-source.») no satisface ese criterio; la opción C («Sugerencias inline de código.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: exclusión de contenido](https://docs.github.com/en/copilot/concepts/content-exclusion)
 
@@ -1759,7 +1757,7 @@ D. Cuando un administrador asigna o revoca una licencia de Copilot Business.
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «Cuando un administrador asigna o revoca una licencia de Copilot Business.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Cuando un usuario commitea código generado por Copilot.») no satisface ese criterio; la opción B («Cuando un usuario recibe una sugerencia generada por Copilot.») no satisface ese criterio; la opción C («Cuando un usuario copia y pega código generado por Copilot.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: auditoría de GitHub Copilot](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-enterprise/review-audit-logs)
 
@@ -1776,7 +1774,7 @@ D. “Write code to extract information from a website using Python.”
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque aporta contexto, restricciones o ejemplos verificables al modelo. Microsoft Learn y GitHub Docs recomiendan dividir tareas complejas, evitar ambigüedad, incluir requisitos concretos e iterar sobre el resultado; un prompt breve y genérico deja demasiadas decisiones sin especificar.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «“Generate Python code that scrapes article titles and dates from a URL using BeautifulSoup and returns them in a list of dictionaries.”» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («“Write a Python script to scrape a website using BeautifulSoup.”») no satisface ese criterio; la opción C («“Write Python code to use BeautifulSoup for scraping.”») no satisface ese criterio; la opción D («“Write code to extract information from a website using Python.”») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: ingeniería de prompts](https://docs.github.com/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot)
 
@@ -1791,7 +1789,7 @@ D. GitHub Copilot Free Plan.
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «GitHub Copilot Business Plan.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («GitHub Copilot Basic.») no satisface ese criterio; la opción C («GitHub Copilot Individual Plan.») no satisface ese criterio; la opción D («GitHub Copilot Free Plan.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
@@ -1807,7 +1805,7 @@ D. Usar Copilot para reescribir el código en estilo “AI-friendly” e ignorar
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Usar sugerencias de Copilot para identificar patrones inseguros y combinarlas con GitHub Advanced Security, CodeQL y Dependabot.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Confiar en las sugerencias de seguridad de Copilot sin validación adicional.») no satisface ese criterio; la opción C («Confiar en Copilot para detectar y corregir todas las vulnerabilidades automáticamente.») no satisface ese criterio; la opción D («Usar Copilot para reescribir el código en estilo “AI-friendly” e ignorar sugerencias de seguridad.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -1822,7 +1820,7 @@ D. Refactoriza automáticamente codebases completos cuando se le solicita.
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque refleja que Copilot Chat proporciona asistencia contextual mediante lenguaje natural. Sus respuestas pueden ser inexactas o incompletas; el desarrollador debe revisar, probar y confirmar cualquier cambio antes de incorporarlo.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «Proporciona explicaciones paso a paso de snippets de código sugeridos.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Colabora en tiempo real con otros desarrolladores en el mismo proyecto.») no satisface ese criterio; la opción B («Genera suites de pruebas completas y detalladas sin prompts específicos.») no satisface ese criterio; la opción D («Refactoriza automáticamente codebases completos cuando se le solicita.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: uso responsable de Copilot Chat](https://docs.github.com/en/copilot/responsible-use/chat)
 
@@ -1838,7 +1836,7 @@ D. Usar Copilot para aceptar automáticamente todos los cambios y sugerencias.
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque coincide con el objetivo descrito y con el uso de Copilot como asistente de desarrollo. La salida generada es una propuesta probabilística: debe revisarse con el contexto real del proyecto, ejecutarse en pruebas y validarse contra los requisitos antes de producción.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Usar Copilot para proponer mejoras de código o algoritmos más eficientes que luego los revisores evalúan.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Automatizar solo issues de estilo como espacios, nombres y declaraciones.») no satisface ese criterio; la opción C («Depender de Copilot para detectar y corregir bugs automáticamente sin supervisión.») no satisface ese criterio; la opción D («Usar Copilot para aceptar automáticamente todos los cambios y sugerencias.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [Microsoft Learn: guía de estudio GH-300](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300)
 
@@ -1855,7 +1853,7 @@ sugerencias.
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque aporta contexto, restricciones o ejemplos verificables al modelo. Microsoft Learn y GitHub Docs recomiendan dividir tareas complejas, evitar ambigüedad, incluir requisitos concretos e iterar sobre el resultado; un prompt breve y genérico deja demasiadas decisiones sin especificar.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «Analiza código y comentarios cercanos dentro del archivo para entender el contexto y generar sugerencias.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Siempre analiza todo el proyecto en todos los archivos para dar sugerencias consistentes con la arquitectura.») no satisface ese criterio; la opción B («Usa solo el texto de la línea actual donde está el cursor.») no satisface ese criterio; la opción C («Usa únicamente la función o clase donde está el cursor.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: ingeniería de prompts](https://docs.github.com/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot)
 
@@ -1871,7 +1869,7 @@ D. El proxy ejecuta el código en un entorno virtual para verificar que no tenga
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque coincide con el objetivo descrito y con el uso de Copilot como asistente de desarrollo. La salida generada es una propuesta probabilística: debe revisarse con el contexto real del proyecto, ejecutarse en pruebas y validarse contra los requisitos antes de producción.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «El proxy registra y anonimiza input del usuario, lo reenvía al modelo Codex y ayuda a excluir información sensible de las sugerencias finales.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («El proxy valida sugerencias ejecutando análisis estático de seguridad antes de mostrarlas.») no satisface ese criterio; la opción C («El proxy elimina referencias a librerías externas o APIs para evitar problemas legales.») no satisface ese criterio; la opción D («El proxy ejecuta el código en un entorno virtual para verificar que no tenga errores runtime.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [Microsoft Learn: guía de estudio GH-300](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300)
 
@@ -1886,7 +1884,7 @@ D. POST /orgs/{org}/copilot/seats
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «POST /orgs/{org}/copilot/seats» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («PATCH /orgs/{org}/copilot/license») no satisface ese criterio; la opción B («PUT /orgs/{org}/memberships/{username}/copilot») no satisface ese criterio; la opción C («POST /users/{username}/copilot/access») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
@@ -1902,7 +1900,7 @@ D. Usa solo datos públicos e ignora el contexto local de repos privados.
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Envía queries y contexto relevante temporalmente a servidores GitHub, pero los datos de repos privados no se almacenan ni se usan para entrenamiento.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Procesa todas las interacciones localmente sin enviar datos a GitHub.») no satisface ese criterio; la opción C («Envía snippets y queries a GitHub, donde se almacenan para entrenamiento futuro.») no satisface ese criterio; la opción D («Usa solo datos públicos e ignora el contexto local de repos privados.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -1917,7 +1915,7 @@ D. Permite que varios desarrolladores compartan una sola licencia en un proyecto
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Integra varios IDEs locales, pero se orienta a repos personales y requiere licencia por usuario.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Solo soporta IDEs alojados en GitHub como Codespaces.») no satisface ese criterio; la opción C («Da acceso ilimitado a sugerencias en múltiples repos privados de la organización.») no satisface ese criterio; la opción D («Permite que varios desarrolladores compartan una sola licencia en un proyecto de equipo.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
@@ -1933,7 +1931,7 @@ D. Ofrece debugging avanzado directamente en el navegador.
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque refleja que Copilot Chat proporciona asistencia contextual mediante lenguaje natural. Sus respuestas pueden ser inexactas o incompletas; el desarrollador debe revisar, probar y confirmar cualquier cambio antes de incorporarlo.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Permite hacer preguntas en lenguaje natural sobre pull requests, issues y tareas del proyecto.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Proporciona sugerencias inline de documentación en tiempo real mientras escribes.») no satisface ese criterio; la opción C («Se integra automáticamente con cualquier sistema externo de tracking.») no satisface ese criterio; la opción D («Ofrece debugging avanzado directamente en el navegador.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: uso responsable de Copilot Chat](https://docs.github.com/en/copilot/responsible-use/chat)
 
@@ -1949,7 +1947,7 @@ D. Reportar el problema a GitHub y seguir usando el código generado sin modific
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque aporta contexto, restricciones o ejemplos verificables al modelo. Microsoft Learn y GitHub Docs recomiendan dividir tareas complejas, evitar ambigüedad, incluir requisitos concretos e iterar sobre el resultado; un prompt breve y genérico deja demasiadas decisiones sin especificar.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «Revisar profundamente sugerencias de Copilot por sesgo, incorporar solo código neutral y concientizar al equipo.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Apagar Copilot para el proyecto y evitar herramientas AI en open-source.») no satisface ese criterio; la opción B («Seguir usando Copilot y editar manualmente sugerencias sesgadas.») no satisface ese criterio; la opción D («Reportar el problema a GitHub y seguir usando el código generado sin modificarlo.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: ingeniería de prompts](https://docs.github.com/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot)
 
@@ -1964,7 +1962,7 @@ D. Configurar políticas o templates de PR para guiar el formato y usar Copilot 
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «Configurar políticas o templates de PR para guiar el formato y usar Copilot alineado a esas reglas.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Deshabilitar resúmenes de PR revocando write access de Copilot.») no satisface ese criterio; la opción B («Activar “Strict Summary Mode” para forzar formato uniforme.») no satisface ese criterio; la opción C («Modificar directamente settings de generación de resumen en el panel Enterprise Cloud Admin.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
@@ -1980,7 +1978,7 @@ D. Usar comentarios inline para indicar a Copilot cuándo hay información sensi
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque aplica una salvaguarda explícita para limitar el contexto que Copilot puede usar. La exclusión de contenido debe configurarse en los controles admitidos por la organización; revisar el resultado, proteger los secretos y aplicar las obligaciones de privacidad siguen siendo responsabilidad del equipo.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Activar configuraciones de privacidad para excluir archivos con contenido sensible del entrenamiento/ contexto.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Remover Copilot completamente del repositorio.») no satisface ese criterio; la opción C («Entrenar Copilot con tu repositorio privado para adaptar sugerencias.») no satisface ese criterio; la opción D («Usar comentarios inline para indicar a Copilot cuándo hay información sensible.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: exclusión de contenido](https://docs.github.com/en/copilot/concepts/content-exclusion)
 
@@ -1996,7 +1994,7 @@ D. Agrega toda la telemetría de usuarios y la usa para reentrenar modelos con c
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Transmite pequeños snippets desde el IDE a sus servidores para procesamiento en tiempo real, pero no almacena ni retiene esos datos después de sugerir.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Procesa snippets localmente en el IDE, sin transmitir código a servidores externos.») no satisface ese criterio; la opción C («Cifra todos los snippets enviados y los almacena permanentemente para mejorar el modelo.») no satisface ese criterio; la opción D («Agrega toda la telemetría de usuarios y la usa para reentrenar modelos con cada actualización.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -2014,7 +2012,7 @@ respuestas.
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Copilot Chat envía input a la API Codex de OpenAI para procesamiento, y ningún input se almacena permanentemente por GitHub u OpenAI.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Las interacciones se almacenan permanentemente en GitHub para mejorar modelos, sin compartir con terceros.») no satisface ese criterio; la opción C («Todo se procesa localmente sin enviar datos externos.») no satisface ese criterio; la opción D («Las interacciones se envían a GitHub y luego a OpenAI, almacenando parte del chat para mejorar futuras respuestas.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: alojamiento de modelos](https://docs.github.com/en/copilot/reference/ai-models/model-hosting)
 
@@ -2030,7 +2028,7 @@ D. Tiene escaneo de seguridad integrado que bloquea automáticamente sugerencias
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque coincide con el objetivo descrito y con el uso de Copilot como asistente de desarrollo. La salida generada es una propuesta probabilística: debe revisarse con el contexto real del proyecto, ejecutarse en pruebas y validarse contra los requisitos antes de producción.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Puede identificar y advertir riesgos potenciales en código generado, pero no impide que el usuario acepte sugerencias inseguras.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Las advertencias de seguridad están activadas por defecto y no pueden deshabilitarse.») no satisface ese criterio; la opción C («Se integra directamente con GHAS y Dependabot para alertas en tiempo real en cada sugerencia.») no satisface ese criterio; la opción D («Tiene escaneo de seguridad integrado que bloquea automáticamente sugerencias vulnerables.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [Microsoft Learn: guía de estudio GH-300](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300)
 
@@ -2046,7 +2044,7 @@ correspondientes.
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «Supervised learning usando un dataset de queries SQL correctamente estructuradas y modelos de datos correspondientes.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Transfer learning usando un modelo conversacional.») no satisface ese criterio; la opción B («Reinforcement learning con queries SQL aleatorias y recompensas por ejecuciones exitosas.») no satisface ese criterio; la opción C («Unsupervised learning para encontrar patrones en queries SQL.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: alojamiento de modelos](https://docs.github.com/en/copilot/reference/ai-models/model-hosting)
 
@@ -2062,12 +2060,12 @@ ni todo el contexto del proyecto.
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque coincide con el objetivo descrito y con el uso de Copilot como asistente de desarrollo. La salida generada es una propuesta probabilística: debe revisarse con el contexto real del proyecto, ejecutarse en pruebas y validarse contra los requisitos antes de producción.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «Puede dar sugerencias obsoletas o subóptimas porque no entiende las mejores prácticas más recientes ni todo el contexto del proyecto.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Siempre genera código documentado y actualizado con estándares recientes.») no satisface ese criterio; la opción B («Refactoriza automáticamente para alinear todas las sugerencias con arquitectura y estilo del proyecto.») no satisface ese criterio; la opción C («Siempre da la solución más eficiente porque aprende de los mejores repos open-source.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [Microsoft Learn: guía de estudio GH-300](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300)
 
 Pregunta 55
-Un equipo de GitHub Copilot Business crea una Knowledge Base para ayudar en onboarding. ¿Qué tipo de
+Un equipo de GitHub Copilot Business crea una Copilot Space para ayudar en onboarding. ¿Qué tipo de
 conocimiento sería más efectivo para mejorar consistencia y patrones de desarrollo?
 A. Timelines de proyectos con ciclos y fechas de releases.
 B. Buenas prácticas de estándares de codificación, guías de comentarios y protocolos de manejo de errores.
@@ -2077,7 +2075,7 @@ D. Snippets aislados de imports e inicialización de librerías.
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Buenas prácticas de estándares de codificación, guías de comentarios y protocolos de manejo de errores.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Timelines de proyectos con ciclos y fechas de releases.») no satisface ese criterio; la opción C («Notas del equipo sobre responsabilidades y roles.») no satisface ese criterio; la opción D («Snippets aislados de imports e inicialización de librerías.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
@@ -2092,7 +2090,7 @@ D. GitHub Copilot for Business.
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «GitHub Copilot for Business.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («GitHub Copilot for Individuals.») no satisface ese criterio; la opción B («GitHub Copilot Free Plan.») no satisface ese criterio; la opción C («GitHub Enterprise Plan.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
@@ -2108,7 +2106,7 @@ D. Generar un solo caso que verifique add(2, 3) .
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque usa Copilot como apoyo para proponer pruebas y casos límite, no como sustituto de la validación. Las pruebas generadas deben revisarse, ejecutarse y ampliarse para cubrir comportamiento esperado, entradas inválidas, errores y requisitos de seguridad o rendimiento.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Pedir a Copilot múltiples casos, incluyendo edge cases como add(0, 0) y números negativos como add(-1, -5) .» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Pedir solo tests para enteros positivos y escribir edge cases manualmente después.») no satisface ese criterio; la opción C («Pedir performance tests para verificar velocidad bajo carga.») no satisface ese criterio; la opción D («Generar un solo caso que verifique add(2, 3) .») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: escribir pruebas con GitHub Copilot](https://docs.github.com/en/copilot/tutorials/write-tests)
 
@@ -2123,7 +2121,7 @@ D. Generación automática de explicaciones detalladas por archivo.
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Resumir cambios del PR destacando actualizaciones importantes en formato fácil de leer.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Sugerir reviewers automáticamente según historial y experiencia.») no satisface ese criterio; la opción C («Integración de chat en tiempo real con reviewers para aprobación rápida.») no satisface ese criterio; la opción D («Generación automática de explicaciones detalladas por archivo.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
@@ -2138,7 +2136,7 @@ D. Mantener el prompt corto y vago.
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque aporta contexto, restricciones o ejemplos verificables al modelo. Microsoft Learn y GitHub Docs recomiendan dividir tareas complejas, evitar ambigüedad, incluir requisitos concretos e iterar sobre el resultado; un prompt breve y genérico deja demasiadas decisiones sin especificar.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Incluir detalles específicos: formato de entrada, criterio de filtrado y output esperado.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Omitir detalles y dejar que Copilot dé múltiples opciones.») no satisface ese criterio; la opción C («Confiar en que Copilot detecte automáticamente lo que necesitas desde el proyecto.») no satisface ese criterio; la opción D («Mantener el prompt corto y vago.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: ingeniería de prompts](https://docs.github.com/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot)
 
@@ -2154,7 +2152,7 @@ D. Solo ofrece autocomplete tradicional sin consultas interactivas.
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque refleja que Copilot Chat proporciona asistencia contextual mediante lenguaje natural. Sus respuestas pueden ser inexactas o incompletas; el desarrollador debe revisar, probar y confirmar cualquier cambio antes de incorporarlo.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «Puede explicar y generar snippets inline, permitiendo interacción en tiempo real con IA mientras codificas.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Ejecuta scripts directamente dentro del chat sin integración IDE.») no satisface ese criterio; la opción B («Hace commits y push automáticamente sin confirmación del usuario.») no satisface ese criterio; la opción D («Solo ofrece autocomplete tradicional sin consultas interactivas.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: uso responsable de Copilot Chat](https://docs.github.com/en/copilot/responsible-use/chat)
 
@@ -2169,7 +2167,7 @@ D. Dando logs detallados por usuario sobre qué sugerencias fueron aceptadas.
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Habilitando audit logs organizacionales que documentan cambios de configuración y uso de Copilot.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Con un dashboard en tiempo real de sugerencias Copilot.») no satisface ese criterio; la opción C («Generando reportes manuales de todas las sugerencias durante un sprint.») no satisface ese criterio; la opción D («Dando logs detallados por usuario sobre qué sugerencias fueron aceptadas.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
@@ -2184,7 +2182,7 @@ D. GitHub Copilot Individual.
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «GitHub Copilot for Business.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («GitHub Copilot Plus.») no satisface ese criterio; la opción C («GitHub Copilot Free.») no satisface ese criterio; la opción D («GitHub Copilot Individual.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -2200,7 +2198,7 @@ D. Puede generar código en cualquier lenguaje aunque nunca haya aparecido en re
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque coincide con el objetivo descrito y con el uso de Copilot como asistente de desarrollo. La salida generada es una propuesta probabilística: debe revisarse con el contexto real del proyecto, ejecutarse en pruebas y validarse contra los requisitos antes de producción.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Soporta múltiples lenguajes, pero funciona mejor en lenguajes con repositorios open-source abundantes.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Copilot funciona óptimamente solo en Python y JavaScript.») no satisface ese criterio; la opción C («Funciona igual de bien en todos los lenguajes sin importar popularidad.») no satisface ese criterio; la opción D («Puede generar código en cualquier lenguaje aunque nunca haya aparecido en repos públicos.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [Microsoft Learn: guía de estudio GH-300](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300)
 
@@ -2217,7 +2215,7 @@ from the first empty row.”
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «“Use openpyxl to write a row of data into the Excel file named 'data.xlsx', in the 'Sheet1' sheet, starting from the first empty row.”» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («“Add data to an Excel sheet.”») no satisface ese criterio; la opción B («“Write a function that adds data to a file.”») no satisface ese criterio; la opción C («“How to use openpyxl in Python?”») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -2233,7 +2231,7 @@ D. Genera código solo desde repositorios propietarios de GitHub.
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque coincide con el objetivo descrito y con el uso de Copilot como asistente de desarrollo. La salida generada es una propuesta probabilística: debe revisarse con el contexto real del proyecto, ejecutarse en pruebas y validarse contra los requisitos antes de producción.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Copilot puede alucinar patrones de código incorrectos o inseguros, por lo que los desarrolladores deben verificar sus sugerencias.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Garantiza corrección y seguridad de todo el código generado.») no satisface ese criterio; la opción C («Entiende completamente todo el codebase y mantiene contexto global del proyecto.») no satisface ese criterio; la opción D («Genera código solo desde repositorios propietarios de GitHub.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [Microsoft Learn: guía de estudio GH-300](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300)
 
@@ -2249,14 +2247,14 @@ D. Revisar y modificar archivos del proyecto para excluir sugerencias específic
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque aplica una salvaguarda explícita para limitar el contexto que Copilot puede usar. La exclusión de contenido debe configurarse en los controles admitidos por la organización; revisar el resultado, proteger los secretos y aplicar las obligaciones de privacidad siguen siendo responsabilidad del equipo.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «Revisar y modificar archivos del proyecto para excluir sugerencias específicas de contexto.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Configurar Copilot para sugerir solo en repos públicos.») no satisface ese criterio; la opción B («Contactar a GitHub Support para eliminar sugerencias del training data.») no satisface ese criterio; la opción C («Desconectar Copilot inmediatamente y dejar de usarlo.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: exclusión de contenido](https://docs.github.com/en/copilot/concepts/content-exclusion)
 
 Pregunta 67
 GitHub Copilot ofrece completions mediante modelos de machine learning entrenados con código público.
 ¿Qué ocurre cuando un desarrollador escribe un snippet y Copilot sugiere una completion?
-A. Consulta una knowledge base centralizada de completions aceptadas previamente.
+A. Consulta una Copilot Space centralizada de completions aceptadas previamente.
 B. Sube todo el repositorio del usuario, incluyendo código privado, a servidores GitHub.
 C. Recupera completions desde una lista cacheada de snippets open-source.
 D. Envía el contexto local del archivo, incluyendo código y comentarios cercanos, a la API del modelo de
@@ -2265,7 +2263,7 @@ Copilot para inferencia.
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «Envía el contexto local del archivo, incluyendo código y comentarios cercanos, a la API del modelo de Copilot para inferencia.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Consulta una Copilot Space centralizada de completions aceptadas previamente.») no satisface ese criterio; la opción B («Sube todo el repositorio del usuario, incluyendo código privado, a servidores GitHub.») no satisface ese criterio; la opción C («Recupera completions desde una lista cacheada de snippets open-source.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -2283,7 +2281,7 @@ funcionalidad.
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Usará el historial para entender el contexto de la aplicación y generar código consistente con funciones existentes, como la misma API y estructura de manejo de errores.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Ignorará el historial previo y responderá solo al prompt actual.») no satisface ese criterio; la opción C («Referenciará el historial, pero no influirá en el código generado.») no satisface ese criterio; la opción D («Usará el historial para combinar todo el código previo y devolver un único script con toda la funcionalidad.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -2298,7 +2296,7 @@ D. Confiar en el test generado como suficiente y no agregar más pruebas.
 Respuesta correcta: B y C
 
 Explicación
-La opción B y C es la adecuada porque usa Copilot como apoyo para proponer pruebas y casos límite, no como sustituto de la validación. Las pruebas generadas deben revisarse, ejecutarse y ampliarse para cubrir comportamiento esperado, entradas inválidas, errores y requisitos de seguridad o rendimiento.
+Las respuestas correctas son las opciones B y C porque, en conjunto, «Modificar el test para incluir un array vacío como input.»; «Agregar un caso donde el input incluya números negativos y ceros.» describen las acciones que cumplen el criterio de la pregunta. Las demás alternativas no son válidas: la opción A («Confiar en pruebas manuales para edge cases como números grandes o floats.») no satisface ese criterio; la opción D («Confiar en el test generado como suficiente y no agregar más pruebas.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: escribir pruebas con GitHub Copilot](https://docs.github.com/en/copilot/tutorials/write-tests)
 
@@ -2316,7 +2314,7 @@ contribuidores.
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «Configurar la política de GitHub Copilot a nivel organización, seleccionando solo los repositorios donde debe estar habilitado.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Implementar RBAC específico de Copilot en GitHub Enterprise Server para repositorios autorizados.») no satisface ese criterio; la opción B («Configurar controles repository-specific en GitHub Settings para deshabilitar Copilot en repos no autorizados.») no satisface ese criterio; la opción D («Usar settings de Enterprise Account para restringir Copilot según ubicación geográfica de los contribuidores.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
@@ -2325,8 +2323,8 @@ Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/
 Cuestionario de práctica: GitHub Copilot
 Pregunta 1
 Estás configurando GitHub Copilot para tu equipo y quieres personalizar cómo se comporta en distintas
-partes del código fuente. Has decidido crear un archivo copilot.yaml para controlar en qué archivos
-Copilot puede sugerir código y mantener un comportamiento consistente en los editores del equipo.
+partes del código fuente. Has decidido usar las reglas oficiales de exclusión de contenido para controlar
+en qué archivos Copilot puede sugerir código y mantener un comportamiento consistente en los editores del equipo.
 ¿Cuál de las siguientes opciones es una configuración válida para controlar el comportamiento de
 GitHub Copilot?
 A. Forzar a Copilot a entrenarse exclusivamente con el código del repositorio actual.
@@ -2338,7 +2336,7 @@ usuario.
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque coincide con el objetivo descrito y con el uso de Copilot como asistente de desarrollo. La salida generada es una propuesta probabilística: debe revisarse con el contexto real del proyecto, ejecutarse en pruebas y validarse contra los requisitos antes de producción.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Deshabilitar las sugerencias de Copilot para tipos de archivo específicos, como .json o .xml .» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Forzar a Copilot a entrenarse exclusivamente con el código del repositorio actual.») no satisface ese criterio; la opción C («Configurar Copilot para priorizar rendimiento sobre precisión en sus sugerencias.») no satisface ese criterio; la opción D («Hacer que Copilot complete automáticamente todos los comentarios TODO sin confirmación del usuario.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [Microsoft Learn: guía de estudio GH-300](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300)
 
@@ -2356,7 +2354,7 @@ antes de multiplicarlos.
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque coincide con el objetivo descrito y con el uso de Copilot como asistente de desarrollo. La salida generada es una propuesta probabilística: debe revisarse con el contexto real del proyecto, ejecutarse en pruebas y validarse contra los requisitos antes de producción.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «Usar Copilot para sugerir validaciones que verifiquen si price y quantity son números válidos antes de multiplicarlos.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Pedir a Copilot que cambie el ciclo for...of por forEach , ya que el tipo de bucle puede estar causando el error.») no satisface ese criterio; la opción B («Pedir a Copilot que reescriba toda la función desde cero sin analizar la causa del problema.») no satisface ese criterio; la opción C («Desactivar Copilot y depurar únicamente con console.log .») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [Microsoft Learn: guía de estudio GH-300](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300)
 
@@ -2372,7 +2370,7 @@ D. Generando datos completamente aleatorios sin validar estructura ni contenido.
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Generando datos de prueba en formato JSON basados en el contexto del código y los comentarios.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Conectándose directamente a la base de datos de producción para obtener registros reales.») no satisface ese criterio; la opción C («Creando manualmente un dataset y pidiendo a Copilot que lo almacene en una base de datos.») no satisface ese criterio; la opción D («Generando datos completamente aleatorios sin validar estructura ni contenido.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -2388,7 +2386,7 @@ D. Copilot CLI está diseñado principalmente para depurar código fuente dentro
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque corresponde al uso de Copilot desde la terminal para obtener orientación o proponer comandos. Los comandos generados deben revisarse antes de ejecutarse, especialmente si pueden modificar archivos, repositorios o infraestructura.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «Copilot CLI puede generar comandos de shell a partir de descripciones en lenguaje natural.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Copilot CLI puede ejecutar automáticamente los comandos generados sin revisión del usuario.») no satisface ese criterio; la opción B («Copilot CLI reemplaza por completo la necesidad de usar comandos Git.») no satisface ese criterio; la opción D («Copilot CLI está diseñado principalmente para depurar código fuente dentro del terminal.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: GitHub Copilot CLI](https://docs.github.com/en/copilot/how-tos/copilot-cli)
 
@@ -2404,7 +2402,7 @@ D. Debes aceptar las sugerencias exactamente como se presentan, sin posibilidad 
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque refleja que Copilot Chat proporciona asistencia contextual mediante lenguaje natural. Sus respuestas pueden ser inexactas o incompletas; el desarrollador debe revisar, probar y confirmar cualquier cambio antes de incorporarlo.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Puedes aceptar, modificar o rechazar las sugerencias proporcionadas por Copilot Chat.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Puedes hacer que las sugerencias se confirmen automáticamente en el repositorio sin revisión.») no satisface ese criterio; la opción C («Solo puedes aceptar sugerencias si pasan inmediatamente el análisis estático del proyecto.») no satisface ese criterio; la opción D («Debes aceptar las sugerencias exactamente como se presentan, sin posibilidad de editarlas.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: uso responsable de Copilot Chat](https://docs.github.com/en/copilot/responsible-use/chat)
 
@@ -2423,7 +2421,7 @@ modelo con ellas.
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque aporta contexto, restricciones o ejemplos verificables al modelo. Microsoft Learn y GitHub Docs recomiendan dividir tareas complejas, evitar ambigüedad, incluir requisitos concretos e iterar sobre el resultado; un prompt breve y genérico deja demasiadas decisiones sin especificar.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «El usuario escribe código o un comentario, Copilot envía el contexto a servidores de GitHub, el modelo genera sugerencias, el IDE las muestra y el usuario decide si acepta, modifica o ignora.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Copilot recupera repositorios públicos en tiempo real, genera una sugerencia y confirma automáticamente el código.») no satisface ese criterio; la opción C («Copilot descarga el código localmente, usa modelos offline y confirma el código automáticamente.») no satisface ese criterio; la opción D («Copilot escribe código automáticamente, guarda las confirmaciones del usuario y reentrena el modelo con ellas.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: ingeniería de prompts](https://docs.github.com/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot)
 
@@ -2441,7 +2439,7 @@ D. Escribir manualmente todo el código y evitar usar Copilot.
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «Proporcionar comentarios detallados y restricciones que expliquen el comportamiento esperado antes de la definición de la función.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Usar nombres vagos y genéricos como process_data para dar mayor flexibilidad a Copilot.») no satisface ese criterio; la opción B («Escribir solo el nombre de la función y dejar que Copilot complete toda la implementación.») no satisface ese criterio; la opción D («Escribir manualmente todo el código y evitar usar Copilot.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -2458,7 +2456,7 @@ D. Procesa todos los archivos del repositorio, incluidos privados, para entrenar
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Usa un modelo preentrenado y envía fragmentos relevantes del archivo actual a servidores de GitHub para generar sugerencias.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Procesa todo localmente en tu equipo sin enviar ningún dato a servidores externos.») no satisface ese criterio; la opción C («Usa tus datos personales para personalizar sugerencias según tus preferencias.») no satisface ese criterio; la opción D («Procesa todos los archivos del repositorio, incluidos privados, para entrenar modelos.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -2473,7 +2471,7 @@ D. El filtro garantiza que ninguna sugerencia se parezca, ni siquiera parcialmen
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque considera el posible parecido con código público y las obligaciones de licencia. Los filtros y referencias de Copilot son salvaguardas, no una garantía de ausencia total de coincidencias; el equipo debe revisar la licencia y la procedencia antes de reutilizar código.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «El filtro compara sugerencias con repositorios públicos y bloquea coincidencias exactas.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («El filtro bloquea toda sugerencia de código que tenga más de cinco líneas.») no satisface ese criterio; la opción C («El filtro solo aplica a usuarios de Copilot Business y Enterprise.») no satisface ese criterio; la opción D («El filtro garantiza que ninguna sugerencia se parezca, ni siquiera parcialmente, a código público.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: referencias a código público](https://docs.github.com/en/copilot/concepts/completions/code-referencing)
 
@@ -2490,7 +2488,7 @@ manualmente antes de integrar.
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque coincide con el objetivo descrito y con el uso de Copilot como asistente de desarrollo. La salida generada es una propuesta probabilística: debe revisarse con el contexto real del proyecto, ejecutarse en pruebas y validarse contra los requisitos antes de producción.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «Usar Copilot para sugerir mejoras en partes pequeñas y aisladas del código, revisando y probando manualmente antes de integrar.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Permitir que Copilot refactorice automáticamente todo el código sin intervención del equipo.») no satisface ese criterio; la opción B («Usar Copilot únicamente para documentar el código legacy, sin permitir sugerencias de cambio.») no satisface ese criterio; la opción C («Pedir a Copilot que genere nuevos componentes para todo el sistema legacy sin revisión.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [Microsoft Learn: guía de estudio GH-300](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300)
 
@@ -2506,7 +2504,7 @@ D. Copilot solo usa el archivo actual y nunca recopila ningún tipo de telemetr�
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Copilot no almacena ni usa datos de repositorios privados para reentrenar sus modelos subyacentes.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Copilot usa todos los datos de repositorios públicos y privados para entrenar sus modelos.») no satisface ese criterio; la opción C («Copilot envía todo el código del usuario a servidores externos fuera de GitHub para procesarlo.») no satisface ese criterio; la opción D («Copilot solo usa el archivo actual y nunca recopila ningún tipo de telemetría.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: alojamiento de modelos](https://docs.github.com/en/copilot/reference/ai-models/model-hosting)
 
@@ -2523,7 +2521,7 @@ D. Detecta código reutilizado de todos los repositorios privados de GitHub para
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque considera el posible parecido con código público y las obligaciones de licencia. Los filtros y referencias de Copilot son salvaguardas, no una garantía de ausencia total de coincidencias; el equipo debe revisar la licencia y la procedencia antes de reutilizar código.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «Compara sugerencias generadas contra código abierto popular y las marca o bloquea si superan un umbral de similitud.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Escanea todo el código del usuario y bloquea cualquier duplicado exacto dentro del repositorio.») no satisface ese criterio; la opción B («Marca código común de repositorios públicos y lo reemplaza automáticamente por una alternativa única.») no satisface ese criterio; la opción D («Detecta código reutilizado de todos los repositorios privados de GitHub para garantizar unicidad.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: referencias a código público](https://docs.github.com/en/copilot/concepts/completions/code-referencing)
 
@@ -2540,7 +2538,7 @@ D. Garantiza que todas las respuestas cumplan con estándares internos de seguri
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque refleja que Copilot Chat proporciona asistencia contextual mediante lenguaje natural. Sus respuestas pueden ser inexactas o incompletas; el desarrollador debe revisar, probar y confirmar cualquier cambio antes de incorporarlo.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «No garantiza la exactitud de sus respuestas; los desarrolladores deben verificar las sugerencias antes de implementarlas.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Soporta todos los lenguajes de programación con el mismo nivel de precisión contextual.») no satisface ese criterio; la opción C («Puede usarse sin conexión a internet porque genera respuestas localmente.») no satisface ese criterio; la opción D («Garantiza que todas las respuestas cumplan con estándares internos de seguridad y estilo.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: uso responsable de Copilot Chat](https://docs.github.com/en/copilot/responsible-use/chat)
 
@@ -2559,7 +2557,7 @@ que exista permiso explícito.
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «Copilot usa un modelo entrenado con código público, pero no accede ni usa código privado salvo que exista permiso explícito.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Copilot aprende en tiempo real de tu repositorio privado y comparte ese aprendizaje con otros usuarios.») no satisface ese criterio; la opción B («Copilot solo usa plantillas genéricas predefinidas y no se basa en datos reales.») no satisface ese criterio; la opción C («Copilot accede automáticamente a todo código público y privado disponible para personalizar sugerencias.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -2575,7 +2573,7 @@ D. Permite uso ilimitado en múltiples cuentas sin asignar licencias individuale
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Permite facturación centralizada para todos los usuarios bajo una cuenta organizacional.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Permite entrenar el modelo con código propietario de la organización.») no satisface ese criterio; la opción C («Incluye cifrado de datos, mientras que el plan Individual no lo soporta.») no satisface ese criterio; la opción D («Permite uso ilimitado en múltiples cuentas sin asignar licencias individuales.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
@@ -2594,7 +2592,7 @@ organizaciones.
 Respuesta correcta: A, D
 
 Explicación
-La opción A, D es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+Las respuestas correctas son las opciones A y D porque, en conjunto, «GitHub Copilot Enterprise soporta integración con LDAP y single sign-on, SSO, para autenticación segura.»; «GitHub Copilot Enterprise incluye telemetría mejorada y políticas de retención de datos para organizaciones.» describen las acciones que cumplen el criterio de la pregunta. Las demás alternativas no son válidas: la opción B («GitHub Copilot Enterprise ofrece un plan gratuito para equipos con menos de 10 usuarios.») no satisface ese criterio; la opción C («GitHub Copilot Enterprise permite uso ilimitado de repositorios privados sin costo adicional por usuarios.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
@@ -2613,7 +2611,7 @@ entradas.
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Al escribir, Copilot envía contexto del código a un modelo en la nube, procesa la entrada usando datos preentrenados y devuelve sugerencias, sin usar tus entradas específicas para entrenar modelos futuros.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Todo el modelo de Copilot corre localmente en tu equipo y no transmite datos por la red.») no satisface ese criterio; la opción C («Copilot procesa la entrada únicamente de forma local, sin enviar datos a la nube.») no satisface ese criterio; la opción D («Copilot accede a tu código local, lo envía a la nube y entrena el modelo en tiempo real con tus entradas.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -2628,7 +2626,7 @@ D. Reducir el tamaño del proyecto eliminando archivos y dependencias no usados.
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque refleja que Copilot Chat proporciona asistencia contextual mediante lenguaje natural. Sus respuestas pueden ser inexactas o incompletas; el desarrollador debe revisar, probar y confirmar cualquier cambio antes de incorporarlo.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «Mantener abiertos los archivos relevantes y proporcionar prompts explícitos con contexto detallado.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Aumentar manualmente los tiempos de espera de Copilot Chat.») no satisface ese criterio; la opción B («Desactivar resaltado de sintaxis y autocompletado del editor.») no satisface ese criterio; la opción D («Reducir el tamaño del proyecto eliminando archivos y dependencias no usados.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: uso responsable de Copilot Chat](https://docs.github.com/en/copilot/responsible-use/chat)
 
@@ -2644,7 +2642,7 @@ D. Sugerencias personalizadas basadas únicamente en patrones locales de cada de
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Controles administrativos centralizados y funciones de seguridad como SAML SSO y auditoría.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Acceso a GitHub Copilot Labs para probar funciones experimentales.») no satisface ese criterio; la opción C («Acceso a sugerencias de IA en editores como VS Code, Neovim y JetBrains.») no satisface ese criterio; la opción D («Sugerencias personalizadas basadas únicamente en patrones locales de cada desarrollador.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
@@ -2662,7 +2660,7 @@ D. El código se envía directamente al modelo sin preprocesamiento ni filtros.
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «El código y contexto pasan por un servicio proxy que aplica filtros antes de llegar al modelo, que genera la sugerencia según el contexto.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («El código del usuario se guarda permanentemente en logs de GitHub para mejorar sugerencias futuras.») no satisface ese criterio; la opción B («Copilot se ejecuta localmente sin internet, basado solo en interacciones pasadas.») no satisface ese criterio; la opción D («El código se envía directamente al modelo sin preprocesamiento ni filtros.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -2677,7 +2675,7 @@ D. Actualizando automáticamente todo el código a la última versión de JavaSc
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque coincide con el objetivo descrito y con el uso de Copilot como asistente de desarrollo. La salida generada es una propuesta probabilística: debe revisarse con el contexto real del proyecto, ejecutarse en pruebas y validarse contra los requisitos antes de producción.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Sugiriendo reemplazar bloques repetidos por funciones reutilizables.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Agregando más comentarios al código existente, sin cambiar estructura.») no satisface ese criterio; la opción C («Escribiendo una nueva base de código desde cero.») no satisface ese criterio; la opción D («Actualizando automáticamente todo el código a la última versión de JavaScript.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [Microsoft Learn: guía de estudio GH-300](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300)
 
@@ -2695,7 +2693,7 @@ D. GitHub Copilot es gratuito para cualquier desarrollador, incluso sin cuenta G
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «GitHub Copilot requiere una cuenta GitHub y un plan activo, pero puede usarse en IDEs compatibles aunque el código esté alojado en otro proveedor como GitLab, Bitbucket o Azure Repos.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («GitHub Copilot está disponible solo para usuarios con un plan GitHub Enterprise activo.») no satisface ese criterio; la opción B («GitHub Copilot puede usarse sin cuenta GitHub si el usuario inicia sesión con una cuenta Microsoft.») no satisface ese criterio; la opción D («GitHub Copilot es gratuito para cualquier desarrollador, incluso sin cuenta GitHub.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
@@ -2712,7 +2710,7 @@ D. Copiar manualmente grandes bloques de código en el chat antes de cada pregun
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque refleja que Copilot Chat proporciona asistencia contextual mediante lenguaje natural. Sus respuestas pueden ser inexactas o incompletas; el desarrollador debe revisar, probar y confirmar cualquier cambio antes de incorporarlo.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Usar comentarios inline y docstrings para explicar la intención de funciones y clases.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Aumentar memoria y CPU del equipo local para que Copilot procese más rápido.») no satisface ese criterio; la opción C («Dividir obligatoriamente el codebase en repositorios más pequeños para que Copilot no procese demasiado.») no satisface ese criterio; la opción D («Copiar manualmente grandes bloques de código en el chat antes de cada pregunta.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: uso responsable de Copilot Chat](https://docs.github.com/en/copilot/responsible-use/chat)
 
@@ -2728,7 +2726,7 @@ D. Ofuscar los datos sensibles para que Copilot no los entienda.
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «Deshabilitar Copilot únicamente para archivos o directorios que contienen información sensible.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Agregar comentarios dentro del código indicando a Copilot que ignore ciertas secciones.») no satisface ese criterio; la opción B («Deshabilitar Copilot para todo el proyecto, aunque solo algunos archivos sean sensibles.») no satisface ese criterio; la opción D («Ofuscar los datos sensibles para que Copilot no los entienda.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -2745,7 +2743,7 @@ D. Invocar una función automática de manejo de excepciones para resolver toda 
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «Usar el atajo de teclado para abrir múltiples sugerencias y recorrer diferentes variaciones de la función.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Usar Copilot CLI para buscar ejemplos de validación y luego implementarlos manualmente.») no satisface ese criterio; la opción B («Aceptar solo la primera sugerencia inline que aparezca.») no satisface ese criterio; la opción D («Invocar una función automática de manejo de excepciones para resolver toda la validación.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -2762,7 +2760,7 @@ D. “Write a test script to send requests to my API.”
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque aporta contexto, restricciones o ejemplos verificables al modelo. Microsoft Learn y GitHub Docs recomiendan dividir tareas complejas, evitar ambigüedad, incluir requisitos concretos e iterar sobre el resultado; un prompt breve y genérico deja demasiadas decisiones sin especificar.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «“Generate an integration test for the Flask endpoint /api/orders using pytest and requests to check status codes and response data.”» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («“Write some tests for my Flask app.”») no satisface ese criterio; la opción C («“Write a Python function to check if my API is working.”») no satisface ese criterio; la opción D («“Write a test script to send requests to my API.”») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: ingeniería de prompts](https://docs.github.com/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot)
 
@@ -2780,7 +2778,7 @@ D. Afirmar que Copilot no usará código open-source para generar sugerencias en
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «Especificar que el equipo configurará Copilot para excluir archivos sensibles de su contexto durante el uso.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Garantizar que ningún dato del proyecto será usado jamás por Copilot en entrenamiento o sugerencias.») no satisface ese criterio; la opción B («Indicar que GitHub será responsable por cualquier fuga de datos causada por el uso de Copilot.») no satisface ese criterio; la opción D («Afirmar que Copilot no usará código open-source para generar sugerencias en código propietario.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -2799,7 +2797,7 @@ D. Pedir a Copilot solo pruebas para entradas normales y escribir manualmente to
 Respuesta correcta: B, C
 
 Explicación
-La opción B, C es la adecuada porque usa Copilot como apoyo para proponer pruebas y casos límite, no como sustituto de la validación. Las pruebas generadas deben revisarse, ejecutarse y ampliarse para cubrir comportamiento esperado, entradas inválidas, errores y requisitos de seguridad o rendimiento.
+Las respuestas correctas son las opciones B y C porque, en conjunto, «Incluir comentarios claros sobre el comportamiento esperado, como retornar 0 para un array vacío y lanzar error ante entradas inválidas.»; «Especificar casos borde como arrays con elementos no numéricos o arrays extremadamente grandes.» describen las acciones que cumplen el criterio de la pregunta. Las demás alternativas no son válidas: la opción A («Proporcionar solo el nombre de la función y esperar que Copilot genere automáticamente todas las pruebas completas.») no satisface ese criterio; la opción D («Pedir a Copilot solo pruebas para entradas normales y escribir manualmente todos los casos borde.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: escribir pruebas con GitHub Copilot](https://docs.github.com/en/copilot/tutorials/write-tests)
 
@@ -2816,7 +2814,7 @@ pueden no alinearse con todo el codebase.
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «Copilot solo puede procesar una porción del código cercano a la vez, por lo que sus sugerencias pueden no alinearse con todo el codebase.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Copilot no usa ventana de contexto y puede analizar múltiples archivos simultáneamente.») no satisface ese criterio; la opción B («Copilot puede acceder a todas las líneas de un archivo sin importar su tamaño.») no satisface ese criterio; la opción C («La ventana de contexto se expande dinámicamente según el tamaño del proyecto.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -2833,7 +2831,7 @@ inputs.”
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque aporta contexto, restricciones o ejemplos verificables al modelo. Microsoft Learn y GitHub Docs recomiendan dividir tareas complejas, evitar ambigüedad, incluir requisitos concretos e iterar sobre el resultado; un prompt breve y genérico deja demasiadas decisiones sin especificar.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «“Write a Python function that calculates the factorial using recursion, including error handling for negative numbers.”» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («“Write a Python function to calculate the factorial of a number.”») no satisface ese criterio; la opción C («“Write a Python program that returns the factorial of an integer.”») no satisface ese criterio; la opción D («“Write a Python function for calculating factorial, with recursion, and return None for negative inputs.”») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: ingeniería de prompts](https://docs.github.com/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot)
 
@@ -2850,7 +2848,7 @@ D. Generando datasets mínimos y completando manualmente los registros faltantes
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «Generando un dataset grande que imite comportamiento real de usuarios y verificando que los datos sean válidos y estructurados.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Generando datos aleatorios sin considerar estructura ni casos de uso.») no satisface ese criterio; la opción B («Generando la máxima cantidad de datos posible sin considerar la capacidad de la base de datos.») no satisface ese criterio; la opción D («Generando datasets mínimos y completando manualmente los registros faltantes.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -2867,7 +2865,7 @@ D. Copilot incluye un mecanismo que detecta y bloquea todo código con copyright
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Copilot puede generar código parecido a código público, por lo que los desarrolladores deben verificar cumplimiento de licencias antes de usarlo comercialmente.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Todo código generado por Copilot es automáticamente open-source y libre para uso comercial.») no satisface ese criterio; la opción C («Usar Copilot elimina la necesidad de revisar políticas internas o regulaciones de la industria.») no satisface ese criterio; la opción D («Copilot incluye un mecanismo que detecta y bloquea todo código con copyright.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
@@ -2885,7 +2883,7 @@ de sugerencias aceptadas y adopción.
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque coincide con el objetivo descrito y con el uso de Copilot como asistente de desarrollo. La salida generada es una propuesta probabilística: debe revisarse con el contexto real del proyecto, ejecutarse en pruebas y validarse contra los requisitos antes de producción.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «Habilitar la recopilación de telemetría de Copilot y usar la Productivity API para medir el porcentaje de sugerencias aceptadas y adopción.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Medir únicamente la cantidad de pull requests enviados.») no satisface ese criterio; la opción B («Medir solo el total de líneas de código escritas sin distinguir entre código humano y sugerido por Copilot.») no satisface ese criterio; la opción C («Usar únicamente logs generales de actividad de GitHub.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [Microsoft Learn: guía de estudio GH-300](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300)
 
@@ -2902,7 +2900,7 @@ D. Dar una función incompleta y dejar que Copilot infiera toda la lógica de e-
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque aporta contexto, restricciones o ejemplos verificables al modelo. Microsoft Learn y GitHub Docs recomiendan dividir tareas complejas, evitar ambigüedad, incluir requisitos concretos e iterar sobre el resultado; un prompt breve y genérico deja demasiadas decisiones sin especificar.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Escribir un prompt detallado que desglose peso, distancia, velocidad, ejemplos de datos y formato de salida esperado.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Usar un prompt vago y confiar en que Copilot genere una solución sofisticada.») no satisface ese criterio; la opción C («Usar un prompt amplio y esperar que Copilot ofrezca opciones suficientes.») no satisface ese criterio; la opción D («Dar una función incompleta y dejar que Copilot infiera toda la lógica de e-commerce.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: ingeniería de prompts](https://docs.github.com/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot)
 
@@ -2920,7 +2918,7 @@ D. El IDE recopila todo el proyecto y lo envía al modelo para entrenarlo antes 
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «El IDE envía partes relevantes del código, el prompt, a servidores de GitHub, donde un modelo procesa la entrada y devuelve una sugerencia.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («El modelo corre dentro del IDE y entrena con archivos del proyecto cada vez que se solicita una sugerencia.») no satisface ese criterio; la opción C («Copilot entrena dinámicamente con repositorios open-source en segundo plano para generar sugerencias en tiempo real.») no satisface ese criterio; la opción D («El IDE recopila todo el proyecto y lo envía al modelo para entrenarlo antes de sugerir.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -2937,7 +2935,7 @@ licencias y cumplimiento de políticas internas.
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque coincide con el objetivo descrito y con el uso de Copilot como asistente de desarrollo. La salida generada es una propuesta probabilística: debe revisarse con el contexto real del proyecto, ejecutarse en pruebas y validarse contra los requisitos antes de producción.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «Capacitar a los desarrolladores para revisar cuidadosamente el código generado por seguridad, licencias y cumplimiento de políticas internas.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Confiar únicamente en los filtros internos de Copilot para evitar código inseguro o con copyright.») no satisface ese criterio; la opción B («Permitir el uso de Copilot solo a desarrolladores senior.») no satisface ese criterio; la opción C («Dejar de usar Copilot inmediatamente porque es imposible asegurar cumplimiento.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [Microsoft Learn: guía de estudio GH-300](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300)
 
@@ -2954,7 +2952,7 @@ D. Ajustar automáticamente el nivel de suscripción según la frecuencia de uso
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Crear un script que revise periódicamente nuevos miembros de la organización y les asigne seats de GitHub Copilot.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Usar la API para ajustar permisos de Copilot según los repositorios a los que tenga acceso cada usuario.») no satisface ese criterio; la opción C («Asignar automáticamente seats de Copilot basándose únicamente en el rol del usuario.») no satisface ese criterio; la opción D («Ajustar automáticamente el nivel de suscripción según la frecuencia de uso de Copilot.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
@@ -2969,7 +2967,7 @@ D. Refactorizar todo el proyecto para eliminar interdependencias entre archivos.
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque refleja que Copilot Chat proporciona asistencia contextual mediante lenguaje natural. Sus respuestas pueden ser inexactas o incompletas; el desarrollador debe revisar, probar y confirmar cualquier cambio antes de incorporarlo.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Abrir solo los archivos directamente relevantes para la tarea actual y cerrar archivos innecesarios.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Usar bloques de código más grandes en cada prompt para que Copilot procese funciones completas.») no satisface ese criterio; la opción C («Crear un archivo especial “Copilot-only” con snippets frecuentes.») no satisface ese criterio; la opción D («Refactorizar todo el proyecto para eliminar interdependencias entre archivos.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: uso responsable de Copilot Chat](https://docs.github.com/en/copilot/responsible-use/chat)
 
@@ -2987,7 +2985,7 @@ D. Copilot consulta una base de datos indexada de código para buscar coincidenc
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Copilot genera sugerencias desde un modelo entrenado con código público, usando reconocimiento de patrones y procesamiento de lenguaje natural para relacionar tu entrada con código relevante.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Copilot usa únicamente las librerías importadas en el archivo para generar sugerencias.») no satisface ese criterio; la opción C («Copilot se basa en repositorios privados subidos por usuarios para ofrecer sugerencias personalizadas.») no satisface ese criterio; la opción D («Copilot consulta una base de datos indexada de código para buscar coincidencias exactas.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -3003,7 +3001,7 @@ D. Exportando todos los logs y analizándolos manualmente fuera de GitHub.
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «Buscando el término copilot en el audit log de la organización de GitHub.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Accediendo únicamente mediante API, ya que la UI no permite ver estos eventos.») no satisface ese criterio; la opción B («Usando herramientas de terceros porque Copilot Business no soporta audit logging.») no satisface ese criterio; la opción D («Exportando todos los logs y analizándolos manualmente fuera de GitHub.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
@@ -3019,7 +3017,7 @@ manejo.
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque coincide con el objetivo descrito y con el uso de Copilot como asistente de desarrollo. La salida generada es una propuesta probabilística: debe revisarse con el contexto real del proyecto, ejecutarse en pruebas y validarse contra los requisitos antes de producción.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «Presionar Ctrl + Space en una línea vacía de un archivo soportado para solicitar una sugerencia.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Ejecutar git copilot suggest desde la terminal.») no satisface ese criterio; la opción B («Escribir // Copilot: y presionar Tab para forzar una función completa.») no satisface ese criterio; la opción D («Esperar a que Copilot detecte automáticamente una excepción en runtime y sugiera un bloque de manejo.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [Microsoft Learn: guía de estudio GH-300](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300)
 
@@ -3035,7 +3033,7 @@ D. Modifica configuraciones del sistema y aplica parches de seguridad sin interv
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque corresponde al uso de Copilot desde la terminal para obtener orientación o proponer comandos. Los comandos generados deben revisarse antes de ejecutarse, especialmente si pueden modificar archivos, repositorios o infraestructura.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Genera y sugiere comandos shell a partir de instrucciones en lenguaje natural, ayudando con sintaxis y tareas repetitivas.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Requiere un servidor local dedicado para funcionar.») no satisface ese criterio; la opción C («Reemplaza shells tradicionales como Bash, Zsh o PowerShell.») no satisface ese criterio; la opción D («Modifica configuraciones del sistema y aplica parches de seguridad sin intervención del usuario.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: GitHub Copilot CLI](https://docs.github.com/en/copilot/how-tos/copilot-cli)
 
@@ -3052,7 +3050,7 @@ D. Generando y validando de forma autónoma datos sintéticos para mejorar gener
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Sugiriendo completions contextuales para operaciones comunes como limpieza de datos, entrenamiento y evaluación.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Desplegando automáticamente modelos entrenados en servicios cloud sin configuración adicional.») no satisface ese criterio; la opción C («Detectando y corrigiendo automáticamente sesgos en datasets antes del entrenamiento.») no satisface ese criterio; la opción D («Generando y validando de forma autónoma datos sintéticos para mejorar generalización.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -3070,7 +3068,7 @@ conflictivas.
 Respuesta correcta: B, D
 
 Explicación
-La opción B, D es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+Las respuestas correctas son las opciones B y D porque, en conjunto, «Copilot puede sugerir código similar a código público, generando posibles riesgos de propiedad intelectual.»; «Copilot no entiende todo el contexto del proyecto, lo que puede causar inconsistencias o sugerencias conflictivas.» describen las acciones que cumplen el criterio de la pregunta. Las demás alternativas no son válidas: la opción A («Copilot maneja automáticamente datos sensibles y evita que se exponga información confidencial.») no satisface ese criterio; la opción C («Copilot garantiza que el código generado es seguro para proyectos propietarios.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -3087,7 +3085,7 @@ D. Pedir a Copilot que optimice la consulta SQL por rendimiento y asumir que eso
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque usa Copilot como apoyo para proponer pruebas y casos límite, no como sustituto de la validación. Las pruebas generadas deben revisarse, ejecutarse y ampliarse para cubrir comportamiento esperado, entradas inválidas, errores y requisitos de seguridad o rendimiento.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Pedir a Copilot pruebas enfocadas en seguridad usando comentarios que indiquen riesgos como SQL injection y XSS.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Generar pruebas funcionales generales sin mencionar riesgos específicos.») no satisface ese criterio; la opción C («Generar solo pruebas para autenticación válida con usuario y contraseña correctos.») no satisface ese criterio; la opción D («Pedir a Copilot que optimice la consulta SQL por rendimiento y asumir que eso mejora seguridad.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: escribir pruebas con GitHub Copilot](https://docs.github.com/en/copilot/tutorials/write-tests)
 
@@ -3104,7 +3102,7 @@ D. Quitar archivos sensibles del .gitignore .
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «Activar reglas de exclusión de Copilot en la configuración del repositorio y especificar archivos o directorios sensibles.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Hacer privado el repositorio, ya que eso excluye automáticamente todo de Copilot.») no satisface ese criterio; la opción B («Agregar comentarios como # copilot:ignore en archivos sensibles.») no satisface ese criterio; la opción D («Quitar archivos sensibles del .gitignore .») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -3122,7 +3120,7 @@ D. Reescribiendo la función con lógica recursiva más compleja.
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque coincide con el objetivo descrito y con el uso de Copilot como asistente de desarrollo. La salida generada es una propuesta probabilística: debe revisarse con el contexto real del proyecto, ejecutarse en pruebas y validarse contra los requisitos antes de producción.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Sugiriendo algoritmos más eficientes, como programación dinámica o memoización, y generando pruebas para entradas grandes.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Generando pruebas solo para valores pequeños y asumiendo que funcionará igual para valores grandes.») no satisface ese criterio; la opción C («Generando pruebas para n = 1000 , pero ignorando sugerencias de refactorización.») no satisface ese criterio; la opción D («Reescribiendo la función con lógica recursiva más compleja.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [Microsoft Learn: guía de estudio GH-300](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300)
 
@@ -3137,7 +3135,7 @@ D. Integración con IDEs cloud como GitHub Codespaces.
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque aplica una salvaguarda explícita para limitar el contexto que Copilot puede usar. La exclusión de contenido debe configurarse en los controles admitidos por la organización; revisar el resultado, proteger los secretos y aplicar las obligaciones de privacidad siguen siendo responsabilidad del equipo.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Controles administrativos centralizados para gestionar acceso de usuarios y asignación de licencias.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Sugerencias de código contextuales en tiempo real.») no satisface ese criterio; la opción C («Soporte para múltiples lenguajes de programación e IDEs.») no satisface ese criterio; la opción D («Integración con IDEs cloud como GitHub Codespaces.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: exclusión de contenido](https://docs.github.com/en/copilot/concepts/content-exclusion)
 
@@ -3154,7 +3152,7 @@ D. Ignorar el sesgo porque Copilot se entrenó con datos públicos.
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Revisar y refactorizar manualmente la lógica sesgada, además de implementar pruebas de equidad en el proceso de filtrado.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Reentrenar localmente el modelo de Copilot con datos no sesgados.») no satisface ese criterio; la opción C («Confiar en auditorías posteriores al despliegue para detectar discriminación.») no satisface ese criterio; la opción D («Ignorar el sesgo porque Copilot se entrenó con datos públicos.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -3170,7 +3168,7 @@ D. Modelos de sugerencia restringidos específicamente por contexto organizacion
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Control centralizado sobre configuraciones y políticas organizacionales para sugerencias de IA.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Gestión individual de licencias de desarrolladores.») no satisface ese criterio; la opción C («Funciones de colaboración como proyectos de equipo y repositorios compartidos.») no satisface ese criterio; la opción D («Modelos de sugerencia restringidos específicamente por contexto organizacional.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
@@ -3186,7 +3184,7 @@ D. Copilot Chat se niega a interactuar si detecta vulnerabilidades abiertas en e
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque refleja que Copilot Chat proporciona asistencia contextual mediante lenguaje natural. Sus respuestas pueden ser inexactas o incompletas; el desarrollador debe revisar, probar y confirmar cualquier cambio antes de incorporarlo.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Copilot Chat requiere conexión activa a internet y no puede usarse en entornos offline.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Copilot Chat solo puede sugerir bloques completos de código y no ayuda con código parcial.») no satisface ese criterio; la opción C («Copilot Chat no puede dar ninguna sugerencia para lenguajes no soportados.») no satisface ese criterio; la opción D («Copilot Chat se niega a interactuar si detecta vulnerabilidades abiertas en el proyecto.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: uso responsable de Copilot Chat](https://docs.github.com/en/copilot/responsible-use/chat)
 
@@ -3203,7 +3201,7 @@ accuracy.”
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque aporta contexto, restricciones o ejemplos verificables al modelo. Microsoft Learn y GitHub Docs recomiendan dividir tareas complejas, evitar ambigüedad, incluir requisitos concretos e iterar sobre el resultado; un prompt breve y genérico deja demasiadas decisiones sin especificar.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «“Write a Python function using TensorFlow to load a dataset, build a CNN, train it, and evaluate its accuracy.”» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («“Write a Python function to classify images using TensorFlow and create a CNN.”») no satisface ese criterio; la opción B («“Write a TensorFlow Python function to classify images using a CNN, handling training and testing.”») no satisface ese criterio; la opción C («“Generate a Python function to classify images using TensorFlow and neural networks.”») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: ingeniería de prompts](https://docs.github.com/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot)
 
@@ -3218,7 +3216,7 @@ D. Sugerencias de refactorización que ofrecen alternativas para mejorar eficien
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque refleja que Copilot Chat proporciona asistencia contextual mediante lenguaje natural. Sus respuestas pueden ser inexactas o incompletas; el desarrollador debe revisar, probar y confirmar cualquier cambio antes de incorporarlo.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «Sugerencias de refactorización que ofrecen alternativas para mejorar eficiencia o calidad del código.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Prompts contextuales que se adaptan al código escrito.») no satisface ese criterio; la opción B («Sugerencias de control de versiones para commits y ramas.») no satisface ese criterio; la opción C («Depuración automática que identifica y corrige errores sin intervención.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: uso responsable de Copilot Chat](https://docs.github.com/en/copilot/responsible-use/chat)
 
@@ -3237,7 +3235,7 @@ validar el comportamiento.
 Respuesta correcta: A, D
 
 Explicación
-La opción A, D es la adecuada porque coincide con el objetivo descrito y con el uso de Copilot como asistente de desarrollo. La salida generada es una propuesta probabilística: debe revisarse con el contexto real del proyecto, ejecutarse en pruebas y validarse contra los requisitos antes de producción.
+Las respuestas correctas son las opciones A y D porque, en conjunto, «Usar Copilot para generar snippets iniciales de filtrado y luego ajustar manualmente la lógica a los requisitos.»; «Usar Copilot para ayudar con la transformación de entradas válidas y luego escribir pruebas para validar el comportamiento.» describen las acciones que cumplen el criterio de la pregunta. Las demás alternativas no son válidas: la opción B («Dejar que Copilot complete toda la función sin revisar sus sugerencias.») no satisface ese criterio; la opción C («Confiar en que Copilot manejará automáticamente excepciones para entradas no enteras sin especificarlo.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [Microsoft Learn: guía de estudio GH-300](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300)
 
@@ -3252,7 +3250,7 @@ D. “Write a function that calculates the sum of two numbers in Python.”
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque aporta contexto, restricciones o ejemplos verificables al modelo. Microsoft Learn y GitHub Docs recomiendan dividir tareas complejas, evitar ambigüedad, incluir requisitos concretos e iterar sobre el resultado; un prompt breve y genérico deja demasiadas decisiones sin especificar.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «“Write a JavaScript function named add that takes two parameters, adds them, and returns the sum.”» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («“Create a function.”») no satisface ese criterio; la opción C («“Sum two numbers.”») no satisface ese criterio; la opción D («“Write a function that calculates the sum of two numbers in Python.”») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: ingeniería de prompts](https://docs.github.com/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot)
 
@@ -3268,7 +3266,7 @@ D. Evitar comentarios complejos o pseudocódigo, porque pueden confundir a Copil
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque refleja que Copilot Chat proporciona asistencia contextual mediante lenguaje natural. Sus respuestas pueden ser inexactas o incompletas; el desarrollador debe revisar, probar y confirmar cualquier cambio antes de incorporarlo.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Organizar el código en funciones o módulos pequeños y bien definidos para que Copilot procese bloques más claros.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Desactivar linting o validación de errores en tiempo real para evitar conflictos.») no satisface ese criterio; la opción C («Limpiar y reiniciar regularmente el workspace del IDE.») no satisface ese criterio; la opción D («Evitar comentarios complejos o pseudocódigo, porque pueden confundir a Copilot.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: uso responsable de Copilot Chat](https://docs.github.com/en/copilot/responsible-use/chat)
 
@@ -3285,7 +3283,7 @@ D. Confiar en datos aleatorios generados por Copilot sin validación.
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Usar Copilot para generar una variedad de datos de ejemplo, incluidos casos borde, y revisar manualmente que sean válidos.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Usar Copilot solo para datos triviales y escribir manualmente datasets complejos.») no satisface ese criterio; la opción C («Usar Copilot para generar datos basados en clientes reales para mayor precisión.») no satisface ese criterio; la opción D («Confiar en datos aleatorios generados por Copilot sin validación.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -3301,7 +3299,7 @@ natural.
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque aporta contexto, restricciones o ejemplos verificables al modelo. Microsoft Learn y GitHub Docs recomiendan dividir tareas complejas, evitar ambigüedad, incluir requisitos concretos e iterar sobre el resultado; un prompt breve y genérico deja demasiadas decisiones sin especificar.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «Prioriza comentarios inline y código contextual antes de procesar consultas generales en lenguaje natural.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Extrae código directamente de repositorios GitHub sin transformaciones adicionales.») no satisface ese criterio; la opción B («Convierte automáticamente todos los prompts de texto en consultas SQL antes de procesarlos.») no satisface ese criterio; la opción C («Trata todos los prompts exactamente igual, sin priorización.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: ingeniería de prompts](https://docs.github.com/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot)
 
@@ -3317,7 +3315,7 @@ D. Habilitar Copilot CLI desde GitHub Settings antes de instalarlo.
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque corresponde al uso de Copilot desde la terminal para obtener orientación o proponer comandos. Los comandos generados deben revisarse antes de ejecutarse, especialmente si pueden modificar archivos, repositorios o infraestructura.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Ejecutar gh extension install github/copilot-cli para instalar Copilot como extensión de GitHub CLI.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Ejecutar npm install -g copilot-cli para instalarlo globalmente como paquete NPM.») no satisface ese criterio; la opción C («Descargar el binario de Copilot CLI desde GitHub Releases y agregarlo al PATH.») no satisface ese criterio; la opción D («Habilitar Copilot CLI desde GitHub Settings antes de instalarlo.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: GitHub Copilot CLI](https://docs.github.com/en/copilot/how-tos/copilot-cli)
 
@@ -3333,7 +3331,7 @@ D. Almacena todo el código e interacciones indefinidamente en la nube para mejo
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «Envía porciones de código del usuario a un modelo cloud, procesa la información y devuelve sugerencias sin almacenar ese código a largo plazo.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Usa reglas estáticas sin conexión a internet ni intercambio de datos con servidores de GitHub.») no satisface ese criterio; la opción B («Ejecuta un modelo local en el equipo del usuario y procesa solo el sistema de archivos local.») no satisface ese criterio; la opción D («Almacena todo el código e interacciones indefinidamente en la nube para mejorar el modelo.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -3349,7 +3347,7 @@ D. Copilot monitorea todos los archivos del workspace y pregenera sugerencias si
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque coincide con el objetivo descrito y con el uso de Copilot como asistente de desarrollo. La salida generada es una propuesta probabilística: debe revisarse con el contexto real del proyecto, ejecutarse en pruebas y validarse contra los requisitos antes de producción.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «El IDE captura la entrada del usuario, envía contexto al modelo de Copilot, recibe una sugerencia y espera que el usuario la acepte, modifique o rechace.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Copilot recupera sugerencias desde una base de datos estática de snippets preentrenados.») no satisface ese criterio; la opción C («Copilot escanea todo el repositorio, encuentra código similar y pega el snippet más relevante.») no satisface ese criterio; la opción D («Copilot monitorea todos los archivos del workspace y pregenera sugerencias sin entrada del usuario.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [Microsoft Learn: guía de estudio GH-300](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300)
 
@@ -3366,7 +3364,7 @@ con autocompletado en tiempo real y sugerencias contextuales.
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «Acceso a sugerencias de código generadas por IA en múltiples lenguajes dentro de IDEs soportados, con autocompletado en tiempo real y sugerencias contextuales.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Acceso a herramientas enterprise de seguridad y cumplimiento, incluyendo escaneo automático de vulnerabilidades.») no satisface ese criterio; la opción B («Acceso ilimitado a GitHub Actions como parte de la suscripción Copilot.») no satisface ese criterio; la opción C («Gestión de permisos y niveles de acceso para miembros de equipo.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
@@ -3384,7 +3382,7 @@ D. Desactivar cualquier funcionalidad relacionada con datos sensibles para evita
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «Revisar cuidadosamente cada pieza de código generada por Copilot y aplicar pruebas de equidad durante el desarrollo.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Usar las sugerencias de Copilot tal como vienen, ya que la herramienta proviene de una organización reconocida.») no satisface ese criterio; la opción B («Confiar en que el entrenamiento con datasets diversos garantiza salidas éticas y justas.») no satisface ese criterio; la opción D («Desactivar cualquier funcionalidad relacionada con datos sensibles para evitar problemas éticos.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -3399,7 +3397,7 @@ D. Sugerencias contextuales basadas en el archivo actual y el proyecto.
 Respuesta correcta: A, B, D
 
 Explicación
-La opción A, B, D es la adecuada porque refleja que Copilot Chat proporciona asistencia contextual mediante lenguaje natural. Sus respuestas pueden ser inexactas o incompletas; el desarrollador debe revisar, probar y confirmar cualquier cambio antes de incorporarlo.
+Las respuestas correctas son las opciones A y B y D porque, en conjunto, «Explicaciones detalladas de fragmentos de código complejos directamente dentro del IDE.»; «Capacidad de hacer preguntas sobre el codebase y recibir respuestas impulsadas por IA.»; «Sugerencias contextuales basadas en el archivo actual y el proyecto.» describen las acciones que cumplen el criterio de la pregunta. Las demás alternativas no son válidas: la opción C («Detección y corrección automática de bugs sin intervención del desarrollador.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: uso responsable de Copilot Chat](https://docs.github.com/en/copilot/responsible-use/chat)
 
@@ -3415,7 +3413,7 @@ D. Garantizar automáticamente que todas las sugerencias cumplan con guías de e
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «Permitir que Copilot incorpore librerías y frameworks propietarios de la empresa para sugerencias más contextuales.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Garantizar que Copilot produzca únicamente sugerencias de sintaxis.») no satisface ese criterio; la opción B («Reemplazar la revisión humana de código mediante generación completamente probada.») no satisface ese criterio; la opción D («Garantizar automáticamente que todas las sugerencias cumplan con guías de estilo corporativas.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
@@ -3431,7 +3429,7 @@ D. Copilot sugiere snippets aleatorios de repositorios públicos sin considerar 
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Copilot usa IA entrenada con repositorios open-source y contenido licenciado para predecir código según el contexto del editor.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Copilot recupera snippets preescritos de repositorios GitHub que coinciden con tus palabras clave.») no satisface ese criterio; la opción C («Copilot se basa únicamente en sugerencias que aceptaste previamente.») no satisface ese criterio; la opción D («Copilot sugiere snippets aleatorios de repositorios públicos sin considerar contexto.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -3446,7 +3444,7 @@ D. Usar list comprehensions en lugar de bucles for simples cuando aplique.
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque coincide con el objetivo descrito y con el uso de Copilot como asistente de desarrollo. La salida generada es una propuesta probabilística: debe revisarse con el contexto real del proyecto, ejecutarse en pruebas y validarse contra los requisitos antes de producción.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «Usar list comprehensions en lugar de bucles for simples cuando aplique.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Reemplazar todos los bucles por llamadas recursivas para reducir líneas de código.») no satisface ese criterio; la opción B («Reescribir todo el código en otro lenguaje, como Java, para hacerlo rápido por defecto.») no satisface ese criterio; la opción C («Reemplazar operaciones de archivo con print() para monitorear flujo de datos en tiempo real.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [Microsoft Learn: guía de estudio GH-300](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300)
 
@@ -3463,7 +3461,7 @@ D. Desactivar sugerencias específicas por lenguaje para evitar complejidad.
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «Usar Copilot en un entorno multiarchivo donde tenga acceso a archivos relevantes del proyecto y pueda entender mejor el contexto.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Usar Copilot solo en archivos aislados y para funciones simples.») no satisface ese criterio; la opción B («Refactorizar todo el proyecto para usar un único lenguaje de programación.») no satisface ese criterio; la opción D («Desactivar sugerencias específicas por lenguaje para evitar complejidad.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -3479,7 +3477,7 @@ D. Agregar las rutas al settings.json de Visual Studio Code.
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque aplica una salvaguarda explícita para limitar el contexto que Copilot puede usar. La exclusión de contenido debe configurarse en los controles admitidos por la organización; revisar el resultado, proteger los secretos y aplicar las obligaciones de privacidad siguen siendo responsabilidad del equipo.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Crear un archivo copilot.json en la raíz del repositorio y listar archivos o directorios a ignorar.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Agregar las rutas en .gitignore .») no satisface ese criterio; la opción C («Agregar una sección copilot-ignore dentro de la carpeta .github .») no satisface ese criterio; la opción D («Agregar las rutas al settings.json de Visual Studio Code.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: exclusión de contenido](https://docs.github.com/en/copilot/concepts/content-exclusion)
 
@@ -3494,7 +3492,7 @@ D. Reiniciar la terminal y volver a ejecutar el comando de instalación.
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque corresponde al uso de Copilot desde la terminal para obtener orientación o proponer comandos. Los comandos generados deben revisarse antes de ejecutarse, especialmente si pueden modificar archivos, repositorios o infraestructura.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «Ejecutar gh auth login para autenticarse con GitHub CLI antes de usar comandos de Copilot.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Ejecutar copilot auth --login .») no satisface ese criterio; la opción B («Crear un personal access token y guardarlo manualmente en ~/.copilotrc .») no satisface ese criterio; la opción D («Reiniciar la terminal y volver a ejecutar el comando de instalación.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: GitHub Copilot CLI](https://docs.github.com/en/copilot/how-tos/copilot-cli)
 
@@ -3516,7 +3514,7 @@ D. Usar únicamente documentación externa y evitar Copilot para este caso.
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque coincide con el objetivo descrito y con el uso de Copilot como asistente de desarrollo. La salida generada es una propuesta probabilística: debe revisarse con el contexto real del proyecto, ejecutarse en pruebas y validarse contra los requisitos antes de producción.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Empezar a escribir el inicio de un bloque try-except y permitir que Copilot sugiera el código de manejo de excepciones.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Usar GitHub Copilot CLI para buscar un ejemplo de manejo de excepciones desde la línea de comandos.») no satisface ese criterio; la opción C («Usar Copilot Chat para pegar todo el código y pedir la resolución del error.») no satisface ese criterio; la opción D («Usar únicamente documentación externa y evitar Copilot para este caso.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [Microsoft Learn: guía de estudio GH-300](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300)
 
@@ -3533,7 +3531,7 @@ D. Confiar en que Copilot recordará conversaciones pasadas entre distintos repo
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque aporta contexto, restricciones o ejemplos verificables al modelo. Microsoft Learn y GitHub Docs recomiendan dividir tareas complejas, evitar ambigüedad, incluir requisitos concretos e iterar sobre el resultado; un prompt breve y genérico deja demasiadas decisiones sin especificar.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «Mantener la conversación dentro de la misma sesión para que Copilot conserve el contexto.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Subir documentación al historial de Copilot para que la recuerde permanentemente.») no satisface ese criterio; la opción B («Iniciar una nueva sesión de chat para cada pregunta.») no satisface ese criterio; la opción D («Confiar en que Copilot recordará conversaciones pasadas entre distintos repositorios.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: ingeniería de prompts](https://docs.github.com/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot)
 
@@ -3550,7 +3548,7 @@ D. Bloqueando cualquier código que no cumpla estrictamente PEP 8.
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque refleja que Copilot Chat proporciona asistencia contextual mediante lenguaje natural. Sus respuestas pueden ser inexactas o incompletas; el desarrollador debe revisar, probar y confirmar cualquier cambio antes de incorporarlo.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Sugiriendo reescrituras optimizadas de funciones basadas en buenas prácticas y contexto del código existente.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Ejecutando automáticamente el código refactorizado y verificando que funcione.») no satisface ese criterio; la opción C («Modificando todo el codebase en un solo comando.») no satisface ese criterio; la opción D («Bloqueando cualquier código que no cumpla estrictamente PEP 8.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: uso responsable de Copilot Chat](https://docs.github.com/en/copilot/responsible-use/chat)
 
@@ -3566,7 +3564,7 @@ D. Activar el modo especial “exception-aware mode”.
 Respuesta correcta: A, C
 
 Explicación
-La opción A, C es la adecuada porque coincide con el objetivo descrito y con el uso de Copilot como asistente de desarrollo. La salida generada es una propuesta probabilística: debe revisarse con el contexto real del proyecto, ejecutarse en pruebas y validarse contra los requisitos antes de producción.
+Las respuestas correctas son las opciones A y C porque, en conjunto, «Usar Inline Chat para pedir patrones de manejo de excepciones.»; «Escribir comentarios que describan el comportamiento esperado ante excepciones.» describen las acciones que cumplen el criterio de la pregunta. Las demás alternativas no son válidas: la opción B («Usar la integración de Copilot con GitHub Issues para reportar excepciones y recibir fixes.») no satisface ese criterio; la opción D («Activar el modo especial “exception-aware mode”.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [Microsoft Learn: guía de estudio GH-300](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300)
 
@@ -3582,7 +3580,7 @@ D. Entrada visual como imágenes o diagramas.
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque refleja que Copilot Chat proporciona asistencia contextual mediante lenguaje natural. Sus respuestas pueden ser inexactas o incompletas; el desarrollador debe revisar, probar y confirmar cualquier cambio antes de incorporarlo.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «Entrada visual como imágenes o diagramas.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Solicitudes de refactorización, como “optimiza este código”.») no satisface ese criterio; la opción B («Instrucciones simples de programación, como “escribe una función que sume dos números”.») no satisface ese criterio; la opción C («Preguntas en lenguaje natural sobre buenas prácticas de programación.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: uso responsable de Copilot Chat](https://docs.github.com/en/copilot/responsible-use/chat)
 
@@ -3599,7 +3597,7 @@ D. Traduciendo automáticamente cualquier cadena en inglés sin revisión humana
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque coincide con el objetivo descrito y con el uso de Copilot como asistente de desarrollo. La salida generada es una propuesta probabilística: debe revisarse con el contexto real del proyecto, ejecutarse en pruebas y validarse contra los requisitos antes de producción.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Ayudando a crear archivos de recursos por idioma, como .json o .po , mientras las traducciones se revisan manualmente.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Generando todos los archivos de traducción sin necesidad de validación posterior.») no satisface ese criterio; la opción C («Traduciendo solo elementos visuales de la interfaz y dejando el resto en el idioma original.») no satisface ese criterio; la opción D («Traduciendo automáticamente cualquier cadena en inglés sin revisión humana.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [Microsoft Learn: guía de estudio GH-300](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300)
 
@@ -3615,7 +3613,7 @@ D. Analiza todo el código localmente y nunca envía datos a servidores.
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «Envía un contexto limitado, como el código actual, a servidores de GitHub para generar sugerencias, sin almacenarlo ni usarlo para reentrenamiento futuro.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Envía proyectos completos a servidores de GitHub y los almacena para mejorar el modelo.») no satisface ese criterio; la opción B («Solo envía metadatos como nombres de variables y firmas de funciones.») no satisface ese criterio; la opción D («Analiza todo el código localmente y nunca envía datos a servidores.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -3630,7 +3628,7 @@ D. Incrementar manualmente el límite máximo de tokens por respuesta.
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque refleja que Copilot Chat proporciona asistencia contextual mediante lenguaje natural. Sus respuestas pueden ser inexactas o incompletas; el desarrollador debe revisar, probar y confirmar cualquier cambio antes de incorporarlo.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Limitar la cantidad de archivos o pestañas abiertas en el editor.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Activar resaltado de sintaxis para mejorar el reconocimiento de patrones.») no satisface ese criterio; la opción C («Aumentar la frecuencia de actualización de Copilot Chat.») no satisface ese criterio; la opción D («Incrementar manualmente el límite máximo de tokens por respuesta.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: uso responsable de Copilot Chat](https://docs.github.com/en/copilot/responsible-use/chat)
 
@@ -3647,7 +3645,7 @@ D. Los ejemplos comunes garantizan soluciones altamente personalizadas para tu p
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Los patrones más vistos aumentan la probabilidad de que Copilot sugiera soluciones genéricas y repetitivas.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Copilot evita patrones frecuentes para favorecer soluciones creativas.») no satisface ese criterio; la opción C («Copilot ignora ejemplos comunes y prioriza patrones raros.») no satisface ese criterio; la opción D («Los ejemplos comunes garantizan soluciones altamente personalizadas para tu proyecto.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: alojamiento de modelos](https://docs.github.com/en/copilot/reference/ai-models/model-hosting)
 
@@ -3664,7 +3662,7 @@ reciente.
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque aporta contexto, restricciones o ejemplos verificables al modelo. Microsoft Learn y GitHub Docs recomiendan dividir tareas complejas, evitar ambigüedad, incluir requisitos concretos e iterar sobre el resultado; un prompt breve y genérico deja demasiadas decisiones sin especificar.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «Detectando automáticamente el lenguaje y sugiriendo snippets relevantes según el contexto reciente.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Modificando automáticamente un archivo para que tenga el estilo de otro.») no satisface ese criterio; la opción B («Restringiendo el acceso a archivos de otros proyectos.») no satisface ese criterio; la opción C («Obligando al desarrollador a terminar un archivo antes de pasar a otro.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: ingeniería de prompts](https://docs.github.com/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot)
 
@@ -3680,7 +3678,7 @@ D. Confiar solo en pruebas automatizadas para validar cumplimiento legal.
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «Verificar que el código cumpla los marcos legales y regulatorios aplicables, como HIPAA, consultando expertos si es necesario.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Usar el código tal como está, pero restringiendo el acceso al repositorio.») no satisface ese criterio; la opción B («Asumir que Copilot aprendió buenas prácticas por estar entrenado con código ampliamente usado.») no satisface ese criterio; la opción D («Confiar solo en pruebas automatizadas para validar cumplimiento legal.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -3697,7 +3695,7 @@ D. Usar obligatoriamente un token Enterprise incluso si la organización solo ti
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Usar DELETE /orgs/{org}/copilot/billing/seats/{username} para remover un usuario de Copilot Business.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Generar reportes con timestamps y snippets completos de código sugerido por Copilot.») no satisface ese criterio; la opción C («Ajustar el modelo de IA individual de cada usuario según su historial de código.») no satisface ese criterio; la opción D («Usar obligatoriamente un token Enterprise incluso si la organización solo tiene Copilot Business.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
@@ -3713,7 +3711,7 @@ D. Registra toda la entrada en el historial del IDE para análisis offline.
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Envía la entrada a un modelo cloud que genera sugerencias según el contexto sin almacenar permanentemente la entrada.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Almacena toda la entrada localmente y usa datos cacheados de sesiones previas.») no satisface ese criterio; la opción C («Usa modelos locales preentrenados y no interactúa con recursos cloud.») no satisface ese criterio; la opción D («Registra toda la entrada en el historial del IDE para análisis offline.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -3729,7 +3727,7 @@ D. Cifrar datos dentro del código para que Copilot no los lea.
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Usar modo privado y excluir archivos sensibles del contexto de Copilot.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Solicitar a GitHub que elimine todos los datos sensibles de su modelo.») no satisface ese criterio; la opción C («Desactivar Copilot en todo el proyecto.») no satisface ese criterio; la opción D («Cifrar datos dentro del código para que Copilot no los lea.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -3744,7 +3742,7 @@ D. GitHub Copilot Individual, porque permite facturación organizacional.
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «GitHub Copilot Business, porque incluye indemnización IP y facturación centralizada.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («GitHub Copilot Individual, porque ofrece la misma indemnización a menor costo.») no satisface ese criterio; la opción B («Ningún plan ofrece facturación centralizada.») no satisface ese criterio; la opción D («GitHub Copilot Individual, porque permite facturación organizacional.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
@@ -3760,14 +3758,14 @@ D. Logs de runtime e información de debugging de aplicaciones desplegadas.
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «Snippets, buenas prácticas, patrones de diseño, documentación de APIs y guías internas de codificación.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Credenciales cifradas y secretos de usuarios.») no satisface ese criterio; la opción B («Código fuente completo de toda la aplicación para compartirlo con todos.») no satisface ese criterio; la opción D («Logs de runtime e información de debugging de aplicaciones desplegadas.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: alojamiento de modelos](https://docs.github.com/en/copilot/reference/ai-models/model-hosting)
 
 Pregunta 17
-Estás creando una Knowledge Base para tu departamento de desarrollo, orientada a buenas prácticas,
+Estás creando una Copilot Space para tu departamento de desarrollo, orientada a buenas prácticas,
 estándares y patrones comunes. ¿Cuál NO es un tipo típico de conocimiento almacenado en una
-Knowledge Base de desarrollo?
+Copilot Space de desarrollo?
 A. Snippets para tareas frecuentes.
 B. Métricas de rendimiento del negocio para evaluar éxito de la aplicación.
 C. Patrones de diseño para problemas comunes.
@@ -3776,7 +3774,7 @@ D. Buenas prácticas para escribir código limpio y mantenible.
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Métricas de rendimiento del negocio para evaluar éxito de la aplicación.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Snippets para tareas frecuentes.») no satisface ese criterio; la opción C («Patrones de diseño para problemas comunes.») no satisface ese criterio; la opción D («Buenas prácticas para escribir código limpio y mantenible.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: alojamiento de modelos](https://docs.github.com/en/copilot/reference/ai-models/model-hosting)
 
@@ -3793,7 +3791,7 @@ D. Copilot almacena toda entrada para entrenar modelos futuros.
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Copilot envía la entrada a servidores remotos, aplica filtros y no almacena la entrada después de generar sugerencias.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Copilot detecta automáticamente todo dato sensible y evita procesarlo.») no satisface ese criterio; la opción C («Copilot procesa todo localmente en el IDE.») no satisface ese criterio; la opción D («Copilot almacena toda entrada para entrenar modelos futuros.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -3808,7 +3806,7 @@ D. Colaboración en tiempo real con varios usuarios editando el mismo archivo.
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque refleja que Copilot Chat proporciona asistencia contextual mediante lenguaje natural. Sus respuestas pueden ser inexactas o incompletas; el desarrollador debe revisar, probar y confirmar cualquier cambio antes de incorporarlo.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Explicaciones de código en lenguaje natural para entender segmentos complejos.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Sugerencias inline para completar líneas de código.») no satisface ese criterio; la opción C («Resaltado de sintaxis para mejorar lectura.») no satisface ese criterio; la opción D («Colaboración en tiempo real con varios usuarios editando el mismo archivo.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: uso responsable de Copilot Chat](https://docs.github.com/en/copilot/responsible-use/chat)
 
@@ -3825,7 +3823,7 @@ D. Copilot puede refactorizar automáticamente todo el legacy sin intervención 
 Respuesta correcta: A, C
 
 Explicación
-La opción A, C es la adecuada porque coincide con el objetivo descrito y con el uso de Copilot como asistente de desarrollo. La salida generada es una propuesta probabilística: debe revisarse con el contexto real del proyecto, ejecutarse en pruebas y validarse contra los requisitos antes de producción.
+Las respuestas correctas son las opciones A y C porque, en conjunto, «Copilot puede tener comprensión limitada de librerías obsoletas y sugerir APIs modernas incompatibles.»; «Copilot puede tener problemas con patrones no estándar y obsoletos del codebase legacy.» describen las acciones que cumplen el criterio de la pregunta. Las demás alternativas no son válidas: la opción B («Copilot manejará perfectamente codebases multilenguaje con igual calidad en todos los lenguajes.») no satisface ese criterio; la opción D («Copilot puede refactorizar automáticamente todo el legacy sin intervención humana.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [Microsoft Learn: guía de estudio GH-300](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300)
 
@@ -3840,7 +3838,7 @@ D. Conectarse directamente con pipelines CI/CD para desplegar aplicaciones.
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque refleja que Copilot Chat proporciona asistencia contextual mediante lenguaje natural. Sus respuestas pueden ser inexactas o incompletas; el desarrollador debe revisar, probar y confirmar cualquier cambio antes de incorporarlo.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Permitir hacer preguntas contextuales sobre código y recibir respuestas inteligentes.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Generar explicaciones humanas para cualquier código de todo el repositorio.») no satisface ese criterio; la opción C («Sugerir cambios basados en resultados de pruebas del proyecto.») no satisface ese criterio; la opción D («Conectarse directamente con pipelines CI/CD para desplegar aplicaciones.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: uso responsable de Copilot Chat](https://docs.github.com/en/copilot/responsible-use/chat)
 
@@ -3856,7 +3854,7 @@ D. Detecta patrones sobreutilizados y los reemplaza automáticamente por alterna
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «Es más probable que genere patrones convencionales y ampliamente usados antes que soluciones innovadoras o muy personalizadas.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Copilot evita intencionalmente patrones frecuentes para generar soluciones novedosas.») no satisface ese criterio; la opción B («Sus sugerencias siempre reflejan los estándares más recientes porque se actualiza en tiempo real.») no satisface ese criterio; la opción D («Detecta patrones sobreutilizados y los reemplaza automáticamente por alternativas.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: alojamiento de modelos](https://docs.github.com/en/copilot/reference/ai-models/model-hosting)
 
@@ -3872,7 +3870,7 @@ D. Sugerir funciones completas y snippets basados en comentarios y contexto.
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «Sugerir funciones completas y snippets basados en comentarios y contexto.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Ejecutar automáticamente pruebas unitarias y validar resultados.») no satisface ese criterio; la opción B («Generar código mediante comandos de voz.») no satisface ese criterio; la opción C («Reemplazar herramientas tradicionales de debugging.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
@@ -3888,7 +3886,7 @@ D. Confiar en filtros automáticos para excluir código sensible.
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque coincide con el objetivo descrito y con el uso de Copilot como asistente de desarrollo. La salida generada es una propuesta probabilística: debe revisarse con el contexto real del proyecto, ejecutarse en pruebas y validarse contra los requisitos antes de producción.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Deshabilitar Copilot en archivos o repositorios sensibles.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Ofuscar manualmente comentarios y código confidencial.») no satisface ese criterio; la opción C («Usar variables de entorno para controlar el acceso de Copilot.») no satisface ese criterio; la opción D («Confiar en filtros automáticos para excluir código sensible.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [Microsoft Learn: guía de estudio GH-300](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300)
 
@@ -3905,7 +3903,7 @@ D. Copilot puede generar código que no compile o no encaje correctamente con la
 Respuesta correcta: B, D
 
 Explicación
-La opción B, D es la adecuada porque coincide con el objetivo descrito y con el uso de Copilot como asistente de desarrollo. La salida generada es una propuesta probabilística: debe revisarse con el contexto real del proyecto, ejecutarse en pruebas y validarse contra los requisitos antes de producción.
+Las respuestas correctas son las opciones B y D porque, en conjunto, «Copilot puede generar código basado en patrones, pero no garantiza que sea óptimo en rendimiento.»; «Copilot puede generar código que no compile o no encaje correctamente con la sintaxis esperada.» describen las acciones que cumplen el criterio de la pregunta. Las demás alternativas no son válidas: la opción A («El código generado por Copilot puede usarse en producción sin validación.») no satisface ese criterio; la opción C («Copilot entiende automáticamente reglas de negocio específicas del proyecto durante la configuración inicial.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [Microsoft Learn: guía de estudio GH-300](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300)
 
@@ -3921,7 +3919,7 @@ D. Colaboración en tiempo real entre múltiples desarrolladores dentro del chat
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque refleja que Copilot Chat proporciona asistencia contextual mediante lenguaje natural. Sus respuestas pueden ser inexactas o incompletas; el desarrollador debe revisar, probar y confirmar cualquier cambio antes de incorporarlo.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Chat interactivo con un asistente IA que da sugerencias, explicaciones y ayuda de troubleshooting según el contexto del código.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Gestión automática de tareas y asignación de tickets.») no satisface ese criterio; la opción C («Push y merge automáticos según conversaciones.») no satisface ese criterio; la opción D («Colaboración en tiempo real entre múltiples desarrolladores dentro del chat.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: uso responsable de Copilot Chat](https://docs.github.com/en/copilot/responsible-use/chat)
 
@@ -3937,7 +3935,7 @@ D. Cualquier usuario puede acceder registrándose con cualquier correo desde Vis
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque corresponde al uso de Copilot desde la terminal para obtener orientación o proponer comandos. Los comandos generados deben revisarse antes de ejecutarse, especialmente si pueden modificar archivos, repositorios o infraestructura.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Usuarios no GitHub pueden acceder a Copilot mediante Microsoft Visual Studio y VS Code si tienen suscripción Azure.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Copilot solo está disponible para usuarios GitHub, con cuenta GitHub para todos los planes.») no satisface ese criterio; la opción C («Usuarios no GitHub no pueden acceder porque solo admite autenticación GitHub.») no satisface ese criterio; la opción D («Cualquier usuario puede acceder registrándose con cualquier correo desde Visual Studio.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: GitHub Copilot CLI](https://docs.github.com/en/copilot/how-tos/copilot-cli)
 
@@ -3954,7 +3952,7 @@ D. Copilot ofrece funcionalidad idéntica para todos, sin restricciones por plan
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque corresponde al uso de Copilot desde la terminal para obtener orientación o proponer comandos. Los comandos generados deben revisarse antes de ejecutarse, especialmente si pueden modificar archivos, repositorios o infraestructura.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «Tienen acceso a funciones básicas, pero características avanzadas como revisión de código en equipo y compliance se reservan para GitHub Enterprise.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Clientes no GitHub acceden a todas las funciones, incluidas herramientas de colaboración de equipo, sin GitHub Teams o Enterprise.») no satisface ese criterio; la opción B («No pueden usar sugerencias para frameworks alojados en GitHub.») no satisface ese criterio; la opción D («Copilot ofrece funcionalidad idéntica para todos, sin restricciones por plan.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: GitHub Copilot CLI](https://docs.github.com/en/copilot/how-tos/copilot-cli)
 
@@ -3969,7 +3967,7 @@ D. Copilot aprende continuamente de todo el codebase mientras escribes.
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque aporta contexto, restricciones o ejemplos verificables al modelo. Microsoft Learn y GitHub Docs recomiendan dividir tareas complejas, evitar ambigüedad, incluir requisitos concretos e iterar sobre el resultado; un prompt breve y genérico deja demasiadas decisiones sin especificar.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Copilot solo considera un número limitado de líneas alrededor del cursor.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Copilot analiza todo el proyecto sin importar el tamaño.») no satisface ese criterio; la opción C («Copilot procesa todas las líneas de un archivo y prioriza cambios recientes.») no satisface ese criterio; la opción D («Copilot aprende continuamente de todo el codebase mientras escribes.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: ingeniería de prompts](https://docs.github.com/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot)
 
@@ -3986,7 +3984,7 @@ D. “Use GitHub Copilot to generate a test function for calculating discounts.�
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque aporta contexto, restricciones o ejemplos verificables al modelo. Microsoft Learn y GitHub Docs recomiendan dividir tareas complejas, evitar ambigüedad, incluir requisitos concretos e iterar sobre el resultado; un prompt breve y genérico deja demasiadas decisiones sin especificar.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «“Generate a Python unit test for the function calculate_discount(price, discount_percentage) that checks for valid input, invalid input, and edge cases.”» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («“Write a test for the calculate_discount function.”») no satisface ese criterio; la opción B («“Create a function in Python that tests discount calculations using random values.”») no satisface ese criterio; la opción D («“Use GitHub Copilot to generate a test function for calculating discounts.”») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: ingeniería de prompts](https://docs.github.com/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot)
 
@@ -4002,7 +4000,7 @@ para predecir la siguiente secuencia de código.
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque coincide con el objetivo descrito y con el uso de Copilot como asistente de desarrollo. La salida generada es una propuesta probabilística: debe revisarse con el contexto real del proyecto, ejecutarse en pruebas y validarse contra los requisitos antes de producción.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «Fue entrenado con código público diverso y usa deep learning, incluyendo arquitectura transformer, para predecir la siguiente secuencia de código.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Usa reglas predefinidas y templates fijos.») no satisface ese criterio; la opción B («Ejecuta el código parcial en un entorno virtual y observa resultados.») no satisface ese criterio; la opción C («Requiere siempre nombres de funciones y docstrings extensos.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [Microsoft Learn: guía de estudio GH-300](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300)
 
@@ -4018,7 +4016,7 @@ D. Realiza cálculos complejos con precisión porque su modelo está optimizado 
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque coincide con el objetivo descrito y con el uso de Copilot como asistente de desarrollo. La salida generada es una propuesta probabilística: debe revisarse con el contexto real del proyecto, ejecutarse en pruebas y validarse contra los requisitos antes de producción.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «Puede generar código para cálculos, pero depende de la lógica del prompt y no garantiza precisión matemática.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Está diseñado para reemplazar herramientas como Wolfram Alpha.») no satisface ese criterio; la opción B («Puede razonar pruebas matemáticas y garantizar lógica correcta.») no satisface ese criterio; la opción D («Realiza cálculos complejos con precisión porque su modelo está optimizado para matemáticas.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [Microsoft Learn: guía de estudio GH-300](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300)
 
@@ -4033,7 +4031,7 @@ D. Versión self-hosted del modelo Codex.
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Controles administrativos centralizados para políticas organizacionales y auditoría.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Modelos ML personalizados entrenables con datasets privados.») no satisface ese criterio; la opción C («Integración directa de sugerencias Copilot en pipelines CI.») no satisface ese criterio; la opción D («Versión self-hosted del modelo Codex.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
@@ -4049,7 +4047,7 @@ D. Copilot Individual permite telemetría organizacional.
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «El archivo de configuración permite deshabilitar Copilot para tipos de archivo o directorios específicos.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («El archivo .copilot permite definir templates de prompts.») no satisface ese criterio; la opción C («Individual, Business y Enterprise tienen las mismas funciones.») no satisface ese criterio; la opción D («Copilot Individual permite telemetría organizacional.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
@@ -4065,7 +4063,7 @@ completions.
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «Usar la directiva "excludePatterns" para excluir repositorios, archivos o directorios privados de completions.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Agregar "corporateDataProtection": true .») no satisface ese criterio; la opción B («Usar "useBusinessRules": true .») no satisface ese criterio; la opción C («Agregar "trainingData": false .») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -4080,7 +4078,7 @@ D. Puede refactorizar automáticamente codebases grandes completos en una sola o
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque refleja que Copilot Chat proporciona asistencia contextual mediante lenguaje natural. Sus respuestas pueden ser inexactas o incompletas; el desarrollador debe revisar, probar y confirmar cualquier cambio antes de incorporarlo.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Sus sugerencias pueden no considerar variables personalizadas o contexto específico del proyecto si el usuario no lo proporciona.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Solo genera código para JavaScript y Python.») no satisface ese criterio; la opción C («Solo puede usarse con repositorios públicos.») no satisface ese criterio; la opción D («Puede refactorizar automáticamente codebases grandes completos en una sola operación.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: uso responsable de Copilot Chat](https://docs.github.com/en/copilot/responsible-use/chat)
 
@@ -4096,7 +4094,7 @@ D. Solo funciona en pocos lenguajes populares.
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque coincide con el objetivo descrito y con el uso de Copilot como asistente de desarrollo. La salida generada es una propuesta probabilística: debe revisarse con el contexto real del proyecto, ejecutarse en pruebas y validarse contra los requisitos antes de producción.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «Puede generar código sintácticamente correcto, pero no siempre entiende el contexto ni entrega soluciones lógicamente correctas para el problema.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Siempre genera código optimizado y libre de bugs.») no satisface ese criterio; la opción B («No puede generar código en lenguajes de bajo nivel.») no satisface ese criterio; la opción D («Solo funciona en pocos lenguajes populares.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [Microsoft Learn: guía de estudio GH-300](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300)
 
@@ -4111,7 +4109,7 @@ D. Deshabilitar sugerencias en archivos con información sensible mediante confi
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «Deshabilitar sugerencias en archivos con información sensible mediante configuración de Copilot.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Permitir a Copilot analizar todo el repositorio, asumiendo que anonimiza datos sensibles.») no satisface ese criterio; la opción B («Usar Copilot en modo offline.») no satisface ese criterio; la opción C («Enmascarar datos sensibles con ***** .») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -4127,7 +4125,7 @@ D. “Generate a React component that fetches data from an API.”
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «“Write a React component that fetches user data from an API, handles loading and error states, and displays the data in a table.”» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («“Write a React component to show user data.”») no satisface ese criterio; la opción C («“Generate React code to display data from an API in a table.”») no satisface ese criterio; la opción D («“Generate a React component that fetches data from an API.”») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -4144,7 +4142,7 @@ D. Generar pruebas solo para casos exitosos.
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque usa Copilot como apoyo para proponer pruebas y casos límite, no como sustituto de la validación. Las pruebas generadas deben revisarse, ejecutarse y ampliarse para cubrir comportamiento esperado, entradas inválidas, errores y requisitos de seguridad o rendimiento.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Sugerir pruebas adicionales usando comentarios sobre escenarios como username inválido, password faltante y account lockout.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Generar solo load tests en lugar de integration tests.») no satisface ese criterio; la opción C («Reescribir automáticamente la API para cubrir edge cases.») no satisface ese criterio; la opción D («Generar pruebas solo para casos exitosos.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: escribir pruebas con GitHub Copilot](https://docs.github.com/en/copilot/tutorials/write-tests)
 
@@ -4159,7 +4157,7 @@ D. Dejar que Copilot haga code reviews y bug fixes de forma autónoma.
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque coincide con el objetivo descrito y con el uso de Copilot como asistente de desarrollo. La salida generada es una propuesta probabilística: debe revisarse con el contexto real del proyecto, ejecutarse en pruebas y validarse contra los requisitos antes de producción.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Usar Copilot para sugerir documentación mientras escribes código.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Usar Copilot solo para bug fixes.») no satisface ese criterio; la opción C («Permitir que Copilot escriba y haga commit automático.») no satisface ese criterio; la opción D («Dejar que Copilot haga code reviews y bug fixes de forma autónoma.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [Microsoft Learn: guía de estudio GH-300](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300)
 
@@ -4174,7 +4172,7 @@ D. Integración con CI/CD para automatizar deployments.
 Respuesta correcta: A, C
 
 Explicación
-La opción A, C es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+Las respuestas correctas son las opciones A y C porque, en conjunto, «Sugerencias de código impulsadas por IA basadas en comentarios.»; «Generación automática de comentarios y documentación básica.» describen las acciones que cumplen el criterio de la pregunta. Las demás alternativas no son válidas: la opción B («Refactorización automática de código por rendimiento.») no satisface ese criterio; la opción D («Integración con CI/CD para automatizar deployments.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
@@ -4190,7 +4188,7 @@ D. Asumir que las pruebas de sesgo no son necesarias porque la IA es neutral.
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Realizar pruebas exhaustivas de sesgo sobre el código generado.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Pedir a Copilot que evite atributos como género, raza y edad, lo que elimina todo sesgo.») no satisface ese criterio; la opción C («Confiar en que Copilot usa datasets diversos y por eso no tiene sesgo.») no satisface ese criterio; la opción D («Asumir que las pruebas de sesgo no son necesarias porque la IA es neutral.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: alojamiento de modelos](https://docs.github.com/en/copilot/reference/ai-models/model-hosting)
 
@@ -4205,7 +4203,7 @@ D. Permitir que Copilot genere todo el código sin revisión.
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque coincide con el objetivo descrito y con el uso de Copilot como asistente de desarrollo. La salida generada es una propuesta probabilística: debe revisarse con el contexto real del proyecto, ejecutarse en pruebas y validarse contra los requisitos antes de producción.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «Usar Copilot para generar boilerplate y utilidades, revisando que cumplan requisitos del proyecto.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Usar Copilot solo para documentación.») no satisface ese criterio; la opción B («Escribir manualmente todas las funciones utilitarias.») no satisface ese criterio; la opción D («Permitir que Copilot genere todo el código sin revisión.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [Microsoft Learn: guía de estudio GH-300](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300)
 
@@ -4220,7 +4218,7 @@ D. Solo puede sugerir código en el lenguaje exacto del archivo actual.
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque coincide con el objetivo descrito y con el uso de Copilot como asistente de desarrollo. La salida generada es una propuesta probabilística: debe revisarse con el contexto real del proyecto, ejecutarse en pruebas y validarse contra los requisitos antes de producción.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Soporta múltiples lenguajes y contextos, generando código full-stack para frontend y backend.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Solo funciona para lenguajes populares como Python, JavaScript y Java.») no satisface ese criterio; la opción C («No soporta markup como HTML o CSS.») no satisface ese criterio; la opción D («Solo puede sugerir código en el lenguaje exacto del archivo actual.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [Microsoft Learn: guía de estudio GH-300](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300)
 
@@ -4236,7 +4234,7 @@ D. Convertir toda la aplicación automáticamente sin intervención humana.
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque coincide con el objetivo descrito y con el uso de Copilot como asistente de desarrollo. La salida generada es una propuesta probabilística: debe revisarse con el contexto real del proyecto, ejecutarse en pruebas y validarse contra los requisitos antes de producción.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «Sugerir snippets Python equivalentes para partes específicas de COBOL, verificando con pruebas y revisión manual.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Convertir comandos COBOL a Python sin pruebas adicionales.») no satisface ese criterio; la opción B («Reescribir toda la lógica de negocio automáticamente.») no satisface ese criterio; la opción D («Convertir toda la aplicación automáticamente sin intervención humana.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [Microsoft Learn: guía de estudio GH-300](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300)
 
@@ -4252,7 +4250,7 @@ D. Activar “Auto-Apply Mode” para reemplazar funciones en tiempo real.
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque refleja que Copilot Chat proporciona asistencia contextual mediante lenguaje natural. Sus respuestas pueden ser inexactas o incompletas; el desarrollador debe revisar, probar y confirmar cualquier cambio antes de incorporarlo.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Usar prompts en lenguaje natural para generar código, revisar la salida y copiar/insertar manualmente.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Generar y hacer commit automáticamente sin intervención.») no satisface ese criterio; la opción C («Usar “Insert & Run” para ejecutar código automáticamente sin confirmación.») no satisface ese criterio; la opción D («Activar “Auto-Apply Mode” para reemplazar funciones en tiempo real.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: uso responsable de Copilot Chat](https://docs.github.com/en/copilot/responsible-use/chat)
 
@@ -4268,7 +4266,7 @@ D. Probar solo entradas estándar como John y Jane.
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «Generar pruebas que simulen SQL injection con entradas maliciosas como '; DROP TABLE users;-- .» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Generar pruebas solo para queries SQL válidas.») no satisface ese criterio; la opción B («Probar solo strings largos e ignorar patrones de ataque.») no satisface ese criterio; la opción D («Probar solo entradas estándar como John y Jane.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -4284,7 +4282,7 @@ D. La entrada se hashea antes de enviarse y solo se procesa una versión anonimi
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «La entrada se envía primero a un servicio proxy para filtros, luego al modelo remoto, y las sugerencias pasan por filtros adicionales antes de volver al IDE.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («La entrada se procesa localmente y se almacena para mejorar modelos futuros.») no satisface ese criterio; la opción C («El código se almacena en servidores de GitHub para continuidad.») no satisface ese criterio; la opción D («La entrada se hashea antes de enviarse y solo se procesa una versión anonimizada.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -4299,7 +4297,7 @@ D. Usa únicamente la línea actual e ignora el resto.
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque aporta contexto, restricciones o ejemplos verificables al modelo. Microsoft Learn y GitHub Docs recomiendan dividir tareas complejas, evitar ambigüedad, incluir requisitos concretos e iterar sobre el resultado; un prompt breve y genérico deja demasiadas decisiones sin especificar.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Usa el contenido del archivo activo, especialmente líneas inmediatamente anteriores al cursor.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Analiza todo el proyecto, archivos abiertos y versiones previas.») no satisface ese criterio; la opción C («Requiere que el usuario seleccione manualmente el código relevante.») no satisface ese criterio; la opción D («Usa únicamente la línea actual e ignora el resto.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: ingeniería de prompts](https://docs.github.com/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot)
 
@@ -4314,7 +4312,7 @@ D. Asegurar que el prompt y el código circundante sean específicos y relevante
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque coincide con el objetivo descrito y con el uso de Copilot como asistente de desarrollo. La salida generada es una propuesta probabilística: debe revisarse con el contexto real del proyecto, ejecutarse en pruebas y validarse contra los requisitos antes de producción.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «Asegurar que el prompt y el código circundante sean específicos y relevantes para JavaScript.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Cerrar el archivo Python para reiniciar contexto.») no satisface ese criterio; la opción B («Confiar en que Copilot cambiará de lenguaje sin ajustar el prompt.») no satisface ese criterio; la opción C («Abrir un proyecto separado para JavaScript.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [Microsoft Learn: guía de estudio GH-300](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300)
 
@@ -4329,7 +4327,7 @@ D. Agregar pruebas para strings con espacios y puntuación.
 Respuesta correcta: B, D
 
 Explicación
-La opción B, D es la adecuada porque usa Copilot como apoyo para proponer pruebas y casos límite, no como sustituto de la validación. Las pruebas generadas deben revisarse, ejecutarse y ampliarse para cubrir comportamiento esperado, entradas inválidas, errores y requisitos de seguridad o rendimiento.
+Las respuestas correctas son las opciones B y D porque, en conjunto, «Agregar pruebas para palíndromos case-insensitive.»; «Agregar pruebas para strings con espacios y puntuación.» describen las acciones que cumplen el criterio de la pregunta. Las demás alternativas no son válidas: la opción A («Usar solo palíndromos simples como racecar y madam .») no satisface ese criterio; la opción C («Modificar obligatoriamente la función para lanzar ValueError ante no strings.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: escribir pruebas con GitHub Copilot](https://docs.github.com/en/copilot/tutorials/write-tests)
 
@@ -4344,7 +4342,7 @@ D. Activar “Content Exclusions” en GitHub Copilot for Business.
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «Activar “Content Exclusions” en GitHub Copilot for Business.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Desactivar Copilot para toda la organización.») no satisface ese criterio; la opción B («Restringir acceso al repositorio solo a miembros internos.») no satisface ese criterio; la opción C («Desactivar sugerencias en Copilot CLI.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -4361,7 +4359,7 @@ D. “Write a function that calculates the total price of items in a cart and ap
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque aporta contexto, restricciones o ejemplos verificables al modelo. Microsoft Learn y GitHub Docs recomiendan dividir tareas complejas, evitar ambigüedad, incluir requisitos concretos e iterar sobre el resultado; un prompt breve y genérico deja demasiadas decisiones sin especificar.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «“Write a JavaScript function that calculates the total price of items in a cart, applying both a discount and tax, and handling empty carts or invalid input.”» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («“Create a function to calculate the total price for a cart after applying a discount.”») no satisface ese criterio; la opción C («“Generate a JavaScript function for calculating cart totals with discounts and taxes.”») no satisface ese criterio; la opción D («“Write a function that calculates the total price of items in a cart and applies a discount and tax.”») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: ingeniería de prompts](https://docs.github.com/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot)
 
@@ -4376,7 +4374,7 @@ D. Usa templates basados en keywords de comentarios.
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque refleja que Copilot Chat proporciona asistencia contextual mediante lenguaje natural. Sus respuestas pueden ser inexactas o incompletas; el desarrollador debe revisar, probar y confirmar cualquier cambio antes de incorporarlo.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Analiza los cambios de código línea por línea, enfocándose en adiciones, eliminaciones y modificaciones.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Considera únicamente los mensajes de commit del pull request.») no satisface ese criterio; la opción C («Examina todo el historial del proyecto antes de generar el resumen.») no satisface ese criterio; la opción D («Usa templates basados en keywords de comentarios.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: uso responsable de Copilot Chat](https://docs.github.com/en/copilot/responsible-use/chat)
 
@@ -4393,7 +4391,7 @@ D. Dar una descripción completa de todo el proyecto.
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Incluir requisitos concretos como formato de entrada, salida esperada y librerías a usar, como pandas o NumPy.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Confiar en el comportamiento por defecto de Copilot.») no satisface ese criterio; la opción C («Usar un prompt general y elegir manualmente entre varias sugerencias.») no satisface ese criterio; la opción D («Dar una descripción completa de todo el proyecto.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -4408,7 +4406,7 @@ D. Listar, agregar y remover seats de Copilot para usuarios de la organización.
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «Listar, agregar y remover seats de Copilot para usuarios de la organización.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Gestionar directamente pagos y facturación.») no satisface ese criterio; la opción B («Automatizar invitaciones y asignar seats automáticamente al agregar usuarios.») no satisface ese criterio; la opción C («Actualizar suscripciones Individual a Business automáticamente.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
@@ -4424,7 +4422,7 @@ D. Configurar exclusiones solo desde el IDE para que apliquen a toda la organiza
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Ir a Organization Settings → Copilot y configurar acceso a repositorios, bloqueo de código público y deshabilitar Copilot en repositorios seleccionados.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Modificar .copilotconfig en cada repositorio.») no satisface ese criterio; la opción C («Usar Enterprise Admin Dashboard para todos los repositorios enterprise.») no satisface ese criterio; la opción D («Configurar exclusiones solo desde el IDE para que apliquen a toda la organización.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: auditoría de GitHub Copilot](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-enterprise/review-audit-logs)
 
@@ -4440,7 +4438,7 @@ D. Confiar únicamente en feedback de usuarios para corregir sesgos.
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque coincide con el objetivo descrito y con el uso de Copilot como asistente de desarrollo. La salida generada es una propuesta probabilística: debe revisarse con el contexto real del proyecto, ejecutarse en pruebas y validarse contra los requisitos antes de producción.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Revisar regularmente el código generado por IA para detectar sesgos y evitar manejo innecesario de datos sensibles.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Permitir que Copilot genere código automáticamente, asumiendo que no tiene sesgos.») no satisface ese criterio; la opción C («Aceptar sugerencias sin modificación porque están optimizadas.») no satisface ese criterio; la opción D («Confiar únicamente en feedback de usuarios para corregir sesgos.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [Microsoft Learn: guía de estudio GH-300](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300)
 
@@ -4455,7 +4453,7 @@ D. Ajustar manualmente los pesos del modelo de Copilot.
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque coincide con el objetivo descrito y con el uso de Copilot como asistente de desarrollo. La salida generada es una propuesta probabilística: debe revisarse con el contexto real del proyecto, ejecutarse en pruebas y validarse contra los requisitos antes de producción.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Escribir comentarios inline detallados y firmas de funciones claras.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Usar Copilot en modo read-only para que aprenda el proyecto.») no satisface ese criterio; la opción C («Vincular más repositorios a Copilot.») no satisface ese criterio; la opción D («Ajustar manualmente los pesos del modelo de Copilot.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [Microsoft Learn: guía de estudio GH-300](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300)
 
@@ -4471,7 +4469,7 @@ poco convencionales.
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «Copilot tiende a sugerir patrones comunes, que pueden no ser adecuados para escenarios únicos o poco convencionales.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Garantizan que Copilot siempre genere el código más óptimo.») no satisface ese criterio; la opción B («No influyen, porque Copilot genera soluciones completamente nuevas.») no satisface ese criterio; la opción C («Solo afectan código de bajo nivel, no arquitectura.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: alojamiento de modelos](https://docs.github.com/en/copilot/reference/ai-models/model-hosting)
 
@@ -4486,7 +4484,7 @@ D. gh copilot status
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque corresponde al uso de Copilot desde la terminal para obtener orientación o proponer comandos. Los comandos generados deben revisarse antes de ejecutarse, especialmente si pueden modificar archivos, repositorios o infraestructura.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «gh extension list» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («copilot --check») no satisface ese criterio; la opción B («gh copilot test») no satisface ese criterio; la opción D («gh copilot status») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: GitHub Copilot CLI](https://docs.github.com/en/copilot/how-tos/copilot-cli)
 
@@ -4501,7 +4499,7 @@ D. Permite hacer preguntas en lenguaje natural y responde según el contexto de 
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque refleja que Copilot Chat proporciona asistencia contextual mediante lenguaje natural. Sus respuestas pueden ser inexactas o incompletas; el desarrollador debe revisar, probar y confirmar cualquier cambio antes de incorporarlo.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «Permite hacer preguntas en lenguaje natural y responde según el contexto de archivos abiertos.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Corrige automáticamente comentarios inline para consistencia.») no satisface ese criterio; la opción B («Analiza commits pasados para sugerir mejoras.») no satisface ese criterio; la opción C («Solo funciona con comandos predefinidos.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: uso responsable de Copilot Chat](https://docs.github.com/en/copilot/responsible-use/chat)
 
@@ -4516,7 +4514,7 @@ D. Configurar estilos globales desde el panel principal de Copilot Chat.
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque refleja que Copilot Chat proporciona asistencia contextual mediante lenguaje natural. Sus respuestas pueden ser inexactas o incompletas; el desarrollador debe revisar, probar y confirmar cualquier cambio antes de incorporarlo.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «Incluir instrucciones de estilo directamente en el prompt del chat.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Agregar preferencias en .copilot-config .») no satisface ese criterio; la opción B («Subir un JSON con guías de estilo para que Copilot lo parseé.») no satisface ese criterio; la opción D («Configurar estilos globales desde el panel principal de Copilot Chat.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: uso responsable de Copilot Chat](https://docs.github.com/en/copilot/responsible-use/chat)
 
@@ -4530,7 +4528,7 @@ D. Uso ilimitado sin restricciones en todos los repositorios GitHub.
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Seguridad y cumplimiento enterprise, incluyendo SOC 2 Type 2 y GDPR.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Integración con modelos IA personalizados en servidores privados.») no satisface ese criterio; la opción C («Soporte solo para repositorios privados, no públicos.») no satisface ese criterio; la opción D («Uso ilimitado sin restricciones en todos los repositorios GitHub.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
@@ -4546,7 +4544,7 @@ ante distintos tipos de requests.
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque usa Copilot como apoyo para proponer pruebas y casos límite, no como sustituto de la validación. Las pruebas generadas deben revisarse, ejecutarse y ampliarse para cubrir comportamiento esperado, entradas inválidas, errores y requisitos de seguridad o rendimiento.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «Test que usa fuzzing con entradas maliciosas como SQL injection y XSS, y mide eficiencia del sistema ante distintos tipos de requests.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Test que verifica HTTP 200 para entradas válidas.») no satisface ese criterio; la opción B («Test que mide solo tiempo de ejecución por función.») no satisface ese criterio; la opción C («Test que verifica cifrado de cookies de sesión.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: escribir pruebas con GitHub Copilot](https://docs.github.com/en/copilot/tutorials/write-tests)
 
@@ -4561,13 +4559,13 @@ D. Copilot Individual permite usuarios compartidos con controles por rol.
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Copilot Business incluye indemnización IP y exclusiones de datos corporativos; Individual no.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Copilot Individual tiene mejor integración con repositorios corporativos.») no satisface ese criterio; la opción C («Ambos planes ofrecen facturación centralizada.») no satisface ese criterio; la opción D («Copilot Individual permite usuarios compartidos con controles por rol.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
 Pregunta 68
-Tu equipo usa Copilot Enterprise con Knowledge Bases para mejorar consistencia entre repositorios.
-¿Cómo benefician las Knowledge Bases a completions y code review?
+Tu equipo usa Copilot Enterprise con Copilot Spaces para mejorar consistencia entre repositorios.
+¿Cómo benefician las Copilot Spaces a completions y code review?
 A. Reemplazan revisiones manuales en todos los pull requests.
 B. Generan unit tests automáticamente sin intervención.
 C. Rechazan automáticamente código que no siga convenciones.
@@ -4577,7 +4575,7 @@ prácticas del equipo.
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «Proporcionan contexto específico del proyecto para sugerencias alineadas con guías y buenas prácticas del equipo.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Reemplazan revisiones manuales en todos los pull requests.») no satisface ese criterio; la opción B («Generan unit tests automáticamente sin intervención.») no satisface ese criterio; la opción C («Rechazan automáticamente código que no siga convenciones.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
@@ -4592,7 +4590,7 @@ D. Analizando el mensaje de error, explicando posibles causas y sugiriendo fixes
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque refleja que Copilot Chat proporciona asistencia contextual mediante lenguaje natural. Sus respuestas pueden ser inexactas o incompletas; el desarrollador debe revisar, probar y confirmar cualquier cambio antes de incorporarlo.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «Analizando el mensaje de error, explicando posibles causas y sugiriendo fixes según el contexto.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Accediendo directamente a la app en ejecución para parchear el bug automáticamente.») no satisface ese criterio; la opción B («Escaneando todo el proyecto y corrigiendo todas las posibles null pointer exceptions.») no satisface ese criterio; la opción C («Reemplazando toda la función por una versión generada por IA.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: uso responsable de Copilot Chat](https://docs.github.com/en/copilot/responsible-use/chat)
 
@@ -4607,7 +4605,7 @@ D. Rechaza automáticamente pull requests que no sigan la guía de estilo.
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «Genera resúmenes de pull requests con IA, mostrando una vista general de cambios y archivos impactados.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Proporciona analítica detallada del rendimiento individual de revisores.») no satisface ese criterio; la opción B («Permite edición simultánea en tiempo real del mismo pull request.») no satisface ese criterio; la opción D («Rechaza automáticamente pull requests que no sigan la guía de estilo.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
@@ -4628,7 +4626,7 @@ keys.
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «Usa entradas cifradas y anonimizadas que se envían a un modelo remoto para procesamiento, sin almacenarlas en servidores de GitHub.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Procesa todos los datos localmente, sin enviar nada a servidores remotos.») no satisface ese criterio; la opción B («Envía cada línea de código a servidores de GitHub y la almacena indefinidamente.») no satisface ese criterio; la opción D («Almacena todos los datos temporalmente para entrenar el modelo y elimina automáticamente API keys.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -4645,7 +4643,7 @@ entrenamiento, por lo que pueden estar desactualizadas.
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «Las sugerencias se basan en una captura de código público disponible al momento del entrenamiento, por lo que pueden estar desactualizadas.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Copilot se entrena diariamente para reflejar las librerías y estándares más recientes.») no satisface ese criterio; la opción B («Copilot hace scraping en tiempo real de repositorios públicos.») no satisface ese criterio; la opción C («Copilot aprende automáticamente del código que escribes y se adapta a los últimos cambios.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -4661,7 +4659,7 @@ D. Crear un issue directamente en el repositorio oficial de GitHub Copilot.
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque usa Copilot como apoyo para proponer pruebas y casos límite, no como sustituto de la validación. Las pruebas generadas deben revisarse, ejecutarse y ampliarse para cubrir comportamiento esperado, entradas inválidas, errores y requisitos de seguridad o rendimiento.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «Usar el botón de feedback dentro del editor en IDEs soportados.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Contactar a GitHub Sales desde el sitio oficial.») no satisface ese criterio; la opción B («Enviar correo a GitHub Support con detalles de la cuenta.») no satisface ese criterio; la opción D («Crear un issue directamente en el repositorio oficial de GitHub Copilot.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: escribir pruebas con GitHub Copilot](https://docs.github.com/en/copilot/tutorials/write-tests)
 
@@ -4677,7 +4675,7 @@ D. Desactivar la telemetría de Copilot.
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Activar la protección de bloqueo de código público coincidente en la configuración de Copilot.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Configurar exclusiones de repositorios a nivel organización.») no satisface ese criterio; la opción C («Cambiar la visibilidad del repositorio a privado.») no satisface ese criterio; la opción D («Desactivar la telemetría de Copilot.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
@@ -4693,7 +4691,7 @@ D. Usar solo sugerencias de documentación y evitar mejoras de código.
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Usar Copilot para sugerir algoritmos optimizados, pero revisar y medir manualmente el rendimiento.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Aceptar todas las sugerencias porque Copilot fue entrenado con código de alto rendimiento.») no satisface ese criterio; la opción C («Permitir que Copilot optimice automáticamente el rendimiento sin benchmarking.») no satisface ese criterio; la opción D («Usar solo sugerencias de documentación y evitar mejoras de código.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
@@ -4709,12 +4707,12 @@ D. Generar strings aleatorios y asumir que eso cubre todos los casos.
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque usa Copilot como apoyo para proponer pruebas y casos límite, no como sustituto de la validación. Las pruebas generadas deben revisarse, ejecutarse y ampliarse para cubrir comportamiento esperado, entradas inválidas, errores y requisitos de seguridad o rendimiento.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «Escribir comentarios indicando edge cases no probados, como cadenas vacías y no palíndromos, para que Copilot sugiera pruebas adicionales.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Pedir a Copilot que reescriba todas las pruebas existentes.») no satisface ese criterio; la opción B («Generar pruebas de integración en lugar de unitarias.») no satisface ese criterio; la opción D («Generar strings aleatorios y asumir que eso cubre todos los casos.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: escribir pruebas con GitHub Copilot](https://docs.github.com/en/copilot/tutorials/write-tests)
 
 Pregunta 7
-¿Cuál tipo de conocimiento sería menos adecuado para incluir en una Knowledge Base destinada a
+¿Cuál tipo de conocimiento sería menos adecuado para incluir en una Copilot Space destinada a
 ayudar a desarrolladores a implementar soluciones reutilizables con GitHub Copilot Business?
 A. Patrones de diseño como Singleton o Factory.
 B. Buenas prácticas de uso de APIs y estándares de codificación.
@@ -4724,7 +4722,7 @@ D. Datos históricos de releases, fechas límite e hitos del proyecto.
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «Datos históricos de releases, fechas límite e hitos del proyecto.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Patrones de diseño como Singleton o Factory.») no satisface ese criterio; la opción B («Buenas prácticas de uso de APIs y estándares de codificación.») no satisface ese criterio; la opción C («Snippets para tareas comunes como validación de datos o manejo de errores.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
@@ -4740,7 +4738,7 @@ D. Anonimizar todos los datos sensibles dentro del código.
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Deshabilitar Copilot para archivos o repositorios específicos que contienen datos sensibles.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Deshabilitar Copilot solo para algunas funciones.») no satisface ese criterio; la opción C («Cifrar los datos sensibles dentro de los archivos.») no satisface ese criterio; la opción D («Anonimizar todos los datos sensibles dentro del código.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -4755,7 +4753,7 @@ D. Código propietario de repositorios privados de GitHub.
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «Código propietario de repositorios privados de GitHub.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Proyectos open-source disponibles en GitLab o Bitbucket.») no satisface ese criterio; la opción B («Código público con licencias permisivas como MIT o Apache.») no satisface ese criterio; la opción C («Código publicado en foros con licencias Creative Commons.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: alojamiento de modelos](https://docs.github.com/en/copilot/reference/ai-models/model-hosting)
 
@@ -4771,7 +4769,7 @@ D. Envía todo el proyecto para analizar su estructura completa.
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Envía únicamente el código en el que estás trabajando activamente a servidores remotos, donde se procesa y se genera una sugerencia.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Envía solo metadatos como nombres de variables, pero no código real.») no satisface ese criterio; la opción C («Procesa todo localmente para mantener privacidad.») no satisface ese criterio; la opción D («Envía todo el proyecto para analizar su estructura completa.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -4786,7 +4784,7 @@ D. action:copilot.suggestion.created
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «action:copilot.access_enabled» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («action:copilot.security.updated») no satisface ese criterio; la opción B («action:copilot.code.reviewed») no satisface ese criterio; la opción D («action:copilot.suggestion.created») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
@@ -4803,7 +4801,7 @@ altos.
 Respuesta correcta: B, D
 
 Explicación
-La opción B, D es la adecuada porque usa Copilot como apoyo para proponer pruebas y casos límite, no como sustituto de la validación. Las pruebas generadas deben revisarse, ejecutarse y ampliarse para cubrir comportamiento esperado, entradas inválidas, errores y requisitos de seguridad o rendimiento.
+Las respuestas correctas son las opciones B y D porque, en conjunto, «Dar la firma de la función y pedirle que genere tests.»; «Agregar comentarios describiendo edge cases como precios negativos o descuentos demasiado altos.» describen las acciones que cumplen el criterio de la pregunta. Las demás alternativas no son válidas: la opción A («Confiar por completo en que Copilot cubra todos los edge cases.») no satisface ese criterio; la opción C («Pedirle solo pruebas positivas y escribir tú las negativas.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: escribir pruebas con GitHub Copilot](https://docs.github.com/en/copilot/tutorials/write-tests)
 
@@ -4819,7 +4817,7 @@ missing data and file errors.”
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque aporta contexto, restricciones o ejemplos verificables al modelo. Microsoft Learn y GitHub Docs recomiendan dividir tareas complejas, evitar ambigüedad, incluir requisitos concretos e iterar sobre el resultado; un prompt breve y genérico deja demasiadas decisiones sin especificar.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «“Write a Python function that reads a CSV file and returns the average of a specified column, handling missing data and file errors.”» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («“Create a Python function that calculates the mean of a column from a CSV file.”») no satisface ese criterio; la opción B («“Write a Python function for reading and calculating averages from CSVs.”») no satisface ese criterio; la opción C («“Write a Python function to calculate the average of a CSV column.”») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: ingeniería de prompts](https://docs.github.com/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot)
 
@@ -4834,7 +4832,7 @@ D. Ejecutar migraciones complejas de bases de datos en múltiples entornos.
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque refleja que Copilot Chat proporciona asistencia contextual mediante lenguaje natural. Sus respuestas pueden ser inexactas o incompletas; el desarrollador debe revisar, probar y confirmar cualquier cambio antes de incorporarlo.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Aprender un nuevo lenguaje de programación y necesitar explicaciones de sintaxis y patrones.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Automatizar despliegues en múltiples clouds.») no satisface ese criterio; la opción C («Generar documentación completa de todo el proyecto.») no satisface ese criterio; la opción D («Ejecutar migraciones complejas de bases de datos en múltiples entornos.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: uso responsable de Copilot Chat](https://docs.github.com/en/copilot/responsible-use/chat)
 
@@ -4851,7 +4849,7 @@ D. Se aplican a todos los proyectos futuros automáticamente.
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque aplica una salvaguarda explícita para limitar el contexto que Copilot puede usar. La exclusión de contenido debe configurarse en los controles admitidos por la organización; revisar el resultado, proteger los secretos y aplicar las obligaciones de privacidad siguen siendo responsabilidad del equipo.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «Solo aplican a archivos deshabilitados manualmente y no protegen referencias relacionadas en archivos habilitados.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Las exclusiones protegen automáticamente toda información sensible del codebase.») no satisface ese criterio; la opción B («Las exclusiones también protegen metadatos y commit history.») no satisface ese criterio; la opción D («Se aplican a todos los proyectos futuros automáticamente.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: exclusión de contenido](https://docs.github.com/en/copilot/concepts/content-exclusion)
 
@@ -4867,7 +4865,7 @@ D. Instalar la extensión de VS Code y ejecutar gh copilot enable .
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque corresponde al uso de Copilot desde la terminal para obtener orientación o proponer comandos. Los comandos generados deben revisarse antes de ejecutarse, especialmente si pueden modificar archivos, repositorios o infraestructura.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Instalar GitHub CLI, autenticar con gh auth login y ejecutar gh extension install github/ gh-copilot .» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Instalar desde GitHub Marketplace, ejecutar gh auth configure y luego gh copilot start .») no satisface ese criterio; la opción C («Clonar el repositorio gh-copilot , copiar binarios manualmente y usar un PAT.») no satisface ese criterio; la opción D («Instalar la extensión de VS Code y ejecutar gh copilot enable .») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: GitHub Copilot CLI](https://docs.github.com/en/copilot/how-tos/copilot-cli)
 
@@ -4875,14 +4873,14 @@ Pregunta 17
 ¿Qué afirmación describe una función única de GitHub Copilot Enterprise frente a otros planes?
 A. Permite desplegar modelos Copilot en infraestructura privada.
 B. Incluye un scanner de vulnerabilidades que corrige automáticamente problemas.
-C. Permite crear y gestionar Knowledge Bases desde repositorios internos para mejorar respuestas de
+C. Permite crear y gestionar Copilot Spaces desde repositorios internos para mejorar respuestas de
 Copilot Chat.
 D. Limita las sugerencias únicamente a repositorios privados de la organización.
 
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «Permite crear y gestionar Copilot Spaces desde repositorios internos para mejorar respuestas de Copilot Chat.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Permite desplegar modelos Copilot en infraestructura privada.») no satisface ese criterio; la opción B («Incluye un scanner de vulnerabilidades que corrige automáticamente problemas.») no satisface ese criterio; la opción D («Limita las sugerencias únicamente a repositorios privados de la organización.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
@@ -4897,13 +4895,13 @@ D. GitHub Copilot Chat.
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «GitHub Copilot Chat.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («GitHub Copilot Multiple Suggestions.») no satisface ese criterio; la opción B («GitHub Copilot CLI.») no satisface ese criterio; la opción C («GitHub Copilot Inline Suggestions.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
 Pregunta 19
 Necesitas implementar merge sort en Python, pero el prompt
-# Python function to sort a list genera quicksort. ¿Qué cambio guía mejor a Copilot?
+“Python function to sort a list” genera quicksort. ¿Qué cambio guía mejor a Copilot?
 A. “Python function to sort a list of numbers alphabetically.”
 B. “Efficient Python function to sort a list.”
 C. “Python function to sort a list using merge sort.”
@@ -4912,7 +4910,7 @@ D. “Python function to recursively divide the list and merge sorted sublists.�
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque aporta contexto, restricciones o ejemplos verificables al modelo. Microsoft Learn y GitHub Docs recomiendan dividir tareas complejas, evitar ambigüedad, incluir requisitos concretos e iterar sobre el resultado; un prompt breve y genérico deja demasiadas decisiones sin especificar.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «“Python function to sort a list using merge sort.”» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («“Python function to sort a list of numbers alphabetically.”») no satisface ese criterio; la opción B («“Efficient Python function to sort a list.”») no satisface ese criterio; la opción D («“Python function to recursively divide the list and merge sorted sublists.”») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: ingeniería de prompts](https://docs.github.com/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot)
 
@@ -4928,7 +4926,7 @@ D. Copilot Individual excluye código por defecto y Business requiere proceso ma
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Copilot Business permite a administradores controlar exclusiones de entrenamiento a nivel organización; Individual no.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Ambos planes ofrecen el mismo control sobre datos de entrenamiento.») no satisface ese criterio; la opción C («Copilot Individual permite desactivar telemetría, Business no.») no satisface ese criterio; la opción D («Copilot Individual excluye código por defecto y Business requiere proceso manual.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -4944,7 +4942,7 @@ D. Copilot revisa automáticamente el código de todo el equipo.
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque considera el posible parecido con código público y las obligaciones de licencia. Los filtros y referencias de Copilot son salvaguardas, no una garantía de ausencia total de coincidencias; el equipo debe revisar la licencia y la procedencia antes de reutilizar código.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «Copilot puede generar código que no cumpla completamente los estándares del equipo y requiere ajuste manual.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Copilot se alinea automáticamente con todas las convenciones del equipo.») no satisface ese criterio; la opción B («Copilot predice cambios futuros del proyecto.») no satisface ese criterio; la opción D («Copilot revisa automáticamente el código de todo el equipo.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: referencias a código público](https://docs.github.com/en/copilot/concepts/completions/code-referencing)
 
@@ -4959,7 +4957,7 @@ D. Colaboración en tiempo real mediante sesiones live.
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque aplica una salvaguarda explícita para limitar el contexto que Copilot puede usar. La exclusión de contenido debe configurarse en los controles admitidos por la organización; revisar el resultado, proteger los secretos y aplicar las obligaciones de privacidad siguen siendo responsabilidad del equipo.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «Gestión centralizada de licencias y políticas de seguridad para el uso de Copilot en la organización.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Sugerencias de código adaptadas al contexto del proyecto en múltiples IDEs.») no satisface ese criterio; la opción B («Generación de casos de prueba con IA.») no satisface ese criterio; la opción D («Colaboración en tiempo real mediante sesiones live.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: exclusión de contenido](https://docs.github.com/en/copilot/concepts/content-exclusion)
 
@@ -4975,7 +4973,7 @@ D. Crear una regla de firewall para impedir acceso a repositorios internos.
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque aplica una salvaguarda explícita para limitar el contexto que Copilot puede usar. La exclusión de contenido debe configurarse en los controles admitidos por la organización; revisar el resultado, proteger los secretos y aplicar las obligaciones de privacidad siguen siendo responsabilidad del equipo.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «Crear una política organizacional para deshabilitar Copilot por defecto y habilitarlo solo en repositorios específicos.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Configurar permisos de repositorio para negar sugerencias asistidas por IA.») no satisface ese criterio; la opción B («Usar GitHub Actions para deshabilitar Copilot en repositorios nuevos.») no satisface ese criterio; la opción D («Crear una regla de firewall para impedir acceso a repositorios internos.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: exclusión de contenido](https://docs.github.com/en/copilot/concepts/content-exclusion)
 
@@ -4991,7 +4989,7 @@ consentimiento aplicable.
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «Usa modelos preentrenados y no utiliza tu código para entrenamiento salvo configuración o consentimiento aplicable.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Envía todo el código a OpenAI para entrenar modelos.») no satisface ese criterio; la opción B («Anonimiza todo el código y lo usa para fine-tuning.») no satisface ese criterio; la opción C («Almacena una copia permanente del código.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -5006,7 +5004,7 @@ D. Dejar que Copilot escriba algoritmos complejos completos sin revisión.
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque coincide con el objetivo descrito y con el uso de Copilot como asistente de desarrollo. La salida generada es una propuesta probabilística: debe revisarse con el contexto real del proyecto, ejecutarse en pruebas y validarse contra los requisitos antes de producción.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Usar Copilot para sugerir snippets y refactorizar código, revisando cuidadosamente cada sugerencia.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Generar código frontend y backend sin ajustar diferencias entre JavaScript y Python.») no satisface ese criterio; la opción C («Deshabilitar Copilot en librerías y frameworks comunes.») no satisface ese criterio; la opción D («Dejar que Copilot escriba algoritmos complejos completos sin revisión.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [Microsoft Learn: guía de estudio GH-300](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300)
 
@@ -5022,7 +5020,7 @@ D. Revisar solo código complejo, no sugerencias simples.
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Revisar manualmente todas las sugerencias considerando que el entrenamiento puede no reflejar estándares médicos o regulaciones actuales.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Asumir que el dataset grande garantiza precisión.») no satisface ese criterio; la opción C («Deshabilitar Copilot por completo en salud.») no satisface ese criterio; la opción D («Revisar solo código complejo, no sugerencias simples.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -5038,7 +5036,7 @@ D. Solo usa modelos entrenados con repositorios GitHub, sin filtros.
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «La entrada pasa por un proxy de Copilot, luego por el modelo y después por filtros adicionales antes de volver al IDE.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («La entrada va directo al modelo sin procesamiento adicional.») no satisface ese criterio; la opción C («Se almacena en una base de datos y el modelo la consulta.») no satisface ese criterio; la opción D («Solo usa modelos entrenados con repositorios GitHub, sin filtros.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -5053,7 +5051,7 @@ D. Revisar manualmente el código sugerido para entender su lógica antes de int
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque coincide con el objetivo descrito y con el uso de Copilot como asistente de desarrollo. La salida generada es una propuesta probabilística: debe revisarse con el contexto real del proyecto, ejecutarse en pruebas y validarse contra los requisitos antes de producción.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «Revisar manualmente el código sugerido para entender su lógica antes de integrarlo.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Asumir que la sugerencia está optimizada y es segura.») no satisface ese criterio; la opción B («Usarla como placeholder y refactorizar luego.») no satisface ese criterio; la opción C («Aceptarla sin revisión.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [Microsoft Learn: guía de estudio GH-300](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300)
 
@@ -5068,7 +5066,7 @@ D. No es posible usar Copilot en JetBrains.
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque coincide con el objetivo descrito y con el uso de Copilot como asistente de desarrollo. La salida generada es una propuesta probabilística: debe revisarse con el contexto real del proyecto, ejecutarse en pruebas y validarse contra los requisitos antes de producción.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Instalar el plugin de GitHub Copilot para JetBrains, configurarlo y asegurar que el equipo lo habilite.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Usar solo autocompletado nativo de JetBrains porque es idéntico.») no satisface ese criterio; la opción C («Copiar sugerencias desde VS Code a JetBrains.») no satisface ese criterio; la opción D («No es posible usar Copilot en JetBrains.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [Microsoft Learn: guía de estudio GH-300](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300)
 
@@ -5083,7 +5081,7 @@ D. Solo se activa con un atajo específico, nunca automáticamente.
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Copilot da sugerencias en tiempo real mientras escribe y permite alternar sugerencias con atajos.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Copilot genera archivos completos automáticamente sin input.») no satisface ese criterio; la opción C («Solo funciona en repositorios alojados en GitHub.») no satisface ese criterio; la opción D («Solo se activa con un atajo específico, nunca automáticamente.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
@@ -5099,7 +5097,7 @@ D. No necesita contexto para predecir código correctamente.
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque coincide con el objetivo descrito y con el uso de Copilot como asistente de desarrollo. La salida generada es una propuesta probabilística: debe revisarse con el contexto real del proyecto, ejecutarse en pruebas y validarse contra los requisitos antes de producción.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Puede fallar con tecnologías nuevas o poco documentadas porque depende de patrones del entrenamiento.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Siempre genera código perfecto porque se entrena en repositorios populares.») no satisface ese criterio; la opción C («Detecta y corrige todos los errores lógicos y runtime.») no satisface ese criterio; la opción D («No necesita contexto para predecir código correctamente.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [Microsoft Learn: guía de estudio GH-300](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300)
 
@@ -5114,23 +5112,23 @@ D. Aceptar siempre la primera sugerencia.
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Revisar el código sugerido para vulnerabilidades y bugs.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Desactivar linters para evitar conflictos.») no satisface ese criterio; la opción C («Copiarlo directamente a producción.») no satisface ese criterio; la opción D («Aceptar siempre la primera sugerencia.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
 Pregunta 33
 Un nuevo desarrollador usa Copilot Enterprise y pregunta cómo hacer que las sugerencias incorporen
-guías internas de la Knowledge Base. ¿Cómo debería utilizar esa información?
+guías internas de la Copilot Space. ¿Cómo debería utilizar esa información?
 A. Mencionar temas relevantes en comentarios mientras programa para guiar a Copilot hacia
 documentación interna.
 B. Instalar un plugin separado de Copilot Enterprise.
-C. Abrir manualmente la Knowledge Base y copiar snippets.
+C. Abrir manualmente la Copilot Space y copiar snippets.
 D. Usar un comando especial @copilot reference {topic} .
 
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Mencionar temas relevantes en comentarios mientras programa para guiar a Copilot hacia documentación interna.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Instalar un plugin separado de Copilot Enterprise.») no satisface ese criterio; la opción C («Abrir manualmente la Copilot Space y copiar snippets.») no satisface ese criterio; la opción D («Usar un comando especial @copilot reference {topic} .») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
@@ -5138,14 +5136,14 @@ Pregunta 34
 Evalúas Copilot Business para un equipo con foco en privacidad y seguridad. ¿Qué afirmaciones son
 correctas? Selecciona dos.
 A. Requiere aprobar manualmente cada sugerencia antes de usarla.
-B. Proporciona cifrado de extremo a extremo para proteger sugerencias de código.
-C. Asegura que el entrenamiento no use datos de repositorios privados.
+B. Protege las solicitudes y respuestas mediante cifrado y controles de infraestructura compatibles con el plan.
+C. No usa datos de clientes de Copilot Business para entrenar los modelos de IA.
 D. No permite a administradores deshabilitar sugerencias por lenguaje.
 
 Respuesta correcta: B, C
 
 Explicación
-La opción B, C es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+Las opciones B y C son correctas. Copilot usa cifrado y controles de la infraestructura de GitHub y de los proveedores de modelos para procesar solicitudes; esto no equivale a una garantía de cifrado de extremo a extremo definida por el cliente. GitHub no usa los datos de clientes de Copilot Business o Enterprise para entrenar modelos de IA. Copilot no exige aprobación manual de cada sugerencia y los administradores pueden configurar políticas.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -5160,7 +5158,7 @@ D. Enviar correo directo a soporte con todas las completions.
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque refleja que Copilot Chat proporciona asistencia contextual mediante lenguaje natural. Sus respuestas pueden ser inexactas o incompletas; el desarrollador debe revisar, probar y confirmar cualquier cambio antes de incorporarlo.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Usar thumbs up/thumbs down dentro de la interfaz de Copilot Chat.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Crear issues en el repositorio de Copilot.») no satisface ese criterio; la opción C («Publicar una queja en redes sociales.») no satisface ese criterio; la opción D («Enviar correo directo a soporte con todas las completions.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: uso responsable de Copilot Chat](https://docs.github.com/en/copilot/responsible-use/chat)
 
@@ -5175,7 +5173,7 @@ D. Genera automáticamente unit tests para todas las funciones.
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque refleja que Copilot Chat proporciona asistencia contextual mediante lenguaje natural. Sus respuestas pueden ser inexactas o incompletas; el desarrollador debe revisar, probar y confirmar cualquier cambio antes de incorporarlo.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Permite describir problemas en lenguaje natural y recibir posibles fixes según el contexto del código.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Se integra directamente con servicios de logs para analizar errores.») no satisface ese criterio; la opción C («Detecta y corrige bugs automáticamente sin intervención.») no satisface ese criterio; la opción D («Genera automáticamente unit tests para todas las funciones.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: uso responsable de Copilot Chat](https://docs.github.com/en/copilot/responsible-use/chat)
 
@@ -5190,7 +5188,7 @@ D. Reescribir todo automáticamente en un lenguaje moderno.
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque coincide con el objetivo descrito y con el uso de Copilot como asistente de desarrollo. La salida generada es una propuesta probabilística: debe revisarse con el contexto real del proyecto, ejecutarse en pruebas y validarse contra los requisitos antes de producción.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «Usar Copilot para sugerir alternativas modernas a patrones obsoletos y revisar/probar manualmente.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Usar Copilot solo para documentación y no para refactoring.») no satisface ese criterio; la opción B («Depender de Copilot para detectar y refactorizar performance sin pruebas.») no satisface ese criterio; la opción D («Reescribir todo automáticamente en un lenguaje moderno.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [Microsoft Learn: guía de estudio GH-300](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300)
 
@@ -5205,7 +5203,7 @@ D. Copilot Business permite excluir snippets de código para que no se usen en m
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «Copilot Business permite excluir snippets de código para que no se usen en mejorar el modelo.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Solo Individual ofrece audit logs.») no satisface ese criterio; la opción B («Business nunca envía datos a servidores externos.») no satisface ese criterio; la opción C («Todos los SKUs almacenan snippets para mejorar el modelo continuamente.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -5220,23 +5218,23 @@ D. Soporte para múltiples lenguajes en varios IDEs.
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «Soporte para múltiples lenguajes en varios IDEs.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Control de acceso por roles y facturación centralizada.») no satisface ese criterio; la opción B («SSO y audit logs.») no satisface ese criterio; la opción C («Indemnización IP y exclusiones corporativas.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
 Pregunta 40
-Tu empresa adoptó Copilot Enterprise y DevOps quiere configurar una Knowledge Base con
+Tu empresa adoptó Copilot Enterprise y DevOps quiere configurar una Copilot Space con
 documentación interna y buenas prácticas. ¿Cuál es un paso correcto?
 A. Subir documentación interna a un repositorio privado y permitir que Copilot la use como referencia
 para sugerencias.
-B. Configurar Knowledge Base en Copilot Business.
+B. Configurar Copilot Space en Copilot Business.
 C. Activar “Auto-Reference” en preferencias personales.
 D. Guardar buenas prácticas en un servicio cloud externo y conectarlo con webhooks.
 
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Subir documentación interna a un repositorio privado y permitir que Copilot la use como referencia para sugerencias.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Configurar Copilot Space en Copilot Business.») no satisface ese criterio; la opción C («Activar “Auto-Reference” en preferencias personales.») no satisface ese criterio; la opción D («Guardar buenas prácticas en un servicio cloud externo y conectarlo con webhooks.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
@@ -5252,30 +5250,30 @@ D. Copilot almacena todo el proyecto en servidores GitHub.
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Copilot envía el contenido activo del editor al modelo remoto, se analiza para sugerencias contextuales y no se almacena después del procesamiento.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Copilot procesa todo localmente.») no satisface ese criterio; la opción C («Copilot envía inmediatamente todo el codebase.») no satisface ese criterio; la opción D («Copilot almacena todo el proyecto en servidores GitHub.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
 Pregunta 42
 Como DevOps evalúas Copilot Business con políticas estrictas de seguridad, control de telemetría,
-controles administrativos y prevención de exposición a Codex. ¿Qué característica crítica atiende estas
+controles administrativos y prevención de entrenamiento con código privado. ¿Qué característica crítica atiende estas
 preocupaciones?
 A. Panel administrativo para monitorear sugerencias en tiempo real.
 B. Posibilidad de deshabilitar completamente toda telemetría.
 C. RBAC por seniority del desarrollador.
-D. Uso de Copilot sin enviar datos de repositorios privados al modelo Codex externo.
+D. El compromiso de que Copilot Business no usa datos de clientes para entrenar modelos de IA.
 
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La opción D es correcta: GitHub no usa datos de clientes de Copilot Business o Enterprise para entrenar modelos de IA. Las solicitudes todavía pueden enviarse a proveedores de modelos para inferencia y pasan por las protecciones de GitHub; esto no significa que el contenido privado nunca salga del entorno o que exista acceso directo a un modelo específico llamado Codex.
 
 Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
 Pregunta 43
 Tu empresa pasó de Copilot Business a Enterprise. ¿Qué característica exclusiva debes destacar?
 A. Aislamiento de red para impedir acceso a repositorios públicos.
-B. Integración con Knowledge Bases internas para sugerencias basadas en documentación de la
+B. Integración con Copilot Spaces internas para sugerencias basadas en documentación de la
 empresa.
 C. Fine-tuning del modelo con repositorios privados.
 D. Modo offline completo.
@@ -5283,7 +5281,7 @@ D. Modo offline completo.
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque aplica una salvaguarda explícita para limitar el contexto que Copilot puede usar. La exclusión de contenido debe configurarse en los controles admitidos por la organización; revisar el resultado, proteger los secretos y aplicar las obligaciones de privacidad siguen siendo responsabilidad del equipo.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Integración con Copilot Spaces internas para sugerencias basadas en documentación de la empresa.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Aislamiento de red para impedir acceso a repositorios públicos.») no satisface ese criterio; la opción C («Fine-tuning del modelo con repositorios privados.») no satisface ese criterio; la opción D («Modo offline completo.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: exclusión de contenido](https://docs.github.com/en/copilot/concepts/content-exclusion)
 
@@ -5299,12 +5297,12 @@ D. Copilot Chat en CLI sin conectividad.
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «Copilot Business con filtro de código público habilitado y políticas organizacionales.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Copilot Individual con filtro público en VS Code.») no satisface ese criterio; la opción B («Copilot Business con telemetría desactivada y filtros apagados.») no satisface ese criterio; la opción D («Copilot Chat en CLI sin conectividad.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
 Pregunta 45
-¿Cuál es el beneficio principal de configurar una Knowledge Base en Copilot Enterprise?
+¿Cuál es el beneficio principal de configurar una Copilot Space en Copilot Enterprise?
 A. Permitir repositorios de datos internos que Copilot use para sugerencias basadas en información
 propietaria.
 B. Automatizar code review conectando sugerencias a CI/CD.
@@ -5314,7 +5312,7 @@ D. Restringir Copilot solo a datos públicos.
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Permitir repositorios de datos internos que Copilot use para sugerencias basadas en información propietaria.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Automatizar code review conectando sugerencias a CI/CD.») no satisface ese criterio; la opción C («Crear entornos aislados sin conectividad.») no satisface ese criterio; la opción D («Restringir Copilot solo a datos públicos.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
@@ -5328,7 +5326,7 @@ D. Existe un modo estricto que elimina automáticamente código GPL.
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Copilot puede detectar patrones vulnerables y mostrar advertencias, pero no impide aceptar código.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Copilot garantiza cumplimiento OWASP Top 10.») no satisface ese criterio; la opción C («Administradores pueden crear reglas para bloquear todo patrón inseguro.») no satisface ese criterio; la opción D («Existe un modo estricto que elimina automáticamente código GPL.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
@@ -5343,7 +5341,7 @@ D. Pedir a cada usuario que desactive Copilot manualmente.
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «Usar Copilot Business y deshabilitar uso en cuentas personales mediante política.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Exigir que todos trabajen solo en repositorios privados.») no satisface ese criterio; la opción B («Configurar branch protection rules.») no satisface ese criterio; la opción D («Pedir a cada usuario que desactive Copilot manualmente.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: auditoría de GitHub Copilot](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-enterprise/review-audit-logs)
 
@@ -5358,12 +5356,12 @@ D. El código inmediatamente anterior al prompt en el archivo actual.
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque aporta contexto, restricciones o ejemplos verificables al modelo. Microsoft Learn y GitHub Docs recomiendan dividir tareas complejas, evitar ambigüedad, incluir requisitos concretos e iterar sobre el resultado; un prompt breve y genérico deja demasiadas decisiones sin especificar.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «El código inmediatamente anterior al prompt en el archivo actual.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Nombres de variables y funciones únicamente.») no satisface ese criterio; la opción B («Todo el directorio del proyecto.») no satisface ese criterio; la opción C («Solo el prompt.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: ingeniería de prompts](https://docs.github.com/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot)
 
 Pregunta 49
-Tu organización configura una Knowledge Base de Copilot Enterprise para estándares y buenas
+Tu organización configura una Copilot Space de Copilot Enterprise para estándares y buenas
 prácticas. ¿Qué contenido es apropiado almacenar?
 A. Preferencias de IDE por usuario.
 B. Contraseñas cifradas y API keys.
@@ -5373,7 +5371,7 @@ D. Logs automáticos de producción.
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «Snippets y funciones reutilizables de librerías internas.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Preferencias de IDE por usuario.») no satisface ese criterio; la opción B («Contraseñas cifradas y API keys.») no satisface ese criterio; la opción D («Logs automáticos de producción.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: alojamiento de modelos](https://docs.github.com/en/copilot/reference/ai-models/model-hosting)
 
@@ -5389,7 +5387,7 @@ D. La propiedad depende del dato exacto de entrenamiento usado.
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque coincide con el objetivo descrito y con el uso de Copilot como asistente de desarrollo. La salida generada es una propuesta probabilística: debe revisarse con el contexto real del proyecto, ejecutarse en pruebas y validarse contra los requisitos antes de producción.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «El desarrollador que usa Copilot posee el output y puede usarlo como propio, con revisión de licencias si reconoce similitud con código licenciado.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («GitHub posee todo el código generado.») no satisface ese criterio; la opción C («Todo código generado es open-source por defecto.») no satisface ese criterio; la opción D («La propiedad depende del dato exacto de entrenamiento usado.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [Microsoft Learn: guía de estudio GH-300](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300)
 
@@ -5405,7 +5403,7 @@ D. Desplegarlo y monitorear incidentes después.
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Revisar el código por vulnerabilidades como SQL injection y probar con entradas normales y maliciosas.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Usarlo solo en partes no críticas.») no satisface ese criterio; la opción C («Asumir que Copilot genera código seguro.») no satisface ese criterio; la opción D («Desplegarlo y monitorear incidentes después.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -5420,7 +5418,7 @@ D. Procesa todo localmente y no envía datos a la nube.
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «No usa código de repositorios privados para entrenar modelos ni sugerirlo a otros.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Usa todo el código privado para entrenar modelos públicos.») no satisface ese criterio; la opción B («Puede sugerir tu código privado a otros usuarios.») no satisface ese criterio; la opción D («Procesa todo localmente y no envía datos a la nube.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -5435,7 +5433,7 @@ D. Agregar "allowPrivateRepositories": false .
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Agregar "exclude": true para directorios sensibles.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Agregar "privateData": false .») no satisface ese criterio; la opción C («Agregar "suggestions": "none" .») no satisface ese criterio; la opción D («Agregar "allowPrivateRepositories": false .») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -5449,7 +5447,7 @@ D. Sugerencias y autocompletado de código en tiempo real.
 Respuesta correcta: B, D
 
 Explicación
-La opción B, D es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+Las respuestas correctas son las opciones B y D porque, en conjunto, «Generación de pruebas asistida por IA.»; «Sugerencias y autocompletado de código en tiempo real.» describen las acciones que cumplen el criterio de la pregunta. Las demás alternativas no son válidas: la opción A («Seguridad y compliance enterprise.») no satisface ese criterio; la opción C («Gestión de proyectos e issues.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
@@ -5466,7 +5464,7 @@ D. Probar únicamente usuarios mayores de 18.
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque usa Copilot como apoyo para proponer pruebas y casos límite, no como sustituto de la validación. Las pruebas generadas deben revisarse, ejecutarse y ampliarse para cubrir comportamiento esperado, entradas inválidas, errores y requisitos de seguridad o rendimiento.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «Generar una prueba de integración que verifique el flujo completo, como acceso a contenido restringido según edad.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Probar solo la función de forma aislada.») no satisface ese criterio; la opción B («Generar unit tests y asumir que son suficientes.») no satisface ese criterio; la opción D («Probar únicamente usuarios mayores de 18.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: escribir pruebas con GitHub Copilot](https://docs.github.com/en/copilot/tutorials/write-tests)
 
@@ -5481,7 +5479,7 @@ D. GitHub Copilot Free Tier.
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «GitHub Copilot for Business.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («GitHub Copilot for Students.») no satisface ese criterio; la opción C («GitHub Copilot Individual.») no satisface ese criterio; la opción D («GitHub Copilot Free Tier.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
@@ -5496,7 +5494,7 @@ D. Incluir pasos, entradas esperadas, salidas y restricciones.
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque aporta contexto, restricciones o ejemplos verificables al modelo. Microsoft Learn y GitHub Docs recomiendan dividir tareas complejas, evitar ambigüedad, incluir requisitos concretos e iterar sobre el resultado; un prompt breve y genérico deja demasiadas decisiones sin especificar.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «Incluir pasos, entradas esperadas, salidas y restricciones.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Usar solo lenguaje natural sin contexto de código.») no satisface ese criterio; la opción B («Usar prompts mínimos para dejar que Copilot infiera todo.») no satisface ese criterio; la opción C («Evitar edge cases porque Copilot los generaliza.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: ingeniería de prompts](https://docs.github.com/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot)
 
@@ -5510,7 +5508,7 @@ D. Genera snippets como respuesta a mensajes de error específicos, reduciendo b
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque refleja que Copilot Chat proporciona asistencia contextual mediante lenguaje natural. Sus respuestas pueden ser inexactas o incompletas; el desarrollador debe revisar, probar y confirmar cualquier cambio antes de incorporarlo.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «Genera snippets como respuesta a mensajes de error específicos, reduciendo búsquedas manuales.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Corrige errores de sintaxis automáticamente sin input.») no satisface ese criterio; la opción B («Genera tests completos automáticamente para todas las funciones con errores.») no satisface ese criterio; la opción C («Bloquea commits con código incorrecto.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: uso responsable de Copilot Chat](https://docs.github.com/en/copilot/responsible-use/chat)
 
@@ -5526,7 +5524,7 @@ D. Comparte tus datos con terceros para mejorar la IA.
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «Recopila telemetría anonimizada que puede compartirse con Microsoft y GitHub para mejorar servicios.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Usa tu código para mejorar el modelo, pero no lo comparte.») no satisface ese criterio; la opción B («Usa tu código personal para entrenar el modelo.») no satisface ese criterio; la opción D («Comparte tus datos con terceros para mejorar la IA.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -5542,7 +5540,7 @@ D. “Create an SQL query that pulls data from a table using user data.”
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque aporta contexto, restricciones o ejemplos verificables al modelo. Microsoft Learn y GitHub Docs recomiendan dividir tareas complejas, evitar ambigüedad, incluir requisitos concretos e iterar sobre el resultado; un prompt breve y genérico deja demasiadas decisiones sin especificar.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «“Write an SQL query to retrieve user data (user_id, first_name, last_name) from the users table, only where status is active and created after 2021-01-01.”» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («“Write an SQL query to retrieve all user data from the users table.”») no satisface ese criterio; la opción B («“Generate an SQL query to retrieve data from a database.”») no satisface ese criterio; la opción D («“Create an SQL query that pulls data from a table using user data.”») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: ingeniería de prompts](https://docs.github.com/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot)
 
@@ -5557,7 +5555,7 @@ D. Reducir extensiones activas en VS Code.
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque coincide con el objetivo descrito y con el uso de Copilot como asistente de desarrollo. La salida generada es una propuesta probabilística: debe revisarse con el contexto real del proyecto, ejecutarse en pruebas y validarse contra los requisitos antes de producción.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «Agregar comentarios descriptivos y firmas de funciones claras para dar contexto.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Aumentar memoria caché de Copilot en VS Code.») no satisface ese criterio; la opción B («Entrenar manualmente Copilot eligiendo mejores sugerencias.») no satisface ese criterio; la opción D («Reducir extensiones activas en VS Code.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [Microsoft Learn: guía de estudio GH-300](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300)
 
@@ -5573,7 +5571,7 @@ D. Usa sugerencias pregeneradas desde caché local.
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque coincide con el objetivo descrito y con el uso de Copilot como asistente de desarrollo. La salida generada es una propuesta probabilística: debe revisarse con el contexto real del proyecto, ejecutarse en pruebas y validarse contra los requisitos antes de producción.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Copilot toma contexto inmediato del archivo, lo envía al modelo Codex y genera una sugerencia según patrones aprendidos.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Envía todo el proyecto y librerías importadas.») no satisface ese criterio; la opción C («Monitorea todo el repositorio y lo envía completo.») no satisface ese criterio; la opción D («Usa sugerencias pregeneradas desde caché local.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [Microsoft Learn: guía de estudio GH-300](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300)
 
@@ -5589,7 +5587,7 @@ D. “Write a JavaScript payment processing function.”
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque aporta contexto, restricciones o ejemplos verificables al modelo. Microsoft Learn y GitHub Docs recomiendan dividir tareas complejas, evitar ambigüedad, incluir requisitos concretos e iterar sobre el resultado; un prompt breve y genérico deja demasiadas decisiones sin especificar.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «“Write a JavaScript function to process payments using a payment API. Handle API errors and log transaction ID on success.”» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («“Write a JavaScript function to process payments using a payment API.”») no satisface ese criterio; la opción C («“Create JavaScript code that makes API requests.”») no satisface ese criterio; la opción D («“Write a JavaScript payment processing function.”») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: ingeniería de prompts](https://docs.github.com/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot)
 
@@ -5603,7 +5601,7 @@ D. Resolución automática de conflictos en pull requests.
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Seguridad y compliance enterprise, incluyendo SOC 2 Type 2 y GDPR.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Soporte solo para repositorios privados.») no satisface ese criterio; la opción C («Integración con modelos IA personalizados en servidores privados.») no satisface ese criterio; la opción D («Resolución automática de conflictos en pull requests.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
@@ -5618,7 +5616,7 @@ D. Detectar y reemplazar automáticamente todos los nombres en todo el codebase.
 Respuesta correcta: A, C
 
 Explicación
-La opción A, C es la adecuada porque coincide con el objetivo descrito y con el uso de Copilot como asistente de desarrollo. La salida generada es una propuesta probabilística: debe revisarse con el contexto real del proyecto, ejecutarse en pruebas y validarse contra los requisitos antes de producción.
+Las respuestas correctas son las opciones A y C porque, en conjunto, «Sugerir patrones de manejo de errores donde falten.»; «Sugerir completions para estandarizar nombres y lógica refactorizada según patrones del código.» describen las acciones que cumplen el criterio de la pregunta. Las demás alternativas no son válidas: la opción B («Reemplazar la necesidad de pruebas manuales o automatizadas.») no satisface ese criterio; la opción D («Detectar y reemplazar automáticamente todos los nombres en todo el codebase.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [Microsoft Learn: guía de estudio GH-300](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300)
 
@@ -5633,7 +5631,7 @@ D. Solo funciona con repositorios propietarios de GitHub.
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque coincide con el objetivo descrito y con el uso de Copilot como asistente de desarrollo. La salida generada es una propuesta probabilística: debe revisarse con el contexto real del proyecto, ejecutarse en pruebas y validarse contra los requisitos antes de producción.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «Puede generar código funcional, pero no siempre alineado con buenas prácticas, seguridad o convenciones del proyecto.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Aprende en tiempo real de la entrada del usuario.») no satisface ese criterio; la opción B («Garantiza sugerencias seguras y sin vulnerabilidades.») no satisface ese criterio; la opción D («Solo funciona con repositorios propietarios de GitHub.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [Microsoft Learn: guía de estudio GH-300](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300)
 
@@ -5649,7 +5647,7 @@ D. Entienden completamente lógica de negocio compleja con comentarios vagos.
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque coincide con el objetivo descrito y con el uso de Copilot como asistente de desarrollo. La salida generada es una propuesta probabilística: debe revisarse con el contexto real del proyecto, ejecutarse en pruebas y validarse contra los requisitos antes de producción.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «Pueden generar sugerencias incorrectas porque no entienden todo el contexto o propósito del código, especialmente requisitos específicos.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («No generan vulnerabilidades porque fueron entrenados con datasets seguros.») no satisface ese criterio; la opción B («Garantizan sugerencias precisas y optimizadas para tu proyecto.») no satisface ese criterio; la opción D («Entienden completamente lógica de negocio compleja con comentarios vagos.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [Microsoft Learn: guía de estudio GH-300](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300)
 
@@ -5665,7 +5663,7 @@ D. Eliminan la necesidad de code review.
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque coincide con el objetivo descrito y con el uso de Copilot como asistente de desarrollo. La salida generada es una propuesta probabilística: debe revisarse con el contexto real del proyecto, ejecutarse en pruebas y validarse contra los requisitos antes de producción.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Los modelos personalizados pueden incluir patrones y buenas prácticas específicas de la empresa, mejorando la relevancia de sugerencias.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Generan documentación automáticamente sin input.») no satisface ese criterio; la opción C («Garantizan que no se sugiera código open-source.») no satisface ese criterio; la opción D («Eliminan la necesidad de code review.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [Microsoft Learn: guía de estudio GH-300](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300)
 
@@ -5680,7 +5678,7 @@ D. GitHub Copilot Enterprise.
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «GitHub Copilot Enterprise.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («GitHub Copilot Free.») no satisface ese criterio; la opción B («GitHub Copilot for Business.») no satisface ese criterio; la opción C («GitHub Copilot Individual.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
@@ -5695,7 +5693,7 @@ D. Escribir test cases para generar código automáticamente sin más contexto.
 Respuesta correcta: A, B
 
 Explicación
-La opción A, B es la adecuada porque refleja que Copilot Chat proporciona asistencia contextual mediante lenguaje natural. Sus respuestas pueden ser inexactas o incompletas; el desarrollador debe revisar, probar y confirmar cualquier cambio antes de incorporarlo.
+Las respuestas correctas son las opciones A y B porque, en conjunto, «Sugerencias inline mientras escribes código.»; «Usar Copilot Chat para pedir snippets o explicaciones.» describen las acciones que cumplen el criterio de la pregunta. Las demás alternativas no son válidas: la opción C («Enviar mensajes por Copilot CLI para sugerencias en tiempo real.») no satisface ese criterio; la opción D («Escribir test cases para generar código automáticamente sin más contexto.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: uso responsable de Copilot Chat](https://docs.github.com/en/copilot/responsible-use/chat)
 
@@ -5716,7 +5714,7 @@ D. Permite completions ilimitadas en todos los IDEs, mientras Individual tiene l
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque aplica una salvaguarda explícita para limitar el contexto que Copilot puede usar. La exclusión de contenido debe configurarse en los controles admitidos por la organización; revisar el resultado, proteger los secretos y aplicar las obligaciones de privacidad siguen siendo responsabilidad del equipo.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «Proporciona controles de políticas a nivel organización, incluida la posibilidad de deshabilitar sugerencias que coincidan con código público.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Incluye un escáner de vulnerabilidades integrado que detecta automáticamente fallas de seguridad en el código generado.») no satisface ese criterio; la opción B («Requiere que todos los usuarios tengan una cuenta GitHub Enterprise para acceder.») no satisface ese criterio; la opción D («Permite completions ilimitadas en todos los IDEs, mientras Individual tiene límite diario.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: exclusión de contenido](https://docs.github.com/en/copilot/concepts/content-exclusion)
 
@@ -5733,7 +5731,7 @@ D. Copilot Business proporciona indemnización de propiedad intelectual, mientra
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «Copilot Business proporciona indemnización de propiedad intelectual, mientras Copilot Individual no.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Copilot Individual otorga acceso enterprise-wide automáticamente, mientras Business requiere licencias por usuario.») no satisface ese criterio; la opción B («Copilot Business permite deshabilitar toda telemetría y uso compartido de datos, mientras Individual no.») no satisface ese criterio; la opción C («Copilot Individual bloquea sugerencias basadas en repositorios públicos, mientras Business no.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
@@ -5753,7 +5751,7 @@ encontrados en pruebas.
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Mejorando la calidad del código al sugerir patrones comunes y buenas prácticas durante la fase de codificación, reduciendo deuda técnica con el tiempo.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Gestionando tareas de proyecto como asignación de issues, seguimiento de progreso y pipelines de despliegue.») no satisface ese criterio; la opción C («Generando automáticamente especificaciones de funcionalidades e historias de usuario a partir de proyectos previos.») no satisface ese criterio; la opción D («Escribiendo test cases, asegurando cobertura total y arreglando automáticamente errores encontrados en pruebas.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
@@ -5772,7 +5770,7 @@ configuración.
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Permiten especificar qué repositorios deben excluirse de las sugerencias generadas por Copilot para cumplir políticas de seguridad.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Una vez excluido un repositorio, Copilot retiene conocimiento de sugerencias previas de ese repositorio.») no satisface ese criterio; la opción C («Impiden que Copilot acceda a cualquier código del repositorio local del usuario.») no satisface ese criterio; la opción D («Se aplican automáticamente a todos los repositorios que contienen información privada sin configuración.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -5792,7 +5790,7 @@ entrenamiento.
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque aporta contexto, restricciones o ejemplos verificables al modelo. Microsoft Learn y GitHub Docs recomiendan dividir tareas complejas, evitar ambigüedad, incluir requisitos concretos e iterar sobre el resultado; un prompt breve y genérico deja demasiadas decisiones sin especificar.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «“Implement user authentication with login, logout, password reset, using hashed passwords and multi-factor authentication.”» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («“Implement user authentication with password hashing.”») no satisface ese criterio; la opción B («Usar prompts separados como “Implement login”, “Implement password reset” y “Implement logout”.») no satisface ese criterio; la opción D («Mantener el prompt vago y dejar que Copilot use prácticas por defecto de sus datos de entrenamiento.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: ingeniería de prompts](https://docs.github.com/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot)
 
@@ -5810,7 +5808,7 @@ tiempo real.
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque refleja que Copilot Chat proporciona asistencia contextual mediante lenguaje natural. Sus respuestas pueden ser inexactas o incompletas; el desarrollador debe revisar, probar y confirmar cualquier cambio antes de incorporarlo.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Un junior necesita guía para implementar una función recursiva en Python, incluyendo explicaciones de buenas prácticas.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Un DevOps quiere que Copilot Chat genere toda una configuración Terraform desde cero.») no satisface ese criterio; la opción C («Un arquitecto quiere refactorizar automáticamente un monolito completo a microservicios sin intervención.») no satisface ese criterio; la opción D («Un analista de seguridad quiere detectar y parchear vulnerabilidades en varios repositorios en tiempo real.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: uso responsable de Copilot Chat](https://docs.github.com/en/copilot/responsible-use/chat)
 
@@ -5826,7 +5824,7 @@ D. Ejecuta código directamente dentro del chat y muestra resultados inmediatos.
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque refleja que Copilot Chat proporciona asistencia contextual mediante lenguaje natural. Sus respuestas pueden ser inexactas o incompletas; el desarrollador debe revisar, probar y confirmar cualquier cambio antes de incorporarlo.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Permite pedir explicaciones de líneas específicas de código en lenguaje natural y recibir respuestas contextuales.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Documenta automáticamente codebases completos sin input del usuario.») no satisface ese criterio; la opción C («Se integra con GitHub Actions para disparar deployments desde conversaciones.») no satisface ese criterio; la opción D («Ejecuta código directamente dentro del chat y muestra resultados inmediatos.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: uso responsable de Copilot Chat](https://docs.github.com/en/copilot/responsible-use/chat)
 
@@ -5842,7 +5840,7 @@ D. Limpiar manualmente la caché del workspace porque Copilot requiere una sesi�
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque coincide con el objetivo descrito y con el uso de Copilot como asistente de desarrollo. La salida generada es una propuesta probabilística: debe revisarse con el contexto real del proyecto, ejecutarse en pruebas y validarse contra los requisitos antes de producción.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Verificar que la extensión de GitHub Copilot esté habilitada en VS Code y que el usuario haya iniciado sesión en GitHub.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Reinstalar Visual Studio Code porque Copilot deja de funcionar si el IDE lleva mucho tiempo abierto.») no satisface ese criterio; la opción C («Crear un Personal Access Token y agregarlo manualmente a la configuración de Copilot.») no satisface ese criterio; la opción D («Limpiar manualmente la caché del workspace porque Copilot requiere una sesión nueva siempre.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [Microsoft Learn: guía de estudio GH-300](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300)
 
@@ -5858,7 +5856,7 @@ modelo.
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «Copilot Individual no retiene ni comparte código de usuario y no lo usa para entrenamiento del modelo.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Copilot Individual comparte automáticamente snippets generados por usuarios con otros usuarios.») no satisface ese criterio; la opción B («Copilot Individual recopila todos los prompts y respuestas para fine-tuning futuro.») no satisface ese criterio; la opción C («Copilot Individual cifra y almacena todo código asistido por IA para revisión interna de GitHub.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: alojamiento de modelos](https://docs.github.com/en/copilot/reference/ai-models/model-hosting)
 
@@ -5875,7 +5873,7 @@ D. Un test que compara rendimiento entre una librería externa y una función pr
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque usa Copilot como apoyo para proponer pruebas y casos límite, no como sustituto de la validación. Las pruebas generadas deben revisarse, ejecutarse y ampliarse para cubrir comportamiento esperado, entradas inválidas, errores y requisitos de seguridad o rendimiento.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «Un test con fuzzing para evaluar variaciones de entrada, verificando sanitización y rendimiento aceptable.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Un test que verifica sanitización comparando la salida con un valor SQL-safe predefinido.») no satisface ese criterio; la opción B («Un test que mide tiempo de ejecución con timeit para entradas típicas.») no satisface ese criterio; la opción D («Un test que compara rendimiento entre una librería externa y una función propia.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: escribir pruebas con GitHub Copilot](https://docs.github.com/en/copilot/tutorials/write-tests)
 
@@ -5891,7 +5889,7 @@ D. Instalar Copilot como software standalone separado de VS Code.
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque coincide con el objetivo descrito y con el uso de Copilot como asistente de desarrollo. La salida generada es una propuesta probabilística: debe revisarse con el contexto real del proyecto, ejecutarse en pruebas y validarse contra los requisitos antes de producción.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Instalar la extensión GitHub Copilot para VS Code y configurarla para sugerencias en el editor, usando atajos para aceptar o rechazar.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Pegar manualmente sugerencias desde la web app de Copilot.») no satisface ese criterio; la opción C («Usar solo IntelliSense porque ofrece las mismas sugerencias IA.») no satisface ese criterio; la opción D («Instalar Copilot como software standalone separado de VS Code.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [Microsoft Learn: guía de estudio GH-300](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300)
 
@@ -5908,7 +5906,7 @@ privacidad.
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «Copilot no almacena entradas de código ni sugerencias de usuario de una forma que comprometa la privacidad.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Copilot registra temporalmente entradas y sugerencias para mejorar el modelo, luego las elimina.») no satisface ese criterio; la opción B («Copilot cifra y almacena entradas para personalizar sugerencias por usuario.») no satisface ese criterio; la opción C («Copilot almacena permanentemente todas las sugerencias en servidores GitHub.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: alojamiento de modelos](https://docs.github.com/en/copilot/reference/ai-models/model-hosting)
 
@@ -5924,7 +5922,7 @@ D. Escaneo en tiempo real de todo código antes de commit.
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Gestión centralizada de uso y políticas de acceso de Copilot para aplicar estándares de seguridad.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Acceso personalizable para que cada desarrollador elija sus propias reglas.») no satisface ese criterio; la opción C («Generación automática de documentación desde comentarios.») no satisface ese criterio; la opción D («Escaneo en tiempo real de todo código antes de commit.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
@@ -5941,7 +5939,7 @@ antes de incorporarlo.
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque considera el posible parecido con código público y las obligaciones de licencia. Los filtros y referencias de Copilot son salvaguardas, no una garantía de ausencia total de coincidencias; el equipo debe revisar la licencia y la procedencia antes de reutilizar código.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «Comparar el código generado con licencias open-source existentes para asegurar compatibilidad antes de incorporarlo.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Modificar el código sugerido para que sea menos reconocible.») no satisface ese criterio; la opción B («Evitar todo código generado por IA en open-source.») no satisface ese criterio; la opción C («Usar el código sin preocupación porque todas las sugerencias son open-source.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: referencias a código público](https://docs.github.com/en/copilot/concepts/completions/code-referencing)
 
@@ -5957,7 +5955,7 @@ D. Funciona offline sin internet.
 Respuesta correcta: A, B, C
 
 Explicación
-La opción A, B, C es la adecuada porque coincide con el objetivo descrito y con el uso de Copilot como asistente de desarrollo. La salida generada es una propuesta probabilística: debe revisarse con el contexto real del proyecto, ejecutarse en pruebas y validarse contra los requisitos antes de producción.
+Las respuestas correctas son las opciones A y B y C porque, en conjunto, «Puede sugerir líneas completas, funciones o clases completas según el contexto.»; «Ofrece sugerencias basadas en código de repositorios públicos y proyectos open-source.»; «Genera código basado en comentarios y código existente en el archivo.» describen las acciones que cumplen el criterio de la pregunta. Las demás alternativas no son válidas: la opción D («Funciona offline sin internet.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [Microsoft Learn: guía de estudio GH-300](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300)
 
@@ -5973,7 +5971,7 @@ D. Sugiriendo implementación de la llamada API según el contexto y patrones pr
 Respuesta correcta: A, D
 
 Explicación
-La opción A, D es la adecuada porque corresponde al uso de Copilot desde la terminal para obtener orientación o proponer comandos. Los comandos generados deben revisarse antes de ejecutarse, especialmente si pueden modificar archivos, repositorios o infraestructura.
+Las respuestas correctas son las opciones A y D porque, en conjunto, «Generando pruebas para interacción con la API, incluyendo timeouts o respuestas inválidas.»; «Sugiriendo implementación de la llamada API según el contexto y patrones previos del codebase.» describen las acciones que cumplen el criterio de la pregunta. Las demás alternativas no son válidas: la opción B («Reemplazando por completo la necesidad de entender la documentación.») no satisface ese criterio; la opción C («Generando automáticamente todo manejo de errores para cualquier API externa.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: GitHub Copilot CLI](https://docs.github.com/en/copilot/how-tos/copilot-cli)
 
@@ -5988,7 +5986,7 @@ D. Generar documentación completa de todo el proyecto automáticamente.
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Obtener sugerencias de snippets en tiempo real basadas en el contexto activo del código.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Crear pull requests directamente desde el chat sin usar GitHub.») no satisface ese criterio; la opción C («Aplicar parches de seguridad detectados automáticamente por Copilot Chat.») no satisface ese criterio; la opción D («Generar documentación completa de todo el proyecto automáticamente.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -6004,7 +6002,7 @@ D. Ver y buscar sugerencias individuales generadas para cada desarrollador.
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Monitorear cuándo un usuario habilita o deshabilita GitHub Copilot dentro de repositorios de la organización.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Registrar el training data específico usado para una sugerencia.») no satisface ese criterio; la opción C («Registrar cada función autocompletada por Copilot en el IDE.») no satisface ese criterio; la opción D («Ver y buscar sugerencias individuales generadas para cada desarrollador.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
@@ -6020,7 +6018,7 @@ D. Genera sugerencias solo con repos públicos y nunca usa contexto de repos pri
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Usa repositorios públicos para entrenar el modelo base; durante una sesión puede considerar contexto de repos privados, pero no lo almacena para entrenamiento futuro.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Genera sugerencias solo desde el proyecto abierto en el IDE.») no satisface ese criterio; la opción C («Recopila y almacena datos de repos privados para mejorar sugerencias de todos los usuarios.») no satisface ese criterio; la opción D («Genera sugerencias solo con repos públicos y nunca usa contexto de repos privados.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -6036,7 +6034,7 @@ D. “Write code for a PyTorch neural network. I’ll provide examples later.”
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque aporta contexto, restricciones o ejemplos verificables al modelo. Microsoft Learn y GitHub Docs recomiendan dividir tareas complejas, evitar ambigüedad, incluir requisitos concretos e iterar sobre el resultado; un prompt breve y genérico deja demasiadas decisiones sin especificar.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «“Write a PyTorch function to train a neural network. Here’s an example of how to load data and define the network architecture.”» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («“Train a neural network using PyTorch.”») no satisface ese criterio; la opción C («“I want a function that uses PyTorch to train a neural network.”») no satisface ese criterio; la opción D («“Write code for a PyTorch neural network. I’ll provide examples later.”») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: ingeniería de prompts](https://docs.github.com/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot)
 
@@ -6052,7 +6050,7 @@ D. Registrar cada sugerencia y resultado de Copilot individualmente.
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque coincide con el objetivo descrito y con el uso de Copilot como asistente de desarrollo. La salida generada es una propuesta probabilística: debe revisarse con el contexto real del proyecto, ejecutarse en pruebas y validarse contra los requisitos antes de producción.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Marcar claramente el código generado por IA en version control y documentar cambios hechos durante code review.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Confiar en GitHub version control sin documentación adicional.») no satisface ese criterio; la opción C («Documentar solo código manual porque el código IA es confiable por el tamaño del entrenamiento.») no satisface ese criterio; la opción D («Registrar cada sugerencia y resultado de Copilot individualmente.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [Microsoft Learn: guía de estudio GH-300](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300)
 
@@ -6069,7 +6067,7 @@ D. Copilot cifra automáticamente el código local del usuario durante su uso lo
 Respuesta correcta: A, B
 
 Explicación
-La opción A, B es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+Las respuestas correctas son las opciones A y B porque, en conjunto, «Las sugerencias pueden contener snippets sintácticamente similares a código público, por lo que se deben revisar.»; «El modelo se entrena con código público y no se actualiza con código privado.» describen las acciones que cumplen el criterio de la pregunta. Las demás alternativas no son válidas: la opción C («Copilot recopila y transmite sugerencias específicas de usuario para mejorar precisión.») no satisface ese criterio; la opción D («Copilot cifra automáticamente el código local del usuario durante su uso local.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -6085,7 +6083,7 @@ D. Requiere commit messages manuales antes de generar resumen.
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «Genera resúmenes analizando cambios de código, historial de commits y comentarios en lenguaje natural del PR.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Aprueba automáticamente pull requests si el resumen no muestra problemas.») no satisface ese criterio; la opción B («Puede generar resumen antes de que existan cambios de código.») no satisface ese criterio; la opción D («Requiere commit messages manuales antes de generar resumen.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
@@ -6102,7 +6100,7 @@ D. Se envía todo el codebase para generar sugerencias del archivo actual.
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «Se envía un snippet del código en edición a servidores GitHub para procesamiento en tiempo real y la sugerencia vuelve sin almacenamiento permanente.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Se envía un snippet cerca del cursor y se almacena el archivo completo para referencia futura.») no satisface ese criterio; la opción B («Se envía telemetría con todo el proyecto.») no satisface ese criterio; la opción D («Se envía todo el codebase para generar sugerencias del archivo actual.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -6118,7 +6116,7 @@ D. Los LLM pueden crear soluciones para cualquier problema sin importar compleji
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Sus sugerencias se basan muchas veces en patrones sintácticos, no en comprensión semántica profunda, y pueden ser incorrectas o inseguras.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Copilot siempre tiene información actualizada de todas las librerías.») no satisface ese criterio; la opción C («Copilot entiende perfectamente requisitos de proyecto si los comentarios son detallados.») no satisface ese criterio; la opción D («Los LLM pueden crear soluciones para cualquier problema sin importar complejidad.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -6133,7 +6131,7 @@ D. Las sugerencias se basan en código público que puede tener varios años y y
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque coincide con el objetivo descrito y con el uso de Copilot como asistente de desarrollo. La salida generada es una propuesta probabilística: debe revisarse con el contexto real del proyecto, ejecutarse en pruebas y validarse contra los requisitos antes de producción.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «Las sugerencias se basan en código público que puede tener varios años y ya no ser relevante.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Copilot usa un modelo actualizado continuamente con las últimas versiones.») no satisface ese criterio; la opción B («Copilot excluye automáticamente librerías antiguas o funciones deprecated.») no satisface ese criterio; la opción C («Copilot solo sugiere código de commits de los últimos 12 meses.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [Microsoft Learn: guía de estudio GH-300](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300)
 
@@ -6148,7 +6146,7 @@ D. Aplicar políticas mediante GitHub Enterprise settings, gestionando permisos 
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «Aplicar políticas mediante GitHub Enterprise settings, gestionando permisos y uso centralmente.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Permitir que cada desarrollador configure Copilot individualmente.») no satisface ese criterio; la opción B («Gestionar políticas desde settings locales del IDE.») no satisface ese criterio; la opción C («Deshabilitar Copilot en repos privados.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
@@ -6165,7 +6163,7 @@ D. No requiere pruebas ni validación porque asegura outputs sin errores.
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque aplica una salvaguarda explícita para limitar el contexto que Copilot puede usar. La exclusión de contenido debe configurarse en los controles admitidos por la organización; revisar el resultado, proteger los secretos y aplicar las obligaciones de privacidad siguen siendo responsabilidad del equipo.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Puede sugerir buenas prácticas, pero también producir código con vulnerabilidades ocultas que requieren revisión manual.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Siempre genera código optimizado para entornos de alta seguridad.») no satisface ese criterio; la opción C («Detecta y corrige automáticamente todos los problemas de seguridad.») no satisface ese criterio; la opción D («No requiere pruebas ni validación porque asegura outputs sin errores.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: exclusión de contenido](https://docs.github.com/en/copilot/concepts/content-exclusion)
 
@@ -6180,7 +6178,7 @@ D. Activar context exclusions para impedir que use ciertos archivos, rutas o tip
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «Activar context exclusions para impedir que use ciertos archivos, rutas o tipos de datos.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Configurar .gitignore para excluir archivos sensibles.») no satisface ese criterio; la opción B («Revisar manualmente todas las sugerencias.») no satisface ese criterio; la opción C («Deshabilitar Copilot en toda la organización.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -6195,7 +6193,7 @@ D. Deshabilitar Copilot para archivos que contienen información sensible.
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque aplica una salvaguarda explícita para limitar el contexto que Copilot puede usar. La exclusión de contenido debe configurarse en los controles admitidos por la organización; revisar el resultado, proteger los secretos y aplicar las obligaciones de privacidad siguen siendo responsabilidad del equipo.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «Deshabilitar Copilot para archivos que contienen información sensible.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Confiar en que Copilot detecta y excluye automáticamente datos sensibles.») no satisface ese criterio; la opción B («Ofuscar datos sensibles dentro del código.») no satisface ese criterio; la opción C («Usar comentarios inline indicando que no debe procesar datos sensibles.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: exclusión de contenido](https://docs.github.com/en/copilot/concepts/content-exclusion)
 
@@ -6212,7 +6210,7 @@ into memory. Use an iterative approach.”
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «“Write a Python function that reads a large XML file and extracts data without loading the entire file into memory. Use an iterative approach.”» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («“Write a Python function that parses large XML files and extracts data based on user input.”») no satisface ese criterio; la opción B («“Generate Python code to parse an XML file and extract specific data efficiently.”») no satisface ese criterio; la opción C («“Generate Python code that parses XML files and uses minimal memory while extracting data.”») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -6228,7 +6226,7 @@ D. Rastrean todos los snippets generados por Copilot.
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Registran cuándo usuarios habilitan o deshabilitan Copilot en repositorios, dando visibilidad de uso y cumplimiento.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Permiten personalizar datos de entrenamiento por repositorio.») no satisface ese criterio; la opción C («Analizan código generado para vulnerabilidades antes del commit.») no satisface ese criterio; la opción D («Rastrean todos los snippets generados por Copilot.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
@@ -6244,7 +6242,7 @@ D. Generar unit tests separados para cada función.
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque usa Copilot como apoyo para proponer pruebas y casos límite, no como sustituto de la validación. Las pruebas generadas deben revisarse, ejecutarse y ampliarse para cubrir comportamiento esperado, entradas inválidas, errores y requisitos de seguridad o rendimiento.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Generar pruebas que llamen parseInput y luego processData en secuencia para validar el flujo completo.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Generar mocks y stubs para aislar ambas funciones.») no satisface ese criterio; la opción C («Generar solo validación de input para parseInput .») no satisface ese criterio; la opción D («Generar unit tests separados para cada función.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: escribir pruebas con GitHub Copilot](https://docs.github.com/en/copilot/tutorials/write-tests)
 
@@ -6259,7 +6257,7 @@ D. Integración Single Sign-On, SSO.
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque aplica una salvaguarda explícita para limitar el contexto que Copilot puede usar. La exclusión de contenido debe configurarse en los controles admitidos por la organización; revisar el resultado, proteger los secretos y aplicar las obligaciones de privacidad siguen siendo responsabilidad del equipo.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «Integración Single Sign-On, SSO.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Integración con pull requests.») no satisface ese criterio; la opción B («Soporte para proyectos open-source.») no satisface ese criterio; la opción C («Sugerencias inline de código.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: exclusión de contenido](https://docs.github.com/en/copilot/concepts/content-exclusion)
 
@@ -6274,7 +6272,7 @@ D. Cuando un administrador asigna o revoca una licencia Copilot Business.
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «Cuando un administrador asigna o revoca una licencia Copilot Business.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Cuando un usuario hace commit de código generado por Copilot.») no satisface ese criterio; la opción B («Cuando un usuario recibe una sugerencia de Copilot.») no satisface ese criterio; la opción C («Cuando un usuario copia y pega código generado por Copilot.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: auditoría de GitHub Copilot](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-enterprise/review-audit-logs)
 
@@ -6290,7 +6288,7 @@ D. “Write code to extract information from a website using Python.”
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque aporta contexto, restricciones o ejemplos verificables al modelo. Microsoft Learn y GitHub Docs recomiendan dividir tareas complejas, evitar ambigüedad, incluir requisitos concretos e iterar sobre el resultado; un prompt breve y genérico deja demasiadas decisiones sin especificar.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «“Generate Python code that scrapes article titles and dates from a URL using BeautifulSoup and returns them in a list of dictionaries.”» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («“Write a Python script to scrape a website using BeautifulSoup.”») no satisface ese criterio; la opción C («“Write Python code to use BeautifulSoup for scraping.”») no satisface ese criterio; la opción D («“Write code to extract information from a website using Python.”») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: ingeniería de prompts](https://docs.github.com/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot)
 
@@ -6305,7 +6303,7 @@ D. GitHub Copilot Free Plan.
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «GitHub Copilot Business Plan.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («GitHub Copilot Basic.») no satisface ese criterio; la opción C («GitHub Copilot Individual Plan.») no satisface ese criterio; la opción D («GitHub Copilot Free Plan.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
@@ -6321,7 +6319,7 @@ D. Ignorar sugerencias de seguridad porque Copilot solo sirve para completions.
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Usar sugerencias de Copilot para detectar patrones inseguros y combinarlas con GitHub Advanced Security como CodeQL y Dependabot.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Confiar en fixes de seguridad generados por Copilot sin validación.») no satisface ese criterio; la opción C («Depender de Copilot para detectar y arreglar todas las vulnerabilidades.») no satisface ese criterio; la opción D («Ignorar sugerencias de seguridad porque Copilot solo sirve para completions.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -6336,7 +6334,7 @@ D. Refactorizar codebases enteros automáticamente.
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque refleja que Copilot Chat proporciona asistencia contextual mediante lenguaje natural. Sus respuestas pueden ser inexactas o incompletas; el desarrollador debe revisar, probar y confirmar cualquier cambio antes de incorporarlo.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «Explicar paso a paso snippets sugeridos.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Colaboración en tiempo real con otros desarrolladores.») no satisface ese criterio; la opción B («Generar test cases detallados para todo el proyecto automáticamente.») no satisface ese criterio; la opción D («Refactorizar codebases enteros automáticamente.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: uso responsable de Copilot Chat](https://docs.github.com/en/copilot/responsible-use/chat)
 
@@ -6352,7 +6350,7 @@ D. Aceptar automáticamente todos los cambios sugeridos.
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque coincide con el objetivo descrito y con el uso de Copilot como asistente de desarrollo. La salida generada es una propuesta probabilística: debe revisarse con el contexto real del proyecto, ejecutarse en pruebas y validarse contra los requisitos antes de producción.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Usarlo para proponer mejoras de código o algoritmos más eficientes durante reviews, que los revisores evalúan.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Usarlo solo para identificar issues de estilo como espacios o nombres.») no satisface ese criterio; la opción C («Confiar en que detecte y arregle bugs automáticamente sin oversight.») no satisface ese criterio; la opción D («Aceptar automáticamente todos los cambios sugeridos.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [Microsoft Learn: guía de estudio GH-300](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300)
 
@@ -6368,7 +6366,7 @@ visibles.
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque aporta contexto, restricciones o ejemplos verificables al modelo. Microsoft Learn y GitHub Docs recomiendan dividir tareas complejas, evitar ambigüedad, incluir requisitos concretos e iterar sobre el resultado; un prompt breve y genérico deja demasiadas decisiones sin especificar.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «Analiza código y comentarios cercanos en el archivo actual para generar sugerencias según patrones visibles.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Analiza todo el proyecto en todos los archivos.») no satisface ese criterio; la opción B («Usa solo la línea actual del cursor.») no satisface ese criterio; la opción C («Usa solo la función o clase actual y excluye todo lo demás.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: ingeniería de prompts](https://docs.github.com/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot)
 
@@ -6384,7 +6382,7 @@ D. El proxy ejecuta el código en un entorno virtual para asegurar ausencia de e
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque coincide con el objetivo descrito y con el uso de Copilot como asistente de desarrollo. La salida generada es una propuesta probabilística: debe revisarse con el contexto real del proyecto, ejecutarse en pruebas y validarse contra los requisitos antes de producción.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «El proxy registra y anonimiza la entrada, la envía al modelo y ayuda a excluir información sensible de sugerencias finales.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («El proxy ejecuta static analysis para vulnerabilidades antes de mostrar sugerencias.») no satisface ese criterio; la opción C («El proxy elimina referencias a librerías externas o APIs para evitar problemas legales.») no satisface ese criterio; la opción D («El proxy ejecuta el código en un entorno virtual para asegurar ausencia de errores runtime.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [Microsoft Learn: guía de estudio GH-300](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300)
 
@@ -6399,7 +6397,7 @@ D. POST /orgs/{org}/copilot/seats
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «POST /orgs/{org}/copilot/seats» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («PATCH /orgs/{org}/copilot/license») no satisface ese criterio; la opción B («PUT /orgs/{org}/memberships/{username}/copilot») no satisface ese criterio; la opción C («POST /users/{username}/copilot/access») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
@@ -6415,7 +6413,7 @@ D. Usa solo datos públicos e ignora contexto local de repos privados.
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Envía queries y contexto relevante temporalmente a servidores GitHub, pero datos de repos privados no se almacenan ni usan para entrenamiento.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Procesa todas las interacciones localmente.») no satisface ese criterio; la opción C («Envía snippets y queries para almacenarlos y entrenar modelos futuros.») no satisface ese criterio; la opción D («Usa solo datos públicos e ignora contexto local de repos privados.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -6430,7 +6428,7 @@ D. Permite compartir una sola licencia entre varios desarrolladores.
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Proporciona integración con IDEs locales, pero es para uso individual y requiere licencia por usuario.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Solo soporta IDEs alojados en GitHub como Codespaces.») no satisface ese criterio; la opción C («Ofrece acceso ilimitado para múltiples repos privados de organización.») no satisface ese criterio; la opción D («Permite compartir una sola licencia entre varios desarrolladores.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
@@ -6446,7 +6444,7 @@ D. Tiene debugging avanzado directamente en el navegador.
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque refleja que Copilot Chat proporciona asistencia contextual mediante lenguaje natural. Sus respuestas pueden ser inexactas o incompletas; el desarrollador debe revisar, probar y confirmar cualquier cambio antes de incorporarlo.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Permite preguntas en lenguaje natural sobre pull requests, issues y tareas del proyecto.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Da documentación inline en tiempo real mientras escribes.») no satisface ese criterio; la opción C («Se integra automáticamente con cualquier issue tracker externo.») no satisface ese criterio; la opción D («Tiene debugging avanzado directamente en el navegador.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: uso responsable de Copilot Chat](https://docs.github.com/en/copilot/responsible-use/chat)
 
@@ -6462,7 +6460,7 @@ D. Reportar el issue a GitHub y seguir usando el código sin cambios.
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque aporta contexto, restricciones o ejemplos verificables al modelo. Microsoft Learn y GitHub Docs recomiendan dividir tareas complejas, evitar ambigüedad, incluir requisitos concretos e iterar sobre el resultado; un prompt breve y genérico deja demasiadas decisiones sin especificar.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «Revisar profundamente sugerencias por sesgo, incorporar solo código neutral y sensibilizar al equipo.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Apagar Copilot completamente para proyectos open-source.») no satisface ese criterio; la opción B («Editar manualmente sugerencias sesgadas, sin más acciones.») no satisface ese criterio; la opción D («Reportar el issue a GitHub y seguir usando el código sin cambios.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: ingeniería de prompts](https://docs.github.com/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot)
 
@@ -6477,7 +6475,7 @@ D. Configurar políticas o templates de PR para guiar el formato y usar Copilot 
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «Configurar políticas o templates de PR para guiar el formato y usar Copilot alineado a esas reglas.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Deshabilitar resúmenes quitando write access a Copilot.») no satisface ese criterio; la opción B («Activar “Strict Summary Mode”.») no satisface ese criterio; la opción C («Modificar settings directos de summary generation en Enterprise Cloud admin panel.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
@@ -6493,7 +6491,7 @@ D. Usar comentarios inline para avisar a Copilot que ignore información sensibl
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque aplica una salvaguarda explícita para limitar el contexto que Copilot puede usar. La exclusión de contenido debe configurarse en los controles admitidos por la organización; revisar el resultado, proteger los secretos y aplicar las obligaciones de privacidad siguen siendo responsabilidad del equipo.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Activar configuraciones de privacidad para excluir archivos con contenido sensible de modelos o contexto aplicable.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Eliminar Copilot del repositorio por completo.») no satisface ese criterio; la opción C («Entrenar Copilot con tu repositorio privado.») no satisface ese criterio; la opción D («Usar comentarios inline para avisar a Copilot que ignore información sensible.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: exclusión de contenido](https://docs.github.com/en/copilot/concepts/content-exclusion)
 
@@ -6509,7 +6507,7 @@ D. Agrega toda telemetría y la usa para reentrenar modelos con cada actualizaci
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Transmite snippets pequeños del IDE a servidores para procesamiento en tiempo real, sin almacenarlos ni retenerlos tras devolver la sugerencia.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Procesa snippets localmente, sin enviar a servidores externos.») no satisface ese criterio; la opción C («Cifra y almacena permanentemente snippets para mejorar el modelo.») no satisface ese criterio; la opción D («Agrega toda telemetría y la usa para reentrenar modelos con cada actualización.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -6525,7 +6523,7 @@ D. Se envía a GitHub, luego a OpenAI, y parte del chat se almacena para futuras
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Copilot Chat envía entradas a la API Codex/OpenAI para procesamiento y no se almacenan permanentemente por GitHub u OpenAI.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Las interacciones se almacenan permanentemente en GitHub, pero no se comparten con OpenAI.») no satisface ese criterio; la opción C («Todo se procesa localmente.») no satisface ese criterio; la opción D («Se envía a GitHub, luego a OpenAI, y parte del chat se almacena para futuras sesiones.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: alojamiento de modelos](https://docs.github.com/en/copilot/reference/ai-models/model-hosting)
 
@@ -6541,7 +6539,7 @@ D. Bloquea automáticamente toda sugerencia vulnerable antes de mostrarla.
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque coincide con el objetivo descrito y con el uso de Copilot como asistente de desarrollo. La salida generada es una propuesta probabilística: debe revisarse con el contexto real del proyecto, ejecutarse en pruebas y validarse contra los requisitos antes de producción.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Puede identificar y advertir riesgos potenciales, pero no impide que el usuario acepte sugerencias inseguras.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Los warnings están activados por defecto y no se pueden deshabilitar.») no satisface ese criterio; la opción C («Se integra directamente con GHAS y Dependabot para alertas en tiempo real dentro de sugerencias.») no satisface ese criterio; la opción D («Bloquea automáticamente toda sugerencia vulnerable antes de mostrarla.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [Microsoft Learn: guía de estudio GH-300](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300)
 
@@ -6556,7 +6554,7 @@ D. Supervised learning con dataset de consultas SQL correctas y modelos de datos
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «Supervised learning con dataset de consultas SQL correctas y modelos de datos correspondientes.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Transfer learning desde un modelo conversacional general.») no satisface ese criterio; la opción B («Reinforcement learning con queries aleatorias y recompensas.») no satisface ese criterio; la opción C («Unsupervised learning para encontrar patrones sin feedback.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: alojamiento de modelos](https://docs.github.com/en/copilot/reference/ai-models/model-hosting)
 
@@ -6572,12 +6570,12 @@ prácticas ni contexto específico.
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque coincide con el objetivo descrito y con el uso de Copilot como asistente de desarrollo. La salida generada es una propuesta probabilística: debe revisarse con el contexto real del proyecto, ejecutarse en pruebas y validarse contra los requisitos antes de producción.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «Sus sugerencias pueden ser desactualizadas o subóptimas porque no entiende siempre últimas prácticas ni contexto específico.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Siempre documenta y sigue los últimos estándares.») no satisface ese criterio; la opción B («Refactoriza automáticamente respetando estilo y arquitectura.») no satisface ese criterio; la opción C («Siempre da la solución más eficiente por aprender de repos open-source.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [Microsoft Learn: guía de estudio GH-300](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300)
 
 Pregunta 55
-Un equipo Copilot Business configura Knowledge Base para onboarding. ¿Qué conocimiento mejora
+Un equipo Copilot Business configura Copilot Space para onboarding. ¿Qué conocimiento mejora
 más consistencia de prácticas y patrones comunes?
 A. Timelines de proyectos y calendarios de releases.
 B. Buenas prácticas de estándares de código, guías de comentarios y protocolos de manejo de errores.
@@ -6587,7 +6585,7 @@ D. Snippets aislados de imports e inicialización.
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Buenas prácticas de estándares de código, guías de comentarios y protocolos de manejo de errores.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Timelines de proyectos y calendarios de releases.») no satisface ese criterio; la opción C («Notas específicas de responsabilidades y roles del equipo.») no satisface ese criterio; la opción D («Snippets aislados de imports e inicialización.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
@@ -6602,7 +6600,7 @@ D. GitHub Copilot Business.
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «GitHub Copilot Business.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («GitHub Copilot Individual.») no satisface ese criterio; la opción B («GitHub Copilot Free Plan.») no satisface ese criterio; la opción C («GitHub Enterprise Plan.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
@@ -6617,7 +6615,7 @@ D. Generar un único test para add(2, 3) .
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque usa Copilot como apoyo para proponer pruebas y casos límite, no como sustituto de la validación. Las pruebas generadas deben revisarse, ejecutarse y ampliarse para cubrir comportamiento esperado, entradas inválidas, errores y requisitos de seguridad o rendimiento.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Pedir múltiples test cases, incluyendo edge cases como add(0, 0) y números negativos.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Pedir solo casos positivos y escribir edge cases después.») no satisface ese criterio; la opción C («Pedir tests de rendimiento para verificar velocidad.») no satisface ese criterio; la opción D («Generar un único test para add(2, 3) .») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: escribir pruebas con GitHub Copilot](https://docs.github.com/en/copilot/tutorials/write-tests)
 
@@ -6632,7 +6630,7 @@ D. Explicaciones detalladas y personalizables por cada archivo.
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Resumir cambios del pull request, destacando actualizaciones importantes en formato fácil de leer.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Sugerir reviewers automáticamente según historial y expertise.») no satisface ese criterio; la opción C («Chat en tiempo real con revisores para aprobar rápido.») no satisface ese criterio; la opción D («Explicaciones detalladas y personalizables por cada archivo.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
@@ -6647,7 +6645,7 @@ D. Mantener el prompt corto y vago.
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque aporta contexto, restricciones o ejemplos verificables al modelo. Microsoft Learn y GitHub Docs recomiendan dividir tareas complejas, evitar ambigüedad, incluir requisitos concretos e iterar sobre el resultado; un prompt breve y genérico deja demasiadas decisiones sin especificar.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Incluir formato de entrada, criterio de filtrado y salida esperada.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Dejar detalles fuera y elegir entre múltiples sugerencias.») no satisface ese criterio; la opción C («Confiar en que Copilot detecte todo desde el proyecto.») no satisface ese criterio; la opción D («Mantener el prompt corto y vago.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: ingeniería de prompts](https://docs.github.com/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot)
 
@@ -6661,7 +6659,7 @@ D. Solo dar autocompletado tradicional sin consultas interactivas.
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque refleja que Copilot Chat proporciona asistencia contextual mediante lenguaje natural. Sus respuestas pueden ser inexactas o incompletas; el desarrollador debe revisar, probar y confirmar cualquier cambio antes de incorporarlo.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «Explicar y generar snippets inline, permitiendo interacción en tiempo real mientras programas.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Ejecutar scripts directamente dentro del chat.») no satisface ese criterio; la opción B («Hacer commit y push automáticamente.») no satisface ese criterio; la opción D («Solo dar autocompletado tradicional sin consultas interactivas.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: uso responsable de Copilot Chat](https://docs.github.com/en/copilot/responsible-use/chat)
 
@@ -6676,7 +6674,7 @@ D. Con logs detallados por usuario de cada sugerencia aceptada.
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Con audit logs organizacionales que documentan cambios de configuración y uso de Copilot.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Con dashboard de monitoreo en tiempo real de sugerencias.») no satisface ese criterio; la opción C («Con reportes manuales de todas las sugerencias de un sprint.») no satisface ese criterio; la opción D («Con logs detallados por usuario de cada sugerencia aceptada.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
@@ -6691,7 +6689,7 @@ D. GitHub Copilot Individual.
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «GitHub Copilot Business.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («GitHub Copilot Plus.») no satisface ese criterio; la opción C («GitHub Copilot Free.») no satisface ese criterio; la opción D («GitHub Copilot Individual.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -6706,7 +6704,7 @@ públicos.
 Respuesta correcta: B
 
 Explicación
-La opción B es la adecuada porque coincide con el objetivo descrito y con el uso de Copilot como asistente de desarrollo. La salida generada es una propuesta probabilística: debe revisarse con el contexto real del proyecto, ejecutarse en pruebas y validarse contra los requisitos antes de producción.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Soporta múltiples lenguajes, pero funciona mejor en lenguajes con fuerte presencia open-source.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Solo tiene buen soporte para Python y JavaScript.») no satisface ese criterio; la opción C («Funciona igual de bien en todos los lenguajes.») no satisface ese criterio; la opción D («Puede generar código correcto en cualquier lenguaje aunque nunca haya aparecido en repos públicos.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [Microsoft Learn: guía de estudio GH-300](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300)
 
@@ -6722,7 +6720,7 @@ starting from the first empty row.”
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «“Use openpyxl to write a row of data into the Excel file named 'data.xlsx', in the 'Sheet1' sheet, starting from the first empty row.”» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («“Add data to an Excel sheet.”») no satisface ese criterio; la opción B («“Write a function that adds data to a file.”») no satisface ese criterio; la opción C («“How to use openpyxl in Python?”») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -6738,7 +6736,7 @@ D. Genera código solo desde repositorios propietarios de GitHub.
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque coincide con el objetivo descrito y con el uso de Copilot como asistente de desarrollo. La salida generada es una propuesta probabilística: debe revisarse con el contexto real del proyecto, ejecutarse en pruebas y validarse contra los requisitos antes de producción.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Puede alucinar patrones incorrectos o inseguros, por lo que los desarrolladores deben verificar sugerencias.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Garantiza corrección y seguridad.») no satisface ese criterio; la opción C («Entiende todo el codebase y mantiene contexto global.») no satisface ese criterio; la opción D («Genera código solo desde repositorios propietarios de GitHub.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [Microsoft Learn: guía de estudio GH-300](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300)
 
@@ -6753,14 +6751,14 @@ D. Revisar y modificar archivos del proyecto para excluir o eliminar contexto se
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «Revisar y modificar archivos del proyecto para excluir o eliminar contexto sensible de las sugerencias.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Configurar Copilot para sugerir solo desde repos públicos.») no satisface ese criterio; la opción B («Contactar a soporte para eliminar sugerencias del modelo.») no satisface ese criterio; la opción C («Desconectar Copilot y dejar de usarlo.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
 Pregunta 67
 Copilot ofrece completions usando modelos entrenados con código público. ¿Qué ocurre cuando un
 desarrollador escribe un snippet y Copilot sugiere una completion?
-A. Consulta una knowledge base central de completions aceptadas previamente.
+A. Consulta una Copilot Space central de completions aceptadas previamente.
 B. Sube todo el repositorio privado a GitHub.
 C. Recupera snippets desde una caché open-source sin usar modelos ML.
 D. Envía el contexto local del archivo, incluyendo código y comentarios cercanos, a la API del modelo
@@ -6769,7 +6767,7 @@ para inferencia.
 Respuesta correcta: D
 
 Explicación
-La opción D es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción D porque, en el contexto de esta pregunta, «Envía el contexto local del archivo, incluyendo código y comentarios cercanos, a la API del modelo para inferencia.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Consulta una Copilot Space central de completions aceptadas previamente.») no satisface ese criterio; la opción B («Sube todo el repositorio privado a GitHub.») no satisface ese criterio; la opción C («Recupera snippets desde una caché open-source sin usar modelos ML.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -6786,7 +6784,7 @@ D. Combinará todo el código anterior en un único script.
 Respuesta correcta: A
 
 Explicación
-La opción A es la adecuada porque describe el flujo o tratamiento de datos de Copilot sin asumir que el sistema procesa localmente todo el proyecto. La documentación oficial distingue entre el contexto enviado para inferencia, las políticas de retención y el uso de datos según el plan y la configuración; por eso la afirmación debe interpretarse junto con la política vigente del servicio.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Usará el historial para entender contexto y generar código alineado con funciones existentes, como la misma estructura de API y manejo de errores.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Ignorará el historial y responderá solo al prompt actual.») no satisface ese criterio; la opción C («Consultará el historial, pero no influirá en el código.») no satisface ese criterio; la opción D («Combinará todo el código anterior en un único script.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Trust Center: seguridad, privacidad y cumplimiento](https://github.com/trust-center)
 
@@ -6801,7 +6799,7 @@ D. Confiar en el test generado como suficiente.
 Respuesta correcta: B, C
 
 Explicación
-La opción B, C es la adecuada porque usa Copilot como apoyo para proponer pruebas y casos límite, no como sustituto de la validación. Las pruebas generadas deben revisarse, ejecutarse y ampliarse para cubrir comportamiento esperado, entradas inválidas, errores y requisitos de seguridad o rendimiento.
+Las respuestas correctas son las opciones B y C porque, en conjunto, «Agregar un test con array vacío.»; «Agregar un test con números negativos y ceros.» describen las acciones que cumplen el criterio de la pregunta. Las demás alternativas no son válidas: la opción A («Confiar en pruebas manuales para otros edge cases.») no satisface ese criterio; la opción D («Confiar en el test generado como suficiente.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: escribir pruebas con GitHub Copilot](https://docs.github.com/en/copilot/tutorials/write-tests)
 
@@ -6817,7 +6815,7 @@ D. Restringir acceso según ubicación geográfica de colaboradores.
 Respuesta correcta: C
 
 Explicación
-La opción C es la adecuada porque corresponde a una capacidad administrativa, de gobernanza o de plan documentada oficialmente. Estas funciones dependen del plan y del ámbito de administración —organización o empresa—, por lo que deben comprobarse en la configuración y documentación vigentes antes de aplicarlas.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «Configurar la política de Copilot a nivel organización, seleccionando solo repositorios donde debe estar habilitado.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Implementar RBAC específico de Copilot en GitHub Enterprise Server.») no satisface ese criterio; la opción B («Usar controles de acceso por repositorio desde GitHub Settings.») no satisface ese criterio; la opción D («Restringir acceso según ubicación geográfica de colaboradores.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: planes de GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
@@ -6835,7 +6833,7 @@ B. Sí
 Respuesta correcta: B
 
 Explicación
-GitHub ofrece un plan gratuito denominado GitHub Copilot Free para cualquier usuario individual con cuenta de GitHub, el cual brinda acceso a completaciones de código y funcionalidades básicas de chat con límites de uso mensuales. Además, los estudiantes verificados, profesores y mantenedores destacados de proyectos de código abierto pueden calificar para acceso gratuito a planes más avanzados.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Sí» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («No») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: planes y precios de GitHub Copilot](https://github.com/features/copilot/plans)
 
@@ -6849,7 +6847,7 @@ D. Puedes usar la REST API de GitHub para otorgar acceso a GitHub Copilot a equi
 Respuesta correcta: A
 
 Explicación
-Los miembros individuales de una organización no pueden asignarse a sí mismos licencias de Copilot desde la configuración personal de su cuenta; la asignación debe ser realizada por los propietarios o administradores de la organización o de la empresa (Enterprise), o mediante la API REST de GitHub para gestión de asientos.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Como miembro de una organización, puedes habilitar Copilot directamente desde la configuración de tu cuenta.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («A través de la configuración de tu Enterprise, habilita GitHub Copilot para organizaciones seleccionadas o para todas las organizaciones.») no satisface ese criterio; la opción C («A través de la configuración de tus organizaciones, habilita GitHub Copilot para equipos seleccionados o usuarios específicos o para toda la organización.») no satisface ese criterio; la opción D («Puedes usar la REST API de GitHub para otorgar acceso a GitHub Copilot a equipos o usuarios específicos en tu organización.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: concesión de acceso a Copilot en una organización](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-organization/manage-access/grant-access)
 
@@ -6865,7 +6863,7 @@ F. Xcode
 Respuesta correcta: A, B y C
 
 Explicación
-GitHub Copilot cuenta con extensiones oficiales y soporte nativo para entornos como Visual Studio Code, Visual Studio, la suite de JetBrains, Neovim, Eclipse y Xcode. Sin embargo, IDEs educativos o tradicionales como NetBeans, BlueJ y Code::Blocks no cuentan con soporte oficial ni extensiones mantenidas por GitHub.
+Las respuestas correctas son las opciones A y B y C porque, en conjunto, «NetBeans»; «BlueJ»; «Code::Blocks» describen las acciones que cumplen el criterio de la pregunta. Las demás alternativas no son válidas: la opción D («Visual Studio Code») no satisface ese criterio; la opción E («Eclipse») no satisface ese criterio; la opción F («Xcode») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: uso de GitHub Copilot en entornos de desarrollo integrados](https://docs.github.com/en/copilot/how-tos/get-code-suggestions/get-ide-code-suggestions)
 
@@ -6879,7 +6877,7 @@ D. `gh extension install github/gh-copilot`
 Respuesta correcta: A
 
 Explicación
-La versión moderna e independiente de GitHub Copilot CLI se instala globalmente a través del gestor de paquetes npm utilizando el paquete oficial `npm install -g @github/copilot`. (Las versiones tempranas se distribuían como extensión de GitHub CLI, pero la herramienta CLI autónoma actual utiliza el paquete `@github/copilot`).
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «`npm install -g @github/copilot`» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («`gh install -g github/copilot-cli`») no satisface ese criterio; la opción C («`npm install -g gh-copilot`») no satisface ese criterio; la opción D («`gh extension install github/gh-copilot`») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: instalación y configuración de GitHub Copilot en la CLI](https://docs.github.com/en/copilot/how-tos/copilot-cli/set-up-copilot-cli/install-copilot-cli)
 
@@ -6893,7 +6891,7 @@ D. Escribir instrucciones largas y complejas
 Respuesta correcta: A, B y C
 
 Explicación
-Los principios fundamentales de la ingeniería de prompts para modelos de lenguaje incluyen enfocarse en objetivos claros y atómicos, brindar instrucciones específicas y proporcionar contexto relevante (archivos abiertos, ejemplos, dependencias). En contraste, redactar prompts largos, vagos o excesivamente complejos suele degradar la precisión y provocar alucinaciones en el modelo; la mejor práctica es descomponer problemas complejos en tareas más pequeñas y manejables.
+Las respuestas correctas son las opciones A y B y C porque, en conjunto, «Centrarse en una tarea única y bien definida»; «Asegurarse de que las instrucciones sean detalladas y explícitas»; «Proporcionar un contexto rico para la IA» describen las acciones que cumplen el criterio de la pregunta. Las demás alternativas no son válidas: la opción D («Escribir instrucciones largas y complejas») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: principios y procedimientos recomendados de ingeniería de prompts](https://docs.github.com/en/copilot/concepts/prompting/prompt-engineering)
 
@@ -6907,7 +6905,7 @@ D. Usando un comando en la terminal
 Respuesta correcta: B
 
 Explicación
-Las exclusiones de contenido (Content Exclusions) se gestionan a nivel organizativo o de repositorio ingresando a la configuración (Settings) en GitHub.com y definiendo rutas o patrones de archivos sensibles que Copilot no debe procesar. El archivo `.gitignore` solo instruye a Git qué ficheros omitir en el control de versiones, pero no restringe las capacidades de inferencia de Copilot.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Navegando a la configuración del repository en GitHub y agregando las rutas a excluir» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Editando el archivo .gitignore») no satisface ese criterio; la opción C («Configurando exclusiones en el archivo de configuración de Copilot») no satisface ese criterio; la opción D («Usando un comando en la terminal») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: configuración y auditoría de exclusión de contenido para GitHub Copilot](https://docs.github.com/en/copilot/how-tos/configure-content-exclusion/exclude-content-from-copilot)
 
@@ -6922,7 +6920,7 @@ E. Las exclusiones de contenido se aplican instantáneamente
 Respuesta correcta: A y B
 
 Explicación
-Las opciones A y B son correctas: las exclusiones de contenido pueden definirse tanto a nivel de repositorio como a nivel de organización, y los distintos planes de Copilot (Individual, Business, Enterprise) presentan políticas y controles diferenciados de privacidad. La opción C es falsa porque el IDE puede transmitir información semántica indirecta (como tipos o firmas de compilación) incluso de archivos excluidos. La opción D es falsa porque deshabilitan directamente las sugerencias en dichos ficheros. La opción E es falsa porque los cambios de exclusión pueden tardar hasta 30 minutos en propagarse al cliente IDE.
+Las respuestas correctas son las opciones A y B porque, en conjunto, «Las exclusiones de contexto se pueden configurar a nivel de repository y organization»; «Copilot ofrece diferentes planes con consideraciones de privacidad» describen las acciones que cumplen el criterio de la pregunta. Las demás alternativas no son válidas: la opción C («Copilot ignora completamente los archivos excluidos») no satisface ese criterio; la opción D («Las exclusiones de contenido no afectan la autocompletación del código») no satisface ese criterio; la opción E («Las exclusiones de contenido se aplican instantáneamente») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: configuración y auditoría de exclusión de contenido para GitHub Copilot](https://docs.github.com/en/copilot/how-tos/configure-content-exclusion/exclude-content-from-copilot)
 
@@ -6936,7 +6934,7 @@ D. Un archivo XML con configuraciones de implementación
 Respuesta correcta: B
 
 Explicación
-El archivo `.github/copilot-instructions.md` es un documento en formato Markdown donde los equipos redactan instrucciones en lenguaje natural (guías de estilo, frameworks preferidos, convenciones de nomenclatura) que GitHub Copilot Chat incorpora automáticamente como contexto en cada interacción.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Un archivo Markdown con instrucciones en lenguaje natural para personalizar las respuestas de Copilot Chat» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Un archivo JSON con configuraciones de seguridad») no satisface ese criterio; la opción C («Un archivo YAML con instrucciones de compilación») no satisface ese criterio; la opción D («Un archivo XML con configuraciones de implementación») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: personalización de GitHub Copilot con instrucciones personalizadas](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/add-custom-instructions/add-repository-instructions)
 
@@ -6950,13 +6948,13 @@ D. Para actualizar automáticamente Copilot
 Respuesta correcta: C
 
 Explicación
-Las API REST de métricas y adopción de GitHub Copilot permiten a los administradores consultar estadísticas de uso, número de asientos activos, tasas de aceptación de sugerencias y distribución de lenguajes entre los miembros de la organización.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «Para recopilar métricas de uso de los miembros de la organización» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Para recopilar registros de auditoría») no satisface ese criterio; la opción B («Para excluir archivos específicos») no satisface ese criterio; la opción D («Para actualizar automáticamente Copilot») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: administración y supervisión del uso de licencias de GitHub Copilot](https://docs.github.com/en/copilot/tutorials/roll-out-at-scale/assign-licenses/track-usage-and-adoption)
 
 Pregunta 10
 ¿Cuál de los siguientes integra GitHub Copilot Chat con herramientas externas?
-A. GitHub Copilot Extensions
+A. Servidores MCP (Model Context Protocol)
 B. GitHub Copilot Marketplace
 C. GitHub Copilot Integrations
 D. GitHub Copilot Open
@@ -6964,9 +6962,9 @@ D. GitHub Copilot Open
 Respuesta correcta: A
 
 Explicación
-GitHub Copilot Extensions es la plataforma que permite integrar Copilot Chat con servicios de terceros y herramientas externas (como bases de datos, sistemas de monitoreo o APIs empresariales), utilizando participantes de chat personalizados.
+La opción A es correcta: Model Context Protocol (MCP) permite a Copilot acceder a herramientas y fuentes de contexto externas mediante servidores MCP locales o remotos. Las extensiones, el Marketplace o nombres genéricos de integración no describen específicamente este mecanismo vigente.
 
-Fuente oficial: [GitHub Docs: extensiones de GitHub Copilot e integración con herramientas](https://docs.github.com/en/enterprise-cloud@latest/copilot/concepts/context/mcp)
+Fuente oficial: [GitHub Docs: MCP](https://docs.github.com/en/copilot/concepts/customizations/mcp)
 
 Pregunta 11
 ¿Cómo puedes proporcionar contexto a GitHub Copilot para generar respuestas adaptadas a tu repositorio?
@@ -6978,7 +6976,7 @@ D. Creando un issue de GitHub con las especificaciones del proyecto
 Respuesta correcta: A
 
 Explicación
-Al crear `.github/copilot-instructions.md` en la raíz o directorio `.github` del repositorio, Copilot Chat carga automáticamente las convenciones, estándares y contexto de arquitectura definidos por el equipo para adaptar sus respuestas al proyecto actual.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Creando un archivo llamado `.github/copilot-instructions.md` en el repositorio» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Enviando un correo electrónico al soporte de GitHub con los detalles de tu proyecto») no satisface ese criterio; la opción C («Modificando el archivo `.gitconfig` para incluir instrucciones personalizadas») no satisface ese criterio; la opción D («Creando un issue de GitHub con las especificaciones del proyecto») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: personalización de GitHub Copilot con instrucciones personalizadas](https://docs.github.com/en/enterprise-cloud@latest/copilot/how-tos/copilot-on-github/customize-copilot/add-custom-instructions/add-repository-instructions)
 
@@ -6990,7 +6988,7 @@ B. No, ignorará toda la información de los archivos excluidos.
 Respuesta correcta: A
 
 Explicación
-Aunque el contenido textual directo del archivo excluido no se envía al servicio de inferencia, es posible que Copilot utilice información semántica derivada indirectamente por los servicios de lenguaje del IDE (Language Server Protocol), tales como definiciones de tipos, firmas de funciones o información de dependencias del proyecto.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Sí, si la información es proporcionada indirectamente por el IDE.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («No, ignorará toda la información de los archivos excluidos.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: configuración y auditoría de exclusión de contenido para GitHub Copilot](https://docs.github.com/en/copilot/managing-copilot/configuring-and-auditing-content-exclusion/excluding-content-from-github-copilot#limitations-of-content-exclusions)
 
@@ -7004,7 +7002,7 @@ D. La finalización de código no se verá afectada en los archivos afectados.
 Respuesta correcta: A y B
 
 Explicación
-Cuando un archivo se excluye mediante políticas de exclusión de contenido, GitHub Copilot desactiva las sugerencias de autocompletado en ese archivo específico (A) y no utiliza su código como contexto para generar sugerencias en otros archivos abiertos o adyacentes (B).
+Las respuestas correctas son las opciones A y B porque, en conjunto, «La finalización de código no estará disponible en los archivos afectados.»; «El contenido en los archivos afectados no informará las sugerencias de finalización de código en otros archivos.» describen las acciones que cumplen el criterio de la pregunta. Las demás alternativas no son válidas: la opción C («El contenido en los archivos afectados continuará informando las respuestas de GitHub Copilot Chat.») no satisface ese criterio; la opción D («La finalización de código no se verá afectada en los archivos afectados.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: configuración y auditoría de exclusión de contenido para GitHub Copilot](https://docs.github.com/en/copilot/managing-copilot/configuring-and-auditing-content-exclusion/excluding-content-from-github-copilot#about-content-exclusions-for-copilot)
 
@@ -7018,7 +7016,7 @@ D. Crear un nuevo repositorio público de GitHub y habilitar Copilot para que es
 Respuesta correcta: C
 
 Explicación
-La forma recomendada y directa de empezar es instalar la extensión oficial de GitHub Copilot en un editor compatible como Visual Studio Code, iniciar sesión con tu cuenta de GitHub y comenzar a recibir sugerencias de código en línea de manera inmediata.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «Instalar la extensión de Copilot en tu entorno preferido, como Visual Studio Code.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Solicitar acceso al soporte de GitHub y esperar la aprobación antes de usar GitHub Copilot.») no satisface ese criterio; la opción B («Usar el sitio web de Copilot y pegar tu código al pedir sugerencias.») no satisface ese criterio; la opción D («Crear un nuevo repositorio público de GitHub y habilitar Copilot para que escanee tu código y haga sugerencias.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: introducción y conceptos básicos de GitHub Copilot](https://docs.github.com/en/copilot/get-started/quickstart)
 
@@ -7032,7 +7030,7 @@ D. Analiza solo el contexto dentro de la línea de código actual.
 Respuesta correcta: B
 
 Explicación
-Copilot utiliza la técnica de pestañas vecinas (neighboring tabs) y análisis contextual para extraer información relevante tanto del archivo activo donde se sitúa el cursor como de otros archivos abiertos recientemente en el editor que guardan relación semántica con el código que se está redactando.
+La respuesta correcta es la opción B porque, en el contexto de esta pregunta, «Analiza el contexto en el archivo actual y los archivos relacionados.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Analiza el contexto en todos los archivos dentro del repositorio.») no satisface ese criterio; la opción C («Analiza solo el contexto dentro del archivo actual.») no satisface ese criterio; la opción D («Analiza solo el contexto dentro de la línea de código actual.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: procedimientos recomendados y manejo de contexto en GitHub Copilot](https://docs.github.com/en/copilot/using-github-copilot/best-practices-for-using-github-copilot#guide-copilot-towards-helpful-outputs)
 
@@ -7046,7 +7044,7 @@ D. Una herramienta que prueba y despliega automáticamente el código en entorno
 Respuesta correcta: A
 
 Explicación
-GitHub Copilot es un programador par basado en inteligencia artificial (AI pair programmer) diseñado para asistir a los desarrolladores ofreciendo sugerencias de autocompletado de código, respuestas en chat interactivo y asistencia en tareas comunes del ciclo de desarrollo.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Un asistente de codificación con IA que ayuda a los desarrolladores sugiriendo código y completando fragmentos de código.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Un sistema de control de versiones que realiza un seguimiento y gestiona los cambios en una base de código.») no satisface ese criterio; la opción C («Un editor de código que ofrece funciones de depuración y verificación de errores.») no satisface ese criterio; la opción D («Una herramienta que prueba y despliega automáticamente el código en entornos de producción.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: introducción y conceptos básicos de GitHub Copilot](https://docs.github.com/en/copilot/get-started/what-is-github-copilot)
 
@@ -7060,7 +7058,7 @@ D. Los fragmentos de código se almacenan en caché en el disco durante 30 días
 Respuesta correcta: A
 
 Explicación
-En el flujo de ejecución local del IDE, las sugerencias generadas por Copilot se procesan efímeramente en la memoria del editor para presentarse al usuario y se descartan tras ser aceptadas o rechazadas, sin persistirse en la base de datos o en el disco local del cliente.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Las sugerencias se mantienen temporalmente en memoria y se descartan después de usarlas, no se escriben en el disco» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Todas las sugerencias se almacenan permanentemente en una base de datos local para referencia futura») no satisface ese criterio; la opción C («Las sugerencias se guardan automáticamente en repositorios de GitHub para control de versiones») no satisface ese criterio; la opción D («Los fragmentos de código se almacenan en caché en el disco durante 30 días antes de ser eliminados») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Skills: fundamentos y arquitectura de GitHub Copilot](https://learn.github.com/learning-pathways/github-copilot)
 
@@ -7074,7 +7072,7 @@ D. Transmisión directa a repositorios públicos para verificación de referenci
 Respuesta correcta: A
 
 Explicación
-El servicio proxy de Copilot implementa filtros de seguridad tanto en la entrada (pre-procesamiento) como en la salida (post-procesamiento), incluyendo detección de lenguaje dañino o tóxico, comprobaciones de relevancia semántica y defensas contra inyecciones de prompt o prompt hacking.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Pruebas de lenguaje tóxico, verificaciones de relevancia y detección de intentos de hackeo del aviso» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Traducción a múltiples lenguajes de programación y validación de sintaxis») no satisface ese criterio; la opción C («Compilación automática de código y ejecución en un entorno aislado») no satisface ese criterio; la opción D («Transmisión directa a repositorios públicos para verificación de referencias») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Skills: fundamentos y arquitectura de GitHub Copilot](https://learn.github.com/learning-pathways/github-copilot)
 
@@ -7088,7 +7086,7 @@ D. Seguridad, Desarrollo, Operaciones, Mantenimiento, Soporte y Documentación
 Respuesta correcta: A
 
 Explicación
-El marco de IA Responsable de Microsoft se fundamenta oficialmente en seis pilares: Equidad o Justicia (Fairness), Fiabilidad y Seguridad (Reliability & Safety), Privacidad y Seguridad (Privacy & Security), Inclusión (Inclusiveness), Transparencia (Transparency) y Responsabilidad (Accountability).
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Justicia, Fiabilidad y Seguridad, Privacidad y Seguridad, Inclusión, Transparencia y Responsabilidad» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Eficiencia, Velocidad, Precisión, Innovación, Fiabilidad y Seguridad») no satisface ese criterio; la opción C («Privacidad, Rendimiento, Accesibilidad, Escalabilidad, Mantenibilidad y Pruebas») no satisface ese criterio; la opción D («Seguridad, Desarrollo, Operaciones, Mantenimiento, Soporte y Documentación») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [Microsoft Learn: principios de IA responsable con GitHub Copilot](https://learn.microsoft.com/en-us/training/modules/responsible-ai-with-github-copilot/3-six-principles-of-responsible-ai)
 
@@ -7102,7 +7100,7 @@ D. Garantiza que el código generado esté libre de vulnerabilidades y errores d
 Respuesta correcta: A
 
 Explicación
-Copilot agiliza el flujo de trabajo reduciendo tareas repetitivas y sugiriendo fragmentos de código contextuales. Sin embargo, no sustituye la revisión humana de código ni garantiza por sí solo código libre de fallos; la supervisión del desarrollador sigue siendo indispensable.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Puede sugerir fragmentos de código para aumentar la productividad de los desarrolladores.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Reemplaza completamente la necesidad de revisión de código en cada proyecto.») no satisface ese criterio; la opción C («Fusiona automáticamente las pull requests sin supervisión humana.») no satisface ese criterio; la opción D («Garantiza que el código generado esté libre de vulnerabilidades y errores de compilación.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: introducción y conceptos básicos de GitHub Copilot](https://docs.github.com/en/copilot)
 
@@ -7116,7 +7114,7 @@ D. Ejecuta automáticamente cada comando de shell sugerido sin solicitar aprobac
 Respuesta correcta: A
 
 Explicación
-GitHub Copilot CLI extiende la asistencia de IA a la línea de comandos de los desarrolladores, permitiendo consultar comandos, depurar scripts, interactuar con el entorno de trabajo y coordinar tareas directamente desde la terminal con supervisión explícita del usuario antes de ejecutar cualquier comando.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Te permite usar Copilot desde tu terminal para responder preguntas, escribir y depurar código, e interactuar con GitHub.com» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Está limitado a generar alias de shell para `gh copilot suggest` y `gh copilot explain`») no satisface ese criterio; la opción C («Solo se ejecuta dentro de la interfaz web de GitHub y no puede acceder a archivos de proyectos locales») no satisface ese criterio; la opción D («Ejecuta automáticamente cada comando de shell sugerido sin solicitar aprobación») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: uso de GitHub Copilot en la línea de comandos](https://docs.github.com/en/copilot/concepts/agents/copilot-cli/about-copilot-cli)
 
@@ -7130,7 +7128,7 @@ D. Elimina permanentemente todos los archivos de prueba existentes para empezar 
 Respuesta correcta: A
 
 Explicación
-El comando `/tests` en Copilot Chat instruye al modelo a diseñar y estructurar pruebas unitarias o de integración para el código seleccionado o el archivo abierto, apoyándose en las librerías de pruebas y patrones que ya existan en el repositorio.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Genera una suite de pruebas unitarias para el archivo actualmente abierto, utilizando el contexto de los archivos de prueba existentes si están disponibles» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Ejecuta todas las pruebas unitarias existentes en el proyecto sin generar nuevas») no satisface ese criterio; la opción C («Solo valida la sintaxis de los archivos de prueba existentes sin crear nuevas pruebas») no satisface ese criterio; la opción D («Elimina permanentemente todos los archivos de prueba existentes para empezar de cero») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: redacción de pruebas unitarias con GitHub Copilot](https://docs.github.com/en/copilot/tutorials/write-tests)
 
@@ -7144,7 +7142,7 @@ D. Tamaño total del repositorio × Número de organizaciones
 Respuesta correcta: A
 
 Explicación
-En la facturación empresarial de GitHub Copilot, los asientos asignados a mitad de un periodo de facturación se calculan proporcionalmente según el número de asientos multiplicado por la fracción del ciclo restante o transcurrido (asientos × días transcurridos / días totales del ciclo de facturación).
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Número de asientos × (Días transcurridos / Total de días en el ciclo de facturación)» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Número total de commits × Número de desarrolladores activos») no satisface ese criterio; la opción C («Número de sugerencias de código × Número de completaciones aceptadas») no satisface ese criterio; la opción D («Tamaño total del repositorio × Número de organizaciones») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: administración y supervisión del uso de licencias de GitHub Copilot](https://docs.github.com/en/enterprise-cloud@latest/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-access/view-license-usage)
 
@@ -7158,23 +7156,23 @@ D. Verifica el código en plataformas de alojamiento de código externas a GitHu
 Respuesta correcta: A
 
 Explicación
-El filtro de coincidencia de código público (matching public code filter) contrasta sugerencias de alrededor de 150 caracteres con un índice precompilado de repositorios públicos en GitHub, el cual se actualiza periódicamente para detectar y opcionalmente bloquear o citar código similar.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Busca coincidencias comparando sugerencias de código con un índice de repositorios públicos de GitHub, que se actualiza cada pocos meses» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Realiza búsquedas en tiempo real en todos los repositorios de GitHub, incluidos los privados») no satisface ese criterio; la opción C («Solo coincide con el código de los repositorios que se crearon en las últimas 24 horas») no satisface ese criterio; la opción D («Verifica el código en plataformas de alojamiento de código externas a GitHub») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: detección y filtrado de código que coincide con repositorios públicos](https://docs.github.com/en/copilot/how-tos/get-code-suggestions/find-matching-code)
 
 Pregunta 25
 ¿Cuáles son las verificaciones de post-procesamiento realizadas en las respuestas de GitHub Copilot?
-A. Lenguaje tóxico, relevancia, calidad del código (incluyendo vulnerabilidades de seguridad), identificadores únicos y coincidencia opcional de código público
-B. Solo validación de sintaxis y verificaciones de formato de código
-C. Evaluación de rendimiento y optimización del uso de memoria
-D. Solo verificación de errores de compilación y excepciones en tiempo de ejecución
+A. Filtros contra lenguaje dañino u ofensivo y, cuando corresponde, filtrado de coincidencias con código público
+B. Solo validación de sintaxis y formato
+C. Evaluación de rendimiento y optimización de memoria
+D. Solo errores de compilación y excepciones de ejecución
 
 Respuesta correcta: A
 
 Explicación
-Durante la fase de post-procesamiento posterior a la inferencia del modelo, GitHub Copilot somete la respuesta a múltiples filtros: detección de toxicidad y contenido inapropiado, evaluación de relevancia contextual, filtros de seguridad contra vulnerabilidades conocidas y comprobación del filtro de código público.
+La opción A es correcta: las solicitudes y respuestas pasan por filtros de seguridad de GitHub, incluido el bloqueo de contenido dañino u ofensivo y, cuando está aplicada la política correspondiente, la detección de coincidencias con código público. Copilot no garantiza comprobar automáticamente vulnerabilidades, relevancia funcional, rendimiento ni compilación de cada sugerencia.
 
-Fuente oficial: [GitHub Skills: fundamentos y arquitectura de GitHub Copilot](https://learn.github.com/learning-pathways/github-copilot)
+Fuente oficial: [GitHub Docs: alojamiento de modelos](https://docs.github.com/en/copilot/reference/ai-models/model-hosting)
 
 Pregunta 26
 ¿Qué elementos puede utilizar GitHub Copilot como contexto al generar sugerencias?
@@ -7186,7 +7184,7 @@ D. Solo el archivo README del proyecto y nada más
 Respuesta correcta: A
 
 Explicación
-Copilot construye el contexto de la solicitud combinando el texto circundante al cursor, archivos abiertos recientemente (neighboring tabs), rutas de los archivos en el proyecto, instrucciones personalizadas y el historial de diálogo reciente en el chat.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Contenido en el archivo actual, archivos vecinos, URLs de repositorios, rutas de archivos e interacciones previas en el chat» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Solo la línea de código actual que se está editando sin ningún contexto adicional») no satisface ese criterio; la opción C («Exclusivamente documentación externa de internet») no satisface ese criterio; la opción D («Solo el archivo README del proyecto y nada más») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: procedimientos recomendados y manejo de contexto en GitHub Copilot](https://docs.github.com/en/copilot/using-github-copilot/getting-started-with-github-copilot#using-context-in-github-copilot)
 
@@ -7200,7 +7198,7 @@ D. Agent
 Respuesta correcta: C
 
 Explicación
-Los modos nativos y documentados en las experiencias modernas de Copilot Chat (por ejemplo en VS Code) incluyen Ask (consultas generales), Plan (planificación arquitectónica y pasos de implementación) y Agent (modo autónomo de edición multiactivo). El modo "Translate" no es un modo integrado de la interfaz.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «Translate» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Ask») no satisface ese criterio; la opción B («Plan») no satisface ese criterio; la opción D («Agent») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [VS Code Docs: modos integrados y personalización de GitHub Copilot Chat](https://code.visualstudio.com/docs/copilot/customization/custom-chat-modes#_builtin-chat-modes)
 
@@ -7212,7 +7210,7 @@ B. Verdadero
 Respuesta correcta: A
 
 Explicación
-La afirmación es falsa porque en Copilot Chat sí es posible adjuntar directorios y carpetas completas como contexto, así como usar selectores contextuales o participantes que indexan carpetas enteras de trabajo.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Falso» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Verdadero») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [Microsoft Learn: características de vista de chat y acciones inteligentes en Copilot](https://learn.microsoft.com/en-us/training/modules/get-started-github-copilot/10-examine-chat-view-features)
 
@@ -7227,7 +7225,7 @@ E. Variables de entorno (como PATH)
 Respuesta correcta: A, B y C
 
 Explicación
-Copilot Chat en el IDE permite adjuntar como referencias de contexto símbolos de código (variables, clases, funciones), la salida capturada de la terminal integrada y errores arrojados durante la ejecución de pruebas unitarias. Por motivos de seguridad y aislamiento, no lee variables de entorno del sistema ni repositorios externos no vinculados.
+Las respuestas correctas son las opciones A y B y C porque, en conjunto, «Símbolos»; «Salida de comandos en el terminal»; «Errores de pruebas» describen las acciones que cumplen el criterio de la pregunta. Las demás alternativas no son válidas: la opción D («Repositorios externos») no satisface ese criterio; la opción E («Variables de entorno (como PATH)») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [Microsoft Learn: características de vista de chat y acciones inteligentes en Copilot](https://learn.microsoft.com/en-us/training/modules/get-started-github-copilot/10-examine-chat-view-features)
 
@@ -7240,7 +7238,7 @@ C. Las acciones inteligentes son tareas predefinidas diseñadas para ayudar con 
 Respuesta correcta: A
 
 Explicación
-Las Smart Actions (acciones inteligentes) son accesos directos integrados en el menú contextual o interfaz del IDE que desencadenan comandos habituales (como Explain This, Fix This, Generate Tests o Generate Docs) con un solo clic, sin que el usuario tenga que escribir manualmente un prompt en el chat.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Las acciones inteligentes son tareas comunes y predefinidas, como explicar código, corregir código o generar pruebas y documentación, que pueden ser realizadas por GitHub Copilot Chat sin necesidad de redactar un aviso para ellas.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Las acciones inteligentes son una modalidad avanzada de GitHub Copilot utilizada para depurar y corregir pruebas fallidas.») no satisface ese criterio; la opción C («Las acciones inteligentes son tareas predefinidas diseñadas para ayudar con tareas comunes de codificación dentro de una organización, que pueden configurarse a nivel de repository y organización.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [Microsoft Learn: características de vista de chat y acciones inteligentes en Copilot](https://learn.microsoft.com/en-us/training/modules/get-started-github-copilot/11-examine-inline-chat-smart-actions-quick-chat)
 
@@ -7253,7 +7251,7 @@ C. Completaciones de líneas de código, chat en línea, contenedor de código, 
 Respuesta correcta: A
 
 Explicación
-El conjunto estándar de capacidades interactivas de GitHub Copilot en el editor abarca las completaciones predictivas de código (inline completions), chat en línea (inline chat `Ctrl+I` / `Cmd+I`), vista de panel de chat, ventana de chat rápido (quick chat) y acciones inteligentes en menús contextuales.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Completaciones de líneas de código, chat en línea, vista de chat, chat rápido, acciones inteligentes» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Completaciones de líneas de código, chat en línea, vista de chat, acciones inteligentes, investigación de código») no satisface ese criterio; la opción C («Completaciones de líneas de código, chat en línea, contenedor de código, chat rápido») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [Microsoft Learn: características de desarrollo de código con herramientas de GitHub Copilot](https://learn.microsoft.com/en-us/training/modules/develop-code-features-using-github-copilot-tools/2-examine-code-development-features-github-copilot)
 
@@ -7267,7 +7265,7 @@ D. Los participantes del chat solo pueden usarse para etiquetar a otros miembros
 Respuesta correcta: A y B
 
 Explicación
-Las opciones A y B son verdaderas: los participantes de chat dirigen la consulta a un agente especializado con acceso a contextos concretos (como `@workspace`), mientras que los comandos de barra (`/`) especifican la intención operativa. La opción C es falsa porque sí pueden combinarse en un mismo prompt (por ejemplo `@workspace /explain #selection`), y la D es falsa porque los participantes no son menciones a personas, sino integraciones de software.
+Las respuestas correctas son las opciones A y B porque, en conjunto, «Los participantes del chat (como `@workspace` o `@vscode`) pueden usarse para proporcionar contexto adicional sobre la base de código, un dominio específico o tecnología.»; «Los comandos de barra (como `/tests`, `/fix` o `/explain`) son una forma concisa de indicar lo que deseas lograr con el prompt.» describen las acciones que cumplen el criterio de la pregunta. Las demás alternativas no son válidas: la opción C («No es posible combinar participantes del chat, comandos y variables de chat en un solo prompt.») no satisface ese criterio; la opción D («Los participantes del chat solo pueden usarse para etiquetar a otros miembros dentro de la misma organización.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [Microsoft Learn: características de desarrollo de código con herramientas de GitHub Copilot](https://learn.microsoft.com/en-us/training/modules/develop-code-features-using-github-copilot-tools/3-examine-github-copilot-best-practices)
 
@@ -7280,7 +7278,7 @@ C. Usar un alias permite que GitHub revise y cree pull requests en tu nombre.
 Respuesta correcta: A
 
 Explicación
-En GitHub Copilot CLI, configurar un alias de shell (por ejemplo `??` o `ghcs`) permite invocar la herramienta y aplicar o ejecutar directamente los comandos recomendados en la terminal con la aprobación del usuario, sin tener que escribir comandos largos repetidamente.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Usar un alias permite que GitHub Copilot CLI ejecute automáticamente comandos en la línea de comandos.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Usar un alias te permite indicar en los commits de Git que GitHub Copilot realizó los cambios.») no satisface ese criterio; la opción C («Usar un alias permite que GitHub revise y cree pull requests en tu nombre.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [Microsoft Learn: uso de GitHub Copilot en diversos entornos y lenguajes](https://learn.microsoft.com/en-us/training/modules/github-copilot-across-environments/5-git-hub-copilot-for-the-command-line)
 
@@ -7296,7 +7294,7 @@ F. GitHub Copilot CLI solo puede explicar o sugerir comandos, pero no ejecutarlo
 Respuesta correcta: A, B y C
 
 Explicación
-Las opciones A, B y C son correctas: de forma predeterminada, Copilot CLI no retiene los prompts del usuario pero sí recopila telemetría y métricas agregadas de uso; los usuarios pueden deshabilitar opcionalmente el envío de esta telemetría; y las sugerencias generadas pueden inspeccionarse y validarse antes de ser ejecutadas en la terminal.
+Las respuestas correctas son las opciones A y B y C porque, en conjunto, «Las indicaciones no se retienen, mientras que los análisis de uso se retienen de forma predeterminada.»; «Es posible optar por no participar en los análisis de uso opcionales.»; «Las respuestas generadas por Copilot CLI pueden revisarse después de cada sugerencia.» describen las acciones que cumplen el criterio de la pregunta. Las demás alternativas no son válidas: la opción D («Tanto las indicaciones como los análisis de uso se retienen de forma predeterminada.») no satisface ese criterio; la opción E («No es posible optar por no participar en los análisis de uso opcionales porque son anónimos.») no satisface ese criterio; la opción F («GitHub Copilot CLI solo puede explicar o sugerir comandos, pero no ejecutarlos en nombre del usuario.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [Microsoft Learn: uso de GitHub Copilot en diversos entornos y lenguajes](https://learn.microsoft.com/en-us/training/modules/github-copilot-across-environments/5-git-hub-copilot-for-the-command-line)
 
@@ -7310,7 +7308,7 @@ D. Ninguna es correcta porque Kotlin está incluido en los lenguajes donde GitHu
 Respuesta correcta: A
 
 Explicación
-Aunque GitHub Copilot funciona con prácticamente cualquier lenguaje de programación, la documentación oficial señala que ofrece un soporte especialmente robusto en lenguajes como Python, JavaScript, TypeScript, Ruby, Go, C# y Java. En lenguajes con menor representación en los datos de entrenamiento (como Kotlin), Copilot aún puede sugerir y explicar código, pero la calidad y precisión de las sugerencias pueden ser variables.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «Kotlin no está incluido en los lenguajes donde GitHub Copilot ofrece un soporte sólido. Como resultado, las sugerencias de código podrían no tener la misma calidad que las sugerencias de código en un lenguaje mejor soportado, como Ruby, Java o C#.» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («Kotlin no está incluido en los lenguajes donde GitHub Copilot ofrece un soporte sólido. Como resultado, GitHub Copilot no podrá explicar ni corregir código.») no satisface ese criterio; la opción C («Kotlin no está incluido en los lenguajes donde GitHub Copilot ofrece un soporte sólido. Como resultado, GitHub Copilot aún puede explicar o corregir código, pero no podrá proporcionar sugerencias de código.») no satisface ese criterio; la opción D («Ninguna es correcta porque Kotlin está incluido en los lenguajes donde GitHub Copilot ofrece un soporte sólido.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [Microsoft Learn: uso de GitHub Copilot en diversos entornos y lenguajes](https://learn.microsoft.com/en-us/training/modules/github-copilot-across-environments/2-code-completion-with-git-hub-copilot)
 
@@ -7325,7 +7323,7 @@ E. GitHub Copilot Legal and Trust Center
 Respuesta correcta: A
 
 Explicación
-El portal oficial donde GitHub centraliza las respuestas a inquietudes sobre privacidad de datos, propiedad intelectual, políticas de derechos de autor y compromisos contractuales de seguridad es el GitHub Copilot Trust Center.
+La respuesta correcta es la opción A porque, en el contexto de esta pregunta, «GitHub Copilot Trust Center» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción B («GitHub Copilot Compliance Center») no satisface ese criterio; la opción C («GitHub Copilot Compliance Hub») no satisface ese criterio; la opción D («GitHub Copilot Legal Center») no satisface ese criterio; la opción E («GitHub Copilot Legal and Trust Center») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [Microsoft Learn: centro de confianza, seguridad y gobernanza de GitHub Copilot](https://learn.microsoft.com/en-us/training/modules/github-copilot-management-and-customizations/3-github-copilot-contractual-protections-disabling-matching-public-code)
 
@@ -7339,7 +7337,7 @@ D. Solo Copilot Enterprise
 Respuesta correcta: C
 
 Explicación
-Las instrucciones personalizadas a nivel de organización (organization-level custom instructions) se configuran en el panel administrativo de la organización y están disponibles exclusivamente para planes comerciales gestionados: Copilot Business y Copilot Enterprise. En contraste, las instrucciones a nivel de repositorio (`.github/copilot-instructions.md`) son compatibles con todos los planes.
+La respuesta correcta es la opción C porque, en el contexto de esta pregunta, «Copilot Business y Copilot Enterprise» coincide con el requisito, la capacidad o la práctica que se solicita. Las demás alternativas no son válidas: la opción A («Todos los planes que incluyen GitHub Copilot») no satisface ese criterio; la opción B («Copilot Pro+ y superiores») no satisface ese criterio; la opción D («Solo Copilot Enterprise») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [GitHub Docs: personalización de GitHub Copilot con instrucciones personalizadas](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/add-custom-instructions/add-organization-instructions)
 
@@ -7353,6 +7351,6 @@ D. La palabra clave `@workspace` se encarga del mensaje del usuario y, por lo ta
 Respuesta correcta: A y B
 
 Explicación
-Las opciones A y B son correctas: `#codebase` es una variable contextual recomendada para indexar e incorporar la base de código completa en la consulta y es admisible a lo largo de los diversos modos de chat. En contraste, `@workspace` actúa como un participante completo de chat y no está habilitado uniformemente en todos los submodos o extensiones.
+Las respuestas correctas son las opciones A y B porque, en conjunto, «Aunque `@workspace` y `#codebase` permiten hacer preguntas sobre toda la base de código, se recomienda el uso de `#codebase`.»; «La palabra clave `#codebase` puede utilizarse en todos los modos de chat.» describen las acciones que cumplen el criterio de la pregunta. Las demás alternativas no son válidas: la opción C («La palabra clave `@workspace` puede utilizarse en todos los modos de chat.») no satisface ese criterio; la opción D («La palabra clave `@workspace` se encarga del mensaje del usuario y, por lo tanto, puede usar otras herramientas.») no satisface ese criterio, por lo que no responden de manera completa al enunciado.
 
 Fuente oficial: [Microsoft Learn: palabras clave y participantes de chat en GitHub Copilot](https://learn.microsoft.com/en-us/training/modules/generate-documentation-using-github-copilot-tools/3-examine-github-copilot-prompts-keywords)

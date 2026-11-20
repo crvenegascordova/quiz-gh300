@@ -32,3 +32,7 @@ deploy.tar.gz
 # python cache
 __pycache__/
 *.pyc
+
+# audit caches
+source-cache/
+
