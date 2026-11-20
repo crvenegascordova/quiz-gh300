@@ -24,12 +24,12 @@ A. The agent directs its own process and decides which tools to use
 B. The agent operates in a loop that continues until a stopping condition is met
 C. The agent always uses a larger model than a workflow does
 D. The agent's code path is fixed at design time by the developer
-E. The agent maintains state across turns to inform later decisions
+E. The agent gains ground truth from the environment (tool results) at each step
 
 Respuesta correcta: A, B y E
 
 Explicación
-Anthropic defines workflows as systems where LLMs and tools are orchestrated through predefined code paths, whereas agents are systems where the LLM dynamically directs its own process and tool usage. Hence A is right, and B and E describe how this works in practice: the agent loops (act, observe environment feedback, decide) until it finishes or hits a stopping condition, carrying state across turns. C is wrong because model size is independent of the pattern; workflows and agents can use any model, and agents often use smaller models for sub-steps. D describes a workflow, not an agent, since a fixed code path decided at design time is precisely what defines a workflow.
+Anthropic defines workflows as systems where LLMs and tools are orchestrated through predefined code paths, whereas agents are systems where the LLM dynamically directs its own process and tool usage. Hence A is right, and B and E describe how this works in practice: the agent loops (act, observe environment feedback, decide) until it finishes or hits a stopping condition, using tool results as feedback at each step. C is wrong because model size is independent of the pattern; workflows and agents can use any model, and agents often use smaller models for sub-steps. D describes a workflow, not an agent, since a fixed code path decided at design time is precisely what defines a workflow.
 
 Fuente oficial: [Anthropic Research: Building effective agents](https://www.anthropic.com/research/building-effective-agents)
 
@@ -102,10 +102,10 @@ Respuesta correcta: B
 Explicación
 Sub-agents with fully isolated histories only see what the orchestrator passes them. A finding in one sub-agent's context is invisible to the others, so they can repeat the same searches or reach conflicting conclusions unless the orchestrator shares or reconciles results. Isolation also has benefits (cleaner contexts, parallelism), so the fix is explicit hand-off of findings, not removing it. A is false because sub-agents can use tools. C is false because the orchestrator controls its own system prompt and each sub-agent's. D is wrong because the issue is not a cost rule: it is a coordination failure, and the 'necessarily' claim is not what defines the risk.
 
-Fuente oficial: [Anthropic Research: Building effective agents](https://www.anthropic.com/research/building-effective-agents)
+Fuente oficial: [Claude Code docs: Subagents](https://code.claude.com/docs/en/sub-agents)
 
 Pregunta 8
-A developer wants an agent to break a large refactor into subtasks, run them concurrently, and then combine the results. Which pattern is this?
+A developer wants an agent to break a large refactor into subtasks that the LLM determines at runtime from the task, delegate them to workers, and combine the results. Which pattern is this?
 A. Orchestrator-workers
 B. Sectioning parallelization
 C. Routing
@@ -119,18 +119,18 @@ Here the refactor is decomposed into subtasks that are not known beforehand: a c
 Fuente oficial: [Anthropic Research: Building effective agents](https://www.anthropic.com/research/building-effective-agents)
 
 Pregunta 9
-Which HTTP header carries the API key when calling the Claude Messages API directly over REST?
-A. Authorization: Bearer
+Which HTTP headers can carry the API key when calling the Claude Messages API directly over REST? (Select all that apply)
+A. Authorization: Bearer <key>
 B. x-api-key:
 C. x-claude-token:
 D. api-key:
 
-Respuesta correcta: B
+Respuesta correcta: A y B
 
 Explicación
-The Messages API authenticates with the x-api-key header, and also requires anthropic-version (for example 2023-06-01) and content-type: application/json. The SDKs set these automatically. Authorization: Bearer (A) is the convention of other providers and of OAuth, not the Claude API key header. x-claude-token (C) and api-key (D) are not headers the Claude API recognizes, so such requests would fail with an authentication error (401).
+The Claude API accepts the credential in Authorization: Bearer <token> (the primary form, also used for short-lived Workload Identity Federation tokens) and in x-api-key (legacy fallback, still supported) (A and B). Direct REST calls also require anthropic-version and content-type: application/json; the SDKs set these automatically. x-claude-token (C) and api-key (D) are not headers the Claude API recognizes, so such requests would fail with an authentication error (401).
 
-Fuente oficial: [Anthropic Docs: Claude developer guide & API reference](https://docs.anthropic.com/en/docs/welcome)
+Fuente oficial: [Anthropic Docs: API overview](https://platform.claude.com/docs/en/api/overview)
 
 Pregunta 10
 Which fields are required in the request body of a Messages API call? (Select all that apply)
@@ -143,9 +143,9 @@ E. temperature
 Respuesta correcta: A, B y C
 
 Explicación
-The Messages API requires model (which model to run), max_tokens (hard cap on generated tokens) and messages (the conversation turns). Everything else is optional with defaults. system (D) is optional: it only supplies instructions or persona when needed. temperature (E) is optional and defaults to 1.0. Omitting a required field returns a 400 invalid_request_error.
+The Messages API requires model (which model to run), max_tokens (hard cap on generated tokens) and messages (the conversation turns). Everything else is optional with defaults. system (D) is optional: it only supplies instructions or persona when needed. temperature (E) is optional; note that on Claude 4.7+ and on API version 2026-10-21 and later, sending temperature, top_p or top_k can return a 400. Omitting a required field returns a 400 invalid_request_error.
 
-Fuente oficial: [Anthropic Docs: Claude developer guide & API reference](https://docs.anthropic.com/en/docs/welcome)
+Fuente oficial: [Anthropic Docs: API versioning](https://platform.claude.com/docs/en/api/versioning)
 
 Pregunta 11
 A conversation is built by appending user and assistant messages. What must be true of the roles in the messages array?
@@ -200,9 +200,9 @@ E. 400: Invalid Request Error
 Respuesta correcta: A, B y C
 
 Explicación
-Retry transient errors: 429 (rate limit, honoring retry-after), 500 (internal error) and 529 (overloaded), using exponential backoff with jitter because they may succeed later. 401 (authentication) and 400 (invalid request) are deterministic client errors: the same request will fail again until you fix the key or payload, so retrying only wastes calls. Backoff also avoids amplifying load on an already stressed service. The official SDKs retry the transient ones automatically by default.
+Retry transient errors: 429 (rate limit, honoring retry-after), 500 (internal error) and 529 (overloaded), using exponential backoff with jitter because they may succeed later. 401 (authentication) and 400 (invalid request) are deterministic client errors: the same request will fail again until you fix the key or payload, so retrying only wastes calls. Backoff also avoids amplifying load on an already stressed service. The official SDKs retry the transient ones automatically by default. A 429 caused by a tier spend cap has no retry-after header and keeps failing, so do not retry it blindly.
 
-Fuente oficial: [Anthropic Docs: Claude developer guide & API reference](https://docs.anthropic.com/en/docs/welcome)
+Fuente oficial: [Anthropic Docs: Errors](https://platform.claude.com/docs/en/api/errors)
 
 Pregunta 15
 What is the primary benefit of streaming responses from the Messages API in a chat application?
@@ -243,9 +243,9 @@ E. Set anthropic-version dynamically to the current date on each request
 Respuesta correcta: A, B y C
 
 Explicación
-Good configuration management keeps secrets out of source (A: environment variables or a secret manager), pins the exact model identifier in one config place so upgrades are deliberate and testable (B), and versions prompts with code so each release maps to known behavior and can be rolled back (C). Committing a .env with production keys (D) leaks secrets into history and to everyone with repo access. Setting anthropic-version to today's date (E) is wrong because it is an API version string such as 2023-06-01, not a date, and unknown values are rejected; pin it deliberately.
+Good configuration management keeps secrets out of source (A: environment variables or a secret manager), pins the exact model identifier in one config place so upgrades are deliberate and testable (B), and versions prompts with code so each release maps to known behavior and can be rolled back (C). Committing a .env with production keys (D) leaks secrets into history and to everyone with repo access. Setting anthropic-version to today's date (E) is wrong because anthropic-version is a pinned API version (for example 2023-06-01 or the latest 2026-10-21), not a value to regenerate per request; pin it deliberately.
 
-Fuente oficial: [Anthropic Docs: Claude developer guide & API reference](https://docs.anthropic.com/en/docs/welcome)
+Fuente oficial: [Anthropic Docs: API versioning](https://platform.claude.com/docs/en/api/versioning)
 
 Pregunta 18
 What does the usage object in a Messages API response report?
@@ -277,7 +277,7 @@ Fuente oficial: [Anthropic Docs: Claude developer guide & API reference](https:/
 
 Pregunta 20
 A developer wants Claude to always answer with a JSON object matching a fixed schema. Which approaches reliably improve performance? (Select all that apply)
-A. Define a tool whose input_schema is the target schema and force tool use
+A. Use structured outputs, or a tool whose input_schema is the target schema with strict tool use (forced tool_choice only where supported)
 B. Ask the model to "try" to return JSON, without providing any schema or example
 C. Include the exact schema and a worked example in the system prompt
 D. Raise temperature to 1.0 to increase formatting creativity
@@ -286,7 +286,7 @@ E. Rely on temperature alone to enforce the JSON structure
 Respuesta correcta: A y C
 
 Explicación
-Forcing tool use with an input_schema (A) makes the model emit arguments that conform to the schema, which is the most reliable way to get structured JSON. Including the exact schema and a worked example in the system prompt (C) removes ambiguity about field names and formats. Option B was reworded: the original 'prefill with an opening brace' is not supported on newer Claude models (it returns an error), so the key was changed to A and C. Asking the model to merely 'try' to return JSON with no schema or example (B) gives no guidance or enforcement. Raising temperature (D) increases variance and hurts format adherence. Relying on temperature alone (E) does not constrain structure at all.
+Structured outputs, or a tool whose input_schema is the target schema used with strict tool use (A), make the model emit arguments that conform to the schema, which is the most reliable way to get structured JSON. Forced tool_choice is rejected on some newer models (for example Opus 5.5 and Sonnet 5.5) and under manual extended thinking, so use auto plus strict tool use or structured outputs there. Including the exact schema and a worked example in the system prompt (C) removes ambiguity about field names and formats. Prefilling an opening brace is not supported on Claude 4.6 and later (it returns a 400), so it is not a reliable option. Asking the model to merely 'try' to return JSON with no schema or example (B) gives no guidance or enforcement. Raising temperature (D) increases variance and hurts format adherence. Relying on temperature alone (E) does not constrain structure at all.
 
 Fuente oficial: [Anthropic Docs: Tool use (function calling)](https://docs.anthropic.com/en/docs/build-with-claude/tool-use)
 
@@ -300,9 +300,9 @@ D. Number of distinct API keys in use
 Respuesta correcta: A
 
 Explicación
-Anthropic rate limits are measured per organization (and per model class) in requests per minute (RPM), input tokens per minute (ITPM) and output tokens per minute (OTPM), with limits that rise by usage tier. Exceeding any of them returns 429 with retry-after. Concurrent websocket connections (B), conversations per day (C) and number of API keys (D) are not metered dimensions. Knowing the three measures lets you design client-side throttling and backoff, and note that cached input tokens may not count toward ITPM on many models.
+Anthropic rate limits are measured per organization (and per model class) in requests per minute (RPM), input tokens per minute (ITPM) and output tokens per minute (OTPM), with limits that rise by usage tier. Exceeding any of them returns 429 with retry-after. Concurrent websocket connections (B), conversations per day (C) and number of API keys (D) are not metered dimensions. Knowing the three measures lets you design client-side throttling and backoff, and note that cache_read_input_tokens do not count toward ITPM (only input_tokens and cache_creation_input_tokens do).
 
-Fuente oficial: [Anthropic Docs: Claude developer guide & API reference](https://docs.anthropic.com/en/docs/welcome)
+Fuente oficial: [Anthropic Docs: Rate limits](https://platform.claude.com/docs/en/api/rate-limits)
 
 Pregunta 22
 Which is the most appropriate use of the metadata user_id field on Messages requests?
@@ -314,9 +314,9 @@ D. Storing conversation history server-side for later retrieval
 Respuesta correcta: B
 
 Explicación
-metadata.user_id is an opaque identifier for the end user (for example a hashed or UUID value) that lets Anthropic detect and mitigate abuse tied to a specific user rather than blocking your whole organization. It should not contain PII such as email, name or phone (A is wrong for that reason, and it is not for contacting users). It does not select tiers or entitlements (C), which are enforced by your own app. It does not store history (D); the API is stateless.
+metadata.user_id is an opaque identifier for the end user (for example a hashed or UUID value) that lets Anthropic detect and mitigate abuse tied to a specific user rather than blocking your whole organization. The docs say it should be a uuid, hash or other opaque identifier and must not contain identifying information such as name, email address or phone number (A is wrong for that reason, and it is not for contacting users). It does not select tiers or entitlements (C), which are enforced by your own app. It does not store history (D); the API is stateless.
 
-Fuente oficial: [Anthropic Docs: Claude developer guide & API reference](https://docs.anthropic.com/en/docs/welcome)
+Fuente oficial: [Anthropic Docs: Messages API reference](https://platform.claude.com/docs/en/api/messages)
 
 Pregunta 23
 What does it mean that the Messages API is stateless?
@@ -364,16 +364,16 @@ Fuente oficial: [Anthropic Docs: Claude developer guide & API reference](https:/
 Pregunta 26
 Which statement correctly describes the relationship between the system parameter and the messages array?
 A. The system prompt is a top-level parameter that sets role, rules, and configs and is not part of the alternating turn sequence
-B. The system prompt must be the first entry in the messages array with role system
+B. The system prompt must always be the first entry in the messages array with role system
 C. The system prompt is appended after the final user message
 D. Only one system prompt is allowed per conversation and it cannot be changed between requests
 
 Respuesta correcta: A
 
 Explicación
-system is a top-level request parameter holding role, rules and context, separate from the messages array, which holds only user and assistant turns (and tool blocks). There is no system role inside messages (B). It is not appended after the user turn (C); it conditions the whole conversation. You can send a different system prompt on each request (D is wrong), since the API is stateless; changing it can however invalidate a prompt cache prefix.
+system is a top-level request parameter holding role, rules and context, separate from the messages array, which holds only user and assistant turns (and tool blocks). The system prompt is not required to be a messages entry (B): the documented way to provide it is the top-level system parameter. It is not appended after the user turn (C); it conditions the whole conversation. You can send a different system prompt on each request (D is wrong), since the API is stateless; changing it can however invalidate a prompt cache prefix.
 
-Fuente oficial: [Anthropic Docs: Claude developer guide & API reference](https://docs.anthropic.com/en/docs/welcome)
+Fuente oficial: [Anthropic Docs: Messages API reference](https://platform.claude.com/docs/en/api/messages)
 
 Pregunta 27
 What is the purpose of a claude.md file in a repository used with Claude Code?
@@ -387,7 +387,7 @@ Respuesta correcta: B
 Explicación
 CLAUDE.md is a memory file that Claude Code automatically loads into context at session start (from the project, user and parent directories). It holds persistent project knowledge: build and test commands, code style, architecture notes and workflow rules. It must not store secrets (A). CI pipelines live in files like workflow YAML (C). Denying file access is configured through permissions in settings, not CLAUDE.md (D), and CLAUDE.md is guidance rather than an enforcement mechanism.
 
-Fuente oficial: [Anthropic Research: Building effective agents](https://www.anthropic.com/research/building-effective-agents)
+Fuente oficial: [Claude Code docs: Memory](https://code.claude.com/docs/en/memory)
 
 Pregunta 28
 Which are legitimate ways to extend or control Claude Code behavior? (Select all that apply)
@@ -400,9 +400,9 @@ E. Sub-agents defined with their own prompt, tools, and isolated context
 Respuesta correcta: A, B, C y E
 
 Explicación
-Claude Code is extended through supported mechanisms: custom slash commands as markdown files (A), hooks that run shell commands at lifecycle events such as PreToolUse and PostToolUse (B), MCP servers that add external tools and data (C), and subagents with their own prompt, tool restrictions and separate context window (E). Editing model weights (D) is impossible: the model runs on Anthropic's servers and weights are not shipped with the CLI. Only the other four are documented extension points.
+Claude Code is extended through supported mechanisms: custom slash commands as markdown files in .claude/commands/ (A; this older format still works, and commands have been merged into skills, which are preferred for new work), hooks that run shell commands at lifecycle events such as PreToolUse and PostToolUse (B), MCP servers that add external tools and data (C), and subagents with their own prompt, tool restrictions and separate context window (E). Editing model weights (D) is impossible: the model runs on Anthropic's servers and weights are not shipped with the CLI. Only the other four are documented extension points.
 
-Fuente oficial: [Anthropic Docs: Model Context Protocol (MCP)](https://docs.anthropic.com/en/docs/agents-and-tools/mcp)
+Fuente oficial: [Claude Code docs: Subagents](https://code.claude.com/docs/en/sub-agents)
 
 Pregunta 29
 An agent intermittently produces a wrong final answer but individual tool calls look correct in isolation. What is the most effective first debugging step?
@@ -443,9 +443,9 @@ E. Batch non-urgent workloads through the asynchronous batch endpoint
 Respuesta correcta: A, B, C y E
 
 Explicación
-Real cost levers: prompt caching of large stable prefixes (reads are billed at a fraction of base input price) (A), routing easy requests to a smaller, cheaper model (B), summarizing or truncating old turns so you do not resend all history (C), and the Message Batches API for non-urgent work at a discount (E). Setting max_tokens to the maximum (D) does not itself bill unused tokens, but it removes protection against runaway outputs and can affect rate limit estimation, so it is not a cost reduction strategy.
+Real cost levers: prompt caching of large stable prefixes (reads are billed at a fraction of base input price) (A), routing easy requests to a smaller, cheaper model (B), summarizing or truncating old turns so you do not resend all history (C), and the Message Batches API for non-urgent work at a discount (E). Setting max_tokens to the maximum (D) does not itself bill unused tokens (and, per the rate-limit docs, max_tokens does not factor into OTPM calculations), but it removes protection against runaway outputs, so it is not a cost reduction strategy.
 
-Fuente oficial: [Anthropic Research: Building effective agents](https://www.anthropic.com/research/building-effective-agents)
+Fuente oficial: [Anthropic Docs: Pricing](https://platform.claude.com/docs/en/about-claude/pricing)
 
 Pregunta 32
 Prompt caching gives the largest benefit under which condition?
@@ -471,9 +471,9 @@ D. It reduces the cost per token
 Respuesta correcta: B
 
 Explicación
-Temperature controls sampling randomness. At 0 the model strongly favors the highest-probability token, which makes output more consistent and is good for analytical tasks, but it does not guarantee byte-identical output (A) because of floating-point and infrastructure non-determinism. It does not disable tools (C) and does not change price per token (D), since billing depends on token counts. Always evaluate behavior empirically rather than assuming determinism.
+Temperature controls sampling randomness. At 0 the model strongly favors the highest-probability token (this applies to older models and API versions: temperature, top_p and top_k are rejected with a 400 on Claude 4.7+ and on API version 2026-10-21), which makes output more consistent and is good for analytical tasks, but it does not guarantee byte-identical output (A) because of floating-point and infrastructure non-determinism. It does not disable tools (C) and does not change price per token (D), since billing depends on token counts. Always evaluate behavior empirically rather than assuming determinism.
 
-Fuente oficial: [Anthropic Docs: Claude developer guide & API reference](https://docs.anthropic.com/en/docs/welcome)
+Fuente oficial: [Anthropic Docs: API versioning](https://platform.claude.com/docs/en/api/versioning)
 
 Pregunta 34
 Which statements about tokens are accurate? (Select all that apply)
@@ -486,9 +486,9 @@ E. Token counts are identical across all model families
 Respuesta correcta: A, B y C
 
 Explicación
-Input and output tokens are billed separately, usually with output priced higher (A). Tokens are subword units, not words or characters (B). Images and PDFs are converted to tokens roughly proportional to size or page count (C). The context window covers input plus output, and output is capped by max_tokens and the model's limit (D is wrong). Tokenizers differ between model families, so counts are not identical (E is wrong); use the token counting endpoint for the target model.
+Input and output tokens are billed separately, usually with output priced higher (A). Tokens are subword units, not words or characters (B). Images and PDFs are converted to tokens roughly proportional to size or page count (C). The context window covers input plus output, and output is capped by max_tokens and the model's limit (D is wrong). Tokenizers differ between models, so counts are not identical (E is wrong): Claude 4.7 and later models use a newer tokenizer that produces roughly 30 percent more tokens for the same text; use the token counting endpoint for the target model.
 
-Fuente oficial: [Anthropic Docs: Claude developer guide & API reference](https://docs.anthropic.com/en/docs/welcome)
+Fuente oficial: [Anthropic Docs: Token counting](https://platform.claude.com/docs/en/build-with-claude/token-counting)
 
 Pregunta 35
 The summarization feature must process 50,000 documents overnight with no interactive user waiting. Which optimization is most appropriate?
@@ -514,7 +514,7 @@ D. Thinking tokens count as input tokens
 Respuesta correcta: B
 
 Explicación
-Extended thinking produces reasoning tokens that are billed as output tokens at the output rate and count toward max_tokens, and budget_tokens must be smaller than max_tokens, so max_tokens must leave room for both thinking and the final answer. They are not free (A), do not replace a system prompt (C) and are not input tokens (D), although prior thinking blocks may need to be passed back in tool-use turns.
+Extended thinking produces reasoning tokens that are billed as output tokens at the output rate and count toward max_tokens, and in manual extended thinking (deprecated on Claude 4.6 and rejected on 4.7+) budget_tokens must be smaller than max_tokens; with adaptive thinking there is no budget, but thinking tokens still count toward max_tokens. Either way max_tokens must leave room for both thinking and the final answer. They are not free (A), do not replace a system prompt (C) and are not input tokens (D), although prior thinking blocks may need to be passed back in tool-use turns.
 
 Fuente oficial: [Anthropic Docs: Claude developer guide & API reference](https://docs.anthropic.com/en/docs/welcome)
 
@@ -544,7 +544,7 @@ Respuesta correcta: A
 Explicación
 Resending the entire history makes input cost grow with every turn. Replacing older turns with a compact running summary keeps the context small, directly cutting input tokens, at the cost of some detail loss. Lowering max_tokens (B) limits output only. A stop sequence (C) just ends generation at a string and does not shrink the history. Rotating API keys (D) has no effect on token counts and could violate usage policies.
 
-Fuente oficial: [Anthropic Docs: Claude developer guide & API reference](https://docs.anthropic.com/en/docs/welcome)
+Fuente oficial: [Anthropic Engineering: Effective context engineering for AI agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents)
 
 Pregunta 39
 Which prompt engineering techniques are recommended for improving Claude's accuracy on complex tasks? (Select all that apply)
@@ -559,7 +559,7 @@ Respuesta correcta: A, B, C y E
 Explicación
 Anthropic's prompting guidance recommends few-shot examples (A), XML tags to separate instructions, context and data (B), letting the model think step by step before answering (C), and giving a clear role and explicit success criteria (E). Vague instructions (D) produce inconsistent output; Claude does best with clear, direct, specific instructions, and creativity is better directed explicitly when wanted.
 
-Fuente oficial: [Anthropic Docs: Prompt engineering best practices](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview)
+Fuente oficial: [Anthropic Docs: Prompting best practices](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices)
 
 Pregunta 40
 What distinguishes context engineering from prompt engineering?
@@ -573,7 +573,7 @@ Respuesta correcta: B
 Explicación
 Prompt engineering is about wording instructions well. Context engineering is broader: deciding what goes into the limited context window at each step (system prompt, tools, retrieved documents, history, memory, tool results) and how to curate, compact and retrieve it. This matters especially for agents running many turns. They are not synonyms (C), it is not only for models without tools (A), and it is not about raising max_tokens (D), which just caps output.
 
-Fuente oficial: [Anthropic Docs: Claude developer guide & API reference](https://docs.anthropic.com/en/docs/welcome)
+Fuente oficial: [Anthropic Engineering: Effective context engineering for AI agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents)
 
 Pregunta 41
 Where should a large, static reference document be placed in a prompt for best results?
@@ -587,10 +587,10 @@ Respuesta correcta: B
 Explicación
 Anthropic recommends putting long documents near the top of the prompt, above the query and instructions, wrapped in XML tags; placing the question at the end can improve response quality noticeably on long inputs. A stable document at the start also forms a cacheable prefix, where a cache breakpoint after it lets later requests reuse it. Placing it after the question (A) loses both benefits. Splitting it into sentences interleaved with instructions (C) destroys structure and caching. The assistant prefill (D) is for starting the response, not for supplying context.
 
-Fuente oficial: [Anthropic Docs: Prompt caching](https://docs.anthropic.com/en/docs/build-with-claude/prompt-caching)
+Fuente oficial: [Anthropic Docs: Prompting best practices](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices)
 
 Pregunta 42
-Which is the correct use of response prefilling?
+Which describes response prefilling (unsupported on Claude 4.6 and later)?
 A. Adding a final assistant message whose content begins the desired output, which the model then continues
 B. Adding a system message that describes the output format
 C. Setting a stop sequence at the start of the output
@@ -599,7 +599,7 @@ D. Sending the expected answer in the user turn and asking for confirmation
 Respuesta correcta: A
 
 Explicación
-Prefilling means ending the messages array with a partial assistant turn, so the model continues from that text, steering format (for example starting with an opening brace). A system message (B) is not a prefill, and the system prompt is a separate parameter. A stop sequence (C) ends output rather than starting it. Putting the answer in the user turn (D) is not prefill. Note that newer Claude models no longer support prefill, where structured outputs or tool use with forced schema are the preferred alternatives; the concept itself is still defined as in A.
+Prefilling means ending the messages array with a partial assistant turn, so the model continues from that text, steering format (for example starting with an opening brace). A system message (B) is not a prefill, and the system prompt is a separate parameter. A stop sequence (C) ends output rather than starting it. Putting the answer in the user turn (D) is not prefill. Note that Claude 4.6 and later reject prefill with a 400 error; use structured outputs or system-prompt instructions there. The concept itself is still defined as in A.
 
 Fuente oficial: [Anthropic Docs: Prompt engineering best practices](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview)
 
@@ -615,7 +615,7 @@ Respuesta correcta: B
 Explicación
 Long contexts degrade quality before they are full: as the window fills with stale, redundant or low-value content (old tool outputs, dead ends), relevant details compete with noise and the model's attention is diluted, sometimes called context rot. The remedy is context engineering: compaction, summarizing, clearing old tool results and keeping memory notes. The API does not silently drop messages (A). Per-token price does not rise with length in a way that affects accuracy (C). Temperature is a fixed request parameter and never drifts (D).
 
-Fuente oficial: [Anthropic Research: Building effective agents](https://www.anthropic.com/research/building-effective-agents)
+Fuente oficial: [Anthropic Engineering: Effective context engineering for AI agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents)
 
 Pregunta 44
 Which practices help keep tool results from overwhelming an agent's context? (Select all that apply)
@@ -630,7 +630,7 @@ Respuesta correcta: A, B y C
 Explicación
 Tool outputs consume context on every subsequent turn, so keep them high-signal: return only needed fields (A), paginate and let the agent ask for more (B), and store large artifacts outside the context and return a reference or ID (C). Returning the full unmodified payload (D) floods the window with noise and cost. Base64 (E) does not reduce tokens; it typically inflates them and makes content less readable to the model.
 
-Fuente oficial: [Anthropic Research: Building effective agents](https://www.anthropic.com/research/building-effective-agents)
+Fuente oficial: [Anthropic Engineering: Effective context engineering for AI agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents)
 
 Pregunta 45
 Which practice best protects an API key used by a server-side Claude integration?
@@ -659,7 +659,7 @@ Respuesta correcta: A, B, C y E
 Explicación
 Prompt injection cannot be solved by the model alone, so use defense in depth: delimit untrusted content and tell the model it is data, not instructions (A); require human approval or policy checks before high-impact actions (B); apply least privilege to tools and credentials so a hijacked agent can do little harm (C); and validate or sanitize inputs and outputs in application code (E). Trusting the model to ignore all malicious instructions (D) fails because injections can be crafted to bypass it, and no single layer is reliable.
 
-Fuente oficial: [Anthropic Docs: Claude developer guide & API reference](https://docs.anthropic.com/en/docs/welcome)
+Fuente oficial: [Anthropic Docs: Mitigate jailbreaks and prompt injections](https://platform.claude.com/docs/en/test-and-evaluate/strengthen-guardrails/mitigate-jailbreaks)
 
 Pregunta 47
 An agent has a tool that can delete records from a production database. What is the appropriate control?
@@ -687,7 +687,7 @@ Respuesta correcta: B
 Explicación
 Hooks are user-defined commands that Claude Code executes at lifecycle events such as PreToolUse, PostToolUse or UserPromptSubmit. Because they run as code outside the model, they enforce rules deterministically: a PreToolUse hook can block edits to protected files or dangerous commands regardless of what the model decides or is told. They are not a speed feature (A), not the transcript store (C) and do not enlarge the context window (D).
 
-Fuente oficial: [Anthropic Docs: Claude developer guide & API reference](https://docs.anthropic.com/en/docs/welcome)
+Fuente oficial: [Claude Code docs: Hooks guide](https://code.claude.com/docs/en/hooks-guide)
 
 Pregunta 49
 Which elements make up a tool definition sent to the Messages API? (Select all that apply)
@@ -731,7 +731,7 @@ Respuesta correcta: A, B y C
 Explicación
 MCP servers expose three core primitives: tools (functions the model can invoke to act, model-controlled), resources (data the client can read to add context, application-controlled) and prompts (reusable templates, typically user-invoked). Model weights for local inference (D) and billing accounts (E) are not part of the protocol; MCP carries capabilities and context, not models or accounting.
 
-Fuente oficial: [Anthropic Docs: Model Context Protocol (MCP)](https://docs.anthropic.com/en/docs/agents-and-tools/mcp)
+Fuente oficial: [MCP Docs: Server concepts](https://modelcontextprotocol.io/docs/learn/server-concepts)
 
 Pregunta 52
 A tool named get_data has a description 'gets data'. Agents frequently call it inappropriately. What is the best fix?
@@ -745,7 +745,7 @@ Respuesta correcta: B
 Explicación
 The model chooses tools mainly from their names and descriptions, so a vague description like 'gets data' invites misuse. A precise description should say what is returned, parameter meanings and formats, when to use the tool, when not to and any limitations. Renaming to get_data_v2 (A) does not add information. Reducing to one tool (C) removes capability and does not solve ambiguity. Temperature zero (D) makes behavior more consistent but not more correct about when to call the tool.
 
-Fuente oficial: [Anthropic Research: Building effective agents](https://www.anthropic.com/research/building-effective-agents)
+Fuente oficial: [Anthropic Docs: Define tools](https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools)
 
 Pregunta 53
 When an assistant response contains multiple parallel tool_use blocks, how should the client respond?
@@ -792,7 +792,7 @@ E. Unrecoverable tool error
 Respuesta correcta: A, B, C y E
 
 Explicación
-A production loop needs several independent exits so it can never run forever or burn money. A max-iteration cap bounds runaway loops, a budget limit (tokens, cost, time) bounds spend, a successful end_turn/stop_reason signals the task is done, and an unrecoverable tool error should abort rather than retry endlessly. The original list skipped letter D, so a distractor was added: making a tool call is not a stopping condition, since the whole point of the loop is to keep calling tools until one of the real exit criteria triggers. Key unchanged: A, B, C and E.
+A production loop needs several independent exits so it can never run forever or burn money. A max-iteration cap bounds runaway loops, a budget limit (tokens, cost, time) bounds spend, a successful end_turn/stop_reason signals the task is done, and an unrecoverable tool error should abort rather than retry endlessly. Making a tool call is not a stopping condition, since the whole point of the loop is to keep calling tools until one of the real exit criteria triggers.
 
 Fuente oficial: [Anthropic Research: Building effective agents](https://www.anthropic.com/research/building-effective-agents)
 
@@ -808,7 +808,7 @@ Respuesta correcta: B
 Explicación
 Sub-agents each investigate a separate question in a fresh context window and return only a condensed result to the lead agent. This keeps the main context uncluttered and allows parallel exploration, which is why multi-agent research setups outperform a single agent on broad queries. They do not remove the need for tools (sub-agents use tools too), and they typically increase total token usage rather than lowering it. They also cannot guarantee factual accuracy; that still requires verification, citations and evals.
 
-Fuente oficial: [Anthropic Research: Building effective agents](https://www.anthropic.com/research/building-effective-agents)
+Fuente oficial: [Anthropic Engineering: How we built our multi-agent research system](https://www.anthropic.com/engineering/multi-agent-research-system)
 
 Pregunta 4
 A developer replaces a deterministic pipeline with an autonomous agent. Latency triples and results are inconsistent. What principle was violated?
@@ -850,7 +850,7 @@ Respuesta correcta: A
 Explicación
 Voting runs the same task multiple times independently and aggregates results, raising confidence where one pass could miss something. Vulnerability review is the classic fit: different passes flag different issues and a finding raised by several reviewers is more trustworthy. Translating to five languages is sectioning (independent subtasks in parallel), not voting, since each output is different. Routing tickets is a classification/routing problem and summarizing an article is a single-pass task, with no benefit from redundant votes.
 
-Fuente oficial: [Anthropic Docs: Claude developer guide & API reference](https://docs.anthropic.com/en/docs/welcome)
+Fuente oficial: [Anthropic Research: Building effective agents](https://www.anthropic.com/research/building-effective-agents)
 
 Pregunta 7
 Which technique keeps an agent effective as context accumulates over 100s of turns?
@@ -864,7 +864,7 @@ Respuesta correcta: B
 Explicación
 As history grows over hundreds of turns, context fills with stale tool output and quality degrades. Compaction (summarizing older turns, clearing old tool results) plus external memory keeps the relevant state while freeing space. Disabling tools would cripple the agent. Raising max_tokens only enlarges the output cap and does not shrink or manage the input context. Raising temperature adds randomness and has no effect on context accumulation.
 
-Fuente oficial: [Anthropic Research: Building effective agents](https://www.anthropic.com/research/building-effective-agents)
+Fuente oficial: [Anthropic Docs: Context windows](https://platform.claude.com/docs/en/build-with-claude/context-windows)
 
 Pregunta 8
 What does 'human in the loop' mean in an agentic system?
@@ -892,7 +892,7 @@ Respuesta correcta: A
 Explicación
 The anthropic-version header takes a date string such as 2023-06-01, which pins the API behavior version. It is not semantic versioning, not a model ID (the model is a separate body parameter), and not an integer. Date-based versions let Anthropic ship dated, backward-compatible API contracts that clients opt in to explicitly.
 
-Fuente oficial: [Anthropic Docs: Claude developer guide & API reference](https://docs.anthropic.com/en/docs/welcome)
+Fuente oficial: [Anthropic Docs: API versioning](https://platform.claude.com/docs/en/api/versioning)
 
 Pregunta 10
 What does a response containing both text and tool_use blocks indicate?
@@ -938,7 +938,7 @@ The Messages API is stateless: it remembers nothing between calls, so the client
 Fuente oficial: [Anthropic Docs: Claude developer guide & API reference](https://docs.anthropic.com/en/docs/welcome)
 
 Pregunta 23
-Which describes an appropriate use of the assistant prefill in a production integration?
+Which describes an appropriate use of the assistant prefill on a model that still supports it (Claude 4.5 or earlier)?
 A. Forcing the response to begin with a specific character or phrase to enforce format
 B. Storing the previous answer so the model does not repeat itself
 C. Providing the tool result
@@ -947,7 +947,7 @@ D. Setting the system prompt for the turn
 Respuesta correcta: A
 
 Explicación
-Prefilling the start of the assistant turn forces the output to begin with a specific character or phrase (for example an opening brace for JSON) and so steers format cheaply. It is not memory for the previous answer (history is sent as normal turns), it is not how tool results are returned (those go in a user message as tool_result blocks), and the system prompt is a separate parameter. Note that newer models no longer support prefill on the last assistant turn; there, prefer structured outputs or explicit format instructions. Key unchanged as the best answer in this list.
+Prefilling the start of the assistant turn forces the output to begin with a specific character or phrase (for example an opening brace for JSON) and so steers format cheaply. It is not memory for the previous answer (history is sent as normal turns), it is not how tool results are returned (those go in a user message as tool_result blocks), and the system prompt is a separate parameter. Note that Claude 4.6 and later return a 400 for a final assistant turn; there, prefer structured outputs or explicit format instructions.
 
 Fuente oficial: [Anthropic Docs: Prompt engineering best practices](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview)
 
@@ -1039,14 +1039,14 @@ Fuente oficial: [Anthropic Docs: Claude developer guide & API reference](https:/
 Pregunta 30
 A classification task runs at high volume with strict latency requirements and a small label set. Which approach is most appropriate?
 A. The largest available model
-B. A small, fast model at low temperature validated against an eval set with escalation for low confidence cases
+B. A small, fast model validated against an eval set, with escalation for low-confidence cases
 C. A large model with a long chain-of-thought prompt
 D. Multiple large models voting
 
 Respuesta correcta: B
 
 Explicación
-For high-volume, latency-sensitive classification with few labels, a small fast model at low temperature is cheap and accurate enough, provided you validate it on an eval set and escalate low-confidence cases to a larger model. The largest model costs more and is slower for no measured gain. Long chain-of-thought adds tokens and latency to a task that does not need deep reasoning. Multiple large models voting multiplies cost and latency, violating the stated constraints.
+For high-volume, latency-sensitive classification with few labels, a small fast model is cheap and accurate enough, provided you validate it on an eval set and escalate low-confidence cases to a larger model. The largest model costs more and is slower for no measured gain. Long chain-of-thought adds tokens and latency to a task that does not need deep reasoning. Multiple large models voting multiplies cost and latency, violating the stated constraints.
 
 Fuente oficial: [Anthropic Docs: Claude developer guide & API reference](https://docs.anthropic.com/en/docs/welcome)
 
@@ -1068,19 +1068,19 @@ Fuente oficial: [Anthropic Docs: Prompt caching](https://docs.anthropic.com/en/d
 Pregunta 32
 What is the correct relationship between the context window and max_tokens?
 A. max_tokens is the size of the context window
-B. max_tokens caps the response and input tokens + max_tokens must fit inside the context window
+B. max_tokens caps the generated output, and input plus output share the context window
 C. max_tokens counts input tokens only
 D. max_tokens has no relationship to the context window
 
 Respuesta correcta: B
 
 Explicación
-max_tokens is a cap on generated output only, and the model must fit input tokens plus the output within the context window. It is therefore not the window size, does not count input, and is clearly related to the window. Setting it to the model maximum adds nothing useful and can cause truncation or rejected requests with long inputs; size it to realistic output length plus headroom.
+max_tokens is a cap on generated output only, and input tokens plus generated output share the context window (on Claude 4.5+ a request whose input plus max_tokens exceeds the window is accepted, but generation can stop with stop_reason model_context_window_exceeded; earlier models return a validation error). It is therefore not the window size, does not count input, and is clearly related to the window. Setting it to the model maximum adds nothing useful and can cause truncation with long inputs; size it to realistic output length plus headroom.
 
 Fuente oficial: [Anthropic Docs: Claude developer guide & API reference](https://docs.anthropic.com/en/docs/welcome)
 
 Pregunta 33
-Which is a legitimate reason to raise temperature above the default for a task?
+Which is a legitimate reason to raise temperature above the default on a model that accepts sampling parameters (Claude 4.6 or earlier)?
 A. To produce more varied creative writing or brainstorming output
 B. To improve accuracy on factual extraction
 C. To reduce token cost
@@ -1089,7 +1089,7 @@ D. To force valid JSON output
 Respuesta correcta: A
 
 Explicación
-Higher temperature makes sampling more diverse, which helps creative writing and brainstorming. It does not improve factual accuracy (low temperature is better for extraction and analysis), does not reduce token cost, and cannot force valid JSON; structured outputs or tool schemas do that. Even temperature 0 is not fully deterministic, but it is the right direction for analytic tasks.
+Higher temperature makes sampling more diverse, which helps creative writing and brainstorming. It does not improve factual accuracy (low temperature is better for extraction and analysis), does not reduce token cost, and cannot force valid JSON; structured outputs or tool schemas do that. Even temperature 0 is not fully deterministic, but it is the right direction for analytic tasks. On Claude 4.7 and later any non-default temperature, top_p or top_k returns a 400, so steer style through prompting instead.
 
 Fuente oficial: [Anthropic Docs: Claude developer guide & API reference](https://docs.anthropic.com/en/docs/welcome)
 
@@ -1104,7 +1104,7 @@ E. Enabling extended thinking on every request
 Respuesta correcta: A, B y C
 
 Explicación
-Perceived latency is dominated by time to first token and by generation speed. Streaming shows text as it is generated, a smaller faster model produces tokens sooner, and caching a large static prefix cuts processing time for the prompt. Asking for more verbose answers lengthens generation time, and enabling extended thinking on every request adds thinking tokens before the answer starts, both increasing latency. Key unchanged: A, B and C.
+Perceived latency is dominated by time to first token and by generation speed. Streaming shows text as it is generated, a smaller faster model produces tokens sooner, and caching a large static prefix cuts processing time for the prompt. Asking for more verbose answers lengthens generation time, and enabling extended thinking on every request adds thinking tokens before the answer starts, both increasing latency.
 
 Fuente oficial: [Anthropic Docs: Claude developer guide & API reference](https://docs.anthropic.com/en/docs/welcome)
 
@@ -1146,9 +1146,9 @@ D. It is required for any request over 1000 tokens
 Respuesta correcta: B
 
 Explicación
-The Message Batches API processes large sets of requests asynchronously (results typically within 24 hours) at a substantial discount, around 50 percent off standard prices. It suits backfills, bulk classification, offline summarization and eval runs. It is not synchronous or lower latency, does not raise context limits, and is optional: nothing requires batch for requests over some token count.
+The Message Batches API processes large sets of requests asynchronously (most batches finish within 1 hour, and the maximum is 24 hours) at a substantial discount, around 50 percent off standard prices. It suits backfills, bulk classification, offline summarization and eval runs. It is not synchronous or lower latency, does not raise context limits, and is optional: nothing requires batch for requests over some token count.
 
-Fuente oficial: [Anthropic Docs: Claude developer guide & API reference](https://docs.anthropic.com/en/docs/welcome)
+Fuente oficial: [Anthropic Docs: Batch processing](https://platform.claude.com/docs/en/build-with-claude/batch-processing)
 
 Pregunta 38
 Which is the best interpretation of 'the smallest model that clears the bar'?
@@ -1205,7 +1205,7 @@ Respuesta correcta: A, B y C
 Explicación
 When a task exceeds the context window, durable state must live outside it: writing decisions to an external file or memory, keeping a compact running summary, and maintaining a persistent plan or task document that the agent re-reads. Relying on the model to recall earlier turns fails once they are truncated or compacted away. Increasing max_tokens only affects output length and does nothing for memory of past turns.
 
-Fuente oficial: [Anthropic Research: Building effective agents](https://www.anthropic.com/research/building-effective-agents)
+Fuente oficial: [Anthropic Engineering: How we built our multi-agent research system](https://www.anthropic.com/engineering/multi-agent-research-system)
 
 Pregunta 42
 Which instruction phrasing is most likely to produce reliable behavior?
@@ -1260,7 +1260,7 @@ E. Grant the model broader tool access
 Respuesta correcta: A, B y C
 
 Explicación
-No single defense stops injection, so layer them: delimiters (such as XML tags) mark user text as data, keeping secrets out of the system prompt means a successful leak exposes nothing sensitive, and output filtering catches leaks before they reach the user. Option D was reworded because 'I never obey injected instructions' is not a defense you can rely on; the model can be tricked, so a promise of refusal is not a control. Granting broader tool access increases the blast radius, the opposite of the goal. Key unchanged: A, B and C.
+No single defense stops injection, so layer them: delimiters (such as XML tags) mark user text as data, keeping secrets out of the system prompt means a successful leak exposes nothing sensitive, and output filtering catches leaks before they reach the user. Trusting the model to always refuse injected instructions (D) is not a defense you can rely on; the model can be tricked, so a promise of refusal is not a control. Granting broader tool access increases the blast radius, the opposite of the goal.
 
 Fuente oficial: [Anthropic Docs: Prompt engineering best practices](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview)
 
@@ -1276,7 +1276,7 @@ Respuesta correcta: B
 Explicación
 Agent tools should run with least privilege: only the permissions needed for the task, ideally scoped, short-lived and per-agent, so a mistaken or hijacked call does limited damage. Administrator credentials or reused developer credentials give far too much power. Embedding secrets in a tool description puts them in the context window, where the model can reveal or leak them; credentials belong in the execution layer.
 
-Fuente oficial: [Anthropic Research: Building effective agents](https://www.anthropic.com/research/building-effective-agents)
+Fuente oficial: [Anthropic Docs: Mitigate jailbreaks and prompt injections](https://platform.claude.com/docs/en/test-and-evaluate/strengthen-guardrails/mitigate-jailbreaks)
 
 Pregunta 47
 What is a guardrail in the context of a deployed LLM application?
@@ -1320,7 +1320,7 @@ Respuesta correcta: A y B
 Explicación
 MCP defines two standard transports: stdio, where the client launches a local server as a subprocess and talks over stdin/stdout, and HTTP-based remote transport (Streamable HTTP, which replaced the older HTTP+SSE). Direct database connections are what a server might do internally, not a protocol transport. Raw TCP sockets and SMTP email are not part of the MCP specification.
 
-Fuente oficial: [Anthropic Docs: Model Context Protocol (MCP)](https://docs.anthropic.com/en/docs/agents-and-tools/mcp)
+Fuente oficial: [MCP Specification: Transports](https://modelcontextprotocol.io/specification/2025-06-18/basic/transports)
 
 Pregunta 50
 When designing a tool for an agent, which description is most likely to produce correct usage?
@@ -1334,7 +1334,7 @@ Respuesta correcta: B
 Explicación
 The model chooses and uses tools based solely on their descriptions, so a good description states what the tool searches (corpus), the query syntax, limits, formats, and how it differs from similar tools. A one-line 'Search takes a query' leaves too much ambiguity. Pasting source code is noisy and not written for the model, and user-facing descriptions focus on the wrong audience. Treat tool design as interface design for the model.
 
-Fuente oficial: [Anthropic Research: Building effective agents](https://www.anthropic.com/research/building-effective-agents)
+Fuente oficial: [Anthropic Docs: Define tools](https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools)
 
 Pregunta 51
 What is the difference between an MCP resource and an MCP tool?
@@ -1348,7 +1348,7 @@ Respuesta correcta: A
 Explicación
 In MCP, tools are functions the model decides to invoke and that can have side effects, while resources are data (files, records, schemas) exposed for the application to read and supply as context. Prompts are user-controlled templates. Resources are not just read-only tools renamed, because the control model differs (application versus model). Tools are not static files and resources do not execute code, and resources can be text or binary of many types, not only images.
 
-Fuente oficial: [Anthropic Docs: Model Context Protocol (MCP)](https://docs.anthropic.com/en/docs/agents-and-tools/mcp)
+Fuente oficial: [MCP Docs: Server concepts](https://modelcontextprotocol.io/docs/learn/server-concepts)
 
 Pregunta 52
 An agent has 15 similar tools and frequently picks the wrong one. Which remedies are appropriate? (Select all that apply)
@@ -1411,7 +1411,7 @@ Respuesta correcta: B
 Explicación
 Every tool result is appended to the conversation, so 40 calls at 4000 tokens add roughly 160k tokens of mostly irrelevant JSON. That fills the context window, raises cost and latency, and degrades reasoning because the relevant signal is buried in noise. The fix is to design tool returns as carefully as prompts: project only the needed fields, paginate, truncate with a continuation handle, or store large output externally and return a small reference. Option A is wrong because the damage is not limited to latency, and fixes are needed. Option C is wrong because the API never summarizes tool output on its own. Option D is wrong because tool results are ordinary content blocks and count fully toward the context window and input token billing.
 
-Fuente oficial: [Anthropic Research: Building effective agents](https://www.anthropic.com/research/building-effective-agents)
+Fuente oficial: [Anthropic Docs: Define tools](https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools)
 
 Pregunta 3
 Which statements correctly describe the trade-offs of agentic systems? (Select all that apply)
@@ -1501,7 +1501,7 @@ Fuente oficial: [Anthropic Research: Building effective agents](https://www.anth
 
 Pregunta 9
 A request returns 400 with a message about messages ordering. Which cause is most likely?
-A. Two consecutive messages with the same role or a first message that is not from the user
+A. A tool_result whose tool_use_id has no matching tool_use in the preceding assistant turn, or otherwise broken role/content structure
 B. The API key is expired
 C. The account exceeded its rate limit
 D. The model string is deprecated
@@ -1509,7 +1509,7 @@ D. The model string is deprecated
 Respuesta correcta: A
 
 Explicación
-A 400 invalid_request_error means the payload is malformed, not that authentication, quota or model availability failed. A message-ordering error typically points to a conversation that does not begin with a user turn or to broken role structure (note that the API may merge consecutive same-role messages, but a first assistant message or a tool_result that does not match a preceding tool_use still fails). Option B would produce a 401 authentication_error, option C a 429 rate_limit_error, and option D would produce a 404 not_found_error or a deprecation warning rather than an ordering complaint. Read the error type and message first, since it tells you which layer failed.
+A 400 invalid_request_error means the payload is malformed, not that authentication, quota or model availability failed. A message-structure error typically points to broken role or content structure, for example a tool_result that does not match a preceding tool_use. Consecutive same-role messages are not the cause, because the API combines them into a single turn. Option B would produce a 401 authentication_error, option C a 429 rate_limit_error, and option D would produce a 404 not_found_error or a deprecation warning rather than an ordering complaint. Read the error type and message first, since it tells you which layer failed.
 
 Fuente oficial: [Anthropic Docs: Tool use (function calling)](https://docs.anthropic.com/en/docs/build-with-claude/tool-use)
 
@@ -1554,7 +1554,7 @@ Respuesta correcta: A
 Explicación
 stop_reason end_turn means the model finished its response naturally: it was not truncated by max_tokens, did not emit a custom stop sequence, and did not pause to request a tool. In an agent loop this is the normal exit condition, whereas tool_use means run the tool and continue. Option B is wrong because nothing is closed, you can append another user message. Option C describes stop_reason max_tokens. Option D describes stop_reason stop_sequence. Branch explicitly on every stop_reason value (also pause_turn and refusal) rather than assuming success.
 
-Fuente oficial: [Anthropic Research: Building effective agents](https://www.anthropic.com/research/building-effective-agents)
+Fuente oficial: [Anthropic Docs: Handling stop reasons](https://platform.claude.com/docs/en/build-with-claude/handling-stop-reasons)
 
 Pregunta 13
 Which approaches correctly bound the size of a conversation sent to the API? (Select all that apply)
@@ -1687,7 +1687,7 @@ Debugging an LLM incident requires reproducing exactly what happened. The reques
 Fuente oficial: [Anthropic Docs: Claude developer guide & API reference](https://docs.anthropic.com/en/docs/welcome)
 
 Pregunta 22
-What is the effect of including an assistant message as the final entry in the messages array?
+What is the effect of including an assistant message as the final entry in the messages array on a model that supports prefill (before Claude 4.6)?
 A. The model continues that message rather than starting a new one
 B. The API returns an error for non-alternating roles
 C. The message is ignored
@@ -1696,7 +1696,7 @@ D. The model treats it as a system instruction
 Respuesta correcta: A
 
 Explicación
-If the last entry in messages has the assistant role, Claude continues from that text instead of starting a new turn, a technique called prefilling that forces format (for example starting with an opening brace) and skips preambles. The prefill is not echoed in the response, so the client must prepend it. Option B is wrong because a trailing assistant message is valid. Option C is wrong because the content directly shapes the output. Option D is wrong because system instructions go in the system parameter. Note that prefilling is not supported on some newer models, which return an error, so prefer structured outputs or instructions there.
+If the last entry in messages has the assistant role, Claude continues from that text instead of starting a new turn, a technique called prefilling that forces format (for example starting with an opening brace) and skips preambles. The prefill is not echoed in the response, so the client must prepend it. Option B is wrong because a trailing assistant message is valid. Option C is wrong because the content directly shapes the output. Option D is wrong because system instructions go in the system parameter. Note that Claude 4.6 and later and Mythos Preview return a 400 for a trailing assistant message, so prefer structured outputs or instructions there.
 
 Fuente oficial: [Anthropic Docs: Prompt engineering best practices](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview)
 
@@ -1753,7 +1753,7 @@ E. The response is being streamed
 Respuesta correcta: A, B y C
 
 Explicación
-cache_read_input_tokens stays at zero when no cache entry was matched. The prefix may be shorter than the minimum cacheable length (for example 1024 tokens on many models, 2048 or 4096 on others) (A). Variable content such as a timestamp before the breakpoint changes the prefix every time (B). The entry may have expired because requests are further apart than the TTL, 5 minutes by default (C). Option D is wrong because temperature does not affect caching. Option E is wrong because streaming works with caching. Diff the exact serialized prefix between consecutive requests, looking for timestamps, request IDs and reordered tools.
+cache_read_input_tokens stays at zero when no cache entry was matched. The prefix may be shorter than the minimum cacheable length (it varies by model: 512 on Opus 5.5, Sonnet 5.5 and Haiku 5.5; 1024 on Sonnet 5/4.6/4.5; 2048 on Opus 4.7; 4096 on Opus 4.6/4.5 and Haiku 4.5) (A). Variable content such as a timestamp before the breakpoint changes the prefix every time (B). The entry may have expired because requests are further apart than the TTL, 5 minutes by default (C). Option D is wrong because temperature does not affect caching. Option E is wrong because streaming works with caching. Diff the exact serialized prefix between consecutive requests, looking for timestamps, request IDs and reordered tools.
 
 Fuente oficial: [Anthropic Docs: Prompt caching](https://docs.anthropic.com/en/docs/build-with-claude/prompt-caching)
 
@@ -1769,11 +1769,11 @@ Respuesta correcta: B
 Explicación
 A sub-agent in Claude Code runs in its own context window with its own system prompt, tool restrictions and optionally model, and returns only a result to the main session. This keeps verbose intermediate work such as test generation attempts and file reads out of the main conversation. Option A is wrong because a model is not cheaper automatically, you must configure it. Option C is wrong because permissions still apply. Option D is wrong because each agent still has a context limit; sub-agents only help by isolating context.
 
-Fuente oficial: [Anthropic Research: Building effective agents](https://www.anthropic.com/research/building-effective-agents)
+Fuente oficial: [Claude Code Docs: Subagents](https://code.claude.com/docs/en/sub-agents)
 
 Pregunta 28
 A developer wants Claude Code to know the project's test command without being told each session. Where does that belong?
-A. .claudedotmd at the project root
+A. CLAUDE.md at the project root
 B. In a comment in the main source file
 C. In the shell history
 D. In the API key configuration
@@ -1783,7 +1783,7 @@ Respuesta correcta: A
 Explicación
 CLAUDE.md in the project root is loaded automatically at the start of every Claude Code session, so it is the right place for persistent project knowledge such as build and test commands, directory layout, code style and non-obvious constraints. A source comment (B) is not reliably read, shell history (C) is not part of Claude's context, and API key configuration (D) holds credentials, not project instructions. Because CLAUDE.md consumes context every session, keep it concise and relevant.
 
-Fuente oficial: [Anthropic Docs: Claude developer guide & API reference](https://docs.anthropic.com/en/docs/welcome)
+Fuente oficial: [Claude Code Docs: Memory](https://code.claude.com/docs/en/memory)
 
 Pregunta 29
 An LLM feature passes all unit tests but users report poor quality. What does this most likely indicate?
@@ -1824,12 +1824,12 @@ D. Only when streaming is disabled
 Respuesta correcta: B
 
 Explicación
-Extended thinking spends additional tokens and latency on reasoning before answering, which pays off on complex multistep reasoning, math, coding and planning tasks, provided evals show an accuracy gain (B). Option A is wrong because more reasoning is not always better: it adds cost and latency for little gain on simple tasks. Option C is wrong because simple classification rarely benefits and the cost is wasteful. Option D is wrong because thinking is compatible with streaming, and in fact streaming is recommended for long outputs. Treat it as a per-task setting and size max_tokens to cover the thinking budget plus the answer.
+Extended thinking spends additional tokens and latency on reasoning before answering, which pays off on complex multistep reasoning, math, coding and planning tasks, provided evals show an accuracy gain (B). Option A is wrong because more reasoning is not always better: it adds cost and latency for little gain on simple tasks. Option C is wrong because simple classification rarely benefits and the cost is wasteful. Option D is wrong because thinking is compatible with streaming, and in fact streaming is recommended for long outputs. Treat it as a per-task setting and size max_tokens to cover thinking plus the answer. On Claude 4.7+ manual extended thinking (budget_tokens) is rejected with a 400; use adaptive thinking with output_config.effort.
 
 Fuente oficial: [Anthropic Docs: Claude developer guide & API reference](https://docs.anthropic.com/en/docs/welcome)
 
 Pregunta 32
-An application's cost is dominated by a 12,000 token system prompt sent on everyone of 2 lakh daily requests. What is the highest leverage optimization?
+An application's cost is dominated by a 12,000 token system prompt sent on everyone of 200,000 daily requests. What is the highest leverage optimization?
 A. Enable prompt caching on the system prompt
 B. Reduce max_tokens
 C. Switch to streaming
@@ -1969,7 +1969,7 @@ Respuesta correcta: B
 Explicación
 Caching works on a prefix in the order tools, system, then messages. Placing the breakpoint after the tool definitions (and system prompt and fixed reference material) and before user content makes the largest static prefix cacheable, while variable user content comes after and does not invalidate it (B). Option A is wrong because breakpoints do not affect execution speed, only prefill cost and latency for input. Option C is wrong because tools remain available. Option D is wrong because all tools are still sent and counted, just cheaply read from cache.
 
-Fuente oficial: [Anthropic Docs: Prompt engineering best practices](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview)
+Fuente oficial: [Anthropic Docs: Prompt caching](https://platform.claude.com/docs/en/build-with-claude/prompt-caching)
 
 Pregunta 42
 An agent's prompt contains 50 rules and it reliably follows the first 10 and the last five while ignoring the middle. What should the developer do?
@@ -2095,9 +2095,9 @@ D. The model's temperature setting only
 Respuesta correcta: A
 
 Explicación
-The model decides whether to call a tool by reading tool names and descriptions against the conversation, and your tool_choice setting can override that (auto, any, a specific tool or none) (A). Option B is wrong because array order is not what drives the decision. Option C is wrong because schema complexity affects argument quality, not whether the tool is chosen. Option D is wrong because temperature influences sampling but is not the determining factor. Forcing a tool via tool_choice is a standard way to get structured output.
+The model decides whether to call a tool by reading tool names and descriptions against the conversation, and your tool_choice setting can override that (auto, any, a specific tool or none) (A). Option B is wrong because array order is not what drives the decision. Option C is wrong because schema complexity affects argument quality, not whether the tool is chosen. Option D is wrong because temperature influences sampling but is not the determining factor. Forcing a tool via tool_choice works only on models that allow it; Claude Opus 5.5, Sonnet 5.5, Fable 5.x and Mythos 5.x return a 400, so use auto with strict tool use or structured outputs there.
 
-Fuente oficial: [Anthropic Docs: Tool use (function calling)](https://docs.anthropic.com/en/docs/build-with-claude/tool-use)
+Fuente oficial: [Anthropic Docs: Define tools](https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools)
 
 Pregunta 51
 An agent needs both to read files and to run shell commands. What is the safest tool design?
@@ -2124,9 +2124,9 @@ E. It executes the tool server-side
 Respuesta correcta: A, B y C
 
 Explicación
-tool_choice controls how the model uses tools: tool forces a specific named tool (A), any requires that some tool be used (B), and none prevents tool use for the request (C), with auto as the default. Option D is wrong because parameters are defined by the tool's input_schema in the tool definition. Option E is wrong because client tools are executed by your code, and the API only returns a tool_use block. Forcing a tool is the most reliable way to get schema-shaped JSON, though guaranteed conformance requires strict mode; the model otherwise follows the schema very reliably but not as a hard guarantee, and forced tool use is not allowed with extended thinking.
+tool_choice controls how the model uses tools: tool forces a specific named tool (A), any requires that some tool be used (B), and none prevents tool use for the request (C), with auto as the default. Option D is wrong because parameters are defined by the tool's input_schema in the tool definition. Option E is wrong because client tools are executed by your code, and the API only returns a tool_use block. Forcing a tool (any or tool) is rejected with a 400 on Claude Opus 5.5, Sonnet 5.5, Fable 5.x and Mythos 5.x, so use auto with strict tool use or structured outputs there. Forced use is also not allowed with manual extended thinking. Guaranteed schema conformance requires strict mode.
 
-Fuente oficial: [Anthropic Docs: Tool use (function calling)](https://docs.anthropic.com/en/docs/build-with-claude/tool-use)
+Fuente oficial: [Anthropic Docs: Define tools](https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools)
 
 Pregunta 53
 What problem does MCP primarily solve compared with writing bespoke integrations per application?
@@ -2217,7 +2217,7 @@ Respuesta correcta: B
 Explicación
 Long-running agents outlast a single context window, and compaction or truncation can drop earlier goals and progress. Keeping an explicit plan or task list in external state (a file, a to-do tool, memory) externalizes goals and progress so the agent can re-read them after compaction and stay oriented. It does not replace tools (A); it is usually maintained via tools. It has no effect on API rate limits (C), which are server-side quotas. It cannot guarantee completion (D), only improve the odds by reducing drift.
 
-Fuente oficial: [Anthropic Research: Building effective agents](https://www.anthropic.com/research/building-effective-agents)
+Fuente oficial: [Anthropic Engineering: Effective context engineering for AI agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents)
 
 Pregunta 6
 Which are valid reasons to insert a deterministic code step between two model calls in a workflow? (Select all that apply)
@@ -2246,7 +2246,7 @@ Respuesta correcta: B
 Explicación
 An agent that retries the same failing call identically is missing two things: error results the model can act on (a clear message saying what failed and what to change, returned with is_error so the model sees it) and a harness-level retry cap that forces a different strategy or escalates to a human or stops. A larger context window (A) does not change behavior, it only lets the loop run longer. Higher temperature (C) adds randomness but no information or limit. More tools (D) do not fix a loop on a failing one and can worsen tool selection.
 
-Fuente oficial: [Anthropic Research: Building effective agents](https://www.anthropic.com/research/building-effective-agents)
+Fuente oficial: [Anthropic Docs: Handle tool calls](https://platform.claude.com/docs/en/agents-and-tools/tool-use/handle-tool-calls)
 
 Pregunta 8
 Which describes the correct relationship between agents and tools?
@@ -2288,7 +2288,7 @@ Respuesta correcta: A
 Explicación
 The API requires that every tool_use block in an assistant turn be answered by a matching tool_result (same tool_use_id) in the very next user message, placed first in the content. This error appears when the client skipped one, for example when several parallel tool calls were made and only some results were returned, or other content was inserted in between. An invalid input_schema (B) is rejected at definition time with a different message. Missing tool permissions (C) would produce a permission/authentication error, not a message-structure error. A small max_tokens (D) causes stop_reason max_tokens, not this validation error.
 
-Fuente oficial: [Anthropic Docs: Tool use (function calling)](https://docs.anthropic.com/en/docs/build-with-claude/tool-use)
+Fuente oficial: [Anthropic Docs: Handle tool calls](https://platform.claude.com/docs/en/agents-and-tools/tool-use/handle-tool-calls)
 
 Pregunta 11
 Which are appropriate ways to expose Claude functionality to a mobile application? (Select all that apply)
@@ -2317,7 +2317,7 @@ Respuesta correcta: A
 Explicación
 The anthropic-ratelimit-* response headers (requests/tokens limit, remaining, and reset time as an RFC 3339 timestamp) report your current rate-limit capacity so clients can throttle themselves before receiving 429s. They do not report monetary cost (B); that comes from the usage object and billing tools. They carry no model confidence (C), which the API does not expose. The context window (D) is a model property tracked via usage and token counting, not by rate-limit headers.
 
-Fuente oficial: [Anthropic Docs: Claude developer guide & API reference](https://docs.anthropic.com/en/docs/welcome)
+Fuente oficial: [Anthropic Docs: Rate limits](https://platform.claude.com/docs/en/api/rate-limits)
 
 Pregunta 13
 Which describes the correct handling of a partially received stream when the connection drops?
@@ -2329,7 +2329,7 @@ D. Ignore the error since streaming is best-effort
 Respuesta correcta: B
 
 Explicación
-A dropped stream leaves a truncated response: a message_stop event (and a stop_reason in message_delta) was never received, so the content is incomplete and may even be cut mid-JSON or mid-tool-call. The robust handling is to detect the missing completion event, discard or flag the partial result, and retry with exponential backoff (or resume with the partial content as an assistant prefix where supported). Treating it as complete (A) risks acting on corrupted output. Continuing in a new request without context (C) loses what was already produced and the model cannot know where it stopped. Ignoring the error (D) hides failures; streaming is not best-effort.
+A dropped stream leaves a truncated response: a message_stop event (and a stop_reason in message_delta) was never received, so the content is incomplete and may even be cut mid-JSON or mid-tool-call. The robust handling is to detect the missing completion event, discard or flag the partial result, and retry with exponential backoff (on Claude 4.6 and later, resuming through an assistant prefill returns a 400, so retry the whole request or pass the partial text in a user turn). Treating it as complete (A) risks acting on corrupted output. Continuing in a new request without context (C) loses what was already produced and the model cannot know where it stopped. Ignoring the error (D) hides failures; streaming is not best-effort.
 
 Fuente oficial: [Anthropic Docs: Claude developer guide & API reference](https://docs.anthropic.com/en/docs/welcome)
 
@@ -2529,9 +2529,9 @@ D. The claude.md overwrites all settings files
 Respuesta correcta: A
 
 Explicación
-Claude Code applies settings by precedence: enterprise managed policy settings are highest and cannot be overridden, followed by command-line arguments, then local project settings, then shared project settings, then user settings. This lets organizations enforce security policy while developers keep flexibility where not restricted. User settings do not always win (B); they are the lowest. File modification time (C) is irrelevant. CLAUDE.md (D) provides instructions and memory for the model, not configuration, and it cannot override settings files or permissions.
+Claude Code applies settings by precedence: enterprise managed policy settings are highest and cannot be overridden by ordinary settings, followed by command-line arguments, then local project settings, then shared project settings, then user settings. This lets organizations enforce security policy while developers keep flexibility where not restricted. User settings do not always win (B); they are the lowest. File modification time (C) is irrelevant. CLAUDE.md (D) provides instructions and memory for the model, not configuration, and it cannot override settings files or permissions.
 
-Fuente oficial: [Anthropic Docs: Claude developer guide & API reference](https://docs.anthropic.com/en/docs/welcome)
+Fuente oficial: [Claude Code docs: Settings](https://code.claude.com/docs/en/settings)
 
 Pregunta 28
 Which tasks are well-suited to Claude Code as opposed to a direct API integration? (Select all that apply)
@@ -2692,7 +2692,7 @@ Fuente oficial: [Anthropic Docs: Claude developer guide & API reference](https:/
 
 Pregunta 39
 Which describes the correct order in which to apply prompt engineering techniques?
-A. Be clear and direct, add examples, allow reasoning, add structure with tags, assign a role. Then consider prefilling and chaining
+A. Be clear and direct, add examples, allow reasoning, add structure with tags, assign a role. Then consider structured outputs and chaining (prefill is unsupported on Claude 4.6+)
 B. Start with chain-of-thought and add clarity only if it fails
 C. Start by chaining prompts into a multi-call workflow
 D. Start by increasing the model size
@@ -2700,7 +2700,7 @@ D. Start by increasing the model size
 Respuesta correcta: A
 
 Explicación
-Anthropic's prompt engineering guidance runs from the most broadly effective and cheapest techniques to more advanced ones: be clear and direct, use examples (multishot), let the model think (chain of thought), structure with XML tags, give a role, and only then consider prefilling and prompt chaining. Starting from chain-of-thought (B) skips the basics that often fix the problem. Starting with chaining (C) adds complexity, latency and cost before you know it is needed. Increasing model size (D) is a costly last resort compared with improving the prompt.
+Anthropic's prompt engineering guidance runs from the most broadly effective and cheapest techniques to more advanced ones: be clear and direct, use examples (multishot), let the model think (chain of thought), structure with XML tags, give a role, and only then consider structured outputs (or prefill on pre-4.6 models) and prompt chaining. Starting from chain-of-thought (B) skips the basics that often fix the problem. Starting with chaining (C) adds complexity, latency and cost before you know it is needed. Increasing model size (D) is a costly last resort compared with improving the prompt.
 
 Fuente oficial: [Anthropic Docs: Claude developer guide & API reference](https://docs.anthropic.com/en/docs/welcome)
 
@@ -2717,7 +2717,7 @@ Respuesta correcta: A, B y C
 Explicación
 Context is a limited resource. Replacing full pages with goal-relevant extractive summaries (A) keeps the facts needed and drops bulk. Storing full pages externally and keeping identifiers plus summaries in context (B) lets the agent re-fetch details on demand (just-in-time retrieval). Dropping pages already judged irrelevant (C) removes pure noise. Keeping everything (D) is exactly the problem, since it saturates context and degrades focus. Merging pages into one unlabeled block (E) does not reduce tokens and removes the source structure the agent needs.
 
-Fuente oficial: [Anthropic Research: Building effective agents](https://www.anthropic.com/research/building-effective-agents)
+Fuente oficial: [Anthropic Engineering: Effective context engineering for AI agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents)
 
 Pregunta 41
 What is the most likely effect of a system prompt that is 15,000 tokens of loosely organized rules?
@@ -2801,7 +2801,7 @@ E. Setting retention limits and access controls on request logs
 Respuesta correcta: A, B, C y E
 
 Explicación
-Data leak risk is reduced in layers: redact or tokenize PII before sending (A), enforce access control in retrieval so the user only gets documents they may see (B), filter outputs for sensitive patterns such as keys or identifiers before display (C), and set retention limits and access controls on logs (E). Storing prompts and completions indefinitely (D) expands the exposure surface and is the opposite of data minimization. Note: option C originally read 'non-sensitive patterns', which was a typo and has been corrected to 'sensitive patterns'; the key remains A, B, C and E.
+Data leak risk is reduced in layers: redact or tokenize PII before sending (A), enforce access control in retrieval so the user only gets documents they may see (B), filter outputs for sensitive patterns such as keys or identifiers before display (C), and set retention limits and access controls on logs (E). Storing prompts and completions indefinitely (D) expands the exposure surface and is the opposite of data minimization.
 
 Fuente oficial: [Anthropic Docs: Claude developer guide & API reference](https://docs.anthropic.com/en/docs/welcome)
 
@@ -3035,7 +3035,7 @@ D. The request failed
 Respuesta correcta: A
 
 Explicación
-A is correct: stop_reason 'end_turn' with only a text block means the model decided it could answer without calling a tool, since with the default tool_choice of auto, tool use is optional. A tool call would have shown stop_reason 'tool_use' with a tool_use block. B is wrong because malformed tool definitions produce a 400 validation error rather than being silently ignored. C is wrong because client tools are executed by your code, never server-side, and server tools produce their own result blocks in the response. D is wrong because a failed request returns an HTTP error, not a successful response with a stop_reason. If you need a tool call, set tool_choice to 'any' or a specific tool; if the model skips tools it should use, improve the tool descriptions and the prompt.
+A is correct: stop_reason 'end_turn' with only a text block means the model decided it could answer without calling a tool, since with the default tool_choice of auto, tool use is optional. A tool call would have shown stop_reason 'tool_use' with a tool_use block. B is wrong because malformed tool definitions produce a 400 validation error rather than being silently ignored. C is wrong because client tools are executed by your code, never server-side, and server tools produce their own result blocks in the response. D is wrong because a failed request returns an HTTP error, not a successful response with a stop_reason. If you need a tool call, set tool_choice to 'any' or a specific tool (rejected with a 400 on Opus 5.5, Sonnet 5.5 and other 5.x models; use auto with strict tool use or structured outputs there); if the model skips tools it should use, improve the tool descriptions and the prompt.
 
 Fuente oficial: [Anthropic Docs: Tool use (function calling)](https://docs.anthropic.com/en/docs/build-with-claude/tool-use)
 
@@ -3178,7 +3178,7 @@ D. The model does not exist
 Respuesta correcta: A
 
 Explicación
-A is correct: HTTP 529 overloaded_error means the API is temporarily under heavy load across users, not a problem with your request, so retry with exponential backoff and jitter, bounded attempts, and a degraded fallback, and alert if it is sustained. B is wrong because exceeding the context window yields a 400 invalid_request_error. C is wrong because spending or usage limits show up as 429 or billing-related errors, not 529. D is wrong because an unknown model returns 404 not_found_error. Treat 529 similarly to 429 and 5xx: they are transient and retryable, unlike 400, 401, 403 and 404, which retries cannot fix.
+A is correct: HTTP 529 overloaded_error means the API is temporarily under heavy load across users, not a problem with your request, so retry with exponential backoff and jitter, bounded attempts, and a degraded fallback, and alert if it is sustained. B is wrong because exceeding the context window yields a 400 invalid_request_error. C is wrong because an organization or workspace spend limit returns a 400, and a tier spend cap or rate limit returns a 429, not 529. D is wrong because an unknown model returns 404 not_found_error. Treat 529 similarly to 429 and 5xx: they are transient and retryable, unlike 400, 401, 403 and 404, which retries cannot fix.
 
 Fuente oficial: [Anthropic Docs: Claude developer guide & API reference](https://docs.anthropic.com/en/docs/welcome)
 
@@ -3249,7 +3249,7 @@ D. Rate limits are per instance
 Respuesta correcta: A
 
 Explicación
-A is correct: the Messages API is stateless, so every request carries the full conversation and any instance can serve any request as long as it can load the conversation from your data store; the state to scale is your own conversation store and rate limit coordination. B is wrong because the API has no sticky sessions or server-side conversation memory for the standard Messages API. C is wrong because responses are not cached across customers (prompt caching is a per-organization prefix cache for inputs and does not return stored answers). D is wrong because rate limits are applied per organization (and model/tier), not per instance, so you need shared coordination across instances.
+A is correct: the Messages API is stateless, so every request carries the full conversation and any instance can serve any request as long as it can load the conversation from your data store; the state to scale is your own conversation store and rate limit coordination. B is wrong because the API has no sticky sessions or server-side conversation memory for the standard Messages API. C is wrong because responses are not cached across customers (prompt caching is a prefix cache isolated per workspace (or per organization on some platforms) for inputs and does not return stored answers). D is wrong because rate limits are applied per organization (and model/tier), not per instance, so you need shared coordination across instances.
 
 Fuente oficial: [Anthropic Docs: Claude developer guide & API reference](https://docs.anthropic.com/en/docs/welcome)
 
@@ -3350,7 +3350,7 @@ D. Enable it whenever tools are in use
 Respuesta correcta: A
 
 Explicación
-A is correct: extended thinking trades latency and cost (thinking tokens are billed as output tokens) for accuracy on complex reasoning, and the benefit varies by task, so run your eval suite with and without it, weigh gains against added latency and cost, and enable it per task type. B is wrong because enabling it globally pays the cost on simple tasks where it adds nothing. C is wrong because a small max_tokens is the opposite of what thinking needs: the budget_tokens must be less than max_tokens and max_tokens must cover thinking plus the answer, otherwise output is truncated. D is wrong because using tools is not a criterion by itself; whether thinking helps depends on task difficulty (it can help tool-use planning, and has constraints with tool_choice).
+A is correct: extended thinking trades latency and cost (thinking tokens are billed as output tokens) for accuracy on complex reasoning, and the benefit varies by task, so run your eval suite with and without it, weigh gains against added latency and cost, and enable it per task type. B is wrong because enabling it globally pays the cost on simple tasks where it adds nothing. C is wrong because a small max_tokens is the opposite of what thinking needs: in manual mode budget_tokens must be less than max_tokens (adaptive thinking has no budget but still counts toward max_tokens), and max_tokens must cover thinking plus the answer, otherwise output is truncated. D is wrong because using tools is not a criterion by itself; whether thinking helps depends on task difficulty (it can help tool-use planning; manual thinking allows only tool_choice auto or none, and adaptive thinking allows forced tool use except on some newer models such as Opus 5.5 and Sonnet 5.5). Manual mode is deprecated on Claude 4.6 and rejected on 4.7+, so use adaptive thinking with effort.
 
 Fuente oficial: [Anthropic Docs: Claude developer guide & API reference](https://docs.anthropic.com/en/docs/welcome)
 
@@ -3390,12 +3390,12 @@ C. Tighten max_tokens to the realistic maximum for the task
 D. Enable prompt caching
 E. Increase the number of examples in the prompt
 
-Respuesta correcta: A, B y C
+Respuesta correcta: A y B
 
 Explicación
-When output tokens dominate cost (which are priced several times higher than input), reduce output volume or its unit price. A is right: a smaller model has a lower per-output-token rate, and it should be validated with evals. B is right: removing preamble and closing summaries cuts generated tokens without losing content. C is right: tightening max_tokens bounds worst-case output and cost, as long as it stays above the realistic maximum to avoid truncation. D is wrong because prompt caching discounts repeated input, which is not where the cost is. E is wrong because more examples increase input tokens and do not shrink output. Check the input versus output split in the usage object before choosing an optimization.
+When output tokens dominate cost (which are priced several times higher than input), reduce output volume or its unit price. A is right: a smaller model has a lower per-output-token rate, and it should be validated with evals. B is right: removing preamble and closing summaries cuts generated tokens without losing content. C is wrong: with a typical answer of about 300 tokens, max_tokens only caps worst-case length; it does not shorten a normal response and, if set too tight, truncates it. D is wrong because prompt caching discounts repeated input, which is not where the cost is. E is wrong because more examples increase input tokens and do not shrink output. Check the input versus output split in the usage object before choosing an optimization.
 
-Fuente oficial: [Anthropic Docs: Claude developer guide & API reference](https://docs.anthropic.com/en/docs/welcome)
+Fuente oficial: [Anthropic Docs: Pricing](https://platform.claude.com/docs/en/about-claude/pricing)
 
 Pregunta 35
 Which statement about model deprecation is correct?
@@ -3599,16 +3599,16 @@ Fuente oficial: [Anthropic Docs: Model Context Protocol (MCP)](https://docs.anth
 Pregunta 49
 An agent has tools 'search_docs' and 'search_tickets' with nearly identical descriptions. What is the most effective remedy?
 A. Rewrite both descriptions to state precisely what corpus each covers and give explicit guidance on choosing between them
-B. Merge them into one tool with a corpus parameter
+B. Merge them into one tool with a corpus parameter and keep the descriptions minimal
 C. Delete one of them
 D. Rely on the model to infer the difference from the names
 
 Respuesta correcta: A
 
 Explicación
-A is correct: with near-identical descriptions the model cannot tell the tools apart, so selection is a coin flip. Rewrite each description to state what corpus it covers, what it does not, and when to prefer the other tool; explicit cross-references measurably improve selection, and detailed descriptions are the most important factor in tool performance. D is wrong because relying on the model to infer from names is the failure we are already seeing. C is wrong because deleting a tool removes a capability that the agent needs. B (merging with a corpus parameter) is a legitimate alternative design, but it is a bigger refactor and still requires a clear description of the parameter, so clarifying the descriptions is the most direct and effective remedy among the options.
+A is correct: with near-identical descriptions the model cannot tell the tools apart, so selection is a coin flip. Rewrite each description to state what corpus it covers, what it does not, and when to prefer the other tool; explicit cross-references measurably improve selection, and detailed descriptions are the most important factor in tool performance. D is wrong because relying on the model to infer from names is the failure we are already seeing. C is wrong because deleting a tool removes a capability that the agent needs. B (merging with a corpus parameter) is a legitimate consolidation, but with minimal descriptions the ambiguity just moves into the parameter, and it is a bigger refactor, so clarifying the descriptions is the most direct and effective remedy among the options.
 
-Fuente oficial: [Anthropic Research: Building effective agents](https://www.anthropic.com/research/building-effective-agents)
+Fuente oficial: [Anthropic Docs: Define tools](https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools)
 
 Pregunta 50
 Which are correct statements about executing tools requested by the model? Select all that apply.
@@ -3729,7 +3729,7 @@ Respuesta correcta: A
 Explicación
 In the parallelization pattern, sectioning breaks a task into different independent subtasks that run concurrently (for example one call answers the query while another screens it for policy violations), and the results are combined. Voting runs the same task several times and aggregates the outputs to gain confidence, which suits high-stakes judgments where false negatives are costly. Both run in parallel, so B is wrong. Neither pattern constrains the number of models (C), since voting can use the same model with varied prompts or samples. Neither requires an orchestrator that decides subtasks dynamically (D); that is the orchestrator-workers pattern, where subtasks are not known in advance.
 
-Fuente oficial: [Anthropic Docs: Claude developer guide & API reference](https://docs.anthropic.com/en/docs/welcome)
+Fuente oficial: [Anthropic Research: Building effective agents](https://www.anthropic.com/research/building-effective-agents)
 
 Pregunta 5
 Which conditions suggest a workflow should be refactored into an agent? Select all that apply.
@@ -3807,19 +3807,19 @@ Which of these will cause a 400 invalid_request_error? Select all that apply.
 A. Omitting max_tokens
 B. Two consecutive user messages
 C. A tool_result block whose tool_use_id does not match any preceding tool_use
-D. Setting temperature to zero
-E. Input plus max_tokens exceeding the context window
+D. Setting temperature to zero on a Claude 4.6 or earlier model
+E. The prompt alone exceeding the model context window
 
 Respuesta correcta: A, C y E
 
 Explicación
-Answer key corrected (was A, B, C y E). consecutive user messages no longer cause an error; the API combines consecutive same-role turns into one. The 400 invalid_request_error cases are: omitting the required max_tokens (A), a tool_result whose tool_use_id has no matching tool_use in the preceding assistant turn (C), and a prompt plus max_tokens that exceeds the model context window, which current models reject with a validation error (E). Temperature zero (D) is valid and just makes sampling more deterministic. Two consecutive user messages (B) are accepted and merged. Remember that invalid_request_error means fix the payload, whereas rate_limit_error or overloaded_error call for backoff and retry.
+Consecutive user messages no longer cause an error; the API combines consecutive same-role turns into one. The 400 invalid_request_error cases are: omitting the required max_tokens (A), a tool_result whose tool_use_id has no matching tool_use in the preceding assistant turn (C), and a prompt that by itself exceeds the context window ('prompt is too long') (E); on Claude 4.5+ input plus max_tokens over the window is accepted and stops with model_context_window_exceeded. Temperature zero (D) is valid on Claude 4.6 and earlier and just makes sampling more deterministic (on 4.7+ any non-default sampling value returns a 400). Two consecutive user messages (B) are accepted and merged. Remember that invalid_request_error means fix the payload, whereas rate_limit_error or overloaded_error call for backoff and retry.
 
 Fuente oficial: [Anthropic Docs: Claude developer guide & API reference](https://docs.anthropic.com/en/docs/welcome)
 
 Pregunta 11
 A developer wants to know how many tokens a prompt will consume before sending it. What is the appropriate approach?
-A. Use a token counting endpoint or SDK helper for an accurate count
+A. Use a token counting endpoint or SDK helper for a reliable count
 B. Divide the character count by four
 C. Send the request and read the usage object
 D. Count the words
@@ -3827,7 +3827,7 @@ D. Count the words
 Respuesta correcta: A
 
 Explicación
-Anthropic provides a token counting endpoint (and SDK helpers) that returns the exact input token count for messages, system prompt, tools and images without running the model, so you can trim or chunk before sending (A). Dividing characters by four (B) and counting words (D) are rough heuristics that are especially wrong for code, other languages, tool definitions and images. Reading the usage object after sending (C) is accurate but happens after you have paid and after a too-large request may already have failed, so it is not a pre-flight check.
+Anthropic provides a token counting endpoint (and SDK helpers) that returns a close estimate of the input token count (free to use) for messages, system prompt, tools and images without running the model, so you can trim or chunk before sending (A). Dividing characters by four (B) and counting words (D) are rough heuristics that are especially wrong for code, other languages, tool definitions and images. Reading the usage object after sending (C) is accurate but happens after you have paid and after a too-large request may already have failed, so it is not a pre-flight check.
 
 Fuente oficial: [Anthropic Docs: Claude developer guide & API reference](https://docs.anthropic.com/en/docs/welcome)
 
@@ -3927,7 +3927,7 @@ D. Disable streaming
 Respuesta correcta: A
 
 Explicación
-Caching writes cost a premium (about 1.25x base input price for the 5-minute TTL) and reads cost about 0.1x, so you only profit if later requests hit the cache. Writes every time with zero reads means the cached prefix is never identical between requests, so you pay extra and gain nothing (A). Typical causes are timestamps or request IDs near the start, non-deterministic tool or JSON serialization, or per-user content placed before the cache breakpoint. It is not normal (B). max_tokens (C) and streaming (D) have no effect on prefix matching.
+Caching writes cost a premium (about 1.25x base input price for the 5-minute TTL) and reads cost about 0.1x or less (0.05x on Opus/Sonnet 5.5), so you only profit if later requests hit the cache. Writes every time with zero reads means the cached prefix is never identical between requests, so you pay extra and gain nothing (A). Typical causes are timestamps or request IDs near the start, non-deterministic tool or JSON serialization, or per-user content placed before the cache breakpoint. It is not normal (B). max_tokens (C) and streaming (D) have no effect on prefix matching.
 
 Fuente oficial: [Anthropic Docs: Claude developer guide & API reference](https://docs.anthropic.com/en/docs/welcome)
 
@@ -3947,7 +3947,7 @@ Prompts are code-like artifacts whose changes can silently alter behavior, so ap
 Fuente oficial: [Anthropic Docs: Claude developer guide & API reference](https://docs.anthropic.com/en/docs/welcome)
 
 Pregunta 20
-A request specifies tool_use requiring a specific tool but the model has no relevant information to fill a required parameter. What is the likely outcome and correct fix?
+On a model that supports forced tool use, a request forces a specific tool via tool_choice but the model has no relevant information to fill a required parameter. What is the likely outcome and correct fix?
 A. The model may produce a plausible but fabricated argument. Provide the needed context or make the parameter optional with a defined absent value.
 B. The API will reject the request
 C. The model will return a text block instead
@@ -3956,9 +3956,9 @@ D. The tool will execute with null arguments automatically
 Respuesta correcta: A
 
 Explicación
-Forcing a tool with tool_choice guarantees the model emits a call to that tool, but it cannot guarantee that a value for each required parameter is derivable from context. If information is missing, the model may fabricate a plausible argument (A). Fix it by supplying the context, or by making the parameter optional with a defined absent or unknown value so the model can say so. The API does not reject the request (B), since the schema is valid. With forced tool use, the model does not fall back to a text block (C). The tool is only run by your code, with whatever arguments the model produced, not with automatic nulls (D).
+Forcing a tool with tool_choice guarantees the model emits a call to that tool, but it cannot guarantee that a value for each required parameter is derivable from context. If information is missing, the model may guess or fabricate a plausible argument (A). On Opus 5.5, Sonnet 5.5 and similar models, forced tool_choice is rejected with a 400, so use auto plus strict tool use there. Fix it by supplying the context, or by making the parameter optional with a defined absent or unknown value so the model can say so. The API does not reject the request (B), since the schema is valid. With forced tool use, the model does not fall back to a text block (C). The tool is only run by your code, with whatever arguments the model produced, not with automatic nulls (D).
 
-Fuente oficial: [Anthropic Docs: Tool use (function calling)](https://docs.anthropic.com/en/docs/build-with-claude/tool-use)
+Fuente oficial: [Anthropic Docs: Handle tool calls](https://platform.claude.com/docs/en/agents-and-tools/tool-use/handle-tool-calls)
 
 Pregunta 21
 Which describes the right way to handle user-uploaded documents of unpredictable size?
@@ -4055,7 +4055,7 @@ D. They select which model is used
 Respuesta correcta: A
 
 Explicación
-MCP (Model Context Protocol) servers expose additional tools, resources and prompts to Claude Code, connecting it to external systems like databases, issue trackers or APIs beyond its built-in file and shell tools (A). They do not replace the CLAUDE.md memory file (B), which carries project instructions and context. Permissions are configured in settings files (C), and the model is chosen by settings or the /model command (D). Note: the memory file is named CLAUDE.md, and the original text 'CLAUDE.md' has been corrected.
+MCP (Model Context Protocol) servers expose additional tools, resources and prompts to Claude Code, connecting it to external systems like databases, issue trackers or APIs beyond its built-in file and shell tools (A). They do not replace the CLAUDE.md memory file (B), which carries project instructions and context. Permissions are configured in settings files (C), and the model is chosen by settings or the /model command (D).
 
 Fuente oficial: [Anthropic Docs: Model Context Protocol (MCP)](https://docs.anthropic.com/en/docs/agents-and-tools/mcp)
 
@@ -4247,7 +4247,7 @@ Fuente oficial: [Anthropic Docs: Prompt engineering best practices](https://docs
 
 Pregunta 41
 An agent must produce output consumed by another program. What is the best prompting approach?
-A. Define the schema as a tool input_schema and force tool use then validate the returned arguments
+A. Define the schema as a tool input_schema (forced tool_choice, or strict tool use / structured outputs on models that reject forcing) and validate the returned arguments
 B. Ask for JSON in prose and parse whatever comes back
 C. Ask for Markdown and convert it
 D. Ask for free text and use a second model call to structure it
@@ -4255,7 +4255,7 @@ D. Ask for free text and use a second model call to structure it
 Respuesta correcta: A
 
 Explicación
-When another program consumes the output, force the schema through a tool: define it as input_schema, set tool_choice to that tool (or use structured outputs where available), and still validate the returned arguments (A). This yields structured JSON far more reliably than prose requests. Asking for JSON in prose and parsing whatever returns (B) is fragile to stray text and formatting. Markdown conversion (C) is lossy and ambiguous. A second model call to restructure free text (D) adds latency, cost and another failure point. If tools are unavailable, fallbacks are explicit schema docs, examples and a stop sequence, always with validation.
+When another program consumes the output, force the schema through a tool: define it as input_schema, set tool_choice to that tool (or use structured outputs where available), and still validate the returned arguments (A). Some newer models, such as Opus 5.5 and Sonnet 5.5, reject forced tool_choice; there use auto with strict tool use or structured outputs. This yields structured JSON far more reliably than prose requests. Asking for JSON in prose and parsing whatever returns (B) is fragile to stray text and formatting. Markdown conversion (C) is lossy and ambiguous. A second model call to restructure free text (D) adds latency, cost and another failure point. If tools are unavailable, fallbacks are explicit schema docs, examples and a stop sequence, always with validation.
 
 Fuente oficial: [Anthropic Research: Building effective agents](https://www.anthropic.com/research/building-effective-agents)
 
@@ -4384,7 +4384,7 @@ E. MCP is limited to local servers
 Respuesta correcta: A y B
 
 Explicación
-Answer key corrected (was A, B y C). MCP is a separate open protocol while the Messages API has its own tool-use mechanism (A), and an MCP host or client typically translates server-provided tools into API tool definitions (B). Option C is no longer true: the Anthropic API offers an MCP connector, where the API itself connects to remote MCP servers. Using MCP does not require abandoning the tools parameter (D), since host translation uses it, and MCP is not limited to local servers (E), as it supports remote servers over streamable HTTP.
+MCP is a separate open protocol while the Messages API has its own tool-use mechanism (A), and an MCP host or client typically translates server-provided tools into API tool definitions (B). Option C is no longer true: the Anthropic API offers an MCP connector, where the API itself connects to remote MCP servers. Using MCP does not require abandoning the tools parameter (D), since host translation uses it, and MCP is not limited to local servers (E), as it supports remote servers over streamable HTTP.
 
 Fuente oficial: [Anthropic Docs: Model Context Protocol (MCP)](https://docs.anthropic.com/en/docs/agents-and-tools/mcp)
 
