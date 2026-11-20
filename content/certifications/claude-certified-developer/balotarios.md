@@ -3035,7 +3035,7 @@ D. The request failed
 Respuesta correcta: A
 
 Explicación
-A is correct: stop_reason 'end_turn' with only a text block means the model decided it could answer without calling a tool, since with the default tool_choice of auto, tool use is optional. A tool call would have shown stop_reason 'tool_use' with a tool_use block. B is wrong because malformed tool definitions produce a 400 validation error rather than being silently ignored. C is wrong because client tools are executed by your code, never server-side, and server tools produce their own result blocks in the response. D is wrong because a failed request returns an HTTP error, not a successful response with a stop_reason. If you need a tool call, set tool_choice to 'any' or a specific tool (rejected with a 400 on Opus 5.5, Sonnet 5.5 and other 5.x models; use auto with strict tool use or structured outputs there); if the model skips tools it should use, improve the tool descriptions and the prompt.
+A is correct: stop_reason 'end_turn' with only a text block means the model decided it could answer without calling a tool, since with the default tool_choice of auto, tool use is optional. A tool call would have shown stop_reason 'tool_use' with a tool_use block. B is wrong because malformed tool definitions produce a 400 validation error rather than being silently ignored. C is wrong because client tools are executed by your code, never server-side, and server tools produce their own result blocks in the response. D is wrong because a failed request returns an HTTP error, not a successful response with a stop_reason. If you need a tool call, set tool_choice to 'any' or a specific tool (rejected with a 400 on Opus 5.5, Sonnet 5.5, Fable 5.2/5.1 and Mythos 5.2/5.1; use auto with strict tool use or structured outputs there); if the model skips tools it should use, improve the tool descriptions and the prompt.
 
 Fuente oficial: [Anthropic Docs: Tool use (function calling)](https://docs.anthropic.com/en/docs/build-with-claude/tool-use)
 
@@ -3092,7 +3092,7 @@ D. The output is capped at 200,000 - 188,000 / 2
 Respuesta correcta: A
 
 Explicación
-A is correct: the check is input_tokens + max_tokens <= context window, and 188,000 + 8,000 = 196,000, which is under 200,000, so the request is accepted. B is wrong because max_tokens is limited by the model's maximum output (much higher than 4,096 on current models), not by a fixed 4,096 cap. C is wrong because the API does not silently truncate input; if input plus max_tokens exceeded the window it would return a validation error. D is wrong because the output is bounded by max_tokens and the stop conditions, not by a formula like that. With large inputs, lower max_tokens in advance (and count tokens with the token counting endpoint) rather than discovering the limit through an error.
+A is correct: the check is input_tokens + max_tokens <= context window, and 188,000 + 8,000 = 196,000, which is under 200,000, so the request is accepted. B is wrong because max_tokens is limited by the model's maximum output (much higher than 4,096 on current models), not by a fixed 4,096 cap. C is wrong because the API never silently truncates input; a prompt that alone exceeds the window is rejected, and on Claude 4.5+ a request whose input plus max_tokens exceeds the window is accepted but generation can stop early with stop_reason model_context_window_exceeded (older models return a validation error). D is wrong because the output is bounded by max_tokens and the stop conditions, not by a formula like that. With large inputs, lower max_tokens in advance (and count tokens with the token counting endpoint) rather than discovering the limit through an error.
 
 Fuente oficial: [Anthropic Docs: Claude developer guide & API reference](https://docs.anthropic.com/en/docs/welcome)
 
@@ -3294,7 +3294,7 @@ Respuesta correcta: A
 Explicación
 A is correct: CLAUDE.md is loaded into context at the start of every session, so a large file full of dependency documentation consumes a lot of context window and tokens on every task, crowding out relevant material and diluting the instructions that matter. Keep it to durable high-value facts (commands, layout, conventions) and put documentation in files the agent reads on demand, or reference it, or expose it through an MCP documentation server. B is wrong because Claude Code can read large files; the issue is cost and dilution, not a hard limit. C is wrong because file size has no bearing on authentication. D is wrong because CLAUDE.md content does not disable hooks, which are configured in settings.
 
-Fuente oficial: [Anthropic Docs: Model Context Protocol (MCP)](https://docs.anthropic.com/en/docs/agents-and-tools/mcp)
+Fuente oficial: [Claude Code Docs: Memory](https://code.claude.com/docs/en/memory)
 
 Pregunta 28
 Which are appropriate uses of Claude Code hooks? Select all that apply.
@@ -3309,7 +3309,7 @@ Respuesta correcta: A, B, C y E
 Explicación
 Hooks are shell commands or handlers that Claude Code runs deterministically at lifecycle events (PreToolUse, PostToolUse, Stop, Notification and others), so they enforce behavior rather than merely suggest it. A is right: a PostToolUse hook can run a formatter or linter after edits. B is right: a PreToolUse hook can block edits to protected paths by exiting with a blocking status. C is right: Stop or Notification hooks can log or notify on completion. E is right: a PreToolUse hook can validate commands against policy before execution. D is wrong because hooks run outside the model and cannot rewrite its reasoning. Anything that must be guaranteed belongs in a hook (or permissions) rather than in CLAUDE.md, which is advisory.
 
-Fuente oficial: [Anthropic Research: Building effective agents](https://www.anthropic.com/research/building-effective-agents)
+Fuente oficial: [Claude Code Docs: Hooks](https://code.claude.com/docs/en/hooks)
 
 Pregunta 29
 A team's eval suite shows 92% pass but users complain. Which explanation is most likely?
