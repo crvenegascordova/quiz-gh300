@@ -1,0 +1,94 @@
+{
+  "cert_id": "gh-300",
+  "name": "GitHub Copilot GH-300",
+  "source_file": "balotarios.md",
+  "allowed_domains": [
+    "docs.github.com",
+    "github.com",
+    "learn.microsoft.com",
+    "learn.github.com",
+    "code.visualstudio.com"
+  ],
+  "scraper": {
+    "content_selectors": [
+      "main",
+      "article",
+      "#main-content",
+      ".content"
+    ],
+    "strip_elements": [
+      "nav",
+      "header",
+      "footer",
+      "aside",
+      "script",
+      "style",
+      "noscript",
+      ".feedback-section"
+    ],
+    "cache_ttl_days": 7,
+    "timeout_seconds": 25,
+    "user_agent": "Mozilla/5.0 (compatible; QuizCertificationAuditor/1.0)"
+  },
+  "obsolete_patterns": [
+    {
+      "pattern": "(?i)\\bknowledge base\\b",
+      "message": "Knowledge Base sustituida por Copilot Spaces",
+      "severity": "medium"
+    },
+    {
+      "pattern": "(?i)\\bcopilot individual\\b",
+      "message": "Nombre de plan individual obsoleto o ambiguo",
+      "severity": "medium"
+    },
+    {
+      "pattern": "(?i)\\bcopilot for individuals\\b",
+      "message": "Nombre de plan individual obsoleto o ambiguo",
+      "severity": "medium"
+    },
+    {
+      "pattern": "(?i)copilot_subscription",
+      "message": "Endpoint REST obsoleto",
+      "severity": "medium"
+    },
+    {
+      "pattern": "(?i)copilot\\.yaml",
+      "message": "Mecanismo no oficial para exclusiones",
+      "severity": "high"
+    },
+    {
+      "pattern": "(?i)privacidad diferencial",
+      "message": "Afirmación no respaldada por las fuentes oficiales usadas",
+      "severity": "medium"
+    },
+    {
+      "pattern": "(?i)cifrado de extremo a extremo",
+      "message": "Afirmación de privacidad excesiva o no documentada",
+      "severity": "medium"
+    },
+    {
+      "pattern": "(?i)sugerencias ilimitadas",
+      "message": "Afirmación de plan potencialmente obsoleta",
+      "severity": "medium"
+    },
+    {
+      "pattern": "(?i)modelo codex",
+      "message": "Codex no describe la arquitectura actual de todos los modelos",
+      "severity": "medium"
+    }
+  ],
+  "generic_patterns": [
+    "en el contexto de esta pregunta",
+    "coincide con el requisito",
+    "las demás alternativas no son válidas",
+    "no satisface ese criterio"
+  ],
+  "official_sources_catalog": {
+    "copilot-spaces": "https://docs.github.com/en/copilot/using-github-copilot/copilot-spaces",
+    "content-exclusion": "https://docs.github.com/en/copilot/concepts/security-governance-and-network-settings/content-exclusion",
+    "custom-instructions": "https://docs.github.com/en/copilot/customizing-copilot/adding-custom-instructions-for-github-copilot",
+    "copilot-chat-ide": "https://docs.github.com/en/copilot/using-github-copilot/asking-github-copilot-questions-in-your-ide",
+    "responsible-ai": "https://learn.microsoft.com/en-us/legal/cognitive-services/openai/transparency-note",
+    "privacy-trust-center": "https://resources.github.com/copilot-trust-center/"
+  }
+}

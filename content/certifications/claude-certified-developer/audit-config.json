@@ -1,0 +1,83 @@
+{
+  "cert_id": "claude-certified-developer",
+  "name": "Claude Certified Developer",
+  "source_file": "balotarios.md",
+  "allowed_domains": [
+    "platform.claude.com",
+    "docs.anthropic.com",
+    "code.claude.com",
+    "www.anthropic.com",
+    "anthropic.com",
+    "modelcontextprotocol.io"
+  ],
+  "scraper": {
+    "content_selectors": [
+      "main",
+      "article",
+      "#main-content",
+      ".content",
+      "[role='main']"
+    ],
+    "strip_elements": [
+      "nav",
+      "header",
+      "footer",
+      "aside",
+      "script",
+      "style",
+      "noscript",
+      ".feedback-section"
+    ],
+    "cache_ttl_days": 7,
+    "timeout_seconds": 25,
+    "user_agent": "Mozilla/5.0 (compatible; QuizCertificationAuditor/1.0)"
+  },
+  "obsolete_patterns": [
+    {
+      "pattern": "(?i)\\bclaude[- ]2\\b",
+      "message": "Modelo Claude 2 obsoleto para la certificación (familia Claude 3/3.5)",
+      "severity": "medium"
+    },
+    {
+      "pattern": "(?i)\\bcompletions? api\\b",
+      "message": "Completions API es heredada; el estándar oficial es Messages API",
+      "severity": "high"
+    },
+    {
+      "pattern": "(?i)\\bhuman:.*assistant:\\b",
+      "message": "Formato de prompts heredado de Text Completions",
+      "severity": "medium"
+    }
+  ],
+  "generic_patterns": [
+    "in the context of this question",
+    "the other options are not valid",
+    "does not satisfy the requirement"
+  ],
+  "official_sources_catalog": {
+    "api-overview/auth/headers": "https://platform.claude.com/docs/en/api/overview",
+    "errors": "https://platform.claude.com/docs/en/api/errors",
+    "rate-limits": "https://platform.claude.com/docs/en/api/rate-limits",
+    "stop-reasons": "https://platform.claude.com/docs/en/build-with-claude/handling-stop-reasons",
+    "streaming": "https://platform.claude.com/docs/en/build-with-claude/streaming",
+    "batch": "https://platform.claude.com/docs/en/build-with-claude/batch-processing",
+    "prompt-caching": "https://platform.claude.com/docs/en/build-with-claude/prompt-caching",
+    "thinking": "https://platform.claude.com/docs/en/build-with-claude/thinking",
+    "context-windows": "https://platform.claude.com/docs/en/build-with-claude/context-windows",
+    "tool-handle-calls": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/handle-tool-calls",
+    "tool-define": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools",
+    "pricing": "https://platform.claude.com/docs/en/about-claude/pricing",
+    "versioning": "https://platform.claude.com/docs/en/api/versioning",
+    "mitigate-injection": "https://platform.claude.com/docs/en/test-and-evaluate/strengthen-guardrails/mitigate-jailbreaks",
+    "claude-code-hooks": "https://code.claude.com/docs/en/hooks",
+    "claude-code-settings": "https://code.claude.com/docs/en/settings",
+    "claude-code-memory": "https://code.claude.com/docs/en/memory",
+    "claude-code-mcp": "https://code.claude.com/docs/en/mcp",
+    "claude-code-subagents": "https://code.claude.com/docs/en/sub-agents",
+    "building-effective-agents": "https://www.anthropic.com/research/building-effective-agents",
+    "context-engineering": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+    "multi-agent-research": "https://www.anthropic.com/engineering/multi-agent-research-system",
+    "mcp-spec-transports": "https://modelcontextprotocol.io/specification/2025-06-18/basic/transports",
+    "mcp-server-concepts": "https://modelcontextprotocol.io/docs/learn/server-concepts"
+  }
+}

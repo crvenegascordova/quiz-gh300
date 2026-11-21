@@ -1,0 +1,3666 @@
+{
+  "gh-300-balotario-1-1": {
+    "content_hash": "0637884fa4e4406a161fc3bd8bb8966c3268ac392d22e97a7c8e52b6f591544b",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "112aea92738a7e67d9783bb341e309b14c3013ddda6ea323fc4f80359031dcce",
+    "source_url": "https://docs.github.com/en/copilot/reference/ai-models/model-hosting",
+    "status": "verified"
+  },
+  "gh-300-balotario-1-10": {
+    "content_hash": "d2e084715535d128e3667b4df020c42cf10083f475331347f9dabb9ff45d1f1b",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "63db1104b5892f8e8c0dd63ed199956e81abe166fa70726c020b67f214c5e1f7",
+    "source_url": "https://docs.github.com/en/rest/copilot/copilot-user-management",
+    "status": "verified"
+  },
+  "gh-300-balotario-1-11": {
+    "content_hash": "98540cf8f93e4a5fa48aaf11c0ddab8450c0845907156e0a01b18ded1c6112f5",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "d0f3268adc9e279496808ce69a6a39a368492b4933a74a682e99995e26106235",
+    "source_url": "https://docs.github.com/en/copilot/how-tos/copilot-cli",
+    "status": "verified"
+  },
+  "gh-300-balotario-1-12": {
+    "content_hash": "39ed90a15cd9d575b1b115c01536c236b45c7be1e854d19e616c35fd2c430276",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "54e074d56cdc5d315a4ef26bc829db226aad0adb8e72290ff652b927387f3579",
+    "source_url": "https://docs.github.com/en/copilot/concepts/content-exclusion",
+    "status": "verified"
+  },
+  "gh-300-balotario-1-13": {
+    "content_hash": "aa505a9655a8b7756bccdd2902a25e582d9bb3ed548c5594a0d87551b16c0789",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-1-14": {
+    "content_hash": "3e6e2c810753fe845a489a993cf5d5f36de9273f09502968ce8f183df1d89af4",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9d053486f2ba66c750f12e1b9806a94cdd7bb2af8c4e99c8562b35daad94e37f",
+    "source_url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300",
+    "status": "verified"
+  },
+  "gh-300-balotario-1-15": {
+    "content_hash": "bc22fad4294886eb9522c5115c6dedd0a2150045a85621d2e0470cb1083b279a",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9d053486f2ba66c750f12e1b9806a94cdd7bb2af8c4e99c8562b35daad94e37f",
+    "source_url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300",
+    "status": "verified"
+  },
+  "gh-300-balotario-1-16": {
+    "content_hash": "ca518292366e0290e241f454820c24658ade633f235a85ce540665cc3635d662",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "ea35697f8cec5b1f7abbd1e4d215eee386ae170b748da18d6905d871dd33e552",
+    "source_url": "https://docs.github.com/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot",
+    "status": "verified"
+  },
+  "gh-300-balotario-1-17": {
+    "content_hash": "dd5429c7bd41d776f845252a422775d9134612b59136de02dbe94c2dc1998491",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-1-18": {
+    "content_hash": "e7ffa459ee357e11221f877e5fc28a4d36aa0d16be983a6bedbb58b37704bf73",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-1-19": {
+    "content_hash": "a3e288dae84fc9b584d60c15e8f4c2c6e2fd1f6781d1d47782feb68211265525",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-1-2": {
+    "content_hash": "05efc7aa6ea854b636a404d662f8721f198a8c500d0e0e5c72921098fb37db03",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-1-20": {
+    "content_hash": "38b33a7f4a8d4e8133bb41be7b1ee857fe7a16957fee3f4214b5376d67f34207",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "ea35697f8cec5b1f7abbd1e4d215eee386ae170b748da18d6905d871dd33e552",
+    "source_url": "https://docs.github.com/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot",
+    "status": "verified"
+  },
+  "gh-300-balotario-1-21": {
+    "content_hash": "257c0b0b50195990b0fc7e4b10d70e1326f6812022a107fe438488e123ada851",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-1-22": {
+    "content_hash": "163d5f0f9aaa8c79cb9f553e777d2c2eba3792a2fa7fe5d078650e0bbb6667c0",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-1-23": {
+    "content_hash": "e53b6e7eb17770a47c1312068c664f0ec4734047fff0049f9ff3ccab9efe5a94",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9d053486f2ba66c750f12e1b9806a94cdd7bb2af8c4e99c8562b35daad94e37f",
+    "source_url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300",
+    "status": "verified"
+  },
+  "gh-300-balotario-1-24": {
+    "content_hash": "ee660888708dc536f1b5fc53a62566bda27d669fcbc15f6a3e0dca4b1b805e9d",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "394bf54ca8df49f21684d7a3411584212b64b894e1332c7d8755744795f2904f",
+    "source_url": "https://docs.github.com/en/copilot/responsible-use/chat",
+    "status": "verified"
+  },
+  "gh-300-balotario-1-25": {
+    "content_hash": "782ab3a34a96bbe50a1075dea8757160a461b153532eb424e71a6713caa36ddf",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-1-26": {
+    "content_hash": "97b0a22ce3e70ea427b9adc597b6454b6b9f51d22e19bbb6d074f84e75c2cb5f",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-1-27": {
+    "content_hash": "348a25f59ef06bce490df209580d018d37559339517891ba482afc1a83018b35",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-1-28": {
+    "content_hash": "1b2da3a235c806b1293ebf3a8678417b5e3c755cb8caa92fd005119acc231285",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-1-29": {
+    "content_hash": "94c4499eac8d57c6ce88e282ac96106e80b74aab8c5817d5f79df955820590b2",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9d053486f2ba66c750f12e1b9806a94cdd7bb2af8c4e99c8562b35daad94e37f",
+    "source_url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300",
+    "status": "verified"
+  },
+  "gh-300-balotario-1-3": {
+    "content_hash": "ba4b225d737db11c721f89235c48ed43b02a9a48d3ca53df128d316572ee8a2d",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-1-30": {
+    "content_hash": "60a54a838bf64d6910456bb1b7410a248cb2e2fe5818f13a71a7bc2777eead5e",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "ea35697f8cec5b1f7abbd1e4d215eee386ae170b748da18d6905d871dd33e552",
+    "source_url": "https://docs.github.com/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot",
+    "status": "verified"
+  },
+  "gh-300-balotario-1-31": {
+    "content_hash": "55efb54bbca14322c205a5da15a4aab323b6388a65addcf7e80082e6af59bad4",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-1-32": {
+    "content_hash": "f628a4600ab68228787d9c4eb6a75022cd67d3c605a88232156ae5d9612aee98",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-1-33": {
+    "content_hash": "34f0ffe562e55c2d1659876221dd21c350e3ebd916c553c3230cb82e68459935",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "63db1104b5892f8e8c0dd63ed199956e81abe166fa70726c020b67f214c5e1f7",
+    "source_url": "https://docs.github.com/en/rest/copilot/copilot-user-management",
+    "status": "verified"
+  },
+  "gh-300-balotario-1-34": {
+    "content_hash": "fda754a0c761d6e7d6b90390c05e2c594e1cfc5730164a990a16272259937369",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "54e074d56cdc5d315a4ef26bc829db226aad0adb8e72290ff652b927387f3579",
+    "source_url": "https://docs.github.com/en/copilot/concepts/content-exclusion",
+    "status": "verified"
+  },
+  "gh-300-balotario-1-35": {
+    "content_hash": "0a06711b51c21430e2a17112ba5cfb891d160069011c195c756a589a9bb63d96",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-1-36": {
+    "content_hash": "ca376426fbe62aa6552b0d469305701d1efff37d955e66e364ac13d1e35a4efd",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "ea35697f8cec5b1f7abbd1e4d215eee386ae170b748da18d6905d871dd33e552",
+    "source_url": "https://docs.github.com/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot",
+    "status": "verified"
+  },
+  "gh-300-balotario-1-37": {
+    "content_hash": "2a56879d60c3a944d1129a0269b832779cc5961869d0635d0e4a87d4f03b7acc",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-1-38": {
+    "content_hash": "75f1b143315d8495a01f2ed7e6a2c706e03025756dd4a86b770527778493205e",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "54e074d56cdc5d315a4ef26bc829db226aad0adb8e72290ff652b927387f3579",
+    "source_url": "https://docs.github.com/en/copilot/concepts/content-exclusion",
+    "status": "verified"
+  },
+  "gh-300-balotario-1-39": {
+    "content_hash": "7180ea8ceb8f6640a8243e5b964b69173c4ab72ec0247ff7d2be2cdc4eeda6f1",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9d053486f2ba66c750f12e1b9806a94cdd7bb2af8c4e99c8562b35daad94e37f",
+    "source_url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300",
+    "status": "verified"
+  },
+  "gh-300-balotario-1-4": {
+    "content_hash": "1b8d3fb9b28f47dc97c95759d5b95ebbc985eff9b8ff8903e9aacd5db01f6ada",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-1-40": {
+    "content_hash": "b4469d4202841c503cf115657f0c6f1c4befa4421c551873e3e675eba566b1a4",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "ea35697f8cec5b1f7abbd1e4d215eee386ae170b748da18d6905d871dd33e552",
+    "source_url": "https://docs.github.com/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot",
+    "status": "verified"
+  },
+  "gh-300-balotario-1-41": {
+    "content_hash": "c5f0d227bc3f2a83f4dc1e997afdb68d2cab83c7f69cda274a934c6cd10feadb",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "394bf54ca8df49f21684d7a3411584212b64b894e1332c7d8755744795f2904f",
+    "source_url": "https://docs.github.com/en/copilot/responsible-use/chat",
+    "status": "verified"
+  },
+  "gh-300-balotario-1-42": {
+    "content_hash": "60e09ff888c2369e5ba973a2b4c941d398be5e1c07c04734814320378b5b5449",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9d053486f2ba66c750f12e1b9806a94cdd7bb2af8c4e99c8562b35daad94e37f",
+    "source_url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300",
+    "status": "verified"
+  },
+  "gh-300-balotario-1-43": {
+    "content_hash": "40eff98bff5bd78e526fa4b97ea67dee1ece269df02d6ca424b2ca726355ca9a",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-1-44": {
+    "content_hash": "3e362a90bae596de2d0b3b1397bcf748d01cebad076354b25192bc6cb9d164de",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "112aea92738a7e67d9783bb341e309b14c3013ddda6ea323fc4f80359031dcce",
+    "source_url": "https://docs.github.com/en/copilot/reference/ai-models/model-hosting",
+    "status": "verified"
+  },
+  "gh-300-balotario-1-45": {
+    "content_hash": "6022c02c4ddb23afe0b65bdc0ce7e8ca651836cf619a7e328b9d3c206c8b6788",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "394bf54ca8df49f21684d7a3411584212b64b894e1332c7d8755744795f2904f",
+    "source_url": "https://docs.github.com/en/copilot/responsible-use/chat",
+    "status": "verified"
+  },
+  "gh-300-balotario-1-46": {
+    "content_hash": "5003b4e330311a0286a916b779c868da933c334d2ea8473d6f1bfc08405b76f3",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "112aea92738a7e67d9783bb341e309b14c3013ddda6ea323fc4f80359031dcce",
+    "source_url": "https://docs.github.com/en/copilot/reference/ai-models/model-hosting",
+    "status": "verified"
+  },
+  "gh-300-balotario-1-47": {
+    "content_hash": "cc35001185bcd0a2064d98f62ba77acc6fcb4c7c96848c4307007f5a2a0a9f02",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-1-48": {
+    "content_hash": "911388d78c5b407f57130ac50bb6fa26bac5d8844314c445ae4d68b6678a4edf",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "ea35697f8cec5b1f7abbd1e4d215eee386ae170b748da18d6905d871dd33e552",
+    "source_url": "https://docs.github.com/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot",
+    "status": "verified"
+  },
+  "gh-300-balotario-1-49": {
+    "content_hash": "6af47eba54022f2659e9f3f70bce70743fb32f418e251e7d45b126988213b956",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-1-5": {
+    "content_hash": "6584b30f22c97d6e3d58fc67a8bad5c0e77b8e026e8d1ed2a4db0084cbd0761a",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Verificado contra Trust Center",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-1-50": {
+    "content_hash": "1a36f00e40154d99b20ba44a599bf0cf99dfbbde4f337f097a2909fd462cb503",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-1-51": {
+    "content_hash": "77f58d388bea0e8662cc1221574e79e33c0ddc55ecdf952a872b56f7f8b0ff85",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "b28e9f025c34740eb81c39ae87bd22150971630e2bbd108711f657827ef0b5f9",
+    "source_url": "https://docs.github.com/en/copilot/tutorials/write-tests",
+    "status": "verified"
+  },
+  "gh-300-balotario-1-52": {
+    "content_hash": "bfc3d4e7b4eb201c5541dc89ddb049fcc1a7d6852a5dae180ef4edcb9659038d",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "ea35697f8cec5b1f7abbd1e4d215eee386ae170b748da18d6905d871dd33e552",
+    "source_url": "https://docs.github.com/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot",
+    "status": "verified"
+  },
+  "gh-300-balotario-1-53": {
+    "content_hash": "7bcc0d61b8121d87e003c4101015eee2971e58957962125847cbda3480f64043",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9d053486f2ba66c750f12e1b9806a94cdd7bb2af8c4e99c8562b35daad94e37f",
+    "source_url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300",
+    "status": "verified"
+  },
+  "gh-300-balotario-1-54": {
+    "content_hash": "c1631860659fb5347f832e6ccf3ee3f36a7269513870cd7836e91f37cc15e6a4",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "112aea92738a7e67d9783bb341e309b14c3013ddda6ea323fc4f80359031dcce",
+    "source_url": "https://docs.github.com/en/copilot/reference/ai-models/model-hosting",
+    "status": "verified"
+  },
+  "gh-300-balotario-1-55": {
+    "content_hash": "a99e6ea04e140b9ba4f4cd025c66af5eb882b7039b3ca969d4dc46927f9a2702",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-1-56": {
+    "content_hash": "e78476d11114c2bc8310c3d491f56f283e447d8ab8d6350ac9d2beba700a9387",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-1-57": {
+    "content_hash": "dffb5fb88c099466a1a5324b8f58318c8184f348540ae0dd191edf618a58356b",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-1-58": {
+    "content_hash": "4ec9e10cb01090a311c014a66dd98fb61b64c785c0de163e0937f51023de5e09",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "de5c7367434205767943e37781b1a732efb4974662b532d7c898e2a3b3ada7d0",
+    "source_url": "https://docs.github.com/en/copilot/concepts/prompting-and-context/spaces",
+    "status": "verified"
+  },
+  "gh-300-balotario-1-59": {
+    "content_hash": "815390c4486b55f28a3e667b7a221889d1147c5112ddc14e212616e496c568c1",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "394bf54ca8df49f21684d7a3411584212b64b894e1332c7d8755744795f2904f",
+    "source_url": "https://docs.github.com/en/copilot/responsible-use/chat",
+    "status": "verified"
+  },
+  "gh-300-balotario-1-6": {
+    "content_hash": "dbb7a8d4146bbe7a5a3f183a5424fcb2bcd0e2aaa7ebe99669cf058ef74780ec",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-1-60": {
+    "content_hash": "b45f75d973b6cb26a2ddfcdfa2f3dd773f83f5ba0171571781dc373c592b82af",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9d053486f2ba66c750f12e1b9806a94cdd7bb2af8c4e99c8562b35daad94e37f",
+    "source_url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300",
+    "status": "verified"
+  },
+  "gh-300-balotario-1-61": {
+    "content_hash": "fd443802a23dd749c81ea90e81bd68e87af0784588bf273fd38f5f5978ef8d53",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "394bf54ca8df49f21684d7a3411584212b64b894e1332c7d8755744795f2904f",
+    "source_url": "https://docs.github.com/en/copilot/responsible-use/chat",
+    "status": "verified"
+  },
+  "gh-300-balotario-1-62": {
+    "content_hash": "d97c914c33e432f5ec4fa3901741eaf6f7e6c76f2cb1aaed2a88cb2cb4e1f7bd",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "394bf54ca8df49f21684d7a3411584212b64b894e1332c7d8755744795f2904f",
+    "source_url": "https://docs.github.com/en/copilot/responsible-use/chat",
+    "status": "verified"
+  },
+  "gh-300-balotario-1-63": {
+    "content_hash": "05ddca022a89b898163eba0c86e128de73fb66eb117bcedadcb7b9d4579b0cb2",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "112aea92738a7e67d9783bb341e309b14c3013ddda6ea323fc4f80359031dcce",
+    "source_url": "https://docs.github.com/en/copilot/reference/ai-models/model-hosting",
+    "status": "verified"
+  },
+  "gh-300-balotario-1-64": {
+    "content_hash": "d71c2741de6f43a3e8efe58773e2792a2fdb93f0bb6846fabd098c6c9ba0a96e",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-1-65": {
+    "content_hash": "0a64e9f2d4f0e0709a0f712ba40bac9d240311a0ba5247f8780025f2065d4e6e",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-1-66": {
+    "content_hash": "15fe8fb547ecd2c6dc9d8f5be3090873f9b1e12596097f02e64fb052c1805e53",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "b28e9f025c34740eb81c39ae87bd22150971630e2bbd108711f657827ef0b5f9",
+    "source_url": "https://docs.github.com/en/copilot/tutorials/write-tests",
+    "status": "verified"
+  },
+  "gh-300-balotario-1-67": {
+    "content_hash": "04f085ef7929c8cae24b7635e3820c8ae2541c96bacf45b015cc52470967c677",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-1-68": {
+    "content_hash": "edae39508719ca140df58538592aec4dd36525aac657411dce761e91740a2382",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-1-69": {
+    "content_hash": "9311ad727c8dd867d38745620b124fb2d7d5e1254cb3926999902c68a478e4cd",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-1-7": {
+    "content_hash": "5ed76c69347592a654b5be1964504c93b56f12c2b638b73bfe6ae44a2a973afb",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "22cf0ad018da71882fcfe065dda43d50d81ee90e967c847ccc0cfe644b5b22d0",
+    "source_url": "https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-enterprise/review-audit-logs",
+    "status": "verified"
+  },
+  "gh-300-balotario-1-70": {
+    "content_hash": "570a9aeec4523960fc90a42365e1bdcb124a93decce2dbabc7ac8fff8a6fb9ef",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-1-8": {
+    "content_hash": "223222a08f0b78c93c454ae81b1598016db03f2e3671cb2a32f189bee344f2f3",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "b28e9f025c34740eb81c39ae87bd22150971630e2bbd108711f657827ef0b5f9",
+    "source_url": "https://docs.github.com/en/copilot/tutorials/write-tests",
+    "status": "verified"
+  },
+  "gh-300-balotario-1-9": {
+    "content_hash": "2db53524f4e0f7ef9805bcd8ced30122bfb89b9137f1496e69ef22d286313be1",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "b28e9f025c34740eb81c39ae87bd22150971630e2bbd108711f657827ef0b5f9",
+    "source_url": "https://docs.github.com/en/copilot/tutorials/write-tests",
+    "status": "verified"
+  },
+  "gh-300-balotario-2-1": {
+    "content_hash": "d1144e6ec17a1e4e753fa50ddb26c06d1ce4a239ff2e9a243f7d3d3c1df03d17",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "54e074d56cdc5d315a4ef26bc829db226aad0adb8e72290ff652b927387f3579",
+    "source_url": "https://docs.github.com/en/copilot/concepts/content-exclusion",
+    "status": "verified"
+  },
+  "gh-300-balotario-2-10": {
+    "content_hash": "b7587478a691c63215613c93d3971e0eb29aef6a92bd04b645eb1a13dbc62959",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "b28e9f025c34740eb81c39ae87bd22150971630e2bbd108711f657827ef0b5f9",
+    "source_url": "https://docs.github.com/en/copilot/tutorials/write-tests",
+    "status": "verified"
+  },
+  "gh-300-balotario-2-11": {
+    "content_hash": "e941d3ac4ae896becdea80078b13ae50ced05de2aeaadde7f3f42677d3907457",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9d053486f2ba66c750f12e1b9806a94cdd7bb2af8c4e99c8562b35daad94e37f",
+    "source_url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300",
+    "status": "verified"
+  },
+  "gh-300-balotario-2-12": {
+    "content_hash": "b73021b03ba0d63b32783022745d0a2e6d4199e2db2122fd6a3f3f2467ba61d7",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "112aea92738a7e67d9783bb341e309b14c3013ddda6ea323fc4f80359031dcce",
+    "source_url": "https://docs.github.com/en/copilot/reference/ai-models/model-hosting",
+    "status": "verified"
+  },
+  "gh-300-balotario-2-13": {
+    "content_hash": "687912b679db1c7af0392180b50e8d5143bcb4580c79ddf71c1237aa307a4c10",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-2-14": {
+    "content_hash": "e4b4b028b939e3894f912e6bf741e8d32e633ccd318ef6c01e4d40810facd7f6",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "7497086ea26c821369885998d76de943e5b0d806c6f572a084a33be02dc0a764",
+    "source_url": "https://docs.github.com/en/copilot/concepts/completions/code-referencing",
+    "status": "verified"
+  },
+  "gh-300-balotario-2-15": {
+    "content_hash": "54445648d09b3c13444cb27d3e980b15463dbe34cb7f64955b8513c78d825c82",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9d053486f2ba66c750f12e1b9806a94cdd7bb2af8c4e99c8562b35daad94e37f",
+    "source_url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300",
+    "status": "verified"
+  },
+  "gh-300-balotario-2-16": {
+    "content_hash": "797af1d85988ff1c73c384b62ea0a05fa4b948ec084c3d590529129f3c7f3d0c",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "d0f3268adc9e279496808ce69a6a39a368492b4933a74a682e99995e26106235",
+    "source_url": "https://docs.github.com/en/copilot/how-tos/copilot-cli",
+    "status": "verified"
+  },
+  "gh-300-balotario-2-17": {
+    "content_hash": "e8b38f347896483f68ac1d3382d579806603297850ceaf63341eb8e1380a21c4",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-2-18": {
+    "content_hash": "879465e022231a94519dc8bba10759e0dcb1513480ea7c06096dc1bf4b9fe442",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-2-19": {
+    "content_hash": "84c4b803b1379745203828950b9c344645485f1731cba2eecf87423d7ddf979d",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-2-2": {
+    "content_hash": "f9be185ae23b2dbf6ab24f427f4d1aa43b56ac382492f91e05c936bc7f686db2",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-2-20": {
+    "content_hash": "494f7d8942e21a8c33986f7b66a717dd9c21eb941ad7d3a225d44e8f47f28cf2",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "ea35697f8cec5b1f7abbd1e4d215eee386ae170b748da18d6905d871dd33e552",
+    "source_url": "https://docs.github.com/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot",
+    "status": "verified"
+  },
+  "gh-300-balotario-2-21": {
+    "content_hash": "3560f1761bb70408a1a3354acfec9b08cbb74b63dca1901f2dcca52248c1dc56",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9d053486f2ba66c750f12e1b9806a94cdd7bb2af8c4e99c8562b35daad94e37f",
+    "source_url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300",
+    "status": "verified"
+  },
+  "gh-300-balotario-2-22": {
+    "content_hash": "8b21bcaab271e8a5eb2e9d9c56d240e681efb465c57512fa63c3c62d10950e09",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "112aea92738a7e67d9783bb341e309b14c3013ddda6ea323fc4f80359031dcce",
+    "source_url": "https://docs.github.com/en/copilot/reference/ai-models/model-hosting",
+    "status": "verified"
+  },
+  "gh-300-balotario-2-23": {
+    "content_hash": "15914394795653aeec10737dc9c4cbf701b6d2f427c19895eb6e429cd2cdd88f",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-2-24": {
+    "content_hash": "c3806d8a4e9341ef6dc671f067b9a6d25334039698d1e6363ec8281880124469",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-2-25": {
+    "content_hash": "6a343ea1869a15da3f7a5ea93ffefa78d1ea9eb42ec01f2959a39d3367a0ea16",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-2-26": {
+    "content_hash": "e0e0f37c81a8bd92b92b7903ac53df8d6e4c5fb51f14686c2ba0cc1bdfcd09c8",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9d053486f2ba66c750f12e1b9806a94cdd7bb2af8c4e99c8562b35daad94e37f",
+    "source_url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300",
+    "status": "verified"
+  },
+  "gh-300-balotario-2-27": {
+    "content_hash": "8fa87636851233810aad0852a10dac1f42d65ef2239b2b9ad87cdf8317dfe6ad",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-2-28": {
+    "content_hash": "d97c47b18b7916617fab831713641cc3fca7feee2a80984e53f8e43d6a93d570",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "54e074d56cdc5d315a4ef26bc829db226aad0adb8e72290ff652b927387f3579",
+    "source_url": "https://docs.github.com/en/copilot/concepts/content-exclusion",
+    "status": "verified"
+  },
+  "gh-300-balotario-2-29": {
+    "content_hash": "a466a1ac853ac3e14bc599d4926bc7bd28443fdd199d10784a5c9b420decea18",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-2-3": {
+    "content_hash": "ca0820c5dbab7b05f557b91a80028ca2ef6bee690e12af29eda27138ebb48044",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-2-30": {
+    "content_hash": "c40fde2a83528290f9acdfb8bce88496e829acaee43eeb87ce24aeaae76acf82",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-2-31": {
+    "content_hash": "47e6138b023cc4b43a57761c651bcd9c519aff5af43dfef69ef311ccd02d2264",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-2-32": {
+    "content_hash": "b21f2fa3d74c9b3ddcc7ae39c31f90f01c84cf0cf82a692bba47da6b38fa06a0",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-2-33": {
+    "content_hash": "72be60e9e0fc9b973ed270587d7838a0841a3973767ddf672047db6e465701be",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "b28e9f025c34740eb81c39ae87bd22150971630e2bbd108711f657827ef0b5f9",
+    "source_url": "https://docs.github.com/en/copilot/tutorials/write-tests",
+    "status": "verified"
+  },
+  "gh-300-balotario-2-34": {
+    "content_hash": "097ab4b1845cdb4998673719083f9559e60d58360c7683f5c9fde588e9a562be",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "54e074d56cdc5d315a4ef26bc829db226aad0adb8e72290ff652b927387f3579",
+    "source_url": "https://docs.github.com/en/copilot/concepts/content-exclusion",
+    "status": "verified"
+  },
+  "gh-300-balotario-2-35": {
+    "content_hash": "df67833af8fde36ad6f85fc2327637b0e9ff020116a7157b34739f3f348036eb",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "22cf0ad018da71882fcfe065dda43d50d81ee90e967c847ccc0cfe644b5b22d0",
+    "source_url": "https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-enterprise/review-audit-logs",
+    "status": "verified"
+  },
+  "gh-300-balotario-2-36": {
+    "content_hash": "7a99aac2c72bc82b3c7e284a4f8a94443b4943e587941528425849dbb2119cfa",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "ea35697f8cec5b1f7abbd1e4d215eee386ae170b748da18d6905d871dd33e552",
+    "source_url": "https://docs.github.com/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot",
+    "status": "verified"
+  },
+  "gh-300-balotario-2-37": {
+    "content_hash": "d2baab37de532f931f2f8bdbf016a370c1f0f390a963d83e7d0160dc0685c45a",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-2-38": {
+    "content_hash": "f9c291dc577af7eca109a2124b16064c4d8e2ca162dda6dc9e2d88f56507f7d2",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-2-39": {
+    "content_hash": "755475e957daf721b7bbc056a5be147debb171a5eea70851f07703175049a954",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "394bf54ca8df49f21684d7a3411584212b64b894e1332c7d8755744795f2904f",
+    "source_url": "https://docs.github.com/en/copilot/responsible-use/chat",
+    "status": "verified"
+  },
+  "gh-300-balotario-2-4": {
+    "content_hash": "5e417e9ed9299c5b61b99b74ef9103ddf3b817287126625b30dc051532e476cd",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-2-40": {
+    "content_hash": "64f724117fc8b13532d9c1b82ffaf914d9c668e127ff0e27911857e5935e9c73",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9d053486f2ba66c750f12e1b9806a94cdd7bb2af8c4e99c8562b35daad94e37f",
+    "source_url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300",
+    "status": "verified"
+  },
+  "gh-300-balotario-2-41": {
+    "content_hash": "f33912da56da13c3c9240444f0b347aa416b6e392b1127a04d6d83f5a483286b",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "ea35697f8cec5b1f7abbd1e4d215eee386ae170b748da18d6905d871dd33e552",
+    "source_url": "https://docs.github.com/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot",
+    "status": "verified"
+  },
+  "gh-300-balotario-2-42": {
+    "content_hash": "5da400a642de97c3f0bbb6e86de747108854ddf2630b3177a5e17107bf064b1d",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9d053486f2ba66c750f12e1b9806a94cdd7bb2af8c4e99c8562b35daad94e37f",
+    "source_url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300",
+    "status": "verified"
+  },
+  "gh-300-balotario-2-43": {
+    "content_hash": "5106e98fd9d27dfa0fe06239f7787c958d4e5766390e645bb241c56c59fb70b8",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-2-44": {
+    "content_hash": "23df397da02e07bea1f8ba299d60f48decb42f62c280ff1923305608e8360790",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-2-45": {
+    "content_hash": "ffa28304ef635d0f377c0db0de9feba941d6296d805c10abd98c65a9e2682c10",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-2-46": {
+    "content_hash": "2621705dac21b15b3c44287cbc958c9cf6bde84de89f6a086ac770caec289197",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "394bf54ca8df49f21684d7a3411584212b64b894e1332c7d8755744795f2904f",
+    "source_url": "https://docs.github.com/en/copilot/responsible-use/chat",
+    "status": "verified"
+  },
+  "gh-300-balotario-2-47": {
+    "content_hash": "a4b75edc7dd49171e82e47585051a6ab934a9676cee8177548e313bc3797dfbe",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "ea35697f8cec5b1f7abbd1e4d215eee386ae170b748da18d6905d871dd33e552",
+    "source_url": "https://docs.github.com/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot",
+    "status": "verified"
+  },
+  "gh-300-balotario-2-48": {
+    "content_hash": "34378bf1085cdbef9d86530e9f756fa1a8677779437db06a987f9a52207d1d33",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-2-49": {
+    "content_hash": "cf5f16fe52c1b4ab34f633f6eaa41703850ff21c706fe9bcb671309e2c39c03a",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "54e074d56cdc5d315a4ef26bc829db226aad0adb8e72290ff652b927387f3579",
+    "source_url": "https://docs.github.com/en/copilot/concepts/content-exclusion",
+    "status": "verified"
+  },
+  "gh-300-balotario-2-5": {
+    "content_hash": "56cb520f833a6cf3bfe9ad7ff2a2512c6f7278b4a3d02a6ca472fe5e282ed91d",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "ea35697f8cec5b1f7abbd1e4d215eee386ae170b748da18d6905d871dd33e552",
+    "source_url": "https://docs.github.com/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot",
+    "status": "verified"
+  },
+  "gh-300-balotario-2-50": {
+    "content_hash": "58687619cc9659d221055c4916a6f9ae43a9da5e9993b637bb5940abbd662131",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-2-51": {
+    "content_hash": "658fa3d7e9fd92d546d1e5bc6c687d42d6d5eed399c7b20b0403f8dfd2740552",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "112aea92738a7e67d9783bb341e309b14c3013ddda6ea323fc4f80359031dcce",
+    "source_url": "https://docs.github.com/en/copilot/reference/ai-models/model-hosting",
+    "status": "verified"
+  },
+  "gh-300-balotario-2-52": {
+    "content_hash": "cb304767fa8a2202ad16a7a1410f5d7e44c8a7a70b11faef84c42798169d7dbf",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9d053486f2ba66c750f12e1b9806a94cdd7bb2af8c4e99c8562b35daad94e37f",
+    "source_url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300",
+    "status": "verified"
+  },
+  "gh-300-balotario-2-53": {
+    "content_hash": "d03e57073f64312212274112076850eacd78ba8867db705dbd913ac176a14542",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "112aea92738a7e67d9783bb341e309b14c3013ddda6ea323fc4f80359031dcce",
+    "source_url": "https://docs.github.com/en/copilot/reference/ai-models/model-hosting",
+    "status": "verified"
+  },
+  "gh-300-balotario-2-54": {
+    "content_hash": "757e811399179a441ab0ab1493c67f3a4b490af61e330f03cfca402254922b2e",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9d053486f2ba66c750f12e1b9806a94cdd7bb2af8c4e99c8562b35daad94e37f",
+    "source_url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300",
+    "status": "verified"
+  },
+  "gh-300-balotario-2-55": {
+    "content_hash": "bbd308632caaa70605ea71fd9d5454686823750649ecb30246076fe6395ba943",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-2-56": {
+    "content_hash": "8bcd891f28e9185f37ca79e47276767f97c3f1cfb0c7a06e46fcdf1b6230ebfb",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-2-57": {
+    "content_hash": "f7d0afe8adb9ff77caa52a919813c5bcd27e429991559789833135c5f21d14cc",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "b28e9f025c34740eb81c39ae87bd22150971630e2bbd108711f657827ef0b5f9",
+    "source_url": "https://docs.github.com/en/copilot/tutorials/write-tests",
+    "status": "verified"
+  },
+  "gh-300-balotario-2-58": {
+    "content_hash": "8605310104e6f8b11b488515d273af3b0327dcc86fa501361d628f8a319749ba",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-2-59": {
+    "content_hash": "8a893ed7d518e3270347303a5c00958c5af4b77c19794b901c57bb66dcb5a37a",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "ea35697f8cec5b1f7abbd1e4d215eee386ae170b748da18d6905d871dd33e552",
+    "source_url": "https://docs.github.com/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot",
+    "status": "verified"
+  },
+  "gh-300-balotario-2-6": {
+    "content_hash": "189ae723d6246b4e4630e6f61744dbb016a4713c6e8807473b27abd57a8881bb",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "394bf54ca8df49f21684d7a3411584212b64b894e1332c7d8755744795f2904f",
+    "source_url": "https://docs.github.com/en/copilot/responsible-use/chat",
+    "status": "verified"
+  },
+  "gh-300-balotario-2-60": {
+    "content_hash": "972021850967f3e57e568baee7f77beafe5401d6947b0c51bd6d691ad8e67db8",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "394bf54ca8df49f21684d7a3411584212b64b894e1332c7d8755744795f2904f",
+    "source_url": "https://docs.github.com/en/copilot/responsible-use/chat",
+    "status": "verified"
+  },
+  "gh-300-balotario-2-61": {
+    "content_hash": "bc5cf04df04389a0c5fb5989868deaa6a1d7a28109828b105ce77d967c0ea246",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-2-62": {
+    "content_hash": "517529fe3aec162f874f90486fbbf7ade16c7cf16ba1c3d28b81d1c843b1368f",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-2-63": {
+    "content_hash": "93dd9a69e7c4aef3c4d7c58d92fb81c854d643192e35295460cecde7ff34e0ab",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9d053486f2ba66c750f12e1b9806a94cdd7bb2af8c4e99c8562b35daad94e37f",
+    "source_url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300",
+    "status": "verified"
+  },
+  "gh-300-balotario-2-64": {
+    "content_hash": "659d215e04021ac3bacc46f435d070a821f514727e2d7cf785af65127b2be5da",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-2-65": {
+    "content_hash": "a2514325c22510ecd6c3523377c2ef04d9f7f7229044f57d46bf8f39a2a60444",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9d053486f2ba66c750f12e1b9806a94cdd7bb2af8c4e99c8562b35daad94e37f",
+    "source_url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300",
+    "status": "verified"
+  },
+  "gh-300-balotario-2-66": {
+    "content_hash": "43baa27f930035700d5dc3f7ab15b4c67af4ed2b7aa98c2a181bd8d88a457eed",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "54e074d56cdc5d315a4ef26bc829db226aad0adb8e72290ff652b927387f3579",
+    "source_url": "https://docs.github.com/en/copilot/concepts/content-exclusion",
+    "status": "verified"
+  },
+  "gh-300-balotario-2-67": {
+    "content_hash": "70e6aea3786ca04a5052f999dc10e42dd4ef1299d5e51a678f5dc111b303a64b",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-2-68": {
+    "content_hash": "4dcaac77ee04c482ae89cee8a17c384f2ab800d39a11707a79fb3d21438466c5",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-2-69": {
+    "content_hash": "81cb0d160e311e58a92d233f8e731733535002446ed4525080bf893cdfde2707",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "b28e9f025c34740eb81c39ae87bd22150971630e2bbd108711f657827ef0b5f9",
+    "source_url": "https://docs.github.com/en/copilot/tutorials/write-tests",
+    "status": "verified"
+  },
+  "gh-300-balotario-2-7": {
+    "content_hash": "7b76069d872f4a415e71b20936c3032f028d72a6ad22eedf58ca176e0283afba",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "394bf54ca8df49f21684d7a3411584212b64b894e1332c7d8755744795f2904f",
+    "source_url": "https://docs.github.com/en/copilot/responsible-use/chat",
+    "status": "verified"
+  },
+  "gh-300-balotario-2-70": {
+    "content_hash": "d0ee90be60900e92505cb8fb0022ae17f8187ebaf12a0c9166a8f8c38efc489f",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-2-8": {
+    "content_hash": "618f95790787f6f9841db38ab997c14412ca9b98057f659b70947b3b045a3b69",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9d053486f2ba66c750f12e1b9806a94cdd7bb2af8c4e99c8562b35daad94e37f",
+    "source_url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300",
+    "status": "verified"
+  },
+  "gh-300-balotario-2-9": {
+    "content_hash": "064e79c285cef8525b7939f8ff0338e6518d2289eb9aa273279b578951bb9a4a",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "112aea92738a7e67d9783bb341e309b14c3013ddda6ea323fc4f80359031dcce",
+    "source_url": "https://docs.github.com/en/copilot/reference/ai-models/model-hosting",
+    "status": "verified"
+  },
+  "gh-300-balotario-3-1": {
+    "content_hash": "c5f30a0cb450adb8d2cb3531aa11bdd219b2d35fb99c40de8e27b9d9cb5d0a37",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9d053486f2ba66c750f12e1b9806a94cdd7bb2af8c4e99c8562b35daad94e37f",
+    "source_url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300",
+    "status": "verified"
+  },
+  "gh-300-balotario-3-10": {
+    "content_hash": "a9ea240cf0aa9a575d4ac048ae443d4d64d56b31e6bc5185fa059adcbd1460a9",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9d053486f2ba66c750f12e1b9806a94cdd7bb2af8c4e99c8562b35daad94e37f",
+    "source_url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300",
+    "status": "verified"
+  },
+  "gh-300-balotario-3-11": {
+    "content_hash": "adcbfc2ae9b2d798bc304b310bdbfd34e5329a738089f7bcbc34a1b4d8233174",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "112aea92738a7e67d9783bb341e309b14c3013ddda6ea323fc4f80359031dcce",
+    "source_url": "https://docs.github.com/en/copilot/reference/ai-models/model-hosting",
+    "status": "verified"
+  },
+  "gh-300-balotario-3-12": {
+    "content_hash": "54f80cfcb0e9b19d6e8edd333c466f5e40dc2ff8a9e182bbd1b430aeba9443ee",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "7497086ea26c821369885998d76de943e5b0d806c6f572a084a33be02dc0a764",
+    "source_url": "https://docs.github.com/en/copilot/concepts/completions/code-referencing",
+    "status": "verified"
+  },
+  "gh-300-balotario-3-13": {
+    "content_hash": "ced15d6d81ff3199a73499356a9bce788a406c5063b3b26e5d3506c7f70f461b",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "394bf54ca8df49f21684d7a3411584212b64b894e1332c7d8755744795f2904f",
+    "source_url": "https://docs.github.com/en/copilot/responsible-use/chat",
+    "status": "verified"
+  },
+  "gh-300-balotario-3-14": {
+    "content_hash": "2820ef38bc91c595a6de3ccd50d3523072da1afba4b64c8cbf8a51531bb9f612",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-3-15": {
+    "content_hash": "5d4b558ffbca160209c3b45a4473cde7475af3988ae3e83cececf63c679b2529",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-3-16": {
+    "content_hash": "2db6c49668b639c0ff4d18eb7e0011d0034f2771c21573674bb85bb89a763df4",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-3-17": {
+    "content_hash": "43dc4da03b92a2259333f00fb25be8cee8af880240e47f3065d761eba7e4dcb0",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-3-18": {
+    "content_hash": "906841a2b57b2ac4ac47de555325d89845187e782778e26dc9b09c754a7d9472",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "394bf54ca8df49f21684d7a3411584212b64b894e1332c7d8755744795f2904f",
+    "source_url": "https://docs.github.com/en/copilot/responsible-use/chat",
+    "status": "verified"
+  },
+  "gh-300-balotario-3-19": {
+    "content_hash": "5d4d7c444de769bda51c2ff960bf13f0bd19dec3d8ed56fe395114314468ac4c",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-3-2": {
+    "content_hash": "c137052b2021f4b1ee1bb18d7c9d21c827ac7db862b081116d703e247d2879d6",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9d053486f2ba66c750f12e1b9806a94cdd7bb2af8c4e99c8562b35daad94e37f",
+    "source_url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300",
+    "status": "verified"
+  },
+  "gh-300-balotario-3-20": {
+    "content_hash": "694cf6afcd530adf20ef729f9d7dce960b91d157e2514eeff588c0b1fc0b256e",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-3-21": {
+    "content_hash": "55fe52e3a57b8f42bba927eef969f06434f1f86b76d97e40cf71bfdfc0e11aee",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9d053486f2ba66c750f12e1b9806a94cdd7bb2af8c4e99c8562b35daad94e37f",
+    "source_url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300",
+    "status": "verified"
+  },
+  "gh-300-balotario-3-22": {
+    "content_hash": "f700486389fdaccaf6d07f07415bab425b0653109d7abc4cf7c2d81ea4141e82",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-3-23": {
+    "content_hash": "a9769743b6bebf50769b93c3477a7aa02d4c0220818703a205ad7b0c6cb49500",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "394bf54ca8df49f21684d7a3411584212b64b894e1332c7d8755744795f2904f",
+    "source_url": "https://docs.github.com/en/copilot/responsible-use/chat",
+    "status": "verified"
+  },
+  "gh-300-balotario-3-24": {
+    "content_hash": "86220cae71a2ab6e72b90bc256b5f24f83695d2a6c9be24b70e07a7816653962",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-3-25": {
+    "content_hash": "4458878dfa353f5f75808f441a05fe5948fb07e9fd59c3ec3db912aeb1f90872",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-3-26": {
+    "content_hash": "4e96b217645ae3548e0eea2c43005777baa198aec6ee3619663c07c2c4f6a11e",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "ea35697f8cec5b1f7abbd1e4d215eee386ae170b748da18d6905d871dd33e552",
+    "source_url": "https://docs.github.com/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot",
+    "status": "verified"
+  },
+  "gh-300-balotario-3-27": {
+    "content_hash": "c145aa080e8064414be1760fec2ba73b18e3abbdb76617f68f21016f4dc6dc31",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-3-28": {
+    "content_hash": "c9a0a9b893c91b607b365f629c71cd50a3c71cb2885b45c74ab35dbc72cc0c20",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "b28e9f025c34740eb81c39ae87bd22150971630e2bbd108711f657827ef0b5f9",
+    "source_url": "https://docs.github.com/en/copilot/tutorials/write-tests",
+    "status": "verified"
+  },
+  "gh-300-balotario-3-29": {
+    "content_hash": "b3745050da82a67950dcfdb99282f02a0cf62b79403d07ee2f961b1da5d3e428",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-3-3": {
+    "content_hash": "4cfc11f4b6436499e17522b4b51352c716c5e4643bdc8f4ded6598c50695f9e7",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-3-30": {
+    "content_hash": "e203fde7e52df2dbaa14301cd3d3bead8a60d3f064747a2332dd249190eee054",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "ea35697f8cec5b1f7abbd1e4d215eee386ae170b748da18d6905d871dd33e552",
+    "source_url": "https://docs.github.com/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot",
+    "status": "verified"
+  },
+  "gh-300-balotario-3-31": {
+    "content_hash": "9ba77439a650d4bded51793bed66371100d460d1bf7f086b02278c6575ffac26",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-3-32": {
+    "content_hash": "6137fb32e64634a15654690d41c96f319c2de1b81a26cf83e6579b56d5c03a6e",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-3-33": {
+    "content_hash": "3d3a6e3393b3727c95b195528a30a1c79bcc82d15ab29dc74a7229b9ae04f837",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9d053486f2ba66c750f12e1b9806a94cdd7bb2af8c4e99c8562b35daad94e37f",
+    "source_url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300",
+    "status": "verified"
+  },
+  "gh-300-balotario-3-34": {
+    "content_hash": "6fd6b220460f7e5c2c64af8b0678c4bb51002e2c062f0793dd986e69e7b1ec84",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "ea35697f8cec5b1f7abbd1e4d215eee386ae170b748da18d6905d871dd33e552",
+    "source_url": "https://docs.github.com/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot",
+    "status": "verified"
+  },
+  "gh-300-balotario-3-35": {
+    "content_hash": "3a8b5f467a4b8626011ae5e48e1baf32214dab90bd714e735a465ac488e1a905",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-3-36": {
+    "content_hash": "832fd9787f5046215dfbf7a5732b363d0298484333314286356df78c3358af73",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9d053486f2ba66c750f12e1b9806a94cdd7bb2af8c4e99c8562b35daad94e37f",
+    "source_url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300",
+    "status": "verified"
+  },
+  "gh-300-balotario-3-37": {
+    "content_hash": "dcab86422f00a235f021b92f64df121481f7ebaf5d245c6140a7ed8552b5634d",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-3-38": {
+    "content_hash": "fa1826e5169b8acffe690e84f76a441c4f46288ef78b18a280560592d35a2adb",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "394bf54ca8df49f21684d7a3411584212b64b894e1332c7d8755744795f2904f",
+    "source_url": "https://docs.github.com/en/copilot/responsible-use/chat",
+    "status": "verified"
+  },
+  "gh-300-balotario-3-39": {
+    "content_hash": "acb3e6ee11c9d9d1c0ef0d47d2c1f6be51aada8969ae31a294697f7411fe8533",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-3-4": {
+    "content_hash": "aa61470d4ab2a5e9ef32a7f3d0a45ee8de798689dc70fe6945bc31fe199744af",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "d0f3268adc9e279496808ce69a6a39a368492b4933a74a682e99995e26106235",
+    "source_url": "https://docs.github.com/en/copilot/how-tos/copilot-cli",
+    "status": "verified"
+  },
+  "gh-300-balotario-3-40": {
+    "content_hash": "8c29937c825caf3b7e0ce6cedd5671d75e36008cb09b13a6eb2653511fe21120",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-3-41": {
+    "content_hash": "127db18f10c3276b05f041eeb26f5881fcdafcfc91b637c8931d048405172aaf",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9d053486f2ba66c750f12e1b9806a94cdd7bb2af8c4e99c8562b35daad94e37f",
+    "source_url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300",
+    "status": "verified"
+  },
+  "gh-300-balotario-3-42": {
+    "content_hash": "9c180e244350f10d34949a1140946d40072f7533c370fb3990c99ca8af90d334",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "d0f3268adc9e279496808ce69a6a39a368492b4933a74a682e99995e26106235",
+    "source_url": "https://docs.github.com/en/copilot/how-tos/copilot-cli",
+    "status": "verified"
+  },
+  "gh-300-balotario-3-43": {
+    "content_hash": "3e2a84e11fb59d4d41f69ce587a230c783c84db2a4bb1c2f40b6a416a854caa1",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-3-44": {
+    "content_hash": "2f01f453941bcdec13f058c118122eec9d77f75490053504abb2f83d078dba13",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-3-45": {
+    "content_hash": "508371294049f770230236736312d6e4a3e8b05116b14e180eabfdfe86e19634",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "b28e9f025c34740eb81c39ae87bd22150971630e2bbd108711f657827ef0b5f9",
+    "source_url": "https://docs.github.com/en/copilot/tutorials/write-tests",
+    "status": "verified"
+  },
+  "gh-300-balotario-3-46": {
+    "content_hash": "d566c6c9fb8e2767fca948b41e99f94340eedae281c1e421d5a7290fbffc4b3e",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-3-47": {
+    "content_hash": "18a2fd096a5453142940d0f07f485123c2b62ea716c4bc18912010cf81144236",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9d053486f2ba66c750f12e1b9806a94cdd7bb2af8c4e99c8562b35daad94e37f",
+    "source_url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300",
+    "status": "verified"
+  },
+  "gh-300-balotario-3-48": {
+    "content_hash": "f7792b3a88643a1fa10eb3a6119147c50264a71159a4f753fd52df5e3aa8b344",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "54e074d56cdc5d315a4ef26bc829db226aad0adb8e72290ff652b927387f3579",
+    "source_url": "https://docs.github.com/en/copilot/concepts/content-exclusion",
+    "status": "verified"
+  },
+  "gh-300-balotario-3-49": {
+    "content_hash": "74ccfb871d79964c29983cedcecff4358e51dfc1dfb28b6278c8c619f16c1c27",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-3-5": {
+    "content_hash": "fddf45425edd8a36b6194b98c8f3cbc0514b3713690729274a8a1d74c8183ab8",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "394bf54ca8df49f21684d7a3411584212b64b894e1332c7d8755744795f2904f",
+    "source_url": "https://docs.github.com/en/copilot/responsible-use/chat",
+    "status": "verified"
+  },
+  "gh-300-balotario-3-50": {
+    "content_hash": "d9a35341e4f079b620befb567b063123d676b4c5aaf70c4e9d66ff9215de3cce",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-3-51": {
+    "content_hash": "36092f2ec969051c824dd1ad47e6043c636ebc7ba7cab05b054c2e82d424e381",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "394bf54ca8df49f21684d7a3411584212b64b894e1332c7d8755744795f2904f",
+    "source_url": "https://docs.github.com/en/copilot/responsible-use/chat",
+    "status": "verified"
+  },
+  "gh-300-balotario-3-52": {
+    "content_hash": "a7f002601a25336ddb7c6fa623337a6a529d078f3eee13cdb62a4ef08be3c448",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "ea35697f8cec5b1f7abbd1e4d215eee386ae170b748da18d6905d871dd33e552",
+    "source_url": "https://docs.github.com/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot",
+    "status": "verified"
+  },
+  "gh-300-balotario-3-53": {
+    "content_hash": "f726c80dd12978bf2422ccb175d1b0b80b9e2e2b7d6dc36287a0a34c703d9cf2",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "394bf54ca8df49f21684d7a3411584212b64b894e1332c7d8755744795f2904f",
+    "source_url": "https://docs.github.com/en/copilot/responsible-use/chat",
+    "status": "verified"
+  },
+  "gh-300-balotario-3-54": {
+    "content_hash": "0172e396823ef001594335ca3cc0435093e38b249f541947a7e813704474c8f4",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9d053486f2ba66c750f12e1b9806a94cdd7bb2af8c4e99c8562b35daad94e37f",
+    "source_url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300",
+    "status": "verified"
+  },
+  "gh-300-balotario-3-55": {
+    "content_hash": "40828018140fdf67e19f3c4078fb70ed1b2d66e2531ed164e141e256567b313d",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "ea35697f8cec5b1f7abbd1e4d215eee386ae170b748da18d6905d871dd33e552",
+    "source_url": "https://docs.github.com/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot",
+    "status": "verified"
+  },
+  "gh-300-balotario-3-56": {
+    "content_hash": "a54b9ed185fa81893de16bc56c884b1185ce37e829d6f3f2136cc0594473fed0",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "394bf54ca8df49f21684d7a3411584212b64b894e1332c7d8755744795f2904f",
+    "source_url": "https://docs.github.com/en/copilot/responsible-use/chat",
+    "status": "verified"
+  },
+  "gh-300-balotario-3-57": {
+    "content_hash": "c8c5e1bdd3328414e6ecc4cc2848397becd3036f67d85a4c43a22417d3eb76d4",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-3-58": {
+    "content_hash": "2b70ddd34c0fef38c179e22fe4c127586af543505fee16c7b8850f7023839a92",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "ea35697f8cec5b1f7abbd1e4d215eee386ae170b748da18d6905d871dd33e552",
+    "source_url": "https://docs.github.com/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot",
+    "status": "verified"
+  },
+  "gh-300-balotario-3-59": {
+    "content_hash": "b2188d1a22f583d72ca06f0ade97567b59b573e16eea751d58016425ea06cb2c",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "d0f3268adc9e279496808ce69a6a39a368492b4933a74a682e99995e26106235",
+    "source_url": "https://docs.github.com/en/copilot/how-tos/copilot-cli",
+    "status": "verified"
+  },
+  "gh-300-balotario-3-6": {
+    "content_hash": "6274f1c115731c21e40d24fea23008177e579f528a3734b7432cd2af96b831e9",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "ea35697f8cec5b1f7abbd1e4d215eee386ae170b748da18d6905d871dd33e552",
+    "source_url": "https://docs.github.com/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot",
+    "status": "verified"
+  },
+  "gh-300-balotario-3-60": {
+    "content_hash": "f212ea2470c32f4c4976de9e5a416e820ff837138094813ebbc93abeb4126c9a",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-3-61": {
+    "content_hash": "b6e9d07bf54e488466df54ae872e06b81e440fd6b4328b7dd49a90f350c57e43",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9d053486f2ba66c750f12e1b9806a94cdd7bb2af8c4e99c8562b35daad94e37f",
+    "source_url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300",
+    "status": "verified"
+  },
+  "gh-300-balotario-3-62": {
+    "content_hash": "e9a3a825135eb12e449b37e58945bb98733ef283e7e185434d9c923e56d7d4d3",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-3-63": {
+    "content_hash": "e181ae34154bd2ad7e2124124e0acc3c0f3e93a28e2e72e903815dd6a1468999",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-3-64": {
+    "content_hash": "808574b02b6ffc04f7b7d0eb6d8cb8c93fffd2f62cbec2352e7d97eb4104a242",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "394bf54ca8df49f21684d7a3411584212b64b894e1332c7d8755744795f2904f",
+    "source_url": "https://docs.github.com/en/copilot/responsible-use/chat",
+    "status": "verified"
+  },
+  "gh-300-balotario-3-65": {
+    "content_hash": "a09adc15cc5d2d3dfad3cf3fce4a95076ac0862c652df7e836b78ab80405de20",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-3-66": {
+    "content_hash": "646b8bf348e58741b605d1cb55b07025e06ba2b79b24dbdb2de4333c9165b487",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-3-67": {
+    "content_hash": "a0516b70fbeb2295e41fdedcc5a85094b184457cfbc77cd1df561c9ebc0c2ca3",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9d053486f2ba66c750f12e1b9806a94cdd7bb2af8c4e99c8562b35daad94e37f",
+    "source_url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300",
+    "status": "verified"
+  },
+  "gh-300-balotario-3-68": {
+    "content_hash": "ad268ce3ac7b6cd6922b77bdfb1b456519c8374f01df52b6d4c1fe1c695b7b6e",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-3-69": {
+    "content_hash": "e453a7dc996c6b39fde362beaf252c535f62d34e25b4b3c8ab9b99f902baf7b9",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "54e074d56cdc5d315a4ef26bc829db226aad0adb8e72290ff652b927387f3579",
+    "source_url": "https://docs.github.com/en/copilot/concepts/content-exclusion",
+    "status": "verified"
+  },
+  "gh-300-balotario-3-7": {
+    "content_hash": "c20a431b0f3bd629deddc212d5b8387b1c0f1f29ce3bcac2f677c0afc181dc29",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-3-70": {
+    "content_hash": "34ff95d9d8c15592273b8800b7ab3ac56e573cc4eca389570ee2df6d6dba3f0b",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "d0f3268adc9e279496808ce69a6a39a368492b4933a74a682e99995e26106235",
+    "source_url": "https://docs.github.com/en/copilot/how-tos/copilot-cli",
+    "status": "verified"
+  },
+  "gh-300-balotario-3-8": {
+    "content_hash": "2aebc9cfced5244185f9bf98fe6d839e28a25c2b1c0cf6a630b9f5aa2941e256",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-3-9": {
+    "content_hash": "09cdc8c1e300752d0deb1a7f2dded45ceadc162b1a198d93ab12db67c675c3a1",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "7497086ea26c821369885998d76de943e5b0d806c6f572a084a33be02dc0a764",
+    "source_url": "https://docs.github.com/en/copilot/concepts/completions/code-referencing",
+    "status": "verified"
+  },
+  "gh-300-balotario-4-1": {
+    "content_hash": "fc92f3000fc3334e53c614cbd7abde7d3bd94e6272324b3eacea08090685f9f5",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9d053486f2ba66c750f12e1b9806a94cdd7bb2af8c4e99c8562b35daad94e37f",
+    "source_url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300",
+    "status": "verified"
+  },
+  "gh-300-balotario-4-10": {
+    "content_hash": "96ad62c7d4fd9adea336c37f05e32806c0b56c92d52183977e94792190822089",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "ea35697f8cec5b1f7abbd1e4d215eee386ae170b748da18d6905d871dd33e552",
+    "source_url": "https://docs.github.com/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot",
+    "status": "verified"
+  },
+  "gh-300-balotario-4-11": {
+    "content_hash": "c8c314cdb88198dd8dbdce2bcb167d8a81ca54f0e06f911963732d1d3f25ad8c",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-4-12": {
+    "content_hash": "d0dce9d3f4360e19fd4555470b04c21b370543d4bbb237871ba69af2ceb6174a",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-4-13": {
+    "content_hash": "db54bc5fbd72d3ada4218c6ca8e3d0dd44f302b8b75251d3a25a081fc3a2be80",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-4-14": {
+    "content_hash": "cc22c7c65f3966bf68200e0d4eb9d31e689f22ab93122b206a89c218d059d66d",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-4-15": {
+    "content_hash": "fbe62839019b574def7d2ae3a2a634d4b1fc4ff1a9da7d8f5c964e8de0071da9",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-4-16": {
+    "content_hash": "aefd669e3ee39d754087e5f3e62e7560b19d39f16e4ccb97999ae3b80c30ea93",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "112aea92738a7e67d9783bb341e309b14c3013ddda6ea323fc4f80359031dcce",
+    "source_url": "https://docs.github.com/en/copilot/reference/ai-models/model-hosting",
+    "status": "verified"
+  },
+  "gh-300-balotario-4-17": {
+    "content_hash": "76e9d15949de1991d47e254be6affce9ab5ad4fbdabf6ec34492162e679f6d21",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "112aea92738a7e67d9783bb341e309b14c3013ddda6ea323fc4f80359031dcce",
+    "source_url": "https://docs.github.com/en/copilot/reference/ai-models/model-hosting",
+    "status": "verified"
+  },
+  "gh-300-balotario-4-18": {
+    "content_hash": "557536fccd04660e9fd6d708a7cbba159091a8af71435fbe017519109950639d",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-4-19": {
+    "content_hash": "2e80306e88fc1965671564078255445ce80d20888e63b3781c22ba47f4da18d9",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "394bf54ca8df49f21684d7a3411584212b64b894e1332c7d8755744795f2904f",
+    "source_url": "https://docs.github.com/en/copilot/responsible-use/chat",
+    "status": "verified"
+  },
+  "gh-300-balotario-4-2": {
+    "content_hash": "30640209e58dc16a016fcef36b835561840ed48e9f229889fc00ce4f2e3c2c31",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "ea35697f8cec5b1f7abbd1e4d215eee386ae170b748da18d6905d871dd33e552",
+    "source_url": "https://docs.github.com/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot",
+    "status": "verified"
+  },
+  "gh-300-balotario-4-20": {
+    "content_hash": "3ebd958746b343b33289444e729f1ef9205caa1719f7d6028075a7d630acc21c",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9d053486f2ba66c750f12e1b9806a94cdd7bb2af8c4e99c8562b35daad94e37f",
+    "source_url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300",
+    "status": "verified"
+  },
+  "gh-300-balotario-4-21": {
+    "content_hash": "4015d88e61e9e7de2fc60f4e90156bfa3a24dfbfcb6990254f17c083b2d9514f",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "394bf54ca8df49f21684d7a3411584212b64b894e1332c7d8755744795f2904f",
+    "source_url": "https://docs.github.com/en/copilot/responsible-use/chat",
+    "status": "verified"
+  },
+  "gh-300-balotario-4-22": {
+    "content_hash": "55131f392fbadd4b1603b8517771e4f9b71a5bb7e6cf1333f83196fac1c4aadb",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "112aea92738a7e67d9783bb341e309b14c3013ddda6ea323fc4f80359031dcce",
+    "source_url": "https://docs.github.com/en/copilot/reference/ai-models/model-hosting",
+    "status": "verified"
+  },
+  "gh-300-balotario-4-23": {
+    "content_hash": "fd691869fc05c09382b04469299279bf934132b550f7b99a32b0e2d040f3c88a",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-4-24": {
+    "content_hash": "247cd00bcd907dc6bd61879ddbff7192c7c4257d79247a3dec1642095e67ba2e",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9d053486f2ba66c750f12e1b9806a94cdd7bb2af8c4e99c8562b35daad94e37f",
+    "source_url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300",
+    "status": "verified"
+  },
+  "gh-300-balotario-4-25": {
+    "content_hash": "45430b2e4caaff9c670637680d16d4e0e7d4273f2f016ecb2263e4af2741d986",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9d053486f2ba66c750f12e1b9806a94cdd7bb2af8c4e99c8562b35daad94e37f",
+    "source_url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300",
+    "status": "verified"
+  },
+  "gh-300-balotario-4-26": {
+    "content_hash": "e1d56ba3e133062c8c5bfbda15cb9c09554cc67123147fcc81df0126e26350e3",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "394bf54ca8df49f21684d7a3411584212b64b894e1332c7d8755744795f2904f",
+    "source_url": "https://docs.github.com/en/copilot/responsible-use/chat",
+    "status": "verified"
+  },
+  "gh-300-balotario-4-27": {
+    "content_hash": "f7cae301570f4a7fa5c9e5d647d06683a2e47ceea6c58ffa39c1ca4b3ddf91c4",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "d0f3268adc9e279496808ce69a6a39a368492b4933a74a682e99995e26106235",
+    "source_url": "https://docs.github.com/en/copilot/how-tos/copilot-cli",
+    "status": "verified"
+  },
+  "gh-300-balotario-4-28": {
+    "content_hash": "aeb17478e8cfb4284661486e3444981024ff934cb86894dae9f33233476f70eb",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "d0f3268adc9e279496808ce69a6a39a368492b4933a74a682e99995e26106235",
+    "source_url": "https://docs.github.com/en/copilot/how-tos/copilot-cli",
+    "status": "verified"
+  },
+  "gh-300-balotario-4-29": {
+    "content_hash": "cd59f2fa7607f39d132f7ab65273b5257276b3530bc93f8f50b086dd576ead1c",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "ea35697f8cec5b1f7abbd1e4d215eee386ae170b748da18d6905d871dd33e552",
+    "source_url": "https://docs.github.com/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot",
+    "status": "verified"
+  },
+  "gh-300-balotario-4-3": {
+    "content_hash": "da5e24ffa30c575d78d9a6b5b34ddcb475e5e6214cf7743922af03004f1bd893",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "394bf54ca8df49f21684d7a3411584212b64b894e1332c7d8755744795f2904f",
+    "source_url": "https://docs.github.com/en/copilot/responsible-use/chat",
+    "status": "verified"
+  },
+  "gh-300-balotario-4-30": {
+    "content_hash": "a8a4cdb0d71b01b41b7e54f046741572f4c7817646f5f9d67242d5c11ffd51ee",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "ea35697f8cec5b1f7abbd1e4d215eee386ae170b748da18d6905d871dd33e552",
+    "source_url": "https://docs.github.com/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot",
+    "status": "verified"
+  },
+  "gh-300-balotario-4-31": {
+    "content_hash": "3a9d57dedf871af5a59190efa29abaac0cddc1ee43043a292ae56aaf6d3ac2a7",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9d053486f2ba66c750f12e1b9806a94cdd7bb2af8c4e99c8562b35daad94e37f",
+    "source_url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300",
+    "status": "verified"
+  },
+  "gh-300-balotario-4-32": {
+    "content_hash": "bc2c3962f5bbdceb484ee2847a2262586a493f92f34f480f73ca29fbabce3a4f",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9d053486f2ba66c750f12e1b9806a94cdd7bb2af8c4e99c8562b35daad94e37f",
+    "source_url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300",
+    "status": "verified"
+  },
+  "gh-300-balotario-4-33": {
+    "content_hash": "7b2e97fda5e8188c2847d497b80e6291aee1eb483dc4fcceea89436d9e9d224f",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-4-34": {
+    "content_hash": "e43d9a6f937647b39ab7680eb7a4be3d67fffd51deebabd4e6bcc070c1eed3d5",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-4-35": {
+    "content_hash": "4bbedfd94894df22f8f353add634c335609b332543ab99044d64282d3fda97d7",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-4-36": {
+    "content_hash": "2a694eb19bacde7d171069707ad4b604642c4ba28c5930eab9d20d240bfae1de",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "394bf54ca8df49f21684d7a3411584212b64b894e1332c7d8755744795f2904f",
+    "source_url": "https://docs.github.com/en/copilot/responsible-use/chat",
+    "status": "verified"
+  },
+  "gh-300-balotario-4-37": {
+    "content_hash": "79c93904bfb984f9672b93d7701682d4e7bf4390d783155dfd6d8dc9bd2022db",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9d053486f2ba66c750f12e1b9806a94cdd7bb2af8c4e99c8562b35daad94e37f",
+    "source_url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300",
+    "status": "verified"
+  },
+  "gh-300-balotario-4-38": {
+    "content_hash": "58b21e7929187e8c1467518ec9ed31cbe7f25cee6d2cf54e07081be1231cdb69",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-4-39": {
+    "content_hash": "7e3acc6136e72814860ac48a4606d9fb2be6fb043a66b19f88769d9ce82fb290",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-4-4": {
+    "content_hash": "e05adb8bd7bfd02bc444c42882f45e90137c4fb07a69450fd4f0554cd43d0d41",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9d053486f2ba66c750f12e1b9806a94cdd7bb2af8c4e99c8562b35daad94e37f",
+    "source_url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300",
+    "status": "verified"
+  },
+  "gh-300-balotario-4-40": {
+    "content_hash": "e6ed48971263585a12d28d34811a99cea1ea7a783ea8c94d98ab4ab274f662ee",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "b28e9f025c34740eb81c39ae87bd22150971630e2bbd108711f657827ef0b5f9",
+    "source_url": "https://docs.github.com/en/copilot/tutorials/write-tests",
+    "status": "verified"
+  },
+  "gh-300-balotario-4-41": {
+    "content_hash": "3be9485b31eb37bb6b35efa88dd82ed2fbc3c28d9e308b97ff54dbe208076d17",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9d053486f2ba66c750f12e1b9806a94cdd7bb2af8c4e99c8562b35daad94e37f",
+    "source_url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300",
+    "status": "verified"
+  },
+  "gh-300-balotario-4-42": {
+    "content_hash": "d17c4405213e5cf0efbb8620cb580b050849bcf329a0e2d96c5338474c914209",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-4-43": {
+    "content_hash": "89729a9a11056101b84e082c2f5b61f47762e7e0a746b755ad881ebc1a7a44ee",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "112aea92738a7e67d9783bb341e309b14c3013ddda6ea323fc4f80359031dcce",
+    "source_url": "https://docs.github.com/en/copilot/reference/ai-models/model-hosting",
+    "status": "verified"
+  },
+  "gh-300-balotario-4-44": {
+    "content_hash": "28fe17259bbfe4d3c19f76e92b553c86d77c9774646745e2bb0aea48592cff81",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9d053486f2ba66c750f12e1b9806a94cdd7bb2af8c4e99c8562b35daad94e37f",
+    "source_url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300",
+    "status": "verified"
+  },
+  "gh-300-balotario-4-45": {
+    "content_hash": "c61040b22dc8c5d8aff81c542155c4d8680327fd0d8285c0e0a9fdbf3f9cf1cc",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9d053486f2ba66c750f12e1b9806a94cdd7bb2af8c4e99c8562b35daad94e37f",
+    "source_url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300",
+    "status": "verified"
+  },
+  "gh-300-balotario-4-46": {
+    "content_hash": "b89cd740ebd3e9129ac612898ea6b1f9f88dafe081ba97948604775fb426a7a3",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9d053486f2ba66c750f12e1b9806a94cdd7bb2af8c4e99c8562b35daad94e37f",
+    "source_url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300",
+    "status": "verified"
+  },
+  "gh-300-balotario-4-47": {
+    "content_hash": "4713100aaa70fd2f10361b893910cd6dcbd9c3942744813e1cec4b23db35a03a",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "394bf54ca8df49f21684d7a3411584212b64b894e1332c7d8755744795f2904f",
+    "source_url": "https://docs.github.com/en/copilot/responsible-use/chat",
+    "status": "verified"
+  },
+  "gh-300-balotario-4-48": {
+    "content_hash": "a2904fd9a21dd018480bb74c73b5ab5779abb10f6bcf789d57b74153ac784225",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-4-49": {
+    "content_hash": "1ed3e420400615fa2ac9f97bdfc7e317fc2347afd99deadd38364c19fc52d784",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-4-5": {
+    "content_hash": "bf9041d8a6a26ccc1ce3f63de36a46141515f4c3e9c2b7cde38600491d151d3c",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "394bf54ca8df49f21684d7a3411584212b64b894e1332c7d8755744795f2904f",
+    "source_url": "https://docs.github.com/en/copilot/responsible-use/chat",
+    "status": "verified"
+  },
+  "gh-300-balotario-4-50": {
+    "content_hash": "d7c068ff63f4d08351f5e2e37ee243e573afc2ffd44cb52c480c74de9742a83f",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "ea35697f8cec5b1f7abbd1e4d215eee386ae170b748da18d6905d871dd33e552",
+    "source_url": "https://docs.github.com/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot",
+    "status": "verified"
+  },
+  "gh-300-balotario-4-51": {
+    "content_hash": "8e9898b1db7bc223074e8660cf33cc5d88915838961ecf1784de9d4039f63e4f",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9d053486f2ba66c750f12e1b9806a94cdd7bb2af8c4e99c8562b35daad94e37f",
+    "source_url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300",
+    "status": "verified"
+  },
+  "gh-300-balotario-4-52": {
+    "content_hash": "3c434d85cfa7f05e260134905172f083b68a0dd2501be64d5bcbe2bbb55e05ef",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "b28e9f025c34740eb81c39ae87bd22150971630e2bbd108711f657827ef0b5f9",
+    "source_url": "https://docs.github.com/en/copilot/tutorials/write-tests",
+    "status": "verified"
+  },
+  "gh-300-balotario-4-53": {
+    "content_hash": "3e0455ce2763198928406fac9d654d612524ebdf82c90bc00e1ea9140f48026a",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-4-54": {
+    "content_hash": "4089ed5dc3061aa1a777c6f530ea73db25cdcbba84f8e1c51932ed95d00343c5",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "ea35697f8cec5b1f7abbd1e4d215eee386ae170b748da18d6905d871dd33e552",
+    "source_url": "https://docs.github.com/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot",
+    "status": "verified"
+  },
+  "gh-300-balotario-4-55": {
+    "content_hash": "0f993beef82a32dd5844a68b982782d65f80132d02383ecd9549d736446d48a3",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "394bf54ca8df49f21684d7a3411584212b64b894e1332c7d8755744795f2904f",
+    "source_url": "https://docs.github.com/en/copilot/responsible-use/chat",
+    "status": "verified"
+  },
+  "gh-300-balotario-4-56": {
+    "content_hash": "3809c0b56d01392451bae690d3d6bebb3a1334559bb618bfca61c99393e0cd03",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-4-57": {
+    "content_hash": "37a263ed324def4f378ec3ad2250add906e85e87d490fc2f2710c42cdf34c470",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-4-58": {
+    "content_hash": "e1b2d917f26a1fe81eeff66ecac421439320d952ff4c6536ee787ff88f01c486",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "22cf0ad018da71882fcfe065dda43d50d81ee90e967c847ccc0cfe644b5b22d0",
+    "source_url": "https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-enterprise/review-audit-logs",
+    "status": "verified"
+  },
+  "gh-300-balotario-4-59": {
+    "content_hash": "07dd9a498c016d15c5d4b92cc7b4c88944376fa239cb023ff397558f49b68b3f",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9d053486f2ba66c750f12e1b9806a94cdd7bb2af8c4e99c8562b35daad94e37f",
+    "source_url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300",
+    "status": "verified"
+  },
+  "gh-300-balotario-4-6": {
+    "content_hash": "6d409935a484f7885b322a382e8494e9e4a052f531c3fc5ad67a3eb8d0bebde8",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9d053486f2ba66c750f12e1b9806a94cdd7bb2af8c4e99c8562b35daad94e37f",
+    "source_url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300",
+    "status": "verified"
+  },
+  "gh-300-balotario-4-60": {
+    "content_hash": "56d4a19b22c4bc3b6ea898946a59e1c0f1621fcde138feb3b4476095c736ebba",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9d053486f2ba66c750f12e1b9806a94cdd7bb2af8c4e99c8562b35daad94e37f",
+    "source_url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300",
+    "status": "verified"
+  },
+  "gh-300-balotario-4-61": {
+    "content_hash": "6fe1b95efd750d24ecf3380dd78544de8200579fa7a1fd006520726efb7666e9",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "112aea92738a7e67d9783bb341e309b14c3013ddda6ea323fc4f80359031dcce",
+    "source_url": "https://docs.github.com/en/copilot/reference/ai-models/model-hosting",
+    "status": "verified"
+  },
+  "gh-300-balotario-4-62": {
+    "content_hash": "17c59265632f21dd2485c02ea6ea5589bebeb2433ebb65c32d2612bf710cca7b",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "d0f3268adc9e279496808ce69a6a39a368492b4933a74a682e99995e26106235",
+    "source_url": "https://docs.github.com/en/copilot/how-tos/copilot-cli",
+    "status": "verified"
+  },
+  "gh-300-balotario-4-63": {
+    "content_hash": "0a1f65841eaa02b45b2b0a5685d8b6b39fc3d0cc92e893edbe9c569f44ecaeff",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "394bf54ca8df49f21684d7a3411584212b64b894e1332c7d8755744795f2904f",
+    "source_url": "https://docs.github.com/en/copilot/responsible-use/chat",
+    "status": "verified"
+  },
+  "gh-300-balotario-4-64": {
+    "content_hash": "57de9dc5b671072af4cd27a3540b2f476ab08de0dc59a88bb1ea3a754e62945b",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "394bf54ca8df49f21684d7a3411584212b64b894e1332c7d8755744795f2904f",
+    "source_url": "https://docs.github.com/en/copilot/responsible-use/chat",
+    "status": "verified"
+  },
+  "gh-300-balotario-4-65": {
+    "content_hash": "90d76dab4e65978a024f7d522a5cee4f97d79dc15120b264a273e7a71c2717e9",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-4-66": {
+    "content_hash": "6099a8d8c0635e6a6bcaee0d3d5d0003928efbad3f1b2fa1a2aebd78ec1fd622",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "b28e9f025c34740eb81c39ae87bd22150971630e2bbd108711f657827ef0b5f9",
+    "source_url": "https://docs.github.com/en/copilot/tutorials/write-tests",
+    "status": "verified"
+  },
+  "gh-300-balotario-4-67": {
+    "content_hash": "0122403788fca64c6c8cc4bcef426eeee094f31b6a999ddef5c246f3e0ca6a04",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-4-68": {
+    "content_hash": "5d597d1bc46079123abeac7be5edda6679ac3fa2505c8a7d058c03cce57ba90d",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-4-69": {
+    "content_hash": "a68795151dc20e4abe2b8dc2c4d8d46194147d230bba50a8ee47d5e89cf26d85",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "394bf54ca8df49f21684d7a3411584212b64b894e1332c7d8755744795f2904f",
+    "source_url": "https://docs.github.com/en/copilot/responsible-use/chat",
+    "status": "verified"
+  },
+  "gh-300-balotario-4-7": {
+    "content_hash": "228e5bdd0516af7b20f2ccc7384170b7933bd136542e880b7e6427f45e6241eb",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-4-70": {
+    "content_hash": "a8755ef57b09b20cda72de1212cb2c05691f90a37aa948cd173b60996ecfad1e",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-4-8": {
+    "content_hash": "a17e29ff9fe88dfb7aaa088e161e03c338124aeb495fdb0cba3e9f86014e9df3",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "394bf54ca8df49f21684d7a3411584212b64b894e1332c7d8755744795f2904f",
+    "source_url": "https://docs.github.com/en/copilot/responsible-use/chat",
+    "status": "verified"
+  },
+  "gh-300-balotario-4-9": {
+    "content_hash": "fe17c2e86b76762086b2823e35c6470ff63c3d2c076f812cad70d2e746fd56fc",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "112aea92738a7e67d9783bb341e309b14c3013ddda6ea323fc4f80359031dcce",
+    "source_url": "https://docs.github.com/en/copilot/reference/ai-models/model-hosting",
+    "status": "verified"
+  },
+  "gh-300-balotario-5-1": {
+    "content_hash": "6506a0c95963d22f26c819d11846722dda3bf125faf3dcec3e2612528ed0342f",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-5-10": {
+    "content_hash": "cfe69cda3cf83aa62713e007be4297ecf530e562f435d497fafb837afdcd72bc",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-5-11": {
+    "content_hash": "68d8c8b360d2239841dba8d6418666f9cf3595d7d1216c2cf68b81865b100ddc",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-5-12": {
+    "content_hash": "4a99737f015d9c53976ec06d355a0846696c353617fd8590c2bf49a0d59ddc7d",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "b28e9f025c34740eb81c39ae87bd22150971630e2bbd108711f657827ef0b5f9",
+    "source_url": "https://docs.github.com/en/copilot/tutorials/write-tests",
+    "status": "verified"
+  },
+  "gh-300-balotario-5-13": {
+    "content_hash": "c8571ed651ccfa17f8193c8b67805f62ded759b91204813e507efe24454e9b0f",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "ea35697f8cec5b1f7abbd1e4d215eee386ae170b748da18d6905d871dd33e552",
+    "source_url": "https://docs.github.com/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot",
+    "status": "verified"
+  },
+  "gh-300-balotario-5-14": {
+    "content_hash": "dbaf1ba6d28231a42dc1813abbd4dc9a92a4a34de4abede86eba7bf3a948f707",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "394bf54ca8df49f21684d7a3411584212b64b894e1332c7d8755744795f2904f",
+    "source_url": "https://docs.github.com/en/copilot/responsible-use/chat",
+    "status": "verified"
+  },
+  "gh-300-balotario-5-15": {
+    "content_hash": "47e8ed744ba8755a7b509ab319c45788f92cc99821a6b5f66433206be7c425ec",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "54e074d56cdc5d315a4ef26bc829db226aad0adb8e72290ff652b927387f3579",
+    "source_url": "https://docs.github.com/en/copilot/concepts/content-exclusion",
+    "status": "verified"
+  },
+  "gh-300-balotario-5-16": {
+    "content_hash": "dd99248a601ce60ce4cde653b043d12f10e26287ec40abc22429b8b92615c464",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "d0f3268adc9e279496808ce69a6a39a368492b4933a74a682e99995e26106235",
+    "source_url": "https://docs.github.com/en/copilot/how-tos/copilot-cli",
+    "status": "verified"
+  },
+  "gh-300-balotario-5-17": {
+    "content_hash": "90c524823dd1e494ae797aa1780434e0f1d0983fb3cc3c88838d2b4d88787000",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-5-18": {
+    "content_hash": "0c0a19cf44a5753e0f1f4216e1f374315a378eb5346f2ddd22be0182a7f70eaf",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-5-19": {
+    "content_hash": "4a047277c90fe16fb8bce0ebd58acdb7a21213c9597107c6c6b180e68731196a",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "ea35697f8cec5b1f7abbd1e4d215eee386ae170b748da18d6905d871dd33e552",
+    "source_url": "https://docs.github.com/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot",
+    "status": "verified"
+  },
+  "gh-300-balotario-5-2": {
+    "content_hash": "90798e2dbb160c1e7239f9630d82490fe438460f8b772f0cc26e20960e5dbdb2",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-5-20": {
+    "content_hash": "cb48a38703fdd1755395069b220ac03eb644ff67e826974d85312477a7027db9",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-5-21": {
+    "content_hash": "d957f0478b50661489b55fc2855b1d8c02c95cb91c00be0b5d728144ee58e3d4",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "7497086ea26c821369885998d76de943e5b0d806c6f572a084a33be02dc0a764",
+    "source_url": "https://docs.github.com/en/copilot/concepts/completions/code-referencing",
+    "status": "verified"
+  },
+  "gh-300-balotario-5-22": {
+    "content_hash": "923064f5841ed47ec633aa1472e1611c1e8ed79e51aff08f60b9c99e7421225a",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "54e074d56cdc5d315a4ef26bc829db226aad0adb8e72290ff652b927387f3579",
+    "source_url": "https://docs.github.com/en/copilot/concepts/content-exclusion",
+    "status": "verified"
+  },
+  "gh-300-balotario-5-23": {
+    "content_hash": "986757be667b31317276147c5f03080d20fab0cf50b55bdc4cbe9ea2f56c8e65",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "54e074d56cdc5d315a4ef26bc829db226aad0adb8e72290ff652b927387f3579",
+    "source_url": "https://docs.github.com/en/copilot/concepts/content-exclusion",
+    "status": "verified"
+  },
+  "gh-300-balotario-5-24": {
+    "content_hash": "bf7cd61ed55ccb2bef5f2d2ab4e6bd92c93b131ba7f9e6d4276dec64f24a68e8",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-5-25": {
+    "content_hash": "542441c92d62cccc429fbfcfca9ce07fbe7dd734278c64939de516f89ac593c9",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9d053486f2ba66c750f12e1b9806a94cdd7bb2af8c4e99c8562b35daad94e37f",
+    "source_url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300",
+    "status": "verified"
+  },
+  "gh-300-balotario-5-26": {
+    "content_hash": "46852a27b0ead8d1a7862144b221208327f8171b3935e9f61dab34be4746ef3b",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-5-27": {
+    "content_hash": "c7c13b7d51089ebe5a40883d88d464f700caadcdea2bd2f01e668d3a0b467176",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-5-28": {
+    "content_hash": "2475dd20720e63ed36d81e822dc0ec6af3775268a32c0f1ad58dfed004c3b229",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9d053486f2ba66c750f12e1b9806a94cdd7bb2af8c4e99c8562b35daad94e37f",
+    "source_url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300",
+    "status": "verified"
+  },
+  "gh-300-balotario-5-29": {
+    "content_hash": "485dd5b3f8fe328ad6e807c35ab4275cabba072a720d1728e46b437664d25c3e",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9d053486f2ba66c750f12e1b9806a94cdd7bb2af8c4e99c8562b35daad94e37f",
+    "source_url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300",
+    "status": "verified"
+  },
+  "gh-300-balotario-5-3": {
+    "content_hash": "55c8c332b95b3b5d4282978275e2457b1e1a0d0f5f96644c424cf2393d505096",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "b28e9f025c34740eb81c39ae87bd22150971630e2bbd108711f657827ef0b5f9",
+    "source_url": "https://docs.github.com/en/copilot/tutorials/write-tests",
+    "status": "verified"
+  },
+  "gh-300-balotario-5-30": {
+    "content_hash": "7a7137644d7d26ce2e6a727cb62af21ac534bd12c108668be81f5fecc9f7ab3a",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-5-31": {
+    "content_hash": "f99879fcbe4db5f776afcaab729b438851b7e7608dbe1df7b5e0002c131abc09",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9d053486f2ba66c750f12e1b9806a94cdd7bb2af8c4e99c8562b35daad94e37f",
+    "source_url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300",
+    "status": "verified"
+  },
+  "gh-300-balotario-5-32": {
+    "content_hash": "7879a297d8310c6f2de6edab9db2f864c2b1a8f10346538f186117ca0a3e9b04",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-5-33": {
+    "content_hash": "1af4d0f01600b488e7d12a14e67505f75ed930abb39d1e85454eb2638605f134",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-5-34": {
+    "content_hash": "104fe481805762257d47ddd1f14cbc0232ea2b9cb7b82812a7c7302ce302641e",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-5-35": {
+    "content_hash": "55c3555801f6b8a8b858ac7e5498173d9bf899c5bd54734bf21897324a28e9c9",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "394bf54ca8df49f21684d7a3411584212b64b894e1332c7d8755744795f2904f",
+    "source_url": "https://docs.github.com/en/copilot/responsible-use/chat",
+    "status": "verified"
+  },
+  "gh-300-balotario-5-36": {
+    "content_hash": "d8c12cecf494c6c1261cf1d7fa55b27b9835272b5d39dc036584adf3623706ce",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "394bf54ca8df49f21684d7a3411584212b64b894e1332c7d8755744795f2904f",
+    "source_url": "https://docs.github.com/en/copilot/responsible-use/chat",
+    "status": "verified"
+  },
+  "gh-300-balotario-5-37": {
+    "content_hash": "d6a3b40ea1de49aebe6613eebf21739d5cf9ceaaef57511f63107eb0397272d7",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9d053486f2ba66c750f12e1b9806a94cdd7bb2af8c4e99c8562b35daad94e37f",
+    "source_url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300",
+    "status": "verified"
+  },
+  "gh-300-balotario-5-38": {
+    "content_hash": "549e62d21f4c53d4152ee7538e9b41a1f1dca8d3a938109a5d6881e771f41aed",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-5-39": {
+    "content_hash": "55feeeef0d0b2962e660d1d331710e7882499eeeec0a9cacca6201e254300abc",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-5-4": {
+    "content_hash": "68e9460b9a042d0d4b68d9dcb964ac45d8f0ebb51790a5bafeaec668c9b9af1c",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-5-40": {
+    "content_hash": "f2392f3d16385962e6e849d64e421dd6715be035aa358b7b5966346b2b397fb1",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-5-41": {
+    "content_hash": "96eca3ad8814c5d4f48385b2bd3677724a2428a53c0d35f41d040f0f9d6ce3f0",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-5-42": {
+    "content_hash": "55416f94e66f9a1579af1f62061fbf9072e909e31ee2d8dfd33a51ecbcdaad29",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-5-43": {
+    "content_hash": "7a82e5c2f2534176c3564b7fb023f74b564b5fc93606eecdf937911ee77be83a",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "54e074d56cdc5d315a4ef26bc829db226aad0adb8e72290ff652b927387f3579",
+    "source_url": "https://docs.github.com/en/copilot/concepts/content-exclusion",
+    "status": "verified"
+  },
+  "gh-300-balotario-5-44": {
+    "content_hash": "ff7d14909112f6e54a64efd273b0a67aa291a23ef2f679e8624fc24551612974",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-5-45": {
+    "content_hash": "775b1511325dd46b395f66de73373fa7993e29c97e09b9c0a0122959609698ec",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-5-46": {
+    "content_hash": "ed53b71afe1953d03afd7c6226ecc29e950c0a62ecdc7942896a930a4d6491f7",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-5-47": {
+    "content_hash": "b141a402dd1e1925cd4290ba61c6e83c232b0c58225550b273c2a59e6f2cf4d6",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "22cf0ad018da71882fcfe065dda43d50d81ee90e967c847ccc0cfe644b5b22d0",
+    "source_url": "https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-enterprise/review-audit-logs",
+    "status": "verified"
+  },
+  "gh-300-balotario-5-48": {
+    "content_hash": "6c383b40d5de70198adc99bf0f6f35fbac05be0717c80341185b575a0e394815",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "ea35697f8cec5b1f7abbd1e4d215eee386ae170b748da18d6905d871dd33e552",
+    "source_url": "https://docs.github.com/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot",
+    "status": "verified"
+  },
+  "gh-300-balotario-5-49": {
+    "content_hash": "45cba62bce33f50b69852057f48f54e40220fae57bf56fff76cb8d4cace8c71e",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "112aea92738a7e67d9783bb341e309b14c3013ddda6ea323fc4f80359031dcce",
+    "source_url": "https://docs.github.com/en/copilot/reference/ai-models/model-hosting",
+    "status": "verified"
+  },
+  "gh-300-balotario-5-5": {
+    "content_hash": "afbe9b5656b3105ddcec88078bbd04dec489c609f013e4d4fd659856f9fae055",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-5-50": {
+    "content_hash": "f4c8ce611aeae44a8de807adbd766c2cb20a508d5b6870c68856205302c701ec",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9d053486f2ba66c750f12e1b9806a94cdd7bb2af8c4e99c8562b35daad94e37f",
+    "source_url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300",
+    "status": "verified"
+  },
+  "gh-300-balotario-5-51": {
+    "content_hash": "3e440dea48101a1b2a5097f20fdc78af52950235967e7d9187c623b82bd655f8",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-5-52": {
+    "content_hash": "c054a2bbc99fd283b6536974f8ad6b6c25e6a18282740d6c575baa5f8807ee7e",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-5-53": {
+    "content_hash": "24ced6e2c70ef2e76f947b04f901b3eadcdf8ead71dcaf4fc9f84c4f202cd15d",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-5-54": {
+    "content_hash": "001b914e22cbf0ea161b5f7f8c5679d040a34b33e76111fed3e33ab79412db6b",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-5-55": {
+    "content_hash": "aa94e8c2be779dadb3e73d8b3324300798069bf40b0b710ed125d98317abe6e6",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "b28e9f025c34740eb81c39ae87bd22150971630e2bbd108711f657827ef0b5f9",
+    "source_url": "https://docs.github.com/en/copilot/tutorials/write-tests",
+    "status": "verified"
+  },
+  "gh-300-balotario-5-56": {
+    "content_hash": "0469628194c4e04de67cb5d195d35571e6f42dad56f6692e0b57dbb73b0994ad",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-5-57": {
+    "content_hash": "98f9be3c6dddc5abdef5fbefe8e43f813a72cca489af4b3839d7405bccd0b23c",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "ea35697f8cec5b1f7abbd1e4d215eee386ae170b748da18d6905d871dd33e552",
+    "source_url": "https://docs.github.com/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot",
+    "status": "verified"
+  },
+  "gh-300-balotario-5-58": {
+    "content_hash": "61e9850a442bf45cc28e6b33278e55b5fb06fb9da351f846357ca959a44414a2",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "394bf54ca8df49f21684d7a3411584212b64b894e1332c7d8755744795f2904f",
+    "source_url": "https://docs.github.com/en/copilot/responsible-use/chat",
+    "status": "verified"
+  },
+  "gh-300-balotario-5-59": {
+    "content_hash": "6ee8046031e8791b5a149160684fb62c9ca887d9b4cd4b39f802d35de4384c76",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-5-6": {
+    "content_hash": "e743fda1d425e648df3f6d99bad74b16c6bf9ad4f08384ef9acb85c33ed75964",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "b28e9f025c34740eb81c39ae87bd22150971630e2bbd108711f657827ef0b5f9",
+    "source_url": "https://docs.github.com/en/copilot/tutorials/write-tests",
+    "status": "verified"
+  },
+  "gh-300-balotario-5-60": {
+    "content_hash": "48ef3e189ce31eceb513b08b709fb2e461bc1cceac0a0cc73f450563f97ccfc6",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "ea35697f8cec5b1f7abbd1e4d215eee386ae170b748da18d6905d871dd33e552",
+    "source_url": "https://docs.github.com/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot",
+    "status": "verified"
+  },
+  "gh-300-balotario-5-61": {
+    "content_hash": "a493a399aaa7480935c2d8c85c2eac236ca1126b298e8cf10df6da9be155e098",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9d053486f2ba66c750f12e1b9806a94cdd7bb2af8c4e99c8562b35daad94e37f",
+    "source_url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300",
+    "status": "verified"
+  },
+  "gh-300-balotario-5-62": {
+    "content_hash": "6f578be9f75befed8a5acf1b7a34a6ea3d1490369bc117b1005dc2e443c6d28f",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9d053486f2ba66c750f12e1b9806a94cdd7bb2af8c4e99c8562b35daad94e37f",
+    "source_url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300",
+    "status": "verified"
+  },
+  "gh-300-balotario-5-63": {
+    "content_hash": "679846449c8270bf80ab6cee2c790d5d13841005ffc95edfc55ad1b437a82794",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "ea35697f8cec5b1f7abbd1e4d215eee386ae170b748da18d6905d871dd33e552",
+    "source_url": "https://docs.github.com/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot",
+    "status": "verified"
+  },
+  "gh-300-balotario-5-64": {
+    "content_hash": "21ff69e0a3b9a7cc8260ac858cfb1fed7e52385026939495a111e2509fd2e043",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-5-65": {
+    "content_hash": "879001df382ad608fa5d409a8cc6d17169744a99f6258c367203d3229df80262",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9d053486f2ba66c750f12e1b9806a94cdd7bb2af8c4e99c8562b35daad94e37f",
+    "source_url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300",
+    "status": "verified"
+  },
+  "gh-300-balotario-5-66": {
+    "content_hash": "14fb4844e8445a3961bddeedce9e8038267343c79bf2f9ee84cb87ecb9286bf6",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9d053486f2ba66c750f12e1b9806a94cdd7bb2af8c4e99c8562b35daad94e37f",
+    "source_url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300",
+    "status": "verified"
+  },
+  "gh-300-balotario-5-67": {
+    "content_hash": "bdb1f707100778b2a541077235909c41d0477d1df618f9c65916371d928e7b25",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9d053486f2ba66c750f12e1b9806a94cdd7bb2af8c4e99c8562b35daad94e37f",
+    "source_url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300",
+    "status": "verified"
+  },
+  "gh-300-balotario-5-68": {
+    "content_hash": "1441b14308342e58ad2d2a9580463a3911330bde5b7f16ca672c6a30713281dc",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9d053486f2ba66c750f12e1b9806a94cdd7bb2af8c4e99c8562b35daad94e37f",
+    "source_url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300",
+    "status": "verified"
+  },
+  "gh-300-balotario-5-69": {
+    "content_hash": "c34c3321d0701b6ebf2a693028ff0128c9d54841dc157dbb54997c635b114fe2",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-5-7": {
+    "content_hash": "e4f5f34dfdf127073d9f6b25d487a031bb9b3b94fc1379205009f225faea2166",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-5-70": {
+    "content_hash": "805459db55bd2d30c6c7e00e3f1d414eb92fee62aae3a00d540da164bfa40c7f",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "394bf54ca8df49f21684d7a3411584212b64b894e1332c7d8755744795f2904f",
+    "source_url": "https://docs.github.com/en/copilot/responsible-use/chat",
+    "status": "verified"
+  },
+  "gh-300-balotario-5-8": {
+    "content_hash": "bcd157b21f37c05088a99310e930fa40830c24825ce111dc30308918957e5c94",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-5-9": {
+    "content_hash": "8bc3c9e3fbfa9bc38bf4dafe4f37af290659ed77e1d3332ae13ff4377d91ad61",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "112aea92738a7e67d9783bb341e309b14c3013ddda6ea323fc4f80359031dcce",
+    "source_url": "https://docs.github.com/en/copilot/reference/ai-models/model-hosting",
+    "status": "verified"
+  },
+  "gh-300-balotario-6-1": {
+    "content_hash": "96e042b259b15523eea1bc8e946b27f87e6d30533bda9e9886c6dcf752e794dd",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "54e074d56cdc5d315a4ef26bc829db226aad0adb8e72290ff652b927387f3579",
+    "source_url": "https://docs.github.com/en/copilot/concepts/content-exclusion",
+    "status": "verified"
+  },
+  "gh-300-balotario-6-10": {
+    "content_hash": "fd1b46203b42a70664bc791e599dd3df66a513fc02f3f5e28f0eca37468e9857",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "b28e9f025c34740eb81c39ae87bd22150971630e2bbd108711f657827ef0b5f9",
+    "source_url": "https://docs.github.com/en/copilot/tutorials/write-tests",
+    "status": "verified"
+  },
+  "gh-300-balotario-6-11": {
+    "content_hash": "87451f7f4ed357103d2eb4b6a2d06d54f1e7952e270c7a66d057dd12830fd65d",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9d053486f2ba66c750f12e1b9806a94cdd7bb2af8c4e99c8562b35daad94e37f",
+    "source_url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300",
+    "status": "verified"
+  },
+  "gh-300-balotario-6-12": {
+    "content_hash": "d33f100917898ede92c3470722664ab5fe1de225202bec48c20ba7521e0070b0",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "112aea92738a7e67d9783bb341e309b14c3013ddda6ea323fc4f80359031dcce",
+    "source_url": "https://docs.github.com/en/copilot/reference/ai-models/model-hosting",
+    "status": "verified"
+  },
+  "gh-300-balotario-6-13": {
+    "content_hash": "39c176fdf614b00ebb9a3631a8d2f7b3c42dfbabd06760cad70da6ed2ae7ca06",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-6-14": {
+    "content_hash": "a9b4244a1a5fc3d45b9a3ce6712548207db7970432748d3c8b216d52f5f54dc6",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "7497086ea26c821369885998d76de943e5b0d806c6f572a084a33be02dc0a764",
+    "source_url": "https://docs.github.com/en/copilot/concepts/completions/code-referencing",
+    "status": "verified"
+  },
+  "gh-300-balotario-6-15": {
+    "content_hash": "4640038581bda0394860f5bab158491a778355e01a357fba2526730f7678a5f6",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9d053486f2ba66c750f12e1b9806a94cdd7bb2af8c4e99c8562b35daad94e37f",
+    "source_url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300",
+    "status": "verified"
+  },
+  "gh-300-balotario-6-16": {
+    "content_hash": "394a5a26db93bffc77c8fff41477c189c8b20253420fb5744a15a4dfc479dd82",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "d0f3268adc9e279496808ce69a6a39a368492b4933a74a682e99995e26106235",
+    "source_url": "https://docs.github.com/en/copilot/how-tos/copilot-cli",
+    "status": "verified"
+  },
+  "gh-300-balotario-6-17": {
+    "content_hash": "f105e7f0a0915fa2b7c0566c0cf7ef7996c785e9767c11908060d97595c7dd30",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-6-18": {
+    "content_hash": "2c761a0354743fe3b6658d2ef4a297ea7f78ccfae3502c0dbece8a4bbea16436",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-6-19": {
+    "content_hash": "2c53ccae1ca81630ee25a42d577c01c324e0e32d99da46e5d4dce23fd5f11d4d",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-6-2": {
+    "content_hash": "5f99492811ffae4d407384cee7b09781599af6d63974209b65bf57c479701108",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-6-20": {
+    "content_hash": "314f8ebc35b940004af716038fddbfb66ef51870303e1a3744e87a8723b67e1e",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "ea35697f8cec5b1f7abbd1e4d215eee386ae170b748da18d6905d871dd33e552",
+    "source_url": "https://docs.github.com/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot",
+    "status": "verified"
+  },
+  "gh-300-balotario-6-21": {
+    "content_hash": "b0bc61b618cd3fe5056595c25d19c487e1a144b17841be9f26c8c6a0e6f8f47d",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9d053486f2ba66c750f12e1b9806a94cdd7bb2af8c4e99c8562b35daad94e37f",
+    "source_url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300",
+    "status": "verified"
+  },
+  "gh-300-balotario-6-22": {
+    "content_hash": "1730174a87a418aa2d82eb2ade243c9fff42029d73a73b30e79a92a2a44ab46a",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-6-23": {
+    "content_hash": "997a181f72540d8400b3aaa864936140e159d072c6d1db5d1d0273b2cf111ea1",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-6-24": {
+    "content_hash": "a8f8d1cd1e2108a2e728cd69be6facd1de2a02ae8a41f8de1b7cc7a27f4d5bbc",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-6-25": {
+    "content_hash": "a5ca268612e1403c61455d30f4dfae2fc15e69274ee89e695d2a6541465d2220",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-6-26": {
+    "content_hash": "dff5e22152bb2d122da9527044a99d1b34a1407a81865adeb273b615fe9493a4",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9d053486f2ba66c750f12e1b9806a94cdd7bb2af8c4e99c8562b35daad94e37f",
+    "source_url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300",
+    "status": "verified"
+  },
+  "gh-300-balotario-6-27": {
+    "content_hash": "474cd83ac37a0634398ecef6457563ad0930903ba479b6bbf6d529b97fe0e44b",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-6-28": {
+    "content_hash": "271e69f2b7d8b006ba640462ca1c4fb8490d6921d9cf6a034eb1535c994d33ea",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "54e074d56cdc5d315a4ef26bc829db226aad0adb8e72290ff652b927387f3579",
+    "source_url": "https://docs.github.com/en/copilot/concepts/content-exclusion",
+    "status": "verified"
+  },
+  "gh-300-balotario-6-29": {
+    "content_hash": "e4f73dfafa09480bb20c8fb35b083b645057c10f5d18104ace35e76d7d57da3d",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-6-3": {
+    "content_hash": "00652ceb124e51d27cf334024ce113010a866cd6b7165e9f38b6f514d57a6722",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-6-30": {
+    "content_hash": "19072d933ff38490321177a45e6334a3eaa4152e342eaaa3aba70c3accccd92f",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "54e074d56cdc5d315a4ef26bc829db226aad0adb8e72290ff652b927387f3579",
+    "source_url": "https://docs.github.com/en/copilot/concepts/content-exclusion",
+    "status": "verified"
+  },
+  "gh-300-balotario-6-31": {
+    "content_hash": "c73eef191538744407c34469335cc8d7d57acc4d806f00fc8e0b3e8c99b8aa61",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-6-32": {
+    "content_hash": "74d657ed2543388919c738d0ab8297a8fce90350789e6b51e10da9541ad68967",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-6-33": {
+    "content_hash": "3e16f5e25d6c7b53294937f3d0fec7212b5dc7ce43c840296a44df2ef4ae4db5",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "b28e9f025c34740eb81c39ae87bd22150971630e2bbd108711f657827ef0b5f9",
+    "source_url": "https://docs.github.com/en/copilot/tutorials/write-tests",
+    "status": "verified"
+  },
+  "gh-300-balotario-6-34": {
+    "content_hash": "495e930b3edb26007ffc067b56abe2d4eb3f84118ee2933d7ea442c06d9f6251",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "54e074d56cdc5d315a4ef26bc829db226aad0adb8e72290ff652b927387f3579",
+    "source_url": "https://docs.github.com/en/copilot/concepts/content-exclusion",
+    "status": "verified"
+  },
+  "gh-300-balotario-6-35": {
+    "content_hash": "e393d7486a433f0f48b29b1252535728fefe6526991fb5fd1f7afbc8f286ba82",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "22cf0ad018da71882fcfe065dda43d50d81ee90e967c847ccc0cfe644b5b22d0",
+    "source_url": "https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-enterprise/review-audit-logs",
+    "status": "verified"
+  },
+  "gh-300-balotario-6-36": {
+    "content_hash": "229f38e565b9276fa605f8ad1848cd70c1988a8a60dae6181e604360a1f388af",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "ea35697f8cec5b1f7abbd1e4d215eee386ae170b748da18d6905d871dd33e552",
+    "source_url": "https://docs.github.com/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot",
+    "status": "verified"
+  },
+  "gh-300-balotario-6-37": {
+    "content_hash": "0edaf1c71a49105972c57ad1004a0d99345a8eb76fa12d1965097cc57769227b",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-6-38": {
+    "content_hash": "976b7bed143ee8e81eccf8acc2153641def00cff25dbf0664c42223d836574cc",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-6-39": {
+    "content_hash": "1f773d0aee7895ac95e30cd3dd687bff9642cc3ca4bc89db5922ad373d004390",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "394bf54ca8df49f21684d7a3411584212b64b894e1332c7d8755744795f2904f",
+    "source_url": "https://docs.github.com/en/copilot/responsible-use/chat",
+    "status": "verified"
+  },
+  "gh-300-balotario-6-4": {
+    "content_hash": "ccb1537d7e7924ea44d53bf52450992fea7d356f81e35723e3ffeb652099515c",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-6-40": {
+    "content_hash": "a203588c03139a33a24a3265af9caef6d06179980a76e0b73ea55c8c91844323",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9d053486f2ba66c750f12e1b9806a94cdd7bb2af8c4e99c8562b35daad94e37f",
+    "source_url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300",
+    "status": "verified"
+  },
+  "gh-300-balotario-6-41": {
+    "content_hash": "d5c501284ad1849af6350251cbce5f311de5eb3974cbbb27a0421fdb202c2cd8",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "ea35697f8cec5b1f7abbd1e4d215eee386ae170b748da18d6905d871dd33e552",
+    "source_url": "https://docs.github.com/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot",
+    "status": "verified"
+  },
+  "gh-300-balotario-6-42": {
+    "content_hash": "899787bbf63040162f1c92abb054615546680e835b13e5b69fb1923f93b2a2f9",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9d053486f2ba66c750f12e1b9806a94cdd7bb2af8c4e99c8562b35daad94e37f",
+    "source_url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300",
+    "status": "verified"
+  },
+  "gh-300-balotario-6-43": {
+    "content_hash": "ad29f8657df38b7b27dc43c72dbe247b4e9ebdd3282cb4592dcc84d11cfa7e9d",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-6-44": {
+    "content_hash": "e6a3bd23b63f6acc175bcd61b70a2b8208c47916f4a3fc3b78deb19e4ff8036f",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-6-45": {
+    "content_hash": "dcb37e3174dcb486662b17712a2a9434334ebef49698cb3ac8052a1620ad53e0",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-6-46": {
+    "content_hash": "c45b829f06922a782c9ebd8584e5b21c16b9f782798721c504c8498851fcbb9a",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "394bf54ca8df49f21684d7a3411584212b64b894e1332c7d8755744795f2904f",
+    "source_url": "https://docs.github.com/en/copilot/responsible-use/chat",
+    "status": "verified"
+  },
+  "gh-300-balotario-6-47": {
+    "content_hash": "02cc6343000d3be4a8054f1de16b31fb9b75dc0ab6cba580e67c7f327b517367",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "ea35697f8cec5b1f7abbd1e4d215eee386ae170b748da18d6905d871dd33e552",
+    "source_url": "https://docs.github.com/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot",
+    "status": "verified"
+  },
+  "gh-300-balotario-6-48": {
+    "content_hash": "7a5c0fc57fed3ad7a03cd8d51f9a8990b5a565e8dbab72a09ce35f433f51da02",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-6-49": {
+    "content_hash": "02e73fd1b6670cfbe3b33ad6a3fe39615612e31c7bdce805db061386e67469fa",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "54e074d56cdc5d315a4ef26bc829db226aad0adb8e72290ff652b927387f3579",
+    "source_url": "https://docs.github.com/en/copilot/concepts/content-exclusion",
+    "status": "verified"
+  },
+  "gh-300-balotario-6-5": {
+    "content_hash": "8e6db41586b7ead311d8c13aacff3438db60ab7370d0cdb87d964bbe3cfd57d9",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "ea35697f8cec5b1f7abbd1e4d215eee386ae170b748da18d6905d871dd33e552",
+    "source_url": "https://docs.github.com/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot",
+    "status": "verified"
+  },
+  "gh-300-balotario-6-50": {
+    "content_hash": "3b0b04d4323efe9d02eaf2135556d77fe6f2b7a6d22f009df88fd0da38f8028a",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-6-51": {
+    "content_hash": "8d4fe1e38309093e47a499ef64c908d4d3f2abb5c910a425ece41dbdc5304a6f",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "112aea92738a7e67d9783bb341e309b14c3013ddda6ea323fc4f80359031dcce",
+    "source_url": "https://docs.github.com/en/copilot/reference/ai-models/model-hosting",
+    "status": "verified"
+  },
+  "gh-300-balotario-6-52": {
+    "content_hash": "8968f02fb955ed17e39ba29ee9cc411a27298f24862eeedf389417e11679aaa9",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9d053486f2ba66c750f12e1b9806a94cdd7bb2af8c4e99c8562b35daad94e37f",
+    "source_url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300",
+    "status": "verified"
+  },
+  "gh-300-balotario-6-53": {
+    "content_hash": "e77dd3d82aeaab3629a7236ea26a2e2bb221bf69e69c0f2f31f323c65ace5548",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "112aea92738a7e67d9783bb341e309b14c3013ddda6ea323fc4f80359031dcce",
+    "source_url": "https://docs.github.com/en/copilot/reference/ai-models/model-hosting",
+    "status": "verified"
+  },
+  "gh-300-balotario-6-54": {
+    "content_hash": "e71863a0e783574f6c9915c56e9f7efc1bcd21cf121bf6bc7ca85ba1a3979f08",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9d053486f2ba66c750f12e1b9806a94cdd7bb2af8c4e99c8562b35daad94e37f",
+    "source_url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300",
+    "status": "verified"
+  },
+  "gh-300-balotario-6-55": {
+    "content_hash": "72ad119a5dfd94a02fb6a4e8ea43b592ec677544f8bd7162b3765039c832510e",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-6-56": {
+    "content_hash": "b7f67f0ee9c29a23c47b88754cb4a00dcb24f8b64d7ebd3e61e233f79a33af28",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-6-57": {
+    "content_hash": "898dbd18694c74d71a1f655eef70ce5add7d2c1a6a4aa6a7ef13138aaafbfe05",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "b28e9f025c34740eb81c39ae87bd22150971630e2bbd108711f657827ef0b5f9",
+    "source_url": "https://docs.github.com/en/copilot/tutorials/write-tests",
+    "status": "verified"
+  },
+  "gh-300-balotario-6-58": {
+    "content_hash": "b9de837d4fab9cab929751ae9b5325325be4ff32c3630a70383b44ead00f1e63",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-6-59": {
+    "content_hash": "e3dec6e5cea1335ffb2980b2197d6739b2424c80f75c07c766ea751bc35b5cc9",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "ea35697f8cec5b1f7abbd1e4d215eee386ae170b748da18d6905d871dd33e552",
+    "source_url": "https://docs.github.com/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot",
+    "status": "verified"
+  },
+  "gh-300-balotario-6-6": {
+    "content_hash": "bdbc91327221d4d4522fa989865dfa28e149116323bc18588aeb3e263a008656",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "394bf54ca8df49f21684d7a3411584212b64b894e1332c7d8755744795f2904f",
+    "source_url": "https://docs.github.com/en/copilot/responsible-use/chat",
+    "status": "verified"
+  },
+  "gh-300-balotario-6-60": {
+    "content_hash": "627c7c22fcd49c74f00e48b6f638a06076565af4a017ec24401d9d90390d75aa",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "394bf54ca8df49f21684d7a3411584212b64b894e1332c7d8755744795f2904f",
+    "source_url": "https://docs.github.com/en/copilot/responsible-use/chat",
+    "status": "verified"
+  },
+  "gh-300-balotario-6-61": {
+    "content_hash": "04cd2a4830b3efc4b3f7951b0f18d97bbe093a8799256fa91ec366988a28d93c",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-6-62": {
+    "content_hash": "bfc2270386ec3009ca42a846d08262b6edf364530b9230e49fd7122e8b5ac0d5",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-6-63": {
+    "content_hash": "6e58514ee07c62d2dc54eac811bde305b36d498b37834cca50d7c21ceb26fccd",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9d053486f2ba66c750f12e1b9806a94cdd7bb2af8c4e99c8562b35daad94e37f",
+    "source_url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300",
+    "status": "verified"
+  },
+  "gh-300-balotario-6-64": {
+    "content_hash": "510efdfa7b98e8e96072f88e5d23609866e41b1f7be20a759912bd0b8d2df5d9",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-6-65": {
+    "content_hash": "08eb52b503e7c978e73d54f1508e4ef915f68ce6b3b2d998f1919087e95e345e",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9d053486f2ba66c750f12e1b9806a94cdd7bb2af8c4e99c8562b35daad94e37f",
+    "source_url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300",
+    "status": "verified"
+  },
+  "gh-300-balotario-6-66": {
+    "content_hash": "7c4c7701bf5238861c64634e44761be56fed84376033d6cb2606727fe37e294d",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-6-67": {
+    "content_hash": "a2e9be5ab719ca86165cbe0d6838b127aca6231ff17fde0c26550ff4275e28fd",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-6-68": {
+    "content_hash": "2560467796fe8529315eb82044406f4f729a9015f0050e0b7a8a412d665c8761",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "source_url": "https://github.com/trust-center",
+    "status": "verified"
+  },
+  "gh-300-balotario-6-69": {
+    "content_hash": "9584e2b126df3bf4a1be1eb991f70d7c22a9eba9e0db5723003a9b10e931ff9c",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "b28e9f025c34740eb81c39ae87bd22150971630e2bbd108711f657827ef0b5f9",
+    "source_url": "https://docs.github.com/en/copilot/tutorials/write-tests",
+    "status": "verified"
+  },
+  "gh-300-balotario-6-7": {
+    "content_hash": "e4c487fa10650e3228572ceaebf4099c10a9072cd67011892a570e9756e25ace",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "394bf54ca8df49f21684d7a3411584212b64b894e1332c7d8755744795f2904f",
+    "source_url": "https://docs.github.com/en/copilot/responsible-use/chat",
+    "status": "verified"
+  },
+  "gh-300-balotario-6-70": {
+    "content_hash": "1c0b32ef319dbcca208b43c2c2456a9fb026859f2a14073a0f7b46134f59a6e2",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "source_url": "https://docs.github.com/en/copilot/get-started/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-6-8": {
+    "content_hash": "b059cf27b6ee2d00f6bffbe3c39af008f19a8c1f08808b521a369615befac7d5",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "9d053486f2ba66c750f12e1b9806a94cdd7bb2af8c4e99c8562b35daad94e37f",
+    "source_url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300",
+    "status": "verified"
+  },
+  "gh-300-balotario-6-9": {
+    "content_hash": "a13dec0e8c19adc09c4ac873ab64584a38496fae44f26c192136aa1a902e5130",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "112aea92738a7e67d9783bb341e309b14c3013ddda6ea323fc4f80359031dcce",
+    "source_url": "https://docs.github.com/en/copilot/reference/ai-models/model-hosting",
+    "status": "verified"
+  },
+  "gh-300-balotario-7-1": {
+    "content_hash": "6d175d50829638435691d9929c38dc30b87fd341968bea051ddd497827b37a0e",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "8300c9bc390da6ec23b4e7f99f3657367477fea63e6c19aa8507486aa4e8191f",
+    "source_url": "https://github.com/features/copilot/plans",
+    "status": "verified"
+  },
+  "gh-300-balotario-7-10": {
+    "content_hash": "aafea35b241b1f7605710aa9a26d5aa17be5f18bfa44aca18e41c871aa5a8566",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "7e8dd085327764f3c4a34a601bb629e68575cbc1ec793c22b93c71169ea6b77b",
+    "source_url": "https://docs.github.com/en/copilot/concepts/customizations/mcp",
+    "status": "verified"
+  },
+  "gh-300-balotario-7-11": {
+    "content_hash": "13af532966c59f672a5d29883db738ca01ce0bce78a26e4614ac06176a7c60e1",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "676e6967ba8d73c6a7bb75cc90ee02d60c9ed8d08a802c134e3684a1aaefc45d",
+    "source_url": "https://docs.github.com/en/enterprise-cloud@latest/copilot/how-tos/copilot-on-github/customize-copilot/add-custom-instructions/add-repository-instructions",
+    "status": "verified"
+  },
+  "gh-300-balotario-7-12": {
+    "content_hash": "9359e860240d1ef7c7450408e9ef4a994b1f2b4711513cfb0bb55eea4ce5b82a",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "",
+    "source_url": "https://docs.github.com/en/copilot/managing-copilot/configuring-and-auditing-content-exclusion/excluding-content-from-github-copilot#limitations-of-content-exclusions",
+    "status": "verified"
+  },
+  "gh-300-balotario-7-13": {
+    "content_hash": "70f08d1311e4cc6b8632e649d3d03ba49e049370d727657ef5e24267e8154a25",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "",
+    "source_url": "https://docs.github.com/en/copilot/managing-copilot/configuring-and-auditing-content-exclusion/excluding-content-from-github-copilot#about-content-exclusions-for-copilot",
+    "status": "verified"
+  },
+  "gh-300-balotario-7-14": {
+    "content_hash": "43e44ad1ea0ac6ef24d259d87c2519ae417cdd1079af6520ec0d25731e2b022a",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "6fb316080e612c8395ccc83616ed1ebafae9f3d511863063de16f5c843510fb0",
+    "source_url": "https://docs.github.com/en/copilot/get-started/quickstart",
+    "status": "verified"
+  },
+  "gh-300-balotario-7-15": {
+    "content_hash": "a99f9432873f7a8746d660d26df405b737fb03b519c41e804f0bc4cee31d2b3d",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "",
+    "source_url": "https://docs.github.com/en/copilot/using-github-copilot/best-practices-for-using-github-copilot#guide-copilot-towards-helpful-outputs",
+    "status": "verified"
+  },
+  "gh-300-balotario-7-16": {
+    "content_hash": "f7b512dc833c660b88dcdcc99fbe4c0979c35913f4495f0e123b97ee9be68ebd",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "a0f84cab69ef6667901dbe647efa35493b2a030e0279ae9c288f67b7643d09e4",
+    "source_url": "https://docs.github.com/en/copilot/get-started/what-is-github-copilot",
+    "status": "verified"
+  },
+  "gh-300-balotario-7-17": {
+    "content_hash": "e84b33890c94bc699e22095dd5173a23d1e8227d7b32af5eec10c66b78608e06",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "386fdb31e6bc74f7aa22c04a6c89ca21f5a7fd31c618801164b71721b5682e63",
+    "source_url": "https://learn.github.com/learning-pathways/github-copilot",
+    "status": "verified"
+  },
+  "gh-300-balotario-7-18": {
+    "content_hash": "51164007f38c091257070da6861704dfcdb0b4ace9f865c45d4a77f7c1c4d9bf",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "386fdb31e6bc74f7aa22c04a6c89ca21f5a7fd31c618801164b71721b5682e63",
+    "source_url": "https://learn.github.com/learning-pathways/github-copilot",
+    "status": "verified"
+  },
+  "gh-300-balotario-7-19": {
+    "content_hash": "2aaad2b3a64c9f85e35ac72d869f78e801ba571ee1129d72bd33ce0637da524b",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "b53425c8d94afca804d4b26bc8a75ead9f9abeb0074a00019f626f8e8ffc6090",
+    "source_url": "https://learn.microsoft.com/en-us/training/modules/responsible-ai-with-github-copilot/3-six-principles-of-responsible-ai",
+    "status": "verified"
+  },
+  "gh-300-balotario-7-2": {
+    "content_hash": "2a598a83298aa41f3efa75dcf0aa5b29723665791418d2d78b4171aab39e58a8",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "fab9e344f519e64f1cc914aaa57c8995619f7b2f206e1201be178cd582332d38",
+    "source_url": "https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-organization/manage-access/grant-access",
+    "status": "verified"
+  },
+  "gh-300-balotario-7-20": {
+    "content_hash": "a2a3b30f2e4453c52a00496b4da29f8a4baca969b7ea25a9683d54f8f0850427",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "bba2c3f49dc02b71d10bab5513b9720fba39ad6d13c34eaa45fb09c3ed0e97c2",
+    "source_url": "https://docs.github.com/en/copilot",
+    "status": "verified"
+  },
+  "gh-300-balotario-7-21": {
+    "content_hash": "3e5551571735f91556a5ee109515a26e4e47ee6db57b09dbec1ca8914fea1843",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "536755c8cac02f6d27364a9ae30b3ae1f5198ee790832fa41b3a3a091dcb13e7",
+    "source_url": "https://docs.github.com/en/copilot/concepts/agents/copilot-cli/about-copilot-cli",
+    "status": "verified"
+  },
+  "gh-300-balotario-7-22": {
+    "content_hash": "dc0c10f0c8dc5b2aa5256f9a231d9cd3a2d91f57ae6651eaa4038beedc18c5c8",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "b28e9f025c34740eb81c39ae87bd22150971630e2bbd108711f657827ef0b5f9",
+    "source_url": "https://docs.github.com/en/copilot/tutorials/write-tests",
+    "status": "verified"
+  },
+  "gh-300-balotario-7-23": {
+    "content_hash": "930771320a9639b246a0ef60dac334de7b00f8450f53de4c37bc367a95c434d0",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "713275540a7109730961dca581b823b110897f78aaf97dc6ee2e235f0974dbe0",
+    "source_url": "https://docs.github.com/en/enterprise-cloud@latest/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-access/view-license-usage",
+    "status": "verified"
+  },
+  "gh-300-balotario-7-24": {
+    "content_hash": "b227b8ded65780aca51bdaba9df365ff0411000a0b42bca526e8e413497c83cc",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "fb828faac301a5e3e7980fe1dca97ea06a435d05da4f5232dd746529e3cfa63a",
+    "source_url": "https://docs.github.com/en/copilot/how-tos/get-code-suggestions/find-matching-code",
+    "status": "verified"
+  },
+  "gh-300-balotario-7-25": {
+    "content_hash": "209a0b78965d86e80547040c5131e759847641e6e1d9053db5f35d8f7fc72525",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "112aea92738a7e67d9783bb341e309b14c3013ddda6ea323fc4f80359031dcce",
+    "source_url": "https://docs.github.com/en/copilot/reference/ai-models/model-hosting",
+    "status": "verified"
+  },
+  "gh-300-balotario-7-26": {
+    "content_hash": "1aa03116956a208415f39939c5696fbae7da95eb97dc4920d30a3c92fce8500b",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "",
+    "source_url": "https://docs.github.com/en/copilot/using-github-copilot/getting-started-with-github-copilot#using-context-in-github-copilot",
+    "status": "verified"
+  },
+  "gh-300-balotario-7-27": {
+    "content_hash": "2de4a9875b803163a0be6db0afdc3da919998d5885432ff8fbd5235dc5d3bc12",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "",
+    "source_url": "https://code.visualstudio.com/docs/copilot/customization/custom-chat-modes#_builtin-chat-modes",
+    "status": "verified"
+  },
+  "gh-300-balotario-7-28": {
+    "content_hash": "bbbc06b7568dd6cb718338ce6b8698903397a8a807b2348634dede9bab715c6c",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "f74e8e6df69be5dcf9ab73369c24046d27ac49ae4f3995d712f81557cb06a62b",
+    "source_url": "https://learn.microsoft.com/en-us/training/modules/get-started-github-copilot/10-examine-chat-view-features",
+    "status": "verified"
+  },
+  "gh-300-balotario-7-29": {
+    "content_hash": "8c4282c6a74c05faf563668857d57bbd49a603533ce771e7c65a7539055d9891",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "f74e8e6df69be5dcf9ab73369c24046d27ac49ae4f3995d712f81557cb06a62b",
+    "source_url": "https://learn.microsoft.com/en-us/training/modules/get-started-github-copilot/10-examine-chat-view-features",
+    "status": "verified"
+  },
+  "gh-300-balotario-7-3": {
+    "content_hash": "7d84f26870862ab8031e91d34b4f7be1f18bb61937dd66583983ccc8c7a91ff1",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "8fb6dd594949fca3ae320cbbccf0fbed03984d4122847197ab1264bb91633257",
+    "source_url": "https://docs.github.com/en/copilot/how-tos/get-code-suggestions/get-ide-code-suggestions",
+    "status": "verified"
+  },
+  "gh-300-balotario-7-30": {
+    "content_hash": "20e44496dcfb284645f3e4b9baa03184e9e833a93a3af9fa6f96020adf218065",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "414a8fdc4af81370dea53360ebd34a8959d7c1d6ab93c5cca8de777f2e516de4",
+    "source_url": "https://learn.microsoft.com/en-us/training/modules/get-started-github-copilot/11-examine-inline-chat-smart-actions-quick-chat",
+    "status": "verified"
+  },
+  "gh-300-balotario-7-31": {
+    "content_hash": "2d9a1d504869c4a80bf8b2f3b49a310cb6346be29302befe6b041c2f18defe07",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "84cb0503986f30c4768e68bf1c772c174d9eaf8cb2ce6027ac040089ca30cbc9",
+    "source_url": "https://learn.microsoft.com/en-us/training/modules/develop-code-features-using-github-copilot-tools/2-examine-code-development-features-github-copilot",
+    "status": "verified"
+  },
+  "gh-300-balotario-7-32": {
+    "content_hash": "84e6780d433005495e8d583f67c42eb380a8d1038b61a8cebd96fbb21e036f3e",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "973b3920bb7dd32e3da96a03e4576eebf2f5a19ce9c695ed1d419e847180d4e2",
+    "source_url": "https://learn.microsoft.com/en-us/training/modules/develop-code-features-using-github-copilot-tools/3-examine-github-copilot-best-practices",
+    "status": "verified"
+  },
+  "gh-300-balotario-7-33": {
+    "content_hash": "a7dc955bcace57b842dbf109bb0e652a78abe410ecbf50262da6d1a0770b3aa9",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "b991502052b4f13dd312d143d85668e94d7384e41f475c5c561c9318302ad3ef",
+    "source_url": "https://learn.microsoft.com/en-us/training/modules/github-copilot-across-environments/5-git-hub-copilot-for-the-command-line",
+    "status": "verified"
+  },
+  "gh-300-balotario-7-34": {
+    "content_hash": "88a6c3c9df765c62bc7d03eed49366976d6fa8c8e4b2a1c02ae4f024c279f7f9",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "b991502052b4f13dd312d143d85668e94d7384e41f475c5c561c9318302ad3ef",
+    "source_url": "https://learn.microsoft.com/en-us/training/modules/github-copilot-across-environments/5-git-hub-copilot-for-the-command-line",
+    "status": "verified"
+  },
+  "gh-300-balotario-7-35": {
+    "content_hash": "df1bcb6d026279b5830f2ab3d5098bc64e797895dad23447a730fffe8f924b82",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "55b5e5f3e7f8d9eb9ef5a4a997ce3cdd3c972f61181e4072e29934712fbb4969",
+    "source_url": "https://learn.microsoft.com/en-us/training/modules/github-copilot-across-environments/2-code-completion-with-git-hub-copilot",
+    "status": "verified"
+  },
+  "gh-300-balotario-7-36": {
+    "content_hash": "f99ad00e3135274296ae34d209cb986a275412afc98f40a79cb67881959d336a",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "08d5b378656d4275943b8bd1e1e522ef2be8d56ba11583913ae9e1fb685f8f8f",
+    "source_url": "https://learn.microsoft.com/en-us/training/modules/github-copilot-management-and-customizations/3-github-copilot-contractual-protections-disabling-matching-public-code",
+    "status": "verified"
+  },
+  "gh-300-balotario-7-37": {
+    "content_hash": "e1b139f7bb721b97e42328896708242b722887db70dc0feb68929e509eb93f38",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "0c67337ccd6b30490ffb23392089237161990262dd1fe116c9d81d39f9302b06",
+    "source_url": "https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/add-custom-instructions/add-organization-instructions",
+    "status": "verified"
+  },
+  "gh-300-balotario-7-38": {
+    "content_hash": "6beab53c70bf97ef79eb6dcf996adb4d0ab18620868d63df9a04cab48fddb68e",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "01fd4d5c12f466fa018cff427f80f1f6dd25ccd30204c088c343f7f6a852665e",
+    "source_url": "https://learn.microsoft.com/en-us/training/modules/generate-documentation-using-github-copilot-tools/3-examine-github-copilot-prompts-keywords",
+    "status": "verified"
+  },
+  "gh-300-balotario-7-4": {
+    "content_hash": "237061e89ea39006493e8b3a16765ae8dcd8f1a8d5485dcce11bd1c2e9c1fbab",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "84daef16273c447cca0a1ed31c22e1e50f3e8eede8923f0ce03919e2761898f3",
+    "source_url": "https://docs.github.com/en/copilot/how-tos/copilot-cli/set-up-copilot-cli/install-copilot-cli",
+    "status": "verified"
+  },
+  "gh-300-balotario-7-5": {
+    "content_hash": "35065dc37f8482a4e0da535be5f65060c82ea1961461c476039064326f525c6c",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "ea35697f8cec5b1f7abbd1e4d215eee386ae170b748da18d6905d871dd33e552",
+    "source_url": "https://docs.github.com/en/copilot/concepts/prompting/prompt-engineering",
+    "status": "verified"
+  },
+  "gh-300-balotario-7-6": {
+    "content_hash": "ddbd9788945ef0b093955aa928844cd94e7a175316bcf01d6e2295f35458ead4",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "f718aaa9818bb93d5d145a16942cd5b3481e525c0c3d6528cfbb528a8a9537e1",
+    "source_url": "https://docs.github.com/en/copilot/how-tos/configure-content-exclusion/exclude-content-from-copilot",
+    "status": "verified"
+  },
+  "gh-300-balotario-7-7": {
+    "content_hash": "ce7e9be2260234801983e6adf57fed8354b254234279705ea7176a3365c8226a",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "f718aaa9818bb93d5d145a16942cd5b3481e525c0c3d6528cfbb528a8a9537e1",
+    "source_url": "https://docs.github.com/en/copilot/how-tos/configure-content-exclusion/exclude-content-from-copilot",
+    "status": "verified"
+  },
+  "gh-300-balotario-7-8": {
+    "content_hash": "91d084fe40c8915af5a303c56f0fae9057c9cd76ddbc0de7515112d82cfa2a98",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "77e9026ae41855e16b47bcffed75148abaeeacf08e07c34210841e7bf73fef31",
+    "source_url": "https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/add-custom-instructions/add-repository-instructions",
+    "status": "verified"
+  },
+  "gh-300-balotario-7-9": {
+    "content_hash": "d5336b2b8fd2e480299b30c3474117d4ff74cc7c7094678581e2bcec88e16503",
+    "last_verified_at": "2026-11-20",
+    "review_notes": "Auditoría inicial de balotario GH-300",
+    "source_hash": "0205ace6f93eb75301540c5cd53280b162f97b4196d12b5bfb7674e3995d0d91",
+    "source_url": "https://docs.github.com/en/copilot/tutorials/roll-out-at-scale/assign-licenses/track-usage-and-adoption",
+    "status": "verified"
+  }
+}

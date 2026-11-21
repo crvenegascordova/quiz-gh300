@@ -1,0 +1,222 @@
+{
+  "https://code.visualstudio.com/docs/copilot/customization/custom-chat-modes": {
+    "fetched_at": "2026-11-20T13:54:56+00:00",
+    "hash": "2c4f216bf976b7f7b097e12bfb29c14bba68f40ab69e0c2f4201e6a48067789a",
+    "length": 23770
+  },
+  "https://docs.github.com/en/copilot": {
+    "fetched_at": "2026-11-20T13:54:47+00:00",
+    "hash": "bba2c3f49dc02b71d10bab5513b9720fba39ad6d13c34eaa45fb09c3ed0e97c2",
+    "length": 14602
+  },
+  "https://docs.github.com/en/copilot/concepts/agents/copilot-cli/about-copilot-cli": {
+    "fetched_at": "2026-11-20T13:54:48+00:00",
+    "hash": "536755c8cac02f6d27364a9ae30b3ae1f5198ee790832fa41b3a3a091dcb13e7",
+    "length": 38905
+  },
+  "https://docs.github.com/en/copilot/concepts/completions/code-referencing": {
+    "fetched_at": "2026-11-20T13:54:32+00:00",
+    "hash": "7497086ea26c821369885998d76de943e5b0d806c6f572a084a33be02dc0a764",
+    "length": 20308
+  },
+  "https://docs.github.com/en/copilot/concepts/content-exclusion": {
+    "fetched_at": "2026-11-20T13:54:28+00:00",
+    "hash": "54e074d56cdc5d315a4ef26bc829db226aad0adb8e72290ff652b927387f3579",
+    "length": 16170
+  },
+  "https://docs.github.com/en/copilot/concepts/customizations/mcp": {
+    "fetched_at": "2026-11-20T13:54:39+00:00",
+    "hash": "7e8dd085327764f3c4a34a601bb629e68575cbc1ec793c22b93c71169ea6b77b",
+    "length": 27766
+  },
+  "https://docs.github.com/en/copilot/concepts/prompting-and-context/spaces": {
+    "fetched_at": "2026-11-20T13:54:31+00:00",
+    "hash": "de5c7367434205767943e37781b1a732efb4974662b532d7c898e2a3b3ada7d0",
+    "length": 16608
+  },
+  "https://docs.github.com/en/copilot/concepts/prompting/prompt-engineering": {
+    "fetched_at": "2026-11-20T13:54:37+00:00",
+    "hash": "ea35697f8cec5b1f7abbd1e4d215eee386ae170b748da18d6905d871dd33e552",
+    "length": 21474
+  },
+  "https://docs.github.com/en/copilot/get-started/plans": {
+    "fetched_at": "2026-11-20T13:54:23+00:00",
+    "hash": "e2aca79109ebff58c361cc8e3fda5a9e9da8e8ae2f4cf1e0bd40e7e6c3267899",
+    "length": 25842
+  },
+  "https://docs.github.com/en/copilot/get-started/quickstart": {
+    "fetched_at": "2026-11-20T13:54:41+00:00",
+    "hash": "6fb316080e612c8395ccc83616ed1ebafae9f3d511863063de16f5c843510fb0",
+    "length": 19076
+  },
+  "https://docs.github.com/en/copilot/get-started/what-is-github-copilot": {
+    "fetched_at": "2026-11-20T13:54:43+00:00",
+    "hash": "a0f84cab69ef6667901dbe647efa35493b2a030e0279ae9c288f67b7643d09e4",
+    "length": 18596
+  },
+  "https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-enterprise/review-audit-logs": {
+    "fetched_at": "2026-11-20T13:54:24+00:00",
+    "hash": "22cf0ad018da71882fcfe065dda43d50d81ee90e967c847ccc0cfe644b5b22d0",
+    "length": 15149
+  },
+  "https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-organization/manage-access/grant-access": {
+    "fetched_at": "2026-11-20T13:54:34+00:00",
+    "hash": "fab9e344f519e64f1cc914aaa57c8995619f7b2f206e1201be178cd582332d38",
+    "length": 18429
+  },
+  "https://docs.github.com/en/copilot/how-tos/configure-content-exclusion/exclude-content-from-copilot": {
+    "fetched_at": "2026-11-20T13:54:37+00:00",
+    "hash": "f718aaa9818bb93d5d145a16942cd5b3481e525c0c3d6528cfbb528a8a9537e1",
+    "length": 26265
+  },
+  "https://docs.github.com/en/copilot/how-tos/copilot-cli": {
+    "fetched_at": "2026-11-20T13:54:27+00:00",
+    "hash": "d0f3268adc9e279496808ce69a6a39a368492b4933a74a682e99995e26106235",
+    "length": 14782
+  },
+  "https://docs.github.com/en/copilot/how-tos/copilot-cli/set-up-copilot-cli/install-copilot-cli": {
+    "fetched_at": "2026-11-20T13:54:36+00:00",
+    "hash": "84daef16273c447cca0a1ed31c22e1e50f3e8eede8923f0ce03919e2761898f3",
+    "length": 17554
+  },
+  "https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/add-custom-instructions/add-organization-instructions": {
+    "fetched_at": "2026-11-20T13:55:00+00:00",
+    "hash": "0c67337ccd6b30490ffb23392089237161990262dd1fe116c9d81d39f9302b06",
+    "length": 14728
+  },
+  "https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/add-custom-instructions/add-repository-instructions": {
+    "fetched_at": "2026-11-20T13:54:38+00:00",
+    "hash": "77e9026ae41855e16b47bcffed75148abaeeacf08e07c34210841e7bf73fef31",
+    "length": 32562
+  },
+  "https://docs.github.com/en/copilot/how-tos/get-code-suggestions/find-matching-code": {
+    "fetched_at": "2026-11-20T13:54:50+00:00",
+    "hash": "fb828faac301a5e3e7980fe1dca97ea06a435d05da4f5232dd746529e3cfa63a",
+    "length": 24410
+  },
+  "https://docs.github.com/en/copilot/how-tos/get-code-suggestions/get-ide-code-suggestions": {
+    "fetched_at": "2026-11-20T13:54:36+00:00",
+    "hash": "8fb6dd594949fca3ae320cbbccf0fbed03984d4122847197ab1264bb91633257",
+    "length": 42855
+  },
+  "https://docs.github.com/en/copilot/managing-copilot/configuring-and-auditing-content-exclusion/excluding-content-from-github-copilot": {
+    "fetched_at": "2026-11-20T13:54:40+00:00",
+    "hash": "f718aaa9818bb93d5d145a16942cd5b3481e525c0c3d6528cfbb528a8a9537e1",
+    "length": 26265
+  },
+  "https://docs.github.com/en/copilot/reference/ai-models/model-hosting": {
+    "fetched_at": "2026-11-20T13:54:21+00:00",
+    "hash": "112aea92738a7e67d9783bb341e309b14c3013ddda6ea323fc4f80359031dcce",
+    "length": 22774
+  },
+  "https://docs.github.com/en/copilot/responsible-use/chat": {
+    "fetched_at": "2026-11-20T13:54:30+00:00",
+    "hash": "394bf54ca8df49f21684d7a3411584212b64b894e1332c7d8755744795f2904f",
+    "length": 49291
+  },
+  "https://docs.github.com/en/copilot/tutorials/roll-out-at-scale/assign-licenses/track-usage-and-adoption": {
+    "fetched_at": "2026-11-20T13:54:39+00:00",
+    "hash": "0205ace6f93eb75301540c5cd53280b162f97b4196d12b5bfb7674e3995d0d91",
+    "length": 19662
+  },
+  "https://docs.github.com/en/copilot/tutorials/write-tests": {
+    "fetched_at": "2026-11-20T13:54:26+00:00",
+    "hash": "b28e9f025c34740eb81c39ae87bd22150971630e2bbd108711f657827ef0b5f9",
+    "length": 28018
+  },
+  "https://docs.github.com/en/copilot/using-github-copilot/best-practices-for-using-github-copilot": {
+    "fetched_at": "2026-11-20T13:54:42+00:00",
+    "hash": "20a760882d2001906042159671368564f885b2f6fe4976a74c22e0a5fab1c36c",
+    "length": 18673
+  },
+  "https://docs.github.com/en/copilot/using-github-copilot/getting-started-with-github-copilot": {
+    "fetched_at": "2026-11-20T13:54:50+00:00",
+    "hash": "0feaea3b665fd1c88b18ddbcf729035b8bba4ae39906fad7f25724bd5f8bf473",
+    "length": 16062
+  },
+  "https://docs.github.com/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot": {
+    "fetched_at": "2026-11-20T13:54:30+00:00",
+    "hash": "ea35697f8cec5b1f7abbd1e4d215eee386ae170b748da18d6905d871dd33e552",
+    "length": 21474
+  },
+  "https://docs.github.com/en/enterprise-cloud@latest/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-access/view-license-usage": {
+    "fetched_at": "2026-11-20T13:54:49+00:00",
+    "hash": "713275540a7109730961dca581b823b110897f78aaf97dc6ee2e235f0974dbe0",
+    "length": 13657
+  },
+  "https://docs.github.com/en/enterprise-cloud@latest/copilot/how-tos/copilot-on-github/customize-copilot/add-custom-instructions/add-repository-instructions": {
+    "fetched_at": "2026-11-20T13:54:40+00:00",
+    "hash": "676e6967ba8d73c6a7bb75cc90ee02d60c9ed8d08a802c134e3684a1aaefc45d",
+    "length": 32579
+  },
+  "https://docs.github.com/en/rest/copilot/copilot-user-management": {
+    "fetched_at": "2026-11-20T13:54:26+00:00",
+    "hash": "63db1104b5892f8e8c0dd63ed199956e81abe166fa70726c020b67f214c5e1f7",
+    "length": 29120
+  },
+  "https://github.com/features/copilot/plans": {
+    "fetched_at": "2026-11-20T13:54:34+00:00",
+    "hash": "8300c9bc390da6ec23b4e7f99f3657367477fea63e6c19aa8507486aa4e8191f",
+    "length": 44166
+  },
+  "https://github.com/trust-center": {
+    "fetched_at": "2026-11-20T13:54:24+00:00",
+    "hash": "9c2eaad047baef4cb7abe7524d7455723c7591645693bffd01165646388e363d",
+    "length": 6662
+  },
+  "https://learn.github.com/learning-pathways/github-copilot": {
+    "fetched_at": "2026-11-20T13:54:43+00:00",
+    "hash": "386fdb31e6bc74f7aa22c04a6c89ca21f5a7fd31c618801164b71721b5682e63",
+    "length": 12
+  },
+  "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300": {
+    "fetched_at": "2026-11-20T13:54:29+00:00",
+    "hash": "9d053486f2ba66c750f12e1b9806a94cdd7bb2af8c4e99c8562b35daad94e37f",
+    "length": 8513
+  },
+  "https://learn.microsoft.com/en-us/training/modules/develop-code-features-using-github-copilot-tools/2-examine-code-development-features-github-copilot": {
+    "fetched_at": "2026-11-20T13:54:58+00:00",
+    "hash": "84cb0503986f30c4768e68bf1c772c174d9eaf8cb2ce6027ac040089ca30cbc9",
+    "length": 12829
+  },
+  "https://learn.microsoft.com/en-us/training/modules/develop-code-features-using-github-copilot-tools/3-examine-github-copilot-best-practices": {
+    "fetched_at": "2026-11-20T13:54:58+00:00",
+    "hash": "973b3920bb7dd32e3da96a03e4576eebf2f5a19ce9c695ed1d419e847180d4e2",
+    "length": 10744
+  },
+  "https://learn.microsoft.com/en-us/training/modules/generate-documentation-using-github-copilot-tools/3-examine-github-copilot-prompts-keywords": {
+    "fetched_at": "2026-11-20T13:55:01+00:00",
+    "hash": "01fd4d5c12f466fa018cff427f80f1f6dd25ccd30204c088c343f7f6a852665e",
+    "length": 6997
+  },
+  "https://learn.microsoft.com/en-us/training/modules/get-started-github-copilot/10-examine-chat-view-features": {
+    "fetched_at": "2026-11-20T13:54:56+00:00",
+    "hash": "f74e8e6df69be5dcf9ab73369c24046d27ac49ae4f3995d712f81557cb06a62b",
+    "length": 11354
+  },
+  "https://learn.microsoft.com/en-us/training/modules/get-started-github-copilot/11-examine-inline-chat-smart-actions-quick-chat": {
+    "fetched_at": "2026-11-20T13:54:57+00:00",
+    "hash": "414a8fdc4af81370dea53360ebd34a8959d7c1d6ab93c5cca8de777f2e516de4",
+    "length": 3954
+  },
+  "https://learn.microsoft.com/en-us/training/modules/github-copilot-across-environments/2-code-completion-with-git-hub-copilot": {
+    "fetched_at": "2026-11-20T13:54:59+00:00",
+    "hash": "55b5e5f3e7f8d9eb9ef5a4a997ce3cdd3c972f61181e4072e29934712fbb4969",
+    "length": 7458
+  },
+  "https://learn.microsoft.com/en-us/training/modules/github-copilot-across-environments/5-git-hub-copilot-for-the-command-line": {
+    "fetched_at": "2026-11-20T13:54:59+00:00",
+    "hash": "b991502052b4f13dd312d143d85668e94d7384e41f475c5c561c9318302ad3ef",
+    "length": 10018
+  },
+  "https://learn.microsoft.com/en-us/training/modules/github-copilot-management-and-customizations/3-github-copilot-contractual-protections-disabling-matching-public-code": {
+    "fetched_at": "2026-11-20T13:55:00+00:00",
+    "hash": "08d5b378656d4275943b8bd1e1e522ef2be8d56ba11583913ae9e1fb685f8f8f",
+    "length": 5234
+  },
+  "https://learn.microsoft.com/en-us/training/modules/responsible-ai-with-github-copilot/3-six-principles-of-responsible-ai": {
+    "fetched_at": "2026-11-20T13:54:44+00:00",
+    "hash": "b53425c8d94afca804d4b26bc8a75ead9f9abeb0074a00019f626f8e8ffc6090",
+    "length": 8192
+  }
+}

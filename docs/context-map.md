@@ -30,6 +30,7 @@ El contenido pedagógico y las especificaciones del sistema se organizan en las 
 
 ### 1.3 Especificaciones y Reglas de Negocio
 - `specs/quiz-certification.md`: Requisitos funcionales, criterios de aceptación, diseño de navegación y heurísticas de corrección estricta.
+- `specs/questionnaire-verification-system.md`: Especificación técnica del sistema estandarizado de auditoría, verificación incremental y scraping anti-ruido con reducción de consumo de tokens para IA.
 - `AGENTS.md`: Directrices del repositorio, comandos esenciales y convenciones de código.
 
 ---

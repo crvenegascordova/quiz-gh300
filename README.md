@@ -15,6 +15,10 @@ Cuenta con un banco de **766 preguntas técnicas**, traducción instantánea (in
 2. **[Hito 2: Despliegue gratuito 24/7 en Google Cloud (Always Free)](#-hito-2-despliegue-gratuito-247-en-google-cloud-always-free)**
 3. **[Cómo funciona el examen y dinámica de estudio](#-cómo-funciona-el-examen)**
 4. **[Desarrollo avanzado y contribución (Spec-Driven Development)](#-desarrollo-avanzado-y-contribución-sdd)**
+   - 4.1 **[Mantenimiento y verificación de preguntas (Web Scraping y Ahorro de Tokens)](#41-mantenimiento-y-verificación-de-veracidad-de-preguntas-web-scraping-y-ahorro-de-tokens)**
+   - 4.2 **[Cómo agregar una nueva certificación (Paso a paso para desarrolladores)](#42-cómo-agregar-una-nueva-certificación-paso-a-paso)**
+   - 4.3 **[Edición y compilación de preguntas](#43-edición-y-compilación-de-preguntas)**
+   - 4.4 **[Estructura del proyecto](#-estructura-del-proyecto)**
 
 ---
 
@@ -255,27 +259,169 @@ Para asegurarte de que nunca tengas cargos accidentales:
 
 Si deseas colaborar, agregar nuevas preguntas o mejorar el diseño, este proyecto sigue estrictamente la metodología **Spec-Driven Development (SDD)**:
 
-1. **Especificación primero**: Toda modificación de requerimientos debe definirse previamente en [`specs/quiz-certification.md`](specs/quiz-certification.md) y [`docs/context-map.md`](docs/context-map.md).
-2. **Pruebas unitarias obligatorias**: Toda nueva regla o ajuste debe contar con pruebas en [`tests/evaluation.test.ts`](tests/evaluation.test.ts).
+1. **Especificación primero**: Toda modificación de requerimientos debe definirse previamente en [`specs/quiz-certification.md`](specs/quiz-certification.md), [`specs/questionnaire-verification-system.md`](specs/questionnaire-verification-system.md) y [`docs/context-map.md`](docs/context-map.md).
+2. **Pruebas unitarias obligatorias**: Toda nueva regla o ajuste debe contar con pruebas automatizadas en [`tests/evaluation.test.ts`](tests/evaluation.test.ts) y [`tests/test_cert_audit.py`](tests/test_cert_audit.py).
 3. **Fuentes oficiales exclusivas**: Toda explicación, distractor o justificación debe basarse **únicamente en documentación oficial** (Microsoft Learn, GitHub Docs o Anthropic Docs/Skilljar).
 4. **Verificación doble antes de enviar cambios**:
    ```bash
-   bun test          # Todas las pruebas deben pasar (100%)
-   bun run lint      # El linter no debe arrojar advertencias ni errores
-   bun run build     # El build de producción debe compilar con cero errores
+   bun test                                  # Pruebas unitarias de la app (50 pass)
+   python3 -m unittest tests/test_cert_audit.py # Pruebas del motor de auditoría (13 pass)
+   bun run lint                              # Linter con cero advertencias
+   bun run build                             # Build de producción sin errores
    ```
 
-### ¿Cómo actualizar o editar preguntas?
-La fuente de verdad de las preguntas son los archivos Markdown por certificación:
-```text
-content/certifications/gh-300/balotarios.md
-content/certifications/claude-certified-developer/balotarios.md
-```
-Si corriges o agregas preguntas en esos archivos, regenera los datasets JSON compilados con:
+---
+
+### 4.1 Mantenimiento y Verificación de Veracidad de Preguntas (Web Scraping y Ahorro de Tokens)
+
+La documentación técnica oficial evoluciona constantemente (nuevas versiones de modelos, cambios de límites, parámetros obsoletos). Para mantener los cuestionarios **100% verídicos y vigentes sin gastar miles de tokens de IA**, el proyecto cuenta con un sistema centralizado de auditoría determinista, scraping anti-ruido y verificación incremental.
+
+#### ¿Cómo funciona el ahorro de tokens?
+1. **Reglas Deterministas Locales (0 tokens)**: Valida opciones A-Z, claves huérfanas, dominios oficiales permitidos y detecta patrones de términos obsoletos con expresiones regulares en milisegundos.
+2. **Web Scraping Semántico y Detección de Drift (0 tokens)**: Descarga las fuentes oficiales aislando únicamente el contenedor principal (`<main>`, `<article>`), descartando barras de navegación, pies de página, scripts y banners de cookies. Almacena el texto limpio en `source-cache/` y detecta cambios de versión mediante SHA-256 sin falsos positivos cosméticos.
+3. **Generador de Contexto Mínimo (`context`)**: Cuando una pregunta requiere revisión por parte de una IA (o de un desarrollador), el script **no envía la página web completa de 5.000 palabras**. Aplica coincidencia léxica local y extrae únicamente el fragmento relevante (< 250 palabras), reduciendo el consumo de tokens de ~8.000 a **~350 tokens por pregunta (>95% de ahorro)**.
+
+#### Comandos de la CLI de Verificación (`scripts/verify_certification.py`)
+
+Desde la raíz del repositorio, ejecutando `python3 scripts/verify_certification.py <cert-id> <comando>`:
+
 ```bash
-python3 scripts_prepare_questions.py
-bun test && bun run lint && bun run build
+# 1. Consultar estado del inventario de preguntas (0 tokens)
+python3 scripts/verify_certification.py gh-300 status --list
+python3 scripts/verify_certification.py claude-certified-developer status --list
+
+# 2. Descargar y actualizar fuentes oficiales detectando cambios semánticos
+python3 scripts/verify_certification.py gh-300 check-sources
+python3 scripts/verify_certification.py claude-certified-developer check-sources --catalog
+
+# 3. Ejecutar auditoría determinista sintáctica y de términos obsoletos (0 tokens)
+python3 scripts/verify_certification.py gh-300 audit
+python3 scripts/verify_certification.py claude-certified-developer audit
+
+# 4. Generar ficha compacta de contexto para revisión con IA (< 400 tokens)
+#    (Extrae únicamente el extracto relevante de la documentación oficial)
+python3 scripts/verify_certification.py gh-300 context 1:5
+python3 scripts/verify_certification.py claude-certified-developer context 1:9 --format json
+
+# 5. Registrar preguntas revisadas y al día
+python3 scripts/verify_certification.py gh-300 mark 1:5 --note "Validado contra Trust Center"
+python3 scripts/verify_certification.py claude-certified-developer mark 3:10-20 --note "Sin cambios"
+
+# 6. Marcar preguntas como pendientes de revisión
+python3 scripts/verify_certification.py gh-300 flag 2:15 --note "Verificar nuevo límite de contexto"
+
+# 7. Consultar catálogo temático de URLs oficiales
+python3 scripts/verify_certification.py claude-certified-developer urls
 ```
+
+*Selectores válidos*: `3` (todo el Balotario/Test 3), `3:10` (Test 3, Pregunta 10), `3:10-25` (Test 3, Preguntas 10 a 25), `--all` (todo el cuestionario).
+
+---
+
+### 4.2 Cómo Agregar una Nueva Certificación (Paso a Paso)
+
+El sistema utiliza una arquitectura modular y desacoplada basada en configuración declarativa. Para incorporar una certificación técnica nueva (por ejemplo, `azure-ai-fundamentals` o `aws-ai-practitioner`):
+
+#### Paso 1: Crear la carpeta de la certificación
+```bash
+mkdir -p content/certifications/<nueva-id>
+```
+
+#### Paso 2: Crear `balotarios.md`
+Redacta las preguntas en el formato estándar del proyecto (`content/certifications/<nueva-id>/balotarios.md`):
+```markdown
+# Balotario 1
+
+Pregunta 1
+¿Cuál es la función principal de...?
+A. Opción primera
+B. Opción segunda
+C. Opción tercera
+D. Opción cuarta
+Respuesta correcta: A
+Explicación
+Justificación detallada de por qué A es correcta y las demás no aplican.
+Fuente oficial: [Título del recurso oficial](https://learn.microsoft.com/es-es/...)
+```
+
+#### Paso 3: Crear `study-guide.md`
+Documenta el temario oficial, ponderaciones y competencias de la certificación en `content/certifications/<nueva-id>/study-guide.md`.
+
+#### Paso 4: Crear la configuración declarativa `audit-config.json`
+Crea `content/certifications/<nueva-id>/audit-config.json` definiendo la lista blanca de dominios y términos obsoletos:
+```json
+{
+  "cert_id": "<nueva-id>",
+  "name": "Nombre de la Certificación",
+  "source_file": "balotarios.md",
+  "allowed_domains": [
+    "learn.microsoft.com",
+    "docs.aws.amazon.com"
+  ],
+  "scraper": {
+    "content_selectors": ["main", "article", "#main-content", ".content"],
+    "strip_elements": ["nav", "header", "footer", "aside", "script", "style", "noscript", ".feedback-section"],
+    "cache_ttl_days": 7,
+    "timeout_seconds": 25
+  },
+  "obsolete_patterns": [
+    {
+      "pattern": "(?i)\\btermino_obsoleto\\b",
+      "message": "Descripción de por qué el término está en desuso",
+      "severity": "medium"
+    }
+  ],
+  "official_sources_catalog": {
+    "tema-principal": "https://docs.ejemplo.com/..."
+  }
+}
+```
+
+#### Paso 5: Registrar la certificación en la aplicación web
+1. En **`scripts_prepare_questions.py`**, añade la entrada a `CERT_CONFIGS`:
+   ```python
+   "<nueva-id>": {
+       "name": "Nombre de la Certificación",
+       "source_md": CONTENT_CERT_DIR / "<nueva-id>" / "balotarios.md",
+       "target_json": DATA_CERT_DIR / "<nueva-id>.json",
+       "expected_count": <numero_de_preguntas>,
+       "category_rules": [ ... ],
+   }
+   ```
+2. En **`src/data/certifications/index.ts`**, agrega los metadatos a `CERTIFICATIONS` y vincula los datos JSON a `CERTIFICATION_DATA`.
+
+#### Paso 6: Compilar dataset e inicializar verificación
+```bash
+# Compilar dataset JSON
+python3 scripts_prepare_questions.py <nueva-id>
+
+# Registrar estado inicial verificado de las preguntas
+python3 scripts/verify_certification.py <nueva-id> mark --all --note "Carga inicial de certificación"
+
+# Ejecutar auditoría determinista
+python3 scripts/verify_certification.py <nueva-id> audit
+```
+
+#### Paso 7: Validar la suite de pruebas
+```bash
+bun test && python3 -m unittest tests/test_cert_audit.py
+```
+
+---
+
+### 4.3 Edición y Compilación de Preguntas
+
+Si realizas correcciones o agregas preguntas a las certificaciones existentes:
+1. Edita el archivo `content/certifications/<id>/balotarios.md`.
+2. Regenera los datasets compilados y corre las pruebas:
+   ```bash
+   python3 scripts_prepare_questions.py
+   bun test && python3 -m unittest tests/test_cert_audit.py && bun run build
+   ```
+3. Registra la verificación con la CLI:
+   ```bash
+   python3 scripts/verify_certification.py <id> mark <selector> --note "Corrección aplicada"
+   ```
 
 ---
 
@@ -285,21 +431,47 @@ bun test && bun run lint && bun run build
 quiz-gh300/
 ├── content/
 │   └── certifications/
-│       ├── gh-300/
-│       │   ├── balotarios.md              # Fuente Markdown de las 458 preguntas GH-300
-│       │   └── study-guide.md             # Guía de estudio oficial Microsoft GH-300
-│       └── claude-certified-developer/
-│           ├── balotarios.md              # Fuente Markdown de las 308 preguntas Claude Developer
-│           └── study-guide.md             # Guía de estudio oficial Anthropic Partners
+│       ├── README.md                      # Guía maestra de auditoría y verificación
+│       ├── gh-300/                        # GitHub Copilot GH-300 (458 preguntas)
+│       │   ├── audit-config.json          # Configuración declarativa (dominios, regex, scraping)
+│       │   ├── audit-report.md            # Informe determinista generado
+│       │   ├── audit-report.json          # Datos estructurados exportados
+│       │   ├── balotarios.md              # Fuente Markdown de las 458 preguntas
+│       │   ├── source-cache/              # Caché local de páginas descargadas y limpias
+│       │   ├── source-hashes.json         # Hashes limpios de URLs oficiales
+│       │   ├── study-guide.md             # Guía oficial Microsoft GH-300
+│       │   └── verification-state.json    # Estado incremental de verificación por pregunta
+│       └── claude-certified-developer/    # Claude Certified Developer (308 preguntas)
+│           ├── audit-config.json          # Configuración declarativa (dominios, regex, scraping)
+│           ├── audit-report.md            # Informe determinista generado
+│           ├── audit-report.json          # Datos estructurados exportados
+│           ├── balotarios.md              # Fuente Markdown de las 308 preguntas en inglés
+│           ├── source-cache/              # Caché local de páginas descargadas y limpias
+│           ├── source-hashes.json         # Hashes limpios de URLs oficiales
+│           ├── study-guide.md             # Guía oficial Anthropic Partners
+│           ├── translations-es.json       # Diccionario bilingüe para alternancia en vivo
+│           └── verification-state.json    # Estado incremental de verificación por pregunta
+├── scripts/
+│   ├── cert_audit/                        # Motor agnóstico común de auditoría y scraping
+│   │   ├── config.py                      # Parser y validador de audit-config.json
+│   │   ├── context_builder.py             # Generador de contexto mínimo para IA (< 400 tokens)
+│   │   ├── parser.py                      # Parser universal de balotarios.md
+│   │   ├── reporter.py                    # Generador de audit-report.md y .json
+│   │   ├── rules.py                       # Reglas deterministas locales (A-Z, regex, dominios)
+│   │   ├── scraper.py                     # Web scraper semántico anti-ruido con caché
+│   │   └── state.py                       # Gestor de hashes y verification-state.json
+│   └── verify_certification.py            # CLI unificada accesible desde la raíz del proyecto
 ├── scripts_prepare_questions.py           # Compilador de balotarios Markdown a datasets JSON
 ├── package.json                           # Scripts y dependencias
 ├── astro.config.mjs                       # Configuración de Astro con adaptador Node y Tailwind Vite
 ├── specs/
-│   └── quiz-certification.md              # Especificaciones funcionales y criterios de aceptación
+│   ├── quiz-certification.md              # Especificaciones funcionales de la aplicación
+│   └── questionnaire-verification-system.md # Especificación técnica del sistema de verificación
 ├── docs/
-│   └── context-map.md                     # Flujo de datos y mapa de contexto del proyecto
+│   └── context-map.md                     # Flujo de datos y arquitectura de la plataforma
 ├── tests/
-│   └── evaluation.test.ts                 # 50 pruebas unitarias automatizadas (Bun test)
+│   ├── evaluation.test.ts                 # 50 pruebas unitarias de la aplicación (Bun test)
+│   └── test_cert_audit.py                 # 13 pruebas unitarias del motor de auditoría (Python unittest)
 ├── data/                                  # Base de datos SQLite local (excluida de git)
 └── src/
     ├── components/                        # Componentes UI de Astro (CertificationSelector, Hero, Setup, etc.)
