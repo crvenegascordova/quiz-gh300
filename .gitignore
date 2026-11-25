@@ -36,3 +36,6 @@ __pycache__/
 # audit caches
 source-cache/
 
+#deploy file sh
+deploy.sh
+

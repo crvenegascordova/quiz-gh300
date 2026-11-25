@@ -206,7 +206,7 @@ export function initQuizPlatform(
 		} else {
 			historyUnseenPrompt.innerHTML = `
 				<p class="text-sm font-bold text-[#3fb950] m-0">
-					🎉 ¡Felicitaciones! Has completado el 100% de cobertura del inventario (las ${allQuestionIds.length} preguntas ya han salido en tus exámenes).
+					¡Felicitaciones! Has completado el 100% de cobertura del inventario (las ${allQuestionIds.length} preguntas ya han salido en tus exámenes).
 				</p>
 			`;
 		}
@@ -362,10 +362,11 @@ export function initQuizPlatform(
 		const optionsContainer = $("options");
 		optionsContainer.innerHTML = "";
 
-		item.options.forEach((option) => {
+		item.options.forEach((option, idx) => {
 			const label = document.createElement("label");
 			label.className = "option";
 			label.setAttribute("data-option-id", option.id);
+			label.style.setProperty("--opt-idx", String(idx));
 
 			const isSelected = state.selected.includes(option.id);
 			if (isSelected) {
@@ -498,7 +499,8 @@ export function initQuizPlatform(
 			structuredHtml += `
 				<div class="feedback-level level-discard mb-3 p-3 rounded-lg border border-[#f85149]/40 bg-[#1c0f13] text-[#ffdcd7]">
 					<h4 class="text-xs font-bold uppercase tracking-wider text-[#ff7b72] mb-1.5 flex items-center gap-1.5">
-						<span>⚠️ Motivo del error (por qué tu selección no es válida)</span>
+						<span class="inline-block px-1.5 py-0.5 rounded bg-[#f85149]/20 text-[#ff7b72] text-[0.65rem] font-black tracking-wider uppercase">DESCARTE</span>
+						<span>Motivo del error (por qué tu selección no es válida)</span>
 					</h4>
 					<div class="space-y-1.5 text-xs leading-relaxed">
 						${breakdown.incorrectSelected
@@ -523,7 +525,8 @@ export function initQuizPlatform(
 		structuredHtml += `
 			<div class="feedback-level level-justification mb-3 p-3 rounded-lg border border-[#238636]/40 bg-[#0c1f17] text-[#aff5b4]">
 				<h4 class="text-xs font-bold uppercase tracking-wider text-[#3fb950] mb-1.5 flex items-center gap-1.5">
-					<span>💡 Fundamento de la respuesta correcta</span>
+					<span class="inline-block px-1.5 py-0.5 rounded bg-[#238636]/20 text-[#7ee787] text-[0.65rem] font-black tracking-wider uppercase">FUNDAMENTO</span>
+					<span>Fundamento de la respuesta correcta</span>
 				</h4>
 				<p class="text-xs m-0 leading-relaxed">${explanationText}</p>
 			</div>
@@ -533,7 +536,8 @@ export function initQuizPlatform(
 			structuredHtml += `
 				<div class="feedback-level level-source p-2.5 rounded-lg border border-[#388bfd]/30 bg-[#0d1d3a] text-xs text-[#a5d6ff] flex items-center justify-between flex-wrap gap-2">
 					<div class="flex items-center gap-1.5">
-						<span>📖 <strong>Fuente oficial:</strong> ${breakdown.source.title}</span>
+						<span class="inline-block px-1.5 py-0.5 rounded bg-[#388bfd]/20 text-gh-blue text-[0.65rem] font-black tracking-wider uppercase">OFICIAL</span>
+						<span><strong>Fuente:</strong> ${breakdown.source.title}</span>
 					</div>
 					<a
 						href="${breakdown.source.url}"
@@ -780,7 +784,7 @@ export function initQuizPlatform(
 			} else {
 				unseenPrompt.innerHTML = `
 					<p class="text-sm font-bold text-[#3fb950] m-0">
-						🎉 ¡Felicitaciones! Has completado el 100% de cobertura del inventario (las ${allQuestionIds.length} preguntas ya han salido en tus exámenes).
+						¡Felicitaciones! Has completado el 100% de cobertura del inventario (las ${allQuestionIds.length} preguntas ya han salido en tus exámenes).
 					</p>
 				`;
 			}
