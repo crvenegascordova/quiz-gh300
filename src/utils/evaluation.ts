@@ -163,11 +163,14 @@ export function computeHistoryToggleState(isOpen: boolean): HistoryToggleState {
 
 /**
  * Genera el motivo pedagógico por el cual una opción seleccionada es incorrecta,
- * fundamentado exclusivamente en la documentación oficial de Microsoft Learn y GitHub Copilot.
+ * fundamentado exclusivamente en la documentación oficial correspondiente a la certificación
+ * activa (GitHub Copilot GH-300 o Anthropic Claude Certified Developer).
  */
 export function buildIncorrectRationale(
 	selectedOption: { id: string; text: string },
 	item: {
+		id?: string;
+		certification?: string;
 		question: string;
 		correctAnswer: string;
 		explanation?: string;
@@ -178,6 +181,117 @@ export function buildIncorrectRationale(
 	const text = (selectedOption.text || '').toLowerCase();
 	const categoryId = item.category?.id || '';
 
+	const isClaude =
+		item.certification === 'claude-certified-developer' ||
+		(item.id && item.id.startsWith('claude-certified-developer')) ||
+		Boolean(
+			item.source?.url &&
+				(item.source.url.includes('anthropic') ||
+					item.source.url.includes('claude') ||
+					item.source.url.includes('modelcontextprotocol')),
+		);
+
+	// -------------------------------------------------------------
+	// RAMA ANTHROPIC CLAUDE CERTIFIED DEVELOPER
+	// -------------------------------------------------------------
+	if (isClaude) {
+		const sourceTitle = item.source?.title || 'Anthropic Docs';
+
+		// 1. MSO Foundations
+		if (categoryId === 'mso_foundations') {
+			if (
+				text.includes('claude 2') ||
+				text.includes('claude-2') ||
+				text.includes('completion api') ||
+				text.includes('completions')
+			) {
+				return `Según la documentación oficial de Anthropic (${sourceTitle}), la familia Claude 3/3.5 y sus parámetros modernos de inferencia (Messages API) reemplazan a los modelos y endpoints heredados.`;
+			}
+			if (
+				text.includes('tokens') ||
+				text.includes('temperatura') ||
+				text.includes('temperature') ||
+				text.includes('top_p') ||
+				text.includes('top_k')
+			) {
+				return `De acuerdo con las guías de inferencia de Anthropic (${sourceTitle}), esta configuración de parámetros o cálculo de tokens no cumple con las directrices oficiales para optimizar latencia, costo y coherencia del modelo.`;
+			}
+			return `De acuerdo con la documentación oficial de Anthropic (${sourceTitle}), esta opción contradice las especificaciones técnicas de la familia de modelos Claude 3/3.5 o los fundamentos de inferencia requeridos para Claude Certified Developer.`;
+		}
+
+		// 2. Production-Grade Prompting, Agents & Tool Use
+		if (categoryId === 'prompting_agents_tool_use' || categoryId === 'prompting') {
+			if (
+				text.includes('xml') ||
+				text.includes('system') ||
+				text.includes('prefill') ||
+				text.includes('caching')
+			) {
+				return `Las directrices de ingeniería de prompts de Anthropic (${sourceTitle}) establecen el uso de etiquetas XML bien estructuradas, prefill y Prompt Caching eficiente para garantizar consistencia y rendimiento.`;
+			}
+			if (text.includes('tool') || text.includes('herramienta') || text.includes('json')) {
+				return `Según la documentación de Tool Use de Anthropic (${sourceTitle}), la definición de herramientas exige JSON Schema estricto y un manejo determinista de llamadas y respuestas del modelo.`;
+			}
+			return `Según las directrices de ingeniería de prompts y agentes de Anthropic (${sourceTitle}), esta opción no sigue las mejores prácticas recomendadas para el diseño estructurado de prompts ni patrones agenticos.`;
+		}
+
+		// 3. Claude Code & MCP Integration
+		if (categoryId === 'claude_code_mcp_integration') {
+			if (
+				text.includes('transport') ||
+				text.includes('mcp') ||
+				text.includes('stdio') ||
+				text.includes('sse')
+			) {
+				return `De acuerdo con la especificación abierta de Model Context Protocol (MCP) (${sourceTitle}), esta opción describe una configuración o transporte no conforme con los estándares oficiales de tools, resources o prompts.`;
+			}
+			if (
+				text.includes('claude code') ||
+				text.includes('claude.md') ||
+				text.includes('hook') ||
+				text.includes('sub-agent')
+			) {
+				return `Según la documentación técnica de Claude Code (${sourceTitle}), la configuración en CLAUDE.md, los hooks de ciclo de vida y los sub-agentes tienen directivas y alcances específicos que esta opción no respeta.`;
+			}
+			return `De acuerdo con la arquitectura de integración de Claude Code y MCP (${sourceTitle}), esta alternativa infringe los patrones oficiales de extensión y conectividad del modelo.`;
+		}
+
+		// 4. Production Engineering, Evals & Security
+		if (categoryId === 'production_evals_security') {
+			if (
+				text.includes('429') ||
+				text.includes('529') ||
+				text.includes('rate limit') ||
+				text.includes('overload') ||
+				text.includes('retry') ||
+				text.includes('reintent')
+			) {
+				return `En las guías de resiliencia en producción de Anthropic (${sourceTitle}), ante errores de tasa (429) o sobrecarga (529) se requiere implementar reintentos con backoff exponencial y jitter, no reintentos continuos inmediatos.`;
+			}
+			if (
+				text.includes('jailbreak') ||
+				text.includes('injection') ||
+				text.includes('seguridad') ||
+				text.includes('pii') ||
+				text.includes('guardrail')
+			) {
+				return `De acuerdo con los estándares de seguridad de Anthropic (${sourceTitle}), se deben implementar defensas en profundidad, evaluación continua de riesgos y saneamiento estricto contra inyecciones de prompts.`;
+			}
+			return `Según las directrices de ingeniería de producción y seguridad de Anthropic (${sourceTitle}), esta opción no satisface los requisitos de resiliencia, evaluación continua (evals) o mitigación de riesgos.`;
+		}
+
+		// 5. Accelerators & IP Contribution
+		if (categoryId === 'accelerators_ip_contribution') {
+			return `De acuerdo con las mejores prácticas de aceleradores y SDLC de Anthropic (${sourceTitle}), esta alternativa no cumple con los criterios de desacoplamiento determinista vs. LLM, empaquetado reutilizable ni estrategias de despliegue seguro.`;
+		}
+
+		// Fallback para Claude Certified Developer
+		return `De acuerdo con la documentación oficial de Anthropic (${sourceTitle}), la opción ${selectedOption.id} describe una configuración o suposición técnicamente errónea para este escenario, ya que infringe los requisitos técnicos y buenas prácticas definidas para la certificación Claude Certified Developer.`;
+	}
+
+	// -------------------------------------------------------------
+	// RAMA GITHUB COPILOT GH-300
+	// -------------------------------------------------------------
 	// 1. Arquitectura y manejo de datos / privacidad
 	if (categoryId === 'architecture' || categoryId === 'privacy') {
 		if (text.includes('compartir') || text.includes('otros usuarios')) {
@@ -218,7 +332,7 @@ export function buildIncorrectRationale(
 		return `Según la documentación técnica oficial de GitHub Copilot (${item.source?.title || 'Microsoft Learn'}), esta opción describe un comando, participante de chat o integración que no corresponde al objetivo técnico planteado en este problema.`;
 	}
 
-	// 6. Fallback fundamentado detallado (sin respuestas vagas)
+	// 6. Fallback fundamentado detallado para GH-300
 	return `De acuerdo con la documentación oficial (${item.source?.title || 'GitHub Docs'}), la opción ${selectedOption.id} describe una configuración o suposición técnicamente errónea para este escenario, ya que infringe los requisitos de gobernanza, seguridad o precisión técnica definidos para la certificación GH-300.`;
 }
 
@@ -237,6 +351,8 @@ export interface ReviewBreakdown {
 export function buildReviewBreakdown(
 	selectedIds: string[],
 	item: {
+		id?: string;
+		certification?: string;
 		question: string;
 		options: Array<{ id: string; text: string }>;
 		correctAnswer: string;

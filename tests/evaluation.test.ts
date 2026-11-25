@@ -230,6 +230,61 @@ describe('Flujo de Evaluación y Corrección de Respuestas (SDD Quiz GH-300)', (
 			expect(rationale).toContain('aislamiento estricto del código del cliente');
 			expect(rationale).toContain('nunca se comparte con terceros');
 		});
+
+		it('debe generar motivo de Anthropic para MSO Foundations cuando se menciona un modelo o endpoint obsoleto', () => {
+			const option = {
+				id: 'B',
+				text: 'Usar Claude 2 con el endpoint Completion API para procesar la solicitud.',
+			};
+			const item = {
+				id: 'claude-certified-developer-balotario-1-1',
+				certification: 'claude-certified-developer',
+				question: 'Which model and API should be used?',
+				correctAnswer: 'A',
+				category: { id: 'mso_foundations', name: 'MSO Foundations' },
+				source: { title: 'Anthropic Docs: Models', url: 'https://docs.anthropic.com/en/docs/models' },
+			};
+			const rationale = buildIncorrectRationale(option, item);
+			expect(rationale).toContain('Anthropic');
+			expect(rationale).toContain('Claude 3/3.5');
+			expect(rationale).not.toContain('GH-300');
+		});
+
+		it('debe generar motivo de MCP para Claude Code & MCP Integration cuando se menciona un transporte inválido', () => {
+			const option = {
+				id: 'C',
+				text: 'Configurar un transporte no estándar que no cumple con stdio o sse.',
+			};
+			const item = {
+				id: 'claude-certified-developer-balotario-3-5',
+				certification: 'claude-certified-developer',
+				question: 'Which MCP transport is supported?',
+				correctAnswer: 'A',
+				category: { id: 'claude_code_mcp_integration', name: 'Claude Code, MCP & Integration' },
+				source: { title: 'MCP Spec', url: 'https://modelcontextprotocol.io' },
+			};
+			const rationale = buildIncorrectRationale(option, item);
+			expect(rationale).toContain('Model Context Protocol (MCP)');
+			expect(rationale).not.toContain('GH-300');
+		});
+
+		it('debe generar fallback de Claude Certified Developer sin mencionar GH-300 en preguntas de Claude', () => {
+			const option = {
+				id: 'C',
+				text: 'Opción cualquiera que no coincide con ninguna regla específica.',
+			};
+			const item = {
+				id: 'claude-certified-developer-balotario-2-10',
+				certification: 'claude-certified-developer',
+				question: 'Pregunta genérica de Claude',
+				correctAnswer: 'A',
+				category: { id: 'otra_categoria', name: 'General' },
+				source: { title: 'Anthropic Docs', url: 'https://docs.anthropic.com' },
+			};
+			const rationale = buildIncorrectRationale(option, item);
+			expect(rationale).toContain('certificación Claude Certified Developer');
+			expect(rationale).not.toContain('GH-300');
+		});
 	});
 
 	describe('4. Desglose Estructurado de Diagnóstico en Pantalla (buildReviewBreakdown)', () => {
